@@ -4,6 +4,8 @@ const CHAPTER4_TOPICS = [
     chapter: 4,
     order: 1,
     title: "Grundlagen: Stichprobenfunktionen",
+    icon: "🧪",
+    summary: "Wie der Stichprobenmittelwert verteilt ist - mit und ohne Zurücklegen gezogen.",
     explanation: [
       { type: "p", text: "Die induktive (schließende) Statistik zieht - anders als die deskriptive Statistik, die nur vorliegende Daten beschreibt - einen wahrscheinlichkeitstheoretisch begründeten Schluss von einer bekannten Stichprobe auf eine unbekannte Grundgesamtheit ('vom Teil aufs Ganze'). Sie ist besonders bei Teilerhebungen relevant, wo man die Grundgesamtheit gar nicht vollständig kennt." },
       { type: "p", text: "Zieht man $n$ Merkmalsträger zufällig aus der Grundgesamtheit, so ist das Ergebnis der $i$-ten Ziehung eine Realisation der Zufallsvariable $X_i$ (Stichprobenvariable). Die $n$ Stichprobenvariablen bilden zusammen den Stichprobenvektor $(X_1, \\dots, X_n)$." },
@@ -44,6 +46,8 @@ const CHAPTER4_TOPICS = [
     chapter: 4,
     order: 2,
     title: "Schätzverfahren & Konfidenzintervalle",
+    icon: "🧮",
+    summary: "Punkt- und Intervallschätzung: wie man aus einer Stichprobe auf einen unbekannten Parameter schließt.",
     explanation: [
       { type: "p", text: "Schätzverfahren haben die Aufgabe, unbekannte Parameter der Grundgesamtheit (z. B. den Erwartungswert $\\mu$) anhand einer Stichprobe zu schätzen. Man unterscheidet Punktschätzung und Intervallschätzung." },
       { type: "p", text: "Eine gute Schätzfunktion sollte folgende Eigenschaften besitzen:" },
@@ -98,6 +102,8 @@ const CHAPTER4_TOPICS = [
     chapter: 4,
     order: 3,
     title: "Testverfahren: Grundlagen",
+    icon: "⚖️",
+    summary: "Nullhypothese, Signifikanzniveau und p-Wert - das Handwerkszeug jedes Hypothesentests.",
     explanation: [
       { type: "p", text: "Testverfahren prüfen anhand einer Stichprobe, ob eine Hypothese über die Grundgesamtheit beibehalten oder verworfen werden muss. Man unterscheidet Parametertests (Hypothese über einen Verteilungsparameter, z. B. den Mittelwert), Verteilungstests (Hypothese über die Form der Verteilung) und Unabhängigkeitstests (Hypothese über die Unabhängigkeit zweier Merkmale)." },
       { type: "p", text: "Jeder Test besteht aus denselben Bausteinen:" },
@@ -147,6 +153,8 @@ const CHAPTER4_TOPICS = [
     chapter: 4,
     order: 4,
     title: "Test für den Mittelwert (z-Test)",
+    icon: "🔬",
+    summary: "Der z-Test Schritt für Schritt: prüfen, ob ein Mittelwert einem Sollwert entspricht.",
     explanation: [
       { type: "p", text: "Der z-Test prüft eine Hypothese über den Erwartungswert $\\mu$ einer (näherungsweise) normalverteilten Grundgesamtheit bei bekanntem $\\sigma$. Vorgehen:" },
       { type: "list", items: [
@@ -193,6 +201,8 @@ const CHAPTER4_TOPICS = [
     chapter: 4,
     order: 5,
     title: "Chi-Quadrat-Verteilungs- und Unabhängigkeitstest",
+    icon: "🧩",
+    summary: "Passt eine Verteilung zu den Daten? Und sind zwei Merkmale unabhängig voneinander?",
     explanation: [
       { type: "p", text: "Chi-Quadrat-Tests prüfen nicht - wie der z-Test - eine Aussage über einen einzelnen Parameter, sondern Aussagen über die Form einer Verteilung oder die Unabhängigkeit zweier Merkmale." },
       { type: "p", text: "Der Chi-Quadrat-Verteilungstest (Anpassungstest) prüft, ob eine angenommene theoretische Verteilung zu den beobachteten Daten passt. Idee: man vergleicht die beobachteten Häufigkeiten $n_i$ mit den unter $H_0$ erwarteten (theoretischen) Häufigkeiten $n_i'$:" },

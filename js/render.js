@@ -47,11 +47,37 @@ function renderTopicGrid(container, chapters, topics, progress) {
       card.type = "button";
       card.className = "topic-card";
       card.dataset.topicId = topic.id;
+      card.style.setProperty("--card-accent", chapter.accent);
+
+      const top = document.createElement("div");
+      top.className = "topic-card-top";
+
+      const icon = document.createElement("span");
+      icon.className = "topic-card-icon";
+      icon.textContent = topic.icon || "📘";
+      top.appendChild(icon);
+
+      const metaBadge = document.createElement("span");
+      metaBadge.className = "topic-card-meta";
+      const parts = [];
+      if (topic.exercises.length) parts.push(topic.exercises.length + " ÜBUNGEN");
+      if (topic.quiz.length) parts.push(topic.quiz.length + " QUIZFRAGEN");
+      metaBadge.textContent = parts.join(" · ");
+      top.appendChild(metaBadge);
+
+      card.appendChild(top);
 
       const title = document.createElement("div");
       title.className = "topic-card-title";
       title.textContent = topic.title;
       card.appendChild(title);
+
+      if (topic.summary) {
+        const summary = document.createElement("p");
+        summary.className = "topic-card-summary";
+        summary.textContent = topic.summary;
+        card.appendChild(summary);
+      }
 
       const badges = document.createElement("div");
       badges.className = "topic-card-badges";
@@ -70,8 +96,13 @@ function renderTopicGrid(container, chapters, topics, progress) {
         scoreBadge.textContent = "Bestes Quiz: " + quizResult.bestScore + "/" + quizResult.bestTotal;
         badges.appendChild(scoreBadge);
       }
+      if (badges.childNodes.length) card.appendChild(badges);
 
-      card.appendChild(badges);
+      const link = document.createElement("span");
+      link.className = "topic-card-link";
+      link.textContent = "Öffnen →";
+      card.appendChild(link);
+
       grid.appendChild(card);
     });
 

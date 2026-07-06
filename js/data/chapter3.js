@@ -4,6 +4,8 @@ const CHAPTER3_TOPICS = [
     chapter: 3,
     order: 1,
     title: "Grundbegriffe & Axiome",
+    icon: "🎲",
+    summary: "Zufallsvorgang, Ereignisraum und die drei Axiome, auf denen jede Wahrscheinlichkeit beruht.",
     explanation: [
       { type: "p", text: "Die Wahrscheinlichkeitstheorie beschreibt und modelliert Zufallsgeschehen. Ein Zufallsvorgang ist ein Vorgang, dessen Ergebnis nicht mit Sicherheit vorhersagbar ist (z. B. ein Würfelwurf)." },
       { type: "list", items: [
@@ -49,6 +51,8 @@ const CHAPTER3_TOPICS = [
     chapter: 3,
     order: 2,
     title: "Wahrscheinlichkeiten ermitteln",
+    icon: "🔍",
+    summary: "Klassische, statistische und subjektive Methode - drei Wege, um Wahrscheinlichkeiten zu bestimmen.",
     explanation: [
       { type: "p", text: "Es gibt drei grundsätzliche Wege, um Wahrscheinlichkeiten für ein Ereignis zu bestimmen." },
       { type: "list", items: [
@@ -86,6 +90,8 @@ const CHAPTER3_TOPICS = [
     chapter: 3,
     order: 3,
     title: "Rechenregeln der Wahrscheinlichkeit",
+    icon: "➕",
+    summary: "Additionssatz, bedingte Wahrscheinlichkeit, Satz von Bayes und Unabhängigkeit von Ereignissen.",
     explanation: [
       { type: "p", text: "Aus den Grundaxiomen lassen sich praktische Rechenregeln ableiten." },
       { type: "p", text: "Der allgemeine Additionssatz berechnet die Wahrscheinlichkeit, dass mindestens eines von zwei Ereignissen eintritt:" },
@@ -141,6 +147,8 @@ const CHAPTER3_TOPICS = [
     chapter: 3,
     order: 4,
     title: "Diskrete Zufallsvariablen",
+    icon: "🎰",
+    summary: "Zähldichte, Verteilungsfunktion, Erwartungswert und Varianz einer diskreten Zufallsvariable.",
     explanation: [
       { type: "p", text: "Eine Zufallsvariable $X$ ordnet jedem Elementarereignis eine Zahl zu und überträgt damit Zufallsgeschehen in die Welt der Zahlen - vergleichbar mit einem Merkmal in der deskriptiven Statistik. Eine diskrete Zufallsvariable kann nur endlich oder abzählbar unendlich viele Werte annehmen." },
       { type: "p", text: "Die Zähldichte (Wahrscheinlichkeitsfunktion) gibt die Wahrscheinlichkeit für jeden einzelnen Wert an:" },
@@ -184,6 +192,8 @@ const CHAPTER3_TOPICS = [
     chapter: 3,
     order: 5,
     title: "Stetige Zufallsvariablen",
+    icon: "🌊",
+    summary: "Wahrscheinlichkeitsdichte statt Zähldichte - Erwartungswert und Varianz über Integrale.",
     explanation: [
       { type: "p", text: "Eine stetige Zufallsvariable kann überabzählbar viele Werte annehmen, z. B. jeden reellen Wert innerhalb eines Intervalls. Anders als bei diskreten Zufallsvariablen ist die Wahrscheinlichkeit für einen einzelnen exakten Wert stets null: $P(X = x) = 0$." },
       { type: "p", text: "Stattdessen beschreibt man stetige Zufallsvariablen über eine Wahrscheinlichkeitsdichtefunktion $f(x)$ mit $f(x) \\geq 0$ und Gesamtfläche 1:" },
@@ -227,6 +237,8 @@ const CHAPTER3_TOPICS = [
     chapter: 3,
     order: 6,
     title: "Binomial- und Poissonverteilung",
+    icon: "🪙",
+    summary: "Zwei Klassiker der diskreten Verteilungen - von Überbuchungsrisiken bis Kundenbeschwerden.",
     explanation: [
       { type: "p", text: "Binomial- und Poissonverteilung sind die wichtigsten diskreten Verteilungsmodelle." },
       { type: "p", text: "Die Binomialverteilung $X \\sim B(n,p)$ beschreibt die Anzahl der Erfolge bei $n$ unabhängigen, identischen Versuchen mit jeweils zwei möglichen Ausgängen (Erfolg/Misserfolg) und konstanter Erfolgswahrscheinlichkeit $p$:" },
@@ -268,6 +280,8 @@ const CHAPTER3_TOPICS = [
     chapter: 3,
     order: 7,
     title: "Normalverteilung & Zentraler Grenzwertsatz",
+    icon: "🔔",
+    summary: "Die Glockenkurve, ihre Standardisierung und der Zentrale Grenzwertsatz als Fundament der Statistik.",
     explanation: [
       { type: "p", text: "Die Normalverteilung ist die wichtigste stetige Verteilung in der Statistik - viele natürliche und wirtschaftliche Größen sind (näherungsweise) normalverteilt, und sie bildet die Grundlage für zahlreiche Verfahren der induktiven Statistik." },
       { type: "p", text: "Eine normalverteilte Zufallsvariable $X \\sim N(\\mu, \\sigma^2)$ hat die Dichte:" },
@@ -307,6 +321,8 @@ const CHAPTER3_TOPICS = [
     chapter: 3,
     order: 8,
     title: "Chi-Quadrat-Verteilung",
+    icon: "📉",
+    summary: "Wie aus quadrierten Standardnormalvariablen eine eigene Prüfverteilung entsteht.",
     explanation: [
       { type: "p", text: "Die Chi-Quadrat-Verteilung ($\\chi^2$-Verteilung) entsteht als Verteilung der Summe quadrierter, unabhängiger, standardnormalverteilter Zufallsvariablen:" },
       { type: "formula", block: true, tex: "X = \\sum_{i=1}^{v} Z_i^2 \\sim \\chi^2(v), \\qquad Z_i \\sim N(0,1) \\text{ unabh\\\"angig}" },

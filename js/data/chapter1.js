@@ -4,6 +4,8 @@ const CHAPTER1_TOPICS = [
     chapter: 1,
     order: 1,
     title: "Grundbegriffe der Statistik",
+    icon: "📚",
+    summary: "Grundgesamtheit, Merkmalsträger, Merkmal und Merkmalswert - die Bausteine jeder statistischen Untersuchung.",
     explanation: [
       { type: "p", text: "Statistik ist die Entwicklung und Anwendung von Methoden zur Erhebung, Aufbereitung, Analyse und Interpretation von Daten. Das Fach gliedert sich in drei Teilgebiete: die deskriptive (beschreibende) Statistik, die Wahrscheinlichkeitstheorie und die induktive (schließende) Statistik." },
       { type: "p", text: "Bevor man mit Daten arbeitet, braucht man ein paar grundlegende Begriffe, die in praktisch jeder Aufgabe vorkommen:" },
@@ -63,6 +65,8 @@ const CHAPTER1_TOPICS = [
     chapter: 1,
     order: 2,
     title: "Statistische Messskalen",
+    icon: "📏",
+    summary: "Nominal-, Ordinal-, Intervall- und Verhältnisskala: welches Rechnen mit welchen Daten sinnvoll ist.",
     explanation: [
       { type: "p", text: "Die Messskala eines Merkmals legt fest, welche Rechenoperationen und Vergleiche mit seinen Werten sinnvoll sind. Man unterscheidet vier Skalenniveaus, die aufeinander aufbauen - je höher das Niveau, desto mehr Information steckt in den Werten und desto mehr darf man mit ihnen rechnen." },
       { type: "list", items: [
@@ -109,6 +113,8 @@ const CHAPTER1_TOPICS = [
     chapter: 1,
     order: 3,
     title: "Ablauf einer statistischen Untersuchung",
+    icon: "🔄",
+    summary: "Von der Planung über die Datenerhebung bis zur Analyse - die vier Phasen einer Untersuchung.",
     explanation: [
       { type: "p", text: "Eine statistische Untersuchung läuft typischerweise in vier Phasen ab: Planung, Datenerhebung, Datenaufbereitung und -darstellung sowie Datenanalyse und -interpretation." },
       { type: "list", items: [

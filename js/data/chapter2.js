@@ -4,6 +4,8 @@ const CHAPTER2_TOPICS = [
     chapter: 2,
     order: 1,
     title: "Häufigkeitsverteilungen",
+    icon: "📊",
+    summary: "Einfache, klassifizierte und kumulierte Häufigkeiten - inklusive Histogramm, Polygonzug und Treppenfunktion.",
     explanation: [
       { type: "p", text: "Häufigkeitsverteilungen fassen zusammen, wie oft welcher Merkmalswert in einer Stichprobe vorkommt - die Grundlage jeder deskriptiven Auswertung." },
       { type: "p", text: "Bei der einfachen Häufigkeitsverteilung zählt man für jeden Merkmalswert $x_i$, wie oft er auftritt:" },
@@ -49,6 +51,8 @@ const CHAPTER2_TOPICS = [
     chapter: 2,
     order: 2,
     title: "Lagemaße",
+    icon: "🎯",
+    summary: "Arithmetisches Mittel, Modus, Median und Quantile - wo sich die Werte einer Verteilung konzentrieren.",
     explanation: [
       { type: "p", text: "Lagemaße beschreiben, wo sich die Werte einer Verteilung konzentrieren - ihre 'typische Größe'." },
       { type: "p", text: "Das arithmetische Mittel ist die Summe aller Werte geteilt durch ihre Anzahl:" },
@@ -100,6 +104,8 @@ const CHAPTER2_TOPICS = [
     chapter: 2,
     order: 3,
     title: "Streuungsmaße",
+    icon: "📐",
+    summary: "Spannweite, Quartilsabstand, Varianz, Standardabweichung und Variationskoeffizient im Überblick.",
     explanation: [
       { type: "p", text: "Streuungsmaße beschreiben, wie stark die Werte einer Verteilung um ihre Mitte herum schwanken." },
       { type: "p", text: "Die Spannweite ist die einfachste Kennzahl - der Abstand zwischen größtem und kleinstem Wert:" },
@@ -147,6 +153,8 @@ const CHAPTER2_TOPICS = [
     chapter: 2,
     order: 4,
     title: "Schiefe und Wölbung",
+    icon: "📈",
+    summary: "Symmetrisch, rechts- oder linksschief? Und wie spitz oder flach eine Verteilung wirklich ist.",
     explanation: [
       { type: "p", text: "Schiefe und Wölbung beschreiben die Form einer Verteilung genauer als reine Lage- und Streuungsmaße." },
       { type: "p", text: "Die Schiefe gibt an, ob eine Verteilung symmetrisch ist oder einen längeren 'Schwanz' auf einer Seite hat:" },
@@ -193,6 +201,8 @@ const CHAPTER2_TOPICS = [
     chapter: 2,
     order: 5,
     title: "Konzentrationsmessung",
+    icon: "💰",
+    summary: "Lorenzkurve und Gini-Koeffizient: wie ungleich eine Summe auf die Merkmalsträger verteilt ist.",
     explanation: [
       { type: "p", text: "Konzentrationsmaße untersuchen, wie ungleich eine Summengröße (z. B. Einkommen, Vermögen, Bonuszahlungen) auf die Merkmalsträger verteilt ist: Fällt der größte Teil der Summe auf wenige Merkmalsträger, oder ist sie gleichmäßig verteilt?" },
       { type: "p", text: "Die Lorenzkurve stellt dazu den kumulierten Anteil der Merkmalsträger (x-Achse) dem kumulierten Anteil an der Summe (y-Achse) gegenüber. Bei völliger Gleichverteilung liegt die Lorenzkurve genau auf der Diagonalen; je weiter sie sich davon nach unten wölbt, desto größer die Konzentration." },
@@ -240,6 +250,8 @@ const CHAPTER2_TOPICS = [
     chapter: 2,
     order: 6,
     title: "Korrelationsmaße",
+    icon: "🔗",
+    summary: "Kovarianz, Bravais-Pearson, Spearman und Kontingenzkoeffizient - und warum Korrelation nicht Kausalität ist.",
     explanation: [
       { type: "p", text: "Korrelationsmaße untersuchen den (linearen) Zusammenhang zwischen zwei Merkmalen." },
       { type: "p", text: "Die Kovarianz misst, ob sich zwei Merkmale gemeinsam in die gleiche oder entgegengesetzte Richtung bewegen:" },
