@@ -1,8 +1,34 @@
-const CHAPTERS = [
+const STATISTIK_CHAPTERS = [
   { id: 1, title: "Einleitung / Grundlagen", accent: "#5b8def" },
   { id: 2, title: "Deskriptive Statistik", accent: "#34c77b" },
   { id: 3, title: "Wahrscheinlichkeitstheorie", accent: "#a374ff" },
   { id: 4, title: "Induktive Statistik", accent: "#ff9f43" }
 ];
+const STATISTIK_TOPICS = [].concat(CHAPTER1_TOPICS, CHAPTER2_TOPICS, CHAPTER3_TOPICS, CHAPTER4_TOPICS);
 
-const TOPICS = [].concat(CHAPTER1_TOPICS, CHAPTER2_TOPICS, CHAPTER3_TOPICS, CHAPTER4_TOPICS);
+const BWL2_CHAPTERS = [
+  { id: 1, title: "Strang A: Prozessmanagement", accent: "#e85d75" },
+  { id: 2, title: "Strang B: Wertschöpfungskette", accent: "#2bb3a3" }
+];
+const BWL2_TOPICS = [].concat(BWL_STRANG_A_TOPICS, BWL_STRANG_B_TOPICS);
+
+const SUBJECTS = [
+  {
+    id: "statistik",
+    title: "Statistik",
+    studiengang: "IW/BW",
+    icon: "📊",
+    accent: "#5b8def",
+    chapters: STATISTIK_CHAPTERS,
+    topics: STATISTIK_TOPICS
+  },
+  {
+    id: "bwl2",
+    title: "BWL II (Prozessmanagement, Wertschöpfungskette)",
+    studiengang: "Integrative Gesundheitsförderung",
+    icon: "🔄",
+    accent: "#e85d75",
+    chapters: BWL2_CHAPTERS,
+    topics: BWL2_TOPICS
+  }
+];

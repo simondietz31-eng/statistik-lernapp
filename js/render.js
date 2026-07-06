@@ -1,3 +1,65 @@
+function renderSubjectGrid(container, subjects, allProgress) {
+  container.innerHTML = "";
+  const grid = document.createElement("div");
+  grid.className = "topic-grid subject-grid";
+
+  subjects.forEach(function (subject) {
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = "topic-card subject-card";
+    card.dataset.subjectId = subject.id;
+    card.style.setProperty("--card-accent", subject.accent);
+
+    const top = document.createElement("div");
+    top.className = "topic-card-top";
+
+    const icon = document.createElement("span");
+    icon.className = "topic-card-icon";
+    icon.textContent = subject.icon || "📘";
+    top.appendChild(icon);
+
+    if (subject.studiengang) {
+      const badge = document.createElement("span");
+      badge.className = "topic-card-meta";
+      badge.textContent = subject.studiengang.toUpperCase();
+      top.appendChild(badge);
+    }
+
+    card.appendChild(top);
+
+    const title = document.createElement("div");
+    title.className = "topic-card-title";
+    title.textContent = subject.title;
+    card.appendChild(title);
+
+    const summary = document.createElement("p");
+    summary.className = "topic-card-summary";
+    summary.textContent = subject.chapters.length + " Kapitel · " + subject.topics.length + " Themen";
+    card.appendChild(summary);
+
+    const progress = (allProgress.subjects && allProgress.subjects[subject.id]) || { viewedTopics: {}, quizResults: {} };
+    const viewedCount = Object.keys(progress.viewedTopics).length;
+    if (viewedCount > 0) {
+      const badges = document.createElement("div");
+      badges.className = "topic-card-badges";
+      const viewedBadge = document.createElement("span");
+      viewedBadge.className = "badge viewed";
+      viewedBadge.textContent = viewedCount + " von " + subject.topics.length + " gelernt";
+      badges.appendChild(viewedBadge);
+      card.appendChild(badges);
+    }
+
+    const link = document.createElement("span");
+    link.className = "topic-card-link";
+    link.textContent = "Öffnen →";
+    card.appendChild(link);
+
+    grid.appendChild(card);
+  });
+
+  container.appendChild(grid);
+}
+
 function renderContentBlocks(blocks, container) {
   container.innerHTML = "";
   blocks.forEach(function (block) {

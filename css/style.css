@@ -96,6 +96,10 @@ main#app {
 
 .view[hidden] { display: none; }
 
+.subject-title { font-size: 1.4rem; margin: 0.25rem 0 1.5rem; }
+
+.subject-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+
 .chapter-block { margin-bottom: 2.25rem; }
 .chapter-block h2 {
   font-size: 1.15rem;

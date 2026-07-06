@@ -1,10 +1,12 @@
 const state = {
-  view: "TOPIC_GRID",
+  view: "SUBJECT_SELECT",
+  currentSubjectId: null,
   currentTopicId: null,
   quiz: { questionIndex: 0, answers: [] }
 };
 
 const views = {
+  SUBJECT_SELECT: document.getElementById("view-subject-select"),
   TOPIC_GRID: document.getElementById("view-topic-grid"),
   EXPLANATION: document.getElementById("view-explanation"),
   EXERCISES: document.getElementById("view-exercises"),
@@ -12,8 +14,12 @@ const views = {
   QUIZ_SUMMARY: document.getElementById("view-quiz-summary")
 };
 
+function getCurrentSubject() {
+  return SUBJECTS.find(function (s) { return s.id === state.currentSubjectId; });
+}
+
 function getCurrentTopic() {
-  return TOPICS.find(function (t) { return t.id === state.currentTopicId; });
+  return getCurrentSubject().topics.find(function (t) { return t.id === state.currentTopicId; });
 }
 
 function setView(viewName) {
@@ -22,11 +28,15 @@ function setView(viewName) {
     views[key].hidden = key !== viewName;
   });
 
-  if (viewName === "TOPIC_GRID") {
-    renderTopicGrid(document.getElementById("chapters-container"), CHAPTERS, TOPICS, loadProgress());
+  if (viewName === "SUBJECT_SELECT") {
+    renderSubjectGrid(document.getElementById("subjects-container"), SUBJECTS, loadProgress());
+  } else if (viewName === "TOPIC_GRID") {
+    const subject = getCurrentSubject();
+    document.getElementById("subject-title").textContent = subject.title;
+    renderTopicGrid(document.getElementById("chapters-container"), subject.chapters, subject.topics, getSubjectProgress(subject.id));
   } else if (viewName === "EXPLANATION") {
     const topic = getCurrentTopic();
-    markTopicViewed(topic.id);
+    markTopicViewed(state.currentSubjectId, topic.id);
     document.getElementById("explanation-title").textContent = topic.title;
     renderContentBlocks(topic.explanation, document.getElementById("explanation-content"));
     document.getElementById("btn-go-exercises").disabled = topic.exercises.length === 0;
@@ -41,7 +51,7 @@ function setView(viewName) {
     const topic = getCurrentTopic();
     const score = state.quiz.answers.filter(function (a) { return a && a.correct; }).length;
     const total = topic.quiz.length;
-    recordQuizResult(topic.id, score, total);
+    recordQuizResult(state.currentSubjectId, topic.id, score, total);
     renderQuizSummary(
       document.getElementById("quiz-summary-content"),
       score,
@@ -97,6 +107,13 @@ function applyDarkModePref() {
   else document.documentElement.removeAttribute("data-theme");
 }
 
+document.getElementById("subjects-container").addEventListener("click", function (e) {
+  const card = e.target.closest(".subject-card");
+  if (!card) return;
+  state.currentSubjectId = card.dataset.subjectId;
+  setView("TOPIC_GRID");
+});
+
 document.getElementById("chapters-container").addEventListener("click", function (e) {
   const card = e.target.closest(".topic-card");
   if (!card) return;
@@ -104,7 +121,7 @@ document.getElementById("chapters-container").addEventListener("click", function
   setView("EXPLANATION");
 });
 
-document.getElementById("btn-home").addEventListener("click", function () { setView("TOPIC_GRID"); });
+document.getElementById("btn-home").addEventListener("click", function () { setView("SUBJECT_SELECT"); });
 
 document.querySelectorAll("[data-back-to]").forEach(function (btn) {
   btn.addEventListener("click", function () { setView(btn.dataset.backTo); });
@@ -124,11 +141,11 @@ document.getElementById("btn-theme-toggle").addEventListener("click", function (
 
 document.getElementById("btn-reset-progress").addEventListener("click", function (e) {
   e.preventDefault();
-  if (window.confirm("Gesamten Lernfortschritt (gelernte Themen, Quiz-Ergebnisse) wirklich zurücksetzen?")) {
+  if (window.confirm("Gesamten Lernfortschritt in allen Fächern (gelernte Themen, Quiz-Ergebnisse) wirklich zurücksetzen?")) {
     resetProgress();
-    setView("TOPIC_GRID");
+    setView(state.view === "SUBJECT_SELECT" ? "SUBJECT_SELECT" : "TOPIC_GRID");
   }
 });
 
 applyDarkModePref();
-setView("TOPIC_GRID");
+setView("SUBJECT_SELECT");

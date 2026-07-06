@@ -1,7 +1,7 @@
-const STORAGE_KEY = "statistik-lernapp:progress:v1";
+const STORAGE_KEY = "statistik-lernapp:progress:v2";
 
 function defaultProgress() {
-  return { version: 1, viewedTopics: {}, quizResults: {}, darkMode: "auto" };
+  return { version: 2, subjects: {}, darkMode: "auto" };
 }
 
 function loadProgress() {
@@ -9,7 +9,7 @@ function loadProgress() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return defaultProgress();
     const parsed = JSON.parse(raw);
-    if (!parsed || parsed.version !== 1) return defaultProgress();
+    if (!parsed || parsed.version !== 2) return defaultProgress();
     return Object.assign(defaultProgress(), parsed);
   } catch (e) {
     return defaultProgress();
@@ -24,21 +24,28 @@ function saveProgress(progress) {
   }
 }
 
-function markTopicViewed(topicId) {
+function getSubjectProgress(subjectId) {
   const progress = loadProgress();
-  if (!progress.viewedTopics[topicId]) {
-    progress.viewedTopics[topicId] = new Date().toISOString();
+  return progress.subjects[subjectId] || { viewedTopics: {}, quizResults: {} };
+}
+
+function markTopicViewed(subjectId, topicId) {
+  const progress = loadProgress();
+  if (!progress.subjects[subjectId]) progress.subjects[subjectId] = { viewedTopics: {}, quizResults: {} };
+  if (!progress.subjects[subjectId].viewedTopics[topicId]) {
+    progress.subjects[subjectId].viewedTopics[topicId] = new Date().toISOString();
     saveProgress(progress);
   }
 }
 
-function recordQuizResult(topicId, score, total) {
+function recordQuizResult(subjectId, topicId, score, total) {
   const progress = loadProgress();
-  const existing = progress.quizResults[topicId];
+  if (!progress.subjects[subjectId]) progress.subjects[subjectId] = { viewedTopics: {}, quizResults: {} };
+  const existing = progress.subjects[subjectId].quizResults[topicId];
   const attempts = existing ? existing.attempts + 1 : 1;
   const bestScore = existing ? Math.max(existing.bestScore, score) : score;
   const bestTotal = existing && existing.bestScore >= score ? existing.bestTotal : total;
-  progress.quizResults[topicId] = {
+  progress.subjects[subjectId].quizResults[topicId] = {
     lastScore: score,
     lastTotal: total,
     bestScore: bestScore,

@@ -3,20 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Statistik-Lernapp</title>
+<title>Lernapp</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header class="app-header">
-  <button id="btn-home" class="brand" type="button">📊 Statistik-Lernapp</button>
+  <button id="btn-home" class="brand" type="button">🎓 Lernapp</button>
   <button id="btn-theme-toggle" class="icon-btn" type="button" aria-label="Dark Mode umschalten">🌓</button>
 </header>
 
 <main id="app">
 
-  <section id="view-topic-grid" class="view">
+  <section id="view-subject-select" class="view">
+    <div id="subjects-container"></div>
+  </section>
+
+  <section id="view-topic-grid" class="view" hidden>
+    <button class="back-btn" data-back-to="SUBJECT_SELECT" type="button">← Fächer</button>
+    <h1 id="subject-title" class="subject-title"></h1>
     <div id="chapters-container"></div>
   </section>
 
@@ -62,6 +68,8 @@
 <script src="js/data/chapter2.js"></script>
 <script src="js/data/chapter3.js"></script>
 <script src="js/data/chapter4.js"></script>
+<script src="js/data/bwl-strang-a.js"></script>
+<script src="js/data/bwl-strang-b.js"></script>
 <script src="js/data/index.js"></script>
 <script src="js/katex-helper.js"></script>
 <script src="js/storage.js"></script>
