@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Statistik-Lernapp</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="app-header">
+  <button id="btn-home" class="brand" type="button">📊 Statistik-Lernapp</button>
+  <button id="btn-theme-toggle" class="icon-btn" type="button" aria-label="Dark Mode umschalten">🌓</button>
+</header>
+
+<main id="app">
+
+  <section id="view-topic-grid" class="view">
+    <div id="chapters-container"></div>
+  </section>
+
+  <section id="view-explanation" class="view" hidden>
+    <button class="back-btn" data-back-to="TOPIC_GRID" type="button">← Themenübersicht</button>
+    <h2 id="explanation-title"></h2>
+    <div id="explanation-content" class="content-blocks"></div>
+    <div class="action-row">
+      <button id="btn-go-exercises" class="primary-btn" type="button">📝 Übungsaufgaben</button>
+      <button id="btn-go-quiz" class="primary-btn" type="button">🎯 Quiz starten</button>
+    </div>
+  </section>
+
+  <section id="view-exercises" class="view" hidden>
+    <button class="back-btn" data-back-to="EXPLANATION" type="button">← Zurück zum Thema</button>
+    <h2 id="exercises-title"></h2>
+    <div id="exercises-content"></div>
+    <div class="action-row">
+      <button id="btn-exercises-to-quiz" class="primary-btn" type="button">🎯 Quiz starten</button>
+    </div>
+  </section>
+
+  <section id="view-quiz" class="view" hidden>
+    <button class="back-btn" data-back-to="EXPLANATION" type="button">← Zurück zum Thema</button>
+    <h2 id="quiz-title"></h2>
+    <div id="quiz-progress" class="quiz-progress"></div>
+    <div id="quiz-content"></div>
+  </section>
+
+  <section id="view-quiz-summary" class="view" hidden>
+    <div id="quiz-summary-content" class="quiz-summary"></div>
+  </section>
+
+</main>
+
+<footer class="app-footer">
+  <a id="btn-reset-progress" href="#" role="button">Fortschritt zurücksetzen</a>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="js/data/chapter1.js"></script>
+<script src="js/data/chapter2.js"></script>
+<script src="js/data/chapter3.js"></script>
+<script src="js/data/chapter4.js"></script>
+<script src="js/data/index.js"></script>
+<script src="js/katex-helper.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/render.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
