@@ -50,6 +50,29 @@ const BWL_STRANG_A_TOPICS = [
         solution: [
           { type: "p", text: "Die klassische Aufbauorganisation geht vom Analyse-Synthese-Konzept aus: Die Unternehmensaufgabe wird in Teilaufgaben zerlegt und diese werden zu Abteilungen zusammengefasst (Verkauf, Werkstatt, Buchhaltung usw.), bevor überhaupt über Abläufe (Prozesse) nachgedacht wird. Jede Abteilung optimiert sich dann selbst. Problem: Niemand hat den Gesamtprozess 'vom Kundenwunsch zur Wunscherfüllung' im Blick - es entstehen Schnittstellenprobleme, Informationsverluste und eine fehlende Gesamtverantwortung." }
         ]
+      },
+      {
+        id: "ex4",
+        prompt: "Eine Gesundheitsförderungsmaßnahme wird als Einzelaktion ohne definierte Zielgrößen durchgeführt. Nennen Sie die vier Zielgrößen des Prozessmanagements und erläutern Sie kurz, was jeweils fehlt, wenn sie nicht berücksichtigt werden.",
+        solution: [
+          { type: "list", items: [
+            "Effektivität: Ohne definierte Gesundheitsziele lässt sich der Grad der Zielerreichung nicht feststellen.",
+            "Effizienz: Ohne Betrachtung des Ressourceneinsatzes bleibt unklar, ob das Verhältnis von Output zu Aufwand angemessen ist.",
+            "Qualität: Ohne definierte Anforderungen fehlt der Maßstab für die Erfüllung von Kunden-/Stakeholder-Erwartungen.",
+            "Transparenz: Ohne klare Beschreibung von Input, Aktivitäten, Output und Zielbezug ist die Maßnahme nicht steuerbar."
+          ]}
+        ]
+      },
+      {
+        id: "ex5",
+        prompt: "Ordnen Sie die folgenden Aussagen den Begriffen 'primäre Geschäftsprozesse', 'sekundäre Geschäftsprozesse' und 'nicht wertschöpfende Prozesse' zu: a) Ein Prozess ohne erkennbaren Kundennutzen, entstanden durch mangelhafte Planung. b) Ein Prozess mit unmittelbarem Kundennutzen, der auf schwer imitierbaren Kernkompetenzen beruht. c) Ein Prozess, der interne Kunden bedient und keinen direkten Marktbezug hat.",
+        solution: [
+          { type: "list", items: [
+            "a) Nicht wertschöpfender Prozess",
+            "b) Primärer Geschäftsprozess (Kernprozess)",
+            "c) Sekundärer Geschäftsprozess"
+          ]}
+        ]
       }
     ],
     quiz: [
@@ -58,7 +81,10 @@ const BWL_STRANG_A_TOPICS = [
       { id: "q3", question: "'Die richtigen Dinge tun' beschreibt am ehesten...", options: ["Effizienz", "Effektivität", "Transparenz", "Qualität"], correctIndex: 1, explanation: "Effektivität ist der Grad der Zielerreichung - 'die richtigen Dinge tun'." },
       { id: "q4", question: "Was sind typische Ursachen für Ineffizienz in Prozessen?", options: ["Zu hohe Kundenorientierung", "Schnittstellenverluste, Medienbrüche und Doppelarbeiten", "Zu klare Zieldefinitionen", "Zu viel Transparenz"], correctIndex: 1, explanation: "Diese drei Phänomene verschlechtern das Verhältnis von Output zu eingesetzten Ressourcen." },
       { id: "q5", question: "Im Autohaus-Beispiel zeigt die Prozessorientierung, dass...", options: ["zuerst Abteilungen gebildet werden und danach der Prozess identifiziert wird", "zuerst der Gesamtprozess end-to-end identifiziert wird und danach Aufgaben/Stellen abgeleitet werden", "Abteilungen komplett überflüssig sind", "der Kunde im Prozess keine Rolle spielt"], correctIndex: 1, explanation: "Die Prozessorientierung kehrt die klassische Logik um: erst der Ende-zu-Ende-Prozess, dann die Organisationsstruktur." },
-      { id: "q6", question: "Übertragen auf Gesundheitsförderungsprozesse bedeutet 'Transparenz' im Sinne der vier Zielgrößen:", options: ["Geheimhaltung der Maßnahmen vor den Mitarbeitenden", "Klare Definition von Kern-, Steuerungs- und Unterstützungsprozessen der Gesundheitsförderung", "Ausschließlich finanzielle Kennzahlen", "Verzicht auf jede Evaluation"], correctIndex: 1, explanation: "Transparenz bedeutet klare Prozessbeschreibung - auch bei Gesundheitsförderungsprozessen." }
+      { id: "q6", question: "Übertragen auf Gesundheitsförderungsprozesse bedeutet 'Transparenz' im Sinne der vier Zielgrößen:", options: ["Geheimhaltung der Maßnahmen vor den Mitarbeitenden", "Klare Definition von Kern-, Steuerungs- und Unterstützungsprozessen der Gesundheitsförderung", "Ausschließlich finanzielle Kennzahlen", "Verzicht auf jede Evaluation"], correctIndex: 1, explanation: "Transparenz bedeutet klare Prozessbeschreibung - auch bei Gesundheitsförderungsprozessen." },
+      { id: "q7", question: "Welche Aussage zu Führungsprozessen (als Teil der sekundären Geschäftsprozesse) trifft zu?", options: ["Sie erzeugen unmittelbaren Kundennutzen für externe Kunden", "Sie sichern das Zusammenspiel aller Prozesse, definieren Ziele und koordinieren", "Sie sind identisch mit Unterstützungsprozessen wie IT oder Personal", "Sie entstehen ausschließlich durch mangelhafte Planung"], correctIndex: 1, explanation: "Führungs-/Steuerungsprozesse koordinieren und definieren Ziele - im Unterschied zu Support- und Kernprozessen." },
+      { id: "q8", question: "Welche Aussage ist laut Text FALSCH?", options: ["Effizienz beschreibt das Verhältnis von Output zu eingesetzten Ressourcen", "Qualität bezeichnet den Grad der Erfüllung definierter Kunden-/Stakeholder-Anforderungen", "Primäre Geschäftsprozesse beruhen auf leicht imitierbaren, austauschbaren Fähigkeiten", "Standardisierung erhöht die Reproduzierbarkeit der Qualität"], correctIndex: 2, explanation: "Primäre Geschäftsprozesse beruhen laut Text gerade auf Kernkompetenzen, die schwer imitierbar sind - das Gegenteil ist also korrekt." },
+      { id: "q9", question: "Im Autohaus-Beispiel besteht das zentrale Problem der funktionsorientierten Organisation darin, dass...", options: ["zu wenige Abteilungen existieren", "jede Abteilung sich selbst optimiert, aber niemand den Gesamtprozess im Blick hat", "der Kundenwunsch gar nicht erfasst wird", "die Werkstatt keine Aufgaben übernimmt"], correctIndex: 1, explanation: "Die Abteilungsoptimierung ohne Gesamtprozessblick ist das Kernproblem, das die Prozessorientierung beheben soll." }
     ]
   },
   {
@@ -97,6 +123,20 @@ const BWL_STRANG_A_TOPICS = [
           { type: "p", text: "Variante A ist die 'sanfte Tour' (Evolution): Vorteil ist hohe Akzeptanz und dass Mitarbeitende lernen, Optimierungen selbst umzusetzen; Nachteil ist die langsamere Geschwindigkeit gegenüber einer radikalen Neugestaltung." },
           { type: "p", text: "Variante B ist die 'harte Tour' (Revolution/'Bombenwurf'): Vorteil ist eine potenziell schnellere, radikalere Umsetzung; Nachteil ist geringe Akzeptanz, da Mitarbeitende als Teil des Problems statt der Lösung behandelt werden und Konflikte eher eskalieren." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Ein Entwurfsteam nimmt bewusst idealtypische Referenzprozesse aus der Branche als Ausgangspunkt und passt diese anschließend an die konkrete Unternehmenssituation an. Um welchen Entwurfsansatz handelt es sich, und wie unterscheidet er sich vom induktiven Entwurf?",
+        solution: [
+          { type: "p", text: "Es handelt sich um den deduktiven Entwurf: Basis sind idealtypische Referenzprozesse, die an die konkrete Situation angepasst werden. Der induktive Entwurf geht dagegen umgekehrt vor - er setzt bei den konkreten, unternehmensspezifischen Kundenbedürfnissen an, statt von einem allgemeinen Referenzmodell auszugehen." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Nennen Sie mindestens vier Merkmale, die einen 'guten' Prozess laut Vorlesung auszeichnen, und erläutern Sie kurz eines davon.",
+        solution: [
+          { type: "p", text: "Merkmale eines guten Prozesses sind u.a.: effektiv, effizient, beherrscht (geringe Ergebnisstreuung), deterministisch (vorhersehbares Ergebnis), atomar (kleine Einheiten), flexibel, robust gegenüber Störungen von außen, neben- und nachwirkungsfrei, dokumentiert und ständig verbesserbar. Beispiel 'beherrscht': Ein beherrschter Prozess liefert bei wiederholter Durchführung immer wieder ähnliche Ergebnisse, es gibt also nur eine geringe Streuung der Resultate - das schafft Verlässlichkeit und Planbarkeit." }
+        ]
       }
     ],
     quiz: [
@@ -105,7 +145,10 @@ const BWL_STRANG_A_TOPICS = [
       { id: "q3", question: "Die 'harte Tour' der Prozessverbesserung wird auch als was bezeichnet?", options: ["Kontinuierliche Verbesserung", "Bombenwurfstrategie", "Bottom-up-Ansatz", "Marktorientierter Entwurf"], correctIndex: 1, explanation: "Das radikale, von der Leitung geheim erarbeitete Vorgehen wird bildlich 'Bombenwurf' genannt." },
       { id: "q4", question: "Ein typischer Auslöser für 'schlechte' Prozesse ist:", options: ["Zu viel Informationsaustausch zwischen Abteilungen", "Silodenken in funktionalen Hierarchien", "Zu klare Kundenorientierung", "Zu geringe Abteilungsgrenzen"], correctIndex: 1, explanation: "Silodenken und Abteilungsegoismen führen typischerweise zu fragmentierten, ineffizienten Prozessen." },
       { id: "q5", question: "Der marktorientierte Entwurfsansatz zur Prozessidentifikation geht...", options: ["von innen nach außen, ausgehend von vorhandenen Ressourcen", "von außen nach innen, ausgehend vom Kundennutzen", "ausschließlich von historischen Referenzprozessen aus", "von zufällig ausgewählten Mitarbeitenden aus"], correctIndex: 1, explanation: "Der marktorientierte Entwurf setzt beim Kundennutzen an und leitet daraus die internen Prozesse ab." },
-      { id: "q6", question: "Warum ist eine Prozesslandkarte für die Gesundheitsförderung im Unternehmen wichtig?", options: ["Sie ist gesetzlich vorgeschrieben und hat keinen praktischen Nutzen", "Sie macht sichtbar, ob Gesundheitsförderung strategisch als Kernprozess integriert oder nur eine isolierte Einzelmaßnahme ist", "Sie ersetzt die Evaluation von Gesundheitsprogrammen", "Sie ist nur für externe Dienstleister relevant"], correctIndex: 1, explanation: "Ohne Prozesslandkarte bleibt Gesundheitsförderung oft eine isolierte Einzelmaßnahme statt eines integrierten Kernprozesses." }
+      { id: "q6", question: "Warum ist eine Prozesslandkarte für die Gesundheitsförderung im Unternehmen wichtig?", options: ["Sie ist gesetzlich vorgeschrieben und hat keinen praktischen Nutzen", "Sie macht sichtbar, ob Gesundheitsförderung strategisch als Kernprozess integriert oder nur eine isolierte Einzelmaßnahme ist", "Sie ersetzt die Evaluation von Gesundheitsprogrammen", "Sie ist nur für externe Dienstleister relevant"], correctIndex: 1, explanation: "Ohne Prozesslandkarte bleibt Gesundheitsförderung oft eine isolierte Einzelmaßnahme statt eines integrierten Kernprozesses." },
+      { id: "q7", question: "Der Bottom-up-Entwurf zur Prozessidentifikation zeichnet sich aus durch:", options: ["Wenige, höherrangige Mitarbeiter als Basis der Entscheidungen", "Breite Mitarbeiterbeteiligung und Nutzung konkreter Wirkungszusammenhänge/dezentralen Wissens", "Ausschließliche Orientierung an Referenzprozessen", "Fehlenden Praxisbezug"], correctIndex: 1, explanation: "Bottom-up nutzt dezentrales Wissen und breite Beteiligung - im Gegensatz zum Top-down-Entwurf." },
+      { id: "q8", question: "Welche Aussage zur 'sanften Tour' (Evolution) trifft zu?", options: ["Die Lösung wird exklusiv von der Unternehmensleitung erarbeitet", "Mitarbeitende erarbeiten fachübergreifend im Team kontinuierliche kleine Verbesserungsschritte", "Sie wird auch 'Bombenwurf' genannt", "Sie stellt radikal alles Bisherige infrage"], correctIndex: 1, explanation: "Die sanfte Tour setzt auf kontinuierliche, team-basierte Verbesserung statt radikalen Umbruch." },
+      { id: "q9", question: "Welche Folge wird laut Text NICHT als typische Konsequenz 'schlechter' Prozesse genannt?", options: ["Fehlende Kundenorientierung", "Zerstückelte und intransparente Abläufe", "Sinkende Personalkosten durch mehr Effizienz", "Zu hohe Kosten und geringe Flexibilität"], correctIndex: 2, explanation: "Schlechte Prozesse führen laut Text zu höheren, nicht sinkenden Kosten und geringerer Flexibilität." }
     ]
   },
   {
@@ -150,6 +193,20 @@ const BWL_STRANG_A_TOPICS = [
         solution: [
           { type: "p", text: "Für die Simulation braucht man ein sehr detailliertes Modell mit exakten Zeiten, Kapazitäten und Verzweigungen, damit die Berechnung realistisch ist. Für neue Mitarbeitende soll das Modell dagegen klar, übersichtlich und schnell verständlich sein - zu viele Details würden hier eher verwirren. Ein einziges Modell kann daher selten beide Zwecke optimal erfüllen; man muss abwägen oder unterschiedlich detaillierte Modellvarianten erstellen." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Welcher GoM-Grundsatz wird verletzt, wenn ein Prozessmodell Details enthält, die für den eigentlichen Modellierungszweck (z. B. eine grobe Übersicht für das Management) gar nicht gebraucht werden?",
+        solution: [
+          { type: "p", text: "Verletzt wird der Grundsatz der Relevanz: Es sollen nur für den Modellierungszweck relevante Sachverhalte dargestellt werden. Irrelevante Details überladen das Modell unnötig, ohne dem eigentlichen Zweck zu dienen." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Ein Unternehmen möchte für einen Kernprozess sowohl ein Organigramm als auch ein separates Prozessmodell erstellen. Welcher GoM-Grundsatz stellt sicher, dass beide Darstellungen zueinander passen, und warum ist das wichtig?",
+        solution: [
+          { type: "p", text: "Der Grundsatz des systematischen Aufbaus verlangt, dass unterschiedliche Sichten (hier: Organigramm und Prozessmodell) konsistent zueinander sind. Das ist wichtig, damit z. B. im Organigramm genannte Zuständigkeiten mit den im Prozessmodell dargestellten Verantwortlichkeiten übereinstimmen - sonst entstehen Widersprüche zwischen den Dokumenten." }
+        ]
       }
     ],
     quiz: [
@@ -158,7 +215,11 @@ const BWL_STRANG_A_TOPICS = [
       { id: "q3", question: "Was beschreibt das Detaillierungsdilemma?", options: ["Mehr Detaillierung ist immer besser und hat keine Nachteile", "Mehr Detaillierung ist für bestimmte Zwecke (Simulation, Kostenplanung) nötig, geht aber zulasten von Klarheit und Wirtschaftlichkeit", "Prozessmodelle sollten nie detailliert werden", "Das Dilemma betrifft nur die IT-Abteilung"], correctIndex: 1, explanation: "Der Zielkonflikt zwischen Detailtiefe und Übersichtlichkeit/Aufwand ist der Kern des Dilemmas." },
       { id: "q4", question: "Vertikale Hierarchisierung bei der Prozessmodellierung bedeutet:", options: ["Bildung von Prozessvarianten für unterschiedliche Kunden", "Verfeinerung eines Prozesses in Teilprozesse auf verschiedenen Detaillierungsebenen", "Das Zusammenlegen aller Prozesse zu einem einzigen Großprozess", "Der Verzicht auf jede Struktur"], correctIndex: 1, explanation: "Vertikale Hierarchisierung schafft Ebenen wie Makro-, Meso- und Mikroprozesse." },
       { id: "q5", question: "Prozessarchitektur unterscheidet sich vom Prozessdesign dadurch, dass sie...", options: ["nur einen einzelnen Prozess im Detail beschreibt", "die Bündelung/Verknüpfung mehrerer Prozesse zu einer Gesamtstruktur betrifft", "ausschließlich IT-Systeme beschreibt", "keine Rolle in der Prozessmodellierung spielt"], correctIndex: 1, explanation: "Architektur bezieht sich auf die Gesamtstruktur, Design auf den einzelnen Prozess." },
-      { id: "q6", question: "Bei der Modellierung von Gesundheitsförderungsprozessen hilft die vertikale Hierarchisierung, weil...", options: ["sie jede Detaillierung überflüssig macht", "sie komplexe Programme über Makro-, Meso- und Mikroebene steuerbar macht", "sie nur für Produktionsprozesse gilt", "sie Kennzahlen automatisch berechnet"], correctIndex: 1, explanation: "Die Ebenen-Struktur hilft, den Gesamtprozess und seine Teilschritte transparent zu steuern." }
+      { id: "q6", question: "Bei der Modellierung von Gesundheitsförderungsprozessen hilft die vertikale Hierarchisierung, weil...", options: ["sie jede Detaillierung überflüssig macht", "sie komplexe Programme über Makro-, Meso- und Mikroebene steuerbar macht", "sie nur für Produktionsprozesse gilt", "sie Kennzahlen automatisch berechnet"], correctIndex: 1, explanation: "Die Ebenen-Struktur hilft, den Gesamtprozess und seine Teilschritte transparent zu steuern." },
+      { id: "q7", question: "Welcher GoM-Grundsatz verlangt, dass ein Modell syntaktisch regelkonform und fachlich korrekt ist?", options: ["Richtigkeit", "Klarheit", "Wirtschaftlichkeit", "Relevanz"], correctIndex: 0, explanation: "Richtigkeit umfasst sowohl die formale (syntaktische) als auch die inhaltliche (semantische) Korrektheit." },
+      { id: "q8", question: "Das Prinzip des parallelen Prozessdesigns zielt darauf ab,...", options: ["Kern- und Supportprozesse strikt nacheinander abzuarbeiten", "Kern- und Supportprozesse gleichzeitig zu bearbeiten, um Zeit zu sparen", "auf Supportprozesse ganz zu verzichten", "die Kundenschnittstelle zu vervielfachen"], correctIndex: 1, explanation: "Parallele statt sequentielle Bearbeitung verkürzt die Gesamtdurchlaufzeit." },
+      { id: "q9", question: "Ganzheitliche Rundumbearbeitung bedeutet, dass ein Prozess...", options: ["möglichst viele verschiedene Verantwortliche haben sollte", "möglichst beim Kunden beginnt und endet, mit Verantwortung bei einer Person/einem Team", "nie mit dem Kunden in Berührung kommt", "immer in mehrere unabhängige Teilprozesse zerlegt werden muss"], correctIndex: 1, explanation: "Rundumbearbeitung bündelt die Verantwortung und orientiert den Prozess konsequent am Kunden." },
+      { id: "q10", question: "Warum ist ein Kompromiss zwischen Detailtiefe und Wirtschaftlichkeit bei der Prozessmodellierung nötig?", options: ["Weil Detaillierung nichts kostet", "Weil höhere Detaillierung mehr Aufwand verursacht, der durch den Nutzen gerechtfertigt sein muss", "Weil Modelle gesetzlich auf eine Seite begrenzt sind", "Weil Detaillierung die Kundenorientierung verringert"], correctIndex: 1, explanation: "Der Grundsatz der Wirtschaftlichkeit verlangt, dass der Detaillierungsaufwand im Verhältnis zum Nutzen steht." }
     ]
   },
   {
@@ -194,6 +255,20 @@ const BWL_STRANG_A_TOPICS = [
         solution: [
           { type: "p", text: "Bei der klassischen Kostenstellenrechnung würden die Gesamtkosten der Beschaffungsabteilung pauschal (z. B. nach Umsatzanteil) auf verschiedene Produkte umgelegt - unabhängig davon, wie viel Beschaffungsaufwand ein Produkt tatsächlich verursacht. Bei der Prozesskostenrechnung wird stattdessen ein Kostentreiber wie 'Anzahl Bestellungen' identifiziert: Ein Produkt, das viele kleine Einzelbestellungen benötigt, erhält mehr Beschaffungskosten zugerechnet als ein Produkt mit wenigen Großbestellungen - die Zurechnung erfolgt also verursachungsgerecht." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Ein Unternehmen misst nur die Kosten seines Kundenservice-Prozesses, nicht aber die Kundenzufriedenheit oder die Bearbeitungszeit. Welche Bemessungsdimensionen fehlen, und welches Risiko entsteht dadurch?",
+        solution: [
+          { type: "p", text: "Es fehlen die Dimensionen Qualität (Kundenzufriedenheit) und Zeit (Bearbeitungsdauer). Risiko: Das Unternehmen könnte einen zwar kostengünstigen, aber langsamen oder für Kunden unbefriedigenden Prozess fälschlich als 'gut' bewerten, weil nur die Kostendimension betrachtet wird - ein einseitiges Bild der Prozessleistung." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Warum eignet sich 'das Holz richtig hacken' als Merkspruch für Effizienz und nicht für Effektivität?",
+        solution: [
+          { type: "p", text: "'Richtig hacken' bezieht sich auf die Art und Weise der Durchführung - also wie sparsam und geschickt eine Aufgabe erledigt wird, unabhängig davon, ob überhaupt das richtige Holz (die richtige Aufgabe) gewählt wurde. Das entspricht genau der Definition von Effizienz: Verhältnis von Output zu eingesetzten Ressourcen. Effektivität würde dagegen fragen, ob überhaupt das richtige Holz gehackt wird - also ob die richtigen Ziele verfolgt werden." }
+        ]
       }
     ],
     quiz: [
@@ -202,7 +277,11 @@ const BWL_STRANG_A_TOPICS = [
       { id: "q3", question: "Welche drei Dimensionen werden bei der Prozessbemessung typischerweise betrachtet?", options: ["Qualität, Kosten, Zeit", "Effektivität, Personal, Standort", "Umsatz, Gewinn, Marktanteil", "Nur Kosten"], correctIndex: 0, explanation: "Qualität, Kosten und Zeit sind die drei zentralen Bemessungsdimensionen." },
       { id: "q4", question: "Was ist ein Kostentreiber (cost driver)?", options: ["Ein Synonym für Gesamtkosten", "Eine Einflussgröße auf den Kosten-/Ressourcenverbrauch eines Prozesses", "Ein Mitarbeiter der Finanzabteilung", "Ein Begriff aus dem Marketing"], correctIndex: 1, explanation: "Kostentreiber ermöglichen die verursachungsgerechte Zurechnung von Prozesskosten." },
       { id: "q5", question: "Der Hauptvorteil der Prozesskostenrechnung gegenüber der klassischen Kostenstellenrechnung ist:", options: ["Sie ist immer günstiger in der Durchführung", "Sie rechnet Kosten verursachungsgerecht über Kostentreiber statt pauschal zu", "Sie ignoriert indirekte Kostenbereiche komplett", "Sie ersetzt die Buchhaltung vollständig"], correctIndex: 1, explanation: "Die verursachungsgerechte Zurechnung ist der zentrale Vorteil gegenüber pauschaler Umlage." },
-      { id: "q6", question: "Das Messvorgehen bei der Prozessbemessung umfasst welche Schritte?", options: ["Nur Ist-Wert erheben", "Soll-Wert festlegen, Ist-Wert erheben, Vergleich durchführen", "Nur Kennzahlen definieren, ohne Messung", "Zufällige Stichprobenziehung ohne Zielwert"], correctIndex: 1, explanation: "Diese drei Schritte bilden den systematischen Soll-Ist-Vergleich." }
+      { id: "q6", question: "Das Messvorgehen bei der Prozessbemessung umfasst welche Schritte?", options: ["Nur Ist-Wert erheben", "Soll-Wert festlegen, Ist-Wert erheben, Vergleich durchführen", "Nur Kennzahlen definieren, ohne Messung", "Zufällige Stichprobenziehung ohne Zielwert"], correctIndex: 1, explanation: "Diese drei Schritte bilden den systematischen Soll-Ist-Vergleich." },
+      { id: "q7", question: "Wozu dient ein 'Takt' bei der Definition eines Prozesskennzahlen-Systems?", options: ["Er legt fest, wie oft gemessen wird (Messhäufigkeit)", "Er legt den Preis eines Produkts fest", "Er ist ein Synonym für Kostentreiber", "Er beschreibt nur die Musikrichtung des Unternehmens"], correctIndex: 0, explanation: "Der Takt gibt an, in welcher Häufigkeit eine Kennzahl erhoben wird." },
+      { id: "q8", question: "Prozessbemessung dient laut Vorlesung nicht nur der Reaktion auf akuten Druck, sondern auch...", options: ["der Risikoprophylaxe durch laufenden Soll-Ist-Vergleich", "der vollständigen Abschaffung von Kennzahlen", "der einmaligen Messung ohne Wiederholung", "ausschließlich der Werbung"], correctIndex: 0, explanation: "Regelmäßige Messung erlaubt frühzeitiges Erkennen von Abweichungen, bevor akuter Druck entsteht." },
+      { id: "q9", question: "Warum sind indirekte Kostenbereiche für die klassische Kostenstellenrechnung schwer zurechenbar?", options: ["Weil sie keinen direkten, offensichtlichen Bezug zu einzelnen Produkten/Aufträgen haben", "Weil sie gesetzlich nicht erfasst werden dürfen", "Weil sie immer 0 Euro kosten", "Weil sie nur in der Produktion vorkommen"], correctIndex: 0, explanation: "Indirekte Bereiche wie Beschaffung oder Verwaltung lassen sich nicht ohne Weiteres einem einzelnen Produkt zuordnen - genau das löst die Prozesskostenrechnung über Kostentreiber." },
+      { id: "q10", question: "Effektivitätskennzahlen im BGM-Kontext messen vor allem...", options: ["die Zielerreichung gesundheitsbezogener Indikatoren", "nur die Kosten pro Teilnehmer", "die Anzahl der Bürostühle", "das Wetter am Veranstaltungstag"], correctIndex: 0, explanation: "Effektivität bezieht sich auf die Zielerreichung, nicht auf den Ressourceneinsatz (das wäre Effizienz)." }
     ]
   },
   {
@@ -247,6 +326,20 @@ const BWL_STRANG_A_TOPICS = [
           { type: "p", text: "Verstoß gegen Prinzip 10 ('Keine Bombenwurfstrategie!'): Die Optimierung sollte 'top down für die Ziele, bottom up für den Weg dorthin' erfolgen - ein reiner Alleingang der Leitung ohne Mitarbeitereinbindung ist genau die kritisierte 'Bombenwurfstrategie'." },
           { type: "p", text: "Verstoß gegen Prinzip 8 (Einbindung von Spezialisten bei der Teambildung): Ohne Einbindung der operativ Tätigen und Fachspezialisten fehlt wichtiges Praxiswissen, und die Gefahr von Groupthink in einem rein leitungsinternen Zirkel steigt." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Welches der zehn Erfolgsfaktoren-Prinzipien passt am besten zu folgender Situation: Ein Unternehmen kopiert unreflektiert ein Prozessmodell eines Wettbewerbers, ohne eigene Stärken oder Erfahrungen einzubeziehen?",
+        solution: [
+          { type: "p", text: "Das verstößt am ehesten gegen Prinzip 6 ('Von bewährten Konzepten lernen'): Dieses Prinzip fordert, sowohl eigene als auch fremde Erfahrungen zu nutzen - nicht aber, fremde Konzepte unreflektiert zu übernehmen, ohne die eigene Situation zu berücksichtigen. Zudem widerspricht dies tendenziell Prinzip 5 ('Maßschneiderei statt Standardkonfektion'), da ein kopiertes Modell selten zur spezifischen Situation des eigenen Unternehmens passt." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Erklären Sie den Unterschied zwischen der Segmentierung 'nach Funktion' und 'nach Problemhaltigkeit/Komplexität' bei der horizontalen Segmentierung von Prozessen.",
+        solution: [
+          { type: "p", text: "Die Segmentierung nach Funktion ähnelt der traditionellen Organisation mit vielen internen Schnittstellen und bietet kaum Vorteile gegenüber der klassischen Form. Die Segmentierung nach Problemhaltigkeit/Komplexität gliedert dagegen nach Routinisierbarkeit der Aufgaben (z. B. einfache vs. komplexe Fälle) und ermöglicht eine kundenorientierte Rundumbearbeitung - allerdings ist die Komplexität eines Falls nicht immer im Voraus bekannt, was die Zuordnung erschwert." }
+        ]
       }
     ],
     quiz: [
@@ -255,7 +348,11 @@ const BWL_STRANG_A_TOPICS = [
       { id: "q3", question: "Prinzip 10 der Erfolgsfaktoren ('Keine Bombenwurfstrategie') fordert:", options: ["Top down für die Ziele, bottom up für den Weg dorthin", "Ausschließlich Top-down-Entscheidungen ohne Mitarbeiterbeteiligung", "Ausschließlich Bottom-up ohne strategische Ausrichtung", "Geheimhaltung bis zum Umsetzungstag"], correctIndex: 0, explanation: "Die Balance zwischen strategischer Zielvorgabe von oben und operativer Mitgestaltung von unten ist zentral." },
       { id: "q4", question: "Prinzip 2 der Erfolgsfaktoren empfiehlt:", options: ["Bestehende Abläufe in kleinen Schritten zu optimieren", "Prozesse neu zu gestalten statt bestehende Abläufe nur zu optimieren, mit Fokus auf wenige robuste Kernprozesse", "Möglichst viele Prozesse parallel zu betreiben", "Kernprozesse regelmäßig auszulagern"], correctIndex: 1, explanation: "Business Reengineering setzt auf radikale Neugestaltung statt inkrementeller Optimierung bestehender Abläufe." },
       { id: "q5", question: "Ein typisches Problem traditioneller, vertikaler Organisationen ist:", options: ["Zu geringe Anzahl an Hierarchieebenen", "Organisatorische Unverantwortlichkeit, da Fehler an Schnittstellen kaum zurechenbar sind", "Zu hohe Kundenorientierung", "Zu wenige Abteilungen"], correctIndex: 1, explanation: "Schnittstellenprobleme erschweren die klare Zurechnung von Verantwortung." },
-      { id: "q6", question: "Bei der Optimierung eines Gesundheitsmanagementsystems sollte laut Vorlesung berücksichtigt werden:", options: ["Nur die Kosten, alle anderen Faktoren sind irrelevant", "Wirksamkeit, Ressourcensituation sowie kulturelle/organisatorische Rahmenbedingungen bei der Wahl zwischen inkrementeller und radikaler Vorgehensweise", "Ausschließlich die Meinung der Geschäftsleitung", "Eine einmalige Maßnahme reicht für nachhaltigen Erfolg"], correctIndex: 1, explanation: "Nachhaltigkeit entsteht durch regelmäßige Erfolgskontrolle und eine zum Kontext passende Optimierungsstrategie." }
+      { id: "q6", question: "Bei der Optimierung eines Gesundheitsmanagementsystems sollte laut Vorlesung berücksichtigt werden:", options: ["Nur die Kosten, alle anderen Faktoren sind irrelevant", "Wirksamkeit, Ressourcensituation sowie kulturelle/organisatorische Rahmenbedingungen bei der Wahl zwischen inkrementeller und radikaler Vorgehensweise", "Ausschließlich die Meinung der Geschäftsleitung", "Eine einmalige Maßnahme reicht für nachhaltigen Erfolg"], correctIndex: 1, explanation: "Nachhaltigkeit entsteht durch regelmäßige Erfolgskontrolle und eine zum Kontext passende Optimierungsstrategie." },
+      { id: "q7", question: "Prinzip 9 der Erfolgsfaktoren ('Hohes Engagement der Unternehmensleitung') fordert unter anderem...", options: ["dass die Leitung sich komplett heraushält", "dass die Leitung Ressourcen freigibt und Widerstände gegen die Prozessveränderung überwindet", "dass ausschließlich externe Berater entscheiden", "dass keine Widerstände zugelassen werden dürfen"], correctIndex: 1, explanation: "Engagement der Leitung bedeutet aktives Freigeben von Ressourcen und Unterstützung bei der Umsetzung." },
+      { id: "q8", question: "Prinzip 4 ('Zukunftsgerichtete Entwicklung von Kernkompetenzen') warnt insbesondere vor...", options: ["zu hoher Investition in Kernkompetenzen", "einer kurzfristigen Reduktion der Wertschöpfungstiefe, die Kernkompetenzen aushöhlen könnte", "zu vielen Kundenkontakten", "der Einbindung von Lieferanten"], correctIndex: 1, explanation: "Eine übereilte Reduktion der Wertschöpfungstiefe kann langfristig wichtige Kernkompetenzen zerstören." },
+      { id: "q9", question: "Was ist laut Prinzip 7 ('Dynamik schützen') bei Redundanzen zu beachten?", options: ["Alle Redundanzen sind grundsätzlich schädlich und müssen entfernt werden", "Notwendige Redundanzen müssen von unnötigen unterschieden werden, um Handlungsspielraum zu erhalten", "Redundanzen sind ausschließlich in der IT relevant", "Redundanzen erhöhen immer die Effizienz"], correctIndex: 1, explanation: "Nicht jede Redundanz ist schädlich - manche schützen die Anpassungsfähigkeit (Dynamik) des Unternehmens." },
+      { id: "q10", question: "Die 'Flotillen-Organisation' aus Prinzip 1 steht im Gegensatz zu...", options: ["der kundenorientierten Rundumbearbeitung", "der 'Silo-Organisation' mit großen, unbeweglichen, isolierten Einheiten", "der Prozessorientierung generell", "dem Business Reengineering"], correctIndex: 1, explanation: "Die Flotille aus wendigen, kundenorientierten Einheiten wird der starren Silo-Organisation gegenübergestellt." }
     ]
   },
   {
@@ -291,6 +388,20 @@ const BWL_STRANG_A_TOPICS = [
         solution: [
           { type: "p", text: "Kostenführerschaft basiert vor allem auf Skaleneffekten, Erfahrungskurveneffekten und funktionaler Spezialisierung mit hoher Kontrollintensität - also auf Fixkostendegression durch Größe und Wiederholung. Prozessmanagement setzt dagegen primär bei der Reduzierung von Koordinationskosten (Schnittstellen, Abstimmung) an, nicht bei der Fixkostendegression. Diese unterschiedlichen Hebel passen nur eingeschränkt zusammen." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Ein Unternehmen möchte sowohl auf ein bestimmtes Kundensegment (z. B. Premiumkunden) fokussieren als auch gleichzeitig durch Einzigartigkeit überzeugen. Ist diese Kombination laut Porter möglich? Begründen Sie.",
+        solution: [
+          { type: "p", text: "Ja, das ist möglich: Fokussierung ist laut Porter mit den anderen beiden generischen Strategien (Kostenführerschaft oder Differenzierung) kombinierbar. In diesem Fall würde das Unternehmen eine fokussierte Differenzierungsstrategie verfolgen - Einzigartigkeit speziell für ein enges Marktsegment (Premiumkunden)." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Erklären Sie, warum 'Marktorientierung' laut Vorlesung nicht mit 'Absatzorientierung' gleichzusetzen ist.",
+        solution: [
+          { type: "p", text: "Absatzorientierung würde sich nur auf den Verkauf/Vertrieb beziehen. Marktorientierte Unternehmensführung betrifft dagegen die strategische Ausrichtung des gesamten Systems - Strategie, Struktur UND Prozesslogik - auf Kundenbedürfnisse und Wettbewerbsanforderungen. Sie geht also weit über die reine Verkaufsfunktion hinaus und durchdringt die gesamte Organisation." }
+        ]
       }
     ],
     quiz: [
@@ -299,7 +410,11 @@ const BWL_STRANG_A_TOPICS = [
       { id: "q3", question: "Worauf fokussiert sich Prozessmanagement primär bei der Kostenwirkung?", options: ["Fixkostendegression durch Skaleneffekte", "Reduzierung von Koordinationskosten", "Erhöhung der Lagerbestände", "Reduzierung der Personalkosten durch Entlassungen"], correctIndex: 1, explanation: "Prozessmanagement wirkt vor allem über die Senkung von Koordinationskosten, nicht über Skaleneffekte." },
       { id: "q4", question: "Marktorientierte Unternehmensführung bedeutet:", options: ["Ausschließliche Fokussierung auf den Vertrieb", "Strategische Ausrichtung von Strategie, Struktur und Prozesslogik auf Kundenbedürfnisse und Wettbewerb", "Verzicht auf jede interne Organisation", "Reine Kostenorientierung ohne Kundenbezug"], correctIndex: 1, explanation: "Marktorientierung betrifft das gesamte System, nicht nur den Absatz." },
       { id: "q5", question: "Fokussierung als generische Strategie bedeutet:", options: ["Konzentration auf ein spezifisches Marktsegment, kombinierbar mit Kostenführerschaft oder Differenzierung", "Immer eine eigenständige, nicht kombinierbare Strategie", "Verzicht auf jede Marktsegmentierung", "Ausschließlich für kleine Unternehmen relevant"], correctIndex: 0, explanation: "Fokussierung lässt sich mit Kostenführerschaft oder Differenzierung kombinieren." },
-      { id: "q6", question: "Übertragen auf Gesundheitsförderung bedeutet Marktorientierung:", options: ["Gesundheitsangebote werden unabhängig vom Bedarf der Mitarbeitenden festgelegt", "Angebote richten sich end-to-end am tatsächlichen Bedarf der Mitarbeitenden aus und werden laufend angepasst", "Nur die Kosten der Angebote zählen", "Gesundheitsförderung braucht keine Evaluation"], correctIndex: 1, explanation: "Die Mitarbeitenden werden wie 'Kunden' behandelt, deren Bedarf laufend erhoben und bedient wird." }
+      { id: "q6", question: "Übertragen auf Gesundheitsförderung bedeutet Marktorientierung:", options: ["Gesundheitsangebote werden unabhängig vom Bedarf der Mitarbeitenden festgelegt", "Angebote richten sich end-to-end am tatsächlichen Bedarf der Mitarbeitenden aus und werden laufend angepasst", "Nur die Kosten der Angebote zählen", "Gesundheitsförderung braucht keine Evaluation"], correctIndex: 1, explanation: "Die Mitarbeitenden werden wie 'Kunden' behandelt, deren Bedarf laufend erhoben und bedient wird." },
+      { id: "q7", question: "Die Branchenstrukturanalyse nach Porter untersucht...", options: ["ausschließlich die Personalstruktur eines Unternehmens", "die fünf Wettbewerbskräfte einer Branche", "nur die Kundenzufriedenheit", "die interne Ressourcenausstattung"], correctIndex: 1, explanation: "Die Branchenstrukturanalyse (Five Forces) ist Porters zentrales Instrument zur Analyse der Wettbewerbsstruktur." },
+      { id: "q8", question: "Worauf beruht die Kostenführerschaft-Strategie hauptsächlich?", options: ["Skaleneffekte, Erfahrungskurveneffekte und funktionale Spezialisierung", "Ausschließlich Marketingausgaben", "Individualisierung jedes einzelnen Produkts", "Zufällige Marktentwicklungen"], correctIndex: 0, explanation: "Diese drei Faktoren ermöglichen die Fixkostendegression, auf der Kostenführerschaft beruht." },
+      { id: "q9", question: "Wodurch entsteht laut Vorlesung das Differenzierungspotenzial von Prozessmanagement konkret?", options: ["Durch crossfunktionale Integration, die einzigartige Prozesse schafft", "Durch Verzicht auf jegliche Koordination", "Durch reine Kostensenkung", "Durch Standardisierung aller Abläufe ohne Ausnahme"], correctIndex: 0, explanation: "Die Fähigkeit, Funktionen bereichsübergreifend einzigartig zu verknüpfen, ist der Kern des Differenzierungspotenzials." },
+      { id: "q10", question: "Welche Aussage zur Fokussierungsstrategie ist korrekt?", options: ["Sie kann nur alleine, nie in Kombination mit anderen Strategien verfolgt werden", "Sie kann mit Kostenführerschaft ODER mit Differenzierung kombiniert werden", "Sie widerspricht grundsätzlich der Kundenorientierung", "Sie ist identisch mit der Differenzierungsstrategie"], correctIndex: 1, explanation: "Fokussierung ist eine Segmentwahl, die zusätzlich mit einer der beiden anderen Strategien verfolgt werden kann." }
     ]
   },
   {
@@ -336,6 +451,20 @@ const BWL_STRANG_A_TOPICS = [
         solution: [
           { type: "p", text: "Ressourcen sind lediglich eine notwendige, keine hinreichende Bedingung: Erst durch eine erfolgskritische, unternehmensspezifische Kombination und einen expliziten Marktbezug entsteht eine Kernkompetenz. Beispiel: Zwei Unternehmen können über dieselben qualifizierten Mitarbeitenden (Ressource) verfügen, aber nur eines davon kombiniert dieses Wissen so mit organisatorischen Routinen und Marktausrichtung, dass daraus tatsächlich ein schwer imitierbarer Wettbewerbsvorteil (Kernkompetenz) entsteht." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Nennen Sie die vier Phasen des Kompetenz-Lebenszyklus in der richtigen Reihenfolge und beschreiben Sie jede Phase in einem Satz.",
+        solution: [
+          { type: "p", text: "1. Identifikation: Potenziale werden zu Prozessen. 2. Entwicklung: Lernen und Wissensakkumulation bauen die Kompetenz aus. 3. Integration: Die Kompetenz wird in Wettbewerbsvorteile eingebettet. 4. Nutzung: Die Stärken der Kernprozesse werden ausgeschöpft." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Ein Unternehmen verfügt über eine seltene Maschine, die aber problemlos von jedem Wettbewerber am freien Markt gekauft werden kann. Erfüllt diese Ressource die Voraussetzungen für einen nachhaltigen Wettbewerbsvorteil? Begründen Sie mit mindestens einer der genannten Eigenschaften.",
+        solution: [
+          { type: "p", text: "Nein: Da die Maschine frei am Markt erhältlich ist, fehlt die Faktormarktinsuffizienz (sie ist eben doch käuflich) und meist auch die Unternehmensspezifität - jeder Wettbewerber kann sie ebenso erwerben. Ohne diese Eigenschaften kann die Ressource keinen dauerhaften Wettbewerbsvorteil begründen, selbst wenn sie aktuell selten im Einsatz ist." }
+        ]
       }
     ],
     quiz: [
@@ -344,7 +473,11 @@ const BWL_STRANG_A_TOPICS = [
       { id: "q3", question: "Ist das bloße Vorhandensein wertvoller Ressourcen laut Vorlesung ausreichend für eine Kernkompetenz?", options: ["Ja, das allein reicht immer aus", "Nein, es ist allenfalls eine notwendige, aber keine hinreichende Bedingung", "Nein, Ressourcen sind für Kernkompetenzen irrelevant", "Nur bei physikalischen Ressourcen reicht es aus"], correctIndex: 1, explanation: "Erst die spezifische, marktbezogene Kombination macht aus Ressourcen eine Kernkompetenz." },
       { id: "q4", question: "Pfadabhängigkeit als Isolationsbarriere bedeutet:", options: ["Imitation würde bedeuten, den bisherigen strategischen Entwicklungspfad aufzugeben (sunk costs)", "Die Kompetenz ist an keinen bestimmten Weg gebunden", "Wettbewerber können jederzeit ohne Kosten imitieren", "Der Begriff bezieht sich nur auf physische Standorte"], correctIndex: 0, explanation: "Ein Wechsel des Entwicklungspfads würde bereits getätigte Investitionen entwerten." },
       { id: "q5", question: "Wie verhalten sich markt- und ressourcenorientierte Strategie laut Vorlesung zueinander?", options: ["Sie schließen sich grundsätzlich aus", "Sie ergänzen sich - Ressourcen wirken erst in marktwirksamen Prozessen", "Nur die marktorientierte Strategie ist relevant", "Nur die ressourcenorientierte Strategie ist relevant"], correctIndex: 1, explanation: "Beide Perspektiven ergänzen sich, entgegen einer verbreiteten Fehlannahme." },
-      { id: "q6", question: "In welcher Phase des Kompetenz-Lebenszyklus werden Kernprozess-Stärken ausgeschöpft?", options: ["Identifikation", "Entwicklung", "Integration", "Nutzung"], correctIndex: 3, explanation: "Die Nutzungsphase ist die Phase der Ausschöpfung bestehender Stärken." }
+      { id: "q6", question: "In welcher Phase des Kompetenz-Lebenszyklus werden Kernprozess-Stärken ausgeschöpft?", options: ["Identifikation", "Entwicklung", "Integration", "Nutzung"], correctIndex: 3, explanation: "Die Nutzungsphase ist die Phase der Ausschöpfung bestehender Stärken." },
+      { id: "q7", question: "Welche Eigenschaft muss eine Ressource NICHT zwingend erfüllen, um einen nachhaltigen Wettbewerbsvorteil zu begründen?", options: ["Nicht-Imitierbarkeit", "Unternehmensspezifität", "Leichte Käuflichkeit am freien Markt für alle", "Nicht-Substituierbarkeit"], correctIndex: 2, explanation: "Im Gegenteil: eine für alle leicht käufliche Ressource (fehlende Faktormarktinsuffizienz) kann keinen dauerhaften Vorteil begründen." },
+      { id: "q8", question: "Implizites/tazites Wissen als Isolationsbarriere ist schwer kopierbar, weil...", options: ["es öffentlich dokumentiert ist", "es auf mehrere Personen verteilt und in organisatorischen Routinen gespeichert ist", "es nie verändert werden kann", "es nur bei physikalischen Ressourcen vorkommt"], correctIndex: 1, explanation: "Verteiltes, in Routinen eingebettetes Wissen lässt sich nicht einfach abschreiben oder abwerben." },
+      { id: "q9", question: "Eine Kernkompetenz manifestiert sich laut Vorlesung insbesondere in...", options: ["reinen Finanzkennzahlen", "Kernprodukten bzw. Kernleistungen des Unternehmens", "der Anzahl der Mitarbeitenden", "dem Standort der Zentrale"], correctIndex: 1, explanation: "Kernkompetenzen zeigen sich konkret in den Produkten/Leistungen, die das Unternehmen anbietet." },
+      { id: "q10", question: "Organisatorische Ressourcen (eine der drei Kategorien) umfassen zum Beispiel...", options: ["Standort und Rohstoffzugang", "Innovationsfähigkeit, Kundennähe und Flexibilität", "Ausbildung und Motivation einzelner Mitarbeitender", "Nur physisches Kapital"], correctIndex: 1, explanation: "Organisatorische Ressourcen betreffen Fähigkeiten der Organisation als Ganzes, nicht einzelner Personen oder physischer Güter." }
     ]
   },
   {
@@ -380,6 +513,20 @@ const BWL_STRANG_A_TOPICS = [
         solution: [
           { type: "p", text: "Just-in-Time steigert die Effizienz, da kaum Lagerbestände und damit gebundenes Kapital nötig sind. Gleichzeitig erhöht es aber die Störanfälligkeit: Fällt eine Lieferung aus oder verzögert sich, entstehen sofort Engpässe, Zeitdruck und Improvisationsbedarf bei den Mitarbeitenden - die Effizienzsteigerung erkauft sich also potenziell mit höherer Belastung bei Störungen. Genau das ist die im Gesamtfazit beschriebene Doppelwirkung von Effizienzinstrumenten." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Nennen Sie die vier Bausteine, die sich laut Fazit-Kapitel zu einer systematischen Prozessverbesserung zusammenfügen.",
+        solution: [
+          { type: "p", text: "1. Prozessidentifikation und -modellierung (Definition, Struktur, Transparenz). 2. Prozessmessung und -bewertung (Kennzahlen zu Zeit, Qualität, Kosten). 3. Prozessgestaltung und -optimierung (kontinuierliche Verbesserung nach PDCA). 4. Integration mit Strategie und Ressourcen (markt- und ressourcenorientierte Perspektiven)." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Erklären Sie Punkt 2 des Gesamtfazits ('Personal als wiederkehrender Engpassfaktor') anhand eines selbst gewählten Beispiels aus dem Wertschöpfungsketten-Strang (z. B. Bestellmanagement oder Dienstleistungen).",
+        solution: [
+          { type: "p", text: "Beispiel Dienstleistungen: Da Dienstleistungen nicht lagerfähig sind (Uno-actu-Prinzip), muss ausreichend Personal in dem Moment verfügbar sein, in dem die Nachfrage entsteht - fehlt Personal, entsteht sofort ein Engpass, der nicht durch Lagerbestände abgefedert werden kann. Gleichzeitig ist genau dieses Personal durch hohe Auslastung und emotionale Beanspruchung (z. B. im Kundenkontakt) besonders vulnerabel für Stress und Belastung - Personal ist hier also gleichzeitig der limitierende UND der gesundheitlich gefährdete Faktor." }
+        ]
       }
     ],
     quiz: [
@@ -388,7 +535,11 @@ const BWL_STRANG_A_TOPICS = [
       { id: "q3", question: "Laut Gesamtfazit ist der zentrale Hebel für Gesundheit in Organisationen:", options: ["Individuelle Verhaltensangebote für Mitarbeitende", "Management-/Planungsentscheidungen auf der Dispositionsebene", "Ausschließlich das persönliche Verhalten jedes Einzelnen", "Zufällige externe Einflüsse"], correctIndex: 1, explanation: "Dispositive Entscheidungen (Personal, Kapazität, Kennzahlen, Lieferanten) prägen Gesundheit primär." },
       { id: "q4", question: "Welcher Faktor wird laut Gesamtfazit über nahezu alle 16 Themen hinweg als wiederkehrender Engpassfaktor identifiziert?", options: ["Kapital", "Personal", "Information", "Energie"], correctIndex: 1, explanation: "Personal wird durchgängig als limitierender und zugleich vulnerabler Faktor benannt." },
       { id: "q5", question: "'Strukturelle statt additive Gesundheitsförderung' bedeutet:", options: ["Gesundheitsförderung ist ein optionales Zusatzprogramm ohne Bezug zu Prozessen", "Gesundheitsförderung ist integraler Bestandteil der Prozess- und Wertschöpfungsgestaltung selbst", "Gesundheitsförderung sollte nur additiv zu Boni ausgezahlt werden", "Der Begriff hat keine Bedeutung für Unternehmen"], correctIndex: 1, explanation: "Gesundheitsförderung soll strukturell mitgedacht, nicht nachträglich angehängt werden." },
-      { id: "q6", question: "Klare, stabile Prozesse wirken sich auf Mitarbeitende typischerweise wie aus?", options: ["Sie erhöhen Unsicherheit und senken Motivation", "Sie reduzieren Unsicherheit und stärken Motivation, Selbstwirksamkeit und Kooperation", "Sie haben keinerlei psychologische Wirkung", "Sie führen automatisch zu Überlastung"], correctIndex: 1, explanation: "Prozessklarheit wirkt positiv auf Handlungssicherheit und Wohlbefinden." }
+      { id: "q6", question: "Klare, stabile Prozesse wirken sich auf Mitarbeitende typischerweise wie aus?", options: ["Sie erhöhen Unsicherheit und senken Motivation", "Sie reduzieren Unsicherheit und stärken Motivation, Selbstwirksamkeit und Kooperation", "Sie haben keinerlei psychologische Wirkung", "Sie führen automatisch zu Überlastung"], correctIndex: 1, explanation: "Prozessklarheit wirkt positiv auf Handlungssicherheit und Wohlbefinden." },
+      { id: "q7", question: "Wie viele Bausteine systematischer Prozessverbesserung nennt das Fazit-Kapitel?", options: ["Zwei", "Drei", "Vier", "Sechs"], correctIndex: 2, explanation: "Identifikation/Modellierung, Messung/Bewertung, Gestaltung/Optimierung und Integration mit Strategie/Ressourcen." },
+      { id: "q8", question: "Was passiert laut Gesamtfazit bei 'Überoptimierung' von Effizienzinstrumenten wie Digitalisierung oder Just-in-Time?", options: ["Es entstehen ausschließlich Vorteile ohne jedes Risiko", "Sie können trotz Effizienzgewinn neue Belastungen erzeugen", "Sie werden automatisch günstiger", "Sie verbessern immer die Gesundheit der Mitarbeitenden"], correctIndex: 1, explanation: "Die 'Doppelwirkung' beschreibt genau dieses zweischneidige Risiko." },
+      { id: "q9", question: "Fehlende Standards führen laut Fazit-Kapitel tendenziell zu...", options: ["höherer Effizienz und Qualität", "höherer Flexibilität, aber höheren Koordinations- und Fehlerkosten", "vollständiger Prozessstabilität", "geringerer Mitarbeiterbeteiligung"], correctIndex: 1, explanation: "Fehlende Standards erhöhen zwar die Flexibilität, aber auch Abstimmungs- und Fehleraufwand." },
+      { id: "q10", question: "Welche Organisationskultur fördert laut Fazit-Kapitel erfolgreiches Prozessmanagement?", options: ["Eine Kultur der Geheimhaltung und Kontrolle", "Eine Kultur der Fehleroffenheit, des Vertrauens und der Beteiligung", "Eine Kultur ohne jede Führungsstruktur", "Eine rein finanziell orientierte Kultur"], correctIndex: 1, explanation: "Fehleroffenheit, Vertrauen und Beteiligung werden explizit als förderlich genannt." }
     ]
   }
 ];

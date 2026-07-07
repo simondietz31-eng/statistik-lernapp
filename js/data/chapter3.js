@@ -36,6 +36,21 @@ const CHAPTER3_TOPICS = [
         solution: [
           { type: "p", text: "Das Nichtnegativitätsaxiom ($0 \\leq P(A) \\leq 1$) ist verletzt, da Wahrscheinlichkeiten nie negativ sein können." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Betrachten Sie erneut das französische Roulette mit $\\Omega = \\{0, 1, \\dots, 36\\}$. Geben Sie die Ereignismenge $\\mathcal{F}$ nicht vollständig an, sondern erklären Sie, was $\\mathcal{F}$ im Unterschied zu $\\Omega$ enthält, und nennen Sie ein Beispiel für ein Ereignis aus $\\mathcal{F}$, das kein Elementarereignis ist.",
+        solution: [
+          { type: "p", text: "$\\Omega$ enthält die einzelnen Elementarereignisse (die 37 Zahlen 0 bis 36), während $\\mathcal{F}$ die Menge aller betrachteten zufälligen Ereignisse ist, also aller relevanten Teilmengen von $\\Omega$ - nicht nur einzelne Zahlen." },
+          { type: "p", text: "Beispiel: Das Ereignis 'Impair' $= \\{1,3,5,\\dots,35\\}$ ist eine Teilmenge von $\\Omega$ mit mehreren Elementarereignissen und somit ein Element von $\\mathcal{F}$, aber selbst kein Elementarereignis." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Jemand behauptet: 'Bei zwei Würfen einer Münze gilt $P(\\text{Kopf}) + P(\\text{Zahl}) = 0{,}9$.' Welches Axiom wird hier verletzt und warum?",
+        solution: [
+          { type: "p", text: "Das Normierungsaxiom $P(\\Omega) = 1$ wird verletzt: 'Kopf' und 'Zahl' sind die einzigen (disjunkten) Elementarereignisse und bilden zusammen den gesamten Ereignisraum $\\Omega$. Nach dem Additivitätsaxiom müsste also $P(\\text{Kopf}) + P(\\text{Zahl}) = P(\\Omega) = 1$ gelten, nicht 0,9." }
+        ]
       }
     ],
     quiz: [
@@ -43,7 +58,11 @@ const CHAPTER3_TOPICS = [
       { id: "q2", question: "Welches der drei Kolmogorow-Axiome fordert $P(\\Omega)=1$?", options: ["Nichtnegativität", "Normierung", "Additivität", "Unabhängigkeit"], correctIndex: 1, explanation: "Das Normierungsaxiom legt fest, dass das sichere Ereignis die Wahrscheinlichkeit 1 hat." },
       { id: "q3", question: "Ein zufälliges Ereignis ist formal...", options: ["ein einzelner Punkt in $\\Omega$", "eine Teilmenge des Ereignisraums $\\Omega$", "immer gleich $\\Omega$ selbst", "ein Zahlenwert zwischen -1 und 1"], correctIndex: 1, explanation: "Ereignisse fassen eine oder mehrere Elementarereignisse als Teilmenge von $\\Omega$ zusammen." },
       { id: "q4", question: "Für welche Art von Zufallsvorgang ist ein diskreter Ereignisraum typisch?", options: ["Wartezeit auf den nächsten Bus", "Körpergröße einer zufällig gewählten Person", "Anzahl der Augen beim Würfelwurf", "Exakter Zeitpunkt eines Erdbebens"], correctIndex: 2, explanation: "Der Würfelwurf hat endlich viele, abzählbare Ausgänge (1 bis 6) - ein diskreter Ereignisraum." },
-      { id: "q5", question: "Für paarweise disjunkte Ereignisse $A_1, A_2$ gilt laut Additivitätsaxiom:", options: ["$P(A_1 \\cup A_2) = P(A_1) \\cdot P(A_2)$", "$P(A_1 \\cup A_2) = P(A_1) + P(A_2)$", "$P(A_1 \\cup A_2) = P(A_1) - P(A_2)$", "$P(A_1 \\cup A_2) = 1$"], correctIndex: 1, explanation: "Bei disjunkten (sich nicht überschneidenden) Ereignissen addieren sich die Wahrscheinlichkeiten einfach." }
+      { id: "q5", question: "Für paarweise disjunkte Ereignisse $A_1, A_2$ gilt laut Additivitätsaxiom:", options: ["$P(A_1 \\cup A_2) = P(A_1) \\cdot P(A_2)$", "$P(A_1 \\cup A_2) = P(A_1) + P(A_2)$", "$P(A_1 \\cup A_2) = P(A_1) - P(A_2)$", "$P(A_1 \\cup A_2) = 1$"], correctIndex: 1, explanation: "Bei disjunkten (sich nicht überschneidenden) Ereignissen addieren sich die Wahrscheinlichkeiten einfach." },
+      { id: "q6", question: "Die Ereignismenge $\\mathcal{F}$ ist...", options: ["dasselbe wie $\\Omega$", "die Menge aller betrachteten zufälligen Ereignisse", "immer nur ein einzelnes Elementarereignis", "eine Zahl zwischen 0 und 1"], correctIndex: 1, explanation: "$\\mathcal{F}$ fasst alle zufälligen Ereignisse (Teilmengen von $\\Omega$) zusammen, die betrachtet werden." },
+      { id: "q7", question: "Welche Aussage über einen Zufallsvorgang trifft laut Definition zu?", options: ["Sein Ergebnis ist stets mit Sicherheit vorhersagbar", "Sein Ergebnis ist nicht mit Sicherheit vorhersagbar", "Er hat immer nur ein mögliches Ergebnis", "Er kann nur bei stetigen Merkmalen auftreten"], correctIndex: 1, explanation: "Genau diese Unsicherheit des Ergebnisses macht einen Vorgang zu einem Zufallsvorgang." },
+      { id: "q8", question: "Ist $P(A) = 1{,}2$ für ein Ereignis $A$ zulässig?", options: ["Ja, Wahrscheinlichkeiten können größer als 1 sein", "Nein, das verletzt $0 \\leq P(A) \\leq 1$ (Nichtnegativität/Beschränktheit)", "Ja, aber nur bei stetigen Ereignisräumen", "Nein, das verletzt nur das Additivitätsaxiom"], correctIndex: 1, explanation: "Wahrscheinlichkeiten müssen laut Axiomen stets zwischen 0 und 1 liegen." },
+      { id: "q9", question: "Ein stetiger Ereignisraum liegt typischerweise vor bei...", options: ["der Anzahl der Augen beim Würfeln", "dem Ergebnis eines Münzwurfs", "einer Wartezeit, die jeden beliebigen reellen Wert annehmen kann", "der Anzahl gezogener Kugeln aus einer Urne"], correctIndex: 2, explanation: "Wartezeiten sind ein klassisches Beispiel für überabzählbar viele mögliche Ausgänge - einen stetigen Ereignisraum." }
     ]
   },
   {
@@ -75,6 +94,20 @@ const CHAPTER3_TOPICS = [
         solution: [
           { type: "p", text: "Das ist die subjektive Methode. Nachteil: Die Einschätzung basiert auf persönlicher Erfahrung/Intuition statt auf Daten oder Wiederholbarkeit und kann daher von der tatsächlichen Wahrscheinlichkeit abweichen oder willkürlich wirken, wenn sie nicht gut begründet ist." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Beim Würfelexperiment aus Aufgabe 1 (1.000 Würfe, 481-mal gerade Zahl) - wie würde sich die geschätzte Wahrscheinlichkeit nach dem Gesetz der großen Zahlen vermutlich verändern, wenn man den Würfel statt 1.000-mal 100.000-mal wirft?",
+        solution: [
+          { type: "p", text: "Nach dem Gesetz der großen Zahlen nähert sich die relative Häufigkeit mit wachsender Anzahl an Wiederholungen der wahren Wahrscheinlichkeit an. Bei 100.000 Würfen würde die relative Häufigkeit daher voraussichtlich noch näher an den theoretischen Wert von $0{,}5$ heranrücken als die $0{,}481$ aus dem Experiment mit nur 1.000 Würfen." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Erklären Sie, warum die klassische (Laplace-) Methode nicht auf das Start-up-Beispiel aus Aufgabe 2 (Erfolgswahrscheinlichkeit eines neuen Produkts) angewendet werden kann.",
+        solution: [
+          { type: "p", text: "Die klassische Methode setzt endlich viele, gleichwahrscheinliche Elementarereignisse voraus. Beim Markterfolg eines neuen Produkts gibt es weder klar abzählbare, gleichwahrscheinliche Ausgänge noch eine Grundlage, um jedem möglichen Ausgang formal dieselbe Wahrscheinlichkeit zuzuweisen - deshalb ist hier nur die subjektive (oder ggf. statistische, falls Daten vorlägen) Methode anwendbar." }
+        ]
       }
     ],
     quiz: [
@@ -82,7 +115,11 @@ const CHAPTER3_TOPICS = [
       { id: "q2", question: "Das Gesetz der großen Zahlen besagt, dass...", options: ["die relative Häufigkeit mit wachsender Anzahl Wiederholungen gegen die wahre Wahrscheinlichkeit konvergiert", "die absolute Häufigkeit konstant bleibt", "kleine Stichproben immer genauer sind als große", "Wahrscheinlichkeiten immer genau 0,5 sind"], correctIndex: 0, explanation: "Je öfter man einen Zufallsvorgang wiederholt, desto näher kommt die beobachtete relative Häufigkeit der tatsächlichen Wahrscheinlichkeit." },
       { id: "q3", question: "Eine Wahrscheinlichkeitseinschätzung, die rein auf Erfahrung eines Experten beruht, nennt man...", options: ["klassische Methode", "statistische Methode", "subjektive Methode", "axiomatische Methode"], correctIndex: 2, explanation: "Die subjektive Methode basiert auf Erfahrungswissen ohne Experiment oder Gleichwahrscheinlichkeitsannahme." },
       { id: "q4", question: "Bei einem fairen Münzwurf ist die Wahrscheinlichkeit für 'Kopf' nach der klassischen Methode...", options: ["0", "0,25", "0,5", "1"], correctIndex: 2, explanation: "Es gibt 2 gleichwahrscheinliche Ausgänge, also $P(\\text{Kopf}) = 1/2 = 0{,}5$." },
-      { id: "q5", question: "Warum eignet sich die statistische Methode nicht für einmalige, nicht wiederholbare Ereignisse (z. B. 'Wird dieses eine Startup erfolgreich sein?')?", options: ["Weil sie nur bei geraden Zahlen funktioniert", "Weil sie auf der relativen Häufigkeit über viele Wiederholungen beruht, die hier nicht existieren", "Weil sie immer 0 ergibt", "Weil sie nur bei stetigen Merkmalen anwendbar ist"], correctIndex: 1, explanation: "Ohne Wiederholbarkeit unter gleichen Bedingungen lässt sich keine relative Häufigkeit bilden - hier braucht man die subjektive Methode." }
+      { id: "q5", question: "Warum eignet sich die statistische Methode nicht für einmalige, nicht wiederholbare Ereignisse (z. B. 'Wird dieses eine Startup erfolgreich sein?')?", options: ["Weil sie nur bei geraden Zahlen funktioniert", "Weil sie auf der relativen Häufigkeit über viele Wiederholungen beruht, die hier nicht existieren", "Weil sie immer 0 ergibt", "Weil sie nur bei stetigen Merkmalen anwendbar ist"], correctIndex: 1, explanation: "Ohne Wiederholbarkeit unter gleichen Bedingungen lässt sich keine relative Häufigkeit bilden - hier braucht man die subjektive Methode." },
+      { id: "q6", question: "Wie lautet die Formel der klassischen (Laplace-) Methode?", options: ["$P(A) = |A| \\cdot |\\Omega|$", "$P(A) = |A| / |\\Omega|$", "$P(A) = |\\Omega| / |A|$", "$P(A) = |A| - |\\Omega|$"], correctIndex: 1, explanation: "Anzahl der günstigen Fälle $|A|$ geteilt durch Anzahl aller möglichen Fälle $|\\Omega|$." },
+      { id: "q7", question: "Welche der drei Methoden erfordert, dass der Zufallsvorgang unter gleichen Bedingungen wiederholbar ist?", options: ["Klassische Methode", "Statistische (frequentistische) Methode", "Subjektive Methode", "Keine der drei Methoden"], correctIndex: 1, explanation: "Die statistische Methode schätzt Wahrscheinlichkeiten über relative Häufigkeiten aus vielen Wiederholungen." },
+      { id: "q8", question: "Welche Aussage trifft auf die subjektive Methode zu?", options: ["Sie erfordert immer ein durchgeführtes Experiment", "Sie basiert auf Expertenwissen und Erfahrung ohne Experiment und sollte gut begründet sein, um Willkür zu vermeiden", "Sie liefert immer exaktere Werte als die klassische Methode", "Sie setzt gleichwahrscheinliche Elementarereignisse voraus"], correctIndex: 1, explanation: "Die subjektive Methode beruht auf Einschätzung statt auf Experiment oder Gleichverteilungsannahme." },
+      { id: "q9", question: "Welche der folgenden Aussagen ist korrekt?", options: ["Alle drei Methoden liefern bei jedem Zufallsvorgang exakt dasselbe Ergebnis", "Die Wahl der Methode hängt davon ab, ob gleichwahrscheinliche Ausgänge, Wiederholbarkeit oder nur Expertenwissen vorliegen", "Nur die klassische Methode ist wissenschaftlich anerkannt", "Die statistische Methode benötigt keine Wiederholungen"], correctIndex: 1, explanation: "Je nach Voraussetzungen des Zufallsvorgangs eignet sich eine andere der drei Methoden." }
     ]
   },
   {
@@ -131,6 +168,24 @@ const CHAPTER3_TOPICS = [
           { type: "formula", block: true, tex: "P(\\text{infiziert} \\mid \\text{negativ}) = \\frac{P(\\text{negativ} \\mid \\text{infiziert}) \\cdot P(\\text{infiziert})}{P(\\text{negativ})} = \\frac{0{,}001 \\cdot 0{,}005}{0{,}98} \\approx 0{,}0000051" },
           { type: "p", text: "Die Wahrscheinlichkeit ist mit ca. 0,00051% verschwindend gering - bei einer niedrigen Grundrate ist ein negativer Test sehr aussagekräftig." }
         ]
+      },
+      {
+        id: "ex4",
+        prompt: "Betrachten Sie erneut den Bewerber aus Aufgabe 1 mit $P(\\text{Zusage A}) = 0{,}30$ und $P(\\text{Zusage B}) = 0{,}40$ (beide unabhängig). Wie hoch ist die Wahrscheinlichkeit, von KEINER der beiden Firmen eine Zusage zu erhalten?",
+        solution: [
+          { type: "p", text: "Aus Aufgabe 1 ist bekannt: $P(A \\cup B) = 0{,}58$ (mindestens eine Zusage). Das Gegenereignis 'keine Zusage' ist das Komplement davon:" },
+          { type: "formula", block: true, tex: "P(\\overline{A \\cup B}) = 1 - P(A \\cup B) = 1 - 0{,}58 = 0{,}42" },
+          { type: "p", text: "Die Wahrscheinlichkeit, keine der beiden Zusagen zu erhalten, beträgt 42%. Alternativ: $(1-0{,}30)\\cdot(1-0{,}40) = 0{,}70 \\cdot 0{,}60 = 0{,}42$, da $A$ und $B$ unabhängig sind." }
+        ]
+      },
+      {
+        id: "ex5",
+        prompt: "Berechnen Sie für das Beispiel der 235 Studierenden (Aufgabe 2) die Wahrscheinlichkeit $P(B \\mid V)$, also die Wahrscheinlichkeit, BWL zu bestehen, gegeben dass VWL bestanden wurde.",
+        solution: [
+          { type: "p", text: "Bekannt aus Aufgabe 2: $P(V \\cap B) = 0{,}62$ und $P(V) = 0{,}72$." },
+          { type: "formula", block: true, tex: "P(B \\mid V) = \\frac{P(V \\cap B)}{P(V)} = \\frac{0{,}62}{0{,}72} \\approx 0{,}86" },
+          { type: "p", text: "Wer VWL bestanden hat, besteht mit ca. 86% Wahrscheinlichkeit auch BWL - deutlich höher als die unbedingte Wahrscheinlichkeit $P(B) = 0{,}75$, was die zuvor festgestellte Abhängigkeit bestätigt." }
+        ]
       }
     ],
     quiz: [
@@ -139,7 +194,10 @@ const CHAPTER3_TOPICS = [
       { id: "q3", question: "Der Satz von Bayes wird typischerweise verwendet, um...", options: ["eine unbedingte Wahrscheinlichkeit direkt abzulesen", "eine bedingte Wahrscheinlichkeit 'umzudrehen' (z. B. von $P(B|A)$ auf $P(A|B)$ zu schließen)", "die Varianz zu berechnen", "zwei Ereignisse als disjunkt nachzuweisen"], correctIndex: 1, explanation: "Bayes erlaubt es, aus einer bekannten bedingten Wahrscheinlichkeit die 'umgekehrte' zu berechnen." },
       { id: "q4", question: "Zwei Ereignisse $A$ und $B$ sind unabhängig, wenn...", options: ["$P(A \\cap B) = 0$", "$P(A \\cap B) = P(A) + P(B)$", "$P(A \\cap B) = P(A) \\cdot P(B)$", "$P(A) = P(B)$"], correctIndex: 2, explanation: "Das ist die formale Definition der Unabhängigkeit zweier Ereignisse." },
       { id: "q5", question: "Warum ist ein negativer Test bei einer sehr seltenen Krankheit (niedrige Grundrate) besonders aussagekräftig?", options: ["Weil Tests bei seltenen Krankheiten nie irren", "Weil schon eine geringe Fehlerrate im Vergleich zur niedrigen Grundrate kaum ins Gewicht fällt, sodass ein negatives Ergebnis die Infektionswahrscheinlichkeit stark senkt", "Weil die Sensitivität dann automatisch 100% beträgt", "Das ist falsch - er ist dann weniger aussagekräftig"], correctIndex: 1, explanation: "Nach Bayes hängt $P(\\text{infiziert}|\\text{negativ})$ stark von der niedrigen Grundrate $P(\\text{infiziert})$ ab, was die bedingte Wahrscheinlichkeit sehr klein macht." },
-      { id: "q6", question: "Bedingte Wahrscheinlichkeit $P(A \\mid B)$ ist definiert als:", options: ["$P(A) \\cdot P(B)$", "$\\frac{P(A \\cap B)}{P(B)}$", "$\\frac{P(A)}{P(B)}$", "$P(A) + P(B)$"], correctIndex: 1, explanation: "Man betrachtet den Anteil von $A \\cap B$ innerhalb des bereits eingetretenen Ereignisses $B$." }
+      { id: "q6", question: "Bedingte Wahrscheinlichkeit $P(A \\mid B)$ ist definiert als:", options: ["$P(A) \\cdot P(B)$", "$\\frac{P(A \\cap B)}{P(B)}$", "$\\frac{P(A)}{P(B)}$", "$P(A) + P(B)$"], correctIndex: 1, explanation: "Man betrachtet den Anteil von $A \\cap B$ innerhalb des bereits eingetretenen Ereignisses $B$." },
+      { id: "q7", question: "Beim Bewerber-Beispiel ($P(A)=0{,}30$, $P(B)=0{,}40$, unabhängig) beträgt $P(A \\cap B)$:", options: ["0,70", "0,58", "0,12", "0,10"], correctIndex: 2, explanation: "Bei unabhängigen Ereignissen gilt $P(A\\cap B) = P(A)\\cdot P(B) = 0{,}30\\cdot 0{,}40 = 0{,}12$." },
+      { id: "q8", question: "Beim Prüfungsbeispiel (VWL/BWL) wurde festgestellt, dass $P(V)\\cdot P(B) = 0{,}54 \\neq P(V\\cap B) = 0{,}62$. Das bedeutet:", options: ["$V$ und $B$ sind unabhängig", "$V$ und $B$ sind nicht unabhängig", "Ein Rechenfehler liegt vor, das darf nicht vorkommen", "$V$ und $B$ sind disjunkt"], correctIndex: 1, explanation: "Nur wenn $P(A\\cap B) = P(A)\\cdot P(B)$ exakt gilt, sind zwei Ereignisse unabhängig - hier ist das nicht der Fall." },
+      { id: "q9", question: "Welche Formel entspricht dem Satz von Bayes korrekt?", options: ["$P(B\\mid A) = \\frac{P(A\\mid B)\\cdot P(B)}{P(A)}$", "$P(B\\mid A) = P(A\\mid B) + P(B)$", "$P(B\\mid A) = P(A) \\cdot P(B)$", "$P(B\\mid A) = \\frac{P(A)}{P(A\\mid B)}$"], correctIndex: 0, explanation: "Das ist die im Skript angegebene Form des Satzes von Bayes." }
     ]
   },
   {
@@ -177,6 +235,22 @@ const CHAPTER3_TOPICS = [
         solution: [
           { type: "p", text: "Beide berechnen einen gewichteten Durchschnitt: das arithmetische Mittel gewichtet die beobachteten Werte mit ihren relativen Häufigkeiten, der Erwartungswert gewichtet die möglichen Werte einer Zufallsvariable mit ihren (theoretischen) Wahrscheinlichkeiten. Relative Häufigkeit und Wahrscheinlichkeit entsprechen sich dabei konzeptionell." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Beim zweifachen Würfelwurf aus Aufgabe 1 ($X$ = Anzahl der Sechsen) wurde die Zähldichte $P(X=0)=25/36$, $P(X=1)=10/36$, $P(X=2)=1/36$ berechnet. Bestimmen Sie die Verteilungsfunktion $F(1) = P(X \\leq 1)$.",
+        solution: [
+          { type: "formula", block: true, tex: "F(1) = P(X \\leq 1) = P(X=0) + P(X=1) = \\frac{25}{36} + \\frac{10}{36} = \\frac{35}{36} \\approx 0{,}97" },
+          { type: "p", text: "Die Verteilungsfunktion kumuliert die Einzelwahrscheinlichkeiten aus der Zähldichte bis zum betrachteten Wert." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Prüfen Sie anhand der Zähldichte aus Aufgabe 1 ($P(X=0)=25/36$, $P(X=1)=10/36$, $P(X=2)=1/36$), ob die Bedingung $\\sum_x p(x) = 1$ erfüllt ist.",
+        solution: [
+          { type: "formula", block: true, tex: "\\sum_x p(x) = \\frac{25}{36} + \\frac{10}{36} + \\frac{1}{36} = \\frac{36}{36} = 1" },
+          { type: "p", text: "Die Bedingung ist erfüllt, wie es für jede gültige Zähldichte sein muss." }
+        ]
       }
     ],
     quiz: [
@@ -184,7 +258,11 @@ const CHAPTER3_TOPICS = [
       { id: "q2", question: "Wie berechnet man die Varianz meist in der Praxis (Satz von Steiner)?", options: ["$\\text{Var}(X) = E(X) - \\mu$", "$\\text{Var}(X) = E(X^2) - [E(X)]^2$", "$\\text{Var}(X) = E(X)^2$", "$\\text{Var}(X) = \\sum x$"], correctIndex: 1, explanation: "Der Verschiebungssatz erspart das direkte Rechnen mit $(X-\\mu)^2$." },
       { id: "q3", question: "Welche Eigenschaft muss jede Zähldichte erfüllen?", options: ["$\\sum_x p(x) = 0$", "$\\sum_x p(x) = 1$", "$p(x)$ kann negativ sein", "$p(x)$ ist immer konstant"], correctIndex: 1, explanation: "Die Summe aller Einzelwahrscheinlichkeiten muss (analog zu den relativen Häufigkeiten) 1 ergeben." },
       { id: "q4", question: "Die Verteilungsfunktion $F(t)$ einer diskreten Zufallsvariable gibt an:", options: ["$P(X = t)$", "$P(X \\leq t)$", "$P(X \\geq t)$", "$P(X \\neq t)$"], correctIndex: 1, explanation: "$F(t)$ kumuliert alle Wahrscheinlichkeiten für Werte kleiner oder gleich $t$." },
-      { id: "q5", question: "Der Erwartungswert entspricht in der deskriptiven Statistik am ehesten...", options: ["dem Median", "dem arithmetischen Mittel", "der Standardabweichung", "dem Modus"], correctIndex: 1, explanation: "Beide sind gewichtete Durchschnitte - einmal mit relativen Häufigkeiten, einmal mit Wahrscheinlichkeiten." }
+      { id: "q5", question: "Der Erwartungswert entspricht in der deskriptiven Statistik am ehesten...", options: ["dem Median", "dem arithmetischen Mittel", "der Standardabweichung", "dem Modus"], correctIndex: 1, explanation: "Beide sind gewichtete Durchschnitte - einmal mit relativen Häufigkeiten, einmal mit Wahrscheinlichkeiten." },
+      { id: "q6", question: "Eine diskrete Zufallsvariable kann...", options: ["nur endlich oder abzählbar unendlich viele Werte annehmen", "nur überabzählbar viele Werte annehmen", "ausschließlich negative Werte annehmen", "nur den Wert 0 oder 1 annehmen"], correctIndex: 0, explanation: "Das ist die definierende Eigenschaft einer diskreten (im Gegensatz zu einer stetigen) Zufallsvariable." },
+      { id: "q7", question: "Beim zweifachen Würfelwurf mit $X$ = Anzahl der Sechsen wurde $E(X) = 1/3$ berechnet. Was bedeutet dieser Wert?", options: ["Bei jedem Wurfpaar erhält man exakt eine Sechs", "Im Mittel wird bei vielen Wiederholungen im Schnitt $1/3$ Sechs pro Wurfpaar erwartet", "Die Varianz beträgt ebenfalls $1/3$", "$X$ kann den Wert $1/3$ tatsächlich annehmen"], correctIndex: 1, explanation: "Der Erwartungswert ist ein gewichteter Durchschnitt über viele Wiederholungen, kein tatsächlich auftretender Einzelwert." },
+      { id: "q8", question: "Wie lautet die allgemeine Formel für den Erwartungswert einer diskreten Zufallsvariable?", options: ["$E(X) = \\sum_x x \\cdot p(x)$", "$E(X) = \\sum_x p(x)$", "$E(X) = \\int x\\,f(x)\\,dx$", "$E(X) = P(X \\leq x)$"], correctIndex: 0, explanation: "Der Erwartungswert ist die mit den Wahrscheinlichkeiten gewichtete Summe aller möglichen Werte." },
+      { id: "q9", question: "Beim zweifachen Würfelwurf ($X$ = Anzahl Sechsen) wurde $\\text{Var}(X) = 5/18 \\approx 0{,}28$ berechnet. Welcher Rechenweg führt dorthin?", options: ["$\\text{Var}(X) = E(X) - \\mu = 0$", "$\\text{Var}(X) = E(X^2) - [E(X)]^2 = 14/36 - (1/3)^2$", "$\\text{Var}(X) = \\sum_x p(x) = 1$", "$\\text{Var}(X) = F(2) - F(0)$"], correctIndex: 1, explanation: "Das ist der Satz von Steiner (Verschiebungssatz), der in der Musterlösung angewendet wurde." }
     ]
   },
   {
@@ -222,6 +300,22 @@ const CHAPTER3_TOPICS = [
           { type: "formula", block: true, tex: "E(X^2) = \\int_0^5 x^2 \\cdot \\frac{1}{5}\\,dx = \\frac{1}{5}\\cdot\\frac{x^3}{3}\\Big|_0^5 = \\frac{125}{15} = \\frac{25}{3}" },
           { type: "formula", block: true, tex: "\\text{Var}(X) = \\frac{25}{3} - 2{,}5^2 = \\frac{25}{3} - 6{,}25 \\approx 2{,}08" }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Bestimmen Sie für die Gleichverteilung $f(x)=1/5$ auf $[0,5]$ die Verteilungsfunktion $F(t)$ für $0 \\leq t \\leq 5$ und berechnen Sie damit $F(3)$.",
+        solution: [
+          { type: "formula", block: true, tex: "F(t) = \\int_0^t \\frac{1}{5}\\,dx = \\frac{t}{5}, \\qquad 0 \\leq t \\leq 5" },
+          { type: "formula", block: true, tex: "F(3) = \\frac{3}{5} = 0{,}6" },
+          { type: "p", text: "Die Wahrscheinlichkeit, dass $X$ einen Wert kleiner oder gleich 3 annimmt, beträgt also 60%." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Warum ergibt sich bei der Gleichverteilung $f(x)=1/5$ auf $[0,5]$ derselbe Wert für $P(1 \\leq X < 2)$ wie für $P(1 \\leq X \\leq 2)$ oder $P(1 < X < 2)$, obwohl sich die Intervallgrenzen unterscheiden?",
+        solution: [
+          { type: "p", text: "Da bei stetigen Zufallsvariablen jeder einzelne Punkt die Wahrscheinlichkeit 0 hat ($P(X=x)=0$), spielt es keine Rolle, ob die Grenzen des Intervalls ein- oder ausgeschlossen werden - das Hinzufügen oder Weglassen eines einzelnen Punktes ändert die Fläche unter der Dichte (das Integral) nicht." }
+        ]
       }
     ],
     quiz: [
@@ -229,7 +323,11 @@ const CHAPTER3_TOPICS = [
       { id: "q2", question: "Wie berechnet man $P(a \\leq X \\leq b)$ bei einer stetigen Zufallsvariable?", options: ["Als Summe $\\sum p(x)$", "Als Integral der Dichte zwischen $a$ und $b$", "Als Differenz der Erwartungswerte", "Das ist nicht möglich"], correctIndex: 1, explanation: "$P(a\\leq X\\leq b) = \\int_a^b f(x)\\,dx$ - die Fläche unter der Dichtefunktion." },
       { id: "q3", question: "Welche Bedingung muss jede Wahrscheinlichkeitsdichte $f(x)$ erfüllen?", options: ["$f(x) \\leq 0$ für alle $x$", "$\\int f(x)\\,dx = 1$ und $f(x) \\geq 0$", "$f(x) = 1$ für alle $x$", "$f$ muss symmetrisch sein"], correctIndex: 1, explanation: "Die Gesamtfläche unter der Dichte muss 1 ergeben, und die Dichte darf nirgends negativ sein." },
       { id: "q4", question: "Der Erwartungswert einer stetigen Zufallsvariable wird berechnet als:", options: ["$\\sum x \\cdot p(x)$", "$\\int x \\cdot f(x)\\,dx$", "$\\int f(x)\\,dx$", "$P(X \\leq \\mu)$"], correctIndex: 1, explanation: "Analog zur Summenformel im diskreten Fall, nur mit Integral statt Summe." },
-      { id: "q5", question: "Bei einer stetigen Gleichverteilung auf $[0,5]$ ist der Erwartungswert...", options: ["0", "2,5", "5", "nicht bestimmbar"], correctIndex: 1, explanation: "Bei einer Gleichverteilung liegt der Erwartungswert immer genau in der Mitte des Intervalls." }
+      { id: "q5", question: "Bei einer stetigen Gleichverteilung auf $[0,5]$ ist der Erwartungswert...", options: ["0", "2,5", "5", "nicht bestimmbar"], correctIndex: 1, explanation: "Bei einer Gleichverteilung liegt der Erwartungswert immer genau in der Mitte des Intervalls." },
+      { id: "q6", question: "Wie ist die Verteilungsfunktion $F(t)$ einer stetigen Zufallsvariable definiert?", options: ["$F(t) = P(X = t)$", "$F(t) = \\int_{-\\infty}^t f(x)\\,dx$", "$F(t) = f(t)$", "$F(t) = \\sum_x p(x)$"], correctIndex: 1, explanation: "Die Verteilungsfunktion kumuliert die Dichte von $-\\infty$ bis zum Wert $t$." },
+      { id: "q7", question: "Wie unterscheidet sich die Varianzformel einer stetigen von der einer diskreten Zufallsvariable?", options: ["Es gibt keine Varianz bei stetigen Zufallsvariablen", "Statt der Summe wird ein Integral verwendet, das Prinzip $E(X^2)-\\mu^2$ bleibt gleich", "Die Varianz ist bei stetigen Zufallsvariablen immer 0", "Es wird statt $f(x)$ die Verteilungsfunktion $F(x)$ verwendet"], correctIndex: 1, explanation: "$\\text{Var}(X) = \\int (x-\\mu)^2 f(x)\\,dx = E(X^2)-\\mu^2$ - dasselbe Konzept wie im diskreten Fall, nur mit Integral." },
+      { id: "q8", question: "Bei der Gleichverteilung $f(x) = 1/5$ auf $[0,5]$ gilt für $P(X=2{,}5)$:", options: ["$1/5$", "$0$", "$2{,}5$", "$1$"], correctIndex: 1, explanation: "Wie bei jeder stetigen Zufallsvariable ist die Wahrscheinlichkeit eines einzelnen Punktes stets 0." },
+      { id: "q9", question: "Welche Aussage über die Fläche unter einer gültigen Wahrscheinlichkeitsdichte $f(x)$ ist korrekt?", options: ["Sie muss immer größer als 1 sein", "Sie muss über den gesamten Definitionsbereich exakt 1 ergeben", "Sie darf beliebig sein, solange $f(x)\\geq 0$", "Sie entspricht immer dem Erwartungswert"], correctIndex: 1, explanation: "$\\int_{-\\infty}^{\\infty} f(x)\\,dx = 1$ ist eine notwendige Bedingung für jede Dichtefunktion." }
     ]
   },
   {
@@ -265,6 +363,22 @@ const CHAPTER3_TOPICS = [
           { type: "formula", block: true, tex: "P(X=2) = \\frac{0{,}7^2}{2!} e^{-0{,}7} = \\frac{0{,}49}{2}\\cdot e^{-0{,}7} \\approx 0{,}245 \\cdot 0{,}497 \\approx 0{,}122" },
           { type: "p", text: "Die Wahrscheinlichkeit für genau 2 Beschwerden an einem Tag liegt bei rund 12,2%." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Berechnen Sie für den Fallschirmflug ($X \\sim B(6; 0{,}25)$, $X$ = Anzahl Stornierungen) die Wahrscheinlichkeit $P(X=1)$, dass genau eine der 6 Buchungen storniert wird.",
+        solution: [
+          { type: "formula", block: true, tex: "P(X=1) = \\binom{6}{1}(0{,}25)^1(0{,}75)^5 = 6 \\cdot 0{,}25 \\cdot 0{,}237 \\approx 0{,}356" },
+          { type: "p", text: "Die Wahrscheinlichkeit für genau eine Stornierung liegt bei rund 35,6%." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Bei der Wohnungsgenossenschaft ($X \\sim \\text{Po}(0{,}7)$) wurde $P(X=2) \\approx 0{,}122$ berechnet. Berechnen Sie zusätzlich $P(X=0)$, also die Wahrscheinlichkeit, dass an einem Tag keine Beschwerde eingeht.",
+        solution: [
+          { type: "formula", block: true, tex: "P(X=0) = \\frac{0{,}7^0}{0!} e^{-0{,}7} = 1 \\cdot e^{-0{,}7} \\approx 0{,}497" },
+          { type: "p", text: "Die Wahrscheinlichkeit für einen beschwerdefreien Tag liegt bei rund 49,7%." }
+        ]
       }
     ],
     quiz: [
@@ -272,7 +386,11 @@ const CHAPTER3_TOPICS = [
       { id: "q2", question: "Der Erwartungswert einer $B(n,p)$-verteilten Zufallsvariable ist:", options: ["$n+p$", "$n \\cdot p$", "$p/n$", "$n \\cdot p \\cdot (1-p)$"], correctIndex: 1, explanation: "$E(X) = np$ - die erwartete Anzahl Erfolge bei $n$ Versuchen mit Erfolgswahrscheinlichkeit $p$." },
       { id: "q3", question: "Wofür eignet sich die Poissonverteilung besonders gut?", options: ["Für die Anzahl seltener, unabhängiger Ereignisse in einem festen Intervall", "Für stetige Messgrößen wie Gewicht", "Nur für exakt zwei Versuche", "Für symmetrische, glockenförmige Verteilungen mit bekanntem $\\sigma$"], correctIndex: 0, explanation: "Die Poissonverteilung modelliert Zähldaten wie Anzahl Anrufe, Beschwerden oder Unfälle pro Zeiteinheit." },
       { id: "q4", question: "Bei der Poissonverteilung mit Parameter $\\lambda$ gilt für Erwartungswert und Varianz:", options: ["$E(X) = \\lambda$, $\\text{Var}(X) = \\lambda$", "$E(X) = \\lambda^2$, $\\text{Var}(X) = \\lambda$", "$E(X) = \\lambda$, $\\text{Var}(X) = \\lambda^2$", "Beide sind unabhängig von $\\lambda$"], correctIndex: 0, explanation: "Eine Besonderheit der Poissonverteilung ist, dass Erwartungswert und Varianz beide gleich $\\lambda$ sind." },
-      { id: "q5", question: "Bei $X \\sim B(6; 0{,}25)$ ist die Varianz:", options: ["$6 \\cdot 0{,}25 = 1{,}5$", "$6 \\cdot 0{,}25 \\cdot 0{,}75 = 1{,}125$", "$0{,}25 \\cdot 0{,}75 = 0{,}1875$", "$6^2 \\cdot 0{,}25 = 9$"], correctIndex: 1, explanation: "$\\text{Var}(X) = np(1-p) = 6 \\cdot 0{,}25 \\cdot 0{,}75 = 1{,}125$." }
+      { id: "q5", question: "Bei $X \\sim B(6; 0{,}25)$ ist die Varianz:", options: ["$6 \\cdot 0{,}25 = 1{,}5$", "$6 \\cdot 0{,}25 \\cdot 0{,}75 = 1{,}125$", "$0{,}25 \\cdot 0{,}75 = 0{,}1875$", "$6^2 \\cdot 0{,}25 = 9$"], correctIndex: 1, explanation: "$\\text{Var}(X) = np(1-p) = 6 \\cdot 0{,}25 \\cdot 0{,}75 = 1{,}125$." },
+      { id: "q6", question: "Wie lautet die Zähldichte der Binomialverteilung $P(X=k)$ für $X \\sim B(n,p)$?", options: ["$\\binom{n}{k} p^k (1-p)^{n-k}$", "$\\frac{\\lambda^k}{k!}e^{-\\lambda}$", "$n \\cdot p \\cdot k$", "$\\frac{1}{n}$"], correctIndex: 0, explanation: "Das ist die allgemeine Formel der Binomialverteilung mit dem Binomialkoeffizienten." },
+      { id: "q7", question: "Was unterscheidet die Poissonverteilung grundlegend von der Binomialverteilung in Bezug auf die Anzahl der Versuche $n$?", options: ["Die Poissonverteilung benötigt eine feste, bekannte Anzahl $n$ von Versuchen mit Erfolg/Misserfolg", "Die Poissonverteilung modelliert die Anzahl von Ereignissen in einem Intervall ohne feste Versuchsanzahl $n$", "Beide Verteilungen sind identisch", "Die Poissonverteilung hat immer $n=2$"], correctIndex: 1, explanation: "Die Poissonverteilung basiert auf einer Rate $\\lambda$ pro Intervall statt auf einer festen Anzahl von Bernoulli-Versuchen." },
+      { id: "q8", question: "Beim Fallschirmflug-Beispiel ist $E(X) = 1{,}5$ für $X \\sim B(6; 0{,}25)$. Was bedeutet dieser Wert inhaltlich?", options: ["Es werden immer genau 1,5 Buchungen storniert", "Im Mittel werden bei vielen Wiederholungen 1,5 der 6 Buchungen storniert", "Die Wahrscheinlichkeit einer Stornierung beträgt 1,5", "Es gibt 1,5 Plätze frei"], correctIndex: 1, explanation: "Der Erwartungswert ist ein Durchschnittswert über viele Wiederholungen, kein tatsächlich auftretender Einzelwert." },
+      { id: "q9", question: "Welche Aussage zur Poissonverteilung mit $\\lambda = 0{,}7$ ist korrekt?", options: ["$P(X=k)$ ist für alle $k$ gleich groß", "Erwartungswert und Varianz betragen beide 0,7", "Der Erwartungswert beträgt 0,7, die Varianz aber $0{,}7^2$", "$X$ kann auch negative Werte annehmen"], correctIndex: 1, explanation: "Bei der Poissonverteilung gilt stets $E(X) = \\text{Var}(X) = \\lambda$." }
     ]
   },
   {
@@ -306,6 +424,21 @@ const CHAPTER3_TOPICS = [
         solution: [
           { type: "p", text: "Der Zentrale Grenzwertsatz garantiert, dass der Stichprobenmittelwert $\\bar{X}$ bei hinreichend großem Stichprobenumfang näherungsweise normalverteilt ist - unabhängig von der tatsächlichen Verteilung der Grundgesamtheit. Dadurch können Konfidenzintervalle und Hypothesentests, die auf der Normalverteilung basieren, auch angewendet werden, wenn die Merkmalsverteilung in der Grundgesamtheit unbekannt oder nicht normal ist." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Zuckerpakete sind normalverteilt mit $\\mu = 1000$g und $\\sigma = 1{,}2$g (siehe Aufgabe 1). Standardisieren Sie nun den Wert $x = 997{,}6$g.",
+        solution: [
+          { type: "formula", block: true, tex: "z = \\frac{997{,}6 - 1000}{1{,}2} = \\frac{-2{,}4}{1{,}2} = -2" },
+          { type: "p", text: "Ein Zuckerpaket mit 997,6g liegt also genau 2 Standardabweichungen unter dem Mittelwert - das Gegenstück zum $z$-Wert $+2$ aus Aufgabe 1." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Erklären Sie anhand der Zuckerpaket-Beispiele (Aufgabe 1: $x=1002{,}4$g $\\to z=2$; Aufgabe 3: $x=997{,}6$g $\\to z=-2$), welchen praktischen Vorteil die Standardisierung bietet, wenn man mehrere unterschiedlich verteilte Größen (z. B. Gewicht in Gramm und Länge in Zentimetern) miteinander vergleichen möchte.",
+        solution: [
+          { type: "p", text: "Durch die Standardisierung $Z = (X-\\mu)/\\sigma$ werden Werte unterschiedlicher normalverteilter Größen auf eine gemeinsame Skala (die Standardnormalverteilung $N(0,1)$) gebracht. Der $z$-Wert gibt an, wie viele Standardabweichungen ein Wert vom jeweiligen Mittelwert entfernt liegt, unabhängig von der ursprünglichen Einheit (Gramm, Zentimeter etc.). So lässt sich z. B. vergleichen, ob ein Zuckerpaket oder ein anderes Merkmal 'ungewöhnlicher' ist, und man benötigt nur eine einzige Tabelle für alle Normalverteilungen." }
+        ]
       }
     ],
     quiz: [
@@ -313,7 +446,11 @@ const CHAPTER3_TOPICS = [
       { id: "q2", question: "Wie standardisiert man eine normalverteilte Zufallsvariable $X \\sim N(\\mu,\\sigma^2)$?", options: ["$Z = X - \\mu$", "$Z = \\frac{X-\\mu}{\\sigma}$", "$Z = \\frac{X}{\\sigma}$", "$Z = X \\cdot \\sigma$"], correctIndex: 1, explanation: "Durch Subtraktion des Mittelwerts und Division durch die Standardabweichung entsteht die Standardnormalverteilung $N(0,1)$." },
       { id: "q3", question: "Was besagt der Zentrale Grenzwertsatz?", options: ["Jede einzelne Zufallsvariable ist normalverteilt", "Die Summe/das Mittel vieler unabhängiger, identisch verteilter Zufallsvariablen ist für großes $n$ näherungsweise normalverteilt", "Nur normalverteilte Merkmale haben einen Erwartungswert", "Die Varianz einer Stichprobe ist immer 0"], correctIndex: 1, explanation: "Das ist der Kerninhalt des Zentralen Grenzwertsatzes - unabhängig von der Ursprungsverteilung." },
       { id: "q4", question: "Die Standardnormalverteilung hat...", options: ["$\\mu=1, \\sigma=0$", "$\\mu=0, \\sigma=1$", "$\\mu=0, \\sigma=0$", "beliebige $\\mu$ und $\\sigma$"], correctIndex: 1, explanation: "$N(0,1)$ ist per Definition die Normalverteilung mit Erwartungswert 0 und Standardabweichung 1." },
-      { id: "q5", question: "Die Dichtefunktion der Normalverteilung ist...", options: ["rechtsschief", "linksschief", "symmetrisch (glockenförmig) um $\\mu$", "immer flach (rechteckig)"], correctIndex: 2, explanation: "Die Normalverteilung ist die klassische symmetrische Glockenkurve." }
+      { id: "q5", question: "Die Dichtefunktion der Normalverteilung ist...", options: ["rechtsschief", "linksschief", "symmetrisch (glockenförmig) um $\\mu$", "immer flach (rechteckig)"], correctIndex: 2, explanation: "Die Normalverteilung ist die klassische symmetrische Glockenkurve." },
+      { id: "q6", question: "Welche Aussage über den Zentralen Grenzwertsatz trifft zu?", options: ["Er gilt nur, wenn die $X_i$ bereits normalverteilt sind", "Er gilt für unabhängige, identisch verteilte $X_i$ mit endlichem Erwartungswert und endlicher Varianz, unabhängig von deren ursprünglicher Verteilung", "Er setzt voraus, dass $n$ klein ist", "Er betrifft nur die Varianz, nicht den Mittelwert"], correctIndex: 1, explanation: "Genau das ist die Stärke des Zentralen Grenzwertsatzes: Die Ursprungsverteilung der $X_i$ ist beliebig." },
+      { id: "q7", question: "Warum reicht eine einzige Tabelle (die Standardnormalverteilungstabelle) für alle Normalverteilungen aus?", options: ["Weil alle Normalverteilungen zufällig dieselben Werte haben", "Weil sich jede Normalverteilung durch Standardisierung auf $N(0,1)$ zurückführen lässt", "Weil $\\sigma$ bei jeder Normalverteilung gleich 1 ist", "Weil die Tabelle für jede Verteilung neu berechnet wird"], correctIndex: 1, explanation: "Durch $Z=(X-\\mu)/\\sigma$ wird jede Normalverteilung auf die Standardnormalverteilung transformiert." },
+      { id: "q8", question: "Beim Zuckerpaket-Beispiel ($\\mu=1000$g, $\\sigma=1{,}2$g) ergab die Standardisierung von $x=1002{,}4$g den Wert $z=2$. Welcher Ausgangswert $x$ würde $z=-2$ liefern?", options: ["1000g", "1002,4g", "997,6g", "1004,8g"], correctIndex: 2, explanation: "$z=-2$ bedeutet $x = \\mu - 2\\sigma = 1000 - 2\\cdot1{,}2 = 997{,}6$g." },
+      { id: "q9", question: "Welche der folgenden Aussagen über die Normalverteilung ist FALSCH?", options: ["Sie ist die Grundlage vieler Verfahren der induktiven Statistik", "Ihre Dichte ist symmetrisch um $\\mu$", "Jede Normalverteilung mit beliebigem $\\mu$ und $\\sigma$ kann standardisiert werden", "Sie kann nur negative Werte annehmen"], correctIndex: 3, explanation: "Die Normalverteilung ist auf der gesamten reellen Achse definiert, nicht nur auf negativen Werten." }
     ]
   },
   {
@@ -345,6 +482,22 @@ const CHAPTER3_TOPICS = [
         solution: [
           { type: "p", text: "Weil sie als Summe von Quadraten standardnormalverteilter Zufallsvariablen definiert ist ($X = \\sum Z_i^2$), und Quadrate sind immer nicht-negativ. Die Summe nicht-negativer Größen kann daher selbst nicht negativ werden." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Eine Chi-Quadrat-verteilte Zufallsvariable hat eine Varianz von 20. Wie viele Freiheitsgrade $v$ hat sie, und wie groß ist folglich ihr Erwartungswert?",
+        solution: [
+          { type: "formula", block: true, tex: "\\text{Var}(X) = 2v = 20 \\;\\Rightarrow\\; v = 10" },
+          { type: "formula", block: true, tex: "E(X) = v = 10" },
+          { type: "p", text: "Die Zufallsvariable hat 10 Freiheitsgrade, und ihr Erwartungswert beträgt ebenfalls 10." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Vergleichen Sie die Chi-Quadrat-Verteilung mit 5 Freiheitsgraden (aus Aufgabe 1: $E(X)=5$, $\\text{Var}(X)=10$) mit einer Chi-Quadrat-Verteilung mit sehr großem $v$: Welche Form nimmt die Verteilung dann an, und warum?",
+        solution: [
+          { type: "p", text: "Für große $v$ nähert sich die Chi-Quadrat-Verteilung der Normalverteilung an, wird also zunehmend symmetrischer und weniger rechtsschief als bei kleinem $v$ (z. B. $v=5$). Dies steht im Einklang mit dem Zentralen Grenzwertsatz, da $X$ als Summe vieler unabhängiger Zufallsvariablen ($Z_i^2$) definiert ist und Summen vieler unabhängiger Zufallsvariablen für großes $v$ näherungsweise normalverteilt sind." }
+        ]
       }
     ],
     quiz: [
@@ -352,7 +505,11 @@ const CHAPTER3_TOPICS = [
       { id: "q2", question: "Was gibt der Parameter $v$ bei der Chi-Quadrat-Verteilung an?", options: ["Den Erwartungswert direkt in Prozent", "Die Anzahl der Freiheitsgrade", "Die Varianz der Ursprungsdaten", "Die Anzahl der Merkmalsträger in der Grundgesamtheit"], correctIndex: 1, explanation: "$v$ (Freiheitsgrade) bestimmt Form, Erwartungswert und Varianz der Verteilung." },
       { id: "q3", question: "Welche Werte kann eine Chi-Quadrat-verteilte Zufallsvariable annehmen?", options: ["Nur negative Werte", "Beliebige reelle Zahlen", "Nur nicht-negative Werte", "Nur Werte zwischen -1 und 1"], correctIndex: 2, explanation: "Da sie aus quadrierten Größen besteht, sind nur Werte $\\geq 0$ möglich." },
       { id: "q4", question: "Wofür wird die Chi-Quadrat-Verteilung in der induktiven Statistik hauptsächlich verwendet?", options: ["Für Konfidenzintervalle des Mittelwerts", "Als Prüfverteilung für Anpassungs- und Unabhängigkeitstests", "Zur Berechnung des Gini-Koeffizienten", "Für die Schiefe einer Verteilung"], correctIndex: 1, explanation: "Chi-Quadrat-Tests (Verteilungstest und Unabhängigkeitstest) basieren auf dieser Verteilung." },
-      { id: "q5", question: "Für Varianz und Erwartungswert einer $\\chi^2(v)$-verteilten Zufallsvariable gilt:", options: ["$E(X)=v$, $\\text{Var}(X)=2v$", "$E(X)=2v$, $\\text{Var}(X)=v$", "$E(X)=v^2$, $\\text{Var}(X)=v$", "$E(X)=0$, $\\text{Var}(X)=1$"], correctIndex: 0, explanation: "Erwartungswert entspricht den Freiheitsgraden, die Varianz ist das Doppelte davon." }
+      { id: "q5", question: "Für Varianz und Erwartungswert einer $\\chi^2(v)$-verteilten Zufallsvariable gilt:", options: ["$E(X)=v$, $\\text{Var}(X)=2v$", "$E(X)=2v$, $\\text{Var}(X)=v$", "$E(X)=v^2$, $\\text{Var}(X)=v$", "$E(X)=0$, $\\text{Var}(X)=1$"], correctIndex: 0, explanation: "Erwartungswert entspricht den Freiheitsgraden, die Varianz ist das Doppelte davon." },
+      { id: "q6", question: "Wie verändert sich die Form der Chi-Quadrat-Verteilung mit wachsendem $v$?", options: ["Sie bleibt exakt gleich", "Sie nähert sich der Normalverteilung an", "Sie wird zunehmend rechtsschiefer", "Sie nimmt nur noch negative Werte an"], correctIndex: 1, explanation: "Für große Freiheitsgrade $v$ nähert sich die $\\chi^2$-Verteilung der symmetrischen Normalverteilung an." },
+      { id: "q7", question: "Welche Aussage über die Schiefe der Chi-Quadrat-Verteilung bei kleinem $v$ ist korrekt?", options: ["Sie ist symmetrisch wie die Normalverteilung", "Sie ist linksschief", "Sie ist rechtsschief", "Sie hat keine erkennbare Schiefe"], correctIndex: 2, explanation: "Da sie aus quadrierten (also nicht-negativen) Werten besteht, ist die Chi-Quadrat-Verteilung rechtsschief." },
+      { id: "q8", question: "Welche der folgenden Zufallsvariablen ist definitionsgemäß eine Bausteinvariable der Chi-Quadrat-Verteilung?", options: ["Eine binomialverteilte Zufallsvariable $X \\sim B(n,p)$", "Eine standardnormalverteilte Zufallsvariable $Z \\sim N(0,1)$", "Eine Poisson-verteilte Zufallsvariable mit $\\lambda$", "Eine gleichverteilte Zufallsvariable auf $[0,1]$"], correctIndex: 1, explanation: "Die Chi-Quadrat-Verteilung entsteht aus der Summe der Quadrate unabhängiger $N(0,1)$-Variablen." },
+      { id: "q9", question: "Zwei der konkreten Anwendungen der Chi-Quadrat-Verteilung, die im Skript genannt werden, sind:", options: ["Der t-Test und der F-Test", "Der Chi-Quadrat-Verteilungstest (Anpassungstest) und der Chi-Quadrat-Unabhängigkeitstest", "Die Regression und die Korrelation", "Der Median-Test und der Rangsummentest"], correctIndex: 1, explanation: "Diese beiden Tests der induktiven Statistik bauen direkt auf der Chi-Quadrat-Verteilung auf." }
     ]
   }
 ];

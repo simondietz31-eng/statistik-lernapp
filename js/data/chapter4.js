@@ -31,6 +31,20 @@ const CHAPTER4_TOPICS = [
         solution: [
           { type: "p", text: "$X_i$ beschreibt das Ergebnis einer einzelnen Ziehung (den $i$-ten Merkmalsträger). Eine Stichprobenfunktion wie $\\bar{X}$ ist dagegen eine Funktion aller $n$ Stichprobenvariablen zusammen (hier: ihr Durchschnitt) und fasst die gesamte Stichprobe in einer einzigen Kennzahl zusammen, die als Grundlage für Schätz- und Testverfahren dient." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Aus einer Grundgesamtheit von $N=100$ Merkmalsträgern wird ohne Zurücklegen eine Stichprobe von $n=40$ gezogen (also $N \\geq 2n$ ist knapp verletzt, da $2n=80 < 100$ eigentlich erfüllt wäre - prüfen Sie, ob die Voraussetzung $N \\geq 2n$ hier erfüllt ist, und geben Sie die Formel für die Varianz von $\\bar{X}$ in diesem Fall an).",
+        solution: [
+          { type: "p", text: "Es ist $2n = 80 \\leq N = 100$, die Voraussetzung $N \\geq 2n$ ist also erfüllt (zusammen mit $n=40\\geq 30$). Damit gilt näherungsweise $\\bar{X} \\sim N\\!\\left(\\mu, \\frac{\\sigma^2}{n}\\cdot\\frac{N-n}{N-1}\\right)$, hier also $\\bar{X} \\sim N\\!\\left(\\mu, \\frac{\\sigma^2}{40}\\cdot\\frac{60}{99}\\right)$." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Vergleichen Sie qualitativ die Varianz von $\\bar{X}$ beim Ziehen mit Zurücklegen und beim Ziehen ohne Zurücklegen, wenn Stichprobenumfang $n$ und Grundgesamtheit $\\sigma^2$ jeweils gleich sind. Welche Variante liefert die präzisere (kleinere Varianz aufweisende) Schätzung?",
+        solution: [
+          { type: "p", text: "Beim Ziehen mit Zurücklegen gilt $\\text{Var}(\\bar{X}) = \\sigma^2/n$. Beim Ziehen ohne Zurücklegen kommt der Faktor $(N-n)/(N-1) < 1$ hinzu, sodass $\\text{Var}(\\bar{X}) = \\frac{\\sigma^2}{n}\\cdot\\frac{N-n}{N-1} < \\frac{\\sigma^2}{n}$. Das Ziehen ohne Zurücklegen liefert bei gleichem $n$ also die kleinere Varianz und damit die präzisere Schätzung, da weniger Unsicherheit über die verbleibende Grundgesamtheit besteht." }
+        ]
       }
     ],
     quiz: [
@@ -38,7 +52,11 @@ const CHAPTER4_TOPICS = [
       { id: "q2", question: "Wann ist der Stichprobenmittelwert $\\bar{X}$ auch bei einer beliebig verteilten Grundgesamtheit näherungsweise normalverteilt?", options: ["Immer, unabhängig vom Stichprobenumfang", "Für hinreichend großes $n$ (Faustregel $n \\geq 30$), nach dem Zentralen Grenzwertsatz", "Nur wenn die Grundgesamtheit bereits normalverteilt ist", "Nie, das ist unmöglich"], correctIndex: 1, explanation: "Der Zentrale Grenzwertsatz garantiert die näherungsweise Normalverteilung für hinreichend große Stichproben." },
       { id: "q3", question: "Was bewirkt die Endlichkeitskorrektur beim Ziehen ohne Zurücklegen?", options: ["Sie vergrößert die Varianz von $\\bar{X}$", "Sie verkleinert die Varianz von $\\bar{X}$ gegenüber dem Ziehen mit Zurücklegen", "Sie verändert nur den Erwartungswert", "Sie macht die Verteilung schief"], correctIndex: 1, explanation: "Der Korrekturfaktor $(N-n)/(N-1)$ ist kleiner als 1 und reduziert damit die Varianz." },
       { id: "q4", question: "Eine Stichprobenfunktion ist...", options: ["eine feste Zahl, die niemals variiert", "eine Funktion der Stichprobenvariablen und damit selbst eine Zufallsvariable", "nur bei normalverteilten Merkmalen definiert", "identisch mit der Grundgesamtheit"], correctIndex: 1, explanation: "Da sie von den zufälligen Stichprobenvariablen abhängt, ist eine Stichprobenfunktion selbst zufällig." },
-      { id: "q5", question: "Wenn eine Grundgesamtheit bereits exakt normalverteilt ist und mit Zurücklegen gezogen wird, gilt für $\\bar{X}$:", options: ["$\\bar{X}$ ist nur näherungsweise normalverteilt, egal wie groß $n$ ist", "$\\bar{X} \\sim N(\\mu, \\sigma^2/n)$ exakt, unabhängig vom Stichprobenumfang", "$\\bar{X}$ ist nie normalverteilt", "$\\bar{X}$ hat eine Chi-Quadrat-Verteilung"], correctIndex: 1, explanation: "Bei normalverteilter Grundgesamtheit und Ziehen mit Zurücklegen ist $\\bar{X}$ exakt (nicht nur näherungsweise) normalverteilt, auch für kleine $n$." }
+      { id: "q5", question: "Wenn eine Grundgesamtheit bereits exakt normalverteilt ist und mit Zurücklegen gezogen wird, gilt für $\\bar{X}$:", options: ["$\\bar{X}$ ist nur näherungsweise normalverteilt, egal wie groß $n$ ist", "$\\bar{X} \\sim N(\\mu, \\sigma^2/n)$ exakt, unabhängig vom Stichprobenumfang", "$\\bar{X}$ ist nie normalverteilt", "$\\bar{X}$ hat eine Chi-Quadrat-Verteilung"], correctIndex: 1, explanation: "Bei normalverteilter Grundgesamtheit und Ziehen mit Zurücklegen ist $\\bar{X}$ exakt (nicht nur näherungsweise) normalverteilt, auch für kleine $n$." },
+      { id: "q6", question: "Der Stichprobenvektor $(X_1, \\dots, X_n)$ besteht aus...", options: ["einer einzigen Zufallsvariable, die $n$-mal beobachtet wird", "den $n$ Stichprobenvariablen, die die einzelnen Ziehungen beschreiben", "den $n$ konkreten Zahlenwerten einer Realisation", "der Grundgesamtheit selbst"], correctIndex: 1, explanation: "Der Stichprobenvektor fasst die $n$ Stichprobenvariablen $X_1,\\dots,X_n$ zusammen, deren Realisationen die konkrete Stichprobe ergeben." },
+      { id: "q7", question: "Welche der folgenden Aussagen zur Verteilung von $\\bar{X}$ ist FALSCH?", options: ["Bei normalverteilter Grundgesamtheit und Ziehen mit Zurücklegen ist $\\bar{X}$ exakt normalverteilt", "Beim Ziehen ohne Zurücklegen ist die Endlichkeitskorrektur immer größer als 1", "Nach dem Zentralen Grenzwertsatz ist $\\bar{X}$ für $n\\geq 30$ näherungsweise normalverteilt", "Die Varianz von $\\bar{X}$ hängt vom Stichprobenumfang $n$ ab"], correctIndex: 1, explanation: "Die Endlichkeitskorrektur $(N-n)/(N-1)$ ist stets kleiner als 1, nicht größer - sie verkleinert die Varianz." },
+      { id: "q8", question: "Für die Anwendung der Näherungsformel beim Ziehen ohne Zurücklegen ($n\\geq 30$ und $N \\geq 2n$) gilt zusätzlich zur Stichprobengröße die Bedingung:", options: ["Die Grundgesamtheit muss mindestens doppelt so groß sein wie die Stichprobe", "Die Grundgesamtheit muss kleiner als die Stichprobe sein", "$N$ muss exakt gleich $n$ sein", "Es gibt keine zusätzliche Bedingung an $N$"], correctIndex: 0, explanation: "Die Bedingung $N \\geq 2n$ verlangt, dass die Grundgesamtheit mindestens doppelt so groß ist wie der Stichprobenumfang." },
+      { id: "q9", question: "Warum ist eine Stichprobenfunktion selbst eine Zufallsvariable und kein fester Wert?", options: ["Weil sie von den zufälligen Stichprobenvariablen abhängt, deren Realisationen von Stichprobe zu Stichprobe variieren", "Weil sie per Definition immer den Wert 0 annehmen kann", "Weil die Grundgesamtheit zufällig ist", "Weil sie unabhängig von der gezogenen Stichprobe berechnet wird"], correctIndex: 0, explanation: "Da unterschiedliche Stichproben zu unterschiedlichen Realisationen der Stichprobenvariablen führen, variiert auch der Wert der Stichprobenfunktion - sie ist daher selbst zufällig." }
     ]
   },
   {
@@ -86,6 +104,22 @@ const CHAPTER4_TOPICS = [
           { type: "formula", block: true, tex: "\\sigma_{\\bar{X}} = \\frac{1{,}4}{\\sqrt{200}} \\approx 0{,}099 \\qquad \\text{Max. Fehler} = 2{,}24 \\cdot 0{,}099 \\approx 0{,}22" },
           { type: "p", text: "Eine Vervierfachung des Stichprobenumfangs halbiert den maximalen Fehler (da $\\sigma_{\\bar{X}}$ mit $\\sqrt{n}$ im Nenner skaliert) - das Konfidenzintervall wird enger und die Schätzung damit präziser, bei gleichbleibendem Konfidenzniveau." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Berechnen Sie für die Zuckerfabrik-Stichprobe ($n=50$, $\\bar{x}=1000{,}33$g, $\\sigma=1{,}4$g) ein einseitiges Konfidenzintervall, das nur eine Obergrenze für $\\mu$ angibt, mit Konfidenzniveau $1-\\alpha = 0{,}975$ (verwenden Sie denselben Quantilwert $z_{0{,}975}\\approx 2{,}24$, wie er hier für das $(1-\\alpha)$-Quantil des einseitigen Falls verwendet werden soll). Interpretieren Sie das Ergebnis.",
+        solution: [
+          { type: "formula", block: true, tex: "\\sigma_{\\bar{X}} = \\frac{1{,}4}{\\sqrt{50}} \\approx 0{,}198 \\qquad \\text{Max. Fehler} = 2{,}24 \\cdot 0{,}198 \\approx 0{,}44" },
+          { type: "formula", block: true, tex: "\\text{KI} = \\left(-\\infty,\\; 1000{,}33 + 0{,}44\\right] = \\left(-\\infty,\\; 1000{,}77\\right]" },
+          { type: "p", text: "Mit der entsprechenden Sicherheitswahrscheinlichkeit liegt das wahre durchschnittliche Füllgewicht höchstens bei 1000,77g - es wird hier nur die Obergrenze betrachtet, da man z. B. nur an einem Überschreiten eines Höchstwerts interessiert ist." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Erklären Sie anhand der beiden Zuckerfabrik-Rechnungen (einmal $n=50$, einmal $n=200$) den Zielkonflikt zwischen Genauigkeit und Konfidenzniveau: Was müsste man tun, um bei $n=50$ ein ähnlich enges Intervall wie bei $n=200$ zu erhalten, ohne den Stichprobenumfang zu erhöhen?",
+        solution: [
+          { type: "p", text: "Da der maximale Fehler $z_{1-\\alpha/2}\\cdot\\sigma/\\sqrt{n}$ sowohl vom Stichprobenumfang als auch vom Quantil $z_{1-\\alpha/2}$ abhängt, ließe sich bei gleichbleibendem $n=50$ ein engeres Intervall nur erreichen, indem man ein kleineres Konfidenzniveau (kleineres $z_{1-\\alpha/2}$) akzeptiert. Das zeigt den Zielkonflikt: Ohne größere Stichprobe kann man ein präziseres (engeres) Intervall nur um den Preis geringerer Sicherheit erkaufen." }
+        ]
       }
     ],
     quiz: [
@@ -94,7 +128,11 @@ const CHAPTER4_TOPICS = [
       { id: "q3", question: "Was passiert mit einem Konfidenzintervall, wenn man bei gleichem Stichprobenumfang das Konfidenzniveau von 95% auf 99% erhöht?", options: ["Das Intervall wird enger", "Das Intervall wird breiter", "Das Intervall bleibt gleich groß", "Das Konfidenzniveau hat keinen Einfluss auf die Intervallbreite"], correctIndex: 1, explanation: "Ein höheres Konfidenzniveau erfordert (bei gleichem $n$) ein breiteres Intervall - Genauigkeit und Sicherheit stehen im Zielkonflikt." },
       { id: "q4", question: "Wie verändert sich der maximale Schätzfehler eines Konfidenzintervalls, wenn der Stichprobenumfang $n$ vervierfacht wird (alles andere gleich)?", options: ["Er verdoppelt sich", "Er bleibt gleich", "Er halbiert sich", "Er vervierfacht sich"], correctIndex: 2, explanation: "Da der Standardfehler mit $\\sigma/\\sqrt{n}$ skaliert, führt eine Vervierfachung von $n$ zu einer Halbierung des Fehlers." },
       { id: "q5", question: "Ein einseitiges Konfidenzintervall verwendet man, wenn...", options: ["man nur an einer Ober- oder Untergrenze interessiert ist, nicht an beiden", "die Stichprobe zu klein ist", "die Grundgesamtheit nicht normalverteilt ist", "$\\sigma$ unbekannt ist"], correctIndex: 0, explanation: "Ein einseitiges Intervall passt, wenn nur interessiert, ob ein Mindest- oder Höchstwert über-/unterschritten wird." },
-      { id: "q6", question: "Konsistenz einer Schätzfunktion bedeutet:", options: ["Sie ist immer erwartungstreu", "Mit wachsendem Stichprobenumfang nähert sie sich dem wahren Parameter an", "Sie hat konstante Varianz", "Sie funktioniert nur bei $n=1$"], correctIndex: 1, explanation: "Konsistenz beschreibt das Verhalten der Schätzfunktion für wachsendes $n$: sie konvergiert gegen den wahren Wert." }
+      { id: "q6", question: "Konsistenz einer Schätzfunktion bedeutet:", options: ["Sie ist immer erwartungstreu", "Mit wachsendem Stichprobenumfang nähert sie sich dem wahren Parameter an", "Sie hat konstante Varianz", "Sie funktioniert nur bei $n=1$"], correctIndex: 1, explanation: "Konsistenz beschreibt das Verhalten der Schätzfunktion für wachsendes $n$: sie konvergiert gegen den wahren Wert." },
+      { id: "q7", question: "Was bedeutet Effizienz einer Schätzfunktion?", options: ["Sie ist die schnellste berechenbare Schätzfunktion", "Unter allen erwartungstreuen Schätzfunktionen gleichen Umfangs hat sie die kleinste Varianz", "Sie benötigt keinen Computer zur Berechnung", "Sie ist unabhängig von der Stichprobe"], correctIndex: 1, explanation: "Effizienz vergleicht die Varianz konkurrierender erwartungstreuer Schätzfunktionen - die effizienteste hat die kleinste Varianz." },
+      { id: "q8", question: "Welche der folgenden Schritte gehört NICHT zur Konstruktion eines zweiseitigen Konfidenzintervalls für $\\mu$ bei bekanntem $\\sigma$?", options: ["Punktschätzung $\\bar{x}$ berechnen", "Das $(1-\\alpha/2)$-Quantil der Standardnormalverteilung bestimmen", "Den maximalen Schätzfehler berechnen", "Eine Chi-Quadrat-Teststatistik berechnen"], correctIndex: 3, explanation: "Die Chi-Quadrat-Teststatistik gehört zu Verteilungs- bzw. Unabhängigkeitstests, nicht zur Konstruktion eines Konfidenzintervalls für $\\mu$." },
+      { id: "q9", question: "Was gibt das Signifikanzniveau $\\alpha$ im Kontext eines Konfidenzintervalls an?", options: ["Die Wahrscheinlichkeit, dass das Intervall den wahren Parameter NICHT überdeckt", "Die exakte Breite des Konfidenzintervalls", "Die Anzahl der gezogenen Stichproben", "Den Stichprobenmittelwert"], correctIndex: 0, explanation: "$\\alpha$ ist die Irrtumswahrscheinlichkeit - die Gegenwahrscheinlichkeit zum Konfidenzniveau $1-\\alpha$, mit der das Intervall den Parameter überdeckt." },
+      { id: "q10", question: "Welche Aussage zum Zielkonflikt zwischen Genauigkeit und Konfidenzniveau ist korrekt?", options: ["Ein schmaleres Intervall bei gleichem $n$ erfordert immer ein höheres Konfidenzniveau", "Ein höheres Konfidenzniveau bei gleichem $n$ führt zu einem breiteren Intervall - höhere Sicherheit kostet Genauigkeit", "Genauigkeit und Konfidenzniveau stehen in keinem Zusammenhang", "Ein größerer Stichprobenumfang verschlechtert immer die Genauigkeit"], correctIndex: 1, explanation: "Bei festem $n$ erkauft man sich höhere Sicherheit (höheres Konfidenzniveau) durch ein breiteres, also weniger genaues Intervall." }
     ]
   },
   {
@@ -137,6 +175,20 @@ const CHAPTER4_TOPICS = [
         solution: [
           { type: "p", text: "Da $p = 0{,}03 \\leq \\alpha = 0{,}05$, wird $H_0$ verworfen und $H_1$ angenommen. Inhaltlich: Wäre $H_0$ wahr, läge die Wahrscheinlichkeit, einen mindestens so extremen Stichprobenbefund zu beobachten, bei nur 3% - das gilt als ausreichend unwahrscheinlich, um $H_0$ zugunsten von $H_1$ zu verwerfen." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Formulieren Sie für die Behauptung 'Der durchschnittliche Kraftstoffverbrauch eines neuen Automodells unterscheidet sich vom Herstellerangabe von 6 Litern' die Nullhypothese und die Alternativhypothese, und geben Sie an, ob es sich um einen ein- oder zweiseitigen Test handelt.",
+        solution: [
+          { type: "p", text: "$H_0: \\mu = 6$ (Herstellerangabe trifft zu) gegen $H_1: \\mu \\neq 6$ (Verbrauch weicht ab). Es handelt sich um einen zweiseitigen Test (Punkthypothese), da eine Abweichung in beide Richtungen (mehr oder weniger Verbrauch) geprüft wird." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Bei einem Test wird ein Signifikanzniveau von $\\alpha = 0{,}10$ gewählt statt der üblichen $\\alpha = 0{,}05$. Wie verändert sich dadurch die Wahrscheinlichkeit für einen Fehler 1. Art, und was bedeutet das für die Bereitschaft, $H_0$ zu verwerfen?",
+        solution: [
+          { type: "p", text: "Mit $\\alpha = 0{,}10$ steigt die Wahrscheinlichkeit für einen Fehler 1. Art (fälschliche Ablehnung einer wahren $H_0$) von 5% auf 10%. Das bedeutet, der Ablehnungsbereich wird größer und $H_0$ wird tendenziell leichter (bei schwächerer Evidenz) verworfen als bei $\\alpha = 0{,}05$." }
+        ]
       }
     ],
     quiz: [
@@ -145,7 +197,11 @@ const CHAPTER4_TOPICS = [
       { id: "q3", question: "Bei einem rechtsseitigen Test ($H_0: \\theta \\leq \\theta_0$ vs. $H_1: \\theta > \\theta_0$) berechnet sich der p-Wert als:", options: ["$P(T \\geq t_{\\text{beob}} \\mid H_0)$", "$P(T \\leq t_{\\text{beob}} \\mid H_0)$", "$2\\cdot P(T \\geq t_{\\text{beob}})$", "$P(H_0)$"], correctIndex: 0, explanation: "Beim rechtsseitigen Test interessiert die Wahrscheinlichkeit für mindestens so große Werte wie den beobachteten." },
       { id: "q4", question: "Wie lautet die Entscheidungsregel bei Verwendung des p-Werts?", options: ["$H_0$ verwerfen, wenn $p > \\alpha$", "$H_0$ verwerfen, wenn $p \\leq \\alpha$", "$H_0$ immer beibehalten, wenn $p$ existiert", "Der p-Wert hat keinen Einfluss auf die Entscheidung"], correctIndex: 1, explanation: "Ist der p-Wert kleiner oder gleich dem Signifikanzniveau, wird $H_0$ verworfen." },
       { id: "q5", question: "Ein Chi-Quadrat-Unabhängigkeitstest gehört zu welcher Testkategorie?", options: ["Parametertest", "Verteilungstest", "Unabhängigkeitstest", "Punktschätzung"], correctIndex: 2, explanation: "Er prüft explizit, ob zwei Merkmale unabhängig voneinander sind." },
-      { id: "q6", question: "Die Sicherheitswahrscheinlichkeit $1-\\alpha$ ist...", options: ["die Wahrscheinlichkeit, eine wahre $H_0$ korrekt beizubehalten", "die Wahrscheinlichkeit, eine falsche $H_0$ beizubehalten", "immer gleich 0,05", "identisch mit dem p-Wert"], correctIndex: 0, explanation: "$1-\\alpha$ ergänzt das Signifikanzniveau zur Wahrscheinlichkeit einer korrekten Beibehaltungsentscheidung." }
+      { id: "q6", question: "Die Sicherheitswahrscheinlichkeit $1-\\alpha$ ist...", options: ["die Wahrscheinlichkeit, eine wahre $H_0$ korrekt beizubehalten", "die Wahrscheinlichkeit, eine falsche $H_0$ beizubehalten", "immer gleich 0,05", "identisch mit dem p-Wert"], correctIndex: 0, explanation: "$1-\\alpha$ ergänzt das Signifikanzniveau zur Wahrscheinlichkeit einer korrekten Beibehaltungsentscheidung." },
+      { id: "q7", question: "Ein linksseitiger Test wird verwendet, wenn die Alternativhypothese lautet:", options: ["$H_1: \\theta \\neq \\theta_0$", "$H_1: \\theta > \\theta_0$", "$H_1: \\theta < \\theta_0$", "$H_1: \\theta = \\theta_0$"], correctIndex: 2, explanation: "Ein linksseitiger Test prüft, ob der Parameter unterhalb des hypothetischen Werts liegt." },
+      { id: "q8", question: "Ein Verteilungstest prüft eine Hypothese über...", options: ["einen einzelnen Verteilungsparameter wie den Mittelwert", "die Form der Verteilung eines Merkmals", "die Unabhängigkeit zweier Merkmale", "die Stichprobengröße"], correctIndex: 1, explanation: "Verteilungstests wie der Chi-Quadrat-Anpassungstest prüfen die angenommene Verteilungsform." },
+      { id: "q9", question: "Der Fehler 2. Art (β-Fehler) tritt auf, wenn...", options: ["eine wahre $H_0$ fälschlich abgelehnt wird", "eine falsche $H_0$ fälschlich beibehalten wird", "das Signifikanzniveau zu hoch gewählt wurde", "der p-Wert exakt 0 ist"], correctIndex: 1, explanation: "Der β-Fehler ist im Gegensatz zum α-Fehler nicht direkt durch den Test kontrollierbar." },
+      { id: "q10", question: "Bei einem zweiseitigen Test berechnet sich der p-Wert als:", options: ["$P(T \\geq t_{\\text{beob}})$", "$P(T \\leq t_{\\text{beob}})$", "$2 \\cdot \\min\\{P(T\\geq t_{\\text{beob}}), P(T\\leq t_{\\text{beob}})\\}$", "$1 - \\alpha$"], correctIndex: 2, explanation: "Beim zweiseitigen Test wird die kleinere der beiden einseitigen Wahrscheinlichkeiten verdoppelt." }
     ]
   },
   {
@@ -186,6 +242,21 @@ const CHAPTER4_TOPICS = [
           { type: "formula", block: true, tex: "z = \\frac{31{,}75 - 28}{5/\\sqrt{12}} = \\frac{3{,}75}{1{,}44} \\approx 2{,}60" },
           { type: "p", text: "Da $|z| \\approx 2{,}60 > 1{,}96$, wird $H_0$ verworfen: Die Kundenzufriedenheit hat sich signifikant verändert. Hinweis: Bei einer derart kleinen Stichprobe ($n=12$) sollte das Ergebnis vorsichtig interpretiert werden - eine größere Stichprobe würde eine robustere Aussage erlauben." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Berechnen Sie für das Schrauben-Beispiel ($\\bar{x}=10{,}1$mm, $\\sigma=0{,}1$mm, $n=50$) den kritischen Wert für einen zweiseitigen statt einseitigen Test bei $\\alpha=0{,}01$ (verwenden Sie $z_{0{,}995}\\approx 2{,}58$), und vergleichen Sie die Testentscheidung mit dem ursprünglichen einseitigen Test.",
+        solution: [
+          { type: "p", text: "Die Teststatistik bleibt gleich: $z \\approx 7{,}07$ (siehe vorherige Aufgabe). Beim zweiseitigen Test ist der kritische Wert $z_{0{,}995} \\approx 2{,}58$ (statt $z_{0{,}99}\\approx 2{,}33$ beim einseitigen Test)." },
+          { type: "p", text: "Da $|z| \\approx 7{,}07 > 2{,}58$, wird $H_0$ auch beim zweiseitigen Test verworfen - die Testentscheidung bleibt also gleich, da die Abweichung so groß ist, dass sie selbst den etwas strengeren zweiseitigen kritischen Wert deutlich überschreitet." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Warum würde eine Erhöhung des Stichprobenumfangs im Website-Zufriedenheits-Beispiel (aktuell $n=12$) die Aussagekraft des Tests verbessern, obwohl sich an der Teststatistik-Formel selbst nichts ändert?",
+        solution: [
+          { type: "p", text: "Ein größeres $n$ verkleinert den Standardfehler $\\sigma/\\sqrt{n}$ im Nenner der Teststatistik, wodurch die Schätzung von $\\bar{x}$ präziser (weniger vom Zufall beeinflusst) wird. Das Testergebnis beruht dann auf einer robusteren Grundlage, auch wenn die Formel für $z$ unverändert bleibt - kleine Stichproben liefern zwar formal gültige, aber statistisch weniger verlässliche Testentscheidungen." }
+        ]
       }
     ],
     quiz: [
@@ -193,7 +264,11 @@ const CHAPTER4_TOPICS = [
       { id: "q2", question: "Bei einem zweiseitigen Test mit $\\alpha=0{,}05$ verwendet man als kritischen Wert...", options: ["$z_{0{,}95}$", "$z_{0{,}975}$", "$z_{0{,}05}$", "$z_{0{,}5}$"], correctIndex: 1, explanation: "Beim zweiseitigen Test teilt sich $\\alpha$ auf beide Seiten auf, daher braucht man das $(1-\\alpha/2)$-Quantil." },
       { id: "q3", question: "Wenn die berechnete Teststatistik $z$ betragsmäßig größer ist als der kritische Wert, bedeutet das:", options: ["$H_0$ wird beibehalten", "$H_0$ wird verworfen, $H_1$ wird angenommen", "Der Test ist ungültig", "Es liegt automatisch ein Fehler 2. Art vor"], correctIndex: 1, explanation: "Ein Wert jenseits des kritischen Werts liegt im Ablehnungsbereich, was zur Verwerfung von $H_0$ führt." },
       { id: "q4", question: "Warum sollte man das Testergebnis bei sehr kleinem Stichprobenumfang (z. B. $n=12$) vorsichtig interpretieren?", options: ["Weil der z-Test bei kleinem $n$ grundsätzlich falsch ist", "Weil die Schätzung des Mittelwerts bei kleinen Stichproben stärker vom Zufall beeinflusst und weniger robust ist", "Weil $\\sigma$ dann automatisch unbekannt ist", "Kleine Stichproben sind nie ein Problem"], correctIndex: 1, explanation: "Kleine Stichproben führen zu größerer Schwankung des Stichprobenmittelwerts und damit zu weniger belastbaren Testergebnissen." },
-      { id: "q5", question: "Welche der folgenden Situationen erfordert einen einseitigen statt zweiseitigen Test?", options: ["Man möchte nur prüfen, ob $\\mu$ größer als ein Sollwert ist, nicht ob er allgemein abweicht", "Man möchte generell prüfen, ob sich $\\mu$ verändert hat", "Man hat keine konkrete Vermutung über die Richtung der Abweichung", "Ein einseitiger Test ist nie sinnvoll"], correctIndex: 0, explanation: "Ein einseitiger Test passt, wenn nur eine gerichtete Abweichung (größer oder kleiner) von Interesse ist." }
+      { id: "q5", question: "Welche der folgenden Situationen erfordert einen einseitigen statt zweiseitigen Test?", options: ["Man möchte nur prüfen, ob $\\mu$ größer als ein Sollwert ist, nicht ob er allgemein abweicht", "Man möchte generell prüfen, ob sich $\\mu$ verändert hat", "Man hat keine konkrete Vermutung über die Richtung der Abweichung", "Ein einseitiger Test ist nie sinnvoll"], correctIndex: 0, explanation: "Ein einseitiger Test passt, wenn nur eine gerichtete Abweichung (größer oder kleiner) von Interesse ist." },
+      { id: "q6", question: "Steigt oder sinkt der Standardfehler $\\sigma/\\sqrt{n}$, wenn der Stichprobenumfang $n$ erhöht wird?", options: ["Er steigt", "Er sinkt", "Er bleibt unverändert", "Das hängt nur von $\\sigma$ ab, nicht von $n$"], correctIndex: 1, explanation: "Da $n$ im Nenner unter der Wurzel steht, sinkt der Standardfehler mit wachsendem Stichprobenumfang." },
+      { id: "q7", question: "Der z-Test für den Mittelwert setzt voraus, dass...", options: ["die Grundgesamtheit (näherungsweise) normalverteilt und $\\sigma$ bekannt ist", "die Stichprobe kleiner als 10 sein muss", "$\\mu_0$ unbekannt ist", "kein Signifikanzniveau festgelegt werden muss"], correctIndex: 0, explanation: "Der z-Test basiert auf einer (näherungsweise) normalverteilten Grundgesamtheit mit bekanntem $\\sigma$." },
+      { id: "q8", question: "Im Schrauben-Beispiel wurde $H_1: \\mu > 10$ gewählt. Das entspricht einem...", options: ["zweiseitigen Test", "linksseitigen Test", "rechtsseitigen Test", "Test ohne Alternativhypothese"], correctIndex: 2, explanation: "Da nur ein Überschreiten des Sollwerts (nach rechts) geprüft wird, handelt es sich um einen rechtsseitigen Test." },
+      { id: "q9", question: "Was passiert mit dem kritischen Wert, wenn $\\alpha$ von 0,05 auf 0,01 gesenkt wird (bei sonst gleichem Test)?", options: ["Der kritische Wert wird kleiner (Ablehnungsbereich schrumpft)", "Der kritische Wert wird größer (Ablehnungsbereich schrumpft), es wird schwerer $H_0$ zu verwerfen", "Der kritische Wert bleibt unverändert", "Der Test wird ungültig"], correctIndex: 1, explanation: "Ein kleineres Signifikanzniveau verlangt stärkere Evidenz, der kritische Wert rückt weiter von der Mitte weg." }
     ]
   },
   {
@@ -230,6 +305,20 @@ const CHAPTER4_TOPICS = [
           { type: "formula", block: true, tex: "\\chi^2 = \\frac{(40-45)^2}{45}+\\frac{(28-25)^2}{25}+\\frac{(32-30)^2}{30}+\\frac{(140-135)^2}{135}+\\frac{(72-75)^2}{75}+\\frac{(88-90)^2}{90} \\approx 1{,}40" },
           { type: "p", text: "Da $\\chi^2 \\approx 1{,}40 < 5{,}99$, liegt der Wert im Beibehaltungsbereich - die Unabhängigkeitsannahme wird nicht verworfen. Tätigkeit und Meinung zur Pausenregelung scheinen in dieser Stichprobe unabhängig voneinander zu sein." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Erklären Sie am Beschwerde-Beispiel (Wohnungsgenossenschaft), warum eine sehr gute Übereinstimmung zwischen beobachteten und erwarteten Häufigkeiten zu einem KLEINEN $\\chi^2$-Wert führt.",
+        solution: [
+          { type: "p", text: "Der $\\chi^2$-Wert summiert die quadrierten, mit der erwarteten Häufigkeit normierten Abweichungen $(n_i - n_i')^2/n_i'$. Wenn beobachtete und erwartete Häufigkeiten fast übereinstimmen, sind die Differenzen $n_i - n_i'$ klein, ihre Quadrate noch kleiner - die Summe und damit $\\chi^2$ bleibt entsprechend klein. Ein kleiner $\\chi^2$-Wert signalisiert also eine gute Anpassung der angenommenen Verteilung an die Daten." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Beim Unabhängigkeitstest zur Pausenregelung gibt es 2 Kategorien für die Tätigkeit (Verwaltung, Produktion) und 3 Kategorien für die Meinung (positiv, neutral, negativ). Bestätigen Sie rechnerisch, dass die Anzahl der Freiheitsgrade $(v-1)(w-1) = 2$ beträgt.",
+        solution: [
+          { type: "p", text: "$v = 2$ (Tätigkeitskategorien), $w = 3$ (Meinungskategorien). Damit: $(v-1)(w-1) = (2-1)(3-1) = 1 \\cdot 2 = 2$ Freiheitsgrade - das passt zum in der Aufgabe verwendeten kritischen Wert $\\chi^2_{0{,}95;2}\\approx 5{,}99$." }
+        ]
       }
     ],
     quiz: [
@@ -238,7 +327,11 @@ const CHAPTER4_TOPICS = [
       { id: "q3", question: "Ein großer Chi-Quadrat-Wert (weit im Ablehnungsbereich) deutet darauf hin, dass...", options: ["die beobachteten und erwarteten Häufigkeiten sehr gut übereinstimmen", "die beobachteten und erwarteten Häufigkeiten stark voneinander abweichen", "der Stichprobenumfang zu klein war", "$H_0$ auf jeden Fall wahr ist"], correctIndex: 1, explanation: "Große Abweichungen zwischen beobachteten und erwarteten Häufigkeiten führen zu einem großen $\\chi^2$-Wert und damit eher zur Ablehnung von $H_0$." },
       { id: "q4", question: "Wie werden die erwarteten Häufigkeiten $n_{ij}'$ beim Unabhängigkeitstest berechnet?", options: ["$n_{ij}' = n_{i\\cdot} + n_{\\cdot j}$", "$n_{ij}' = \\frac{n_{i\\cdot}\\cdot n_{\\cdot j}}{n}$", "$n_{ij}' = n_{i\\cdot} \\cdot n_{\\cdot j}$", "$n_{ij}' = n$"], correctIndex: 1, explanation: "Unter der Unabhängigkeitsannahme ergibt sich die erwartete gemeinsame Häufigkeit als Produkt der Randhäufigkeiten geteilt durch den Gesamtumfang." },
       { id: "q5", question: "Liegt der berechnete $\\chi^2$-Wert im Beibehaltungsbereich $[0, \\chi^2_{1-\\alpha;v-1}]$, bedeutet das:", options: ["$H_0$ wird verworfen", "$H_0$ wird beibehalten - die Abweichung ist nicht signifikant groß", "Der Test ist ungültig", "Es liegt garantiert kein Fehler vor"], correctIndex: 1, explanation: "Innerhalb des Beibehaltungsbereichs gibt es keine ausreichende Evidenz, um die Nullhypothese zu verwerfen." },
-      { id: "q6", question: "Welche Art von Merkmalen eignet sich typischerweise für einen Chi-Quadrat-Unabhängigkeitstest?", options: ["Nur stetige, normalverteilte Merkmale", "Kategoriale (z. B. nominal- oder ordinalskalierte) Merkmale", "Nur ein einzelnes metrisches Merkmal", "Merkmale, die bereits als unabhängig bekannt sind"], correctIndex: 1, explanation: "Der Test arbeitet mit Häufigkeitstabellen (Kontingenztafeln) für kategoriale Merkmale." }
+      { id: "q6", question: "Welche Art von Merkmalen eignet sich typischerweise für einen Chi-Quadrat-Unabhängigkeitstest?", options: ["Nur stetige, normalverteilte Merkmale", "Kategoriale (z. B. nominal- oder ordinalskalierte) Merkmale", "Nur ein einzelnes metrisches Merkmal", "Merkmale, die bereits als unabhängig bekannt sind"], correctIndex: 1, explanation: "Der Test arbeitet mit Häufigkeitstabellen (Kontingenztafeln) für kategoriale Merkmale." },
+      { id: "q7", question: "Beim Chi-Quadrat-Verteilungstest bezeichnet $n_i'$...", options: ["die beobachtete Häufigkeit", "die unter $H_0$ erwartete (theoretische) Häufigkeit", "die Anzahl der Freiheitsgrade", "das Signifikanzniveau"], correctIndex: 1, explanation: "$n_i$ ist die beobachtete, $n_i'$ die theoretisch erwartete Häufigkeit unter der angenommenen Verteilung." },
+      { id: "q8", question: "Der Chi-Quadrat-Verteilungstest hat wie viele Freiheitsgrade bei $v$ unterschiedlichen Merkmalswerten?", options: ["$v$", "$v - 1$", "$v + 1$", "$v^2$"], correctIndex: 1, explanation: "Die Freiheitsgrade betragen $v-1$, da ein Freiheitsgrad durch die Normierungsbedingung verloren geht." },
+      { id: "q9", question: "Im Beispiel zur Pausenregelung war $\\chi^2 \\approx 1{,}40$ deutlich kleiner als der kritische Wert 5,99. Das bedeutet:", options: ["Die Merkmale sind stark voneinander abhängig", "Es gibt keine ausreichende Evidenz gegen die Unabhängigkeit der Merkmale", "Der Test war fehlerhaft", "Es müssen mehr Kategorien gebildet werden"], correctIndex: 1, explanation: "Ein kleiner Chi-Quadrat-Wert im Beibehaltungsbereich spricht nicht gegen die Unabhängigkeitsannahme." },
+      { id: "q10", question: "Was unterscheidet den Chi-Quadrat-Verteilungstest grundsätzlich vom z-Test für den Mittelwert?", options: ["Es gibt keinen Unterschied", "Der Chi-Quadrat-Test prüft eine Verteilungsform bzw. Unabhängigkeit statt eines einzelnen Parameters wie beim z-Test", "Der z-Test kann keine Nullhypothese haben", "Der Chi-Quadrat-Test benötigt kein Signifikanzniveau"], correctIndex: 1, explanation: "Der z-Test ist ein Parametertest, während Chi-Quadrat-Tests Verteilungsform oder Unabhängigkeit prüfen." }
     ]
   }
 ];

@@ -35,6 +35,22 @@ const CHAPTER2_TOPICS = [
         solution: [
           { type: "p", text: "Bei gleicher Klassenbreite ist die Häufigkeitsdichte proportional zur relativen Häufigkeit - die Klasse mit der höchsten Häufigkeit hat also auch die höchste Dichte. Das ist die Klasse 600–1.200h mit 50,0%: $d = 0{,}50 / 600 \\approx 0{,}00083$ pro Stunde." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Berechnen Sie für die 40 Werkstatt-Stundensätze (56€×4, 59€×8, 61€×12, 62€×8, 64€×4, 65€×4) die absoluten kumulierten Häufigkeiten $H_i$.",
+        solution: [
+          { type: "p", text: "Absolute Häufigkeiten der Reihe nach: 4, 8, 12, 8, 4, 4. Kumuliert ($H_i$, laufend aufsummiert):" },
+          { type: "list", items: ["56 €: 4", "59 €: 12", "61 €: 24", "62 €: 32", "64 €: 36", "65 €: 40"] },
+          { type: "p", text: "Da $H_i$ die absolute kumulierte Häufigkeit ist, muss der letzte Wert stets gleich $n$ sein - hier $H_{65} = 40$, was mit den 40 erhobenen Werkstätten übereinstimmt." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Welche grafische Darstellung ist für die Glühbirnen-Lebensdauer (klassifizierte, stetige Daten) geeigneter: Stabdiagramm oder Histogramm? Begründen Sie.",
+        solution: [
+          { type: "p", text: "Ein Histogramm ist geeignet, da die Lebensdauer ein stetiges Merkmal ist, das in Klassen mit Unter- und Obergrenze zusammengefasst wurde. Das Stabdiagramm eignet sich dagegen für qualitative bzw. diskrete Merkmale mit einzelnen, klar abgrenzbaren Merkmalswerten - hier gibt es aber Klassenbreiten, sodass die Fläche der Balken (über die Häufigkeitsdichte) die Häufigkeit korrekt abbilden muss." }
+        ]
       }
     ],
     quiz: [
@@ -43,7 +59,11 @@ const CHAPTER2_TOPICS = [
       { id: "q3", question: "Wozu dient die Häufigkeitsdichte $d_i$?", options: ["Sie ersetzt die absolute Häufigkeit bei gleich breiten Klassen", "Sie macht die Balkenfläche proportional zur Häufigkeit, auch bei unterschiedlich breiten Klassen", "Sie ist nur bei qualitativen Merkmalen definiert", "Sie ist identisch mit der kumulierten Häufigkeit"], correctIndex: 1, explanation: "Die Häufigkeitsdichte (Häufigkeit / Klassenbreite) sorgt dafür, dass im Histogramm die Fläche - nicht die Höhe - die Häufigkeit korrekt abbildet." },
       { id: "q4", question: "Welches Skalenniveau wird mindestens benötigt, um eine kumulierte Häufigkeitsverteilung zu bilden?", options: ["Nominalskala", "Ordinalskala", "Intervallskala", "Verhältnisskala"], correctIndex: 1, explanation: "Um Werte 'kleiner oder gleich' zu summieren, müssen sie sich zumindest in eine Rangfolge bringen lassen - das erfordert Ordinalskalenniveau." },
       { id: "q5", question: "Welche grafische Darstellung passt zu einer kumulierten Häufigkeitsverteilung?", options: ["Histogramm", "Kreisdiagramm", "Treppenfunktion", "Polygonzug"], correctIndex: 2, explanation: "Die kumulierte Verteilungsfunktion springt an jedem Merkmalswert und ist dazwischen konstant - das ergibt eine Treppenfunktion." },
-      { id: "q6", question: "Ein Histogramm für Klassen unterschiedlicher Breite sollte auf der y-Achse abtragen...", options: ["die absolute Häufigkeit", "die relative Häufigkeit", "die Häufigkeitsdichte", "die kumulierte Häufigkeit"], correctIndex: 2, explanation: "Nur die Häufigkeitsdichte sorgt bei unterschiedlichen Klassenbreiten dafür, dass die Rechteckfläche der tatsächlichen Häufigkeit entspricht." }
+      { id: "q6", question: "Ein Histogramm für Klassen unterschiedlicher Breite sollte auf der y-Achse abtragen...", options: ["die absolute Häufigkeit", "die relative Häufigkeit", "die Häufigkeitsdichte", "die kumulierte Häufigkeit"], correctIndex: 2, explanation: "Nur die Häufigkeitsdichte sorgt bei unterschiedlichen Klassenbreiten dafür, dass die Rechteckfläche der tatsächlichen Häufigkeit entspricht." },
+      { id: "q7", question: "Was beschreibt die absolute Häufigkeit $h_i$?", options: ["Den Anteil eines Merkmalswerts an $n$", "Wie oft ein Merkmalswert $x_i$ in der Stichprobe auftritt", "Die Klassenbreite", "Die Summe aller relativen Häufigkeiten"], correctIndex: 1, explanation: "$h_i$ zählt die absolute Anzahl der Beobachtungen mit Merkmalswert $x_i$, während $f_i = h_i/n$ die relative Häufigkeit ist." },
+      { id: "q8", question: "Welche grafische Darstellung eignet sich besonders für qualitative oder diskrete Merkmale mit wenigen Ausprägungen?", options: ["Histogramm", "Stabdiagramm", "Polygonzug", "Treppenfunktion"], correctIndex: 1, explanation: "Das Stabdiagramm stellt einzelne, klar abgrenzbare Merkmalswerte dar und passt daher zu qualitativen/diskreten Merkmalen." },
+      { id: "q9", question: "Ein Polygonzug entsteht, indem man...", options: ["die Klassenobergrenzen durch Geradenstücke verbindet", "die Klassenmitten durch Geradenstücke verbindet", "die kumulierten Häufigkeiten als Treppenfunktion darstellt", "nur die Modusklasse markiert"], correctIndex: 1, explanation: "Beim Polygonzug werden die Häufigkeiten (bzw. Häufigkeitsdichten) an den Klassenmitten durch Geradenstücke miteinander verbunden." },
+      { id: "q10", question: "Wie verhält sich $\\sum h_i$ zur Stichprobengröße $n$?", options: ["$\\sum h_i = n$ gilt immer", "$\\sum h_i = 1$ gilt immer", "$\\sum h_i$ ist unabhängig von $n$", "$\\sum h_i$ kann größer als $n$ sein"], correctIndex: 0, explanation: "Da jede Beobachtung genau einmal gezählt wird, ergibt die Summe aller absoluten Häufigkeiten stets die Stichprobengröße $n$." }
     ]
   },
   {
@@ -88,6 +108,20 @@ const CHAPTER2_TOPICS = [
         solution: [
           { type: "p", text: "Einkommensverteilungen sind typischerweise rechtsschief: wenige sehr hohe Einkommen ziehen das arithmetische Mittel stark nach oben. Der Median ist robust gegenüber solchen Ausreißern und beschreibt das 'typische' Einkommen daher realistischer." }
         ]
+      },
+      {
+        id: "ex4",
+        prompt: "Bestimmen Sie für die 40 Werkstatt-Stundensätze (56€×4, 59€×8, 61€×12, 62€×8, 64€×4, 65€×4) das erste Quartil $x_{0{,}25}$ mithilfe der kumulierten relativen Häufigkeiten (0,10 / 0,30 / 0,60 / 0,80 / 0,90 / 1,00).",
+        solution: [
+          { type: "p", text: "Das erste Quartil ist der Wert, bei dem mindestens 25% der Daten kleiner oder gleich sind. Die kumulierten relativen Häufigkeiten sind: 56€ → 0,10, 59€ → 0,30, 61€ → 0,60, ... Da 0,25 zwischen 0,10 (bei 56€) und 0,30 (bei 59€) liegt, wird der Anteil von 0,25 erstmals bei 59€ erreicht bzw. überschritten. Damit ist $x_{0{,}25} = 59$€." }
+        ]
+      },
+      {
+        id: "ex5",
+        prompt: "Erklären Sie, warum der Modus bei den 40 Werkstatt-Stundensätzen (61€ mit 12 Nennungen) wenig aussagekräftig wäre, wenn die Stundensätze stattdessen fast gleichmäßig auf viele verschiedene Werte verteilt wären.",
+        solution: [
+          { type: "p", text: "Der Modus ist nur dann aussagekräftig, wenn sich die Häufigkeiten deutlich auf einen oder wenige Werte konzentrieren. Wären die Stundensätze fast gleichmäßig auf viele verschiedene Werte verteilt, gäbe es keinen klar dominierenden Wert - der Modus würde dann nur zufällig den knapp häufigsten Wert markieren und die 'typische Größe' der Verteilung kaum sinnvoll repräsentieren." }
+        ]
       }
     ],
     quiz: [
@@ -96,7 +130,11 @@ const CHAPTER2_TOPICS = [
       { id: "q3", question: "Welches Lagemaß lässt sich auch für rein nominalskalierte Merkmale berechnen?", options: ["Arithmetisches Mittel", "Median", "Modus", "Quartilsabstand"], correctIndex: 2, explanation: "Der Modus (häufigster Wert) benötigt keine Rangordnung und funktioniert daher auch bei Nominaldaten wie z. B. Automarken." },
       { id: "q4", question: "Das zweite Quartil $x_{0{,}5}$ entspricht...", options: ["dem Modus", "dem Median", "dem arithmetischen Mittel", "der Spannweite"], correctIndex: 1, explanation: "Per Definition ist das 50%-Quantil identisch mit dem Median." },
       { id: "q5", question: "In einer stark rechtsschiefen Verteilung (z. B. Einkommen) gilt meist...", options: ["Mittelwert < Median < Modus", "Mittelwert > Median > Modus", "Mittelwert = Median = Modus", "Median > Mittelwert immer"], correctIndex: 1, explanation: "Wenige sehr hohe Werte ziehen den Mittelwert über den Median und den Modus." },
-      { id: "q6", question: "Bei einer klassifizierten Häufigkeitsverteilung berechnet man das arithmetische Mittel näherungsweise mit...", options: ["den Klassenmitten", "den Klassenobergrenzen", "der Klassenanzahl", "der Häufigkeitsdichte allein"], correctIndex: 0, explanation: "Da die genauen Einzelwerte innerhalb einer Klasse unbekannt sind, verwendet man die Klassenmitte als Näherung." }
+      { id: "q6", question: "Bei einer klassifizierten Häufigkeitsverteilung berechnet man das arithmetische Mittel näherungsweise mit...", options: ["den Klassenmitten", "den Klassenobergrenzen", "der Klassenanzahl", "der Häufigkeitsdichte allein"], correctIndex: 0, explanation: "Da die genauen Einzelwerte innerhalb einer Klasse unbekannt sind, verwendet man die Klassenmitte als Näherung." },
+      { id: "q7", question: "Wie wird das gewichtete arithmetische Mittel berechnet?", options: ["$\\bar{x} = \\sum_{i=1}^{k} f_i \\cdot x_i$", "$\\bar{x} = \\sum_{i=1}^{k} h_i$", "$\\bar{x} = x_{(n)} - x_{(1)}$", "$\\bar{x} = \\frac{n+1}{2}$"], correctIndex: 0, explanation: "Beim gewichteten Mittel werden die Merkmalswerte $x_i$ mit ihren relativen Häufigkeiten $f_i$ multipliziert und aufsummiert." },
+      { id: "q8", question: "Bestimmt man den Median bei einer geraden Anzahl $n$ von Werten, so...", options: ["nimmt man immer den mittleren Wert der Liste", "mittelt man die beiden mittleren Werte der sortierten Reihe", "nimmt man den größten Wert", "ist der Median nicht definiert"], correctIndex: 1, explanation: "Bei geradem $n$ existieren zwei mittlere Positionen ($n/2$ und $n/2+1$), deren Werte gemittelt werden." },
+      { id: "q9", question: "Was ist die Modusklasse bei klassifizierten Daten?", options: ["Die erste Klasse der Verteilung", "Die Klasse mit der höchsten Häufigkeit bzw. Häufigkeitsdichte", "Die Klasse, die den Median enthält", "Die letzte Klasse der Verteilung"], correctIndex: 1, explanation: "Bei klassifizierten Daten ersetzt man den Einzelwert-Modus durch die Klasse mit der größten Häufigkeit bzw. Dichte." },
+      { id: "q10", question: "Welche Aussage über Quantile ist korrekt?", options: ["Quartile, Dezile und Perzentile sind unabhängige, unverwandte Konzepte", "Sie sind alles Spezialfälle des allgemeinen $p$-Quantils", "Nur Perzentile setzen ein Skalenniveau voraus", "Das erste Quartil entspricht immer dem Modus"], correctIndex: 1, explanation: "Quartile ($p=0{,}25/0{,}5/0{,}75$), Dezile und Perzentile sind alle Spezialfälle des allgemeinen $p$-Quantils $x_p$." }
     ]
   },
   {
@@ -137,6 +175,21 @@ const CHAPTER2_TOPICS = [
           { type: "formula", block: true, tex: "v_A = \\frac{300}{3000} = 0{,}10 \\qquad v_B = \\frac{400}{4500} \\approx 0{,}089" },
           { type: "p", text: "Obwohl Firma B die größere absolute Standardabweichung hat, ist die relative Streuung (Variationskoeffizient) in Firma A mit 10% höher als in Firma B mit ca. 8,9%." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Für die 40 Werkstatt-Stundensätze wurde $s^2 = 6$ berechnet. Bestimmen Sie mithilfe des Verschiebungssatzes den Wert von $\\frac{1}{n}\\sum x_i^2$, wenn $\\bar{x} = 61$ ist.",
+        solution: [
+          { type: "p", text: "Nach dem Verschiebungssatz gilt $s^2 = \\frac{1}{n}\\sum x_i^2 - \\bar{x}^2$, also:" },
+          { type: "formula", block: true, tex: "\\frac{1}{n}\\sum x_i^2 = s^2 + \\bar{x}^2 = 6 + 61^2 = 6 + 3721 = 3727" }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Vergleichen Sie qualitativ die Spannweite und die Standardabweichung der 40 Werkstatt-Stundensätze ($R = 9$€, $s \\approx 2{,}449$€): Warum ist die Standardabweichung deutlich kleiner als die Spannweite?",
+        solution: [
+          { type: "p", text: "Die Spannweite berücksichtigt nur die beiden Extremwerte (56€ und 65€) und ignoriert, wie sich die übrigen 38 Werte dazwischen verteilen. Die Standardabweichung dagegen bezieht alle 40 Werte über die mittlere quadrierte Abweichung vom Mittelwert ein. Da die meisten Stundensätze nahe am Mittelwert von 61€ liegen (v. a. 61€ und 62€ mit den höchsten Häufigkeiten), fällt die durchschnittliche Abweichung deutlich kleiner aus als der reine Extremwertabstand." }
+        ]
       }
     ],
     quiz: [
@@ -145,7 +198,11 @@ const CHAPTER2_TOPICS = [
       { id: "q3", question: "Welche Kennzahl hat wieder dieselbe Einheit wie die Ursprungsdaten (z. B. Euro)?", options: ["Die Varianz", "Die Standardabweichung", "Der Variationskoeffizient", "Keine der genannten"], correctIndex: 1, explanation: "Die Standardabweichung ist die Wurzel der Varianz und hebt damit die Quadrierung der Einheit wieder auf." },
       { id: "q4", question: "Wofür braucht man den Variationskoeffizienten?", options: ["Um Verteilungen mit unterschiedlichem Niveau bezüglich ihrer relativen Streuung zu vergleichen", "Um die Spannweite zu berechnen", "Er ersetzt den Median", "Er ist nur bei Nominaldaten definiert"], correctIndex: 0, explanation: "Als dimensionsloses Verhältnis von Standardabweichung zu Mittelwert erlaubt er Vergleiche unabhängig vom Skalenniveau der Ausgangsdaten." },
       { id: "q5", question: "Welches Skalenniveau setzt der Variationskoeffizient mindestens voraus?", options: ["Nominalskala", "Ordinalskala", "Intervallskala", "Verhältnisskala"], correctIndex: 3, explanation: "Da er als Quotient s/x̄ ein Verhältnis bildet, braucht er einen echten Nullpunkt - also Verhältnisskalenniveau." },
-      { id: "q6", question: "Der Verschiebungssatz zur Varianzberechnung lautet $s^2 = ...$", options: ["$\\frac{1}{n}\\sum x_i^2 - \\bar{x}^2$", "$\\frac{1}{n}\\sum x_i - \\bar{x}$", "$\\sum x_i^2 + \\bar{x}^2$", "$\\bar{x}^2 - \\frac{1}{n}\\sum x_i^2$"], correctIndex: 0, explanation: "Die Varianz lässt sich äquivalent als mittleres Quadrat minus Quadrat des Mittels berechnen." }
+      { id: "q6", question: "Der Verschiebungssatz zur Varianzberechnung lautet $s^2 = ...$", options: ["$\\frac{1}{n}\\sum x_i^2 - \\bar{x}^2$", "$\\frac{1}{n}\\sum x_i - \\bar{x}$", "$\\sum x_i^2 + \\bar{x}^2$", "$\\bar{x}^2 - \\frac{1}{n}\\sum x_i^2$"], correctIndex: 0, explanation: "Die Varianz lässt sich äquivalent als mittleres Quadrat minus Quadrat des Mittels berechnen." },
+      { id: "q7", question: "Wie ist die Spannweite definiert?", options: ["$R = x_{0{,}75} - x_{0{,}25}$", "$R = x_{(n)} - x_{(1)}$", "$R = \\bar{x} - \\tilde{x}$", "$R = s^2 / \\bar{x}$"], correctIndex: 1, explanation: "Die Spannweite ist der Abstand zwischen dem größten Wert $x_{(n)}$ und dem kleinsten Wert $x_{(1)}$." },
+      { id: "q8", question: "Welche Aussage über die Standardabweichung ist korrekt?", options: ["Sie ist immer kleiner als die Varianz", "Sie ist die Wurzel der Varianz", "Sie ist unabhängig von Ausreißern", "Sie hat immer den Wert 1"], correctIndex: 1, explanation: "Per Definition gilt $s = \\sqrt{s^2}$." },
+      { id: "q9", question: "Der zentrale Quartilsabstand (IQA) ist definiert als...", options: ["$x_{0{,}75} - x_{0{,}25}$", "$x_{(n)} - x_{(1)}$", "$x_{0{,}5} - x_{0{,}25}$", "$\\bar{x} - x_{0{,}5}$"], correctIndex: 0, explanation: "Der IQA misst den Abstand zwischen dem dritten und dem ersten Quartil und erfasst damit die mittleren 50% der Daten." },
+      { id: "q10", question: "Warum reagiert die Varianz stärker auf Ausreißer als der Quartilsabstand?", options: ["Weil sie alle Werte quadriert einbezieht, auch extreme", "Weil sie nur die mittleren 50% der Daten nutzt", "Weil sie keine Einheit hat", "Weil sie immer negativ ist"], correctIndex: 0, explanation: "Da in die Varianz jede quadrierte Abweichung eingeht, wirken sich große Abweichungen (Ausreißer) überproportional stark aus." }
     ]
   },
   {
@@ -186,6 +243,20 @@ const CHAPTER2_TOPICS = [
         solution: [
           { type: "p", text: "Da $\\gamma_2 = 4{,}2 > 3$ ist, ist die Verteilung leptokurtisch, also spitzer gewölbt als die Normalverteilung (mit tendenziell mehr Ausreißern in den Rändern)." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Eine Verteilung hat einen Wölbungskoeffizienten von $\\gamma_2 = 2{,}1$. Wie ist sie im Vergleich zur Normalverteilung einzuordnen?",
+        solution: [
+          { type: "p", text: "Da $\\gamma_2 = 2{,}1 < 3$ ist, handelt es sich um eine platykurtische Verteilung - sie ist flacher gewölbt als die Normalverteilung, mit einem breiteren, flacheren Gipfel." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Welches Vorzeichen erwarten Sie für den Schiefekoeffizienten $\\gamma_1$ der Glühbirnen-Lebensdauer (arithmetisches Mittel ≈ 1.101h > Median ≈ 900h)? Begründen Sie mit der Definition von $\\gamma_1$.",
+        solution: [
+          { type: "p", text: "Da Mittelwert > Median > Modus gilt, handelt es sich um eine rechtsschiefe Verteilung, für die per Definition $\\gamma_1 > 0$ gilt. Das passt auch zur Formel: Weil einige besonders langlebige Glühbirnen weit über dem Mittelwert liegen, dominieren positive, stark ins Gewicht fallende kubierte Abweichungen $(x_i - \\bar{x})^3$ den Zähler von $\\gamma_1$." }
+        ]
       }
     ],
     quiz: [
@@ -193,7 +264,12 @@ const CHAPTER2_TOPICS = [
       { id: "q2", question: "Bei einer perfekt symmetrischen Verteilung ist der Schiefekoeffizient ungefähr...", options: ["-1", "0", "1", "3"], correctIndex: 1, explanation: "Symmetrische Verteilungen haben per Definition (annähernd) keine Schiefe, also $\\gamma_1 \\approx 0$." },
       { id: "q3", question: "Welchen Referenzwert nutzt man beim Wölbungskoeffizienten, um mit der Normalverteilung zu vergleichen?", options: ["0", "1", "2", "3"], correctIndex: 3, explanation: "Die Normalverteilung hat einen Wölbungskoeffizienten von genau 3 - das ist der Bezugspunkt für meso-/lepto-/platykurtisch." },
       { id: "q4", question: "Eine leptokurtische Verteilung ist im Vergleich zur Normalverteilung...", options: ["flacher", "spitzer mit tendenziell mehr Ausreißern", "immer schief", "immer symmetrisch"], correctIndex: 1, explanation: "Leptokurtisch ($\\gamma_2 > 3$) bedeutet einen spitzeren Gipfel und ausgeprägtere Ränder." },
-      { id: "q5", question: "Womit wird die Schiefe berechnet?", options: ["Mit den quadrierten Abweichungen vom Mittelwert", "Mit den kubierten (3. Potenz) Abweichungen vom Mittelwert", "Nur mit dem Modus", "Mit der Spannweite"], correctIndex: 1, explanation: "Der Schiefekoeffizient nutzt die dritte Potenz der Abweichungen, geteilt durch die dritte Potenz der Standardabweichung." }
+      { id: "q5", question: "Womit wird die Schiefe berechnet?", options: ["Mit den quadrierten Abweichungen vom Mittelwert", "Mit den kubierten (3. Potenz) Abweichungen vom Mittelwert", "Nur mit dem Modus", "Mit der Spannweite"], correctIndex: 1, explanation: "Der Schiefekoeffizient nutzt die dritte Potenz der Abweichungen, geteilt durch die dritte Potenz der Standardabweichung." },
+      { id: "q6", question: "In einer linksschiefen (rechtssteilen) Verteilung gilt typischerweise...", options: ["Mittelwert < Median < Modus", "Mittelwert > Median > Modus", "Mittelwert = Median = Modus immer exakt", "Der Modus ist undefiniert"], correctIndex: 0, explanation: "Bei Linksschiefe zieht ein langer linker Schwanz den Mittelwert unter Median und Modus." },
+      { id: "q7", question: "Was ist ein mesokurtischer Wölbungswert?", options: ["$\\gamma_2 < 3$", "$\\gamma_2 = 3$", "$\\gamma_2 > 3$", "$\\gamma_2 = 0$"], correctIndex: 1, explanation: "Mesokurtisch bedeutet eine Wölbung wie die Normalverteilung, also $\\gamma_2 = 3$." },
+      { id: "q8", question: "Eine platykurtische Verteilung hat im Vergleich zur Normalverteilung...", options: ["einen spitzeren Gipfel", "einen breiteren, flacheren Gipfel", "eine stärkere Schiefe", "gar keinen Gipfel"], correctIndex: 1, explanation: "Platykurtisch ($\\gamma_2 < 3$) beschreibt eine flachere, breitere Verteilung als die Normalverteilung." },
+      { id: "q9", question: "Welche Aussage über den Zusammenhang von Schiefe und den drei klassischen Lagemaßen ist korrekt?", options: ["Bei Schiefe = 0 sind Mittelwert, Median und Modus näherungsweise gleich", "Schiefe hat keinen Zusammenhang mit Lagemaßen", "Bei Rechtsschiefe ist der Modus immer größer als der Mittelwert", "Bei Linksschiefe ist der Median immer der größte der drei Werte"], correctIndex: 0, explanation: "Symmetrische (nicht-schiefe) Verteilungen zeichnen sich dadurch aus, dass Mittelwert, Median und Modus etwa zusammenfallen." },
+      { id: "q10", question: "Der Wölbungskoeffizient $\\gamma_2$ wird berechnet als...", options: ["$\\frac{\\frac{1}{n}\\sum(x_i-\\bar{x})^4}{s^4}$", "$\\frac{\\frac{1}{n}\\sum(x_i-\\bar{x})^3}{s^3}$", "$\\frac{1}{n}\\sum(x_i-\\bar{x})^2$", "$\\frac{s}{\\bar{x}}$"], correctIndex: 0, explanation: "Die Wölbung nutzt die vierte Potenz der Abweichungen vom Mittelwert, normiert durch $s^4$." }
     ]
   },
   {
@@ -235,6 +311,22 @@ const CHAPTER2_TOPICS = [
           { type: "formula", block: true, tex: "G^{*} = \\frac{5}{5-1} \\cdot 0{,}24 = 0{,}30" },
           { type: "p", text: "Ein normierter Gini-Koeffizient von 0,30 zeigt eine moderate Konzentration der Bonuszahlungen an - deutlich von der Gleichverteilung ($G^*=0$) entfernt, aber weit von maximaler Konzentration ($G^*=1$)." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Berechnen Sie für $n = 5$ (Bonuszahlungen-Beispiel) den theoretischen Maximalwert des unnormierten Gini-Koeffizienten $G$.",
+        solution: [
+          { type: "p", text: "Der Maximalwert des unnormierten Gini-Koeffizienten ist $\\frac{n-1}{n}$. Für $n=5$:" },
+          { type: "formula", block: true, tex: "G_{max} = \\frac{5-1}{5} = 0{,}8" },
+          { type: "p", text: "Dieser Wert würde erreicht, wenn eine einzige Person die gesamte Bonussumme erhält und alle anderen leer ausgehen (maximale Konzentration)." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Bei den Bonuszahlungen erhalten die unteren 60% der Mitarbeitenden nur 34% der Bonussumme. Formulieren Sie, was dies für die Lage der Lorenzkurve relativ zur Diagonalen bedeutet.",
+        solution: [
+          { type: "p", text: "Bei perfekter Gleichverteilung müssten die unteren 60% der Mitarbeitenden auch 60% der Summe erhalten - die Lorenzkurve läge dann bei (0,6; 0,6) auf der Diagonalen. Da sie tatsächlich nur 34% erhalten, liegt der Punkt (0,6; 0,34) deutlich unterhalb der Diagonalen. Die Lorenzkurve wölbt sich also nach unten, was auf eine Konzentration der Bonuszahlungen auf die oberen Mitarbeitenden hinweist." }
+        ]
       }
     ],
     quiz: [
@@ -242,7 +334,12 @@ const CHAPTER2_TOPICS = [
       { id: "q2", question: "Was bedeutet ein Gini-Koeffizient von $G = 0$?", options: ["Maximale Konzentration", "Perfekte Gleichverteilung", "Die Daten sind fehlerhaft", "Negative Werte in den Daten"], correctIndex: 1, explanation: "$G=0$ heißt, die Lorenzkurve liegt auf der Diagonalen - jeder Merkmalsträger trägt anteilig gleich viel zur Summe bei." },
       { id: "q3", question: "Warum normiert man den Gini-Koeffizienten zu $G^*$?", options: ["Um negative Werte zu vermeiden", "Damit er unabhängig von $n$ stets zwischen 0 und 1 liegt und vergleichbar wird", "Weil $G$ sonst größer als 1 werden kann", "Das ist nur bei qualitativen Merkmalen nötig"], correctIndex: 1, explanation: "Der unnormierte Gini-Koeffizient hat ein von $n$ abhängiges Maximum $(n-1)/n$ - die Normierung macht ihn über verschiedene Stichprobengrößen hinweg vergleichbar." },
       { id: "q4", question: "Was zeigt eine Lorenzkurve, die stark unterhalb der Diagonalen verläuft?", options: ["Gleichverteilung", "Hohe Konzentration der Summengröße auf wenige Merkmalsträger", "Einen Rechenfehler", "Dass der Gini-Koeffizient negativ ist"], correctIndex: 1, explanation: "Je weiter die Lorenzkurve von der Diagonale abweicht, desto konzentrierter ist die Verteilung." },
-      { id: "q5", question: "Welche Formel definiert den normierten Gini-Koeffizienten?", options: ["$G^* = G \\cdot n$", "$G^* = \\frac{n}{n-1} \\cdot G$", "$G^* = \\frac{n-1}{n} \\cdot G$", "$G^* = 1 - G$"], correctIndex: 1, explanation: "Die Normierung erfolgt durch Multiplikation mit $n/(n-1)$." }
+      { id: "q5", question: "Welche Formel definiert den normierten Gini-Koeffizienten?", options: ["$G^* = G \\cdot n$", "$G^* = \\frac{n}{n-1} \\cdot G$", "$G^* = \\frac{n-1}{n} \\cdot G$", "$G^* = 1 - G$"], correctIndex: 1, explanation: "Die Normierung erfolgt durch Multiplikation mit $n/(n-1)$." },
+      { id: "q6", question: "Was untersuchen Konzentrationsmaße?", options: ["Den linearen Zusammenhang zweier Merkmale", "Wie ungleich eine Summengröße auf die Merkmalsträger verteilt ist", "Die Schiefe einer Verteilung", "Die Streuung um den Mittelwert"], correctIndex: 1, explanation: "Konzentrationsmaße wie Lorenzkurve und Gini-Koeffizient prüfen, ob eine Summengröße (z.B. Einkommen) gleichmäßig oder auf wenige Merkmalsträger konzentriert verteilt ist." },
+      { id: "q7", question: "Was stellt die Lorenzkurve auf den beiden Achsen gegenüber?", options: ["Mittelwert und Median", "Kumulierten Anteil der Merkmalsträger und kumulierten Anteil an der Summe", "Varianz und Standardabweichung", "Absolute und relative Häufigkeit"], correctIndex: 1, explanation: "Die x-Achse zeigt den kumulierten Anteil der Merkmalsträger, die y-Achse den kumulierten Anteil an der Summengröße." },
+      { id: "q8", question: "Der theoretische Maximalwert des unnormierten Gini-Koeffizienten $G$ beträgt...", options: ["1", "$n$", "$\\frac{n-1}{n}$", "0"], correctIndex: 2, explanation: "Da $G$ von $n$ abhängt, liegt sein Maximum bei $\\frac{n-1}{n}$ - deshalb normiert man mit $G^*$ auf den Bereich [0,1]." },
+      { id: "q9", question: "Wofür bezeichnet man $F_i^{*}$ in der Gini-Formel?", options: ["Die kumulierten relativen Häufigkeiten der Merkmalsträger", "Die kumulierten relativen Anteile an der Summengröße", "Die absolute Häufigkeit", "Die Klassenbreite"], correctIndex: 1, explanation: "$F_i^{*}$ bezeichnet den kumulierten relativen Anteil an der Summe (z.B. am Gesamteinkommen), im Unterschied zu den kumulierten Anteilen an den Merkmalsträgern." },
+      { id: "q10", question: "Was bedeutet maximale Konzentration im Sinne des Gini-Koeffizienten?", options: ["Alle Merkmalsträger erhalten den gleichen Anteil", "Eine einzige Einheit erhält die gesamte Summe, alle anderen nichts", "Der Gini-Koeffizient ist negativ", "Die Lorenzkurve liegt auf der Diagonalen"], correctIndex: 1, explanation: "Maximale Konzentration bedeutet, dass die gesamte Summengröße bei einem einzigen Merkmalsträger liegt." }
     ]
   },
   {
@@ -283,6 +380,21 @@ const CHAPTER2_TOPICS = [
         solution: [
           { type: "p", text: "Nein. Beide Größen werden vermutlich durch einen gemeinsamen Drittfaktor beeinflusst: warmes, sonniges Wetter führt sowohl zu mehr Eiscremeverkäufen als auch zu mehr Sonnenbrand. Die Korrelation ist also durch eine gemeinsame Ursache erklärbar, nicht durch einen direkten kausalen Zusammenhang zwischen den beiden Merkmalen selbst." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Für das Werbeausgaben-Umsatz-Beispiel gilt $s_X^2 = 2$ (bezogen auf $n=5$). Berechnen Sie die Standardabweichung $s_X$ der Werbeausgaben.",
+        solution: [
+          { type: "formula", block: true, tex: "s_X = \\sqrt{s_X^2} = \\sqrt{2} \\approx 1{,}414" },
+          { type: "p", text: "Die Werbeausgaben streuen also mit einer Standardabweichung von rund 1.414€ um ihren Mittelwert von 4.000€." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Angenommen, für einen anderen Datensatz ergäbe sich exakt $r = -1$. Was würde das über den Zusammenhang der beiden Merkmale aussagen, und wie würde sich das von $r \\approx 0{,}93$ im Werbeausgaben-Beispiel unterscheiden?",
+        solution: [
+          { type: "p", text: "$r = -1$ würde einen perfekten negativen linearen Zusammenhang bedeuten: Steigt das eine Merkmal, fällt das andere exakt proportional. Im Werbeausgaben-Beispiel liegt dagegen $r \\approx 0{,}93$ vor - ein sehr starker, aber positiver linearer Zusammenhang (beide Merkmale steigen gemeinsam), der zudem nicht perfekt ist, da nicht der gesamte Zusammenhang durch eine exakte Gerade erklärt wird." }
+        ]
       }
     ],
     quiz: [
@@ -291,7 +403,11 @@ const CHAPTER2_TOPICS = [
       { id: "q3", question: "Welches Korrelationsmaß verwendet man für ordinalskalierte Daten (z. B. Ranglisten)?", options: ["Bravais-Pearson-Korrelationskoeffizient", "Spearman-Rangkorrelationskoeffizient", "Kontingenzkoeffizient", "Variationskoeffizient"], correctIndex: 1, explanation: "Der Spearman-Koeffizient wendet die Pearson-Logik auf Ränge an und passt daher zu ordinalskalierten Merkmalen." },
       { id: "q4", question: "Ein Korrelationskoeffizient von $r=0$ bedeutet...", options: ["Es gibt gar keinen Zusammenhang zwischen den Merkmalen", "Es gibt keinen linearen Zusammenhang (ein nicht-linearer Zusammenhang ist trotzdem möglich)", "Die Merkmale sind identisch", "Ein Rechenfehler ist aufgetreten"], correctIndex: 1, explanation: "Pearson misst nur lineare Zusammenhänge - ein starker nicht-linearer Zusammenhang (z. B. U-förmig) kann trotzdem vorliegen." },
       { id: "q5", question: "'Korrelation impliziert nicht Kausalität' bedeutet:", options: ["Eine hohe Korrelation beweist immer eine Ursache-Wirkungs-Beziehung", "Eine Korrelation kann auch durch Zufall, umgekehrte Wirkungsrichtung oder einen Drittfaktor entstehen", "Korrelation und Kausalität sind dasselbe Konzept", "Korrelationskoeffizienten sind immer falsch berechnet"], correctIndex: 1, explanation: "Ein statistischer Zusammenhang allein beweist keine kausale Beziehung - es kann auch Drittfaktoren oder Zufall geben." },
-      { id: "q6", question: "Welches Maß eignet sich für den Zusammenhang zweier rein nominalskalierter Merkmale?", options: ["Bravais-Pearson-Korrelationskoeffizient", "Kontingenzkoeffizient", "Variationskoeffizient", "Schiefekoeffizient"], correctIndex: 1, explanation: "Der Kontingenzkoeffizient ist speziell für den Zusammenhang zwischen Kategorien (Nominalskala) konzipiert." }
+      { id: "q6", question: "Welches Maß eignet sich für den Zusammenhang zweier rein nominalskalierter Merkmale?", options: ["Bravais-Pearson-Korrelationskoeffizient", "Kontingenzkoeffizient", "Variationskoeffizient", "Schiefekoeffizient"], correctIndex: 1, explanation: "Der Kontingenzkoeffizient ist speziell für den Zusammenhang zwischen Kategorien (Nominalskala) konzipiert." },
+      { id: "q7", question: "Wie ist die Kovarianz zweier Merkmale definiert?", options: ["$\\frac{1}{n}\\sum(x_i-\\bar{x})(y_i-\\bar{y})$", "$\\frac{1}{n}\\sum(x_i-\\bar{x})^2$", "$\\frac{s}{\\bar{x}}$", "$\\sum x_i \\cdot y_i$"], correctIndex: 0, explanation: "Die Kovarianz ist der Mittelwert der Produkte der Abweichungen beider Merkmale von ihren jeweiligen Mittelwerten." },
+      { id: "q8", question: "Welches Skalenniveau setzt der Korrelationskoeffizient von Bravais-Pearson bei beiden Merkmalen mindestens voraus?", options: ["Nominalskala", "Ordinalskala", "Intervallskala", "Kein Skalenniveau nötig"], correctIndex: 2, explanation: "Da die Formel auf Mittelwerten und Abweichungen beruht, ist mindestens Intervallskalenniveau erforderlich." },
+      { id: "q9", question: "Ein Korrelationskoeffizient von $r < 0$ bedeutet, dass sich die Merkmale...", options: ["gleichgerichtet bewegen", "gegenläufig bewegen", "gar nicht bewegen", "immer identisch sind"], correctIndex: 1, explanation: "Ein negativer Korrelationskoeffizient zeigt an, dass ein Merkmal tendenziell steigt, während das andere fällt." },
+      { id: "q10", question: "Wie wird der Spearman-Rangkorrelationskoeffizient berechnet?", options: ["Man wendet die Pearson-Formel direkt auf die Originalwerte an", "Man ersetzt die Werte durch ihre Ränge und wendet darauf die Pearson-Formel an", "Man berechnet nur die Kovarianz ohne Normierung", "Man zählt die Anzahl gleicher Kategorien"], correctIndex: 1, explanation: "Beim Spearman-Koeffizienten werden zunächst Ränge gebildet, auf die dann die gewöhnliche Pearson-Formel angewendet wird." }
     ]
   }
 ];

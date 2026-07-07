@@ -49,6 +49,21 @@ const CHAPTER1_TOPICS = [
         solution: [
           { type: "p", text: "Eine Person kann gleichzeitig mehrere Fremdsprachen sprechen - das Merkmal kann also mehrere Werte gleichzeitig annehmen und ist damit häufbar. Der Familienstand hingegen ist zu jedem Zeitpunkt eindeutig (z. B. ledig, verheiratet, geschieden) - ein Merkmalsträger hat immer nur genau einen Wert, das Merkmal ist nicht-häufbar." }
         ]
+      },
+      {
+        id: "ex4",
+        prompt: "Nennen Sie die drei Teilgebiete der Statistik und ordnen Sie kurz zu, was jedes Teilgebiet macht.",
+        solution: [
+          { type: "p", text: "Die Statistik gliedert sich in die deskriptive (beschreibende) Statistik, die Wahrscheinlichkeitstheorie und die induktive (schließende) Statistik. Die deskriptive Statistik beschreibt und fasst vorliegende Daten zusammen, die Wahrscheinlichkeitstheorie liefert die mathematischen Grundlagen für Zufallsvorgänge, und die induktive Statistik schließt von einer Stichprobe auf die Grundgesamtheit." }
+        ]
+      },
+      {
+        id: "ex5",
+        prompt: "Eine Fahrschule erfasst von allen aktuell angemeldeten Fahrschülern das Merkmal 'Anzahl bereits absolvierter Fahrstunden'. Bestimmen Sie Grundgesamtheit, Merkmalsträger, Merkmal und einen möglichen Merkmalswert. Klassifizieren Sie das Merkmal zusätzlich nach qualitativ/quantitativ, häufbar/nicht-häufbar und diskret/stetig.",
+        solution: [
+          { type: "p", text: "Grundgesamtheit: alle aktuell angemeldeten Fahrschüler der Fahrschule. Merkmalsträger: der einzelne Fahrschüler. Merkmal: Anzahl bereits absolvierter Fahrstunden. Merkmalswert: z. B. 12." },
+          { type: "p", text: "Klassifikation: quantitativ (es ist eine Zahl), nicht-häufbar (ein Fahrschüler hat zu einem Zeitpunkt genau eine Anzahl absolvierter Stunden), diskret (nur abzählbar viele Werte wie 0, 1, 2, ... möglich)." }
+        ]
       }
     ],
     quiz: [
@@ -57,7 +72,11 @@ const CHAPTER1_TOPICS = [
       { id: "q3", question: "Häufbare Merkmale sind immer...", options: ["quantitativ", "qualitativ", "diskret", "stetig"], correctIndex: 1, explanation: "Häufbare Merkmale sind per Definition immer qualitativ - eine Zahl kann man nicht 'mehrfach gleichzeitig' als Ausprägung haben." },
       { id: "q4", question: "Die Anzahl der Kinder einer Familie ist ein Beispiel für ein Merkmal, das...", options: ["qualitativ und stetig ist", "quantitativ und diskret ist", "quantitativ und stetig ist", "qualitativ und häufbar ist"], correctIndex: 1, explanation: "Die Anzahl ist eine Zahl (quantitativ) und kann nur abzählbare Werte (0, 1, 2, ...) annehmen (diskret)." },
       { id: "q5", question: "Was unterscheidet einen Merkmalsträger von einem Merkmalswert?", options: ["Es gibt keinen Unterschied", "Der Merkmalsträger ist das Objekt, der Merkmalswert die beobachtete Ausprägung bei diesem Objekt", "Der Merkmalswert ist immer eine Zahl, der Merkmalsträger nie", "Der Merkmalsträger ist Teil der Wahrscheinlichkeitstheorie"], correctIndex: 1, explanation: "Der Merkmalsträger ist z. B. eine Person, der Merkmalswert die konkrete Ausprägung eines Merkmals bei dieser Person (z. B. 'blond' bei Haarfarbe)." },
-      { id: "q6", question: "Körpergröße ist ein Beispiel für ein...", options: ["diskretes, quantitatives Merkmal", "stetiges, quantitatives Merkmal", "qualitatives, häufbares Merkmal", "nominal-diskretes Merkmal"], correctIndex: 1, explanation: "Körpergröße ist eine Zahl (quantitativ) und kann theoretisch jeden Wert in einem Intervall annehmen (stetig)." }
+      { id: "q6", question: "Körpergröße ist ein Beispiel für ein...", options: ["diskretes, quantitatives Merkmal", "stetiges, quantitatives Merkmal", "qualitatives, häufbares Merkmal", "nominal-diskretes Merkmal"], correctIndex: 1, explanation: "Körpergröße ist eine Zahl (quantitativ) und kann theoretisch jeden Wert in einem Intervall annehmen (stetig)." },
+      { id: "q7", question: "Welche Aussage über die Teilgebiete der Statistik ist richtig?", options: ["Die Statistik besteht nur aus deskriptiver und induktiver Statistik", "Die Statistik gliedert sich in deskriptive Statistik, Wahrscheinlichkeitstheorie und induktive Statistik", "Die Wahrscheinlichkeitstheorie ist kein Teilgebiet der Statistik", "Die induktive Statistik beschreibt nur vorliegende Daten, ohne zu schließen"], correctIndex: 1, explanation: "Das Fach Statistik gliedert sich laut Definition in drei Teilgebiete: deskriptive Statistik, Wahrscheinlichkeitstheorie und induktive Statistik." },
+      { id: "q8", question: "Welche der folgenden Aussagen zur Klassifikation von Merkmalen ist korrekt?", options: ["Qualitativ/quantitativ, häufbar/nicht-häufbar und diskret/stetig sind drei unabhängige Klassifikationskriterien", "Diskret/stetig gilt auch für qualitative Merkmale", "Ein Merkmal kann nicht gleichzeitig quantitativ und diskret sein", "Häufbare Merkmale können sowohl qualitativ als auch quantitativ sein"], correctIndex: 0, explanation: "Es handelt sich um drei unabhängige Kriterien; die Unterscheidung diskret/stetig betrifft dabei nur quantitative Merkmale, und häufbare Merkmale sind immer qualitativ." },
+      { id: "q9", question: "Ein Merkmalswert von '23 Jahre' beim Merkmal 'Alter' ist...", options: ["die Grundgesamtheit", "der Merkmalsträger", "die konkret beobachtete Ausprägung des Merkmals bei einem Merkmalsträger", "ein qualitatives Merkmal"], correctIndex: 2, explanation: "Der Merkmalswert ist die konkret bei einem Merkmalsträger beobachtete Ausprägung des Merkmals, hier 23 Jahre beim Merkmal Alter." },
+      { id: "q10", question: "Welche Aussage trifft auf das Merkmal 'Studienfach' zu?", options: ["Es ist quantitativ und stetig", "Es ist qualitativ, da es Kategorien beschreibt", "Es ist häufbar per Definition", "Es ist eine Grundgesamtheit"], correctIndex: 1, explanation: "Studienfach wird explizit als Beispiel für ein qualitatives Merkmal genannt, da es Kategorien und keine Zahlenwerte beschreibt." }
     ]
   },
   {
@@ -97,6 +116,32 @@ const CHAPTER1_TOPICS = [
         solution: [
           { type: "p", text: "Postleitzahlen sind nominalskaliert - die Zahlen dienen nur zur Identifikation/Unterscheidung von Regionen, nicht als Maß einer Größe. Abstände oder Mittelwerte zwischen Postleitzahlen haben keine sinnvolle inhaltliche Bedeutung, obwohl rein rechnerisch ein Mittelwert gebildet werden könnte." }
         ]
+      },
+      {
+        id: "ex3",
+        prompt: "Ein Café befragt Gäste nach ihrer Zufriedenheit auf einer Skala 'sehr zufrieden / zufrieden / unzufrieden'. Ein Kunde argumentiert, der Abstand zwischen 'sehr zufrieden' und 'zufrieden' sei genauso groß wie zwischen 'zufrieden' und 'unzufrieden', man könne also einfach den Mittelwert berechnen. Nehmen Sie dazu Stellung.",
+        solution: [
+          { type: "p", text: "Das Argument ist nicht haltbar: Zufriedenheit ist ein ordinalskaliertes Merkmal. Es gibt zwar eine Rangfolge (sehr zufrieden > zufrieden > unzufrieden), die Abstände zwischen den Kategorien sind jedoch nicht sinnvoll interpretierbar bzw. nicht notwendigerweise gleich groß. Für die Berechnung eines arithmetischen Mittelwerts wird jedoch mindestens Intervallskalenniveau benötigt, sodass ein Mittelwert hier inhaltlich nicht gerechtfertigt ist." }
+        ]
+      },
+      {
+        id: "ex4",
+        prompt: "Ordnen Sie die vier Skalenniveaus (Nominal-, Ordinal-, Intervall-, Verhältnisskala) nach aufsteigendem Informationsgehalt und nennen Sie für jedes Niveau, welche Vergleiche bzw. Rechenoperationen jeweils neu hinzukommen.",
+        solution: [
+          { type: "list", items: [
+            "Nominalskala: nur Gleichheit/Ungleichheit (=, ≠) sinnvoll.",
+            "Ordinalskala: zusätzlich Rangfolge/Vergleich (<, >) sinnvoll.",
+            "Intervallskala: zusätzlich sind Abstände zwischen Werten sinnvoll interpretierbar.",
+            "Verhältnisskala: zusätzlich ein natürlicher Nullpunkt, wodurch auch Verhältnisse zwischen Werten sinnvoll werden."
+          ]}
+        ]
+      },
+      {
+        id: "ex5",
+        prompt: "Kalenderjahre (z. B. 2020, 2024) werden oft als Beispiel für eine Intervallskala genannt. Warum ist das Jahr 0 kein 'echter' Nullpunkt und was folgt daraus für Aussagen wie 'Das Jahr 2000 ist doppelt so groß wie das Jahr 1000'?",
+        solution: [
+          { type: "p", text: "Das Kalenderjahr besitzt keinen natürlichen, absoluten Nullpunkt - der Beginn der Zeitrechnung ist willkürlich festgelegt und bedeutet nicht 'keine Zeit'. Deshalb handelt es sich um Intervallskala, nicht um Verhältnisskala. Aussagen wie 'das Jahr 2000 ist doppelt so groß wie das Jahr 1000' sind daher nicht sinnvoll interpretierbar, da Verhältnisse nur bei einem echten Nullpunkt (Verhältnisskala) eine inhaltliche Bedeutung haben." }
+        ]
       }
     ],
     quiz: [
@@ -105,7 +150,11 @@ const CHAPTER1_TOPICS = [
       { id: "q3", question: "Temperatur in Grad Celsius ist ein Beispiel für...", options: ["Nominalskala", "Ordinalskala", "Intervallskala", "Verhältnisskala"], correctIndex: 2, explanation: "0°C ist kein 'echter' Nullpunkt (es gibt ja noch tiefere Temperaturen), daher Intervallskala und keine Verhältnisskala." },
       { id: "q4", question: "Für welche Kennzahl braucht man mindestens Verhältnisskalenniveau?", options: ["Modus", "Median", "Variationskoeffizient", "Rangordnung"], correctIndex: 2, explanation: "Der Variationskoeffizient ist ein Quotient (Standardabweichung/Mittelwert) - eine Division ist nur bei einem echten Nullpunkt sinnvoll interpretierbar." },
       { id: "q5", question: "Automarke (z. B. VW, BMW, Toyota) ist ein Merkmal auf...", options: ["Nominalskalenniveau", "Ordinalskalenniveau", "Intervallskalenniveau", "Verhältnisskalenniveau"], correctIndex: 0, explanation: "Automarken sind reine Kategorien ohne natürliche Rangfolge - Nominalskala." },
-      { id: "q6", question: "Intervall- und Verhältnisskala werden zusammenfassend auch bezeichnet als...", options: ["Ordinalskala", "Kardinalskala (metrische Skala)", "Nominalskala", "Qualitative Skala"], correctIndex: 1, explanation: "Beide Niveaus erlauben Abstandsmessungen mit reellen Zahlen und werden daher als Kardinal- bzw. metrische Skala zusammengefasst." }
+      { id: "q6", question: "Intervall- und Verhältnisskala werden zusammenfassend auch bezeichnet als...", options: ["Ordinalskala", "Kardinalskala (metrische Skala)", "Nominalskala", "Qualitative Skala"], correctIndex: 1, explanation: "Beide Niveaus erlauben Abstandsmessungen mit reellen Zahlen und werden daher als Kardinal- bzw. metrische Skala zusammengefasst." },
+      { id: "q7", question: "Für die Berechnung des arithmetischen Mittels benötigt man mindestens...", options: ["Nominalskalenniveau", "Ordinalskalenniveau", "Intervallskalenniveau", "keine bestimmte Skala, es geht immer"], correctIndex: 2, explanation: "Laut Text benötigt man für das arithmetische Mittel mindestens Intervallskalenniveau, da Abstände zwischen Werten sinnvoll interpretierbar sein müssen." },
+      { id: "q8", question: "Welche Aussage über die Schulnote ist korrekt?", options: ["Sie ist verhältnisskaliert, da eine 2 doppelt so gut ist wie eine 4", "Sie ist ordinalskaliert, da eine Rangfolge, aber keine sinnvolle Abstandsinterpretation vorliegt", "Sie ist nominalskaliert, da keine Rangfolge existiert", "Sie ist intervallskaliert, da ein natürlicher Nullpunkt existiert"], correctIndex: 1, explanation: "Die Schulnote ist im Text explizit als Beispiel für Ordinalskala genannt: Rangfolge vorhanden, Abstände nicht zwingend gleich groß in der Wirkung." },
+      { id: "q9", question: "Welche der folgenden Aussagen ist falsch?", options: ["Jedes höhere Skalenniveau enthält mehr Information als das darunterliegende", "Bei der Nominalskala sind nur Gleichheit/Ungleichheit sinnvoll", "Kontonummern sind verhältnisskaliert, da man mit ihnen rechnen kann", "Gewicht ist ein Beispiel für Verhältnisskala"], correctIndex: 2, explanation: "Kontonummern bzw. ähnliche Identifikationsnummern (wie Postleitzahlen) sind nominalskaliert - sie dienen nur der Identifikation, nicht als Maßzahl." },
+      { id: "q10", question: "Welches Merkmal ist laut Text ein Beispiel für Verhältnisskala?", options: ["Geschlecht", "Kalenderjahr", "Einkommen", "Zufriedenheit (sehr zufrieden/zufrieden/unzufrieden)"], correctIndex: 2, explanation: "Einkommen wird explizit als Beispiel für Verhältnisskala genannt, da ein natürlicher Nullpunkt (0 Euro) existiert." }
     ]
   },
   {
@@ -158,6 +207,25 @@ const CHAPTER1_TOPICS = [
           { type: "p", text: "Erhebungsumfang: Teilerhebung (Stichprobe), da nur 200 von 50.000 Kunden befragt werden." },
           { type: "p", text: "Erhebungsart: Befragung, da die Kunden direkt zu ihrer Meinung befragt werden (kein reines Beobachten von Verhalten)." }
         ]
+      },
+      {
+        id: "ex4",
+        prompt: "Nennen Sie die vier Phasen einer statistischen Untersuchung in der richtigen Reihenfolge und beschreiben Sie jeweils in einem Satz, was in der Phase passiert.",
+        solution: [
+          { type: "list", items: [
+            "Planung: Festlegen des Untersuchungsziels sowie der Methoden zur Erhebung, Aufbereitung und Analyse der Daten.",
+            "Datenerhebung: die eigentliche Sammlung der Daten.",
+            "Datenaufbereitung und -darstellung: Aufbau von Häufigkeitsverteilungen, Tabellen und Grafiken zur Verschaffung eines Überblicks.",
+            "Datenanalyse und -interpretation: Berechnung und Interpretation statistischer Kennzahlen, deskriptiv oder induktiv."
+          ]}
+        ]
+      },
+      {
+        id: "ex5",
+        prompt: "Ein Verkehrsforscher zählt an einer Kreuzung, wie viele Fahrzeuge bei Rot über die Ampel fahren, ohne die Fahrer anzusprechen. Um welche Erhebungsart handelt es sich? Nennen Sie außerdem ein Beispiel für die jeweils andere in dieser Vorlesung genannte Erhebungsart.",
+        solution: [
+          { type: "p", text: "Es handelt sich um eine Beobachtung, da direktes Verhalten (Fahren bei Rot) erfasst wird, ohne die Personen aktiv zu befragen. Die andere im Text genannte Erhebungsart ist die Befragung, bei der Personen direkt befragt werden - wie z. B. im Beispiel der Kundenzufriedenheitsbefragung." }
+        ]
       }
     ],
     quiz: [
@@ -165,7 +233,12 @@ const CHAPTER1_TOPICS = [
       { id: "q2", question: "Was ist der Hauptvorteil einer Sekundärstatistik gegenüber einer Primärstatistik?", options: ["Höhere Genauigkeit", "Passgenauer auf die Fragestellung zugeschnitten", "Zeit- und kosteneffizienter, da Daten bereits vorliegen", "Sie erfordert immer eine Vollerhebung"], correctIndex: 2, explanation: "Da die Daten schon vorhanden sind, entfällt der Aufwand einer neuen Erhebung." },
       { id: "q3", question: "Eine Stichprobe ist ein Beispiel für...", options: ["eine Vollerhebung", "eine Teilerhebung", "eine Sekundärstatistik per Definition", "eine Beobachtung per Definition"], correctIndex: 1, explanation: "Bei einer Stichprobe wird nur ein Teil der Grundgesamtheit erfasst - das ist die Definition einer Teilerhebung." },
       { id: "q4", question: "Welches Werkzeug gehört zur deskriptiven Datenanalyse?", options: ["Konfidenzintervall", "Hypothesentest", "Arithmetisches Mittel", "Signifikanzniveau"], correctIndex: 2, explanation: "Das arithmetische Mittel ist eine deskriptive Kennzahl. Konfidenzintervalle, Hypothesentests und Signifikanzniveau gehören zur induktiven Statistik." },
-      { id: "q5", question: "Warum ist die induktive Statistik besonders bei Teilerhebungen relevant?", options: ["Weil bei Vollerhebungen keine Zahlen anfallen", "Weil man von der Stichprobe auf die unbekannte Grundgesamtheit schließen muss", "Weil Teilerhebungen immer repräsentativ sind", "Weil dort keine Deskriptive Statistik nötig ist"], correctIndex: 1, explanation: "Bei einer Teilerhebung kennt man nur die Stichprobe, nicht die gesamte Grundgesamtheit - die induktive Statistik liefert den wahrscheinlichkeitstheoretisch begründeten Rückschluss." }
+      { id: "q5", question: "Warum ist die induktive Statistik besonders bei Teilerhebungen relevant?", options: ["Weil bei Vollerhebungen keine Zahlen anfallen", "Weil man von der Stichprobe auf die unbekannte Grundgesamtheit schließen muss", "Weil Teilerhebungen immer repräsentativ sind", "Weil dort keine Deskriptive Statistik nötig ist"], correctIndex: 1, explanation: "Bei einer Teilerhebung kennt man nur die Stichprobe, nicht die gesamte Grundgesamtheit - die induktive Statistik liefert den wahrscheinlichkeitstheoretisch begründeten Rückschluss." },
+      { id: "q6", question: "Was ist der Hauptnachteil einer Vollerhebung gegenüber einer Teilerhebung?", options: ["Geringere Genauigkeit", "Hoher Zeit- und Kostenaufwand", "Sie ist grundsätzlich nicht durchführbar", "Sie liefert keine deskriptiven Kennzahlen"], correctIndex: 1, explanation: "Eine Vollerhebung erfasst alle Merkmalsträger der Grundgesamtheit und bietet hohe Genauigkeit, ist dafür aber mit hohem Zeit- und Kostenaufwand verbunden." },
+      { id: "q7", question: "Welche Aussage zur Primärstatistik ist korrekt?", options: ["Sie nutzt bereits vorhandene Daten", "Die Daten werden neu für den konkreten Untersuchungszweck erhoben", "Sie ist per Definition immer eine Teilerhebung", "Sie ist immer zeit- und kosteneffizienter als Sekundärstatistik"], correctIndex: 1, explanation: "Bei der Primärstatistik werden Daten passgenau für den konkreten Untersuchungszweck neu erhoben, was allerdings zeit- und kostenintensiv ist." },
+      { id: "q8", question: "Eine Volkszählung, bei der alle Einwohner eines Landes erfasst werden, ist ein Beispiel für...", options: ["eine Teilerhebung", "eine Stichprobe", "eine Vollerhebung", "eine Sekundärstatistik"], correctIndex: 2, explanation: "Da sämtliche Merkmalsträger der Grundgesamtheit (alle Einwohner) erfasst werden, handelt es sich um eine Vollerhebung." },
+      { id: "q9", question: "Welche zwei Erhebungsarten werden im Text als Beispiele genannt?", options: ["Vollerhebung und Teilerhebung", "Primärstatistik und Sekundärstatistik", "Beobachtung und Befragung", "Planung und Datenanalyse"], correctIndex: 2, explanation: "Als Erhebungsarten werden die Beobachtung (direktes Beobachten von Verhalten/Reaktionen) und die Befragung (direktes Befragen von Personen) genannt." },
+      { id: "q10", question: "In welcher Phase einer statistischen Untersuchung werden Häufigkeitsverteilungen, Tabellen und Grafiken erstellt?", options: ["Planung", "Datenerhebung", "Datenaufbereitung und -darstellung", "Datenanalyse und -interpretation"], correctIndex: 2, explanation: "Die Phase der Datenaufbereitung und -darstellung dient dem Aufbau von Häufigkeitsverteilungen, Tabellen und Grafiken, um sich einen Überblick zu verschaffen." }
     ]
   }
 ];
