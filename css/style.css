@@ -100,6 +100,25 @@ main#app {
 
 .subject-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 
+.studiengang-filter { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+
+.filter-chip {
+  background: var(--card-bg);
+  color: var(--muted);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+.filter-chip:hover { border-color: var(--accent); color: var(--fg); }
+.filter-chip.active { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+
+.empty-state { color: var(--muted); }
+
 .chapter-block { margin-bottom: 2.25rem; }
 .chapter-block h2 {
   font-size: 1.15rem;

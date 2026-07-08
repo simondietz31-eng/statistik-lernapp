@@ -1,6 +1,6 @@
 # Statistik-Lernapp
 
-Eine Lernapp für Statistik (Deskriptive Statistik, Wahrscheinlichkeitstheorie, Induktive Statistik) basierend auf den Inhalten der Vorlesung "Statistik" von Prof. Dr. Christian Eckert.
+Eine Lernapp für mehrere Fächer: Statistik (Deskriptive Statistik, Wahrscheinlichkeitstheorie, Induktive Statistik), BWL II (Prozessmanagement, Wertschöpfungskette) sowie Kosten- und Leistungsrechnung (Kostenarten-, Kostenstellen-, Kostenträgerrechnung, Deckungsbeitrags- und Plankostenrechnung).
 
 Themen nach Kapitel wählbar → Erklärung → Übungsaufgaben (mit Lösung) → Quiz (mit sofortigem Feedback und Punktestand). Der Lernfortschritt wird lokal im Browser gespeichert (localStorage).
 

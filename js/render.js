@@ -1,7 +1,51 @@
+function getAllStudiengaenge(subjects) {
+  const seen = {};
+  const result = [];
+  subjects.forEach(function (subject) {
+    (subject.studiengang || []).forEach(function (sg) {
+      if (!seen[sg]) {
+        seen[sg] = true;
+        result.push(sg);
+      }
+    });
+  });
+  result.sort();
+  return result;
+}
+
+function filterSubjectsByStudiengang(subjects, filter) {
+  if (!filter || filter === "alle") return subjects;
+  return subjects.filter(function (subject) {
+    return (subject.studiengang || []).indexOf(filter) !== -1;
+  });
+}
+
+function renderStudiengangFilter(container, subjects, activeFilter) {
+  container.innerHTML = "";
+  const options = ["alle"].concat(getAllStudiengaenge(subjects));
+
+  options.forEach(function (option) {
+    const chip = document.createElement("button");
+    chip.type = "button";
+    chip.className = "filter-chip" + (option === activeFilter ? " active" : "");
+    chip.dataset.studiengang = option;
+    chip.textContent = option === "alle" ? "Alle Studiengänge" : option;
+    container.appendChild(chip);
+  });
+}
+
 function renderSubjectGrid(container, subjects, allProgress) {
   container.innerHTML = "";
   const grid = document.createElement("div");
   grid.className = "topic-grid subject-grid";
+
+  if (subjects.length === 0) {
+    const empty = document.createElement("p");
+    empty.className = "empty-state";
+    empty.textContent = "Für diesen Studiengang ist aktuell kein Fach hinterlegt.";
+    container.appendChild(empty);
+    return;
+  }
 
   subjects.forEach(function (subject) {
     const card = document.createElement("button");
@@ -18,10 +62,10 @@ function renderSubjectGrid(container, subjects, allProgress) {
     icon.textContent = subject.icon || "📘";
     top.appendChild(icon);
 
-    if (subject.studiengang) {
+    if (subject.studiengang && subject.studiengang.length > 0) {
       const badge = document.createElement("span");
       badge.className = "topic-card-meta";
-      badge.textContent = subject.studiengang.toUpperCase();
+      badge.textContent = subject.studiengang.join(" / ").toUpperCase();
       top.appendChild(badge);
     }
 
