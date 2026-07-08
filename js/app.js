@@ -29,7 +29,9 @@ function setView(viewName) {
   });
 
   if (viewName === "SUBJECT_SELECT") {
-    renderSubjectGrid(document.getElementById("subjects-container"), SUBJECTS, loadProgress());
+    const activeFilter = getStudiengangFilter();
+    renderStudiengangFilter(document.getElementById("studiengang-filter"), SUBJECTS, activeFilter);
+    renderSubjectGrid(document.getElementById("subjects-container"), filterSubjectsByStudiengang(SUBJECTS, activeFilter), loadProgress());
   } else if (viewName === "TOPIC_GRID") {
     const subject = getCurrentSubject();
     document.getElementById("subject-title").textContent = subject.title;
@@ -112,6 +114,13 @@ document.getElementById("subjects-container").addEventListener("click", function
   if (!card) return;
   state.currentSubjectId = card.dataset.subjectId;
   setView("TOPIC_GRID");
+});
+
+document.getElementById("studiengang-filter").addEventListener("click", function (e) {
+  const chip = e.target.closest(".filter-chip");
+  if (!chip) return;
+  setStudiengangFilter(chip.dataset.studiengang);
+  setView("SUBJECT_SELECT");
 });
 
 document.getElementById("chapters-container").addEventListener("click", function (e) {

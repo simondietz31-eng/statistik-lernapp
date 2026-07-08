@@ -33,7 +33,7 @@ const SUBJECTS = [
   {
     id: "statistik",
     title: "Statistik",
-    studiengang: "IW/BW",
+    studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
     icon: "📊",
     accent: "#5b8def",
     chapters: STATISTIK_CHAPTERS,
@@ -42,7 +42,7 @@ const SUBJECTS = [
   {
     id: "bwl2",
     title: "BWL II (Prozessmanagement, Wertschöpfungskette)",
-    studiengang: "Integrative Gesundheitsförderung",
+    studiengang: ["Integrative Gesundheitsförderung"],
     icon: "🔄",
     accent: "#e85d75",
     chapters: BWL2_CHAPTERS,
@@ -51,7 +51,7 @@ const SUBJECTS = [
   {
     id: "klr",
     title: "Kosten- und Leistungsrechnung",
-    studiengang: "BW/IW",
+    studiengang: ["Industriewirtschaft"],
     icon: "📒",
     accent: "#c9a227",
     chapters: KLR_CHAPTERS,
