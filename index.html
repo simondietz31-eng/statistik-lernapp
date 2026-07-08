@@ -16,8 +16,14 @@
 
 <main id="app">
 
-  <section id="view-subject-select" class="view">
-    <div id="studiengang-filter" class="studiengang-filter"></div>
+  <section id="view-studiengang-select" class="view">
+    <h1 class="subject-title">Willkommen! Wähle deinen Studiengang</h1>
+    <div id="studiengaenge-container"></div>
+  </section>
+
+  <section id="view-subject-select" class="view" hidden>
+    <button class="back-btn" data-back-to="STUDIENGANG_SELECT" type="button">← Studiengänge</button>
+    <h1 id="studiengang-title" class="subject-title"></h1>
     <div id="subjects-container"></div>
   </section>
 
