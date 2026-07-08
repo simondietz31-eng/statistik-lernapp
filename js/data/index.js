@@ -30,17 +30,17 @@ const KLR_TOPICS = [].concat(
 );
 
 const ORGAPERSONAL_CHAPTERS = [
-  { id: 1, title: "Grundlagen der Organisation", accent: "#5b8def" },
-  { id: 2, title: "Organisationstheorien", accent: "#34c77b" },
-  { id: 3, title: "Organisationsgestaltung", accent: "#a374ff" },
-  { id: 4, title: "Organisation und Organisationskultur", accent: "#ff9f43" },
-  { id: 5, title: "Wandel von Organisationen", accent: "#e85d75" },
-  { id: 6, title: "Grundlagen der Personalwirtschaft und Personalbedarfsplanung", accent: "#2bb3a3" },
-  { id: 7, title: "Personalbeschaffung", accent: "#c9a227" },
-  { id: 8, title: "Personaleinsatz und -entlohnung", accent: "#4f86c6" },
-  { id: 9, title: "Personalbeurteilung", accent: "#d9738a" },
-  { id: 10, title: "Personalentwicklung", accent: "#6fcf97" },
-  { id: 11, title: "Personalfreisetzung", accent: "#b08968" }
+  { id: 1, title: "Grundlagen der Organisation", accent: "#5b8def", group: "Organisation" },
+  { id: 2, title: "Organisationstheorien", accent: "#34c77b", group: "Organisation" },
+  { id: 3, title: "Organisationsgestaltung", accent: "#a374ff", group: "Organisation" },
+  { id: 4, title: "Organisation und Organisationskultur", accent: "#ff9f43", group: "Organisation" },
+  { id: 5, title: "Wandel von Organisationen", accent: "#e85d75", group: "Organisation" },
+  { id: 6, title: "Grundlagen der Personalwirtschaft und Personalbedarfsplanung", accent: "#2bb3a3", group: "Personal" },
+  { id: 7, title: "Personalbeschaffung", accent: "#c9a227", group: "Personal" },
+  { id: 8, title: "Personaleinsatz und -entlohnung", accent: "#4f86c6", group: "Personal" },
+  { id: 9, title: "Personalbeurteilung", accent: "#d9738a", group: "Personal" },
+  { id: 10, title: "Personalentwicklung", accent: "#6fcf97", group: "Personal" },
+  { id: 11, title: "Personalfreisetzung", accent: "#b08968", group: "Personal" }
 ];
 const ORGAPERSONAL_TOPICS = [].concat(
   ORGAPERSONAL_CHAPTER1_TOPICS,

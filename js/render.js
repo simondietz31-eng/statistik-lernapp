@@ -172,91 +172,138 @@ function renderContentBlocks(blocks, container) {
   });
 }
 
+function buildChapterBlock(chapter, topics, progress) {
+  const chapterTopics = topics
+    .filter(function (t) { return t.chapter === chapter.id; })
+    .sort(function (a, b) { return a.order - b.order; });
+  if (chapterTopics.length === 0) return null;
+
+  const block = document.createElement("div");
+  block.className = "chapter-block";
+
+  const h2 = document.createElement("h2");
+  h2.textContent = chapter.title;
+  block.appendChild(h2);
+
+  const grid = document.createElement("div");
+  grid.className = "topic-grid";
+
+  chapterTopics.forEach(function (topic) {
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = "topic-card";
+    card.dataset.topicId = topic.id;
+    card.style.setProperty("--card-accent", chapter.accent);
+
+    const top = document.createElement("div");
+    top.className = "topic-card-top";
+
+    const icon = document.createElement("span");
+    icon.className = "topic-card-icon";
+    icon.textContent = topic.icon || "📘";
+    top.appendChild(icon);
+
+    const metaBadge = document.createElement("span");
+    metaBadge.className = "topic-card-meta";
+    const parts = [];
+    if (topic.exercises.length) parts.push(topic.exercises.length + " ÜBUNGEN");
+    if (topic.quiz.length) parts.push(topic.quiz.length + " QUIZFRAGEN");
+    metaBadge.textContent = parts.join(" · ");
+    top.appendChild(metaBadge);
+
+    card.appendChild(top);
+
+    const title = document.createElement("div");
+    title.className = "topic-card-title";
+    title.textContent = topic.title;
+    card.appendChild(title);
+
+    if (topic.summary) {
+      const summary = document.createElement("p");
+      summary.className = "topic-card-summary";
+      summary.textContent = topic.summary;
+      card.appendChild(summary);
+    }
+
+    const badges = document.createElement("div");
+    badges.className = "topic-card-badges";
+
+    if (progress.viewedTopics[topic.id]) {
+      const viewedBadge = document.createElement("span");
+      viewedBadge.className = "badge viewed";
+      viewedBadge.textContent = "gelernt";
+      badges.appendChild(viewedBadge);
+    }
+
+    const quizResult = progress.quizResults[topic.id];
+    if (quizResult) {
+      const scoreBadge = document.createElement("span");
+      scoreBadge.className = "badge score";
+      scoreBadge.textContent = "Bestes Quiz: " + quizResult.bestScore + "/" + quizResult.bestTotal;
+      badges.appendChild(scoreBadge);
+    }
+    if (badges.childNodes.length) card.appendChild(badges);
+
+    const link = document.createElement("span");
+    link.className = "topic-card-link";
+    link.textContent = "Öffnen →";
+    card.appendChild(link);
+
+    grid.appendChild(card);
+  });
+
+  block.appendChild(grid);
+  return block;
+}
+
 function renderTopicGrid(container, chapters, topics, progress) {
   container.innerHTML = "";
+
+  const groups = [];
   chapters.forEach(function (chapter) {
-    const chapterTopics = topics
-      .filter(function (t) { return t.chapter === chapter.id; })
-      .sort(function (a, b) { return a.order - b.order; });
-    if (chapterTopics.length === 0) return;
+    if (chapter.group && groups.indexOf(chapter.group) === -1) groups.push(chapter.group);
+  });
+  const hasGroups = groups.length > 1;
 
-    const block = document.createElement("div");
-    block.className = "chapter-block";
+  const chaptersWrap = document.createElement("div");
 
-    const h2 = document.createElement("h2");
-    h2.textContent = chapter.title;
-    block.appendChild(h2);
+  function renderChaptersFor(groupFilter) {
+    chaptersWrap.innerHTML = "";
+    chapters.forEach(function (chapter) {
+      if (groupFilter && chapter.group !== groupFilter) return;
+      const block = buildChapterBlock(chapter, topics, progress);
+      if (block) chaptersWrap.appendChild(block);
+    });
+  }
 
-    const grid = document.createElement("div");
-    grid.className = "topic-grid";
+  if (hasGroups) {
+    const tabBar = document.createElement("div");
+    tabBar.className = "group-tabs";
 
-    chapterTopics.forEach(function (topic) {
-      const card = document.createElement("button");
-      card.type = "button";
-      card.className = "topic-card";
-      card.dataset.topicId = topic.id;
-      card.style.setProperty("--card-accent", chapter.accent);
+    function setActiveGroup(activeGroup) {
+      Array.prototype.forEach.call(tabBar.children, function (btn) {
+        btn.classList.toggle("active", btn.dataset.group === activeGroup);
+      });
+      renderChaptersFor(activeGroup);
+    }
 
-      const top = document.createElement("div");
-      top.className = "topic-card-top";
-
-      const icon = document.createElement("span");
-      icon.className = "topic-card-icon";
-      icon.textContent = topic.icon || "📘";
-      top.appendChild(icon);
-
-      const metaBadge = document.createElement("span");
-      metaBadge.className = "topic-card-meta";
-      const parts = [];
-      if (topic.exercises.length) parts.push(topic.exercises.length + " ÜBUNGEN");
-      if (topic.quiz.length) parts.push(topic.quiz.length + " QUIZFRAGEN");
-      metaBadge.textContent = parts.join(" · ");
-      top.appendChild(metaBadge);
-
-      card.appendChild(top);
-
-      const title = document.createElement("div");
-      title.className = "topic-card-title";
-      title.textContent = topic.title;
-      card.appendChild(title);
-
-      if (topic.summary) {
-        const summary = document.createElement("p");
-        summary.className = "topic-card-summary";
-        summary.textContent = topic.summary;
-        card.appendChild(summary);
-      }
-
-      const badges = document.createElement("div");
-      badges.className = "topic-card-badges";
-
-      if (progress.viewedTopics[topic.id]) {
-        const viewedBadge = document.createElement("span");
-        viewedBadge.className = "badge viewed";
-        viewedBadge.textContent = "gelernt";
-        badges.appendChild(viewedBadge);
-      }
-
-      const quizResult = progress.quizResults[topic.id];
-      if (quizResult) {
-        const scoreBadge = document.createElement("span");
-        scoreBadge.className = "badge score";
-        scoreBadge.textContent = "Bestes Quiz: " + quizResult.bestScore + "/" + quizResult.bestTotal;
-        badges.appendChild(scoreBadge);
-      }
-      if (badges.childNodes.length) card.appendChild(badges);
-
-      const link = document.createElement("span");
-      link.className = "topic-card-link";
-      link.textContent = "Öffnen →";
-      card.appendChild(link);
-
-      grid.appendChild(card);
+    groups.forEach(function (g) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "group-tab";
+      btn.textContent = g;
+      btn.dataset.group = g;
+      btn.addEventListener("click", function () { setActiveGroup(g); });
+      tabBar.appendChild(btn);
     });
 
-    block.appendChild(grid);
-    container.appendChild(block);
-  });
+    container.appendChild(tabBar);
+    container.appendChild(chaptersWrap);
+    setActiveGroup(groups[0]);
+  } else {
+    container.appendChild(chaptersWrap);
+    renderChaptersFor(null);
+  }
 }
 
 function renderExercises(topic, container) {

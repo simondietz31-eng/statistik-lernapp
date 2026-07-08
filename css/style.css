@@ -100,6 +100,30 @@ main#app {
 
 .subject-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
 
+.group-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin: -0.5rem 0 1.75rem;
+  flex-wrap: wrap;
+}
+
+.group-tab {
+  background: var(--card-bg);
+  color: var(--muted);
+  border: 1px solid var(--card-border);
+  border-radius: 999px;
+  padding: 0.5rem 1.25rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.group-tab:hover { color: var(--accent); border-color: var(--accent); }
+.group-tab.active {
+  background: var(--accent);
+  color: var(--accent-fg);
+  border-color: var(--accent);
+}
+
 .empty-state { color: var(--muted); }
 
 .chapter-block { margin-bottom: 2.25rem; }
