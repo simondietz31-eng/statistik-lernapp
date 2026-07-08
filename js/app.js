@@ -1,11 +1,12 @@
 const state = {
-  view: "SUBJECT_SELECT",
+  view: "STUDIENGANG_SELECT",
   currentSubjectId: null,
   currentTopicId: null,
   quiz: { questionIndex: 0, answers: [] }
 };
 
 const views = {
+  STUDIENGANG_SELECT: document.getElementById("view-studiengang-select"),
   SUBJECT_SELECT: document.getElementById("view-subject-select"),
   TOPIC_GRID: document.getElementById("view-topic-grid"),
   EXPLANATION: document.getElementById("view-explanation"),
@@ -28,9 +29,12 @@ function setView(viewName) {
     views[key].hidden = key !== viewName;
   });
 
-  if (viewName === "SUBJECT_SELECT") {
+  if (viewName === "STUDIENGANG_SELECT") {
+    renderStudiengangGrid(document.getElementById("studiengaenge-container"), SUBJECTS);
+  } else if (viewName === "SUBJECT_SELECT") {
     const activeFilter = getStudiengangFilter();
-    renderStudiengangFilter(document.getElementById("studiengang-filter"), SUBJECTS, activeFilter);
+    document.getElementById("studiengang-title").textContent =
+      activeFilter === "alle" ? "Alle Fächer" : activeFilter;
     renderSubjectGrid(document.getElementById("subjects-container"), filterSubjectsByStudiengang(SUBJECTS, activeFilter), loadProgress());
   } else if (viewName === "TOPIC_GRID") {
     const subject = getCurrentSubject();
@@ -116,10 +120,10 @@ document.getElementById("subjects-container").addEventListener("click", function
   setView("TOPIC_GRID");
 });
 
-document.getElementById("studiengang-filter").addEventListener("click", function (e) {
-  const chip = e.target.closest(".filter-chip");
-  if (!chip) return;
-  setStudiengangFilter(chip.dataset.studiengang);
+document.getElementById("studiengaenge-container").addEventListener("click", function (e) {
+  const card = e.target.closest(".studiengang-card");
+  if (!card) return;
+  setStudiengangFilter(card.dataset.studiengang);
   setView("SUBJECT_SELECT");
 });
 
@@ -130,7 +134,7 @@ document.getElementById("chapters-container").addEventListener("click", function
   setView("EXPLANATION");
 });
 
-document.getElementById("btn-home").addEventListener("click", function () { setView("SUBJECT_SELECT"); });
+document.getElementById("btn-home").addEventListener("click", function () { setView("STUDIENGANG_SELECT"); });
 
 document.querySelectorAll("[data-back-to]").forEach(function (btn) {
   btn.addEventListener("click", function () { setView(btn.dataset.backTo); });
@@ -152,9 +156,10 @@ document.getElementById("btn-reset-progress").addEventListener("click", function
   e.preventDefault();
   if (window.confirm("Gesamten Lernfortschritt in allen Fächern (gelernte Themen, Quiz-Ergebnisse) wirklich zurücksetzen?")) {
     resetProgress();
-    setView(state.view === "SUBJECT_SELECT" ? "SUBJECT_SELECT" : "TOPIC_GRID");
+    const stayOnView = state.view === "STUDIENGANG_SELECT" || state.view === "SUBJECT_SELECT";
+    setView(stayOnView ? state.view : "TOPIC_GRID");
   }
 });
 
 applyDarkModePref();
-setView("SUBJECT_SELECT");
+setView("STUDIENGANG_SELECT");

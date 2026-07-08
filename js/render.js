@@ -20,18 +20,60 @@ function filterSubjectsByStudiengang(subjects, filter) {
   });
 }
 
-function renderStudiengangFilter(container, subjects, activeFilter) {
+const STUDIENGANG_ICONS = {
+  "Industriewirtschaft": "🏭",
+  "Betriebswirtschaft": "💼",
+  "Integrative Gesundheitsförderung": "🌱"
+};
+
+function renderStudiengangGrid(container, subjects) {
   container.innerHTML = "";
-  const options = ["alle"].concat(getAllStudiengaenge(subjects));
+  const grid = document.createElement("div");
+  grid.className = "topic-grid subject-grid";
+
+  const options = [{ id: "alle", label: "Alle Fächer", icon: "🎓" }].concat(
+    getAllStudiengaenge(subjects).map(function (sg) {
+      return { id: sg, label: sg, icon: STUDIENGANG_ICONS[sg] || "🎓" };
+    })
+  );
 
   options.forEach(function (option) {
-    const chip = document.createElement("button");
-    chip.type = "button";
-    chip.className = "filter-chip" + (option === activeFilter ? " active" : "");
-    chip.dataset.studiengang = option;
-    chip.textContent = option === "alle" ? "Alle Studiengänge" : option;
-    container.appendChild(chip);
+    const count = filterSubjectsByStudiengang(subjects, option.id).length;
+
+    const card = document.createElement("button");
+    card.type = "button";
+    card.className = "topic-card studiengang-card";
+    card.dataset.studiengang = option.id;
+
+    const top = document.createElement("div");
+    top.className = "topic-card-top";
+
+    const icon = document.createElement("span");
+    icon.className = "topic-card-icon";
+    icon.textContent = option.icon;
+    top.appendChild(icon);
+
+    card.appendChild(top);
+
+    const title = document.createElement("div");
+    title.className = "topic-card-title";
+    title.textContent = option.label;
+    card.appendChild(title);
+
+    const summary = document.createElement("p");
+    summary.className = "topic-card-summary";
+    summary.textContent = count + (count === 1 ? " Fach" : " Fächer");
+    card.appendChild(summary);
+
+    const link = document.createElement("span");
+    link.className = "topic-card-link";
+    link.textContent = "Öffnen →";
+    card.appendChild(link);
+
+    grid.appendChild(card);
   });
+
+  container.appendChild(grid);
 }
 
 function renderSubjectGrid(container, subjects, allProgress) {
