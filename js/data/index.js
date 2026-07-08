@@ -51,7 +51,7 @@ const SUBJECTS = [
   {
     id: "klr",
     title: "Kosten- und Leistungsrechnung",
-    studiengang: ["Industriewirtschaft"],
+    studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
     icon: "📒",
     accent: "#c9a227",
     chapters: KLR_CHAPTERS,
