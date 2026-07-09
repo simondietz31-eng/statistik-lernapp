@@ -1,0 +1,179 @@
+const FINV_CHAPTER9_TOPICS = [
+  {
+    id: "finv-kapitalwertmethode",
+    chapter: 9,
+    order: 1,
+    title: "Die Kapitalwertmethode",
+    icon: "💵",
+    summary: "Wie der Kapitalwert einer Investition über den Vergleich von Barwerten ermittelt wird, und wie die Entscheidungskriterien K₀>0, K₀=0 und K₀<0 zu interpretieren sind.",
+    explanation: [
+      { type: "p", text: "Die Kapitalwertmethode (net present value / Discounted Cash Flow) vergleicht Investitionsprojekte über ihren Barwert. Der Kapitalwert ist die Summe aller auf den Zeitpunkt t₀ abgezinsten Einzel-Barwerte des Cashflows, ausgedrückt als Kapitalwert pro investiertem Euro der Anfangsinvestition:" },
+      { type: "formula", tex: "K_0 = \\sum_{t=0}^{n} \\dfrac{Z_t}{(1+i)^t} = \\sum_{t=0}^{n} \\dfrac{E_t - A_t}{(1+i)^t}" },
+      { type: "p", text: "Dabei ist Zₜ der Netto-Cashflow (Einzahlungen Eₜ minus Auszahlungen Aₜ) im Jahr t, und i der Kalkulationszinssatz (die Renditeerwartung des Investors, häufig der WACC, vgl. Kapitel 3). Eine äquivalente Schreibweise zerlegt den Kapitalwert in Barwert der laufenden Zahlungssalden minus die Anschaffungsauszahlung A₀ plus einen ggf. vorhandenen Barwert des Liquidationserlöses Lₙ:" },
+      { type: "formula", tex: "K_0 = -A_0 + \\left(\\sum_{t=1}^{n} \\dfrac{Z_t}{(1+i)^t}\\right) + \\dfrac{L_n}{(1+i)^n}" },
+      { type: "p", text: "Entscheidungskriterien der Kapitalwertmethode:" },
+      { type: "list", items: [
+        "K₀ > 0: Die Investition ist vorteilhaft (\"lohnt sich\"), weil sie einen Überschuss über die geforderte Mindestverzinsung (Kalkulationszinssatz) erwirtschaftet",
+        "K₀ = 0: Die Investition ist \"egal\" — sie erwirtschaftet genau die geforderte Mindestverzinsung, keinen zusätzlichen Vorteil",
+        "K₀ < 0: Die Investition ist nicht vorteilhaft (ein Verlust im Vergleich zur Alternativanlage zum Kalkulationszinssatz)"
+      ]},
+      { type: "p", text: "Die Kapitalwertrate normiert den Kapitalwert auf die Anfangsinvestition und erlaubt so einen Vergleich unterschiedlich großer Projekte:" },
+      { type: "formula", tex: "\\text{Kapitalwertrate} = \\dfrac{K_0}{A_0}" },
+      { type: "p", text: "Wichtige Annahme der einfachen (normalen) Kapitalwertmethode: Es wird nur ein einziger Zinssatz für Kapitalaufnahme und Kapitalanlage verwendet. Sollen unterschiedliche Zinssätze für gebundenes (investiertes) und freies (am Kapitalmarkt angelegtes) Kapital berücksichtigt werden, verwendet man die modifizierte (erweiterte) Kapitalwertmethode." }
+    ],
+    exercises: [
+      {
+        id: "finv-kapitalwertmethode-e1",
+        prompt: "Eine Investition kostet 100.000 € (Zahlung bei t=0) und erwirtschaftet 3 Jahre lang je 40.000 € Cashflow (jeweils am Jahresende). Kalkulationszins 8 %. Berechnen Sie den Kapitalwert.",
+        solution: "K₀ = −100.000 + 40.000/1,08 + 40.000/1,08² + 40.000/1,08³ = −100.000 + 37.037,04 + 34.293,55 + 31.753,29 = −100.000 + 103.083,88 ≈ 3.083,88 €. Da K₀ > 0, ist die Investition vorteilhaft."
+      },
+      {
+        id: "finv-kapitalwertmethode-e2",
+        prompt: "Berechnen Sie für die Investition aus Aufgabe 1 die Kapitalwertrate.",
+        solution: "Kapitalwertrate = K₀/A₀ = 3.083,88 / 100.000 ≈ 0,0308 = 3,08 %. Das bedeutet, dass die Investition pro investiertem Euro einen zusätzlichen Kapitalwert von etwa 3,08 Cent über die geforderte Mindestverzinsung hinaus erwirtschaftet."
+      },
+      {
+        id: "finv-kapitalwertmethode-e3",
+        prompt: "Eine Investition kostet 50.000 € (t=0) und erbringt am Ende von 2 Jahren einen einmaligen Rückfluss von 60.000 €. Kalkulationszins 10 %. Ist die Investition vorteilhaft?",
+        solution: "K₀ = −50.000 + 60.000/(1,10)² = −50.000 + 60.000/1,21 = −50.000 + 49.586,78 ≈ −413,22 €. Da K₀ < 0, ist die Investition NICHT vorteilhaft — sie erreicht die geforderte 10%ige Mindestverzinsung nicht ganz."
+      },
+      {
+        id: "finv-kapitalwertmethode-e4",
+        prompt: "Erklären Sie, warum eine Investition mit K₀ = 0 als 'egal' bezeichnet wird, obwohl das Projekt ja zusätzliche Cashflows erwirtschaftet.",
+        solution: "Der Kalkulationszinssatz i repräsentiert bereits die vom Investor geforderte Mindestverzinsung (Opportunitätskosten, z. B. die Rendite einer vergleichbaren Alternativanlage). Ein Kapitalwert von exakt null bedeutet, dass die Investition — bei Abzinsung aller künftigen Cashflows mit genau diesem Zinssatz — genau diese geforderte Mindestverzinsung erwirtschaftet, keinen Euro mehr und keinen Euro weniger. Wirtschaftlich ist der Investor damit indifferent zwischen der Durchführung der Investition und der Anlage des Kapitals zum Kalkulationszinssatz — beide Alternativen sind gleich vorteilhaft, daher 'egal'."
+      },
+      {
+        id: "finv-kapitalwertmethode-e5",
+        prompt: "Was ist der Unterschied zwischen der einfachen (normalen) und der modifizierten (erweiterten) Kapitalwertmethode?",
+        solution: "Die einfache Kapitalwertmethode verwendet nur einen einzigen Zinssatz sowohl für die Abzinsung der Investitionszahlungen als auch implizit für eine mögliche Kapitalaufnahme oder -anlage. Die modifizierte (erweiterte) Kapitalwertmethode berücksichtigt dagegen unterschiedliche Zinssätze für im Projekt gebundenes (investiertes) Kapital und für am Kapitalmarkt frei angelegtes Kapital — was realitätsnäher ist, da Sollzinsen (Kreditaufnahme) und Habenzinsen (Geldanlage) i. d. R. unterschiedlich hoch sind."
+      }
+    ],
+    quiz: [
+      { id: "q1", question: "Wie lautet die Grundformel der Kapitalwertmethode?", options: ["K₀ = Σ Zₜ/(1+i)ᵗ", "K₀ = Σ Zₜ·(1+i)ᵗ", "K₀ = Zₙ − Z₀", "K₀ = A₀ · i"], correctIndex: 0, explanation: "K₀ = Σ Zₜ/(1+i)ᵗ — die Summe der abgezinsten Cashflows." },
+      { id: "q2", question: "Was bedeutet K₀ > 0?", options: ["Die Investition ist nicht vorteilhaft", "Die Investition ist vorteilhaft (übertrifft die Mindestverzinsung)", "Der Kalkulationszins ist zu hoch angesetzt", "Die Investition ist wertlos"], correctIndex: 1, explanation: "K₀ > 0 bedeutet, dass die Investition mehr als die geforderte Mindestrendite erwirtschaftet." },
+      { id: "q3", question: "Was bedeutet K₀ < 0?", options: ["Der Kalkulationszinssatz ist irrelevant", "Die Investition ist nicht vorteilhaft", "Es liegt ein Rechenfehler vor", "Die Investition ist vorteilhaft"], correctIndex: 1, explanation: "K₀ < 0 zeigt an, dass die Investition die geforderte Mindestverzinsung nicht erreicht." },
+      { id: "q4", question: "Wozu dient die Kapitalwertrate?", options: ["Sie hat keinen praktischen Nutzen", "Zur Berechnung der Umsatzsteuer", "Zum Vergleich unterschiedlich großer Investitionsprojekte (Kapitalwert je investiertem Euro)", "Zur Berechnung des Steuersatzes"], correctIndex: 2, explanation: "Kapitalwertrate = K₀/A₀ normiert den Kapitalwert auf die Anfangsinvestition." },
+      { id: "q5", question: "Welcher Zinssatz wird typischerweise als Kalkulationszinssatz in der Kapitalwertmethode verwendet?", options: ["Der aktuelle Leitzins der Zentralbank ohne Anpassung", "Häufig der WACC (gewichtete Kapitalkosten) des Unternehmens", "Ein zufällig gewählter Wert", "Immer 0 %"], correctIndex: 1, explanation: "Der WACC repräsentiert die Mindestrenditeanforderung und wird häufig als Kalkulationszinssatz verwendet." },
+      { id: "q6", question: "Was unterscheidet die einfache von der modifizierten Kapitalwertmethode?", options: ["Die modifizierte Methode gilt nur für Immobilien", "Es gibt keinen inhaltlichen Unterschied", "Die einfache Methode berücksichtigt gar keine Zinsen", "Die modifizierte Methode verwendet unterschiedliche Zinssätze für gebundenes und freies Kapital"], correctIndex: 3, explanation: "Die modifizierte Methode differenziert zwischen dem Zinssatz für investiertes und für am Markt angelegtes Kapital." },
+      { id: "q7", question: "Eine Investition kostet 20.000 € und erbringt nach 1 Jahr 22.000 €. Kalkulationszins 10 %. Wie hoch ist K₀?", options: ["−2.000 €", "22.000 €", "2.000 €", "0 €"], correctIndex: 3, explanation: "K₀ = −20.000 + 22.000/1,1 = −20.000 + 20.000 = 0 € — die Investition erwirtschaftet exakt die geforderte 10 % Rendite." },
+      { id: "q8", question: "Was zeigt der Term Lₙ/(1+i)ⁿ in der erweiterten Kapitalwertformel an?", options: ["Den Barwert der Anschaffungsauszahlung", "Den Zinssatz selbst", "Den Barwert eines am Ende der Laufzeit anfallenden Liquidationserlöses", "Die Steuerlast der Investition"], correctIndex: 2, explanation: "Lₙ ist der (abgezinste) Liquidations-/Restwert am Ende der Nutzungsdauer." },
+      { id: "q9", question: "Zwei Projekte haben denselben Kapitalwert von 10.000 €, aber unterschiedliche Anfangsinvestitionen (100.000 € vs. 500.000 €). Welche Kennzahl zeigt, dass das kleinere Projekt relativ effizienter ist?", options: ["Die Kapitalwertrate (K₀/A₀)", "Der Kalkulationszinssatz", "Der absolute Kapitalwert allein", "Die Laufzeit des Projekts"], correctIndex: 0, explanation: "Die Kapitalwertrate zeigt, dass beim kleineren Projekt (100.000 €) ein höherer relativer Überschuss pro investiertem Euro erzielt wird (10 % vs. 2 %)." },
+      { id: "q10", question: "Was ist die zentrale Datengrundlage der Kapitalwertmethode?", options: ["Cashflows (Ein- und Auszahlungen)", "Ausschließlich der Umsatz", "Die Aktienkursentwicklung", "Bilanzielle Gewinne"], correctIndex: 0, explanation: "Wie alle dynamischen Verfahren basiert die Kapitalwertmethode auf tatsächlichen Cashflows, nicht auf bilanziellen Erfolgsgrößen." }
+    ]
+  },
+  {
+    id: "finv-interne-zinsfussmethode",
+    chapter: 9,
+    order: 2,
+    title: "Die interne Zinsfußmethode (IZF)",
+    icon: "🎯",
+    summary: "Wie der interne Zinsfuß als der Zins definiert ist, bei dem der Kapitalwert null wird, und wie man ihn näherungsweise bestimmt.",
+    explanation: [
+      { type: "p", text: "Der interne Zinsfuß (IZF, internal rate of return) ist derjenige Zinssatz, für den der Kapitalwert eines Projekts genau null wird. Er lässt sich als die tatsächlich vom Projekt erwirtschaftete Rendite interpretieren." },
+      { type: "p", text: "Entscheidungskriterien der internen Zinsfußmethode: Man vergleicht den IZF mit dem Kalkulationszinssatz (der Renditeerwartung des Investors):" },
+      { type: "list", items: [
+        "Kalkulationszins(fuß) < interner Zins(fuß): Das Projekt lohnt sich, weil es eine Verzinsung realisiert, die die Zinserwartung des Investors übersteigt",
+        "Kalkulationszins(fuß) > interner Zins(fuß): Das Projekt lohnt sich nicht, weil es die Zinserwartung des Investors nicht erreichen kann"
+      ]},
+      { type: "p", text: "Da der IZF im Allgemeinen nicht direkt algebraisch aus der Kapitalwertfunktion aufgelöst werden kann (bei mehr als zwei Zahlungszeitpunkten ist das eine Nullstellensuche eines Polynoms höheren Grades), wird er näherungsweise über numerische Verfahren bestimmt:" },
+      { type: "list", items: [
+        "Intervallschachtelung: schrittweise Eingrenzung des Zinses, bei dem der Kapitalwert das Vorzeichen wechselt",
+        "Lineare Interpolation (Regula falsi): Man wählt zwei Zinssätze mit einem positiven und einem negativen Kapitalwert und interpoliert linear zwischen ihnen",
+        "Newton-Verfahren: iteratives Näherungsverfahren mit Ableitung der Kapitalwertfunktion"
+      ]},
+      { type: "p", text: "Ein wichtiger Grenzbereich der IZF-Methode betrifft den Vergleich zweier Projekte: Die traditionelle IZF-Methode unterstellt implizit, dass zwischenzeitliche Rückflüsse wieder zum internen Zinsfuß selbst angelegt werden können (\"Wiederanlageprämisse\"). Diese Annahme ist oft unrealistisch — bei sich stark unterscheidenden IZF mehrerer Alternativprojekte kann das zu Fehlentscheidungen führen. Die modifizierte Kapitalwertmethode (mit realistischerer, separater Wiederanlageverzinsung) vermeidet dieses Problem." }
+    ],
+    exercises: [
+      {
+        id: "finv-interne-zinsfussmethode-e1",
+        prompt: "Eine Investition kostet 10.000 € und liefert nach 1 Jahr 11.000 €. Berechnen Sie den internen Zinsfuß.",
+        solution: "K₀ = 0 → −10.000 + 11.000/(1+IZF) = 0 → 11.000/(1+IZF) = 10.000 → 1+IZF = 1,1 → IZF = 0,10 = 10 %."
+      },
+      {
+        id: "finv-interne-zinsfussmethode-e2",
+        prompt: "Der Kalkulationszinssatz eines Investors beträgt 8 %. Lohnt sich die Investition aus Aufgabe 1 (IZF = 10 %)? Begründen Sie mithilfe des Entscheidungskriteriums.",
+        solution: "Ja, die Investition lohnt sich: Der Kalkulationszinssatz (8 %) liegt unter dem internen Zinsfuß (10 %) — das Projekt erwirtschaftet also eine höhere Rendite (10 %), als der Investor mindestens fordert (8 %)."
+      },
+      {
+        id: "finv-interne-zinsfussmethode-e3",
+        prompt: "Eine Investition kostet 50.000 € und erbringt 2 Jahre lang je 28.000 € (jeweils am Jahresende). Schätzen Sie den IZF durch Ausprobieren zweier Zinssätze (10 % und 15 %) mittels linearer Interpolation.",
+        solution: "Bei i=10%: K₀ = −50.000 + 28.000/1,1 + 28.000/1,21 = −50.000 + 25.454,55 + 23.140,50 = −1.404,95 €. Bei i=15%: K₀ = −50.000 + 28.000/1,15 + 28.000/1,3225 = −50.000 + 24.347,83 + 21.171,17 = −4.481,00 €. Beide Kapitalwerte sind negativ; der IZF muss also unter 10 % liegen. Bei i=8%: K₀ = −50.000 + 28.000/1,08 + 28.000/1,1664 = −50.000 + 25.925,93 + 24.005,49 = −68,58 €. Der IZF liegt knapp unter 8 % (ca. 7,9 %), ermittelt durch Interpolation/Ausprobieren."
+      },
+      {
+        id: "finv-interne-zinsfussmethode-e4",
+        prompt: "Erklären Sie das Prinzip der linearen Interpolation (Regula falsi) zur Bestimmung des IZF anhand von zwei Testzinssätzen mit unterschiedlichem Vorzeichen des Kapitalwerts.",
+        solution: "Man wählt zwei Zinssätze i_A und i_B, bei denen der Kapitalwert einmal positiv (K₀,A) und einmal negativ (K₀,B) ist. Da die Kapitalwertfunktion in diesem Bereich monoton fällt, muss die Nullstelle (der gesuchte IZF) zwischen i_A und i_B liegen. Die lineare Interpolationsformel schätzt diese Nullstelle näherungsweise als gewichteten Punkt zwischen i_A und i_B, proportional zum Verhältnis der beiden Kapitalwerte: i* ≈ i_A − K₀,A·(i_B−i_A)/(K₀,B−K₀,A). Da die tatsächliche Kapitalwertfunktion nicht exakt linear verläuft, liefert dieses Verfahren nur eine Näherung, die durch Wiederholung mit engeren Testzinssätzen iterativ verbessert werden kann."
+      },
+      {
+        id: "finv-interne-zinsfussmethode-e5",
+        prompt: "Was besagt die 'Wiederanlageprämisse' der traditionellen IZF-Methode, und warum ist sie problematisch beim Vergleich zweier Projekte mit sehr unterschiedlichem IZF?",
+        solution: "Die traditionelle IZF-Methode unterstellt implizit, dass alle zwischenzeitlichen Rückflüsse eines Projekts wieder zum internen Zinsfuß dieses Projekts selbst angelegt werden können. Hat ein Projekt A einen sehr hohen IZF (z. B. 25 %) und Projekt B einen niedrigeren IZF (z. B. 10 %), unterstellt die Methode für Projekt A eine unrealistisch hohe Wiederanlagerendite von 25 % für alle Zwischenrückflüsse. In der Praxis ist eine derart hohe Wiederanlagerendite oft nicht am Markt erzielbar, wodurch der IZF-Vergleich das tatsächlich vorteilhaftere Projekt verzerrt darstellen kann — die modifizierte Kapitalwertmethode mit einem realistischeren, separaten Wiederanlagezins vermeidet dieses Problem."
+      }
+    ],
+    quiz: [
+      { id: "q1", question: "Wie ist der interne Zinsfuß (IZF) definiert?", options: ["Der Zins, bei dem der Kapitalwert maximal wird", "Der Zins, bei dem der Kapitalwert genau null ist", "Der WACC des Unternehmens", "Der nominale Marktzins"], correctIndex: 1, explanation: "IZF = derjenige Zinssatz, bei dem K₀ = 0 gilt." },
+      { id: "q2", question: "Wann lohnt sich ein Projekt nach dem IZF-Kriterium?", options: ["Wenn der IZF negativ ist", "Wenn der Kalkulationszins unter dem IZF liegt", "Wenn der Kalkulationszins über dem IZF liegt", "Der IZF hat keinen Bezug zur Vorteilhaftigkeit"], correctIndex: 1, explanation: "Liegt der Kalkulationszins unter dem IZF, übertrifft die Projektrendite die Mindestanforderung — das Projekt lohnt sich." },
+      { id: "q3", question: "Welches numerische Verfahren wird zur näherungsweisen Bestimmung des IZF genannt?", options: ["Kreuzproduktverfahren", "Fourier-Transformation", "Monte-Carlo-Simulation ausschließlich", "Lineare Interpolation (Regula falsi)"], correctIndex: 3, explanation: "Regula falsi (lineare Interpolation), Intervallschachtelung und Newton-Verfahren werden genannt." },
+      { id: "q4", question: "Eine Investition kostet 5.000 € und liefert nach 1 Jahr 5.500 €. Wie hoch ist der IZF?", options: ["10 %", "5 %", "50 %", "15 %"], correctIndex: 0, explanation: "5.500/(1+IZF) = 5.000 → 1+IZF = 1,1 → IZF = 10 %." },
+      { id: "q5", question: "Was unterstellt die traditionelle IZF-Methode implizit bezüglich zwischenzeitlicher Rückflüsse?", options: ["Sie fließen automatisch ins Fremdkapital", "Sie werden gar nicht wiederangelegt", "Sie werden zum internen Zinsfuß des Projekts selbst wiederangelegt", "Sie werden zum Kalkulationszins wiederangelegt"], correctIndex: 2, explanation: "Das ist die sogenannte Wiederanlageprämisse — ein zentraler Kritikpunkt an der traditionellen IZF-Methode." },
+      { id: "q6", question: "Warum ist die Wiederanlageprämisse bei sehr hohem IZF eines Projekts problematisch?", options: ["Weil eine so hohe Wiederanlagerendite am Markt oft nicht tatsächlich erzielbar ist", "Weil sie zu niedrig ist und Projekte benachteiligt", "Sie ist grundsätzlich niemals problematisch", "Weil sie steuerlich nicht zulässig ist"], correctIndex: 0, explanation: "Ein unrealistisch hoher unterstellter Wiederanlagezins kann die tatsächliche Vorteilhaftigkeit verzerrt darstellen." },
+      { id: "q7", question: "Was liefert der Ansatz, ausschließlich einen Test-Zinssatz einzusetzen und den Kapitalwert zu prüfen?", options: ["Den WACC des Unternehmens", "Den Effektivzins", "Direkt den exakten IZF ohne weitere Rechnung", "Einen Ausgangspunkt für die iterative/näherungsweise Bestimmung des IZF"], correctIndex: 3, explanation: "Durch Testen verschiedener Zinssätze und Beobachtung des Kapitalwertvorzeichens nähert man sich dem IZF iterativ an." },
+      { id: "q8", question: "Welche Methode vermeidet die Problematik der Wiederanlageprämisse der traditionellen IZF-Methode?", options: ["Die Amortisationsrechnung", "Die modifizierte Kapitalwertmethode mit separater, realistischerer Wiederanlageverzinsung", "Die einfache Kostenvergleichsrechnung", "Es gibt keine Alternative dazu"], correctIndex: 1, explanation: "Die modifizierte Kapitalwertmethode erlaubt eine vom Projektzins unabhängige, realistischere Wiederanlageverzinsung." },
+      { id: "q9", question: "Was passiert mit dem Kapitalwert eines normalen Investitionsprojekts (eine Anfangsauszahlung, danach nur Einzahlungen), wenn der verwendete Zinssatz steigt?", options: ["Der Kapitalwert sinkt tendenziell (die Kapitalwertfunktion fällt mit steigendem Zins)", "Der Kapitalwert wird immer negativ unendlich", "Der Kapitalwert steigt immer an", "Der Kapitalwert bleibt konstant"], correctIndex: 0, explanation: "Bei normalen Zahlungsreihen (erst Auszahlung, dann Einzahlungen) fällt der Kapitalwert mit steigendem Abzinsungssatz, da künftige Einzahlungen stärker abgezinst werden." },
+      { id: "q10", question: "Warum lässt sich der IZF bei mehr als zwei Zahlungszeitpunkten meist nicht direkt algebraisch berechnen?", options: ["Weil der IZF dann grundsätzlich negativ wird", "Weil es sich um eine reine Ermessensentscheidung handelt", "Weil die Kapitalwertgleichung dann einem Polynom höheren Grades entspricht, dessen Nullstellen i. d. R. nur numerisch bestimmbar sind", "Weil Cashflows nach dem dritten Jahr ignoriert werden"], correctIndex: 2, explanation: "Bei mehreren Zahlungszeitpunkten wird die Kapitalwertgleichung zu einem Polynom höheren Grades in (1+i), dessen Nullstellen i. d. R. numerisch gesucht werden müssen." }
+    ]
+  },
+  {
+    id: "finv-amortisationsrechnung",
+    chapter: 9,
+    order: 3,
+    title: "Die Amortisationsrechnung",
+    icon: "⏱️",
+    summary: "Wie ermittelt wird, ab welchem Zeitpunkt das in einem Investitionsprojekt gebundene Kapital vollständig zurückgeflossen ist, und wofür diese Kennzahl sinnvoll ist.",
+    explanation: [
+      { type: "p", text: "Die (dynamische) Amortisationsrechnung beantwortet die Frage: Wie lange dauert es, bis sich das in einem Investitionsprojekt gebundene Kapital der Anfangsinvestition durch die laufenden Rückflüsse (Cashflows) wieder amortisiert hat?" },
+      { type: "p", text: "Vorgehen: Man erstellt einen Zins- und Tilgungsplan, bei dem die Anfangsinvestition wie eine Kreditsumme behandelt wird, die durch die jährlichen Netto-Cashflows getilgt wird (unter Berücksichtigung des Kalkulationszinssatzes auf das jeweils noch gebundene Kapital). Der Amortisationszeitpunkt ist erreicht, sobald der kumulierte, verzinste Kapitalrückfluss die Anfangsinvestition vollständig deckt — ab diesem Zeitpunkt ist kein Kapital mehr im Projekt gebunden." },
+      { type: "p", text: "Wichtige Einschränkung: Die Amortisationsrechnung ist nur sinnvoll für Investitionsprojekte mit positivem Kapitalwert (K₀ > 0). Sie beantwortet nicht die Frage, ob sich ein Projekt insgesamt lohnt (das beantwortet die Kapitalwert- oder IZF-Methode), sondern nur, wie lange das Kapital gebunden bleibt." },
+      { type: "p", text: "Bedeutung in der Praxis: Die Amortisationsdauer ist ein wichtiges ergänzendes Kriterium, insbesondere weil weiter in der Zukunft liegende Zahlungsprognosen naturgemäß unsicherer sind (Prognoserisiko steigt mit der Zeit) und weil Investorenkapital oft nur begrenzte Zeit gebunden werden soll (Liquiditäts- und Flexibilitätsaspekte). Ein Projekt mit kürzerer Amortisationsdauer wird — bei ansonsten vergleichbarem Kapitalwert — häufig als weniger riskant eingeschätzt." }
+    ],
+    exercises: [
+      {
+        id: "finv-amortisationsrechnung-e1",
+        prompt: "Eine Investition kostet 100.000 € und erwirtschaftet konstant 30.000 € Cashflow pro Jahr (undiskontiert). Nach wie vielen vollen Jahren ist die Investition (statisch, ohne Verzinsung) amortisiert?",
+        solution: "Kumulierte Rückflüsse: nach 1 Jahr 30.000 €, nach 2 Jahren 60.000 €, nach 3 Jahren 90.000 €, nach 4 Jahren 120.000 €. Die Anfangsinvestition (100.000 €) ist zwischen Jahr 3 und Jahr 4 amortisiert — nach vollen Jahren gerechnet: erst im 4. Jahr vollständig amortisiert (statische, undiskontierte Betrachtung)."
+      },
+      {
+        id: "finv-amortisationsrechnung-e2",
+        prompt: "Berechnen Sie für dieselbe Investition (100.000 € Anfangsauszahlung, 30.000 €/Jahr Cashflow) die dynamische Amortisationsdauer bei einem Kalkulationszins von 8 % (verzinste, abgezinste Rückflüsse).",
+        solution: "Barwert der Rückflüsse: Jahr 1: 30.000/1,08=27.777,78 €; Jahr 2: 30.000/1,08²=25.720,16 €; Jahr 3: 30.000/1,08³=23.814,04 €; Jahr 4: 30.000/1,08⁴=22.050,04 €. Kumuliert: nach 3 Jahren 77.311,98 €, nach 4 Jahren 99.362,02 €, nach 5 Jahren (weitere 30.000/1,08⁵=20.416,70 €) 119.778,72 €. Die dynamische Amortisation liegt also erst zwischen Jahr 4 und Jahr 5 — später als bei der statischen (undiskontierten) Betrachtung, weil die Abzinsung künftige Rückflüsse mindert."
+      },
+      {
+        id: "finv-amortisationsrechnung-e3",
+        prompt: "Warum liefert die dynamische Amortisationsrechnung tendenziell eine längere Amortisationsdauer als die statische (undiskontierte) Betrachtung?",
+        solution: "Bei der dynamischen Amortisationsrechnung werden künftige Cashflows mit dem Kalkulationszinssatz abgezinst, wodurch ihr Beitrag zur Deckung der Anfangsinvestition geringer ausfällt als ihr Nominalwert. Da spätere Zahlungen stärker abgezinst werden, dauert es länger, bis die kumulierten Barwerte die Anfangsinvestition decken, als wenn man einfach die Nominalbeträge addiert (statische Betrachtung ohne Verzinsung)."
+      },
+      {
+        id: "finv-amortisationsrechnung-e4",
+        prompt: "Warum ist die Amortisationsrechnung nur für Projekte mit K₀ > 0 sinnvoll?",
+        solution: "Die Amortisationsrechnung beantwortet ausschließlich die Frage, WANN das gebundene Kapital zurückfließt — nicht, OB sich das Projekt insgesamt lohnt. Hat ein Projekt einen negativen Kapitalwert (K₀ < 0), bedeutet dies, dass die Rückflüsse insgesamt nicht einmal die geforderte Mindestverzinsung erreichen — in diesem Fall wäre eine Amortisationsdauer entweder gar nicht erreichbar oder inhaltlich irreführend, da das Projekt ohnehin abzulehnen ist. Die Amortisationsrechnung ergänzt daher sinnvollerweise nur bereits als vorteilhaft identifizierte Projekte um eine zusätzliche Risiko-/Liquiditätsperspektive."
+      },
+      {
+        id: "finv-amortisationsrechnung-e5",
+        prompt: "Nennen Sie zwei Gründe, warum Unternehmen die Amortisationsdauer als zusätzliches Entscheidungskriterium neben dem Kapitalwert heranziehen.",
+        solution: "1) Prognoseunsicherheit: Je weiter in der Zukunft eine Zahlung liegt, desto unsicherer ist ihre Prognose — ein Projekt mit kürzerer Amortisationsdauer ist tendenziell weniger von langfristigen, schwer vorhersehbaren Entwicklungen abhängig. 2) Liquiditäts- und Flexibilitätsaspekte: Unternehmen möchten oft nicht zu viel Kapital zu lange in einem einzelnen Projekt binden, um flexibel auf neue Chancen reagieren oder unerwartete Liquiditätsbedarfe decken zu können — eine kürzere Amortisationsdauer setzt Kapital schneller wieder frei."
+      }
+    ],
+    quiz: [
+      { id: "q1", question: "Was beantwortet die Amortisationsrechnung?", options: ["Wie lange es dauert, bis das gebundene Kapital vollständig zurückgeflossen ist", "Den genauen Marktwert eines Unternehmens", "Die Höhe der Steuerlast einer Investition", "Ob sich eine Investition überhaupt lohnt"], correctIndex: 0, explanation: "Die Amortisationsrechnung ermittelt den Zeitpunkt, ab dem kein Kapital mehr im Projekt gebunden ist." },
+      { id: "q2", question: "Für welche Art von Projekten ist die Amortisationsrechnung laut Vorlesung sinnvoll?", options: ["Nur für Projekte ohne jede Anfangsinvestition", "Für alle Projekte unabhängig vom Kapitalwert", "Nur für Projekte mit positivem Kapitalwert (K₀ > 0)", "Nur für Projekte mit negativem Kapitalwert"], correctIndex: 2, explanation: "Sie ist nur sinnvoll für bereits als vorteilhaft (K₀>0) identifizierte Projekte." },
+      { id: "q3", question: "Welches Hilfsmittel wird zur Bestimmung der Amortisationsdauer verwendet?", options: ["Eine reine Schätzung ohne Berechnung", "Ein Zins- und Tilgungsplan", "Der WACC allein ohne weitere Berechnung", "Ausschließlich die Gewinn- und Verlustrechnung"], correctIndex: 1, explanation: "Ein Zins-/Tilgungsplan zeigt, wie das gebundene Kapital durch die Rückflüsse Schritt für Schritt getilgt wird." },
+      { id: "q4", question: "Warum ist die dynamische Amortisationsdauer tendenziell länger als die statische (undiskontierte)?", options: ["Weil dynamische Rechnung grundsätzlich falsch ist", "Weil Abzinsung künftige Rückflüsse mindert, wodurch sie langsamer zur Deckung der Investition beitragen", "Es gibt keinen systematischen Unterschied", "Weil bei dynamischer Rechnung höhere Cashflows unterstellt werden"], correctIndex: 1, explanation: "Die Abzinsung mindert den Beitrag späterer Zahlungen, wodurch die Kapitaldeckung langsamer erreicht wird." },
+      { id: "q5", question: "Welchen zusätzlichen Nutzen bietet die Amortisationsdauer gegenüber der reinen Kapitalwertaussage?", options: ["Sie zeigt zusätzlich das Risiko-/Liquiditätsprofil eines Projekts (wie lange Kapital gebunden bleibt)", "Sie berücksichtigt automatisch alle steuerlichen Effekte", "Sie ersetzt vollständig die Notwendigkeit einer Kapitalwertberechnung", "Sie hat keinen zusätzlichen Nutzen"], correctIndex: 0, explanation: "Die Amortisationsdauer ergänzt den Kapitalwert um eine Perspektive zur Kapitalbindungsdauer und zum Prognoserisiko." },
+      { id: "q6", question: "Eine Investition kostet 60.000 € und bringt 20.000 €/Jahr (undiskontiert). Nach wie vielen vollen Jahren ist sie statisch amortisiert?", options: ["4 Jahre", "2 Jahre", "1 Jahr", "3 Jahre"], correctIndex: 3, explanation: "Nach 3 Jahren: 3×20.000 = 60.000 € — genau die Anfangsinvestition ist gedeckt." },
+      { id: "q7", question: "Was passiert mit der Amortisationsdauer, wenn der Kalkulationszinssatz steigt (bei sonst gleichen Cashflows)?", options: ["Sie bleibt exakt gleich", "Sie verkürzt sich", "Sie verlängert sich (spätere Zahlungen werden stärker abgezinst)", "Der Zinssatz hat keinen Einfluss darauf"], correctIndex: 2, explanation: "Ein höherer Zinssatz mindert den Barwert künftiger Rückflüsse stärker, wodurch die Amortisation länger dauert." },
+      { id: "q8", question: "Warum sollte man sich bei der Investitionsentscheidung nicht ausschließlich auf die Amortisationsdauer verlassen?", options: ["Weil sie gesetzlich verboten ist", "Weil sie nur für Aktiengesellschaften gilt", "Weil sie die Gesamtvorteilhaftigkeit (z. B. Cashflows nach dem Amortisationszeitpunkt) nicht berücksichtigt", "Weil sie immer falsch berechnet wird"], correctIndex: 2, explanation: "Die Amortisationsrechnung ignoriert, was nach Erreichen der Amortisation noch an Cashflows folgt — sie ist daher nur ein ergänzendes, kein alleiniges Kriterium." },
+      { id: "q9", question: "Welche Aussage trifft am ehesten zu: Ein Projekt mit kürzerer Amortisationsdauer wird häufig als …", options: ["grundsätzlich unrentabler eingeschätzt", "steuerlich nachteiliger eingeschätzt", "riskanter eingeschätzt", "weniger riskant eingeschätzt (geringeres Prognoserisiko)"], correctIndex: 3, explanation: "Kürzere Kapitalbindung bedeutet i. d. R. geringere Abhängigkeit von unsicheren, weit in der Zukunft liegenden Prognosen." },
+      { id: "q10", question: "Ist die Amortisationsrechnung ein statisches oder ein dynamisches Investitionsrechenverfahren, wenn sie mit abgezinsten Cashflows arbeitet?", options: ["Ein dynamisches Verfahren, da Zeitwerte/Zinseffekte berücksichtigt werden", "Weder noch, sie zählt zu keiner der beiden Kategorien", "Ein statisches Verfahren", "Ein rein qualitatives Verfahren ohne jede Berechnung"], correctIndex: 0, explanation: "Wird mit abgezinsten (dynamischen) Cashflows gerechnet, zählt die Amortisationsrechnung zu den dynamischen Verfahren." }
+    ]
+  }
+];
