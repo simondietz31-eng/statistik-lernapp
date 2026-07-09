@@ -13,12 +13,13 @@ const BWL2_CHAPTERS = [
 const BWL2_TOPICS = [].concat(BWL_STRANG_A_TOPICS, BWL_STRANG_B_TOPICS);
 
 const KLR_CHAPTERS = [
-  { id: 1, title: "Grundlagen des Rechnungswesens", accent: "#5b8def" },
-  { id: 2, title: "Kostenartenrechnung", accent: "#34c77b" },
-  { id: 3, title: "Kostenstellenrechnung", accent: "#a374ff" },
-  { id: 4, title: "Kostenträgerrechnung", accent: "#ff9f43" },
-  { id: 5, title: "Deckungsbeitragsrechnung", accent: "#e85d75" },
-  { id: 6, title: "Plankostenrechnung", accent: "#2bb3a3" }
+  { id: 1, title: "Grundlagen des Rechnungswesens", accent: "#5b8def", group: "Theorie" },
+  { id: 2, title: "Kostenartenrechnung", accent: "#34c77b", group: "Theorie" },
+  { id: 3, title: "Kostenstellenrechnung", accent: "#a374ff", group: "Theorie" },
+  { id: 4, title: "Kostenträgerrechnung", accent: "#ff9f43", group: "Theorie" },
+  { id: 5, title: "Deckungsbeitragsrechnung", accent: "#e85d75", group: "Theorie" },
+  { id: 6, title: "Plankostenrechnung", accent: "#2bb3a3", group: "Theorie" },
+  { id: 7, title: "Klausuraufgaben & Übungsklausuren", accent: "#c9a227", group: "Übungsaufgaben" }
 ];
 const KLR_TOPICS = [].concat(
   KLR_CHAPTER1_TOPICS,
@@ -26,7 +27,8 @@ const KLR_TOPICS = [].concat(
   KLR_CHAPTER3_TOPICS,
   KLR_CHAPTER4_TOPICS,
   KLR_CHAPTER5_TOPICS,
-  KLR_CHAPTER6_TOPICS
+  KLR_CHAPTER6_TOPICS,
+  KLR_CHAPTER7_TOPICS
 );
 
 const ORGAPERSONAL_CHAPTERS = [
