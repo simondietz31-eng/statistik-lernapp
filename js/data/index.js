@@ -56,6 +56,45 @@ const ORGAPERSONAL_TOPICS = [].concat(
   ORGAPERSONAL_CHAPTER11_TOPICS
 );
 
+const NATWISS_CHAPTERS = [
+  { id: 1,  title: "Kinematik der Massenpunkte",              accent: "#5b8def", group: "Mechanik" },
+  { id: 2,  title: "Dynamik der Massenpunkte",                accent: "#3a6fd8", group: "Mechanik" },
+  { id: 3,  title: "Impuls, Arbeit und Energie",              accent: "#2855b0", group: "Mechanik" },
+  { id: 4,  title: "Rotation und Mechanik starrer Körper",    accent: "#1e4299", group: "Mechanik" },
+  { id: 5,  title: "Mechanische Schwingungen",                accent: "#34c77b", group: "Schwingungen & Wellen" },
+  { id: 6,  title: "Mechanische Wellen",                      accent: "#27a865", group: "Schwingungen & Wellen" },
+  { id: 7,  title: "Grundlagen der Thermodynamik",            accent: "#ff9f43", group: "Thermodynamik" },
+  { id: 8,  title: "1. Hauptsatz und Zustandsänderungen",     accent: "#e8822a", group: "Thermodynamik" },
+  { id: 9,  title: "2. Hauptsatz und Entropie",               accent: "#d16515", group: "Thermodynamik" },
+  { id: 10, title: "Elektrostatik",                           accent: "#a374ff", group: "Elektromagnetismus" },
+  { id: 11, title: "Gleichstromkreise",                       accent: "#8b5cf6", group: "Elektromagnetismus" },
+  { id: 12, title: "Magnetismus und Induktion",               accent: "#7040e0", group: "Elektromagnetismus" },
+  { id: 13, title: "Wechselstrom und EM-Schwingungen",        accent: "#5a2cc9", group: "Elektromagnetismus" },
+  { id: 14, title: "Übungsaufgaben Mechanik",                 accent: "#3a6fd8", group: "Übungsaufgaben" },
+  { id: 15, title: "Übungsaufgaben Schwingungen & Wellen",    accent: "#27a865", group: "Übungsaufgaben" },
+  { id: 16, title: "Übungsaufgaben Thermodynamik",            accent: "#e8822a", group: "Übungsaufgaben" },
+  { id: 17, title: "Übungsaufgaben Elektromagnetismus",       accent: "#7040e0", group: "Übungsaufgaben" }
+];
+const NATWISS_TOPICS = [].concat(
+  NATWISS_CHAPTER1_TOPICS,
+  NATWISS_CHAPTER2_TOPICS,
+  NATWISS_CHAPTER3_TOPICS,
+  NATWISS_CHAPTER4_TOPICS,
+  NATWISS_CHAPTER5_TOPICS,
+  NATWISS_CHAPTER6_TOPICS,
+  NATWISS_CHAPTER7_TOPICS,
+  NATWISS_CHAPTER8_TOPICS,
+  NATWISS_CHAPTER9_TOPICS,
+  NATWISS_CHAPTER10_TOPICS,
+  NATWISS_CHAPTER11_TOPICS,
+  NATWISS_CHAPTER12_TOPICS,
+  NATWISS_CHAPTER13_TOPICS,
+  NATWISS_CHAPTER14_TOPICS,
+  NATWISS_CHAPTER15_TOPICS,
+  NATWISS_CHAPTER16_TOPICS,
+  NATWISS_CHAPTER17_TOPICS
+);
+
 const SUBJECTS = [
   {
     id: "statistik",
@@ -92,5 +131,14 @@ const SUBJECTS = [
     accent: "#8b5cf6",
     chapters: ORGAPERSONAL_CHAPTERS,
     topics: ORGAPERSONAL_TOPICS
+  },
+  {
+    id: "natwiss",
+    title: "Naturwissenschaftliche Grundlagen",
+    studiengang: ["Industriewirtschaft"],
+    icon: "⚛️",
+    accent: "#5b8def",
+    chapters: NATWISS_CHAPTERS,
+    topics: NATWISS_TOPICS
   }
 ];
