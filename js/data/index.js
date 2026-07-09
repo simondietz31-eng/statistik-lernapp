@@ -97,6 +97,31 @@ const NATWISS_TOPICS = [].concat(
   NATWISS_CHAPTER17_TOPICS
 );
 
+const FINV_CHAPTERS = [
+  { id: 1,  title: "Grundlagen und Finanzmärkte",                         accent: "#1f5b68", group: "Finanzierung" },
+  { id: 2,  title: "Betriebliches Finanzmanagement",                     accent: "#2b7284", group: "Finanzierung" },
+  { id: 3,  title: "Finanzierungsformen, Leverage & Kapitalkosten",       accent: "#3789a0", group: "Finanzierung" },
+  { id: 4,  title: "Außenfinanzierung",                                  accent: "#4aa0bb", group: "Finanzierung" },
+  { id: 5,  title: "Innenfinanzierung",                                  accent: "#5eb7d3", group: "Finanzierung" },
+  { id: 6,  title: "Grundlagen der Investitionsrechnung",                accent: "#6a3a5c", group: "Investition" },
+  { id: 7,  title: "Lineare Verzinsung",                                 accent: "#834b72", group: "Investition" },
+  { id: 8,  title: "Zinseszinsrechnung",                                 accent: "#9c5c89", group: "Investition" },
+  { id: 9,  title: "Dynamische Investitionsrechnung",                    accent: "#b56ea0", group: "Investition" },
+  { id: 10, title: "Renten, Annuitäten, Annuitätenmethode",              accent: "#d081b8", group: "Investition" }
+];
+const FINV_TOPICS = [].concat(
+  FINV_CHAPTER1_TOPICS,
+  FINV_CHAPTER2_TOPICS,
+  FINV_CHAPTER3_TOPICS,
+  FINV_CHAPTER4_TOPICS,
+  FINV_CHAPTER5_TOPICS,
+  FINV_CHAPTER6_TOPICS,
+  FINV_CHAPTER7_TOPICS,
+  FINV_CHAPTER8_TOPICS,
+  FINV_CHAPTER9_TOPICS,
+  FINV_CHAPTER10_TOPICS
+);
+
 const SUBJECTS = [
   {
     id: "statistik",
@@ -142,5 +167,14 @@ const SUBJECTS = [
     accent: "#5b8def",
     chapters: NATWISS_CHAPTERS,
     topics: NATWISS_TOPICS
+  },
+  {
+    id: "finv",
+    title: "Finanzierung & Investition",
+    studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    icon: "💶",
+    accent: "#1f5b68",
+    chapters: FINV_CHAPTERS,
+    topics: FINV_TOPICS
   }
 ];
