@@ -74,76 +74,16 @@ const NATWISS_CHAPTER10_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Was ist die SI-Einheit der elektrischen Ladung?",
-        options: ["Volt (V)", "Ampere (A)", "Coulomb (C)", "Farad (F)"],
-        correctIndex: 2,
-        explanation: "Die SI-Einheit der elektrischen Ladung ist das Coulomb (C). Es gilt: 1 C = 1 A·s."
-      },
-      {
-        id: "q2",
-        question: "Welchen Wert hat die Elementarladung e?",
-        options: ["9,1 × 10⁻³¹ C", "1,602 × 10⁻¹⁹ C", "6,022 × 10²³ C", "8,99 × 10⁹ C"],
-        correctIndex: 1,
-        explanation: "Die Elementarladung beträgt e = 1,602 × 10⁻¹⁹ C. Sie ist die kleinste frei vorkommende Ladungseinheit (Ladung eines Protons oder Elektrons)."
-      },
-      {
-        id: "q3",
-        question: "Wie ändert sich die Coulomb-Kraft, wenn der Abstand zwischen zwei Ladungen verdoppelt wird?",
-        options: ["Sie halbiert sich", "Sie verdoppelt sich", "Sie wird viermal kleiner", "Sie bleibt gleich"],
-        correctIndex: 2,
-        explanation: "Die Coulomb-Kraft ist umgekehrt proportional zum Quadrat des Abstands (F ∝ 1/r²). Bei doppeltem Abstand wird die Kraft um den Faktor 4 kleiner."
-      },
-      {
-        id: "q4",
-        question: "In welche Richtung zeigen elektrische Feldlinien?",
-        options: ["Von negativen zu positiven Ladungen", "Von positiven zu negativen Ladungen", "Immer senkrecht zur Verbindungslinie der Ladungen", "Kreisförmig um jede Ladung herum"],
-        correctIndex: 1,
-        explanation: "Elektrische Feldlinien beginnen bei positiven Ladungen und enden bei negativen Ladungen. Sie zeigen die Richtung an, in die eine positive Probeladung gedrückt würde."
-      },
-      {
-        id: "q5",
-        question: "Welche Einheit hat die elektrische Feldstärke E?",
-        options: ["Tesla (T)", "Coulomb pro Meter (C/m)", "Volt pro Meter (V/m)", "Watt (W)"],
-        correctIndex: 2,
-        explanation: "Die elektrische Feldstärke wird in V/m (Volt pro Meter) oder äquivalent in N/C (Newton pro Coulomb) angegeben: 1 V/m = 1 N/C."
-      },
-      {
-        id: "q6",
-        question: "Welchen Wert hat die elektrische Feldkonstante ε₀?",
-        options: ["8,99 × 10⁹ F/m", "8,854 × 10⁻¹² F/m", "1,602 × 10⁻¹⁹ F/m", "4π × 10⁻⁷ F/m"],
-        correctIndex: 1,
-        explanation: "Die Permittivität des Vakuums beträgt ε₀ = 8,854 × 10⁻¹² F/m. Sie stellt die Verknüpfung zwischen elektrischem Feld und Ladungsverteilung im Vakuum her."
-      },
-      {
-        id: "q7",
-        question: "Was besagt das Superpositionsprinzip für elektrische Kräfte?",
-        options: ["Felder heben sich immer gegenseitig auf", "Die Gesamtkraft ist die Vektorsumme aller Einzelkräfte", "Nur die stärkste Kraft wirkt", "Kräfte addieren sich nur bei gleichen Ladungsvorzeichen"],
-        correctIndex: 1,
-        explanation: "Das Superpositionsprinzip besagt, dass die resultierende Kraft auf eine Ladung die Vektorsumme aller von den anderen Ladungen ausgeübten Einzelkräfte ist."
-      },
-      {
-        id: "q8",
-        question: "Wie lautet das elektrische Feld zwischen zwei parallelen Platten (Spannung U, Abstand d)?",
-        options: ["E = U · d", "E = U / d", "E = d / U", "E = U² / d"],
-        correctIndex: 1,
-        explanation: "Im homogenen Feld eines Plattenkondensators gilt E = U/d. Das Feld ist konstant und senkrecht zu den Plattenoberflächen gerichtet."
-      },
-      {
-        id: "q9",
-        question: "Zwei Ladungen mit gleichem Vorzeichen werden einander angenähert. Was beobachtet man?",
-        options: ["Sie ziehen sich an", "Sie stoßen sich ab", "Es wirkt keine Kraft zwischen ihnen", "Die Kraft hängt nur von der Masse ab"],
-        correctIndex: 1,
-        explanation: "Gleichnamige Ladungen stoßen sich ab, ungleichnamige ziehen sich an. Dies ist ein fundamentales Grundprinzip der Elektrostatik."
-      },
-      {
-        id: "q10",
-        question: "Welche Aussage zur Quantisierung der elektrischen Ladung ist korrekt?",
-        options: ["Ladung kann jeden beliebigen kontinuierlichen Wert annehmen", "Jede Ladung ist ein ganzzahliges Vielfaches von e = 1,602 × 10⁻¹⁹ C", "Nur positive Ladungen sind quantisiert", "Quantisierung gilt nur im Atomkern"],
-        correctIndex: 1,
-        explanation: "Elektrische Ladung ist quantisiert: q = n·e mit n ∈ ℤ. Die kleinste frei vorkommende Einheit ist die Elementarladung e = 1,602 × 10⁻¹⁹ C."
-      }
+      { id: "q1", question: "Was ist die SI-Einheit der elektrischen Ladung?", options: ["Coulomb (C)", "Volt (V)", "Ampere (A)", "Farad (F)"], correctIndex: 0, explanation: "Die SI-Einheit der elektrischen Ladung ist das Coulomb (C). Es gilt: 1 C = 1 A·s." },
+      { id: "q2", question: "Welchen Wert hat die Elementarladung e?", options: ["8,99 × 10⁹ C", "1,602 × 10⁻¹⁹ C", "6,022 × 10²³ C", "9,1 × 10⁻³¹ C"], correctIndex: 1, explanation: "Die Elementarladung beträgt e = 1,602 × 10⁻¹⁹ C. Sie ist die kleinste frei vorkommende Ladungseinheit (Ladung eines Protons oder Elektrons)." },
+      { id: "q3", question: "Wie ändert sich die Coulomb-Kraft, wenn der Abstand zwischen zwei Ladungen verdoppelt wird?", options: ["Sie bleibt gleich", "Sie halbiert sich", "Sie wird viermal kleiner", "Sie verdoppelt sich"], correctIndex: 2, explanation: "Die Coulomb-Kraft ist umgekehrt proportional zum Quadrat des Abstands (F ∝ 1/r²). Bei doppeltem Abstand wird die Kraft um den Faktor 4 kleiner." },
+      { id: "q4", question: "In welche Richtung zeigen elektrische Feldlinien?", options: ["Kreisförmig um jede Ladung herum", "Von negativen zu positiven Ladungen", "Immer senkrecht zur Verbindungslinie der Ladungen", "Von positiven zu negativen Ladungen"], correctIndex: 3, explanation: "Elektrische Feldlinien beginnen bei positiven Ladungen und enden bei negativen Ladungen. Sie zeigen die Richtung an, in die eine positive Probeladung gedrückt würde." },
+      { id: "q5", question: "Welche Einheit hat die elektrische Feldstärke E?", options: ["Watt (W)", "Coulomb pro Meter (C/m)", "Volt pro Meter (V/m)", "Tesla (T)"], correctIndex: 2, explanation: "Die elektrische Feldstärke wird in V/m (Volt pro Meter) oder äquivalent in N/C (Newton pro Coulomb) angegeben: 1 V/m = 1 N/C." },
+      { id: "q6", question: "Welchen Wert hat die elektrische Feldkonstante ε₀?", options: ["4π × 10⁻⁷ F/m", "8,854 × 10⁻¹² F/m", "8,99 × 10⁹ F/m", "1,602 × 10⁻¹⁹ F/m"], correctIndex: 1, explanation: "Die Permittivität des Vakuums beträgt ε₀ = 8,854 × 10⁻¹² F/m. Sie stellt die Verknüpfung zwischen elektrischem Feld und Ladungsverteilung im Vakuum her." },
+      { id: "q7", question: "Was besagt das Superpositionsprinzip für elektrische Kräfte?", options: ["Nur die stärkste Kraft wirkt", "Kräfte addieren sich nur bei gleichen Ladungsvorzeichen", "Felder heben sich immer gegenseitig auf", "Die Gesamtkraft ist die Vektorsumme aller Einzelkräfte"], correctIndex: 3, explanation: "Das Superpositionsprinzip besagt, dass die resultierende Kraft auf eine Ladung die Vektorsumme aller von den anderen Ladungen ausgeübten Einzelkräfte ist." },
+      { id: "q8", question: "Wie lautet das elektrische Feld zwischen zwei parallelen Platten (Spannung U, Abstand d)?", options: ["E = U · d", "E = U / d", "E = U² / d", "E = d / U"], correctIndex: 1, explanation: "Im homogenen Feld eines Plattenkondensators gilt E = U/d. Das Feld ist konstant und senkrecht zu den Plattenoberflächen gerichtet." },
+      { id: "q9", question: "Zwei Ladungen mit gleichem Vorzeichen werden einander angenähert. Was beobachtet man?", options: ["Sie stoßen sich ab", "Sie ziehen sich an", "Die Kraft hängt nur von der Masse ab", "Es wirkt keine Kraft zwischen ihnen"], correctIndex: 0, explanation: "Gleichnamige Ladungen stoßen sich ab, ungleichnamige ziehen sich an. Dies ist ein fundamentales Grundprinzip der Elektrostatik." },
+      { id: "q10", question: "Welche Aussage zur Quantisierung der elektrischen Ladung ist korrekt?", options: ["Jede Ladung ist ein ganzzahliges Vielfaches von e = 1,602 × 10⁻¹⁹ C", "Ladung kann jeden beliebigen kontinuierlichen Wert annehmen", "Quantisierung gilt nur im Atomkern", "Nur positive Ladungen sind quantisiert"], correctIndex: 0, explanation: "Elektrische Ladung ist quantisiert: q = n·e mit n ∈ ℤ. Die kleinste frei vorkommende Einheit ist die Elementarladung e = 1,602 × 10⁻¹⁹ C." }
     ]
   },
   {
@@ -220,76 +160,16 @@ const NATWISS_CHAPTER10_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Was ist die Einheit des elektrischen Potenzials?",
-        options: ["Coulomb (C)", "Joule (J)", "Volt (V)", "Ampere (A)"],
-        correctIndex: 2,
-        explanation: "Das elektrische Potenzial wird in Volt (V) angegeben. Es gilt: 1 V = 1 J/C (Energie pro Ladung)."
-      },
-      {
-        id: "q2",
-        question: "Wie hängt das Potenzial einer Punktladung Q vom Abstand r ab?",
-        options: ["φ ∝ 1/r²", "φ ∝ 1/r", "φ ∝ r", "φ = konstant"],
-        correctIndex: 1,
-        explanation: "Das Potenzial einer Punktladung nimmt mit 1/r ab (φ = kQ/r), während die Feldstärke mit 1/r² abnimmt."
-      },
-      {
-        id: "q3",
-        question: "Wie ist die elektrische Feldstärke E mit dem Potenzial φ verknüpft?",
-        options: ["E = φ / r", "E = −dφ/dx", "E = φ · r", "E = dφ/dx"],
-        correctIndex: 1,
-        explanation: "Es gilt E = −dφ/dx: Das elektrische Feld zeigt in Richtung des stärksten Potenzialabfalls (von hohem zu niedrigem Potenzial)."
-      },
-      {
-        id: "q4",
-        question: "Welche Aussage zu Äquipotenzialflächen ist korrekt?",
-        options: ["Sie verlaufen parallel zu den Feldlinien", "Sie stehen senkrecht auf den elektrischen Feldlinien", "Auf ihnen ist die Feldstärke konstant", "Sie existieren nur bei Punktladungen"],
-        correctIndex: 1,
-        explanation: "Äquipotenzialflächen stehen immer senkrecht auf den Feldlinien, da entlang der Äquipotenzialfläche keine Feldkomponente existiert."
-      },
-      {
-        id: "q5",
-        question: "Welche Arbeit verrichtet das elektrische Feld, wenn eine Ladung q zwischen zwei Äquipotenzialflächen bewegt wird?",
-        options: ["W = q · φ", "W = q · (φ₁ − φ₂)", "W = q / (φ₁ − φ₂)", "W = 0, da das Feld keine Arbeit verrichtet"],
-        correctIndex: 1,
-        explanation: "Die Arbeit des elektrischen Feldes beim Verschieben der Ladung q zwischen Punkten mit Potenzial φ₁ und φ₂ beträgt W = q·(φ₁ − φ₂). Auf einer Äquipotenzialfläche (φ₁ = φ₂) ist die Arbeit null."
-      },
-      {
-        id: "q6",
-        question: "Was entspricht 1 Elektronenvolt (eV) in Joule?",
-        options: ["1 eV = 9,1 × 10⁻³¹ J", "1 eV = 1,602 × 10⁻¹⁹ J", "1 eV = 6,022 × 10²³ J", "1 eV = 3,6 × 10⁶ J"],
-        correctIndex: 1,
-        explanation: "1 eV = e · 1 V = 1,602 × 10⁻¹⁹ J. Das Elektronenvolt ist die Energie, die ein Elektron beim Durchlaufen einer Spannung von 1 V gewinnt."
-      },
-      {
-        id: "q7",
-        question: "Welchen Wert hat das elektrische Potenzial im Unendlichen (r → ∞) für eine Punktladung?",
-        options: ["φ → ∞", "φ → −∞", "φ → 0", "φ bleibt konstant"],
-        correctIndex: 2,
-        explanation: "Per Konvention wird das Potenzial im Unendlichen gleich null gesetzt: φ(r → ∞) = 0. Das Potenzial φ = kQ/r strebt für r → ∞ gegen null."
-      },
-      {
-        id: "q8",
-        question: "Welches Vorzeichen hat das Potenzial in der Nähe einer negativen Ladung?",
-        options: ["Immer positiv", "Immer negativ", "Null", "Abhängig von der Entfernung"],
-        correctIndex: 1,
-        explanation: "Das Potenzial einer negativen Ladung Q < 0 ist gemäß φ = kQ/r für alle r > 0 negativ. Je näher man der negativen Ladung kommt, desto mehr wird φ negativ."
-      },
-      {
-        id: "q9",
-        question: "Was versteht man unter der elektrischen Spannung U zwischen zwei Punkten?",
-        options: ["Die Summe der Potenziale beider Punkte", "Die Potenzialdifferenz φ₁ − φ₂", "Das Produkt aus Ladung und Potenzial", "Die elektrische Feldstärke multipliziert mit der Ladung"],
-        correctIndex: 1,
-        explanation: "Die elektrische Spannung U zwischen zwei Punkten ist die Potenzialdifferenz: U = φ₁ − φ₂. Gemessen wird sie in Volt (V)."
-      },
-      {
-        id: "q10",
-        question: "In welche Richtung zeigt das elektrische Feld im Vergleich zum Potenzialgradienten?",
-        options: ["In Richtung steigenden Potenzials", "In Richtung fallenden Potenzials", "Senkrecht zum Potenzialgradienten", "Parallel zu den Äquipotenzialflächen"],
-        correctIndex: 1,
-        explanation: "Das elektrische Feld zeigt stets in Richtung des stärksten Potenzialabfalls (fallenden Potenzials). Es gilt E = −dφ/dx, wobei das Minuszeichen diese Richtung ausdrückt."
-      }
+      { id: "q1", question: "Was ist die Einheit des elektrischen Potenzials?", options: ["Volt (V)", "Ampere (A)", "Coulomb (C)", "Joule (J)"], correctIndex: 0, explanation: "Das elektrische Potenzial wird in Volt (V) angegeben. Es gilt: 1 V = 1 J/C (Energie pro Ladung)." },
+      { id: "q2", question: "Wie hängt das Potenzial einer Punktladung Q vom Abstand r ab?", options: ["φ ∝ r", "φ = konstant", "φ ∝ 1/r", "φ ∝ 1/r²"], correctIndex: 2, explanation: "Das Potenzial einer Punktladung nimmt mit 1/r ab (φ = kQ/r), während die Feldstärke mit 1/r² abnimmt." },
+      { id: "q3", question: "Wie ist die elektrische Feldstärke E mit dem Potenzial φ verknüpft?", options: ["E = φ · r", "E = φ / r", "E = dφ/dx", "E = −dφ/dx"], correctIndex: 3, explanation: "Es gilt E = −dφ/dx: Das elektrische Feld zeigt in Richtung des stärksten Potenzialabfalls (von hohem zu niedrigem Potenzial)." },
+      { id: "q4", question: "Welche Aussage zu Äquipotenzialflächen ist korrekt?", options: ["Sie existieren nur bei Punktladungen", "Auf ihnen ist die Feldstärke konstant", "Sie verlaufen parallel zu den Feldlinien", "Sie stehen senkrecht auf den elektrischen Feldlinien"], correctIndex: 3, explanation: "Äquipotenzialflächen stehen immer senkrecht auf den Feldlinien, da entlang der Äquipotenzialfläche keine Feldkomponente existiert." },
+      { id: "q5", question: "Welche Arbeit verrichtet das elektrische Feld, wenn eine Ladung q zwischen zwei Äquipotenzialflächen bewegt wird?", options: ["W = q · φ", "W = q / (φ₁ − φ₂)", "W = q · (φ₁ − φ₂)", "W = 0, da das Feld keine Arbeit verrichtet"], correctIndex: 2, explanation: "Die Arbeit des elektrischen Feldes beim Verschieben der Ladung q zwischen Punkten mit Potenzial φ₁ und φ₂ beträgt W = q·(φ₁ − φ₂). Auf einer Äquipotenzialfläche (φ₁ = φ₂) ist die Arbeit null." },
+      { id: "q6", question: "Was entspricht 1 Elektronenvolt (eV) in Joule?", options: ["1 eV = 3,6 × 10⁶ J", "1 eV = 1,602 × 10⁻¹⁹ J", "1 eV = 6,022 × 10²³ J", "1 eV = 9,1 × 10⁻³¹ J"], correctIndex: 1, explanation: "1 eV = e · 1 V = 1,602 × 10⁻¹⁹ J. Das Elektronenvolt ist die Energie, die ein Elektron beim Durchlaufen einer Spannung von 1 V gewinnt." },
+      { id: "q7", question: "Welchen Wert hat das elektrische Potenzial im Unendlichen (r → ∞) für eine Punktladung?", options: ["φ → −∞", "φ → 0", "φ → ∞", "φ bleibt konstant"], correctIndex: 1, explanation: "Per Konvention wird das Potenzial im Unendlichen gleich null gesetzt: φ(r → ∞) = 0. Das Potenzial φ = kQ/r strebt für r → ∞ gegen null." },
+      { id: "q8", question: "Welches Vorzeichen hat das Potenzial in der Nähe einer negativen Ladung?", options: ["Null", "Immer positiv", "Immer negativ", "Abhängig von der Entfernung"], correctIndex: 2, explanation: "Das Potenzial einer negativen Ladung Q < 0 ist gemäß φ = kQ/r für alle r > 0 negativ. Je näher man der negativen Ladung kommt, desto mehr wird φ negativ." },
+      { id: "q9", question: "Was versteht man unter der elektrischen Spannung U zwischen zwei Punkten?", options: ["Die Potenzialdifferenz φ₁ − φ₂", "Das Produkt aus Ladung und Potenzial", "Die Summe der Potenziale beider Punkte", "Die elektrische Feldstärke multipliziert mit der Ladung"], correctIndex: 0, explanation: "Die elektrische Spannung U zwischen zwei Punkten ist die Potenzialdifferenz: U = φ₁ − φ₂. Gemessen wird sie in Volt (V)." },
+      { id: "q10", question: "In welche Richtung zeigt das elektrische Feld im Vergleich zum Potenzialgradienten?", options: ["In Richtung fallenden Potenzials", "Parallel zu den Äquipotenzialflächen", "In Richtung steigenden Potenzials", "Senkrecht zum Potenzialgradienten"], correctIndex: 0, explanation: "Das elektrische Feld zeigt stets in Richtung des stärksten Potenzialabfalls (fallenden Potenzials). Es gilt E = −dφ/dx, wobei das Minuszeichen diese Richtung ausdrückt." }
     ]
   },
   {
@@ -369,76 +249,16 @@ const NATWISS_CHAPTER10_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Was beschreibt die Kapazität eines Kondensators?",
-        options: ["Die gespeicherte Energie pro Volumen", "Das Verhältnis von gespeicherter Ladung zu angelegter Spannung", "Den elektrischen Widerstand des Dielektrikums", "Die maximale Spannung, die angelegt werden kann"],
-        correctIndex: 1,
-        explanation: "Die Kapazität C = Q/U beschreibt, wie viel Ladung Q ein Kondensator bei angelegter Spannung U speichern kann. Einheit: Farad (F)."
-      },
-      {
-        id: "q2",
-        question: "Welche Einheit hat die Kapazität?",
-        options: ["Ohm (Ω)", "Henry (H)", "Farad (F)", "Weber (Wb)"],
-        correctIndex: 2,
-        explanation: "Die Kapazität wird in Farad (F) gemessen. 1 F = 1 C/V. Praktisch gebräuchlich sind pF (10⁻¹² F), nF (10⁻⁹ F) und µF (10⁻⁶ F)."
-      },
-      {
-        id: "q3",
-        question: "Wie lautet die Formel für die Kapazität eines Plattenkondensators (Fläche A, Abstand d, relative Permittivität ε_r)?",
-        options: ["C = ε₀ · ε_r · d / A", "C = ε₀ · ε_r · A / d", "C = ε₀ · A · d", "C = ε_r / (ε₀ · A · d)"],
-        correctIndex: 1,
-        explanation: "Die Kapazität des Plattenkondensators ist C = ε₀ · ε_r · A/d. Sie steigt mit größerer Fläche A und kleinerem Abstand d."
-      },
-      {
-        id: "q4",
-        question: "Welchen Einfluss hat ein Dielektrikum (ε_r > 1) zwischen den Kondensatorplatten?",
-        options: ["Es verringert die Kapazität", "Es erhöht die Kapazität um den Faktor ε_r", "Es verändert die Kapazität nicht", "Es erhöht den Plattenabstand"],
-        correctIndex: 1,
-        explanation: "Ein Dielektrikum mit ε_r > 1 erhöht die Kapazität um den Faktor ε_r. Das Dielektrikum polarisiert sich und kompensiert einen Teil des äußeren Feldes, sodass mehr Ladung bei gleicher Spannung gespeichert werden kann."
-      },
-      {
-        id: "q5",
-        question: "Wie berechnet sich die Gesamtkapazität von zwei in Reihe geschalteten Kondensatoren C₁ und C₂?",
-        options: ["C_ges = C₁ + C₂", "1/C_ges = 1/C₁ + 1/C₂", "C_ges = C₁ · C₂", "C_ges = C₁ · C₂ / (C₁ + C₂)"],
-        correctIndex: 1,
-        explanation: "Bei Reihenschaltung gilt 1/C_ges = 1/C₁ + 1/C₂. Für zwei gleiche Kondensatoren C halbiert sich die Gesamtkapazität auf C/2."
-      },
-      {
-        id: "q6",
-        question: "Wie addieren sich Kondensatoren in Parallelschaltung?",
-        options: ["Die Kehrwerte addieren sich", "Die Kapazitäten addieren sich direkt", "Die Quadratwurzeln addieren sich", "Die Kapazitäten multiplizieren sich"],
-        correctIndex: 1,
-        explanation: "Bei Parallelschaltung gilt C_ges = C₁ + C₂ + ... Die Kapazitäten addieren sich, da an allen Kondensatoren die gleiche Spannung liegt und sich die Ladungen addieren."
-      },
-      {
-        id: "q7",
-        question: "Wie lautet die Formel für die im Kondensator gespeicherte Energie?",
-        options: ["E = C · U", "E = ½ · C · U²", "E = C² · U", "E = Q / C"],
-        correctIndex: 1,
-        explanation: "Die gespeicherte elektrische Energie beträgt E = ½·C·U². Alternativ: E = Q²/(2C) = ½·Q·U."
-      },
-      {
-        id: "q8",
-        question: "Welche Maßnahme erhöht die Kapazität eines Plattenkondensators am effektivsten?",
-        options: ["Den Plattenabstand verdoppeln", "Die Plattenfläche halbieren", "Den Plattenabstand halbieren", "Die Spannung erhöhen"],
-        correctIndex: 2,
-        explanation: "Da C ∝ 1/d gilt, halbiert eine Halbierung des Plattenabstands d die Kapazität. Warten – tatsächlich verdoppelt sich C bei Halbierung von d. Richtig: Den Plattenabstand halbieren verdoppelt C (C = ε₀εrA/d)."
-      },
-      {
-        id: "q9",
-        question: "Welchen typischen Kapazitätsbereich haben praktisch verwendete Kondensatoren?",
-        options: ["Nur im Farad-Bereich (1 F bis 1000 F)", "Von Picofarad (pF) bis Millifarad (mF)", "Immer genau 1 µF", "Von Megafarad bis Gigafarad"],
-        correctIndex: 1,
-        explanation: "Praktische Kondensatoren haben Kapazitäten im Bereich von wenigen pF (Hochfrequenzkondensatoren) bis zu mehreren mF (Elektrolytkondensatoren). 1 Farad ist eine außergewöhnlich große Kapazität."
-      },
-      {
-        id: "q10",
-        question: "Was gilt für die Energie in einem aufgeladenen Kondensator, wenn die Spannung verdoppelt wird (bei konstanter Kapazität)?",
-        options: ["Die Energie verdoppelt sich", "Die Energie halbiert sich", "Die Energie vervierfacht sich", "Die Energie bleibt gleich"],
-        correctIndex: 2,
-        explanation: "Da E = ½·C·U², vervierfacht sich die gespeicherte Energie bei doppelter Spannung (Faktor 2² = 4). Die Energie wächst quadratisch mit der Spannung."
-      }
+      { id: "q1", question: "Was beschreibt die Kapazität eines Kondensators?", options: ["Die gespeicherte Energie pro Volumen", "Das Verhältnis von gespeicherter Ladung zu angelegter Spannung", "Die maximale Spannung, die angelegt werden kann", "Den elektrischen Widerstand des Dielektrikums"], correctIndex: 1, explanation: "Die Kapazität C = Q/U beschreibt, wie viel Ladung Q ein Kondensator bei angelegter Spannung U speichern kann. Einheit: Farad (F)." },
+      { id: "q2", question: "Welche Einheit hat die Kapazität?", options: ["Weber (Wb)", "Ohm (Ω)", "Henry (H)", "Farad (F)"], correctIndex: 3, explanation: "Die Kapazität wird in Farad (F) gemessen. 1 F = 1 C/V. Praktisch gebräuchlich sind pF (10⁻¹² F), nF (10⁻⁹ F) und µF (10⁻⁶ F)." },
+      { id: "q3", question: "Wie lautet die Formel für die Kapazität eines Plattenkondensators (Fläche A, Abstand d, relative Permittivität ε_r)?", options: ["C = ε₀ · A · d", "C = ε₀ · ε_r · d / A", "C = ε_r / (ε₀ · A · d)", "C = ε₀ · ε_r · A / d"], correctIndex: 3, explanation: "Die Kapazität des Plattenkondensators ist C = ε₀ · ε_r · A/d. Sie steigt mit größerer Fläche A und kleinerem Abstand d." },
+      { id: "q4", question: "Welchen Einfluss hat ein Dielektrikum (ε_r > 1) zwischen den Kondensatorplatten?", options: ["Es verringert die Kapazität", "Es erhöht den Plattenabstand", "Es erhöht die Kapazität um den Faktor ε_r", "Es verändert die Kapazität nicht"], correctIndex: 2, explanation: "Ein Dielektrikum mit ε_r > 1 erhöht die Kapazität um den Faktor ε_r. Das Dielektrikum polarisiert sich und kompensiert einen Teil des äußeren Feldes, sodass mehr Ladung bei gleicher Spannung gespeichert werden kann." },
+      { id: "q5", question: "Wie berechnet sich die Gesamtkapazität von zwei in Reihe geschalteten Kondensatoren C₁ und C₂?", options: ["1/C_ges = 1/C₁ + 1/C₂", "C_ges = C₁ · C₂ / (C₁ + C₂)", "C_ges = C₁ · C₂", "C_ges = C₁ + C₂"], correctIndex: 0, explanation: "Bei Reihenschaltung gilt 1/C_ges = 1/C₁ + 1/C₂. Für zwei gleiche Kondensatoren C halbiert sich die Gesamtkapazität auf C/2." },
+      { id: "q6", question: "Wie addieren sich Kondensatoren in Parallelschaltung?", options: ["Die Quadratwurzeln addieren sich", "Die Kapazitäten addieren sich direkt", "Die Kehrwerte addieren sich", "Die Kapazitäten multiplizieren sich"], correctIndex: 1, explanation: "Bei Parallelschaltung gilt C_ges = C₁ + C₂ + ... Die Kapazitäten addieren sich, da an allen Kondensatoren die gleiche Spannung liegt und sich die Ladungen addieren." },
+      { id: "q7", question: "Wie lautet die Formel für die im Kondensator gespeicherte Energie?", options: ["E = Q / C", "E = C · U", "E = ½ · C · U²", "E = C² · U"], correctIndex: 2, explanation: "Die gespeicherte elektrische Energie beträgt E = ½·C·U². Alternativ: E = Q²/(2C) = ½·Q·U." },
+      { id: "q8", question: "Welche Maßnahme erhöht die Kapazität eines Plattenkondensators am effektivsten?", options: ["Die Plattenfläche halbieren", "Den Plattenabstand halbieren", "Den Plattenabstand verdoppeln", "Die Spannung erhöhen"], correctIndex: 1, explanation: "Da C ∝ 1/d gilt, halbiert eine Halbierung des Plattenabstands d die Kapazität. Warten – tatsächlich verdoppelt sich C bei Halbierung von d. Richtig: Den Plattenabstand halbieren verdoppelt C (C = ε₀εrA/d)." },
+      { id: "q9", question: "Welchen typischen Kapazitätsbereich haben praktisch verwendete Kondensatoren?", options: ["Von Megafarad bis Gigafarad", "Nur im Farad-Bereich (1 F bis 1000 F)", "Immer genau 1 µF", "Von Picofarad (pF) bis Millifarad (mF)"], correctIndex: 3, explanation: "Praktische Kondensatoren haben Kapazitäten im Bereich von wenigen pF (Hochfrequenzkondensatoren) bis zu mehreren mF (Elektrolytkondensatoren). 1 Farad ist eine außergewöhnlich große Kapazität." },
+      { id: "q10", question: "Was gilt für die Energie in einem aufgeladenen Kondensator, wenn die Spannung verdoppelt wird (bei konstanter Kapazität)?", options: ["Die Energie vervierfacht sich", "Die Energie verdoppelt sich", "Die Energie bleibt gleich", "Die Energie halbiert sich"], correctIndex: 0, explanation: "Da E = ½·C·U², vervierfacht sich die gespeicherte Energie bei doppelter Spannung (Faktor 2² = 4). Die Energie wächst quadratisch mit der Spannung." }
     ]
   }
 ];

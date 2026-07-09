@@ -77,126 +77,16 @@ const NATWISS_CHAPTER1_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Was untersucht die Kinematik?",
-        options: [
-          "Bewegungen ohne Berücksichtigung der Ursachen (Kräfte)",
-          "Nur Kräfte und ihre Wirkungen auf Körper",
-          "Thermodynamische Prozesse in Gasen",
-          "Die Wechselwirkung zwischen elektrischen Feldern"
-        ],
-        correctIndex: 0,
-        explanation: "Die Kinematik beschreibt die Geometrie der Bewegung (Ort, Geschwindigkeit, Beschleunigung), ohne die verursachenden Kräfte zu berücksichtigen."
-      },
-      {
-        id: "q2",
-        question: "Welche Einheit hat die Beschleunigung im SI-System?",
-        options: [
-          "m/s",
-          "m/s²",
-          "kg·m/s",
-          "N/m"
-        ],
-        correctIndex: 1,
-        explanation: "Die Beschleunigung ist die Änderung der Geschwindigkeit pro Zeiteinheit: [v/t] = [(m/s)/s] = m/s²."
-      },
-      {
-        id: "q3",
-        question: "Ein Körper startet aus der Ruhe und wird gleichmäßig beschleunigt. Wie lautet der zurückgelegte Weg nach Zeit t?",
-        options: [
-          "s = v₀ · t",
-          "s = ½ · a · t²",
-          "s = a · t",
-          "s = v · t + ½ · a²"
-        ],
-        correctIndex: 1,
-        explanation: "Bei gleichmäßiger Beschleunigung aus der Ruhe (v₀ = 0) gilt: s = ½ · a · t²."
-      },
-      {
-        id: "q4",
-        question: "Wie groß ist die Erdbeschleunigung g in der Nähe der Erdoberfläche?",
-        options: [
-          "8,91 m/s²",
-          "10,00 m/s²",
-          "9,81 m/s²",
-          "9,18 m/s²"
-        ],
-        correctIndex: 2,
-        explanation: "Die Erdbeschleunigung beträgt g = 9,81 m/s² in der Nähe der Erdoberfläche."
-      },
-      {
-        id: "q5",
-        question: "Bei welchem Wurfwinkel ist die Wurfweite eines schiefen Wurfs (ohne Luftwiderstand) maximal?",
-        options: [
-          "30°",
-          "60°",
-          "90°",
-          "45°"
-        ],
-        correctIndex: 3,
-        explanation: "Die Reichweite R = v₀²·sin(2α)/g ist maximal, wenn sin(2α) = 1, also 2α = 90° und damit α = 45°."
-      },
-      {
-        id: "q6",
-        question: "Zwei Kugeln – eine schwere und eine leichte – werden gleichzeitig aus derselben Höhe fallen gelassen. Was gilt im Vakuum?",
-        options: [
-          "Die schwere Kugel trifft zuerst auf",
-          "Beide Kugeln treffen gleichzeitig auf",
-          "Die leichte Kugel trifft zuerst auf",
-          "Es kommt auf die Form der Kugeln an"
-        ],
-        correctIndex: 1,
-        explanation: "Im Vakuum fallen alle Körper gleich schnell. Die Erdbeschleunigung g wirkt unabhängig von der Masse (Galilei-Experiment)."
-      },
-      {
-        id: "q7",
-        question: "Was ist die Momentangeschwindigkeit mathematisch?",
-        options: [
-          "Das Produkt aus Weg und Zeit",
-          "Der Quotient aus Gesamtweg und Gesamtzeit (Durchschnittsgeschwindigkeit)",
-          "Die zeitliche Ableitung des Ortsvektors",
-          "Die zeitliche Ableitung der Beschleunigung"
-        ],
-        correctIndex: 2,
-        explanation: "Die Momentangeschwindigkeit ist definiert als v = dr/dt, also die zeitliche Ableitung des Ortsvektors."
-      },
-      {
-        id: "q8",
-        question: "Was passiert mit der horizontalen Geschwindigkeitskomponente beim schiefen Wurf (ohne Luftwiderstand)?",
-        options: [
-          "Sie nimmt durch g ständig ab",
-          "Sie ist null",
-          "Sie bleibt konstant (da keine Kraft horizontal wirkt)",
-          "Sie verdoppelt sich bei jedem Meter"
-        ],
-        correctIndex: 2,
-        explanation: "Horizontal wirkt keine Kraft, daher bleibt die horizontale Komponente v_x = v₀·cos(α) während des gesamten Fluges konstant."
-      },
-      {
-        id: "q9",
-        question: "Ein Körper bewegt sich gleichförmig (a = 0). Wie verhält sich seine Geschwindigkeit?",
-        options: [
-          "Sie nimmt linear zu",
-          "Sie bleibt konstant",
-          "Sie nimmt quadratisch ab",
-          "Sie schwankt periodisch"
-        ],
-        correctIndex: 1,
-        explanation: "Bei gleichförmiger Bewegung ist die Beschleunigung null, daher bleibt die Geschwindigkeit konstant: v = const."
-      },
-      {
-        id: "q10",
-        question: "Welche Formel gilt für die Fallzeit t beim freien Fall aus der Höhe h?",
-        options: [
-          "t = h / g",
-          "t = √(2h / g)",
-          "t = 2h / g",
-          "t = √(h / g)"
-        ],
-        correctIndex: 1,
-        explanation: "Aus h = ½ · g · t² folgt durch Umstellen: t = √(2h/g)."
-      }
+      { id: "q1", question: "Was untersucht die Kinematik?", options: ["Die Wechselwirkung zwischen elektrischen Feldern", "Bewegungen ohne Berücksichtigung der Ursachen (Kräfte)", "Nur Kräfte und ihre Wirkungen auf Körper", "Thermodynamische Prozesse in Gasen"], correctIndex: 1, explanation: "Die Kinematik beschreibt die Geometrie der Bewegung (Ort, Geschwindigkeit, Beschleunigung), ohne die verursachenden Kräfte zu berücksichtigen." },
+      { id: "q2", question: "Welche Einheit hat die Beschleunigung im SI-System?", options: ["N/m", "kg·m/s", "m/s²", "m/s"], correctIndex: 2, explanation: "Die Beschleunigung ist die Änderung der Geschwindigkeit pro Zeiteinheit: [v/t] = [(m/s)/s] = m/s²." },
+      { id: "q3", question: "Ein Körper startet aus der Ruhe und wird gleichmäßig beschleunigt. Wie lautet der zurückgelegte Weg nach Zeit t?", options: ["s = v · t + ½ · a²", "s = v₀ · t", "s = ½ · a · t²", "s = a · t"], correctIndex: 2, explanation: "Bei gleichmäßiger Beschleunigung aus der Ruhe (v₀ = 0) gilt: s = ½ · a · t²." },
+      { id: "q4", question: "Wie groß ist die Erdbeschleunigung g in der Nähe der Erdoberfläche?", options: ["8,91 m/s²", "10,00 m/s²", "9,18 m/s²", "9,81 m/s²"], correctIndex: 3, explanation: "Die Erdbeschleunigung beträgt g = 9,81 m/s² in der Nähe der Erdoberfläche." },
+      { id: "q5", question: "Bei welchem Wurfwinkel ist die Wurfweite eines schiefen Wurfs (ohne Luftwiderstand) maximal?", options: ["30°", "60°", "90°", "45°"], correctIndex: 3, explanation: "Die Reichweite R = v₀²·sin(2α)/g ist maximal, wenn sin(2α) = 1, also 2α = 90° und damit α = 45°." },
+      { id: "q6", question: "Zwei Kugeln – eine schwere und eine leichte – werden gleichzeitig aus derselben Höhe fallen gelassen. Was gilt im Vakuum?", options: ["Die leichte Kugel trifft zuerst auf", "Beide Kugeln treffen gleichzeitig auf", "Es kommt auf die Form der Kugeln an", "Die schwere Kugel trifft zuerst auf"], correctIndex: 1, explanation: "Im Vakuum fallen alle Körper gleich schnell. Die Erdbeschleunigung g wirkt unabhängig von der Masse (Galilei-Experiment)." },
+      { id: "q7", question: "Was ist die Momentangeschwindigkeit mathematisch?", options: ["Das Produkt aus Weg und Zeit", "Der Quotient aus Gesamtweg und Gesamtzeit (Durchschnittsgeschwindigkeit)", "Die zeitliche Ableitung des Ortsvektors", "Die zeitliche Ableitung der Beschleunigung"], correctIndex: 2, explanation: "Die Momentangeschwindigkeit ist definiert als v = dr/dt, also die zeitliche Ableitung des Ortsvektors." },
+      { id: "q8", question: "Was passiert mit der horizontalen Geschwindigkeitskomponente beim schiefen Wurf (ohne Luftwiderstand)?", options: ["Sie bleibt konstant (da keine Kraft horizontal wirkt)", "Sie verdoppelt sich bei jedem Meter", "Sie ist null", "Sie nimmt durch g ständig ab"], correctIndex: 0, explanation: "Horizontal wirkt keine Kraft, daher bleibt die horizontale Komponente v_x = v₀·cos(α) während des gesamten Fluges konstant." },
+      { id: "q9", question: "Ein Körper bewegt sich gleichförmig (a = 0). Wie verhält sich seine Geschwindigkeit?", options: ["Sie bleibt konstant", "Sie schwankt periodisch", "Sie nimmt quadratisch ab", "Sie nimmt linear zu"], correctIndex: 0, explanation: "Bei gleichförmiger Bewegung ist die Beschleunigung null, daher bleibt die Geschwindigkeit konstant: v = const." },
+      { id: "q10", question: "Welche Formel gilt für die Fallzeit t beim freien Fall aus der Höhe h?", options: ["t = h / g", "t = √(2h / g)", "t = 2h / g", "t = √(h / g)"], correctIndex: 1, explanation: "Aus h = ½ · g · t² folgt durch Umstellen: t = √(2h/g)." }
     ]
   },
   {
@@ -277,126 +167,16 @@ const NATWISS_CHAPTER1_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Welche Einheit hat die Winkelgeschwindigkeit ω?",
-        options: [
-          "m/s",
-          "Hz",
-          "rad/s",
-          "Umdrehungen/min"
-        ],
-        correctIndex: 2,
-        explanation: "Die Winkelgeschwindigkeit ω = dφ/dt hat die Einheit Radiant pro Sekunde (rad/s)."
-      },
-      {
-        id: "q2",
-        question: "In welche Richtung zeigt die Zentripetalbeschleunigung bei einer Kreisbewegung?",
-        options: [
-          "In Bewegungsrichtung (tangential, vorwärts)",
-          "Senkrecht nach oben",
-          "Zur Kreismitte hin (radial einwärts)",
-          "Von der Kreismitte weg (radial auswärts)"
-        ],
-        correctIndex: 2,
-        explanation: "Zentripetal bedeutet 'zur Mitte strebend'. Die Zentripetalbeschleunigung zeigt stets radial zur Kreismitte."
-      },
-      {
-        id: "q3",
-        question: "Wie lautet die Formel für die Bahngeschwindigkeit v bei Kreisbewegung mit Winkelgeschwindigkeit ω und Radius r?",
-        options: [
-          "v = ω / r",
-          "v = ω² · r",
-          "v = ω · r",
-          "v = r / ω"
-        ],
-        correctIndex: 2,
-        explanation: "Die Bahngeschwindigkeit (Tangentialgeschwindigkeit) ergibt sich zu v = ω · r."
-      },
-      {
-        id: "q4",
-        question: "Ein Körper bewegt sich auf einer Kreisbahn mit konstantem Betrag der Geschwindigkeit. Ist eine Beschleunigung vorhanden?",
-        options: [
-          "Nein, da der Betrag der Geschwindigkeit konstant ist",
-          "Ja, weil die Richtung der Geschwindigkeit sich ständig ändert",
-          "Nur wenn der Kreisradius sehr klein ist",
-          "Nein, Beschleunigung bedeutet immer Geschwindigkeitszunahme"
-        ],
-        correctIndex: 1,
-        explanation: "Auch bei konstantem Betrag der Geschwindigkeit ändert sich die Richtung bei Kreisbewegung ständig. Diese Richtungsänderung ist die Zentripetalbeschleunigung."
-      },
-      {
-        id: "q5",
-        question: "Wie hängen Frequenz f und Winkelgeschwindigkeit ω zusammen?",
-        options: [
-          "ω = f",
-          "ω = f / (2π)",
-          "ω = 2π · f",
-          "ω = f²"
-        ],
-        correctIndex: 2,
-        explanation: "Eine vollständige Umdrehung entspricht 2π Radiant. Bei f Umdrehungen pro Sekunde gilt daher: ω = 2π · f."
-      },
-      {
-        id: "q6",
-        question: "Ein Rad mit Radius r = 0,5 m dreht sich mit ω = 10 rad/s. Wie groß ist die Bahngeschwindigkeit am Rand?",
-        options: [
-          "5 m/s",
-          "20 m/s",
-          "0,05 m/s",
-          "50 m/s"
-        ],
-        correctIndex: 0,
-        explanation: "v = ω · r = 10 · 0,5 = 5 m/s."
-      },
-      {
-        id: "q7",
-        question: "Was versteht man unter der Periode T einer Kreisbewegung?",
-        options: [
-          "Die Anzahl der Umdrehungen pro Sekunde",
-          "Die Winkelgeschwindigkeit geteilt durch 2π",
-          "Die Zeit für eine vollständige Umdrehung",
-          "Die zurückgelegte Strecke bei einer Umdrehung"
-        ],
-        correctIndex: 2,
-        explanation: "Die Periode T (Umlaufzeit) ist die Zeit für genau eine vollständige Umdrehung (360° = 2π rad)."
-      },
-      {
-        id: "q8",
-        question: "Wie ändert sich die Zentripetalbeschleunigung, wenn die Bahngeschwindigkeit verdoppelt wird (r konstant)?",
-        options: [
-          "Sie verdoppelt sich",
-          "Sie vervierfacht sich",
-          "Sie halbiert sich",
-          "Sie bleibt gleich"
-        ],
-        correctIndex: 1,
-        explanation: "Da a_z = v²/r gilt, ergibt sich bei Verdoppelung von v: a_z' = (2v)²/r = 4v²/r = 4 · a_z. Die Beschleunigung vervierfacht sich."
-      },
-      {
-        id: "q9",
-        question: "Wie viele Radiant entsprechen 360°?",
-        options: [
-          "π rad",
-          "4π rad",
-          "π/2 rad",
-          "2π rad"
-        ],
-        correctIndex: 3,
-        explanation: "Ein vollständiger Kreis entspricht 2π Radiant ≈ 6,283 rad = 360°."
-      },
-      {
-        id: "q10",
-        question: "Ein Satellit umkreist die Erde in einer Kreisbahn. Welche Kräftegleichung muss erfüllt sein?",
-        options: [
-          "Die Gravitationskraft ist null (der Satellit schwebt frei)",
-          "Gravitationskraft gleich Zentripetalkraft: F_G = m · v² / r",
-          "Die Bahngeschwindigkeit des Satelliten ist null",
-          "Nur die Masse des Satelliten bestimmt die Umlaufbahn"
-        ],
-        correctIndex: 1,
-        explanation: "Die Gravitationskraft wirkt als Zentripetalkraft: F_G = m · g(r) = m · v²/r. Daraus lässt sich die erforderliche Kreisbahngeschwindigkeit berechnen."
-      }
+      { id: "q1", question: "Welche Einheit hat die Winkelgeschwindigkeit ω?", options: ["m/s", "Umdrehungen/min", "Hz", "rad/s"], correctIndex: 3, explanation: "Die Winkelgeschwindigkeit ω = dφ/dt hat die Einheit Radiant pro Sekunde (rad/s)." },
+      { id: "q2", question: "In welche Richtung zeigt die Zentripetalbeschleunigung bei einer Kreisbewegung?", options: ["Zur Kreismitte hin (radial einwärts)", "In Bewegungsrichtung (tangential, vorwärts)", "Senkrecht nach oben", "Von der Kreismitte weg (radial auswärts)"], correctIndex: 0, explanation: "Zentripetal bedeutet 'zur Mitte strebend'. Die Zentripetalbeschleunigung zeigt stets radial zur Kreismitte." },
+      { id: "q3", question: "Wie lautet die Formel für die Bahngeschwindigkeit v bei Kreisbewegung mit Winkelgeschwindigkeit ω und Radius r?", options: ["v = ω · r", "v = ω / r", "v = r / ω", "v = ω² · r"], correctIndex: 0, explanation: "Die Bahngeschwindigkeit (Tangentialgeschwindigkeit) ergibt sich zu v = ω · r." },
+      { id: "q4", question: "Ein Körper bewegt sich auf einer Kreisbahn mit konstantem Betrag der Geschwindigkeit. Ist eine Beschleunigung vorhanden?", options: ["Nein, Beschleunigung bedeutet immer Geschwindigkeitszunahme", "Nur wenn der Kreisradius sehr klein ist", "Nein, da der Betrag der Geschwindigkeit konstant ist", "Ja, weil die Richtung der Geschwindigkeit sich ständig ändert"], correctIndex: 3, explanation: "Auch bei konstantem Betrag der Geschwindigkeit ändert sich die Richtung bei Kreisbewegung ständig. Diese Richtungsänderung ist die Zentripetalbeschleunigung." },
+      { id: "q5", question: "Wie hängen Frequenz f und Winkelgeschwindigkeit ω zusammen?", options: ["ω = f", "ω = f²", "ω = 2π · f", "ω = f / (2π)"], correctIndex: 2, explanation: "Eine vollständige Umdrehung entspricht 2π Radiant. Bei f Umdrehungen pro Sekunde gilt daher: ω = 2π · f." },
+      { id: "q6", question: "Ein Rad mit Radius r = 0,5 m dreht sich mit ω = 10 rad/s. Wie groß ist die Bahngeschwindigkeit am Rand?", options: ["0,05 m/s", "20 m/s", "5 m/s", "50 m/s"], correctIndex: 2, explanation: "v = ω · r = 10 · 0,5 = 5 m/s." },
+      { id: "q7", question: "Was versteht man unter der Periode T einer Kreisbewegung?", options: ["Die Winkelgeschwindigkeit geteilt durch 2π", "Die Anzahl der Umdrehungen pro Sekunde", "Die zurückgelegte Strecke bei einer Umdrehung", "Die Zeit für eine vollständige Umdrehung"], correctIndex: 3, explanation: "Die Periode T (Umlaufzeit) ist die Zeit für genau eine vollständige Umdrehung (360° = 2π rad)." },
+      { id: "q8", question: "Wie ändert sich die Zentripetalbeschleunigung, wenn die Bahngeschwindigkeit verdoppelt wird (r konstant)?", options: ["Sie verdoppelt sich", "Sie vervierfacht sich", "Sie halbiert sich", "Sie bleibt gleich"], correctIndex: 1, explanation: "Da a_z = v²/r gilt, ergibt sich bei Verdoppelung von v: a_z' = (2v)²/r = 4v²/r = 4 · a_z. Die Beschleunigung vervierfacht sich." },
+      { id: "q9", question: "Wie viele Radiant entsprechen 360°?", options: ["π rad", "2π rad", "4π rad", "π/2 rad"], correctIndex: 1, explanation: "Ein vollständiger Kreis entspricht 2π Radiant ≈ 6,283 rad = 360°." },
+      { id: "q10", question: "Ein Satellit umkreist die Erde in einer Kreisbahn. Welche Kräftegleichung muss erfüllt sein?", options: ["Gravitationskraft gleich Zentripetalkraft: F_G = m · v² / r", "Nur die Masse des Satelliten bestimmt die Umlaufbahn", "Die Gravitationskraft ist null (der Satellit schwebt frei)", "Die Bahngeschwindigkeit des Satelliten ist null"], correctIndex: 0, explanation: "Die Gravitationskraft wirkt als Zentripetalkraft: F_G = m · g(r) = m · v²/r. Daraus lässt sich die erforderliche Kreisbahngeschwindigkeit berechnen." }
     ]
   },
   {
@@ -493,126 +273,16 @@ const NATWISS_CHAPTER1_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Wie viele SI-Basiseinheiten gibt es?",
-        options: [
-          "5",
-          "7",
-          "10",
-          "6"
-        ],
-        correctIndex: 1,
-        explanation: "Es gibt genau 7 SI-Basiseinheiten: m (Länge), kg (Masse), s (Zeit), K (Temperatur), A (Stromstärke), mol (Stoffmenge), cd (Lichtstärke)."
-      },
-      {
-        id: "q2",
-        question: "Was bedeutet der Vorsatz 'Mikro' (μ)?",
-        options: [
-          "10⁻³",
-          "10⁻⁹",
-          "10⁻⁶",
-          "10⁻¹²"
-        ],
-        correctIndex: 2,
-        explanation: "Mikro (μ) steht für den Faktor 10⁻⁶. Beispiel: 1 μm = 10⁻⁶ m = 0,000001 m."
-      },
-      {
-        id: "q3",
-        question: "Welche Einheit hat die Gravitationskonstante G (aus F = G·m₁·m₂/r²)?",
-        options: [
-          "m³/(kg·s²)",
-          "N/m²",
-          "kg·m/s²",
-          "J/K"
-        ],
-        correctIndex: 0,
-        explanation: "Aus F = G·m₁·m₂/r² folgt: [G] = [F·r²/(m₁·m₂)] = N·m²/kg² = m³/(kg·s²)."
-      },
-      {
-        id: "q4",
-        question: "Wie groß ist die Lichtgeschwindigkeit im Vakuum?",
-        options: [
-          "c = 3·10⁶ m/s",
-          "c = 3·10⁸ m/s",
-          "c = 3·10¹⁰ m/s",
-          "c = 3·10⁴ m/s"
-        ],
-        correctIndex: 1,
-        explanation: "Die Lichtgeschwindigkeit im Vakuum beträgt c ≈ 3·10⁸ m/s = 300.000 km/s."
-      },
-      {
-        id: "q5",
-        question: "Wie rechnet man km/h in m/s um?",
-        options: [
-          "Multiplizieren mit 3,6",
-          "Dividieren durch 3,6",
-          "Multiplizieren mit 100",
-          "Dividieren durch 36"
-        ],
-        correctIndex: 1,
-        explanation: "1 km/h = 1000 m / 3600 s = 1/3,6 m/s. Daher: v[m/s] = v[km/h] / 3,6."
-      },
-      {
-        id: "q6",
-        question: "Was gibt die Avogadro-Konstante N_A an?",
-        options: [
-          "Die Anzahl der Elektronen in einem Atom",
-          "Die Anzahl der Teilchen (Atome/Moleküle) in einem Mol (≈ 6,022·10²³ mol⁻¹)",
-          "Die universelle Gaskonstante",
-          "Die Anzahl der Protonen in 1 kg Wasserstoff"
-        ],
-        correctIndex: 1,
-        explanation: "Die Avogadro-Konstante N_A = 6,022·10²³ mol⁻¹ gibt die Anzahl der Teilchen (Atome, Moleküle) in einem Mol an."
-      },
-      {
-        id: "q7",
-        question: "Wozu dient die Dimensionsanalyse in der Physik?",
-        options: [
-          "Um die räumliche Ausdehnung von Körpern zu messen",
-          "Um sicherzustellen, dass eine Gleichung auf beiden Seiten dieselbe Einheit hat",
-          "Um Naturkonstanten experimentell zu bestimmen",
-          "Um SI-Einheiten in nicht-metrische Einheiten umzurechnen"
-        ],
-        correctIndex: 1,
-        explanation: "Die Dimensionsanalyse überprüft, ob beide Seiten einer physikalischen Gleichung dieselbe Dimension (Einheit) haben. Sie ist ein wichtiges Werkzeug zur Fehlersuche."
-      },
-      {
-        id: "q8",
-        question: "Wie viel Joule entsprechen 1 Kilowattstunde (kWh)?",
-        options: [
-          "3,6·10³ J",
-          "3,6·10⁶ J",
-          "3,6·10⁹ J",
-          "1000 J"
-        ],
-        correctIndex: 1,
-        explanation: "1 kWh = 1000 W · 3600 s = 3,6·10⁶ J = 3,6 MJ."
-      },
-      {
-        id: "q9",
-        question: "Welche SI-Einheit gehört zur Temperatur?",
-        options: [
-          "Grad Celsius (°C)",
-          "Kelvin (K)",
-          "Grad Fahrenheit (°F)",
-          "Joule pro Mol (J/mol)"
-        ],
-        correctIndex: 1,
-        explanation: "Die SI-Basiseinheit der Temperatur ist Kelvin (K). Der Nullpunkt liegt bei 0 K = –273,15 °C (absoluter Nullpunkt)."
-      },
-      {
-        id: "q10",
-        question: "Was bedeutet der SI-Vorsatz 'Giga' (G)?",
-        options: [
-          "10⁶",
-          "10⁹",
-          "10¹²",
-          "10³"
-        ],
-        correctIndex: 1,
-        explanation: "Giga (G) steht für den Faktor 10⁹. Beispiel: 1 GHz = 10⁹ Hz = 1 Milliarde Hertz."
-      }
+      { id: "q1", question: "Wie viele SI-Basiseinheiten gibt es?", options: ["7", "6", "10", "5"], correctIndex: 0, explanation: "Es gibt genau 7 SI-Basiseinheiten: m (Länge), kg (Masse), s (Zeit), K (Temperatur), A (Stromstärke), mol (Stoffmenge), cd (Lichtstärke)." },
+      { id: "q2", question: "Was bedeutet der Vorsatz 'Mikro' (μ)?", options: ["10⁻⁹", "10⁻³", "10⁻⁶", "10⁻¹²"], correctIndex: 2, explanation: "Mikro (μ) steht für den Faktor 10⁻⁶. Beispiel: 1 μm = 10⁻⁶ m = 0,000001 m." },
+      { id: "q3", question: "Welche Einheit hat die Gravitationskonstante G (aus F = G·m₁·m₂/r²)?", options: ["m³/(kg·s²)", "N/m²", "kg·m/s²", "J/K"], correctIndex: 0, explanation: "Aus F = G·m₁·m₂/r² folgt: [G] = [F·r²/(m₁·m₂)] = N·m²/kg² = m³/(kg·s²)." },
+      { id: "q4", question: "Wie groß ist die Lichtgeschwindigkeit im Vakuum?", options: ["c = 3·10⁶ m/s", "c = 3·10¹⁰ m/s", "c = 3·10⁸ m/s", "c = 3·10⁴ m/s"], correctIndex: 2, explanation: "Die Lichtgeschwindigkeit im Vakuum beträgt c ≈ 3·10⁸ m/s = 300.000 km/s." },
+      { id: "q5", question: "Wie rechnet man km/h in m/s um?", options: ["Multiplizieren mit 3,6", "Multiplizieren mit 100", "Dividieren durch 36", "Dividieren durch 3,6"], correctIndex: 3, explanation: "1 km/h = 1000 m / 3600 s = 1/3,6 m/s. Daher: v[m/s] = v[km/h] / 3,6." },
+      { id: "q6", question: "Was gibt die Avogadro-Konstante N_A an?", options: ["Die Anzahl der Elektronen in einem Atom", "Die Anzahl der Protonen in 1 kg Wasserstoff", "Die universelle Gaskonstante", "Die Anzahl der Teilchen (Atome/Moleküle) in einem Mol (≈ 6,022·10²³ mol⁻¹)"], correctIndex: 3, explanation: "Die Avogadro-Konstante N_A = 6,022·10²³ mol⁻¹ gibt die Anzahl der Teilchen (Atome, Moleküle) in einem Mol an." },
+      { id: "q7", question: "Wozu dient die Dimensionsanalyse in der Physik?", options: ["Um die räumliche Ausdehnung von Körpern zu messen", "Um SI-Einheiten in nicht-metrische Einheiten umzurechnen", "Um sicherzustellen, dass eine Gleichung auf beiden Seiten dieselbe Einheit hat", "Um Naturkonstanten experimentell zu bestimmen"], correctIndex: 2, explanation: "Die Dimensionsanalyse überprüft, ob beide Seiten einer physikalischen Gleichung dieselbe Dimension (Einheit) haben. Sie ist ein wichtiges Werkzeug zur Fehlersuche." },
+      { id: "q8", question: "Wie viel Joule entsprechen 1 Kilowattstunde (kWh)?", options: ["3,6·10³ J", "3,6·10⁶ J", "1000 J", "3,6·10⁹ J"], correctIndex: 1, explanation: "1 kWh = 1000 W · 3600 s = 3,6·10⁶ J = 3,6 MJ." },
+      { id: "q9", question: "Welche SI-Einheit gehört zur Temperatur?", options: ["Grad Celsius (°C)", "Kelvin (K)", "Grad Fahrenheit (°F)", "Joule pro Mol (J/mol)"], correctIndex: 1, explanation: "Die SI-Basiseinheit der Temperatur ist Kelvin (K). Der Nullpunkt liegt bei 0 K = –273,15 °C (absoluter Nullpunkt)." },
+      { id: "q10", question: "Was bedeutet der SI-Vorsatz 'Giga' (G)?", options: ["10⁹", "10⁶", "10¹²", "10³"], correctIndex: 0, explanation: "Giga (G) steht für den Faktor 10⁹. Beispiel: 1 GHz = 10⁹ Hz = 1 Milliarde Hertz." }
     ]
   }
 ];

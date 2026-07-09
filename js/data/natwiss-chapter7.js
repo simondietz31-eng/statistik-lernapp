@@ -78,96 +78,16 @@ const NATWISS_CHAPTER7_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Welche Temperatur entspricht dem absoluten Nullpunkt 0 K in Celsius?",
-        options: ["0 °C", "−100 °C", "−273,15 °C", "−373,15 °C"],
-        correctIndex: 2,
-        explanation: "Der absolute Nullpunkt 0 K entspricht −273,15 °C. Bei dieser Temperatur ist die thermische Bewegung der Teilchen auf ein Minimum reduziert."
-      },
-      {
-        id: "q2",
-        question: "Welche Formel beschreibt die lineare Wärmeausdehnung eines Festkörpers?",
-        options: ["ΔL = α · L₀ / ΔT", "ΔL = α · L₀ · ΔT", "ΔL = γ · L₀ · ΔT", "ΔL = α · L₀² · ΔT"],
-        correctIndex: 1,
-        explanation: "Die lineare Wärmeausdehnung lautet ΔL = α · L₀ · ΔT. α ist der lineare Ausdehnungskoeffizient [K⁻¹], L₀ die Ausgangslänge und ΔT die Temperaturänderung."
-      },
-      {
-        id: "q3",
-        question: "Wie ist der kubische Ausdehnungskoeffizient γ mit dem linearen Koeffizienten α verknüpft (isotroper Festkörper)?",
-        options: ["γ = α", "γ = 2α", "γ ≈ 3α", "γ = α / 3"],
-        correctIndex: 2,
-        explanation: "Für einen isotropen Festkörper gilt γ ≈ 3α, da sich die Ausdehnung in alle drei Raumrichtungen überlagert und die Volumenausdehnung dreimal so groß wie die lineare ist."
-      },
-      {
-        id: "q4",
-        question: "Welches der genannten Materialien hat den größten linearen Ausdehnungskoeffizienten α?",
-        options: ["Stahl (α ≈ 12 × 10⁻⁶ K⁻¹)", "Beton (α ≈ 12 × 10⁻⁶ K⁻¹)", "Aluminium (α ≈ 24 × 10⁻⁶ K⁻¹)", "Alle sind gleich groß"],
-        correctIndex: 2,
-        explanation: "Aluminium hat mit α ≈ 24 × 10⁻⁶ K⁻¹ den größten linearen Ausdehnungskoeffizienten der genannten Materialien – doppelt so groß wie Stahl oder Beton."
-      },
-      {
-        id: "q5",
-        question: "Warum wird in der Thermodynamik die Kelvin-Skala bevorzugt?",
-        options: [
-          "Sie ist einfacher zu messen als Celsius",
-          "Sie beginnt beim absoluten Nullpunkt und hat keine negativen Werte",
-          "Sie gilt ausschließlich für Gase",
-          "Aus rein historischen Gründen"
-        ],
-        correctIndex: 1,
-        explanation: "Die Kelvin-Skala beginnt beim absoluten Nullpunkt (0 K). Da alle Temperaturen positiv sind, eignet sie sich für thermodynamische Berechnungen, bei denen Temperaturverhältnisse und -produkte auftreten."
-      },
-      {
-        id: "q6",
-        question: "Was passiert mit Wasser, wenn es von 4 °C auf 0 °C abgekühlt wird?",
-        options: [
-          "Es zieht sich weiter zusammen",
-          "Es dehnt sich aus (Anomalie des Wassers)",
-          "Die Dichte bleibt konstant",
-          "Es verdampft sofort"
-        ],
-        correctIndex: 1,
-        explanation: "Die Anomalie des Wassers: Unterhalb von 4 °C dehnt sich Wasser beim weiteren Abkühlen aus, statt sich zusammenzuziehen. Daher ist Eis weniger dicht als flüssiges Wasser und schwimmt oben."
-      },
-      {
-        id: "q7",
-        question: "Aus welchen Komponenten besteht ein Bimetallstreifen und weshalb biegt er sich?",
-        options: [
-          "Aus einem Metall mit zwei Lackschichten",
-          "Aus zwei Metallen mit gleichem Ausdehnungskoeffizienten",
-          "Aus zwei Metallen mit unterschiedlichem Ausdehnungskoeffizienten",
-          "Aus einem Metall und einer Kunststoffschicht"
-        ],
-        correctIndex: 2,
-        explanation: "Ein Bimetallstreifen besteht aus zwei verschiedenen Metallen mit unterschiedlichem α. Da sie fest verbunden sind, erzeugt die unterschiedliche Wärmeausdehnung mechanische Spannungen, die den Streifen zur Biegung zwingen."
-      },
-      {
-        id: "q8",
-        question: "Welcher Temperatur in Kelvin entspricht 100 °C?",
-        options: ["100 K", "273,15 K", "373,15 K", "173,15 K"],
-        correctIndex: 2,
-        explanation: "T(K) = T(°C) + 273,15 = 100 + 273,15 = 373,15 K. Die Kelvin-Temperatur ist stets um 273,15 größer als die Celsius-Temperatur."
-      },
-      {
-        id: "q9",
-        question: "Warum werden in Brücken und langen Stahlbauwerken Dehnungsfugen eingebaut?",
-        options: [
-          "Aus ästhetischen Gründen",
-          "Zum Schutz vor Korrosion",
-          "Um temperaturbedingten Längenänderungen spannungsfrei Raum zu geben",
-          "Zur Gewichtsreduktion des Bauwerks"
-        ],
-        correctIndex: 2,
-        explanation: "Ohne Dehnungsfugen würden temperaturbedingte Längenänderungen zu inneren Druckspannungen führen, die das Bauwerk verbiegen oder zerstören könnten. Dehnungsfugen ermöglichen eine spannungsfreie Ausdehnung."
-      },
-      {
-        id: "q10",
-        question: "Bei welcher Temperatur hat flüssiges Wasser seine größte Dichte?",
-        options: ["0 °C", "4 °C", "20 °C", "100 °C"],
-        correctIndex: 1,
-        explanation: "Wasser hat bei 4 °C seine größte Dichte (≈ 1000 kg/m³). Sowohl Erwärmung als auch Abkühlung unter 4 °C senken die Dichte – dies ist die Anomalie des Wassers und biologisch bedeutsam für Gewässerlebewesen."
-      }
+      { id: "q1", question: "Welche Temperatur entspricht dem absoluten Nullpunkt 0 K in Celsius?", options: ["−273,15 °C", "−373,15 °C", "−100 °C", "0 °C"], correctIndex: 0, explanation: "Der absolute Nullpunkt 0 K entspricht −273,15 °C. Bei dieser Temperatur ist die thermische Bewegung der Teilchen auf ein Minimum reduziert." },
+      { id: "q2", question: "Welche Formel beschreibt die lineare Wärmeausdehnung eines Festkörpers?", options: ["ΔL = α · L₀² · ΔT", "ΔL = α · L₀ / ΔT", "ΔL = α · L₀ · ΔT", "ΔL = γ · L₀ · ΔT"], correctIndex: 2, explanation: "Die lineare Wärmeausdehnung lautet ΔL = α · L₀ · ΔT. α ist der lineare Ausdehnungskoeffizient [K⁻¹], L₀ die Ausgangslänge und ΔT die Temperaturänderung." },
+      { id: "q3", question: "Wie ist der kubische Ausdehnungskoeffizient γ mit dem linearen Koeffizienten α verknüpft (isotroper Festkörper)?", options: ["γ = 2α", "γ = α", "γ ≈ 3α", "γ = α / 3"], correctIndex: 2, explanation: "Für einen isotropen Festkörper gilt γ ≈ 3α, da sich die Ausdehnung in alle drei Raumrichtungen überlagert und die Volumenausdehnung dreimal so groß wie die lineare ist." },
+      { id: "q4", question: "Welches der genannten Materialien hat den größten linearen Ausdehnungskoeffizienten α?", options: ["Alle sind gleich groß", "Aluminium (α ≈ 24 × 10⁻⁶ K⁻¹)", "Beton (α ≈ 12 × 10⁻⁶ K⁻¹)", "Stahl (α ≈ 12 × 10⁻⁶ K⁻¹)"], correctIndex: 1, explanation: "Aluminium hat mit α ≈ 24 × 10⁻⁶ K⁻¹ den größten linearen Ausdehnungskoeffizienten der genannten Materialien – doppelt so groß wie Stahl oder Beton." },
+      { id: "q5", question: "Warum wird in der Thermodynamik die Kelvin-Skala bevorzugt?", options: ["Sie gilt ausschließlich für Gase", "Aus rein historischen Gründen", "Sie ist einfacher zu messen als Celsius", "Sie beginnt beim absoluten Nullpunkt und hat keine negativen Werte"], correctIndex: 3, explanation: "Die Kelvin-Skala beginnt beim absoluten Nullpunkt (0 K). Da alle Temperaturen positiv sind, eignet sie sich für thermodynamische Berechnungen, bei denen Temperaturverhältnisse und -produkte auftreten." },
+      { id: "q6", question: "Was passiert mit Wasser, wenn es von 4 °C auf 0 °C abgekühlt wird?", options: ["Es dehnt sich aus (Anomalie des Wassers)", "Die Dichte bleibt konstant", "Es zieht sich weiter zusammen", "Es verdampft sofort"], correctIndex: 0, explanation: "Die Anomalie des Wassers: Unterhalb von 4 °C dehnt sich Wasser beim weiteren Abkühlen aus, statt sich zusammenzuziehen. Daher ist Eis weniger dicht als flüssiges Wasser und schwimmt oben." },
+      { id: "q7", question: "Aus welchen Komponenten besteht ein Bimetallstreifen und weshalb biegt er sich?", options: ["Aus einem Metall und einer Kunststoffschicht", "Aus einem Metall mit zwei Lackschichten", "Aus zwei Metallen mit gleichem Ausdehnungskoeffizienten", "Aus zwei Metallen mit unterschiedlichem Ausdehnungskoeffizienten"], correctIndex: 3, explanation: "Ein Bimetallstreifen besteht aus zwei verschiedenen Metallen mit unterschiedlichem α. Da sie fest verbunden sind, erzeugt die unterschiedliche Wärmeausdehnung mechanische Spannungen, die den Streifen zur Biegung zwingen." },
+      { id: "q8", question: "Welcher Temperatur in Kelvin entspricht 100 °C?", options: ["373,15 K", "273,15 K", "173,15 K", "100 K"], correctIndex: 0, explanation: "T(K) = T(°C) + 273,15 = 100 + 273,15 = 373,15 K. Die Kelvin-Temperatur ist stets um 273,15 größer als die Celsius-Temperatur." },
+      { id: "q9", question: "Warum werden in Brücken und langen Stahlbauwerken Dehnungsfugen eingebaut?", options: ["Zum Schutz vor Korrosion", "Zur Gewichtsreduktion des Bauwerks", "Um temperaturbedingten Längenänderungen spannungsfrei Raum zu geben", "Aus ästhetischen Gründen"], correctIndex: 2, explanation: "Ohne Dehnungsfugen würden temperaturbedingte Längenänderungen zu inneren Druckspannungen führen, die das Bauwerk verbiegen oder zerstören könnten. Dehnungsfugen ermöglichen eine spannungsfreie Ausdehnung." },
+      { id: "q10", question: "Bei welcher Temperatur hat flüssiges Wasser seine größte Dichte?", options: ["0 °C", "4 °C", "100 °C", "20 °C"], correctIndex: 1, explanation: "Wasser hat bei 4 °C seine größte Dichte (≈ 1000 kg/m³). Sowohl Erwärmung als auch Abkühlung unter 4 °C senken die Dichte – dies ist die Anomalie des Wassers und biologisch bedeutsam für Gewässerlebewesen." }
     ]
   },
   {
@@ -247,106 +167,16 @@ const NATWISS_CHAPTER7_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Welche Einheit hat die universelle Gaskonstante R?",
-        options: ["J · mol", "J / (mol · K)", "Pa · L", "K / mol"],
-        correctIndex: 1,
-        explanation: "R = 8,314 J/(mol·K). Die Einheit ergibt sich, da R die thermische Energie pro Mol und pro Kelvin beschreibt."
-      },
-      {
-        id: "q2",
-        question: "Was besagt das Boyle-Mariotte-Gesetz?",
-        options: [
-          "p / T = const (bei V = const)",
-          "V / T = const (bei p = const)",
-          "p · V = const (bei T = const)",
-          "p · V · T = const"
-        ],
-        correctIndex: 2,
-        explanation: "Das Boyle-Mariotte-Gesetz gilt für isotherme Zustandsänderungen: Bei konstanter Temperatur ist p · V = const. Druckverdopplung halbiert das Volumen."
-      },
-      {
-        id: "q3",
-        question: "Wie groß ist das Molvolumen eines idealen Gases bei Normalbedingungen (0 °C, 1 atm)?",
-        options: ["8,314 L/mol", "22,414 L/mol", "1,000 L/mol", "22,414 m³/mol"],
-        correctIndex: 1,
-        explanation: "Das Molvolumen unter Normalbedingungen beträgt V_m = 22,414 L/mol. Dies folgt aus pV = nRT mit T = 273,15 K und p = 101 325 Pa."
-      },
-      {
-        id: "q4",
-        question: "Wie lautet das ideale Gasgesetz in molarer Form?",
-        options: ["pV = N k_B T", "pV = nRT", "p = nRT / V²", "pV = NT"],
-        correctIndex: 1,
-        explanation: "Das ideale Gasgesetz in molarer Form lautet pV = nRT mit n in mol und R = 8,314 J/(mol·K). Die molekulare Form ist pV = Nk_BT."
-      },
-      {
-        id: "q5",
-        question: "Was ist bei einer isochoren Zustandsänderung konstant?",
-        options: ["Die Temperatur T", "Der Druck p", "Das Volumen V", "Die zugeführte Wärme Q"],
-        correctIndex: 2,
-        explanation: "Isochor bedeutet 'gleiches Volumen': V = const. Es gilt Gay-Lussacs Gesetz p/T = const – Druckerhöhung erfordert Temperaturerhöhung."
-      },
-      {
-        id: "q6",
-        question: "Wie groß ist die Avogadro-Konstante N_A?",
-        options: [
-          "6,022 × 10²³ mol⁻¹",
-          "8,314 J/(mol·K)",
-          "1,381 × 10⁻²³ J/K",
-          "22,414 L/mol"
-        ],
-        correctIndex: 0,
-        explanation: "N_A = 6,022 × 10²³ mol⁻¹ gibt die Anzahl der Teilchen (Atome, Moleküle) in einem Mol an. Sie verknüpft molare und molekulare Beschreibung: R = N_A · k_B."
-      },
-      {
-        id: "q7",
-        question: "Ein Gas wird bei konstanter Temperatur auf die Hälfte seines Volumens komprimiert. Was passiert mit dem Druck?",
-        options: [
-          "Er halbiert sich",
-          "Er bleibt gleich",
-          "Er verdoppelt sich",
-          "Er wird null"
-        ],
-        correctIndex: 2,
-        explanation: "Nach dem Boyle-Mariotte-Gesetz gilt p · V = const. Wenn V auf V/2 sinkt, muss p auf 2p steigen."
-      },
-      {
-        id: "q8",
-        question: "Was gilt bei einer isobaren Zustandsänderung?",
-        options: [
-          "T = const (Isotherme)",
-          "p = const (Charles'sches Gesetz: V/T = const)",
-          "V = const (Isochore)",
-          "U = const"
-        ],
-        correctIndex: 1,
-        explanation: "Isobar bedeutet 'gleicher Druck': p = const. Es gilt das Charles'sche Gesetz V/T = const – Temperaturerhöhung führt zu Volumenzunahme."
-      },
-      {
-        id: "q9",
-        question: "Was besagt das Dalton'sche Partialdruckgesetz?",
-        options: [
-          "p_ges = p₁ · p₂",
-          "p_ges = Σ pᵢ",
-          "p_ges = p₁ / p₂",
-          "p_ges = p₁ − p₂"
-        ],
-        correctIndex: 1,
-        explanation: "Das Dalton'sche Gesetz besagt, dass der Gesamtdruck eines Gasgemisches gleich der Summe der Partialdrücke der einzelnen Gase ist: p_ges = Σpᵢ."
-      },
-      {
-        id: "q10",
-        question: "Welche Korrekturen enthält die van-der-Waals-Gleichung gegenüber dem idealen Gasgesetz?",
-        options: [
-          "Nur das Eigenvolumen der Moleküle (Parameter b)",
-          "Nur intermolekulare Anziehungskräfte (Parameter a)",
-          "Weder Eigenvolumen noch Wechselwirkungen",
-          "Eigenvolumen der Moleküle (b) und intermolekulare Wechselwirkungen (a)"
-        ],
-        correctIndex: 3,
-        explanation: "Die van-der-Waals-Gleichung korrigiert das ideale Gasgesetz um das Eigenvolumen der Moleküle (Parameter b) und die intermolekularen Anziehungskräfte (Parameter a, bewirkt Druckerniedrigung)."
-      }
+      { id: "q1", question: "Welche Einheit hat die universelle Gaskonstante R?", options: ["J · mol", "Pa · L", "K / mol", "J / (mol · K)"], correctIndex: 3, explanation: "R = 8,314 J/(mol·K). Die Einheit ergibt sich, da R die thermische Energie pro Mol und pro Kelvin beschreibt." },
+      { id: "q2", question: "Was besagt das Boyle-Mariotte-Gesetz?", options: ["V / T = const (bei p = const)", "p · V = const (bei T = const)", "p · V · T = const", "p / T = const (bei V = const)"], correctIndex: 1, explanation: "Das Boyle-Mariotte-Gesetz gilt für isotherme Zustandsänderungen: Bei konstanter Temperatur ist p · V = const. Druckverdopplung halbiert das Volumen." },
+      { id: "q3", question: "Wie groß ist das Molvolumen eines idealen Gases bei Normalbedingungen (0 °C, 1 atm)?", options: ["22,414 L/mol", "8,314 L/mol", "22,414 m³/mol", "1,000 L/mol"], correctIndex: 0, explanation: "Das Molvolumen unter Normalbedingungen beträgt V_m = 22,414 L/mol. Dies folgt aus pV = nRT mit T = 273,15 K und p = 101 325 Pa." },
+      { id: "q4", question: "Wie lautet das ideale Gasgesetz in molarer Form?", options: ["p = nRT / V²", "pV = N k_B T", "pV = NT", "pV = nRT"], correctIndex: 3, explanation: "Das ideale Gasgesetz in molarer Form lautet pV = nRT mit n in mol und R = 8,314 J/(mol·K). Die molekulare Form ist pV = Nk_BT." },
+      { id: "q5", question: "Was ist bei einer isochoren Zustandsänderung konstant?", options: ["Die zugeführte Wärme Q", "Das Volumen V", "Die Temperatur T", "Der Druck p"], correctIndex: 1, explanation: "Isochor bedeutet 'gleiches Volumen': V = const. Es gilt Gay-Lussacs Gesetz p/T = const – Druckerhöhung erfordert Temperaturerhöhung." },
+      { id: "q6", question: "Wie groß ist die Avogadro-Konstante N_A?", options: ["22,414 L/mol", "8,314 J/(mol·K)", "6,022 × 10²³ mol⁻¹", "1,381 × 10⁻²³ J/K"], correctIndex: 2, explanation: "N_A = 6,022 × 10²³ mol⁻¹ gibt die Anzahl der Teilchen (Atome, Moleküle) in einem Mol an. Sie verknüpft molare und molekulare Beschreibung: R = N_A · k_B." },
+      { id: "q7", question: "Ein Gas wird bei konstanter Temperatur auf die Hälfte seines Volumens komprimiert. Was passiert mit dem Druck?", options: ["Er verdoppelt sich", "Er halbiert sich", "Er wird null", "Er bleibt gleich"], correctIndex: 0, explanation: "Nach dem Boyle-Mariotte-Gesetz gilt p · V = const. Wenn V auf V/2 sinkt, muss p auf 2p steigen." },
+      { id: "q8", question: "Was gilt bei einer isobaren Zustandsänderung?", options: ["T = const (Isotherme)", "V = const (Isochore)", "p = const (Charles'sches Gesetz: V/T = const)", "U = const"], correctIndex: 2, explanation: "Isobar bedeutet 'gleicher Druck': p = const. Es gilt das Charles'sche Gesetz V/T = const – Temperaturerhöhung führt zu Volumenzunahme." },
+      { id: "q9", question: "Was besagt das Dalton'sche Partialdruckgesetz?", options: ["p_ges = p₁ · p₂", "p_ges = p₁ / p₂", "p_ges = Σ pᵢ", "p_ges = p₁ − p₂"], correctIndex: 2, explanation: "Das Dalton'sche Gesetz besagt, dass der Gesamtdruck eines Gasgemisches gleich der Summe der Partialdrücke der einzelnen Gase ist: p_ges = Σpᵢ." },
+      { id: "q10", question: "Welche Korrekturen enthält die van-der-Waals-Gleichung gegenüber dem idealen Gasgesetz?", options: ["Weder Eigenvolumen noch Wechselwirkungen", "Nur das Eigenvolumen der Moleküle (Parameter b)", "Nur intermolekulare Anziehungskräfte (Parameter a)", "Eigenvolumen der Moleküle (b) und intermolekulare Wechselwirkungen (a)"], correctIndex: 3, explanation: "Die van-der-Waals-Gleichung korrigiert das ideale Gasgesetz um das Eigenvolumen der Moleküle (Parameter b) und die intermolekularen Anziehungskräfte (Parameter a, bewirkt Druckerniedrigung)." }
     ]
   },
   {
@@ -425,121 +255,16 @@ const NATWISS_CHAPTER7_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Was ist die mittlere kinetische Energie eines Gasmoleküls bei der absoluten Temperatur T?",
-        options: [
-          "k_B · T",
-          "(3/2) · k_B · T",
-          "(1/2) · k_B · T",
-          "2 · k_B · T"
-        ],
-        correctIndex: 1,
-        explanation: "Die mittlere kinetische Energie pro Molekül beträgt (3/2) · k_B · T. Der Faktor 3/2 kommt von den drei translatorischen Freiheitsgraden (x-, y-, z-Richtung)."
-      },
-      {
-        id: "q2",
-        question: "Welche der drei charakteristischen Geschwindigkeiten der Maxwell-Boltzmann-Verteilung ist am größten?",
-        options: [
-          "v_p (wahrscheinlichste Geschwindigkeit)",
-          "v̄ (mittlere Geschwindigkeit)",
-          "v_rms (quadratischer Mittelwert)",
-          "Alle sind gleich groß"
-        ],
-        correctIndex: 2,
-        explanation: "Es gilt v_p < v̄ < v_rms. Der quadratische Mittelwert v_rms ist am größten, weil das Quadrieren schnelle Teilchen stärker gewichtet als langsame."
-      },
-      {
-        id: "q3",
-        question: "Wie hängt die quadratische Mittelgeschwindigkeit v_rms von der absoluten Temperatur T ab?",
-        options: [
-          "v_rms ∝ T",
-          "v_rms ∝ √T",
-          "v_rms ∝ T²",
-          "v_rms ∝ 1/T"
-        ],
-        correctIndex: 1,
-        explanation: "v_rms = √(3RT/M) ∝ √T. Wird die Temperatur vervierfacht, verdoppelt sich v_rms. Die Abhängigkeit ist eine Wurzelfunktion."
-      },
-      {
-        id: "q4",
-        question: "Was misst die Temperatur auf molekularer Ebene?",
-        options: [
-          "Die potentielle Energie der Moleküle",
-          "Die mittlere kinetische Energie der Moleküle",
-          "Den Druck mal Volumen",
-          "Die Dichte des Gases"
-        ],
-        correctIndex: 1,
-        explanation: "Temperatur ist ein direktes Maß für die mittlere translatorische kinetische Energie der Moleküle: ⟨E_kin⟩ = (3/2)k_BT."
-      },
-      {
-        id: "q5",
-        question: "Was beschreibt die Maxwell-Boltzmann-Verteilung?",
-        options: [
-          "Die Druckverteilung im Gas in Abhängigkeit vom Ort",
-          "Die Verteilung der Molekülgeschwindigkeiten bei Temperatur T",
-          "Die Dichteverteilung in einem Behälter",
-          "Die Energieverteilung in Festkörpern"
-        ],
-        correctIndex: 1,
-        explanation: "Die Maxwell-Boltzmann-Verteilung gibt an, welcher Anteil der Moleküle eine bestimmte Geschwindigkeit hat. Bei höherer Temperatur verschiebt sich das Maximum zu größeren Geschwindigkeiten."
-      },
-      {
-        id: "q6",
-        question: "Warum diffundiert Wasserstoff (H₂) schneller als Stickstoff (N₂) bei gleicher Temperatur?",
-        options: [
-          "Weil H₂ polarer ist",
-          "Weil H₂-Moleküle kleiner sind und weniger Platz benötigen",
-          "Weil H₂ eine viel kleinere Molmasse hat und daher eine höhere v_rms besitzt",
-          "Weil N₂ eine stärkere Dreifachbindung hat"
-        ],
-        correctIndex: 2,
-        explanation: "Da v_rms ∝ 1/√M gilt, bewegen sich H₂-Moleküle (M = 2 g/mol) etwa √(28/2) = √14 ≈ 3,7-mal schneller als N₂-Moleküle (M = 28 g/mol) – und diffundieren entsprechend schneller."
-      },
-      {
-        id: "q7",
-        question: "Um welchen Faktor ändert sich v_rms, wenn die absolute Temperatur T auf den vierfachen Wert steigt?",
-        options: [
-          "v_rms verdoppelt sich (Faktor 2)",
-          "v_rms vervierfacht sich (Faktor 4)",
-          "v_rms nimmt um Faktor √2 zu",
-          "v_rms bleibt gleich"
-        ],
-        correctIndex: 0,
-        explanation: "Da v_rms ∝ √T gilt: Wenn T → 4T, dann v_rms → √4 · v_rms = 2 · v_rms. Die Verdoppelung von T erhöht v_rms um Faktor √2 ≈ 1,41."
-      },
-      {
-        id: "q8",
-        question: "Welche Formel beschreibt die quadratische Mittelgeschwindigkeit v_rms?",
-        options: [
-          "√(2RT / M)",
-          "√(3RT / M)",
-          "√(8RT / (πM))",
-          "√(RT / M)"
-        ],
-        correctIndex: 1,
-        explanation: "v_rms = √(3RT/M). Zum Vergleich: Die wahrscheinlichste Geschwindigkeit ist v_p = √(2RT/M) und die mittlere ist v̄ = √(8RT/(πM))."
-      },
-      {
-        id: "q9",
-        question: "Gas A hat M_A = 4 g/mol, Gas B hat M_B = 16 g/mol. Beide befinden sich bei gleicher Temperatur T. Welches Gas hat die größere v_rms?",
-        options: [
-          "Gas A (v_rms doppelt so groß wie Gas B)",
-          "Gas B",
-          "Beide haben dieselbe v_rms",
-          "Das hängt vom Druck ab"
-        ],
-        correctIndex: 0,
-        explanation: "Da v_rms ∝ 1/√M, gilt: v_rms(A)/v_rms(B) = √(M_B/M_A) = √(16/4) = 2. Gas A ist doppelt so schnell wie Gas B."
-      },
-      {
-        id: "q10",
-        question: "Welche Einheit hat die mittlere kinetische Energie pro Molekül?",
-        options: ["J/mol", "J", "eV/mol", "K"],
-        correctIndex: 1,
-        explanation: "Die mittlere kinetische Energie pro Molekül wird in Joule (J) angegeben: ⟨E_kin⟩ = (3/2)k_BT, wobei k_B die Einheit J/K und T die Einheit K hat."
-      }
+      { id: "q1", question: "Was ist die mittlere kinetische Energie eines Gasmoleküls bei der absoluten Temperatur T?", options: ["(1/2) · k_B · T", "2 · k_B · T", "k_B · T", "(3/2) · k_B · T"], correctIndex: 3, explanation: "Die mittlere kinetische Energie pro Molekül beträgt (3/2) · k_B · T. Der Faktor 3/2 kommt von den drei translatorischen Freiheitsgraden (x-, y-, z-Richtung)." },
+      { id: "q2", question: "Welche der drei charakteristischen Geschwindigkeiten der Maxwell-Boltzmann-Verteilung ist am größten?", options: ["v̄ (mittlere Geschwindigkeit)", "Alle sind gleich groß", "v_p (wahrscheinlichste Geschwindigkeit)", "v_rms (quadratischer Mittelwert)"], correctIndex: 3, explanation: "Es gilt v_p < v̄ < v_rms. Der quadratische Mittelwert v_rms ist am größten, weil das Quadrieren schnelle Teilchen stärker gewichtet als langsame." },
+      { id: "q3", question: "Wie hängt die quadratische Mittelgeschwindigkeit v_rms von der absoluten Temperatur T ab?", options: ["v_rms ∝ T²", "v_rms ∝ T", "v_rms ∝ 1/T", "v_rms ∝ √T"], correctIndex: 3, explanation: "v_rms = √(3RT/M) ∝ √T. Wird die Temperatur vervierfacht, verdoppelt sich v_rms. Die Abhängigkeit ist eine Wurzelfunktion." },
+      { id: "q4", question: "Was misst die Temperatur auf molekularer Ebene?", options: ["Die mittlere kinetische Energie der Moleküle", "Die potentielle Energie der Moleküle", "Den Druck mal Volumen", "Die Dichte des Gases"], correctIndex: 0, explanation: "Temperatur ist ein direktes Maß für die mittlere translatorische kinetische Energie der Moleküle: ⟨E_kin⟩ = (3/2)k_BT." },
+      { id: "q5", question: "Was beschreibt die Maxwell-Boltzmann-Verteilung?", options: ["Die Druckverteilung im Gas in Abhängigkeit vom Ort", "Die Energieverteilung in Festkörpern", "Die Verteilung der Molekülgeschwindigkeiten bei Temperatur T", "Die Dichteverteilung in einem Behälter"], correctIndex: 2, explanation: "Die Maxwell-Boltzmann-Verteilung gibt an, welcher Anteil der Moleküle eine bestimmte Geschwindigkeit hat. Bei höherer Temperatur verschiebt sich das Maximum zu größeren Geschwindigkeiten." },
+      { id: "q6", question: "Warum diffundiert Wasserstoff (H₂) schneller als Stickstoff (N₂) bei gleicher Temperatur?", options: ["Weil H₂-Moleküle kleiner sind und weniger Platz benötigen", "Weil H₂ eine viel kleinere Molmasse hat und daher eine höhere v_rms besitzt", "Weil H₂ polarer ist", "Weil N₂ eine stärkere Dreifachbindung hat"], correctIndex: 1, explanation: "Da v_rms ∝ 1/√M gilt, bewegen sich H₂-Moleküle (M = 2 g/mol) etwa √(28/2) = √14 ≈ 3,7-mal schneller als N₂-Moleküle (M = 28 g/mol) – und diffundieren entsprechend schneller." },
+      { id: "q7", question: "Um welchen Faktor ändert sich v_rms, wenn die absolute Temperatur T auf den vierfachen Wert steigt?", options: ["v_rms verdoppelt sich (Faktor 2)", "v_rms nimmt um Faktor √2 zu", "v_rms vervierfacht sich (Faktor 4)", "v_rms bleibt gleich"], correctIndex: 0, explanation: "Da v_rms ∝ √T gilt: Wenn T → 4T, dann v_rms → √4 · v_rms = 2 · v_rms. Die Verdoppelung von T erhöht v_rms um Faktor √2 ≈ 1,41." },
+      { id: "q8", question: "Welche Formel beschreibt die quadratische Mittelgeschwindigkeit v_rms?", options: ["√(2RT / M)", "√(RT / M)", "√(3RT / M)", "√(8RT / (πM))"], correctIndex: 2, explanation: "v_rms = √(3RT/M). Zum Vergleich: Die wahrscheinlichste Geschwindigkeit ist v_p = √(2RT/M) und die mittlere ist v̄ = √(8RT/(πM))." },
+      { id: "q9", question: "Gas A hat M_A = 4 g/mol, Gas B hat M_B = 16 g/mol. Beide befinden sich bei gleicher Temperatur T. Welches Gas hat die größere v_rms?", options: ["Gas A (v_rms doppelt so groß wie Gas B)", "Gas B", "Das hängt vom Druck ab", "Beide haben dieselbe v_rms"], correctIndex: 0, explanation: "Da v_rms ∝ 1/√M, gilt: v_rms(A)/v_rms(B) = √(M_B/M_A) = √(16/4) = 2. Gas A ist doppelt so schnell wie Gas B." },
+      { id: "q10", question: "Welche Einheit hat die mittlere kinetische Energie pro Molekül?", options: ["eV/mol", "J", "K", "J/mol"], correctIndex: 1, explanation: "Die mittlere kinetische Energie pro Molekül wird in Joule (J) angegeben: ⟨E_kin⟩ = (3/2)k_BT, wobei k_B die Einheit J/K und T die Einheit K hat." }
     ]
   }
 ];

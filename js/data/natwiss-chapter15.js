@@ -52,76 +52,16 @@ const NATWISS_CHAPTER15_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-ueb-schwingungen-q1",
-        question: "x(t) = A·cos(ωt). Was ist die maximale Beschleunigung?",
-        options: ["a_max = Aω", "a_max = Aω²", "a_max = A/ω²", "a_max = ω/A"],
-        correctIndex: 1,
-        explanation: "a(t) = −ω²·x(t). Maximum bei x = ±A: a_max = ω²·A."
-      },
-      {
-        id: "natwiss-ueb-schwingungen-q2",
-        question: "Wie verändert sich die Eigenfrequenz eines Federpendels, wenn die Masse verdoppelt wird?",
-        options: ["Verdoppelt sich", "Halbiert sich", "Sinkt auf 1/√2", "Ändert sich nicht"],
-        correctIndex: 2,
-        explanation: "f = 1/(2π)·√(k/m). Bei m → 2m: f → f/√2."
-      },
-      {
-        id: "natwiss-ueb-schwingungen-q3",
-        question: "Wo ist die Geschwindigkeit bei einer harmonischen Schwingung maximal?",
-        options: ["Bei maximaler Auslenkung", "Im Gleichgewicht (Nulldurchgang)", "Beim Umkehrpunkt", "Immer gleich"],
-        correctIndex: 1,
-        explanation: "v(t) = −Aω·sin(ωt). Maximum bei x = 0: v_max = Aω."
-      },
-      {
-        id: "natwiss-ueb-schwingungen-q4",
-        question: "Wie lautet die Eigenfrequenz eines mathematischen Pendels?",
-        options: ["f = 1/(2π)·√(k/m)", "f = 1/(2π)·√(g/l)", "f = 1/(2π)·√(l/g)", "f = √(g·l)/(2π)"],
-        correctIndex: 1,
-        explanation: "Für das Pendel (kleine Winkel): f = 1/(2π)·√(g/l). Hängt nur von l ab, nicht von m."
-      },
-      {
-        id: "natwiss-ueb-schwingungen-q5",
-        question: "Was versteht man unter Resonanz?",
-        options: ["Maximale Dämpfung", "Erregungsfrequenz gleich Eigenfrequenz → maximale Amplitude", "Abnahme der Schwingungsamplitude", "Phasenverschiebung von 0°"],
-        correctIndex: 1,
-        explanation: "Resonanz tritt auf, wenn ω_erreger = ω₀. Bei geringer Dämpfung wird die Amplitude sehr groß."
-      },
-      {
-        id: "natwiss-ueb-schwingungen-q6",
-        question: "Ein Federpendel hat k = 400 N/m und m = 10 kg. Wie groß ist f?",
-        options: ["1,0 Hz", "0,5 Hz", "2,0 Hz", "4,0 Hz"],
-        correctIndex: 0,
-        explanation: "ω = √(k/m) = √(400/10) = √40 = 6,32 rad/s. f = 6,32/(2π) ≈ 1,006 Hz ≈ 1,0 Hz."
-      },
-      {
-        id: "natwiss-ueb-schwingungen-q7",
-        question: "Wie ändert sich die Schwingungsdauer T eines Pendels, wenn l auf 4l vergrößert wird?",
-        options: ["T verdoppelt sich", "T vervierfacht sich", "T halbiert sich", "T ändert sich nicht"],
-        correctIndex: 0,
-        explanation: "T = 2π√(l/g). Bei l → 4l: T → 2π√(4l/g) = 2·T. Die Periode verdoppelt sich."
-      },
-      {
-        id: "natwiss-ueb-schwingungen-q8",
-        question: "Welche Energie hat ein harmonischer Oszillator im Umkehrpunkt?",
-        options: ["Nur kinetische Energie", "Nur potenzielle Energie", "Gleich kinetische und potenzielle", "Keine Energie"],
-        correctIndex: 1,
-        explanation: "Im Umkehrpunkt ist v = 0, also E_kin = 0. Die gesamte Energie steckt als potenzielle Energie in der Feder: E_pot = ½kA²."
-      },
-      {
-        id: "natwiss-ueb-schwingungen-q9",
-        question: "Was ist die Phasenverschiebung zwischen Auslenkung x und Beschleunigung a?",
-        options: ["0°", "90°", "180°", "270°"],
-        correctIndex: 2,
-        explanation: "a = −ω²·x. Der Faktor −1 entspricht einer Phasenverschiebung von 180°."
-      },
-      {
-        id: "natwiss-ueb-schwingungen-q10",
-        question: "Was charakterisiert eine kritisch gedämpfte Schwingung?",
-        options: ["Schwingt endlos", "Kehrt schnellstmöglich ohne Überschwingen in die Ruhelage zurück", "Schwingt mit abnehmender Amplitude", "Explodiert in der Amplitude"],
-        correctIndex: 1,
-        explanation: "Kritische Dämpfung (D = 1, δ = ω₀): kein Überschwingen, schnellstmögliche Rückkehr zur Ruhe."
-      }
+      { id: "natwiss-ueb-schwingungen-q1", question: "x(t) = A·cos(ωt). Was ist die maximale Beschleunigung?", options: ["a_max = Aω²", "a_max = A/ω²", "a_max = Aω", "a_max = ω/A"], correctIndex: 0, explanation: "a(t) = −ω²·x(t). Maximum bei x = ±A: a_max = ω²·A." },
+      { id: "natwiss-ueb-schwingungen-q2", question: "Wie verändert sich die Eigenfrequenz eines Federpendels, wenn die Masse verdoppelt wird?", options: ["Halbiert sich", "Verdoppelt sich", "Sinkt auf 1/√2", "Ändert sich nicht"], correctIndex: 2, explanation: "f = 1/(2π)·√(k/m). Bei m → 2m: f → f/√2." },
+      { id: "natwiss-ueb-schwingungen-q3", question: "Wo ist die Geschwindigkeit bei einer harmonischen Schwingung maximal?", options: ["Bei maximaler Auslenkung", "Im Gleichgewicht (Nulldurchgang)", "Immer gleich", "Beim Umkehrpunkt"], correctIndex: 1, explanation: "v(t) = −Aω·sin(ωt). Maximum bei x = 0: v_max = Aω." },
+      { id: "natwiss-ueb-schwingungen-q4", question: "Wie lautet die Eigenfrequenz eines mathematischen Pendels?", options: ["f = 1/(2π)·√(l/g)", "f = 1/(2π)·√(g/l)", "f = 1/(2π)·√(k/m)", "f = √(g·l)/(2π)"], correctIndex: 1, explanation: "Für das Pendel (kleine Winkel): f = 1/(2π)·√(g/l). Hängt nur von l ab, nicht von m." },
+      { id: "natwiss-ueb-schwingungen-q5", question: "Was versteht man unter Resonanz?", options: ["Maximale Dämpfung", "Abnahme der Schwingungsamplitude", "Phasenverschiebung von 0°", "Erregungsfrequenz gleich Eigenfrequenz → maximale Amplitude"], correctIndex: 3, explanation: "Resonanz tritt auf, wenn ω_erreger = ω₀. Bei geringer Dämpfung wird die Amplitude sehr groß." },
+      { id: "natwiss-ueb-schwingungen-q6", question: "Ein Federpendel hat k = 400 N/m und m = 10 kg. Wie groß ist f?", options: ["0,5 Hz", "4,0 Hz", "1,0 Hz", "2,0 Hz"], correctIndex: 2, explanation: "ω = √(k/m) = √(400/10) = √40 = 6,32 rad/s. f = 6,32/(2π) ≈ 1,006 Hz ≈ 1,0 Hz." },
+      { id: "natwiss-ueb-schwingungen-q7", question: "Wie ändert sich die Schwingungsdauer T eines Pendels, wenn l auf 4l vergrößert wird?", options: ["T verdoppelt sich", "T vervierfacht sich", "T ändert sich nicht", "T halbiert sich"], correctIndex: 0, explanation: "T = 2π√(l/g). Bei l → 4l: T → 2π√(4l/g) = 2·T. Die Periode verdoppelt sich." },
+      { id: "natwiss-ueb-schwingungen-q8", question: "Welche Energie hat ein harmonischer Oszillator im Umkehrpunkt?", options: ["Gleich kinetische und potenzielle", "Keine Energie", "Nur kinetische Energie", "Nur potenzielle Energie"], correctIndex: 3, explanation: "Im Umkehrpunkt ist v = 0, also E_kin = 0. Die gesamte Energie steckt als potenzielle Energie in der Feder: E_pot = ½kA²." },
+      { id: "natwiss-ueb-schwingungen-q9", question: "Was ist die Phasenverschiebung zwischen Auslenkung x und Beschleunigung a?", options: ["90°", "180°", "0°", "270°"], correctIndex: 1, explanation: "a = −ω²·x. Der Faktor −1 entspricht einer Phasenverschiebung von 180°." },
+      { id: "natwiss-ueb-schwingungen-q10", question: "Was charakterisiert eine kritisch gedämpfte Schwingung?", options: ["Kehrt schnellstmöglich ohne Überschwingen in die Ruhelage zurück", "Schwingt mit abnehmender Amplitude", "Explodiert in der Amplitude", "Schwingt endlos"], correctIndex: 0, explanation: "Kritische Dämpfung (D = 1, δ = ω₀): kein Überschwingen, schnellstmögliche Rückkehr zur Ruhe." }
     ]
   },
   {
@@ -178,76 +118,16 @@ const NATWISS_CHAPTER15_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-ueb-wellen-q1",
-        question: "Wie hängt die Wellengeschwindigkeit auf einem Seil von der Zugspannung ab?",
-        options: ["c ∝ F_T", "c ∝ √F_T", "c ∝ F_T²", "Unabhängig"],
-        correctIndex: 1,
-        explanation: "c = √(F_T/μ). Doppelte Zugspannung → c wächst um Faktor √2."
-      },
-      {
-        id: "natwiss-ueb-wellen-q2",
-        question: "Bei einer stehenden Welle auf einem Seil (beidseitig eingespannt, Länge L): Was ist die längste mögliche Wellenlänge?",
-        options: ["λ_max = L/2", "λ_max = L", "λ_max = 2L", "λ_max = 4L"],
-        correctIndex: 2,
-        explanation: "Grundschwingung: halbe Wellenlänge passt auf L → λ₁ = 2L."
-      },
-      {
-        id: "natwiss-ueb-wellen-q3",
-        question: "Phasendifferenz Δφ und örtlicher Abstand Δx sind verknüpft durch:",
-        options: ["Δφ = Δx/λ", "Δφ = 2π·Δx/λ", "Δφ = λ/Δx", "Δφ = Δx·f"],
-        correctIndex: 1,
-        explanation: "Δφ = k·Δx = (2π/λ)·Δx."
-      },
-      {
-        id: "natwiss-ueb-wellen-q4",
-        question: "Was ist konstruktive Interferenz?",
-        options: ["Überlagerung mit Phasendifferenz π (Auslöschung)", "Überlagerung mit Phasendifferenz 0 oder 2π (Verstärkung)", "Gar keine Überlagerung", "Dämpfung einer Welle"],
-        correctIndex: 1,
-        explanation: "Konstruktive Interferenz: Δφ = 0, 2π, 4π... → maximale Verstärkung, Amplitude verdoppelt sich."
-      },
-      {
-        id: "natwiss-ueb-wellen-q5",
-        question: "Schwebung entsteht, wenn ...",
-        options: ["Zwei Wellen gleicher Frequenz überlagert werden", "Zwei Wellen leicht unterschiedlicher Frequenz überlagert werden", "Eine Welle reflektiert wird", "Stehende Wellen entstehen"],
-        correctIndex: 1,
-        explanation: "Schwebung: Überlagerung zweier Frequenzen f₁ und f₂. Schwebungsfrequenz: f_Schwebung = |f₁ − f₂|."
-      },
-      {
-        id: "natwiss-ueb-wellen-q6",
-        question: "Was ist ein Knoten bei einer stehenden Welle?",
-        options: ["Punkt maximaler Amplitude", "Punkt permanenter Ruhe (Amplitude = 0)", "Punkt der Wellenmitte", "Phasenverschiebungspunkt"],
-        correctIndex: 1,
-        explanation: "Knoten: Punkte, die sich nicht bewegen (destruktive Überlagerung der hin- und rücklaufenden Welle)."
-      },
-      {
-        id: "natwiss-ueb-wellen-q7",
-        question: "Der Doppler-Effekt beschreibt:",
-        options: ["Änderung der Amplitude bei Bewegung", "Änderung der wahrgenommenen Frequenz durch Relativbewegung zwischen Quelle und Empfänger", "Brechung von Schallwellen", "Reflexion an Hindernissen"],
-        correctIndex: 1,
-        explanation: "f' = f·(c + v_E)/(c − v_S). Bewegt sich Quelle auf Empfänger zu → höhere wahrgenommene Frequenz."
-      },
-      {
-        id: "natwiss-ueb-wellen-q8",
-        question: "Wie groß ist die Liniendichte μ eines 8,4 m langen Seils mit Masse 120 g?",
-        options: ["14,3 g/m", "1,43 g/m", "143 g/m", "0,143 g/m"],
-        correctIndex: 0,
-        explanation: "μ = m/L = 0,120 kg / 8,40 m = 0,01429 kg/m = 14,3 g/m."
-      },
-      {
-        id: "natwiss-ueb-wellen-q9",
-        question: "Zwei Wellen (gleiche Amplitude y_m) überlagern sich mit Δφ = 0. Welche Amplitude hat die resultierende Welle?",
-        options: ["y_m", "√2·y_m", "2·y_m", "0"],
-        correctIndex: 2,
-        explanation: "Konstruktive Interferenz: A_res = y_m + y_m = 2y_m."
-      },
-      {
-        id: "natwiss-ueb-wellen-q10",
-        question: "Welche Gleichung gilt für Schallwellen in Luft?",
-        options: ["c = √(E/ρ)", "c = √(κp/ρ) = √(κRT/M)", "c = λ·f²", "c = f/λ"],
-        correctIndex: 1,
-        explanation: "Schallgeschwindigkeit in Luft: c = √(κp/ρ) = √(κRT/M) ≈ 343 m/s bei 20°C. κ = Adiabatenexponent."
-      }
+      { id: "natwiss-ueb-wellen-q1", question: "Wie hängt die Wellengeschwindigkeit auf einem Seil von der Zugspannung ab?", options: ["c ∝ F_T²", "Unabhängig", "c ∝ F_T", "c ∝ √F_T"], correctIndex: 3, explanation: "c = √(F_T/μ). Doppelte Zugspannung → c wächst um Faktor √2." },
+      { id: "natwiss-ueb-wellen-q2", question: "Bei einer stehenden Welle auf einem Seil (beidseitig eingespannt, Länge L): Was ist die längste mögliche Wellenlänge?", options: ["λ_max = L", "λ_max = 4L", "λ_max = 2L", "λ_max = L/2"], correctIndex: 2, explanation: "Grundschwingung: halbe Wellenlänge passt auf L → λ₁ = 2L." },
+      { id: "natwiss-ueb-wellen-q3", question: "Phasendifferenz Δφ und örtlicher Abstand Δx sind verknüpft durch:", options: ["Δφ = 2π·Δx/λ", "Δφ = Δx·f", "Δφ = λ/Δx", "Δφ = Δx/λ"], correctIndex: 0, explanation: "Δφ = k·Δx = (2π/λ)·Δx." },
+      { id: "natwiss-ueb-wellen-q4", question: "Was ist konstruktive Interferenz?", options: ["Gar keine Überlagerung", "Überlagerung mit Phasendifferenz π (Auslöschung)", "Überlagerung mit Phasendifferenz 0 oder 2π (Verstärkung)", "Dämpfung einer Welle"], correctIndex: 2, explanation: "Konstruktive Interferenz: Δφ = 0, 2π, 4π... → maximale Verstärkung, Amplitude verdoppelt sich." },
+      { id: "natwiss-ueb-wellen-q5", question: "Schwebung entsteht, wenn ...", options: ["Zwei Wellen gleicher Frequenz überlagert werden", "Zwei Wellen leicht unterschiedlicher Frequenz überlagert werden", "Stehende Wellen entstehen", "Eine Welle reflektiert wird"], correctIndex: 1, explanation: "Schwebung: Überlagerung zweier Frequenzen f₁ und f₂. Schwebungsfrequenz: f_Schwebung = |f₁ − f₂|." },
+      { id: "natwiss-ueb-wellen-q6", question: "Was ist ein Knoten bei einer stehenden Welle?", options: ["Punkt der Wellenmitte", "Punkt permanenter Ruhe (Amplitude = 0)", "Phasenverschiebungspunkt", "Punkt maximaler Amplitude"], correctIndex: 1, explanation: "Knoten: Punkte, die sich nicht bewegen (destruktive Überlagerung der hin- und rücklaufenden Welle)." },
+      { id: "natwiss-ueb-wellen-q7", question: "Der Doppler-Effekt beschreibt:", options: ["Reflexion an Hindernissen", "Änderung der Amplitude bei Bewegung", "Änderung der wahrgenommenen Frequenz durch Relativbewegung zwischen Quelle und Empfänger", "Brechung von Schallwellen"], correctIndex: 2, explanation: "f' = f·(c + v_E)/(c − v_S). Bewegt sich Quelle auf Empfänger zu → höhere wahrgenommene Frequenz." },
+      { id: "natwiss-ueb-wellen-q8", question: "Wie groß ist die Liniendichte μ eines 8,4 m langen Seils mit Masse 120 g?", options: ["14,3 g/m", "0,143 g/m", "1,43 g/m", "143 g/m"], correctIndex: 0, explanation: "μ = m/L = 0,120 kg / 8,40 m = 0,01429 kg/m = 14,3 g/m." },
+      { id: "natwiss-ueb-wellen-q9", question: "Zwei Wellen (gleiche Amplitude y_m) überlagern sich mit Δφ = 0. Welche Amplitude hat die resultierende Welle?", options: ["√2·y_m", "0", "y_m", "2·y_m"], correctIndex: 3, explanation: "Konstruktive Interferenz: A_res = y_m + y_m = 2y_m." },
+      { id: "natwiss-ueb-wellen-q10", question: "Welche Gleichung gilt für Schallwellen in Luft?", options: ["c = f/λ", "c = √(κp/ρ) = √(κRT/M)", "c = λ·f²", "c = √(E/ρ)"], correctIndex: 1, explanation: "Schallgeschwindigkeit in Luft: c = √(κp/ρ) = √(κRT/M) ≈ 343 m/s bei 20°C. κ = Adiabatenexponent." }
     ]
   },
   {
@@ -298,76 +178,16 @@ const NATWISS_CHAPTER15_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-ueb-wellen2-q1",
-        question: "y(x,t) = A·sin(kx − ωt). In welche Richtung läuft diese Welle?",
-        options: ["Negative x-Richtung", "Positive x-Richtung", "Positive y-Richtung", "Steht still"],
-        correctIndex: 1,
-        explanation: "Das Argument kx − ωt verschiebt sich mit wachsendem t in positive x-Richtung → Welle läuft in +x."
-      },
-      {
-        id: "natwiss-ueb-wellen2-q2",
-        question: "Wie viele Bäuche hat die 3. Oberschwingung (n = 3) auf einem beidseitig eingespannten Seil?",
-        options: ["1", "2", "3", "4"],
-        correctIndex: 2,
-        explanation: "Bei n = 3 passen 3 halbe Wellenlängen auf das Seil → 3 Bäuche (und 4 Knoten incl. Endpunkte)."
-      },
-      {
-        id: "natwiss-ueb-wellen2-q3",
-        question: "Wie skaliert die Leistung P einer Seilwelle mit der Amplitude A?",
-        options: ["P ∝ A", "P ∝ A²", "P ∝ √A", "P ∝ 1/A"],
-        correctIndex: 1,
-        explanation: "P = ½·μ·ω²·A²·c. Leistung ist proportional zu A²."
-      },
-      {
-        id: "natwiss-ueb-wellen2-q4",
-        question: "Zwei Wellen überlagern sich: Δφ = π (destruktiv). Was ist die Amplitude der Resultante (gleiche Amplitude A)?",
-        options: ["2A", "√2·A", "A", "0"],
-        correctIndex: 3,
-        explanation: "Destruktive Interferenz bei Δφ = π: A_res = A − A = 0. Vollständige Auslöschung."
-      },
-      {
-        id: "natwiss-ueb-wellen2-q5",
-        question: "Was ist die Wellenzahl k?",
-        options: ["k = 2πf", "k = 2π/λ", "k = ω/c²", "k = λ/c"],
-        correctIndex: 1,
-        explanation: "Wellenzahl k = 2π/λ. Einheit: rad/m oder m⁻¹."
-      },
-      {
-        id: "natwiss-ueb-wellen2-q6",
-        question: "Schwebungsfrequenz zweier Töne (f₁ = 440 Hz, f₂ = 443 Hz)?",
-        options: ["441,5 Hz", "3 Hz", "883 Hz", "1 Hz"],
-        correctIndex: 1,
-        explanation: "Schwebungsfrequenz: f_s = |f₁ − f₂| = |440 − 443| = 3 Hz."
-      },
-      {
-        id: "natwiss-ueb-wellen2-q7",
-        question: "Wie viele Knoten hat die Grundschwingung (n = 1) eines beidseitig eingespannten Seils?",
-        options: ["0", "1", "2", "3"],
-        correctIndex: 2,
-        explanation: "Grundschwingung: Knoten nur an den Enden (2 Knoten), ein Bauch in der Mitte."
-      },
-      {
-        id: "natwiss-ueb-wellen2-q8",
-        question: "Was ist der Unterschied zwischen einer Transversal- und einer Longitudinalwelle?",
-        options: ["Nur Longitudinalwellen übertragen Energie", "Transversal: Auslenkung senkrecht zur Ausbreitung; Longitudinal: parallel dazu", "Transversalwellen brauchen kein Medium", "Beide sind identisch"],
-        correctIndex: 1,
-        explanation: "Transversal: Schwingungsrichtung ⊥ Ausbreitungsrichtung (Seile, Licht). Longitudinal: Schwingungsrichtung ∥ Ausbreitung (Schall, Druckwellen)."
-      },
-      {
-        id: "natwiss-ueb-wellen2-q9",
-        question: "Eine stehende Welle hat Bauchpositionen bei x = 0,25 m, 0,75 m, 1,25 m. Wie groß ist λ?",
-        options: ["0,25 m", "0,5 m", "1,0 m", "2,0 m"],
-        correctIndex: 2,
-        explanation: "Bäuche im Abstand λ/2 = 0,5 m → λ = 1,0 m."
-      },
-      {
-        id: "natwiss-ueb-wellen2-q10",
-        question: "Wie ändert sich f_n der n-ten Oberschwingung eines Seils, wenn L halbiert wird?",
-        options: ["f_n halbiert sich", "f_n verdoppelt sich", "f_n bleibt gleich", "f_n verdreifacht sich"],
-        correctIndex: 1,
-        explanation: "f_n = n·c/(2L). Bei L → L/2: f_n → n·c/(2·L/2) = n·c/L = 2·f_n. Frequenz verdoppelt sich."
-      }
+      { id: "natwiss-ueb-wellen2-q1", question: "y(x,t) = A·sin(kx − ωt). In welche Richtung läuft diese Welle?", options: ["Steht still", "Negative x-Richtung", "Positive x-Richtung", "Positive y-Richtung"], correctIndex: 2, explanation: "Das Argument kx − ωt verschiebt sich mit wachsendem t in positive x-Richtung → Welle läuft in +x." },
+      { id: "natwiss-ueb-wellen2-q2", question: "Wie viele Bäuche hat die 3. Oberschwingung (n = 3) auf einem beidseitig eingespannten Seil?", options: ["3", "1", "4", "2"], correctIndex: 0, explanation: "Bei n = 3 passen 3 halbe Wellenlängen auf das Seil → 3 Bäuche (und 4 Knoten incl. Endpunkte)." },
+      { id: "natwiss-ueb-wellen2-q3", question: "Wie skaliert die Leistung P einer Seilwelle mit der Amplitude A?", options: ["P ∝ √A", "P ∝ A", "P ∝ 1/A", "P ∝ A²"], correctIndex: 3, explanation: "P = ½·μ·ω²·A²·c. Leistung ist proportional zu A²." },
+      { id: "natwiss-ueb-wellen2-q4", question: "Zwei Wellen überlagern sich: Δφ = π (destruktiv). Was ist die Amplitude der Resultante (gleiche Amplitude A)?", options: ["2A", "√2·A", "0", "A"], correctIndex: 2, explanation: "Destruktive Interferenz bei Δφ = π: A_res = A − A = 0. Vollständige Auslöschung." },
+      { id: "natwiss-ueb-wellen2-q5", question: "Was ist die Wellenzahl k?", options: ["k = ω/c²", "k = λ/c", "k = 2πf", "k = 2π/λ"], correctIndex: 3, explanation: "Wellenzahl k = 2π/λ. Einheit: rad/m oder m⁻¹." },
+      { id: "natwiss-ueb-wellen2-q6", question: "Schwebungsfrequenz zweier Töne (f₁ = 440 Hz, f₂ = 443 Hz)?", options: ["441,5 Hz", "883 Hz", "3 Hz", "1 Hz"], correctIndex: 2, explanation: "Schwebungsfrequenz: f_s = |f₁ − f₂| = |440 − 443| = 3 Hz." },
+      { id: "natwiss-ueb-wellen2-q7", question: "Wie viele Knoten hat die Grundschwingung (n = 1) eines beidseitig eingespannten Seils?", options: ["0", "2", "3", "1"], correctIndex: 1, explanation: "Grundschwingung: Knoten nur an den Enden (2 Knoten), ein Bauch in der Mitte." },
+      { id: "natwiss-ueb-wellen2-q8", question: "Was ist der Unterschied zwischen einer Transversal- und einer Longitudinalwelle?", options: ["Nur Longitudinalwellen übertragen Energie", "Transversal: Auslenkung senkrecht zur Ausbreitung; Longitudinal: parallel dazu", "Beide sind identisch", "Transversalwellen brauchen kein Medium"], correctIndex: 1, explanation: "Transversal: Schwingungsrichtung ⊥ Ausbreitungsrichtung (Seile, Licht). Longitudinal: Schwingungsrichtung ∥ Ausbreitung (Schall, Druckwellen)." },
+      { id: "natwiss-ueb-wellen2-q9", question: "Eine stehende Welle hat Bauchpositionen bei x = 0,25 m, 0,75 m, 1,25 m. Wie groß ist λ?", options: ["1,0 m", "2,0 m", "0,25 m", "0,5 m"], correctIndex: 0, explanation: "Bäuche im Abstand λ/2 = 0,5 m → λ = 1,0 m." },
+      { id: "natwiss-ueb-wellen2-q10", question: "Wie ändert sich f_n der n-ten Oberschwingung eines Seils, wenn L halbiert wird?", options: ["f_n verdoppelt sich", "f_n bleibt gleich", "f_n verdreifacht sich", "f_n halbiert sich"], correctIndex: 0, explanation: "f_n = n·c/(2L). Bei L → L/2: f_n → n·c/(2·L/2) = n·c/L = 2·f_n. Frequenz verdoppelt sich." }
     ]
   }
 ];

@@ -78,96 +78,16 @@ const NATWISS_CHAPTER5_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Was ist die Rücktreibkraft beim harmonischen Oszillator (Federpendel)?",
-        options: ["F = k · x (proportional zur Auslenkung, gleiches Vorzeichen)", "F = −k · x (proportional zur Auslenkung, entgegengesetzt)", "F = −b · ẋ (proportional zur Geschwindigkeit)", "F = m · g (Gewichtskraft)"],
-        correctIndex: 1,
-        explanation: "Beim Hookeschen Gesetz wirkt die Federkraft F = −k · x immer entgegen der Auslenkung (Minuszeichen). Diese rücktreibende Kraft führt zur harmonischen Schwingung."
-      },
-      {
-        id: "q2",
-        question: "Wie hängt die Eigenkreisfrequenz ω₀ des Federpendels von Masse m und Federkonstante k ab?",
-        options: ["ω₀ = √(m/k)", "ω₀ = k/m", "ω₀ = √(k/m)", "ω₀ = 2π · √(k/m)"],
-        correctIndex: 2,
-        explanation: "Aus der Bewegungsgleichung ẍ + (k/m) · x = 0 ergibt sich ω₀ = √(k/m). Eine steifere Feder (größes k) oder kleinere Masse ergibt eine höhere Eigenfrequenz."
-      },
-      {
-        id: "q3",
-        question: "Wie lautet der Zusammenhang zwischen Periodendauer T und Kreisfrequenz ω₀?",
-        options: ["T = ω₀ / (2π)", "T = 2π · ω₀", "T = 1 / ω₀", "T = 2π / ω₀"],
-        correctIndex: 3,
-        explanation: "T = 2π / ω₀. In einer Periode T dreht sich die Phasenlage um 2π, und ω₀ ist die Winkelgeschwindigkeit dieser Phasendrehung. Daraus folgt auch f = ω₀ / (2π)."
-      },
-      {
-        id: "q4",
-        question: "Wie groß ist die maximale Geschwindigkeit v_max des harmonischen Oszillators?",
-        options: ["v_max = A · ω₀²", "v_max = A / ω₀", "v_max = A · ω₀", "v_max = A · f"],
-        correctIndex: 2,
-        explanation: "Die Geschwindigkeit ist v(t) = −A · ω₀ · sin(ω₀t + φ₀). Der Maximalwert tritt am Nulldurchgang auf: v_max = A · ω₀."
-      },
-      {
-        id: "q5",
-        question: "Ein Pendel mit l = 1 m schwingt auf der Erde (g = 9,81 m/s²). Welchen Wert hat seine Periodendauer T näherungsweise?",
-        options: ["T ≈ 1,0 s", "T ≈ 2,0 s", "T ≈ 3,14 s", "T ≈ 0,5 s"],
-        correctIndex: 1,
-        explanation: "T = 2π√(l/g) = 2π√(1/9,81) ≈ 2π · 0,319 ≈ 2,006 s ≈ 2 s. Das ist das berühmte Sekundenpendel (T = 2 s, l ≈ 1 m)."
-      },
-      {
-        id: "q6",
-        question: "Wie verändert sich die Periodendauer T des Federpendels, wenn die Masse m verdoppelt wird (k bleibt gleich)?",
-        options: ["T verdoppelt sich", "T vervierfacht sich", "T vergrößert sich um Faktor √2", "T bleibt gleich"],
-        correctIndex: 2,
-        explanation: "T = 2π√(m/k). Bei Verdopplung von m: T' = 2π√(2m/k) = √2 · T. Die Periodendauer wächst um den Faktor √2 ≈ 1,41."
-      },
-      {
-        id: "q7",
-        question: "Was passiert mit der Gesamtenergie E des idealen harmonischen Oszillators über die Zeit?",
-        options: [
-          "E nimmt stetig ab (Dämpfung durch Luft)",
-          "E schwankt zwischen null und dem Maximalwert",
-          "E bleibt konstant (E = ½ · k · A²)",
-          "E wächst durch die Rücktreibkraft an"
-        ],
-        correctIndex: 2,
-        explanation: "Beim idealen (ungedämpften) Oszillator ist E = ½ · k · A² = const. Kinetische und potenzielle Energie werden ständig ineinander umgewandelt, aber die Summe bleibt konstant."
-      },
-      {
-        id: "q8",
-        question: "An welcher Position im Schwingungszyklus ist die kinetische Energie des Oszillators am größten?",
-        options: [
-          "Am Umkehrpunkt (x = ±A)",
-          "Bei x = A/2",
-          "Am Nulldurchgang (x = 0)",
-          "Die kinetische Energie ist überall gleich"
-        ],
-        correctIndex: 2,
-        explanation: "Am Nulldurchgang (x = 0) ist die Geschwindigkeit maximal (v = v_max = A · ω₀), daher ist dort die kinetische Energie E_kin = ½ · m · v_max² am größten. An den Umkehrpunkten (x = ±A) ist v = 0 und E_kin = 0."
-      },
-      {
-        id: "q9",
-        question: "Wie beeinflusst eine Verdopplung der Federkonstante k (bei gleicher Masse m) die Eigenfrequenz f₀?",
-        options: [
-          "f₀ verdoppelt sich",
-          "f₀ vergrößert sich um Faktor √2",
-          "f₀ bleibt gleich",
-          "f₀ halbiert sich"
-        ],
-        correctIndex: 1,
-        explanation: "Da ω₀ = √(k/m) und f₀ = ω₀/(2π), gilt bei k → 2k: f₀' = √(2k/m)/(2π) = √2 · f₀. Die Frequenz wächst um den Faktor √2 ≈ 1,41."
-      },
-      {
-        id: "q10",
-        question: "Welche Gleichung beschreibt korrekt die Bewegungsgleichung des harmonischen Oszillators?",
-        options: [
-          "ẍ + ω₀ · x = 0",
-          "ẍ − ω₀² · x = 0",
-          "ẍ + ω₀² · x = 0",
-          "ẍ · ω₀² + x = 0"
-        ],
-        correctIndex: 2,
-        explanation: "Die Bewegungsgleichung des harmonischen Oszillators lautet ẍ + ω₀² · x = 0. Das Minuszeichen der Rücktreibkraft F = −kx und die Division durch m ergeben den positiven Term +ω₀²·x."
-      }
+      { id: "q1", question: "Was ist die Rücktreibkraft beim harmonischen Oszillator (Federpendel)?", options: ["F = −b · ẋ (proportional zur Geschwindigkeit)", "F = k · x (proportional zur Auslenkung, gleiches Vorzeichen)", "F = m · g (Gewichtskraft)", "F = −k · x (proportional zur Auslenkung, entgegengesetzt)"], correctIndex: 3, explanation: "Beim Hookeschen Gesetz wirkt die Federkraft F = −k · x immer entgegen der Auslenkung (Minuszeichen). Diese rücktreibende Kraft führt zur harmonischen Schwingung." },
+      { id: "q2", question: "Wie hängt die Eigenkreisfrequenz ω₀ des Federpendels von Masse m und Federkonstante k ab?", options: ["ω₀ = √(m/k)", "ω₀ = √(k/m)", "ω₀ = 2π · √(k/m)", "ω₀ = k/m"], correctIndex: 1, explanation: "Aus der Bewegungsgleichung ẍ + (k/m) · x = 0 ergibt sich ω₀ = √(k/m). Eine steifere Feder (größes k) oder kleinere Masse ergibt eine höhere Eigenfrequenz." },
+      { id: "q3", question: "Wie lautet der Zusammenhang zwischen Periodendauer T und Kreisfrequenz ω₀?", options: ["T = 2π · ω₀", "T = 1 / ω₀", "T = ω₀ / (2π)", "T = 2π / ω₀"], correctIndex: 3, explanation: "T = 2π / ω₀. In einer Periode T dreht sich die Phasenlage um 2π, und ω₀ ist die Winkelgeschwindigkeit dieser Phasendrehung. Daraus folgt auch f = ω₀ / (2π)." },
+      { id: "q4", question: "Wie groß ist die maximale Geschwindigkeit v_max des harmonischen Oszillators?", options: ["v_max = A / ω₀", "v_max = A · f", "v_max = A · ω₀", "v_max = A · ω₀²"], correctIndex: 2, explanation: "Die Geschwindigkeit ist v(t) = −A · ω₀ · sin(ω₀t + φ₀). Der Maximalwert tritt am Nulldurchgang auf: v_max = A · ω₀." },
+      { id: "q5", question: "Ein Pendel mit l = 1 m schwingt auf der Erde (g = 9,81 m/s²). Welchen Wert hat seine Periodendauer T näherungsweise?", options: ["T ≈ 3,14 s", "T ≈ 0,5 s", "T ≈ 1,0 s", "T ≈ 2,0 s"], correctIndex: 3, explanation: "T = 2π√(l/g) = 2π√(1/9,81) ≈ 2π · 0,319 ≈ 2,006 s ≈ 2 s. Das ist das berühmte Sekundenpendel (T = 2 s, l ≈ 1 m)." },
+      { id: "q6", question: "Wie verändert sich die Periodendauer T des Federpendels, wenn die Masse m verdoppelt wird (k bleibt gleich)?", options: ["T bleibt gleich", "T vergrößert sich um Faktor √2", "T vervierfacht sich", "T verdoppelt sich"], correctIndex: 1, explanation: "T = 2π√(m/k). Bei Verdopplung von m: T' = 2π√(2m/k) = √2 · T. Die Periodendauer wächst um den Faktor √2 ≈ 1,41." },
+      { id: "q7", question: "Was passiert mit der Gesamtenergie E des idealen harmonischen Oszillators über die Zeit?", options: ["E nimmt stetig ab (Dämpfung durch Luft)", "E schwankt zwischen null und dem Maximalwert", "E bleibt konstant (E = ½ · k · A²)", "E wächst durch die Rücktreibkraft an"], correctIndex: 2, explanation: "Beim idealen (ungedämpften) Oszillator ist E = ½ · k · A² = const. Kinetische und potenzielle Energie werden ständig ineinander umgewandelt, aber die Summe bleibt konstant." },
+      { id: "q8", question: "An welcher Position im Schwingungszyklus ist die kinetische Energie des Oszillators am größten?", options: ["Am Nulldurchgang (x = 0)", "Die kinetische Energie ist überall gleich", "Am Umkehrpunkt (x = ±A)", "Bei x = A/2"], correctIndex: 0, explanation: "Am Nulldurchgang (x = 0) ist die Geschwindigkeit maximal (v = v_max = A · ω₀), daher ist dort die kinetische Energie E_kin = ½ · m · v_max² am größten. An den Umkehrpunkten (x = ±A) ist v = 0 und E_kin = 0." },
+      { id: "q9", question: "Wie beeinflusst eine Verdopplung der Federkonstante k (bei gleicher Masse m) die Eigenfrequenz f₀?", options: ["f₀ halbiert sich", "f₀ vergrößert sich um Faktor √2", "f₀ bleibt gleich", "f₀ verdoppelt sich"], correctIndex: 1, explanation: "Da ω₀ = √(k/m) und f₀ = ω₀/(2π), gilt bei k → 2k: f₀' = √(2k/m)/(2π) = √2 · f₀. Die Frequenz wächst um den Faktor √2 ≈ 1,41." },
+      { id: "q10", question: "Welche Gleichung beschreibt korrekt die Bewegungsgleichung des harmonischen Oszillators?", options: ["ẍ + ω₀² · x = 0", "ẍ − ω₀² · x = 0", "ẍ · ω₀² + x = 0", "ẍ + ω₀ · x = 0"], correctIndex: 0, explanation: "Die Bewegungsgleichung des harmonischen Oszillators lautet ẍ + ω₀² · x = 0. Das Minuszeichen der Rücktreibkraft F = −kx und die Division durch m ergeben den positiven Term +ω₀²·x." }
     ]
   },
   {
@@ -246,116 +166,16 @@ const NATWISS_CHAPTER5_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Wie lautet die Bewegungsgleichung des gedämpften harmonischen Oszillators?",
-        options: [
-          "ẍ + ω₀² · x = 0",
-          "ẍ + 2δ · ẋ + ω₀² · x = 0",
-          "ẍ − 2δ · ẋ + ω₀² · x = 0",
-          "ẍ + 2δ · x + ω₀² · ẋ = 0"
-        ],
-        correctIndex: 1,
-        explanation: "Die Bewegungsgleichung lautet ẍ + 2δ · ẋ + ω₀² · x = 0. Der Term 2δ · ẋ beschreibt die geschwindigkeitsproportionale Dämpfungskraft (F_D = −b · ẋ, mit δ = b/(2m))."
-      },
-      {
-        id: "q2",
-        question: "Welcher Dämpfungsfall liegt vor, wenn δ < ω₀?",
-        options: ["Kriechfall (Überdämpfung)", "Schwingfall (Unterdämpfung)", "Aperiodischer Grenzfall", "Resonanzfall"],
-        correctIndex: 1,
-        explanation: "Für δ < ω₀ liegt der Schwingfall (Unterdämpfung) vor. Das System schwingt mit der gedämpften Frequenz ω_d = √(ω₀² − δ²), aber die Amplitude klingt exponentiell ab: A(t) = A₀ · e^(−δt)."
-      },
-      {
-        id: "q3",
-        question: "Wie lautet die Formel für die gedämpfte Kreisfrequenz ω_d?",
-        options: [
-          "ω_d = ω₀ + δ",
-          "ω_d = ω₀ − δ",
-          "ω_d = √(ω₀² + δ²)",
-          "ω_d = √(ω₀² − δ²)"
-        ],
-        correctIndex: 3,
-        explanation: "Die gedämpfte Kreisfrequenz lautet ω_d = √(ω₀² − δ²). Sie ist immer kleiner als die Eigenkreisfrequenz ω₀. Bei starker Dämpfung (δ → ω₀) nähert sich ω_d gegen null."
-      },
-      {
-        id: "q4",
-        question: "Was beschreibt der Gütefaktor Q eines gedämpften Oszillators?",
-        options: [
-          "Q = ω₀ / (2δ) – ein hoher Wert bedeutet geringe Dämpfung",
-          "Q = 2δ / ω₀ – ein hoher Wert bedeutet starke Dämpfung",
-          "Q = δ · ω₀ – die Energie des Systems",
-          "Q = ω₀² − δ² – die gedämpfte Frequenz"
-        ],
-        correctIndex: 0,
-        explanation: "Der Gütefaktor Q = ω₀ / (2δ) gibt an, wie gut der Oszillator Energie speichert (geringe Dämpfung = hoher Q). Ein Quarzoszillator hat Q ≈ 10⁶, ein Türstoßdämpfer Q < 1."
-      },
-      {
-        id: "q5",
-        question: "Welcher Dämpfungsfall führt zur schnellsten Rückkehr in die Gleichgewichtslage ohne Überschwingen?",
-        options: [
-          "Kriechfall (δ > ω₀)",
-          "Schwingfall (δ < ω₀)",
-          "Aperiodischer Grenzfall (δ = ω₀)",
-          "Alle Fälle kehren gleich schnell zurück"
-        ],
-        correctIndex: 2,
-        explanation: "Der aperiodische Grenzfall (δ = ω₀) ist optimal: Das System kehrt ohne Schwingung (kein Überschwingen) in kürzest möglicher Zeit zur Gleichgewichtslage zurück. Daher wird er bei Stoßdämpfern und Zeigerinstrumenten angestrebt."
-      },
-      {
-        id: "q6",
-        question: "Ein Oszillator im Schwingfall hat δ = 1 s⁻¹. Wie lange dauert es, bis die Amplitude auf 1/e ≈ 37 % des Ausgangswerts abgeklungen ist?",
-        options: ["0,5 s", "2π s", "1 s", "10 s"],
-        correctIndex: 2,
-        explanation: "Die Amplitude klingt nach A(t) = A₀ · e^(−δt) ab. Die Zeitkonstante ist τ = 1/δ. Für δ = 1 s⁻¹ gilt τ = 1 s. Nach τ = 1 s ist die Amplitude auf A₀/e ≈ 0,37 · A₀ abgefallen."
-      },
-      {
-        id: "q7",
-        question: "Was ist das logarithmische Dekrement Λ?",
-        options: [
-          "Die Zeitkonstante τ = 1/δ",
-          "Das Verhältnis zweier aufeinanderfolgender Amplitudenmaxima",
-          "Das Produkt Λ = δ · T_d (Dämpfungskoeffizient mal gedämpfte Periode)",
-          "Der Gütefaktor Q des Systems"
-        ],
-        correctIndex: 2,
-        explanation: "Das logarithmische Dekrement ist Λ = δ · T_d. Es gibt den natürlichen Logarithmus des Verhältnisses zweier aufeinanderfolgender Amplitudenmaxima an: Λ = ln(A_n / A_{n+1})."
-      },
-      {
-        id: "q8",
-        question: "Welche Aussage zum Kriechfall (δ > ω₀) ist korrekt?",
-        options: [
-          "Das System schwingt mit kleiner werdender Amplitude",
-          "Das System kehrt ohne Schwingung, aber langsamer als im aperiodischen Grenzfall, zur Ruhe zurück",
-          "Das System schwingt mit der Frequenz ω_d = √(δ² − ω₀²)",
-          "Das System schwingt mit der Eigenfrequenz ω₀"
-        ],
-        correctIndex: 1,
-        explanation: "Im Kriechfall (δ > ω₀) findet keine Schwingung statt. Die Rückkehr zur Gleichgewichtslage erfolgt rein exponentiell und langsamer als im aperiodischen Grenzfall, da das System zu stark gedämpft ist."
-      },
-      {
-        id: "q9",
-        question: "Ein System hat δ = ω₀ / 2. Welcher Dämpfungsfall liegt vor, und wie groß ist der Gütefaktor Q?",
-        options: [
-          "Kriechfall; Q = 0,5",
-          "Schwingfall; Q = 1",
-          "Aperiodischer Grenzfall; Q = 2",
-          "Schwingfall; Q = 0,5"
-        ],
-        correctIndex: 1,
-        explanation: "Da δ = ω₀/2 < ω₀, liegt der Schwingfall vor. Der Gütefaktor ist Q = ω₀/(2δ) = ω₀/(2 · ω₀/2) = ω₀/ω₀ = 1. Ein Q = 1 entspricht noch recht starker Dämpfung."
-      },
-      {
-        id: "q10",
-        question: "Welche Maßnahme erhöht die Dämpfung δ eines Feder-Masse-Systems?",
-        options: [
-          "Die Federkonstante k erhöhen",
-          "Die Masse m verringern",
-          "Den Dämpfungsparameter b erhöhen (z. B. viskoseres Öl im Stoßdämpfer)",
-          "Die Eigenfrequenz ω₀ erhöhen"
-        ],
-        correctIndex: 2,
-        explanation: "Da δ = b/(2m), steigt δ bei größerem Dämpfungsparameter b (stärkere Reibungs- oder Viskositätskraft). Eine Erhöhung von k oder eine Verringerung von m erhöhen hingegen ω₀, nicht δ."
-      }
+      { id: "q1", question: "Wie lautet die Bewegungsgleichung des gedämpften harmonischen Oszillators?", options: ["ẍ − 2δ · ẋ + ω₀² · x = 0", "ẍ + 2δ · ẋ + ω₀² · x = 0", "ẍ + 2δ · x + ω₀² · ẋ = 0", "ẍ + ω₀² · x = 0"], correctIndex: 1, explanation: "Die Bewegungsgleichung lautet ẍ + 2δ · ẋ + ω₀² · x = 0. Der Term 2δ · ẋ beschreibt die geschwindigkeitsproportionale Dämpfungskraft (F_D = −b · ẋ, mit δ = b/(2m))." },
+      { id: "q2", question: "Welcher Dämpfungsfall liegt vor, wenn δ < ω₀?", options: ["Resonanzfall", "Aperiodischer Grenzfall", "Schwingfall (Unterdämpfung)", "Kriechfall (Überdämpfung)"], correctIndex: 2, explanation: "Für δ < ω₀ liegt der Schwingfall (Unterdämpfung) vor. Das System schwingt mit der gedämpften Frequenz ω_d = √(ω₀² − δ²), aber die Amplitude klingt exponentiell ab: A(t) = A₀ · e^(−δt)." },
+      { id: "q3", question: "Wie lautet die Formel für die gedämpfte Kreisfrequenz ω_d?", options: ["ω_d = ω₀ + δ", "ω_d = √(ω₀² + δ²)", "ω_d = √(ω₀² − δ²)", "ω_d = ω₀ − δ"], correctIndex: 2, explanation: "Die gedämpfte Kreisfrequenz lautet ω_d = √(ω₀² − δ²). Sie ist immer kleiner als die Eigenkreisfrequenz ω₀. Bei starker Dämpfung (δ → ω₀) nähert sich ω_d gegen null." },
+      { id: "q4", question: "Was beschreibt der Gütefaktor Q eines gedämpften Oszillators?", options: ["Q = ω₀ / (2δ) – ein hoher Wert bedeutet geringe Dämpfung", "Q = 2δ / ω₀ – ein hoher Wert bedeutet starke Dämpfung", "Q = ω₀² − δ² – die gedämpfte Frequenz", "Q = δ · ω₀ – die Energie des Systems"], correctIndex: 0, explanation: "Der Gütefaktor Q = ω₀ / (2δ) gibt an, wie gut der Oszillator Energie speichert (geringe Dämpfung = hoher Q). Ein Quarzoszillator hat Q ≈ 10⁶, ein Türstoßdämpfer Q < 1." },
+      { id: "q5", question: "Welcher Dämpfungsfall führt zur schnellsten Rückkehr in die Gleichgewichtslage ohne Überschwingen?", options: ["Alle Fälle kehren gleich schnell zurück", "Kriechfall (δ > ω₀)", "Schwingfall (δ < ω₀)", "Aperiodischer Grenzfall (δ = ω₀)"], correctIndex: 3, explanation: "Der aperiodische Grenzfall (δ = ω₀) ist optimal: Das System kehrt ohne Schwingung (kein Überschwingen) in kürzest möglicher Zeit zur Gleichgewichtslage zurück. Daher wird er bei Stoßdämpfern und Zeigerinstrumenten angestrebt." },
+      { id: "q6", question: "Ein Oszillator im Schwingfall hat δ = 1 s⁻¹. Wie lange dauert es, bis die Amplitude auf 1/e ≈ 37 % des Ausgangswerts abgeklungen ist?", options: ["2π s", "1 s", "0,5 s", "10 s"], correctIndex: 1, explanation: "Die Amplitude klingt nach A(t) = A₀ · e^(−δt) ab. Die Zeitkonstante ist τ = 1/δ. Für δ = 1 s⁻¹ gilt τ = 1 s. Nach τ = 1 s ist die Amplitude auf A₀/e ≈ 0,37 · A₀ abgefallen." },
+      { id: "q7", question: "Was ist das logarithmische Dekrement Λ?", options: ["Das Produkt Λ = δ · T_d (Dämpfungskoeffizient mal gedämpfte Periode)", "Das Verhältnis zweier aufeinanderfolgender Amplitudenmaxima", "Der Gütefaktor Q des Systems", "Die Zeitkonstante τ = 1/δ"], correctIndex: 0, explanation: "Das logarithmische Dekrement ist Λ = δ · T_d. Es gibt den natürlichen Logarithmus des Verhältnisses zweier aufeinanderfolgender Amplitudenmaxima an: Λ = ln(A_n / A_{n+1})." },
+      { id: "q8", question: "Welche Aussage zum Kriechfall (δ > ω₀) ist korrekt?", options: ["Das System schwingt mit der Eigenfrequenz ω₀", "Das System kehrt ohne Schwingung, aber langsamer als im aperiodischen Grenzfall, zur Ruhe zurück", "Das System schwingt mit kleiner werdender Amplitude", "Das System schwingt mit der Frequenz ω_d = √(δ² − ω₀²)"], correctIndex: 1, explanation: "Im Kriechfall (δ > ω₀) findet keine Schwingung statt. Die Rückkehr zur Gleichgewichtslage erfolgt rein exponentiell und langsamer als im aperiodischen Grenzfall, da das System zu stark gedämpft ist." },
+      { id: "q9", question: "Ein System hat δ = ω₀ / 2. Welcher Dämpfungsfall liegt vor, und wie groß ist der Gütefaktor Q?", options: ["Schwingfall; Q = 0,5", "Kriechfall; Q = 0,5", "Aperiodischer Grenzfall; Q = 2", "Schwingfall; Q = 1"], correctIndex: 3, explanation: "Da δ = ω₀/2 < ω₀, liegt der Schwingfall vor. Der Gütefaktor ist Q = ω₀/(2δ) = ω₀/(2 · ω₀/2) = ω₀/ω₀ = 1. Ein Q = 1 entspricht noch recht starker Dämpfung." },
+      { id: "q10", question: "Welche Maßnahme erhöht die Dämpfung δ eines Feder-Masse-Systems?", options: ["Den Dämpfungsparameter b erhöhen (z. B. viskoseres Öl im Stoßdämpfer)", "Die Masse m verringern", "Die Eigenfrequenz ω₀ erhöhen", "Die Federkonstante k erhöhen"], correctIndex: 0, explanation: "Da δ = b/(2m), steigt δ bei größerem Dämpfungsparameter b (stärkere Reibungs- oder Viskositätskraft). Eine Erhöhung von k oder eine Verringerung von m erhöhen hingegen ω₀, nicht δ." }
     ]
   },
   {
@@ -435,111 +255,16 @@ const NATWISS_CHAPTER5_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Mit welcher Frequenz schwingt ein erzwungener Oszillator im eingeschwungenen Zustand?",
-        options: [
-          "Mit der Eigenfrequenz ω₀",
-          "Mit der gedämpften Frequenz ω_d",
-          "Mit der Erregerfrequenz Ω",
-          "Mit dem Mittelwert aus ω₀ und Ω"
-        ],
-        correctIndex: 2,
-        explanation: "Im eingeschwungenen Zustand schwingt das System immer mit der Erregerfrequenz Ω, nicht mit der Eigenfrequenz ω₀. Die Eigenfrequenz bestimmt jedoch, bei welchem Ω das System resonant reagiert."
-      },
-      {
-        id: "q2",
-        question: "Bei welcher Erregerfrequenz Ω tritt (näherungsweise) die maximale Schwingungsamplitude auf?",
-        options: [
-          "Bei Ω = 0 (statischer Fall)",
-          "Bei Ω = ω₀ − δ",
-          "Bei Ω = √(ω₀² − 2δ²) (Resonanzfrequenz)",
-          "Bei Ω = 2ω₀"
-        ],
-        correctIndex: 2,
-        explanation: "Die Resonanzfrequenz, bei der die Amplitude maximal ist, beträgt Ω_R = √(ω₀² − 2δ²). Für schwache Dämpfung (δ << ω₀) gilt Ω_R ≈ ω₀."
-      },
-      {
-        id: "q3",
-        question: "Wie groß ist die Phasenverschiebung φ zwischen erregender Kraft und Systemantwort, wenn Ω = ω₀?",
-        options: ["φ = 0°", "φ = 45°", "φ = 90°", "φ = 180°"],
-        correctIndex: 2,
-        explanation: "Bei Ω = ω₀ beträgt die Phasenverschiebung immer φ = 90°, unabhängig von der Dämpfung. Die Systemantwort eilt der Erregerkraft um eine Viertelperiode nach. Diese Eigenschaft eignet sich zur experimentellen Bestimmung von Eigenfrequenzen."
-      },
-      {
-        id: "q4",
-        question: "Was passiert mit der Resonanzamplitude bei sehr schwacher Dämpfung (δ → 0)?",
-        options: [
-          "Die Amplitude bleibt endlich (begrenzt durch die Masse)",
-          "Die Amplitude nähert sich dem statischen Wert an",
-          "Die Amplitude wächst theoretisch gegen unendlich",
-          "Die Amplitude halbiert sich"
-        ],
-        correctIndex: 2,
-        explanation: "Die Resonanzamplitude A(ω₀) = F₀/(m · 2δ · ω₀) wächst für δ → 0 gegen unendlich. In der Realität begrenzen nichtlineare Effekte oder Materialversagen die Amplitude, bevor sie unendlich wird (vgl. Tacoma-Brücke)."
-      },
-      {
-        id: "q5",
-        question: "Welche Phasenverschiebung φ tritt bei Ω >> ω₀ (sehr hohe Erregerfrequenz) auf?",
-        options: ["φ ≈ 0° (phasengleich)", "φ ≈ 45°", "φ ≈ 90°", "φ ≈ 180° (gegenphasig)"],
-        correctIndex: 3,
-        explanation: "Bei sehr hoher Erregerfrequenz (Ω >> ω₀) läuft die Systemantwort der Erregerkraft um φ ≈ 180° nach (gegenphasig). Das System kann der schnellen Anregung nicht folgen und schwingt entgegengesetzt zur Kraft."
-      },
-      {
-        id: "q6",
-        question: "Was versteht man unter Resonanzkatastrophe?",
-        options: [
-          "Ein elektrischer Kurzschluss in einem Schwingkreis",
-          "Das Versagen einer Struktur durch resonante Anregung bei geringer Dämpfung",
-          "Das Abreißen der Schwingung bei Überdämpfung",
-          "Das Abklingen der Amplitude durch Energieverluste"
-        ],
-        correctIndex: 1,
-        explanation: "Resonanzkatastrophe bezeichnet das Versagen einer Struktur durch resonante Anregung. Bei schwacher Dämpfung kann die Schwingungsamplitude so groß werden, dass die Streckgrenze des Materials überschritten wird. Bekanntes Beispiel: Einsturz der Tacoma-Narrows-Brücke (1940)."
-      },
-      {
-        id: "q7",
-        question: "Wovon hängt die Breite des Resonanzpeaks (Bandbreite) ab?",
-        options: [
-          "Nur von der Erregeramplitude F₀",
-          "Von der Dämpfung δ: Stärkere Dämpfung ergibt einen breiteren Peak",
-          "Von der Masse m allein",
-          "Von der Eigenfrequenz ω₀ allein"
-        ],
-        correctIndex: 1,
-        explanation: "Die Halbwertsbreite der Resonanzkurve beträgt Δω = 2δ. Stärkere Dämpfung (größeres δ) ergibt eine breitere, niedrigere Resonanzkurve. Dies wird durch den Gütefaktor Q = ω₀/(2δ) = ω₀/Δω beschrieben."
-      },
-      {
-        id: "q8",
-        question: "In welchem technischen Gerät wird Resonanz gezielt zur Signalverarbeitung genutzt?",
-        options: [
-          "In einem Gleichstrommotor",
-          "In einem Verbrennungsmotor",
-          "In einem Hochpass-Filter ohne Resonanzfrequenz",
-          "Im Schwingkreis eines Radios (Abstimmung auf Empfangsfrequenz)"
-        ],
-        correctIndex: 3,
-        explanation: "Im LC-Schwingkreis eines Radioempfängers wird durch Veränderung der Kapazität oder Induktivität die Resonanzfrequenz auf die gewünschte Sendefrequenz eingestellt. Nur Signale nahe der Resonanzfrequenz werden stark verstärkt."
-      },
-      {
-        id: "q9",
-        question: "Ein System hat ω₀ = 5 rad/s und δ = 2 s⁻¹. Wie groß ist die Resonanzfrequenz Ω_R?",
-        options: ["Ω_R = 5 rad/s", "Ω_R = √17 ≈ 4,12 rad/s", "Ω_R = 3 rad/s", "Ω_R = √29 ≈ 5,39 rad/s"],
-        correctIndex: 1,
-        explanation: "Ω_R = √(ω₀² − 2δ²) = √(25 − 2 · 4) = √(25 − 8) = √17 ≈ 4,12 rad/s."
-      },
-      {
-        id: "q10",
-        question: "Wie verändert sich die Resonanzfrequenz Ω_R bei zunehmender Dämpfung δ?",
-        options: [
-          "Ω_R steigt (stärkere Dämpfung → höhere Resonanzfrequenz)",
-          "Ω_R sinkt (stärkere Dämpfung → niedrigere Resonanzfrequenz)",
-          "Ω_R bleibt unverändert bei ω₀",
-          "Ω_R verdoppelt sich"
-        ],
-        correctIndex: 1,
-        explanation: "Da Ω_R = √(ω₀² − 2δ²), nimmt Ω_R mit steigendem δ ab. Bei δ = ω₀/√2 liegt das Maximum bei Ω = 0 (kein Resonanzmaximum mehr). Für δ > ω₀/√2 gibt es keine ausgeprägten Resonanzspitze mehr."
-      }
+      { id: "q1", question: "Mit welcher Frequenz schwingt ein erzwungener Oszillator im eingeschwungenen Zustand?", options: ["Mit der Erregerfrequenz Ω", "Mit der gedämpften Frequenz ω_d", "Mit der Eigenfrequenz ω₀", "Mit dem Mittelwert aus ω₀ und Ω"], correctIndex: 0, explanation: "Im eingeschwungenen Zustand schwingt das System immer mit der Erregerfrequenz Ω, nicht mit der Eigenfrequenz ω₀. Die Eigenfrequenz bestimmt jedoch, bei welchem Ω das System resonant reagiert." },
+      { id: "q2", question: "Bei welcher Erregerfrequenz Ω tritt (näherungsweise) die maximale Schwingungsamplitude auf?", options: ["Bei Ω = 0 (statischer Fall)", "Bei Ω = ω₀ − δ", "Bei Ω = 2ω₀", "Bei Ω = √(ω₀² − 2δ²) (Resonanzfrequenz)"], correctIndex: 3, explanation: "Die Resonanzfrequenz, bei der die Amplitude maximal ist, beträgt Ω_R = √(ω₀² − 2δ²). Für schwache Dämpfung (δ << ω₀) gilt Ω_R ≈ ω₀." },
+      { id: "q3", question: "Wie groß ist die Phasenverschiebung φ zwischen erregender Kraft und Systemantwort, wenn Ω = ω₀?", options: ["φ = 180°", "φ = 0°", "φ = 90°", "φ = 45°"], correctIndex: 2, explanation: "Bei Ω = ω₀ beträgt die Phasenverschiebung immer φ = 90°, unabhängig von der Dämpfung. Die Systemantwort eilt der Erregerkraft um eine Viertelperiode nach. Diese Eigenschaft eignet sich zur experimentellen Bestimmung von Eigenfrequenzen." },
+      { id: "q4", question: "Was passiert mit der Resonanzamplitude bei sehr schwacher Dämpfung (δ → 0)?", options: ["Die Amplitude bleibt endlich (begrenzt durch die Masse)", "Die Amplitude wächst theoretisch gegen unendlich", "Die Amplitude halbiert sich", "Die Amplitude nähert sich dem statischen Wert an"], correctIndex: 1, explanation: "Die Resonanzamplitude A(ω₀) = F₀/(m · 2δ · ω₀) wächst für δ → 0 gegen unendlich. In der Realität begrenzen nichtlineare Effekte oder Materialversagen die Amplitude, bevor sie unendlich wird (vgl. Tacoma-Brücke)." },
+      { id: "q5", question: "Welche Phasenverschiebung φ tritt bei Ω >> ω₀ (sehr hohe Erregerfrequenz) auf?", options: ["φ ≈ 45°", "φ ≈ 180° (gegenphasig)", "φ ≈ 90°", "φ ≈ 0° (phasengleich)"], correctIndex: 1, explanation: "Bei sehr hoher Erregerfrequenz (Ω >> ω₀) läuft die Systemantwort der Erregerkraft um φ ≈ 180° nach (gegenphasig). Das System kann der schnellen Anregung nicht folgen und schwingt entgegengesetzt zur Kraft." },
+      { id: "q6", question: "Was versteht man unter Resonanzkatastrophe?", options: ["Ein elektrischer Kurzschluss in einem Schwingkreis", "Das Versagen einer Struktur durch resonante Anregung bei geringer Dämpfung", "Das Abreißen der Schwingung bei Überdämpfung", "Das Abklingen der Amplitude durch Energieverluste"], correctIndex: 1, explanation: "Resonanzkatastrophe bezeichnet das Versagen einer Struktur durch resonante Anregung. Bei schwacher Dämpfung kann die Schwingungsamplitude so groß werden, dass die Streckgrenze des Materials überschritten wird. Bekanntes Beispiel: Einsturz der Tacoma-Narrows-Brücke (1940)." },
+      { id: "q7", question: "Wovon hängt die Breite des Resonanzpeaks (Bandbreite) ab?", options: ["Von der Masse m allein", "Von der Eigenfrequenz ω₀ allein", "Von der Dämpfung δ: Stärkere Dämpfung ergibt einen breiteren Peak", "Nur von der Erregeramplitude F₀"], correctIndex: 2, explanation: "Die Halbwertsbreite der Resonanzkurve beträgt Δω = 2δ. Stärkere Dämpfung (größeres δ) ergibt eine breitere, niedrigere Resonanzkurve. Dies wird durch den Gütefaktor Q = ω₀/(2δ) = ω₀/Δω beschrieben." },
+      { id: "q8", question: "In welchem technischen Gerät wird Resonanz gezielt zur Signalverarbeitung genutzt?", options: ["In einem Gleichstrommotor", "In einem Hochpass-Filter ohne Resonanzfrequenz", "Im Schwingkreis eines Radios (Abstimmung auf Empfangsfrequenz)", "In einem Verbrennungsmotor"], correctIndex: 2, explanation: "Im LC-Schwingkreis eines Radioempfängers wird durch Veränderung der Kapazität oder Induktivität die Resonanzfrequenz auf die gewünschte Sendefrequenz eingestellt. Nur Signale nahe der Resonanzfrequenz werden stark verstärkt." },
+      { id: "q9", question: "Ein System hat ω₀ = 5 rad/s und δ = 2 s⁻¹. Wie groß ist die Resonanzfrequenz Ω_R?", options: ["Ω_R = √29 ≈ 5,39 rad/s", "Ω_R = 5 rad/s", "Ω_R = 3 rad/s", "Ω_R = √17 ≈ 4,12 rad/s"], correctIndex: 3, explanation: "Ω_R = √(ω₀² − 2δ²) = √(25 − 2 · 4) = √(25 − 8) = √17 ≈ 4,12 rad/s." },
+      { id: "q10", question: "Wie verändert sich die Resonanzfrequenz Ω_R bei zunehmender Dämpfung δ?", options: ["Ω_R sinkt (stärkere Dämpfung → niedrigere Resonanzfrequenz)", "Ω_R verdoppelt sich", "Ω_R steigt (stärkere Dämpfung → höhere Resonanzfrequenz)", "Ω_R bleibt unverändert bei ω₀"], correctIndex: 0, explanation: "Da Ω_R = √(ω₀² − 2δ²), nimmt Ω_R mit steigendem δ ab. Bei δ = ω₀/√2 liegt das Maximum bei Ω = 0 (kein Resonanzmaximum mehr). Für δ > ω₀/√2 gibt es keine ausgeprägten Resonanzspitze mehr." }
     ]
   }
 ];

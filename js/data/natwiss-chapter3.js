@@ -77,126 +77,16 @@ const NATWISS_CHAPTER3_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Welche Einheit hat der Impuls?",
-        options: [
-          "N (Newton)",
-          "J (Joule)",
-          "kg·m/s",
-          "m/s²"
-        ],
-        correctIndex: 2,
-        explanation: "Der Impuls p = m·v hat die Einheit kg·m/s = N·s."
-      },
-      {
-        id: "q2",
-        question: "Wann gilt der Impulserhaltungssatz?",
-        options: [
-          "Immer, in jedem physikalischen System",
-          "Wenn die Summe der äußeren Kräfte auf das System null ist",
-          "Nur bei elastischen Stößen",
-          "Nur wenn alle Körper dieselbe Masse haben"
-        ],
-        correctIndex: 1,
-        explanation: "Der Impulserhaltungssatz gilt, wenn keine äußere Kraft auf das System wirkt (oder die Summe aller äußeren Kräfte null ist). Interne Kräfte (zwischen Teilsystemen) ändern den Gesamtimpuls nicht."
-      },
-      {
-        id: "q3",
-        question: "Wie lautet das 2. Newtonsche Gesetz in der allgemeinen Form?",
-        options: [
-          "F = m·a (gilt immer exakt)",
-          "F = dp/dt (Kraft = zeitliche Änderung des Impulses)",
-          "F = m·v",
-          "F = Δp / Δv"
-        ],
-        correctIndex: 1,
-        explanation: "Die allgemeine Form ist F = dp/dt. Für konstante Masse vereinfacht sich das zu F = m·(dv/dt) = m·a."
-      },
-      {
-        id: "q4",
-        question: "Was versteht man unter einem Kraftstoß?",
-        options: [
-          "Eine sehr große Kraft über eine sehr kurze Zeit",
-          "Das Produkt F · Δt, das der Impulsänderung Δp entspricht",
-          "Die Kraft, die ein Stoßprozess erzeugt",
-          "Den maximalen Wert der Kraft während eines Stoßes"
-        ],
-        correctIndex: 1,
-        explanation: "Der Kraftstoß J = F · Δt ist gleich der Impulsänderung: J = Δp. Er beschreibt, wie stark und wie lange eine Kraft wirkt, um den Impuls zu ändern."
-      },
-      {
-        id: "q5",
-        question: "Zwei gleich schwere Kugeln (m₁ = m₂ = 2 kg) stoßen aufeinander. Kugel 1 bewegt sich mit 3 m/s nach rechts, Kugel 2 ist in Ruhe. Was ist der Gesamtimpuls des Systems?",
-        options: [
-          "0 kg·m/s",
-          "6 kg·m/s nach rechts",
-          "3 kg·m/s nach rechts",
-          "12 kg·m/s nach rechts"
-        ],
-        correctIndex: 1,
-        explanation: "p_ges = m₁·v₁ + m₂·v₂ = 2·3 + 2·0 = 6 kg·m/s nach rechts. Dieser Wert bleibt beim Stoß erhalten."
-      },
-      {
-        id: "q6",
-        question: "Warum kann eine Rakete im Weltraum (Vakuum) beschleunigen?",
-        options: [
-          "Weil sie sich gegen Sterne abstößt",
-          "Weil die Rakete Treibstoff nach hinten ausstößt und der Impulserhaltungssatz die Rakete nach vorne beschleunigt",
-          "Weil im Vakuum keine Reibung vorhanden ist",
-          "Weil das Gravitationsfeld der Sonne die Rakete antreibt"
-        ],
-        correctIndex: 1,
-        explanation: "Durch Impulserhaltung: Die Rakete stößt Gase nach hinten aus (Impuls rückwärts). Da der Gesamtimpuls erhalten bleibt, erhält die Rakete einen gleich großen Impuls nach vorne (Rückstoßprinzip)."
-      },
-      {
-        id: "q7",
-        question: "Eine 70 kg schwere Person springt von einem 10 kg schweren Ruderboot (beide anfangs in Ruhe). Die Person springt mit 2 m/s nach vorne. Mit welcher Geschwindigkeit bewegt sich das Boot?",
-        options: [
-          "0,14 m/s vorwärts",
-          "14 m/s rückwärts",
-          "2 m/s rückwärts",
-          "0,14 m/s rückwärts"
-        ],
-        correctIndex: 1,
-        explanation: "Impulserhaltung: 0 = m_Person·v_P + m_Boot·v_B → v_B = –70·2/10 = –14 m/s. Das Boot bewegt sich mit 14 m/s in entgegengesetzter Richtung."
-      },
-      {
-        id: "q8",
-        question: "Was gilt beim Impuls im Vergleich zur kinetischen Energie?",
-        options: [
-          "Beide sind skalare Größen",
-          "Beide sind vektorielle Größen",
-          "Impuls ist ein Vektor, kinetische Energie ist ein Skalar",
-          "Impuls ist ein Skalar, kinetische Energie ist ein Vektor"
-        ],
-        correctIndex: 2,
-        explanation: "p = m·v ist ein Vektor (hat Richtung), während E_kin = ½·m·v² ein Skalar (ohne Richtung, immer positiv) ist."
-      },
-      {
-        id: "q9",
-        question: "Ein Ball (m = 0,2 kg) wird mit 15 m/s geworfen. Welchen Impuls hat er?",
-        options: [
-          "0,013 kg·m/s",
-          "3 kg·m/s",
-          "75 kg·m/s",
-          "22,5 kg·m/s"
-        ],
-        correctIndex: 1,
-        explanation: "p = m·v = 0,2 · 15 = 3 kg·m/s."
-      },
-      {
-        id: "q10",
-        question: "Was beschreibt der Schwerpunkt (Massenmittelpunkt) eines Teilchensystems?",
-        options: [
-          "Den Punkt mit der größten Massendichte",
-          "Den geometrischen Mittelpunkt des Systems",
-          "Den massengewichteten Mittelpunkt, an dem die Gesamtmasse als konzentriert gedacht werden kann",
-          "Den Ort, an dem die Gravitationskraft maximal ist"
-        ],
-        correctIndex: 2,
-        explanation: "Der Schwerpunkt (Massenmittelpunkt) ist x_SP = Σ(m_i · x_i) / Σm_i. Er ist der massengewichtete Mittelpunkt und verhält sich, als wäre die Gesamtmasse dort konzentriert."
-      }
+      { id: "q1", question: "Welche Einheit hat der Impuls?", options: ["kg·m/s", "N (Newton)", "m/s²", "J (Joule)"], correctIndex: 0, explanation: "Der Impuls p = m·v hat die Einheit kg·m/s = N·s." },
+      { id: "q2", question: "Wann gilt der Impulserhaltungssatz?", options: ["Immer, in jedem physikalischen System", "Nur bei elastischen Stößen", "Nur wenn alle Körper dieselbe Masse haben", "Wenn die Summe der äußeren Kräfte auf das System null ist"], correctIndex: 3, explanation: "Der Impulserhaltungssatz gilt, wenn keine äußere Kraft auf das System wirkt (oder die Summe aller äußeren Kräfte null ist). Interne Kräfte (zwischen Teilsystemen) ändern den Gesamtimpuls nicht." },
+      { id: "q3", question: "Wie lautet das 2. Newtonsche Gesetz in der allgemeinen Form?", options: ["F = m·v", "F = dp/dt (Kraft = zeitliche Änderung des Impulses)", "F = m·a (gilt immer exakt)", "F = Δp / Δv"], correctIndex: 1, explanation: "Die allgemeine Form ist F = dp/dt. Für konstante Masse vereinfacht sich das zu F = m·(dv/dt) = m·a." },
+      { id: "q4", question: "Was versteht man unter einem Kraftstoß?", options: ["Den maximalen Wert der Kraft während eines Stoßes", "Die Kraft, die ein Stoßprozess erzeugt", "Eine sehr große Kraft über eine sehr kurze Zeit", "Das Produkt F · Δt, das der Impulsänderung Δp entspricht"], correctIndex: 3, explanation: "Der Kraftstoß J = F · Δt ist gleich der Impulsänderung: J = Δp. Er beschreibt, wie stark und wie lange eine Kraft wirkt, um den Impuls zu ändern." },
+      { id: "q5", question: "Zwei gleich schwere Kugeln (m₁ = m₂ = 2 kg) stoßen aufeinander. Kugel 1 bewegt sich mit 3 m/s nach rechts, Kugel 2 ist in Ruhe. Was ist der Gesamtimpuls des Systems?", options: ["3 kg·m/s nach rechts", "6 kg·m/s nach rechts", "12 kg·m/s nach rechts", "0 kg·m/s"], correctIndex: 1, explanation: "p_ges = m₁·v₁ + m₂·v₂ = 2·3 + 2·0 = 6 kg·m/s nach rechts. Dieser Wert bleibt beim Stoß erhalten." },
+      { id: "q6", question: "Warum kann eine Rakete im Weltraum (Vakuum) beschleunigen?", options: ["Weil sie sich gegen Sterne abstößt", "Weil im Vakuum keine Reibung vorhanden ist", "Weil die Rakete Treibstoff nach hinten ausstößt und der Impulserhaltungssatz die Rakete nach vorne beschleunigt", "Weil das Gravitationsfeld der Sonne die Rakete antreibt"], correctIndex: 2, explanation: "Durch Impulserhaltung: Die Rakete stößt Gase nach hinten aus (Impuls rückwärts). Da der Gesamtimpuls erhalten bleibt, erhält die Rakete einen gleich großen Impuls nach vorne (Rückstoßprinzip)." },
+      { id: "q7", question: "Eine 70 kg schwere Person springt von einem 10 kg schweren Ruderboot (beide anfangs in Ruhe). Die Person springt mit 2 m/s nach vorne. Mit welcher Geschwindigkeit bewegt sich das Boot?", options: ["0,14 m/s rückwärts", "0,14 m/s vorwärts", "14 m/s rückwärts", "2 m/s rückwärts"], correctIndex: 2, explanation: "Impulserhaltung: 0 = m_Person·v_P + m_Boot·v_B → v_B = –70·2/10 = –14 m/s. Das Boot bewegt sich mit 14 m/s in entgegengesetzter Richtung." },
+      { id: "q8", question: "Was gilt beim Impuls im Vergleich zur kinetischen Energie?", options: ["Impuls ist ein Skalar, kinetische Energie ist ein Vektor", "Beide sind vektorielle Größen", "Impuls ist ein Vektor, kinetische Energie ist ein Skalar", "Beide sind skalare Größen"], correctIndex: 2, explanation: "p = m·v ist ein Vektor (hat Richtung), während E_kin = ½·m·v² ein Skalar (ohne Richtung, immer positiv) ist." },
+      { id: "q9", question: "Ein Ball (m = 0,2 kg) wird mit 15 m/s geworfen. Welchen Impuls hat er?", options: ["3 kg·m/s", "0,013 kg·m/s", "22,5 kg·m/s", "75 kg·m/s"], correctIndex: 0, explanation: "p = m·v = 0,2 · 15 = 3 kg·m/s." },
+      { id: "q10", question: "Was beschreibt der Schwerpunkt (Massenmittelpunkt) eines Teilchensystems?", options: ["Den Ort, an dem die Gravitationskraft maximal ist", "Den geometrischen Mittelpunkt des Systems", "Den Punkt mit der größten Massendichte", "Den massengewichteten Mittelpunkt, an dem die Gesamtmasse als konzentriert gedacht werden kann"], correctIndex: 3, explanation: "Der Schwerpunkt (Massenmittelpunkt) ist x_SP = Σ(m_i · x_i) / Σm_i. Er ist der massengewichtete Mittelpunkt und verhält sich, als wäre die Gesamtmasse dort konzentriert." }
     ]
   },
   {
@@ -273,126 +163,16 @@ const NATWISS_CHAPTER3_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Welche Einheit hat die mechanische Arbeit?",
-        options: [
-          "Newton (N)",
-          "Watt (W)",
-          "Joule (J) = N·m",
-          "Pascal (Pa)"
-        ],
-        correctIndex: 2,
-        explanation: "Die Einheit der Arbeit ist Joule: 1 J = 1 N·m = 1 kg·m²/s²."
-      },
-      {
-        id: "q2",
-        question: "Wann ist die von einer Kraft F geleistete Arbeit null?",
-        options: [
-          "Wenn F = 0",
-          "Wenn die Kraft senkrecht zur Bewegungsrichtung steht (φ = 90°)",
-          "Wenn die Bewegung sehr langsam ist",
-          "Wenn die Masse sehr groß ist"
-        ],
-        correctIndex: 1,
-        explanation: "W = F·s·cos(φ). Bei φ = 90° ist cos(90°) = 0, also W = 0. Beispiel: Die Normalkraft auf einer horizontalen Fläche leistet keine Arbeit bei horizontaler Bewegung."
-      },
-      {
-        id: "q3",
-        question: "Wie lautet die Formel für die kinetische Energie?",
-        options: [
-          "E_kin = m·v",
-          "E_kin = m·g·h",
-          "E_kin = ½·m·v²",
-          "E_kin = F·s"
-        ],
-        correctIndex: 2,
-        explanation: "Die kinetische Energie (Bewegungsenergie) eines Körpers der Masse m mit Geschwindigkeit v beträgt E_kin = ½·m·v²."
-      },
-      {
-        id: "q4",
-        question: "Wann gilt der mechanische Energieerhaltungssatz (E_kin + E_pot = const)?",
-        options: [
-          "Nur bei sehr langsamen Bewegungen",
-          "Nur wenn keine nicht-konservativen Kräfte (wie Reibung) wirken",
-          "Immer, auch mit Reibung",
-          "Nur bei senkrechten Bewegungen"
-        ],
-        correctIndex: 1,
-        explanation: "Der mechanische Energieerhaltungssatz gilt nur bei konservativen Kräften (z. B. Gravitation, Federkraft). Mit Reibung wird mechanische Energie in Wärme umgewandelt."
-      },
-      {
-        id: "q5",
-        question: "Ein Auto wird von v = 0 auf v = 20 m/s beschleunigt (m = 1000 kg). Wie groß ist die dabei aufgenommene kinetische Energie?",
-        options: [
-          "20000 J",
-          "10000 J",
-          "200000 J",
-          "400000 J"
-        ],
-        correctIndex: 2,
-        explanation: "E_kin = ½·m·v² = ½·1000·20² = ½·1000·400 = 200000 J = 200 kJ."
-      },
-      {
-        id: "q6",
-        question: "Was ist Leistung?",
-        options: [
-          "Das Produkt aus Kraft und Weg",
-          "Die pro Zeiteinheit verrichtete Arbeit: P = W/t",
-          "Die gespeicherte potenzielle Energie",
-          "Das Verhältnis von Kraft zu Masse"
-        ],
-        correctIndex: 1,
-        explanation: "Die Leistung P = W/t = F·v beschreibt, wie schnell Arbeit verrichtet wird. Einheit: Watt (W) = J/s."
-      },
-      {
-        id: "q7",
-        question: "Was sagt der Wirkungsgrad η aus?",
-        options: [
-          "Das Verhältnis von Nutzleistung zu zugeführter Leistung (zwischen 0 und 1)",
-          "Die maximal erreichbare Geschwindigkeit einer Maschine",
-          "Der Anteil der Energie, der in Wärme umgewandelt wird",
-          "Das Verhältnis von Kraft zu Geschwindigkeit"
-        ],
-        correctIndex: 0,
-        explanation: "Wirkungsgrad η = P_nutz / P_zu (0 ≤ η ≤ 1). Er gibt an, welcher Bruchteil der zugeführten Energie als Nutzarbeit verfügbar ist. Der Rest wird z. B. in Wärme umgewandelt."
-      },
-      {
-        id: "q8",
-        question: "Ein Stein fällt von einem Turm. Welche Energieumwandlung findet statt?",
-        options: [
-          "Kinetische Energie wird in potenzielle Energie umgewandelt",
-          "Potenzielle Energie wird in kinetische Energie umgewandelt",
-          "Wärme wird in kinetische Energie umgewandelt",
-          "Keine Energieumwandlung, Energie bleibt konstant"
-        ],
-        correctIndex: 1,
-        explanation: "Beim Fall nimmt die Höhe h ab, daher nimmt E_pot = m·g·h ab. Gleichzeitig nimmt v und damit E_kin = ½·m·v² zu. Potenzielle Energie wird in kinetische umgewandelt."
-      },
-      {
-        id: "q9",
-        question: "Wie verdoppelt sich die kinetische Energie, wenn die Geschwindigkeit verdoppelt wird?",
-        options: [
-          "Die kinetische Energie verdoppelt sich",
-          "Die kinetische Energie vervierfacht sich",
-          "Die kinetische Energie nimmt um den Faktor √2 zu",
-          "Die kinetische Energie bleibt gleich"
-        ],
-        correctIndex: 1,
-        explanation: "E_kin = ½·m·v². Bei v' = 2v: E_kin' = ½·m·(2v)² = 4·½·m·v² = 4·E_kin. Die kinetische Energie vervierfacht sich bei Verdoppelung der Geschwindigkeit."
-      },
-      {
-        id: "q10",
-        question: "Welche Einheit hat die Leistung?",
-        options: [
-          "Joule (J)",
-          "Newton·Meter (N·m)",
-          "Watt (W) = J/s",
-          "Kilogramm·Meter (kg·m)"
-        ],
-        correctIndex: 2,
-        explanation: "Die Einheit der Leistung ist Watt: 1 W = 1 J/s = 1 kg·m²/s³."
-      }
+      { id: "q1", question: "Welche Einheit hat die mechanische Arbeit?", options: ["Newton (N)", "Pascal (Pa)", "Joule (J) = N·m", "Watt (W)"], correctIndex: 2, explanation: "Die Einheit der Arbeit ist Joule: 1 J = 1 N·m = 1 kg·m²/s²." },
+      { id: "q2", question: "Wann ist die von einer Kraft F geleistete Arbeit null?", options: ["Wenn F = 0", "Wenn die Bewegung sehr langsam ist", "Wenn die Masse sehr groß ist", "Wenn die Kraft senkrecht zur Bewegungsrichtung steht (φ = 90°)"], correctIndex: 3, explanation: "W = F·s·cos(φ). Bei φ = 90° ist cos(90°) = 0, also W = 0. Beispiel: Die Normalkraft auf einer horizontalen Fläche leistet keine Arbeit bei horizontaler Bewegung." },
+      { id: "q3", question: "Wie lautet die Formel für die kinetische Energie?", options: ["E_kin = F·s", "E_kin = m·v", "E_kin = m·g·h", "E_kin = ½·m·v²"], correctIndex: 3, explanation: "Die kinetische Energie (Bewegungsenergie) eines Körpers der Masse m mit Geschwindigkeit v beträgt E_kin = ½·m·v²." },
+      { id: "q4", question: "Wann gilt der mechanische Energieerhaltungssatz (E_kin + E_pot = const)?", options: ["Nur wenn keine nicht-konservativen Kräfte (wie Reibung) wirken", "Nur bei sehr langsamen Bewegungen", "Nur bei senkrechten Bewegungen", "Immer, auch mit Reibung"], correctIndex: 0, explanation: "Der mechanische Energieerhaltungssatz gilt nur bei konservativen Kräften (z. B. Gravitation, Federkraft). Mit Reibung wird mechanische Energie in Wärme umgewandelt." },
+      { id: "q5", question: "Ein Auto wird von v = 0 auf v = 20 m/s beschleunigt (m = 1000 kg). Wie groß ist die dabei aufgenommene kinetische Energie?", options: ["200000 J", "20000 J", "10000 J", "400000 J"], correctIndex: 0, explanation: "E_kin = ½·m·v² = ½·1000·20² = ½·1000·400 = 200000 J = 200 kJ." },
+      { id: "q6", question: "Was ist Leistung?", options: ["Die gespeicherte potenzielle Energie", "Das Verhältnis von Kraft zu Masse", "Die pro Zeiteinheit verrichtete Arbeit: P = W/t", "Das Produkt aus Kraft und Weg"], correctIndex: 2, explanation: "Die Leistung P = W/t = F·v beschreibt, wie schnell Arbeit verrichtet wird. Einheit: Watt (W) = J/s." },
+      { id: "q7", question: "Was sagt der Wirkungsgrad η aus?", options: ["Das Verhältnis von Nutzleistung zu zugeführter Leistung (zwischen 0 und 1)", "Die maximal erreichbare Geschwindigkeit einer Maschine", "Der Anteil der Energie, der in Wärme umgewandelt wird", "Das Verhältnis von Kraft zu Geschwindigkeit"], correctIndex: 0, explanation: "Wirkungsgrad η = P_nutz / P_zu (0 ≤ η ≤ 1). Er gibt an, welcher Bruchteil der zugeführten Energie als Nutzarbeit verfügbar ist. Der Rest wird z. B. in Wärme umgewandelt." },
+      { id: "q8", question: "Ein Stein fällt von einem Turm. Welche Energieumwandlung findet statt?", options: ["Kinetische Energie wird in potenzielle Energie umgewandelt", "Potenzielle Energie wird in kinetische Energie umgewandelt", "Wärme wird in kinetische Energie umgewandelt", "Keine Energieumwandlung, Energie bleibt konstant"], correctIndex: 1, explanation: "Beim Fall nimmt die Höhe h ab, daher nimmt E_pot = m·g·h ab. Gleichzeitig nimmt v und damit E_kin = ½·m·v² zu. Potenzielle Energie wird in kinetische umgewandelt." },
+      { id: "q9", question: "Wie verdoppelt sich die kinetische Energie, wenn die Geschwindigkeit verdoppelt wird?", options: ["Die kinetische Energie bleibt gleich", "Die kinetische Energie verdoppelt sich", "Die kinetische Energie vervierfacht sich", "Die kinetische Energie nimmt um den Faktor √2 zu"], correctIndex: 2, explanation: "E_kin = ½·m·v². Bei v' = 2v: E_kin' = ½·m·(2v)² = 4·½·m·v² = 4·E_kin. Die kinetische Energie vervierfacht sich bei Verdoppelung der Geschwindigkeit." },
+      { id: "q10", question: "Welche Einheit hat die Leistung?", options: ["Joule (J)", "Watt (W) = J/s", "Newton·Meter (N·m)", "Kilogramm·Meter (kg·m)"], correctIndex: 1, explanation: "Die Einheit der Leistung ist Watt: 1 W = 1 J/s = 1 kg·m²/s³." }
     ]
   },
   {
@@ -476,126 +256,16 @@ const NATWISS_CHAPTER3_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Was ist beim elastischen Stoß erhalten?",
-        options: [
-          "Nur der Impuls",
-          "Nur die kinetische Energie",
-          "Sowohl Impuls als auch kinetische Energie",
-          "Weder Impuls noch kinetische Energie"
-        ],
-        correctIndex: 2,
-        explanation: "Beim elastischen Stoß sind sowohl der Gesamtimpuls als auch die gesamte kinetische Energie erhalten. Beispiel: Billardkugeln, elastische Atome."
-      },
-      {
-        id: "q2",
-        question: "Was ist beim vollkommen unelastischen Stoß charakteristisch?",
-        options: [
-          "Beide Größen (Impuls und Energie) sind nicht erhalten",
-          "Die Körper bleiben nach dem Stoß zusammen, der Impuls ist erhalten, aber ein Maximum an kinetischer Energie geht verloren",
-          "Die kinetische Energie ist erhalten, aber der Impuls nicht",
-          "Die Körper prallen voneinander ab, ohne Energie zu verlieren"
-        ],
-        correctIndex: 1,
-        explanation: "Beim vollkommen unelastischen Stoß bleiben die Körper zusammen. Der Impuls ist erhalten, aber es geht maximal mögliche kinetische Energie in Wärme/Verformung über."
-      },
-      {
-        id: "q3",
-        question: "Zwei gleich schwere Kugeln stoßen elastisch zusammen. Kugel 1 bewegt sich mit v, Kugel 2 ist in Ruhe. Was passiert?",
-        options: [
-          "Beide Kugeln bewegen sich danach mit v/2",
-          "Kugel 1 prallt zurück, Kugel 2 bleibt stehen",
-          "Kugel 1 kommt zum Stillstand, Kugel 2 bewegt sich mit v",
-          "Beide Kugeln bleiben stehen"
-        ],
-        correctIndex: 2,
-        explanation: "Bei gleichen Massen tauschen die Geschwindigkeiten beim elastischen Stoß: v₁' = 0, v₂' = v. Dies ist das Billard-Prinzip."
-      },
-      {
-        id: "q4",
-        question: "Was gibt die Stoßzahl e an?",
-        options: [
-          "Den Quotienten aus kinetischer Energie nach und vor dem Stoß",
-          "Das Verhältnis der Relativgeschwindigkeit nach dem Stoß zur Relativgeschwindigkeit vor dem Stoß",
-          "Den Energieverlust beim Stoß in Prozent",
-          "Die Masse des schwereren Körpers geteilt durch die Gesamtmasse"
-        ],
-        correctIndex: 1,
-        explanation: "Die Stoßzahl e = |v₂'−v₁'| / |v₁−v₂|. Für e = 1: elastisch, e = 0: vollkommen unelastisch, 0 < e < 1: teilweise unelastisch."
-      },
-      {
-        id: "q5",
-        question: "Beim vollkommen unelastischen Stoß zwischen m₁ = m₂ = 1 kg (v₁ = 6 m/s, v₂ = 0). Welche Geschwindigkeit haben beide nach dem Stoß?",
-        options: [
-          "6 m/s",
-          "3 m/s",
-          "0 m/s",
-          "4 m/s"
-        ],
-        correctIndex: 1,
-        explanation: "v' = (m₁·v₁ + m₂·v₂)/(m₁+m₂) = (1·6 + 1·0)/2 = 6/2 = 3 m/s."
-      },
-      {
-        id: "q6",
-        question: "Was geschieht mit der kinetischen Energie beim vollkommen unelastischen Stoß?",
-        options: [
-          "Sie bleibt vollständig erhalten",
-          "Sie wird verdoppelt",
-          "Ein Teil wird in Wärme und Verformungsarbeit umgewandelt",
-          "Sie wird komplett in potenzielle Energie umgewandelt"
-        ],
-        correctIndex: 2,
-        explanation: "Beim unelastischen Stoß geht ein Teil der kinetischen Energie in innere Energie (Wärme, Verformung) über. Die Gesamtenergie bleibt zwar erhalten, aber die mechanische kinetische Energie nimmt ab."
-      },
-      {
-        id: "q7",
-        question: "Eine sehr schwere Kugel (m₁ >> m₂) stößt elastisch auf eine leichte ruhende Kugel. Was passiert näherungsweise?",
-        options: [
-          "Beide Kugeln kommen zum Stillstand",
-          "Die schwere Kugel ändert ihre Geschwindigkeit kaum, die leichte bekommt die doppelte Geschwindigkeit der schweren",
-          "Die Kugeln tauschen ihre Geschwindigkeiten",
-          "Die schwere Kugel wird zurückgeworfen"
-        ],
-        correctIndex: 1,
-        explanation: "Bei m₁ >> m₂: v₁' ≈ v₁ (kaum Änderung), v₂' ≈ 2·v₁. Die leichte Kugel bekommt die doppelte Geschwindigkeit des Stoßkörpers."
-      },
-      {
-        id: "q8",
-        question: "Gilt der Impulserhaltungssatz beim unelastischen Stoß?",
-        options: [
-          "Nein, der Impuls geht zusammen mit der kinetischen Energie verloren",
-          "Ja, der Gesamtimpuls ist immer erhalten, auch beim unelastischen Stoß",
-          "Nur wenn die Massen gleich sind",
-          "Nur wenn keine Verformung auftritt"
-        ],
-        correctIndex: 1,
-        explanation: "Der Impulserhaltungssatz gilt immer (wenn keine äußere Kraft wirkt), auch beim unelastischen Stoß. Nur die kinetische Energie ist beim unelastischen Stoß nicht erhalten."
-      },
-      {
-        id: "q9",
-        question: "Eine Kugel prallt von einer Wand mit derselben Geschwindigkeit zurück (Wandmasse → ∞). Wie groß ist die Stoßzahl e?",
-        options: [
-          "e = 0",
-          "e = 0,5",
-          "e = 1",
-          "e > 1"
-        ],
-        correctIndex: 2,
-        explanation: "Die Relativgeschwindigkeit bleibt bei diesem ideal-elastischen Stoß in ihrem Betrag gleich (Richtung kehrt um). Damit ist e = |v'| / |v| = 1. Vollkommen elastischer Stoß."
-      },
-      {
-        id: "q10",
-        question: "Warum ist bei Crashtests in der Fahrzeugsicherheit ein hoher Energieabbau (viel Verformungsarbeit) erwünscht?",
-        options: [
-          "Weil dann die Fahrzeuge mehr Impuls haben",
-          "Weil durch plastische Verformung kinetische Energie vernichtet wird und so weniger Energie auf die Insassen übertragen wird",
-          "Weil steifere Fahrzeuge weniger Reibung haben",
-          "Weil der Impulserhaltungssatz bei verformbaren Körpern nicht gilt"
-        ],
-        correctIndex: 1,
-        explanation: "Knautschzonen sind gewollt unelastisch. Sie wandeln kinetische Energie in Verformungsarbeit um. Je mehr Energie die Karosserie absorbiert, desto weniger Energie wirkt auf die Insassen. Der Impuls muss zwar abgebaut werden, aber über eine längere Zeit (größerer Weg) – also kleinere Kraft."
-      }
+      { id: "q1", question: "Was ist beim elastischen Stoß erhalten?", options: ["Nur die kinetische Energie", "Sowohl Impuls als auch kinetische Energie", "Weder Impuls noch kinetische Energie", "Nur der Impuls"], correctIndex: 1, explanation: "Beim elastischen Stoß sind sowohl der Gesamtimpuls als auch die gesamte kinetische Energie erhalten. Beispiel: Billardkugeln, elastische Atome." },
+      { id: "q2", question: "Was ist beim vollkommen unelastischen Stoß charakteristisch?", options: ["Die Körper prallen voneinander ab, ohne Energie zu verlieren", "Die kinetische Energie ist erhalten, aber der Impuls nicht", "Beide Größen (Impuls und Energie) sind nicht erhalten", "Die Körper bleiben nach dem Stoß zusammen, der Impuls ist erhalten, aber ein Maximum an kinetischer Energie geht verloren"], correctIndex: 3, explanation: "Beim vollkommen unelastischen Stoß bleiben die Körper zusammen. Der Impuls ist erhalten, aber es geht maximal mögliche kinetische Energie in Wärme/Verformung über." },
+      { id: "q3", question: "Zwei gleich schwere Kugeln stoßen elastisch zusammen. Kugel 1 bewegt sich mit v, Kugel 2 ist in Ruhe. Was passiert?", options: ["Beide Kugeln bewegen sich danach mit v/2", "Kugel 1 kommt zum Stillstand, Kugel 2 bewegt sich mit v", "Beide Kugeln bleiben stehen", "Kugel 1 prallt zurück, Kugel 2 bleibt stehen"], correctIndex: 1, explanation: "Bei gleichen Massen tauschen die Geschwindigkeiten beim elastischen Stoß: v₁' = 0, v₂' = v. Dies ist das Billard-Prinzip." },
+      { id: "q4", question: "Was gibt die Stoßzahl e an?", options: ["Die Masse des schwereren Körpers geteilt durch die Gesamtmasse", "Das Verhältnis der Relativgeschwindigkeit nach dem Stoß zur Relativgeschwindigkeit vor dem Stoß", "Den Quotienten aus kinetischer Energie nach und vor dem Stoß", "Den Energieverlust beim Stoß in Prozent"], correctIndex: 1, explanation: "Die Stoßzahl e = |v₂'−v₁'| / |v₁−v₂|. Für e = 1: elastisch, e = 0: vollkommen unelastisch, 0 < e < 1: teilweise unelastisch." },
+      { id: "q5", question: "Beim vollkommen unelastischen Stoß zwischen m₁ = m₂ = 1 kg (v₁ = 6 m/s, v₂ = 0). Welche Geschwindigkeit haben beide nach dem Stoß?", options: ["3 m/s", "6 m/s", "4 m/s", "0 m/s"], correctIndex: 0, explanation: "v' = (m₁·v₁ + m₂·v₂)/(m₁+m₂) = (1·6 + 1·0)/2 = 6/2 = 3 m/s." },
+      { id: "q6", question: "Was geschieht mit der kinetischen Energie beim vollkommen unelastischen Stoß?", options: ["Sie wird komplett in potenzielle Energie umgewandelt", "Sie wird verdoppelt", "Ein Teil wird in Wärme und Verformungsarbeit umgewandelt", "Sie bleibt vollständig erhalten"], correctIndex: 2, explanation: "Beim unelastischen Stoß geht ein Teil der kinetischen Energie in innere Energie (Wärme, Verformung) über. Die Gesamtenergie bleibt zwar erhalten, aber die mechanische kinetische Energie nimmt ab." },
+      { id: "q7", question: "Eine sehr schwere Kugel (m₁ >> m₂) stößt elastisch auf eine leichte ruhende Kugel. Was passiert näherungsweise?", options: ["Die schwere Kugel ändert ihre Geschwindigkeit kaum, die leichte bekommt die doppelte Geschwindigkeit der schweren", "Die schwere Kugel wird zurückgeworfen", "Die Kugeln tauschen ihre Geschwindigkeiten", "Beide Kugeln kommen zum Stillstand"], correctIndex: 0, explanation: "Bei m₁ >> m₂: v₁' ≈ v₁ (kaum Änderung), v₂' ≈ 2·v₁. Die leichte Kugel bekommt die doppelte Geschwindigkeit des Stoßkörpers." },
+      { id: "q8", question: "Gilt der Impulserhaltungssatz beim unelastischen Stoß?", options: ["Ja, der Gesamtimpuls ist immer erhalten, auch beim unelastischen Stoß", "Nein, der Impuls geht zusammen mit der kinetischen Energie verloren", "Nur wenn keine Verformung auftritt", "Nur wenn die Massen gleich sind"], correctIndex: 0, explanation: "Der Impulserhaltungssatz gilt immer (wenn keine äußere Kraft wirkt), auch beim unelastischen Stoß. Nur die kinetische Energie ist beim unelastischen Stoß nicht erhalten." },
+      { id: "q9", question: "Eine Kugel prallt von einer Wand mit derselben Geschwindigkeit zurück (Wandmasse → ∞). Wie groß ist die Stoßzahl e?", options: ["e = 0", "e = 0,5", "e = 1", "e > 1"], correctIndex: 2, explanation: "Die Relativgeschwindigkeit bleibt bei diesem ideal-elastischen Stoß in ihrem Betrag gleich (Richtung kehrt um). Damit ist e = |v'| / |v| = 1. Vollkommen elastischer Stoß." },
+      { id: "q10", question: "Warum ist bei Crashtests in der Fahrzeugsicherheit ein hoher Energieabbau (viel Verformungsarbeit) erwünscht?", options: ["Weil steifere Fahrzeuge weniger Reibung haben", "Weil der Impulserhaltungssatz bei verformbaren Körpern nicht gilt", "Weil dann die Fahrzeuge mehr Impuls haben", "Weil durch plastische Verformung kinetische Energie vernichtet wird und so weniger Energie auf die Insassen übertragen wird"], correctIndex: 3, explanation: "Knautschzonen sind gewollt unelastisch. Sie wandeln kinetische Energie in Verformungsarbeit um. Je mehr Energie die Karosserie absorbiert, desto weniger Energie wirkt auf die Insassen. Der Impuls muss zwar abgebaut werden, aber über eine längere Zeit (größerer Weg) – also kleinere Kraft." }
     ]
   }
 ];
