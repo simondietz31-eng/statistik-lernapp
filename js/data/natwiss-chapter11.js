@@ -76,76 +76,16 @@ const NATWISS_CHAPTER11_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Wie ist der elektrische Strom I definiert?",
-        options: ["I = U · R", "I = dQ/dt (Ladung pro Zeit)", "I = P / R", "I = U² / R"],
-        correctIndex: 1,
-        explanation: "Der elektrische Strom ist die pro Zeiteinheit durch einen Querschnitt fließende Ladung: I = dQ/dt. Die Einheit ist Ampere (A = C/s)."
-      },
-      {
-        id: "q2",
-        question: "Welche Aussage zum Ohmschen Gesetz ist korrekt?",
-        options: ["Es gilt für alle elektrischen Bauelemente", "Es beschreibt den linearen Zusammenhang U = R·I für ohmsche Widerstände", "Es besagt, dass R von der Spannung abhängt", "Es gilt nur bei sehr hohen Temperaturen"],
-        correctIndex: 1,
-        explanation: "Das Ohmsche Gesetz U = R·I gilt für ohmsche (lineare) Widerstände bei konstanter Temperatur. Dioden und andere Halbleiterbauelemente sind nicht-ohmsch."
-      },
-      {
-        id: "q3",
-        question: "Von welchen Größen hängt der Widerstand R = ρ·L/A ab?",
-        options: ["Nur vom Material", "Vom Material (ρ), der Länge (L) und dem Querschnitt (A)", "Von der angelegten Spannung", "Nur von der Länge und dem Querschnitt"],
-        correctIndex: 1,
-        explanation: "R = ρ·L/A hängt vom spezifischen Widerstand ρ (Materialeigenschaft), der Länge L und der Querschnittsfläche A ab. Spannung und Strom haben keinen Einfluss auf R selbst (bei konstanter Temperatur)."
-      },
-      {
-        id: "q4",
-        question: "Welche Einheit hat der spezifische Widerstand ρ?",
-        options: ["Ohm (Ω)", "Ohm·Meter (Ω·m)", "Siemens (S)", "Ampere pro Meter (A/m)"],
-        correctIndex: 1,
-        explanation: "Der spezifische Widerstand hat die Einheit Ω·m. Er ist eine materialspezifische Eigenschaft, unabhängig von Geometrie."
-      },
-      {
-        id: "q5",
-        question: "Wie verhält sich der Widerstand eines Metallleiters bei steigender Temperatur?",
-        options: ["Er sinkt stark ab (wie bei Halbleitern)", "Er bleibt konstant", "Er steigt an", "Er wird negativ"],
-        correctIndex: 2,
-        explanation: "Bei Metallen steigt der Widerstand mit der Temperatur (R = R₀·(1 + α·ΔT) mit α > 0). Mehr Wärme bedeutet mehr Gitterschwingungen und damit mehr Streuung der Elektronen."
-      },
-      {
-        id: "q6",
-        question: "In welche Richtung fließt der konventionelle (technische) Strom?",
-        options: ["Von Minus nach Plus (in Richtung der Elektronenbewegung)", "Von Plus nach Minus (entgegen der Elektronenbewegung)", "Abwechselnd in beide Richtungen", "Nur durch Isolatoren"],
-        correctIndex: 1,
-        explanation: "Der technische (konventionelle) Strom fließt von Plus nach Minus (im äußeren Stromkreis), also entgegen der tatsächlichen Bewegungsrichtung der Elektronen, die sich von Minus nach Plus bewegen."
-      },
-      {
-        id: "q7",
-        question: "Was ist die Stromdichte j?",
-        options: ["Ladung mal Strom", "Strom pro Querschnittsfläche (I/A)", "Spannung mal Strom", "Widerstand pro Länge"],
-        correctIndex: 1,
-        explanation: "Die Stromdichte j = I/A beschreibt den Strom pro Querschnittsfläche in A/m². Sie ist eine intensive Größe, die nicht von der Leitergröße abhängt."
-      },
-      {
-        id: "q8",
-        question: "Welchen Wert hat der spezifische Widerstand von Kupfer?",
-        options: ["1,7 × 10⁻⁸ Ω·m", "2,3 × 10³ Ω·m", "10¹² Ω·m", "3,9 × 10⁻³ Ω·m"],
-        correctIndex: 0,
-        explanation: "Kupfer hat einen sehr niedrigen spezifischen Widerstand von ρ_Cu = 1,7 × 10⁻⁸ Ω·m, was es zu einem ausgezeichneten elektrischen Leiter macht."
-      },
-      {
-        id: "q9",
-        question: "Was geschieht mit dem Widerstand eines Drahtes, wenn sein Durchmesser verdoppelt wird (Länge und Material gleich)?",
-        options: ["R halbiert sich", "R verdoppelt sich", "R wird viermal kleiner", "R bleibt gleich"],
-        correctIndex: 2,
-        explanation: "Die Querschnittsfläche A = π(d/2)² wächst quadratisch mit dem Durchmesser. Bei doppeltem Durchmesser wird A viermal größer, also R = ρL/A viermal kleiner."
-      },
-      {
-        id: "q10",
-        question: "Was unterscheidet nicht-ohmsche Bauelemente (z. B. Dioden) von ohmschen Widerständen?",
-        options: ["Sie haben keinen elektrischen Widerstand", "Ihr Widerstand ist konstant und unabhängig von Spannung", "Ihre Strom-Spannungs-Kennlinie ist nichtlinear", "Sie leiten Strom nur bei sehr hohen Spannungen"],
-        correctIndex: 2,
-        explanation: "Nicht-ohmsche Bauelemente wie Dioden haben eine nichtlineare I-U-Kennlinie. Der Widerstand ist keine Konstante, sondern hängt vom Betriebspunkt (Spannung/Strom) ab."
-      }
+      { id: "q1", question: "Wie ist der elektrische Strom I definiert?", options: ["I = dQ/dt (Ladung pro Zeit)", "I = U² / R", "I = U · R", "I = P / R"], correctIndex: 0, explanation: "Der elektrische Strom ist die pro Zeiteinheit durch einen Querschnitt fließende Ladung: I = dQ/dt. Die Einheit ist Ampere (A = C/s)." },
+      { id: "q2", question: "Welche Aussage zum Ohmschen Gesetz ist korrekt?", options: ["Es gilt nur bei sehr hohen Temperaturen", "Es besagt, dass R von der Spannung abhängt", "Es gilt für alle elektrischen Bauelemente", "Es beschreibt den linearen Zusammenhang U = R·I für ohmsche Widerstände"], correctIndex: 3, explanation: "Das Ohmsche Gesetz U = R·I gilt für ohmsche (lineare) Widerstände bei konstanter Temperatur. Dioden und andere Halbleiterbauelemente sind nicht-ohmsch." },
+      { id: "q3", question: "Von welchen Größen hängt der Widerstand R = ρ·L/A ab?", options: ["Von der angelegten Spannung", "Nur von der Länge und dem Querschnitt", "Vom Material (ρ), der Länge (L) und dem Querschnitt (A)", "Nur vom Material"], correctIndex: 2, explanation: "R = ρ·L/A hängt vom spezifischen Widerstand ρ (Materialeigenschaft), der Länge L und der Querschnittsfläche A ab. Spannung und Strom haben keinen Einfluss auf R selbst (bei konstanter Temperatur)." },
+      { id: "q4", question: "Welche Einheit hat der spezifische Widerstand ρ?", options: ["Ohm·Meter (Ω·m)", "Siemens (S)", "Ampere pro Meter (A/m)", "Ohm (Ω)"], correctIndex: 0, explanation: "Der spezifische Widerstand hat die Einheit Ω·m. Er ist eine materialspezifische Eigenschaft, unabhängig von Geometrie." },
+      { id: "q5", question: "Wie verhält sich der Widerstand eines Metallleiters bei steigender Temperatur?", options: ["Er wird negativ", "Er sinkt stark ab (wie bei Halbleitern)", "Er bleibt konstant", "Er steigt an"], correctIndex: 3, explanation: "Bei Metallen steigt der Widerstand mit der Temperatur (R = R₀·(1 + α·ΔT) mit α > 0). Mehr Wärme bedeutet mehr Gitterschwingungen und damit mehr Streuung der Elektronen." },
+      { id: "q6", question: "In welche Richtung fließt der konventionelle (technische) Strom?", options: ["Nur durch Isolatoren", "Von Plus nach Minus (entgegen der Elektronenbewegung)", "Von Minus nach Plus (in Richtung der Elektronenbewegung)", "Abwechselnd in beide Richtungen"], correctIndex: 1, explanation: "Der technische (konventionelle) Strom fließt von Plus nach Minus (im äußeren Stromkreis), also entgegen der tatsächlichen Bewegungsrichtung der Elektronen, die sich von Minus nach Plus bewegen." },
+      { id: "q7", question: "Was ist die Stromdichte j?", options: ["Spannung mal Strom", "Strom pro Querschnittsfläche (I/A)", "Widerstand pro Länge", "Ladung mal Strom"], correctIndex: 1, explanation: "Die Stromdichte j = I/A beschreibt den Strom pro Querschnittsfläche in A/m². Sie ist eine intensive Größe, die nicht von der Leitergröße abhängt." },
+      { id: "q8", question: "Welchen Wert hat der spezifische Widerstand von Kupfer?", options: ["10¹² Ω·m", "2,3 × 10³ Ω·m", "1,7 × 10⁻⁸ Ω·m", "3,9 × 10⁻³ Ω·m"], correctIndex: 2, explanation: "Kupfer hat einen sehr niedrigen spezifischen Widerstand von ρ_Cu = 1,7 × 10⁻⁸ Ω·m, was es zu einem ausgezeichneten elektrischen Leiter macht." },
+      { id: "q9", question: "Was geschieht mit dem Widerstand eines Drahtes, wenn sein Durchmesser verdoppelt wird (Länge und Material gleich)?", options: ["R verdoppelt sich", "R wird viermal kleiner", "R halbiert sich", "R bleibt gleich"], correctIndex: 1, explanation: "Die Querschnittsfläche A = π(d/2)² wächst quadratisch mit dem Durchmesser. Bei doppeltem Durchmesser wird A viermal größer, also R = ρL/A viermal kleiner." },
+      { id: "q10", question: "Was unterscheidet nicht-ohmsche Bauelemente (z. B. Dioden) von ohmschen Widerständen?", options: ["Ihr Widerstand ist konstant und unabhängig von Spannung", "Sie haben keinen elektrischen Widerstand", "Ihre Strom-Spannungs-Kennlinie ist nichtlinear", "Sie leiten Strom nur bei sehr hohen Spannungen"], correctIndex: 2, explanation: "Nicht-ohmsche Bauelemente wie Dioden haben eine nichtlineare I-U-Kennlinie. Der Widerstand ist keine Konstante, sondern hängt vom Betriebspunkt (Spannung/Strom) ab." }
     ]
   },
   {
@@ -233,76 +173,16 @@ const NATWISS_CHAPTER11_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Was besagt die Knotenregel (1. Kirchhoffsches Gesetz)?",
-        options: ["Die Summe aller Widerstände in einer Masche ist null", "Die Summe der zufließenden Ströme an einem Knoten ist gleich der Summe der abfließenden", "Die Spannung im Stromkreis ist konstant", "Parallelwiderstände haben immer gleiche Ströme"],
-        correctIndex: 1,
-        explanation: "Die Knotenregel besagt: An jedem Knoten gilt ΣI_zu = ΣI_ab (Ladungserhaltung). Es kann sich keine Ladung im Knoten ansammeln."
-      },
-      {
-        id: "q2",
-        question: "Was besagt die Maschenregel (2. Kirchhoffsches Gesetz)?",
-        options: ["Die Summe aller Widerstände in einer Masche ist gleich der Spannung", "Die Summe aller Spannungen entlang einer geschlossenen Masche ist null", "In jeder Masche fließt derselbe Strom", "Die Leistung in jeder Masche ist konstant"],
-        correctIndex: 1,
-        explanation: "Die Maschenregel besagt: ΣU_k = 0 für alle Spannungen entlang einer geschlossenen Masche (Energieerhaltung). Spannungsquellen und Spannungsabfälle an Widerständen heben sich auf."
-      },
-      {
-        id: "q3",
-        question: "Drei Widerstände 10 Ω, 20 Ω, 30 Ω in Reihenschaltung ergeben welchen Gesamtwiderstand?",
-        options: ["5,45 Ω", "6 Ω", "60 Ω", "180 Ω"],
-        correctIndex: 2,
-        explanation: "Bei Reihenschaltung addieren sich die Widerstände: R = 10 + 20 + 30 = 60 Ω. Durch alle Widerstände fließt derselbe Strom."
-      },
-      {
-        id: "q4",
-        question: "Welche Formel gilt für zwei Widerstände R₁ und R₂ in Parallelschaltung?",
-        options: ["R_p = R₁ + R₂", "R_p = R₁ · R₂", "1/R_p = 1/R₁ + 1/R₂", "R_p = (R₁ + R₂) / 2"],
-        correctIndex: 2,
-        explanation: "Bei Parallelschaltung gilt 1/R_p = 1/R₁ + 1/R₂. Für zwei gleiche Widerstände R halbiert sich die Gesamtkapazität auf R/2."
-      },
-      {
-        id: "q5",
-        question: "Wie lautet die Formel für die Ausgangsspannung U₂ eines Spannungsteilers (R₁ und R₂ in Reihe, Gesamtspannung U)?",
-        options: ["U₂ = U · R₁ / (R₁ + R₂)", "U₂ = U · R₂ / (R₁ + R₂)", "U₂ = U / (R₁ · R₂)", "U₂ = U · (R₁ + R₂) / R₂"],
-        correctIndex: 1,
-        explanation: "Die Ausgangsspannung am Widerstand R₂ ist U₂ = U · R₂/(R₁+R₂). Die Spannung teilt sich proportional zu den Widerstandswerten auf."
-      },
-      {
-        id: "q6",
-        question: "Welche Eigenschaft haben alle Widerstände in einer Reihenschaltung gemeinsam?",
-        options: ["Sie haben alle die gleiche Spannung", "Sie haben alle den gleichen Strom", "Sie haben alle den gleichen Widerstandswert", "Sie haben alle die gleiche Verlustleistung"],
-        correctIndex: 1,
-        explanation: "In einer Reihenschaltung fließt durch alle Widerstände derselbe Strom I. Die Spannung teilt sich dagegen proportional zu den Widerstandswerten auf."
-      },
-      {
-        id: "q7",
-        question: "Was passiert mit der Klemmenspannung einer Batterie (mit Innenwiderstand), wenn der Laststrom steigt?",
-        options: ["Sie steigt an", "Sie bleibt konstant", "Sie sinkt", "Sie wird negativ"],
-        correctIndex: 2,
-        explanation: "Die Klemmenspannung U_kl = EMK − I·r_i sinkt mit steigendem Strom, da der Spannungsabfall am Innenwiderstand r_i wächst."
-      },
-      {
-        id: "q8",
-        question: "Wann ist eine Wheatstonesche Brücke abgeglichen?",
-        options: ["Wenn R₁ = R₂ = R₃ = R₄", "Wenn R₁/R₂ = R₃/R₄", "Wenn der Gesamtstrom null ist", "Wenn alle Widerstände in Reihe liegen"],
-        correctIndex: 1,
-        explanation: "Die Brücke ist abgeglichen (kein Strom durch das Galvanometer), wenn das Widerstandsverhältnis R₁/R₂ = R₃/R₄ gilt. Dies nutzt man zur präzisen Widerstandsmessung."
-      },
-      {
-        id: "q9",
-        question: "Welche Eigenschaft haben alle Widerstände in einer Parallelschaltung gemeinsam?",
-        options: ["Sie haben alle den gleichen Strom", "Sie haben alle die gleiche Spannung", "Sie haben alle denselben Widerstandswert", "Sie verbrauchen alle dieselbe Leistung"],
-        correctIndex: 1,
-        explanation: "In einer Parallelschaltung liegt an allen Widerständen dieselbe Spannung U an. Die Ströme teilen sich umgekehrt proportional zu den Widerstandswerten auf."
-      },
-      {
-        id: "q10",
-        question: "Ein Stromteiler besteht aus R₁ = 2 Ω und R₂ = 6 Ω in Parallele. Wie groß ist der Anteil des Gesamtstroms durch R₁?",
-        options: ["25 %", "50 %", "75 %", "33 %"],
-        correctIndex: 2,
-        explanation: "I₁ = I_ges · R₂/(R₁+R₂) = I_ges · 6/(2+6) = 0,75 · I_ges. Durch R₁ fließen 75 % des Gesamtstroms (der kleinere Widerstand erhält den größeren Strom)."
-      }
+      { id: "q1", question: "Was besagt die Knotenregel (1. Kirchhoffsches Gesetz)?", options: ["Die Summe aller Widerstände in einer Masche ist null", "Die Spannung im Stromkreis ist konstant", "Die Summe der zufließenden Ströme an einem Knoten ist gleich der Summe der abfließenden", "Parallelwiderstände haben immer gleiche Ströme"], correctIndex: 2, explanation: "Die Knotenregel besagt: An jedem Knoten gilt ΣI_zu = ΣI_ab (Ladungserhaltung). Es kann sich keine Ladung im Knoten ansammeln." },
+      { id: "q2", question: "Was besagt die Maschenregel (2. Kirchhoffsches Gesetz)?", options: ["Die Summe aller Spannungen entlang einer geschlossenen Masche ist null", "In jeder Masche fließt derselbe Strom", "Die Leistung in jeder Masche ist konstant", "Die Summe aller Widerstände in einer Masche ist gleich der Spannung"], correctIndex: 0, explanation: "Die Maschenregel besagt: ΣU_k = 0 für alle Spannungen entlang einer geschlossenen Masche (Energieerhaltung). Spannungsquellen und Spannungsabfälle an Widerständen heben sich auf." },
+      { id: "q3", question: "Drei Widerstände 10 Ω, 20 Ω, 30 Ω in Reihenschaltung ergeben welchen Gesamtwiderstand?", options: ["60 Ω", "6 Ω", "180 Ω", "5,45 Ω"], correctIndex: 0, explanation: "Bei Reihenschaltung addieren sich die Widerstände: R = 10 + 20 + 30 = 60 Ω. Durch alle Widerstände fließt derselbe Strom." },
+      { id: "q4", question: "Welche Formel gilt für zwei Widerstände R₁ und R₂ in Parallelschaltung?", options: ["R_p = (R₁ + R₂) / 2", "R_p = R₁ + R₂", "R_p = R₁ · R₂", "1/R_p = 1/R₁ + 1/R₂"], correctIndex: 3, explanation: "Bei Parallelschaltung gilt 1/R_p = 1/R₁ + 1/R₂. Für zwei gleiche Widerstände R halbiert sich die Gesamtkapazität auf R/2." },
+      { id: "q5", question: "Wie lautet die Formel für die Ausgangsspannung U₂ eines Spannungsteilers (R₁ und R₂ in Reihe, Gesamtspannung U)?", options: ["U₂ = U / (R₁ · R₂)", "U₂ = U · (R₁ + R₂) / R₂", "U₂ = U · R₁ / (R₁ + R₂)", "U₂ = U · R₂ / (R₁ + R₂)"], correctIndex: 3, explanation: "Die Ausgangsspannung am Widerstand R₂ ist U₂ = U · R₂/(R₁+R₂). Die Spannung teilt sich proportional zu den Widerstandswerten auf." },
+      { id: "q6", question: "Welche Eigenschaft haben alle Widerstände in einer Reihenschaltung gemeinsam?", options: ["Sie haben alle die gleiche Verlustleistung", "Sie haben alle den gleichen Widerstandswert", "Sie haben alle den gleichen Strom", "Sie haben alle die gleiche Spannung"], correctIndex: 2, explanation: "In einer Reihenschaltung fließt durch alle Widerstände derselbe Strom I. Die Spannung teilt sich dagegen proportional zu den Widerstandswerten auf." },
+      { id: "q7", question: "Was passiert mit der Klemmenspannung einer Batterie (mit Innenwiderstand), wenn der Laststrom steigt?", options: ["Sie steigt an", "Sie wird negativ", "Sie bleibt konstant", "Sie sinkt"], correctIndex: 3, explanation: "Die Klemmenspannung U_kl = EMK − I·r_i sinkt mit steigendem Strom, da der Spannungsabfall am Innenwiderstand r_i wächst." },
+      { id: "q8", question: "Wann ist eine Wheatstonesche Brücke abgeglichen?", options: ["Wenn R₁ = R₂ = R₃ = R₄", "Wenn R₁/R₂ = R₃/R₄", "Wenn alle Widerstände in Reihe liegen", "Wenn der Gesamtstrom null ist"], correctIndex: 1, explanation: "Die Brücke ist abgeglichen (kein Strom durch das Galvanometer), wenn das Widerstandsverhältnis R₁/R₂ = R₃/R₄ gilt. Dies nutzt man zur präzisen Widerstandsmessung." },
+      { id: "q9", question: "Welche Eigenschaft haben alle Widerstände in einer Parallelschaltung gemeinsam?", options: ["Sie haben alle denselben Widerstandswert", "Sie haben alle die gleiche Spannung", "Sie haben alle den gleichen Strom", "Sie verbrauchen alle dieselbe Leistung"], correctIndex: 1, explanation: "In einer Parallelschaltung liegt an allen Widerständen dieselbe Spannung U an. Die Ströme teilen sich umgekehrt proportional zu den Widerstandswerten auf." },
+      { id: "q10", question: "Ein Stromteiler besteht aus R₁ = 2 Ω und R₂ = 6 Ω in Parallele. Wie groß ist der Anteil des Gesamtstroms durch R₁?", options: ["25 %", "50 %", "75 %", "33 %"], correctIndex: 2, explanation: "I₁ = I_ges · R₂/(R₁+R₂) = I_ges · 6/(2+6) = 0,75 · I_ges. Durch R₁ fließen 75 % des Gesamtstroms (der kleinere Widerstand erhält den größeren Strom)." }
     ]
   },
   {
@@ -384,76 +264,16 @@ const NATWISS_CHAPTER11_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Welche Einheit hat die elektrische Leistung?",
-        options: ["Joule (J)", "Volt-Ampere (VA) = Watt (W)", "Coulomb (C)", "Ohm (Ω)"],
-        correctIndex: 1,
-        explanation: "Elektrische Leistung wird in Watt (W) angegeben: 1 W = 1 J/s = 1 V·A."
-      },
-      {
-        id: "q2",
-        question: "Wie viel Joule entsprechen 1 Kilowattstunde (1 kWh)?",
-        options: ["1000 J", "3,6 × 10⁶ J", "3,6 × 10³ J", "1,602 × 10⁻¹⁹ J"],
-        correctIndex: 1,
-        explanation: "1 kWh = 1000 W × 3600 s = 3,6 × 10⁶ J = 3,6 MJ."
-      },
-      {
-        id: "q3",
-        question: "Wie lautet die Formel für die Joulesche Wärme Q_W, die in einem Widerstand R bei Strom I in der Zeit t entsteht?",
-        options: ["Q_W = U · I · t", "Q_W = I² · R · t", "Q_W = U² · t / R", "Q_W = I · R · t"],
-        correctIndex: 1,
-        explanation: "Die Joulesche Wärme berechnet sich zu Q_W = I²·R·t. Alle drei Formen (UI·t, I²Rt, U²t/R) sind äquivalent."
-      },
-      {
-        id: "q4",
-        question: "Was ist der Leistungsfaktor cos(φ) im Wechselstromnetz?",
-        options: ["Das Verhältnis von Scheinleistung zu Wirkleistung", "Das Verhältnis von Wirkleistung zu Scheinleistung", "Der Wirkungsgrad des Generators", "Der Phasenwinkel zwischen Strom und Spannung"],
-        correctIndex: 1,
-        explanation: "Der Leistungsfaktor cos(φ) = P/(U_eff·I_eff) ist das Verhältnis der Wirkleistung zur Scheinleistung. Bei rein ohmscher Last (φ = 0) ist cos(φ) = 1."
-      },
-      {
-        id: "q5",
-        question: "Wann wird die maximale Leistung vom Innenwiderstand r_i einer Quelle an den Lastwiderstand R_L übertragen?",
-        options: ["Wenn R_L >> r_i", "Wenn R_L = 0", "Wenn R_L = r_i", "Wenn R_L << r_i"],
-        correctIndex: 2,
-        explanation: "Das Leistungsanpassungsgesetz besagt: Maximale Leistungsübertragung erfolgt bei R_L = r_i (Impedanzanpassung). In der Übertragungstechnik und Audioanwendungen wichtig."
-      },
-      {
-        id: "q6",
-        question: "Wie berechnet sich der Wirkungsgrad η eines elektrischen Geräts?",
-        options: ["η = P_gesamt / P_nutz", "η = P_nutz / P_gesamt", "η = P_verlust / P_nutz", "η = P_nutz · P_gesamt"],
-        correctIndex: 1,
-        explanation: "Der Wirkungsgrad η = P_nutz/P_gesamt gibt an, welcher Anteil der aufgenommenen Leistung als Nutzleistung abgegeben wird. Er ist stets ≤ 1 (≤ 100 %)."
-      },
-      {
-        id: "q7",
-        question: "Welche Leistung nimmt eine Glühlampe auf, wenn R = 900 Ω und U = 230 V gilt?",
-        options: ["P = 58,8 W", "P = 207.000 W", "P = 0,256 W", "P = 2070 W"],
-        correctIndex: 0,
-        explanation: "P = U²/R = 230²/900 = 52900/900 ≈ 58,8 W."
-      },
-      {
-        id: "q8",
-        question: "Was schützt eine Schmelzsicherung?",
-        options: ["Vor zu hoher Spannung", "Vor Kurzschlüssen und Überströmen, die Leitungen gefährlich erhitzen", "Vor Unterspannung", "Vor Blindleistung"],
-        correctIndex: 1,
-        explanation: "Schmelzsicherungen und Leitungsschutzschalter unterbrechen den Stromkreis bei Überschreiten des Nennstroms und schützen Leitungen vor Überhitzung durch Joulesche Wärme."
-      },
-      {
-        id: "q9",
-        question: "Ein Gerät nimmt P = 1 kW auf. Wie viel Energie verbraucht es in 4 Stunden in kWh?",
-        options: ["0,25 kWh", "4 kWh", "400 kWh", "0,004 kWh"],
-        correctIndex: 1,
-        explanation: "W = P · t = 1 kW · 4 h = 4 kWh."
-      },
-      {
-        id: "q10",
-        question: "Warum sind Elektrofahrzeuge in Bezug auf den Wirkungsgrad vorteilhafter als Verbrennungsmotoren?",
-        options: ["Weil Elektromotoren keinen Strom benötigen", "Weil Elektromotoren Wirkungsgrade von 85–95 % erreichen, während Verbrennungsmotoren oft nur 25–40 % erreichen", "Weil Elektrofahrzeuge keine Energie verbrauchen", "Weil der Leistungsfaktor bei Elektrofahrzeugen immer 1 ist"],
-        correctIndex: 1,
-        explanation: "Elektromotoren haben Wirkungsgrade von 85–95 %, während Verbrennungsmotoren typisch 25–40 % erreichen. Der Rest wird als Wärme abgegeben. Daher sind Elektrofahrzeuge deutlich effizienter."
-      }
+      { id: "q1", question: "Welche Einheit hat die elektrische Leistung?", options: ["Coulomb (C)", "Joule (J)", "Volt-Ampere (VA) = Watt (W)", "Ohm (Ω)"], correctIndex: 2, explanation: "Elektrische Leistung wird in Watt (W) angegeben: 1 W = 1 J/s = 1 V·A." },
+      { id: "q2", question: "Wie viel Joule entsprechen 1 Kilowattstunde (1 kWh)?", options: ["3,6 × 10⁶ J", "1000 J", "1,602 × 10⁻¹⁹ J", "3,6 × 10³ J"], correctIndex: 0, explanation: "1 kWh = 1000 W × 3600 s = 3,6 × 10⁶ J = 3,6 MJ." },
+      { id: "q3", question: "Wie lautet die Formel für die Joulesche Wärme Q_W, die in einem Widerstand R bei Strom I in der Zeit t entsteht?", options: ["Q_W = I² · R · t", "Q_W = U · I · t", "Q_W = I · R · t", "Q_W = U² · t / R"], correctIndex: 0, explanation: "Die Joulesche Wärme berechnet sich zu Q_W = I²·R·t. Alle drei Formen (UI·t, I²Rt, U²t/R) sind äquivalent." },
+      { id: "q4", question: "Was ist der Leistungsfaktor cos(φ) im Wechselstromnetz?", options: ["Der Wirkungsgrad des Generators", "Das Verhältnis von Wirkleistung zu Scheinleistung", "Der Phasenwinkel zwischen Strom und Spannung", "Das Verhältnis von Scheinleistung zu Wirkleistung"], correctIndex: 1, explanation: "Der Leistungsfaktor cos(φ) = P/(U_eff·I_eff) ist das Verhältnis der Wirkleistung zur Scheinleistung. Bei rein ohmscher Last (φ = 0) ist cos(φ) = 1." },
+      { id: "q5", question: "Wann wird die maximale Leistung vom Innenwiderstand r_i einer Quelle an den Lastwiderstand R_L übertragen?", options: ["Wenn R_L = r_i", "Wenn R_L = 0", "Wenn R_L >> r_i", "Wenn R_L << r_i"], correctIndex: 0, explanation: "Das Leistungsanpassungsgesetz besagt: Maximale Leistungsübertragung erfolgt bei R_L = r_i (Impedanzanpassung). In der Übertragungstechnik und Audioanwendungen wichtig." },
+      { id: "q6", question: "Wie berechnet sich der Wirkungsgrad η eines elektrischen Geräts?", options: ["η = P_nutz · P_gesamt", "η = P_gesamt / P_nutz", "η = P_nutz / P_gesamt", "η = P_verlust / P_nutz"], correctIndex: 2, explanation: "Der Wirkungsgrad η = P_nutz/P_gesamt gibt an, welcher Anteil der aufgenommenen Leistung als Nutzleistung abgegeben wird. Er ist stets ≤ 1 (≤ 100 %)." },
+      { id: "q7", question: "Welche Leistung nimmt eine Glühlampe auf, wenn R = 900 Ω und U = 230 V gilt?", options: ["P = 207.000 W", "P = 2070 W", "P = 0,256 W", "P = 58,8 W"], correctIndex: 3, explanation: "P = U²/R = 230²/900 = 52900/900 ≈ 58,8 W." },
+      { id: "q8", question: "Was schützt eine Schmelzsicherung?", options: ["Vor zu hoher Spannung", "Vor Kurzschlüssen und Überströmen, die Leitungen gefährlich erhitzen", "Vor Unterspannung", "Vor Blindleistung"], correctIndex: 1, explanation: "Schmelzsicherungen und Leitungsschutzschalter unterbrechen den Stromkreis bei Überschreiten des Nennstroms und schützen Leitungen vor Überhitzung durch Joulesche Wärme." },
+      { id: "q9", question: "Ein Gerät nimmt P = 1 kW auf. Wie viel Energie verbraucht es in 4 Stunden in kWh?", options: ["400 kWh", "4 kWh", "0,25 kWh", "0,004 kWh"], correctIndex: 1, explanation: "W = P · t = 1 kW · 4 h = 4 kWh." },
+      { id: "q10", question: "Warum sind Elektrofahrzeuge in Bezug auf den Wirkungsgrad vorteilhafter als Verbrennungsmotoren?", options: ["Weil Elektrofahrzeuge keine Energie verbrauchen", "Weil Elektromotoren keinen Strom benötigen", "Weil der Leistungsfaktor bei Elektrofahrzeugen immer 1 ist", "Weil Elektromotoren Wirkungsgrade von 85–95 % erreichen, während Verbrennungsmotoren oft nur 25–40 % erreichen"], correctIndex: 3, explanation: "Elektromotoren haben Wirkungsgrade von 85–95 %, während Verbrennungsmotoren typisch 25–40 % erreichen. Der Rest wird als Wärme abgegeben. Daher sind Elektrofahrzeuge deutlich effizienter." }
     ]
   }
 ];

@@ -64,126 +64,16 @@ const NATWISS_CHAPTER2_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Was besagt das 1. Newtonsche Gesetz (Trägheitsprinzip)?",
-        options: [
-          "Kraft ist Masse mal Beschleunigung",
-          "Ein Körper bleibt in Ruhe oder gleichförmiger Bewegung, solange keine resultierende Kraft wirkt",
-          "Zu jeder Kraft gibt es eine gleich große Gegenkraft",
-          "Kräfte kann man vektoriell addieren"
-        ],
-        correctIndex: 1,
-        explanation: "Das Trägheitsprinzip (1. Newtonsches Gesetz) besagt: Ohne äußere resultierende Kraft ändert ein Körper seinen Bewegungszustand nicht."
-      },
-      {
-        id: "q2",
-        question: "Welche Einheit hat die Kraft im SI-System?",
-        options: [
-          "kg/m²",
-          "kg·m/s",
-          "Newton (N) = kg·m/s²",
-          "Joule (J)"
-        ],
-        correctIndex: 2,
-        explanation: "Aus F = m·a folgt: [F] = kg·m/s² = N (Newton). 1 N ist die Kraft, die einer Masse von 1 kg eine Beschleunigung von 1 m/s² erteilt."
-      },
-      {
-        id: "q3",
-        question: "Was ist der Unterschied zwischen Masse und Gewichtskraft?",
-        options: [
-          "Es gibt keinen Unterschied, beide sind gleich",
-          "Masse ist in kg, Gewichtskraft in N. Die Masse ist konstant, die Gewichtskraft hängt von g ab",
-          "Gewichtskraft ist immer größer als die Masse",
-          "Die Masse wird auf der Waage gemessen und ist standortabhängig"
-        ],
-        correctIndex: 1,
-        explanation: "Masse (kg) ist eine intrinsische Eigenschaft des Körpers und standortunabhängig. Die Gewichtskraft F_G = m·g (in Newton) hängt von der Ortsbeschleunigung g ab und ist z.B. auf dem Mond kleiner."
-      },
-      {
-        id: "q4",
-        question: "Was beschreibt das 3. Newtonsche Gesetz (Actio = Reactio)?",
-        options: [
-          "Die Summe aller Kräfte ist null",
-          "Kräfte wirken immer paarweise: Kraft und Gegenkraft sind gleich groß und entgegengesetzt gerichtet",
-          "Ein Körper kann keine Kraft auf sich selbst ausüben",
-          "Reibungskräfte sind stets gleich der Normalkraft"
-        ],
-        correctIndex: 1,
-        explanation: "Actio = Reactio: Jede Kraft zwischen zwei Körpern hat eine gleich große, entgegengesetzte Gegenkraft. F₁₂ = –F₂₁."
-      },
-      {
-        id: "q5",
-        question: "Eine Kraft von 500 N wirkt auf einen 50 kg schweren Körper. Welche Beschleunigung erfährt er?",
-        options: [
-          "a = 25000 m/s²",
-          "a = 0,1 m/s²",
-          "a = 10 m/s²",
-          "a = 50 m/s²"
-        ],
-        correctIndex: 2,
-        explanation: "F = m·a → a = F/m = 500/50 = 10 m/s²."
-      },
-      {
-        id: "q6",
-        question: "Wirken auf einen ruhenden Körper zwei entgegengesetzte Kräfte F₁ = 100 N und F₂ = 60 N. Was passiert?",
-        options: [
-          "Der Körper bleibt in Ruhe (Kräftegleichgewicht)",
-          "Der Körper beschleunigt in Richtung der größeren Kraft F₁",
-          "Der Körper beschleunigt in Richtung der kleineren Kraft F₂",
-          "Beide Kräfte heben sich auf, da sie entgegengesetzt wirken"
-        ],
-        correctIndex: 1,
-        explanation: "Die Resultierende beträgt F_res = 100 – 60 = 40 N in Richtung von F₁. Der Körper beschleunigt entsprechend a = 40 N / m in diese Richtung."
-      },
-      {
-        id: "q7",
-        question: "Warum gleitet ein Körper auf einer Fläche weiter, wenn man aufhört zu schieben (solange Reibung vernachlässigt wird)?",
-        options: [
-          "Weil eine Restkraft noch nachwirkt",
-          "Wegen des Trägheitsprinzips: ohne äußere Kraft ändert sich die Bewegung nicht",
-          "Weil die Normalkraft ihn vorwärtstreibt",
-          "Wegen der Schwerkraft, die horizontal wirkt"
-        ],
-        correctIndex: 1,
-        explanation: "Das 1. Newtonsche Gesetz (Trägheitsprinzip): Ohne resultierende äußere Kraft behält ein Körper seinen Bewegungszustand bei. Ohne Reibung bleibt die Geschwindigkeit konstant."
-      },
-      {
-        id: "q8",
-        question: "Wie wirkt Actio = Reactio beim Schwimmen? Eine Person stößt mit den Armen Wasser nach hinten.",
-        options: [
-          "Das Wasser hat keine Wirkung auf den Schwimmer",
-          "Das Wasser drückt den Schwimmer nach vorne (Reaktionskraft)",
-          "Die Trägheit des Wassers erzeugt eine Kraft nach hinten auf den Schwimmer",
-          "Das Wasser zieht den Schwimmer nach unten"
-        ],
-        correctIndex: 1,
-        explanation: "Actio = Reactio: Der Schwimmer drückt Wasser nach hinten (Actio). Das Wasser drückt den Schwimmer mit gleich großer Kraft nach vorne (Reactio) – so bewegt er sich vorwärts."
-      },
-      {
-        id: "q9",
-        question: "Was versteht man unter einem Freikörperdiagramm (Kräftediagramm)?",
-        options: [
-          "Ein Diagramm, das die Bewegungsbahn darstellt",
-          "Eine Skizze, bei der ein Körper isoliert dargestellt und alle auf ihn wirkenden Kräfte eingezeichnet werden",
-          "Ein Diagramm zur Darstellung der Energie als Funktion der Zeit",
-          "Eine grafische Darstellung der Reibungskoeffizienten"
-        ],
-        correctIndex: 1,
-        explanation: "Im Freikörperdiagramm wird der Körper frei gezeichnet (von seiner Umgebung losgelöst) und alle angreifenden Kräfte werden als Vektorpfeile eingetragen."
-      },
-      {
-        id: "q10",
-        question: "Ein Körper der Masse 2 kg hat auf der Erde eine Gewichtskraft von ca. 19,6 N. Wie groß ist seine Gewichtskraft auf dem Mond (g_Mond ≈ 1,62 m/s²)?",
-        options: [
-          "19,6 N (Masse und Gewichtskraft sind gleich)",
-          "3,24 N",
-          "12,1 N",
-          "1,62 N"
-        ],
-        correctIndex: 1,
-        explanation: "F_G = m · g_Mond = 2 · 1,62 = 3,24 N. Die Masse bleibt konstant (2 kg), aber die Gewichtskraft ist auf dem Mond nur ca. 1/6 so groß wie auf der Erde."
-      }
+      { id: "q1", question: "Was besagt das 1. Newtonsche Gesetz (Trägheitsprinzip)?", options: ["Kräfte kann man vektoriell addieren", "Zu jeder Kraft gibt es eine gleich große Gegenkraft", "Kraft ist Masse mal Beschleunigung", "Ein Körper bleibt in Ruhe oder gleichförmiger Bewegung, solange keine resultierende Kraft wirkt"], correctIndex: 3, explanation: "Das Trägheitsprinzip (1. Newtonsches Gesetz) besagt: Ohne äußere resultierende Kraft ändert ein Körper seinen Bewegungszustand nicht." },
+      { id: "q2", question: "Welche Einheit hat die Kraft im SI-System?", options: ["kg/m²", "Newton (N) = kg·m/s²", "Joule (J)", "kg·m/s"], correctIndex: 1, explanation: "Aus F = m·a folgt: [F] = kg·m/s² = N (Newton). 1 N ist die Kraft, die einer Masse von 1 kg eine Beschleunigung von 1 m/s² erteilt." },
+      { id: "q3", question: "Was ist der Unterschied zwischen Masse und Gewichtskraft?", options: ["Gewichtskraft ist immer größer als die Masse", "Die Masse wird auf der Waage gemessen und ist standortabhängig", "Es gibt keinen Unterschied, beide sind gleich", "Masse ist in kg, Gewichtskraft in N. Die Masse ist konstant, die Gewichtskraft hängt von g ab"], correctIndex: 3, explanation: "Masse (kg) ist eine intrinsische Eigenschaft des Körpers und standortunabhängig. Die Gewichtskraft F_G = m·g (in Newton) hängt von der Ortsbeschleunigung g ab und ist z.B. auf dem Mond kleiner." },
+      { id: "q4", question: "Was beschreibt das 3. Newtonsche Gesetz (Actio = Reactio)?", options: ["Reibungskräfte sind stets gleich der Normalkraft", "Kräfte wirken immer paarweise: Kraft und Gegenkraft sind gleich groß und entgegengesetzt gerichtet", "Die Summe aller Kräfte ist null", "Ein Körper kann keine Kraft auf sich selbst ausüben"], correctIndex: 1, explanation: "Actio = Reactio: Jede Kraft zwischen zwei Körpern hat eine gleich große, entgegengesetzte Gegenkraft. F₁₂ = –F₂₁." },
+      { id: "q5", question: "Eine Kraft von 500 N wirkt auf einen 50 kg schweren Körper. Welche Beschleunigung erfährt er?", options: ["a = 25000 m/s²", "a = 50 m/s²", "a = 10 m/s²", "a = 0,1 m/s²"], correctIndex: 2, explanation: "F = m·a → a = F/m = 500/50 = 10 m/s²." },
+      { id: "q6", question: "Wirken auf einen ruhenden Körper zwei entgegengesetzte Kräfte F₁ = 100 N und F₂ = 60 N. Was passiert?", options: ["Beide Kräfte heben sich auf, da sie entgegengesetzt wirken", "Der Körper bleibt in Ruhe (Kräftegleichgewicht)", "Der Körper beschleunigt in Richtung der kleineren Kraft F₂", "Der Körper beschleunigt in Richtung der größeren Kraft F₁"], correctIndex: 3, explanation: "Die Resultierende beträgt F_res = 100 – 60 = 40 N in Richtung von F₁. Der Körper beschleunigt entsprechend a = 40 N / m in diese Richtung." },
+      { id: "q7", question: "Warum gleitet ein Körper auf einer Fläche weiter, wenn man aufhört zu schieben (solange Reibung vernachlässigt wird)?", options: ["Wegen des Trägheitsprinzips: ohne äußere Kraft ändert sich die Bewegung nicht", "Weil eine Restkraft noch nachwirkt", "Wegen der Schwerkraft, die horizontal wirkt", "Weil die Normalkraft ihn vorwärtstreibt"], correctIndex: 0, explanation: "Das 1. Newtonsche Gesetz (Trägheitsprinzip): Ohne resultierende äußere Kraft behält ein Körper seinen Bewegungszustand bei. Ohne Reibung bleibt die Geschwindigkeit konstant." },
+      { id: "q8", question: "Wie wirkt Actio = Reactio beim Schwimmen? Eine Person stößt mit den Armen Wasser nach hinten.", options: ["Das Wasser drückt den Schwimmer nach vorne (Reaktionskraft)", "Das Wasser hat keine Wirkung auf den Schwimmer", "Die Trägheit des Wassers erzeugt eine Kraft nach hinten auf den Schwimmer", "Das Wasser zieht den Schwimmer nach unten"], correctIndex: 0, explanation: "Actio = Reactio: Der Schwimmer drückt Wasser nach hinten (Actio). Das Wasser drückt den Schwimmer mit gleich großer Kraft nach vorne (Reactio) – so bewegt er sich vorwärts." },
+      { id: "q9", question: "Was versteht man unter einem Freikörperdiagramm (Kräftediagramm)?", options: ["Eine grafische Darstellung der Reibungskoeffizienten", "Eine Skizze, bei der ein Körper isoliert dargestellt und alle auf ihn wirkenden Kräfte eingezeichnet werden", "Ein Diagramm, das die Bewegungsbahn darstellt", "Ein Diagramm zur Darstellung der Energie als Funktion der Zeit"], correctIndex: 1, explanation: "Im Freikörperdiagramm wird der Körper frei gezeichnet (von seiner Umgebung losgelöst) und alle angreifenden Kräfte werden als Vektorpfeile eingetragen." },
+      { id: "q10", question: "Ein Körper der Masse 2 kg hat auf der Erde eine Gewichtskraft von ca. 19,6 N. Wie groß ist seine Gewichtskraft auf dem Mond (g_Mond ≈ 1,62 m/s²)?", options: ["19,6 N (Masse und Gewichtskraft sind gleich)", "1,62 N", "3,24 N", "12,1 N"], correctIndex: 2, explanation: "F_G = m · g_Mond = 2 · 1,62 = 3,24 N. Die Masse bleibt konstant (2 kg), aber die Gewichtskraft ist auf dem Mond nur ca. 1/6 so groß wie auf der Erde." }
     ]
   },
   {
@@ -261,126 +151,16 @@ const NATWISS_CHAPTER2_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Welche Aussage über Haft- und Gleitreibungskoeffizient ist richtig?",
-        options: [
-          "μ_G > μ_H (Gleitreibung größer als Haftreibung)",
-          "μ_G = μ_H (beide sind gleich groß)",
-          "μ_G < μ_H (Haftreibung größer als Gleitreibung)",
-          "Es kommt immer auf das Material an, ein allgemeiner Vergleich ist unmöglich"
-        ],
-        correctIndex: 2,
-        explanation: "In der Regel gilt μ_G < μ_H: Es ist mehr Kraft nötig, einen Körper in Bewegung zu setzen (Haftreibung überwinden), als ihn in Bewegung zu halten (Gleitreibung)."
-      },
-      {
-        id: "q2",
-        question: "Von was hängt die Gleitreibungskraft ab?",
-        options: [
-          "Von der Geschwindigkeit des Körpers",
-          "Vom Gleitreibungskoeffizient μ_G und der Normalkraft F_N",
-          "Von der Kontaktfläche zwischen den Körpern",
-          "Von der Masse des Körpers (nicht von F_N)"
-        ],
-        correctIndex: 1,
-        explanation: "Gleitreibungskraft: F_R = μ_G · F_N. Sie hängt vom Koeffizienten μ_G und der Normalkraft F_N ab, nicht direkt von der Kontaktfläche oder Geschwindigkeit."
-      },
-      {
-        id: "q3",
-        question: "Wie verhält sich die Gravitationskraft, wenn der Abstand r zwischen zwei Massen verdoppelt wird?",
-        options: [
-          "Sie halbiert sich",
-          "Sie bleibt gleich",
-          "Sie wird viermal kleiner",
-          "Sie wird viermal größer"
-        ],
-        correctIndex: 2,
-        explanation: "F = G·m₁·m₂/r². Bei doppeltem Abstand: F' = G·m₁·m₂/(2r)² = F/4. Die Kraft wird auf ein Viertel reduziert (1/r²-Gesetz)."
-      },
-      {
-        id: "q4",
-        question: "Was beschreibt das Hookesche Gesetz?",
-        options: [
-          "Die Reibungskraft ist proportional zur Normalkraft",
-          "Die Federkraft ist proportional zur Auslenkung: F = –k·x",
-          "Die Gravitationskraft nimmt mit dem Quadrat des Abstands ab",
-          "Die Luftwiderstandskraft ist proportional zur Geschwindigkeit"
-        ],
-        correctIndex: 1,
-        explanation: "Das Hookesche Gesetz lautet F = –k·x: Die Federkraft ist proportional zur Auslenkung x und entgegen der Auslenkungsrichtung gerichtet (rücktreibend)."
-      },
-      {
-        id: "q5",
-        question: "Ein Block liegt auf einer schiefen Ebene mit Winkel θ. Welche Kraftkomponente drückt den Block senkrecht auf die Fläche (Normalkraft)?",
-        options: [
-          "F_N = m·g·sin(θ)",
-          "F_N = m·g",
-          "F_N = m·g·cos(θ)",
-          "F_N = m·g·tan(θ)"
-        ],
-        correctIndex: 2,
-        explanation: "Am schiefen Hang zerlegt man die Gewichtskraft in zwei Komponenten: senkrecht zur Fläche F_N = m·g·cos(θ) und parallel zur Fläche F_∥ = m·g·sin(θ)."
-      },
-      {
-        id: "q6",
-        question: "Die Gravitationskonstante G hat den Wert:",
-        options: [
-          "G = 9,81 m/s²",
-          "G = 6,674·10⁻¹¹ N·m²/kg²",
-          "G = 6,022·10²³ mol⁻¹",
-          "G = 3·10⁸ m/s"
-        ],
-        correctIndex: 1,
-        explanation: "Die Gravitationskonstante G = 6,674·10⁻¹¹ N·m²/kg² ist eine Naturkonstante. Sie darf nicht mit der Erdbeschleunigung g = 9,81 m/s² verwechselt werden."
-      },
-      {
-        id: "q7",
-        question: "Wovon hängt der Luftwiderstand F_L hauptsächlich ab?",
-        options: [
-          "Linear von der Geschwindigkeit: F_L ~ v",
-          "Vom Quadrat der Geschwindigkeit: F_L ~ v²",
-          "Von der Masse des bewegten Körpers",
-          "Nur von der Stirnfläche A, nicht von v"
-        ],
-        correctIndex: 1,
-        explanation: "F_L = ½·ρ·c_W·A·v². Der Luftwiderstand wächst mit dem Quadrat der Geschwindigkeit. Bei doppelter Geschwindigkeit ist er viermal so groß."
-      },
-      {
-        id: "q8",
-        question: "Warum ist es schwieriger, einen ruhenden Körper in Bewegung zu versetzen als ihn dann in Bewegung zu halten?",
-        options: [
-          "Weil die Trägheit des Körpers plötzlich zunimmt",
-          "Weil der Haftreibungskoeffizient größer ist als der Gleitreibungskoeffizient",
-          "Weil beim Bewegen die Normalkraft ansteigt",
-          "Weil Reibung von der Geschwindigkeit abhängt und bei v = 0 maximal ist"
-        ],
-        correctIndex: 1,
-        explanation: "μ_H > μ_G: Die maximale Haftreibungskraft ist größer als die Gleitreibungskraft. Deshalb muss man zum Anlaufen mehr Kraft aufwenden als zum Weiterziehen."
-      },
-      {
-        id: "q9",
-        question: "Wie berechnet sich die Erdbeschleunigung g aus der Gravitationskonstante G?",
-        options: [
-          "g = G · M_Erde",
-          "g = G · M_Erde / R_Erde",
-          "g = G · M_Erde / R_Erde²",
-          "g = G / (M_Erde · R_Erde²)"
-        ],
-        correctIndex: 2,
-        explanation: "Aus dem Gravitationsgesetz: g = G·M_E/R_E² ≈ 9,81 m/s². Dies ergibt sich aus der Gleichsetzung von m·g = G·m·M_E/R_E² (Gewichtskraft = Gravitationskraft an der Oberfläche)."
-      },
-      {
-        id: "q10",
-        question: "Eine Feder (k = 500 N/m) hält einen 2 kg schweren Körper im Gleichgewicht. Um wie viel wird sie gedehnt?",
-        options: [
-          "x = 2,5 cm",
-          "x = 3,92 cm",
-          "x = 9,81 cm",
-          "x = 25 cm"
-        ],
-        correctIndex: 1,
-        explanation: "Im Gleichgewicht: Federkraft = Gewichtskraft → k·x = m·g → x = m·g/k = 2·9,81/500 = 0,0392 m ≈ 3,92 cm."
-      }
+      { id: "q1", question: "Welche Aussage über Haft- und Gleitreibungskoeffizient ist richtig?", options: ["μ_G < μ_H (Haftreibung größer als Gleitreibung)", "μ_G = μ_H (beide sind gleich groß)", "Es kommt immer auf das Material an, ein allgemeiner Vergleich ist unmöglich", "μ_G > μ_H (Gleitreibung größer als Haftreibung)"], correctIndex: 0, explanation: "In der Regel gilt μ_G < μ_H: Es ist mehr Kraft nötig, einen Körper in Bewegung zu setzen (Haftreibung überwinden), als ihn in Bewegung zu halten (Gleitreibung)." },
+      { id: "q2", question: "Von was hängt die Gleitreibungskraft ab?", options: ["Von der Masse des Körpers (nicht von F_N)", "Von der Geschwindigkeit des Körpers", "Von der Kontaktfläche zwischen den Körpern", "Vom Gleitreibungskoeffizient μ_G und der Normalkraft F_N"], correctIndex: 3, explanation: "Gleitreibungskraft: F_R = μ_G · F_N. Sie hängt vom Koeffizienten μ_G und der Normalkraft F_N ab, nicht direkt von der Kontaktfläche oder Geschwindigkeit." },
+      { id: "q3", question: "Wie verhält sich die Gravitationskraft, wenn der Abstand r zwischen zwei Massen verdoppelt wird?", options: ["Sie wird viermal größer", "Sie wird viermal kleiner", "Sie halbiert sich", "Sie bleibt gleich"], correctIndex: 1, explanation: "F = G·m₁·m₂/r². Bei doppeltem Abstand: F' = G·m₁·m₂/(2r)² = F/4. Die Kraft wird auf ein Viertel reduziert (1/r²-Gesetz)." },
+      { id: "q4", question: "Was beschreibt das Hookesche Gesetz?", options: ["Die Reibungskraft ist proportional zur Normalkraft", "Die Gravitationskraft nimmt mit dem Quadrat des Abstands ab", "Die Luftwiderstandskraft ist proportional zur Geschwindigkeit", "Die Federkraft ist proportional zur Auslenkung: F = –k·x"], correctIndex: 3, explanation: "Das Hookesche Gesetz lautet F = –k·x: Die Federkraft ist proportional zur Auslenkung x und entgegen der Auslenkungsrichtung gerichtet (rücktreibend)." },
+      { id: "q5", question: "Ein Block liegt auf einer schiefen Ebene mit Winkel θ. Welche Kraftkomponente drückt den Block senkrecht auf die Fläche (Normalkraft)?", options: ["F_N = m·g·tan(θ)", "F_N = m·g", "F_N = m·g·cos(θ)", "F_N = m·g·sin(θ)"], correctIndex: 2, explanation: "Am schiefen Hang zerlegt man die Gewichtskraft in zwei Komponenten: senkrecht zur Fläche F_N = m·g·cos(θ) und parallel zur Fläche F_∥ = m·g·sin(θ)." },
+      { id: "q6", question: "Die Gravitationskonstante G hat den Wert:", options: ["G = 9,81 m/s²", "G = 6,022·10²³ mol⁻¹", "G = 6,674·10⁻¹¹ N·m²/kg²", "G = 3·10⁸ m/s"], correctIndex: 2, explanation: "Die Gravitationskonstante G = 6,674·10⁻¹¹ N·m²/kg² ist eine Naturkonstante. Sie darf nicht mit der Erdbeschleunigung g = 9,81 m/s² verwechselt werden." },
+      { id: "q7", question: "Wovon hängt der Luftwiderstand F_L hauptsächlich ab?", options: ["Vom Quadrat der Geschwindigkeit: F_L ~ v²", "Nur von der Stirnfläche A, nicht von v", "Linear von der Geschwindigkeit: F_L ~ v", "Von der Masse des bewegten Körpers"], correctIndex: 0, explanation: "F_L = ½·ρ·c_W·A·v². Der Luftwiderstand wächst mit dem Quadrat der Geschwindigkeit. Bei doppelter Geschwindigkeit ist er viermal so groß." },
+      { id: "q8", question: "Warum ist es schwieriger, einen ruhenden Körper in Bewegung zu versetzen als ihn dann in Bewegung zu halten?", options: ["Weil die Trägheit des Körpers plötzlich zunimmt", "Weil Reibung von der Geschwindigkeit abhängt und bei v = 0 maximal ist", "Weil beim Bewegen die Normalkraft ansteigt", "Weil der Haftreibungskoeffizient größer ist als der Gleitreibungskoeffizient"], correctIndex: 3, explanation: "μ_H > μ_G: Die maximale Haftreibungskraft ist größer als die Gleitreibungskraft. Deshalb muss man zum Anlaufen mehr Kraft aufwenden als zum Weiterziehen." },
+      { id: "q9", question: "Wie berechnet sich die Erdbeschleunigung g aus der Gravitationskonstante G?", options: ["g = G · M_Erde", "g = G · M_Erde / R_Erde²", "g = G / (M_Erde · R_Erde²)", "g = G · M_Erde / R_Erde"], correctIndex: 1, explanation: "Aus dem Gravitationsgesetz: g = G·M_E/R_E² ≈ 9,81 m/s². Dies ergibt sich aus der Gleichsetzung von m·g = G·m·M_E/R_E² (Gewichtskraft = Gravitationskraft an der Oberfläche)." },
+      { id: "q10", question: "Eine Feder (k = 500 N/m) hält einen 2 kg schweren Körper im Gleichgewicht. Um wie viel wird sie gedehnt?", options: ["x = 9,81 cm", "x = 25 cm", "x = 3,92 cm", "x = 2,5 cm"], correctIndex: 2, explanation: "Im Gleichgewicht: Federkraft = Gewichtskraft → k·x = m·g → x = m·g/k = 2·9,81/500 = 0,0392 m ≈ 3,92 cm." }
     ]
   },
   {
@@ -455,126 +235,16 @@ const NATWISS_CHAPTER2_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "q1",
-        question: "Was ist ein Inertialsystem?",
-        options: [
-          "Ein rotierendes Bezugssystem, in dem Newton-Gesetze gelten",
-          "Ein Bezugssystem in Ruhe oder gleichförmiger Bewegung, in dem die Newtonschen Gesetze exakt gelten",
-          "Jedes Bezugssystem, das sich relativ zur Erde befindet",
-          "Ein Bezugssystem, das sich mit Lichtgeschwindigkeit bewegt"
-        ],
-        correctIndex: 1,
-        explanation: "In einem Inertialsystem (Ruhe oder gleichförmige geradlinige Bewegung) gelten die Newtonschen Gesetze ohne Korrekturen. In beschleunigten Systemen müssen Scheinkräfte eingeführt werden."
-      },
-      {
-        id: "q2",
-        question: "Was versteht man unter einer Scheinkraft (Pseudokraft)?",
-        options: [
-          "Eine wirkliche Kraft, die man nicht direkt messen kann",
-          "Eine Kraft, die nur im beschleunigten Bezugssystem auftritt und keinen realen Ursprungskörper hat",
-          "Eine sehr kleine, vernachlässigbare Kraft",
-          "Die Summe aller auf einen Körper wirkenden Kräfte"
-        ],
-        correctIndex: 1,
-        explanation: "Scheinkräfte (Pseudokräfte) erscheinen nur in nicht-inertialen Bezugssystemen. Sie haben keine reale Ursache (kein Körper übt sie aus) und verschwinden, sobald man ins Inertialsystem wechselt."
-      },
-      {
-        id: "q3",
-        question: "In welche Richtung wirkt die Zentrifugalkraft?",
-        options: [
-          "Zur Drehachse hin (nach innen)",
-          "Tangential zur Kreisbahn",
-          "Von der Drehachse weg (nach außen)",
-          "Senkrecht nach unten"
-        ],
-        correctIndex: 2,
-        explanation: "Die Zentrifugalkraft ist eine Scheinkraft im rotierenden System und zeigt von der Drehachse weg (radial nach außen). Sie ist betragsmäßig gleich, aber entgegengesetzt zur Zentripetalkraft."
-      },
-      {
-        id: "q4",
-        question: "Ein Fahrer im gleichmäßig beschleunigenden Auto spürt, dass er in den Sitz gedrückt wird. Welche Kraft ist das aus Sicht des Fahrers?",
-        options: [
-          "Die Normalkraft des Sitzes",
-          "Die Gravitationskraft",
-          "Eine Scheinkraft (Pseudokraft) entgegen der Beschleunigungsrichtung",
-          "Die Reibungskraft zwischen Reifen und Straße"
-        ],
-        correctIndex: 2,
-        explanation: "Im beschleunigenden Auto (nicht-inertialer Rahmen) spürt der Fahrer eine Scheinkraft F_pseudo = –m·a_Auto, die ihn nach hinten (entgegen der Fahrtrichtung) drückt."
-      },
-      {
-        id: "q5",
-        question: "Wie dreht sich ein Zyklon (Tiefdruckgebiet) auf der Südhalbkugel?",
-        options: [
-          "Gegen den Uhrzeigersinn (wie auf der Nordhalbkugel)",
-          "Im Uhrzeigersinn",
-          "Gar nicht, der Corioliseffekt ist am Äquator maximal",
-          "Die Drehrichtung hängt nur von der Windstärke ab"
-        ],
-        correctIndex: 1,
-        explanation: "Auf der Südhalbkugel lenkt der Corioliseffekt Bewegungen nach links ab (Nordhalbkugel: nach rechts). Daher drehen Tiefdruckgebiete auf der Südhalbkugel im Uhrzeigersinn."
-      },
-      {
-        id: "q6",
-        question: "Was demonstriert das Foucaultsche Pendel?",
-        options: [
-          "Die Existenz der Zentrifugalkraft",
-          "Die Rotation der Erde",
-          "Das Prinzip der Energieerhaltung",
-          "Die Gleichheit von träger und schwerer Masse"
-        ],
-        correctIndex: 1,
-        explanation: "Das Foucaultsche Pendel schwingt scheinbar seine Schwingungsebene, tatsächlich dreht sich die Erde darunter. Es ist ein direkter Nachweis der Erdrotation."
-      },
-      {
-        id: "q7",
-        question: "Wie verhält sich die Zentrifugalkraft, wenn der Abstand zur Drehachse verdoppelt wird (ω konstant)?",
-        options: [
-          "Sie halbiert sich",
-          "Sie verdoppelt sich",
-          "Sie vervierfacht sich",
-          "Sie bleibt gleich"
-        ],
-        correctIndex: 1,
-        explanation: "F_ZF = m·ω²·r. Bei doppeltem Abstand r verdoppelt sich auch die Zentrifugalkraft (linear in r)."
-      },
-      {
-        id: "q8",
-        question: "Warum sind Inertialsysteme in der Praxis nur näherungsweise realisierbar?",
-        options: [
-          "Weil alle Objekte im Universum irgendwie miteinander wechselwirken",
-          "Weil die Erde sich dreht und um die Sonne kreist – streng genommen beschleunigt jeder Erdoberflächen-Punkt",
-          "Weil die Newtonschen Gesetze nur im Vakuum gelten",
-          "Weil man Inertialsysteme nicht definieren kann"
-        ],
-        correctIndex: 1,
-        explanation: "Die Erde rotiert und beschleunigt auf ihrer Umlaufbahn. Daher ist das Erdoberflächen-Bezugssystem streng genommen kein Inertialsystem. Für viele Alltagsprobleme ist die Näherung aber ausreichend genau."
-      },
-      {
-        id: "q9",
-        question: "In welche Richtung wird ein nach Süden fliegendes Flugzeug auf der Nordhalbkugel durch den Corioliseffekt abgelenkt?",
-        options: [
-          "Nach Osten (links in Bewegungsrichtung)",
-          "Nach Westen (rechts in Bewegungsrichtung)",
-          "Nach oben",
-          "Gar nicht, Corioliseffekt wirkt nur in Ost-West-Richtung"
-        ],
-        correctIndex: 1,
-        explanation: "Auf der Nordhalbkugel werden bewegte Objekte nach rechts abgelenkt. Ein nach Süden fliegendes Flugzeug wird nach Westen abgelenkt (rechts von Süd = West)."
-      },
-      {
-        id: "q10",
-        question: "Was ist der Unterschied zwischen Zentripetalkraft und Zentrifugalkraft?",
-        options: [
-          "Beide sind real und zeigen in dieselbe Richtung",
-          "Zentripetalkraft ist real (zeigt nach innen), Zentrifugalkraft ist eine Scheinkraft (zeigt nach außen, nur im rotierenden System)",
-          "Zentrifugalkraft ist real, Zentripetalkraft ist eine Scheinkraft",
-          "Sie sind identisch, nur in verschiedenen Einheiten"
-        ],
-        correctIndex: 1,
-        explanation: "Die Zentripetalkraft ist eine reale Kraft (z. B. Seilspannung, Gravitationskraft), die einen Körper auf der Kreisbahn hält und zur Mitte zeigt. Die Zentrifugalkraft ist eine Scheinkraft, die nur im rotierenden Bezugssystem erscheint und nach außen zeigt."
-      }
+      { id: "q1", question: "Was ist ein Inertialsystem?", options: ["Ein Bezugssystem in Ruhe oder gleichförmiger Bewegung, in dem die Newtonschen Gesetze exakt gelten", "Ein Bezugssystem, das sich mit Lichtgeschwindigkeit bewegt", "Ein rotierendes Bezugssystem, in dem Newton-Gesetze gelten", "Jedes Bezugssystem, das sich relativ zur Erde befindet"], correctIndex: 0, explanation: "In einem Inertialsystem (Ruhe oder gleichförmige geradlinige Bewegung) gelten die Newtonschen Gesetze ohne Korrekturen. In beschleunigten Systemen müssen Scheinkräfte eingeführt werden." },
+      { id: "q2", question: "Was versteht man unter einer Scheinkraft (Pseudokraft)?", options: ["Eine Kraft, die nur im beschleunigten Bezugssystem auftritt und keinen realen Ursprungskörper hat", "Eine sehr kleine, vernachlässigbare Kraft", "Die Summe aller auf einen Körper wirkenden Kräfte", "Eine wirkliche Kraft, die man nicht direkt messen kann"], correctIndex: 0, explanation: "Scheinkräfte (Pseudokräfte) erscheinen nur in nicht-inertialen Bezugssystemen. Sie haben keine reale Ursache (kein Körper übt sie aus) und verschwinden, sobald man ins Inertialsystem wechselt." },
+      { id: "q3", question: "In welche Richtung wirkt die Zentrifugalkraft?", options: ["Zur Drehachse hin (nach innen)", "Tangential zur Kreisbahn", "Senkrecht nach unten", "Von der Drehachse weg (nach außen)"], correctIndex: 3, explanation: "Die Zentrifugalkraft ist eine Scheinkraft im rotierenden System und zeigt von der Drehachse weg (radial nach außen). Sie ist betragsmäßig gleich, aber entgegengesetzt zur Zentripetalkraft." },
+      { id: "q4", question: "Ein Fahrer im gleichmäßig beschleunigenden Auto spürt, dass er in den Sitz gedrückt wird. Welche Kraft ist das aus Sicht des Fahrers?", options: ["Die Normalkraft des Sitzes", "Eine Scheinkraft (Pseudokraft) entgegen der Beschleunigungsrichtung", "Die Reibungskraft zwischen Reifen und Straße", "Die Gravitationskraft"], correctIndex: 1, explanation: "Im beschleunigenden Auto (nicht-inertialer Rahmen) spürt der Fahrer eine Scheinkraft F_pseudo = –m·a_Auto, die ihn nach hinten (entgegen der Fahrtrichtung) drückt." },
+      { id: "q5", question: "Wie dreht sich ein Zyklon (Tiefdruckgebiet) auf der Südhalbkugel?", options: ["Gegen den Uhrzeigersinn (wie auf der Nordhalbkugel)", "Die Drehrichtung hängt nur von der Windstärke ab", "Gar nicht, der Corioliseffekt ist am Äquator maximal", "Im Uhrzeigersinn"], correctIndex: 3, explanation: "Auf der Südhalbkugel lenkt der Corioliseffekt Bewegungen nach links ab (Nordhalbkugel: nach rechts). Daher drehen Tiefdruckgebiete auf der Südhalbkugel im Uhrzeigersinn." },
+      { id: "q6", question: "Was demonstriert das Foucaultsche Pendel?", options: ["Die Existenz der Zentrifugalkraft", "Das Prinzip der Energieerhaltung", "Die Rotation der Erde", "Die Gleichheit von träger und schwerer Masse"], correctIndex: 2, explanation: "Das Foucaultsche Pendel schwingt scheinbar seine Schwingungsebene, tatsächlich dreht sich die Erde darunter. Es ist ein direkter Nachweis der Erdrotation." },
+      { id: "q7", question: "Wie verhält sich die Zentrifugalkraft, wenn der Abstand zur Drehachse verdoppelt wird (ω konstant)?", options: ["Sie bleibt gleich", "Sie vervierfacht sich", "Sie halbiert sich", "Sie verdoppelt sich"], correctIndex: 3, explanation: "F_ZF = m·ω²·r. Bei doppeltem Abstand r verdoppelt sich auch die Zentrifugalkraft (linear in r)." },
+      { id: "q8", question: "Warum sind Inertialsysteme in der Praxis nur näherungsweise realisierbar?", options: ["Weil die Erde sich dreht und um die Sonne kreist – streng genommen beschleunigt jeder Erdoberflächen-Punkt", "Weil alle Objekte im Universum irgendwie miteinander wechselwirken", "Weil die Newtonschen Gesetze nur im Vakuum gelten", "Weil man Inertialsysteme nicht definieren kann"], correctIndex: 0, explanation: "Die Erde rotiert und beschleunigt auf ihrer Umlaufbahn. Daher ist das Erdoberflächen-Bezugssystem streng genommen kein Inertialsystem. Für viele Alltagsprobleme ist die Näherung aber ausreichend genau." },
+      { id: "q9", question: "In welche Richtung wird ein nach Süden fliegendes Flugzeug auf der Nordhalbkugel durch den Corioliseffekt abgelenkt?", options: ["Nach Osten (links in Bewegungsrichtung)", "Nach Westen (rechts in Bewegungsrichtung)", "Nach oben", "Gar nicht, Corioliseffekt wirkt nur in Ost-West-Richtung"], correctIndex: 1, explanation: "Auf der Nordhalbkugel werden bewegte Objekte nach rechts abgelenkt. Ein nach Süden fliegendes Flugzeug wird nach Westen abgelenkt (rechts von Süd = West)." },
+      { id: "q10", question: "Was ist der Unterschied zwischen Zentripetalkraft und Zentrifugalkraft?", options: ["Zentrifugalkraft ist real, Zentripetalkraft ist eine Scheinkraft", "Beide sind real und zeigen in dieselbe Richtung", "Zentripetalkraft ist real (zeigt nach innen), Zentrifugalkraft ist eine Scheinkraft (zeigt nach außen, nur im rotierenden System)", "Sie sind identisch, nur in verschiedenen Einheiten"], correctIndex: 2, explanation: "Die Zentripetalkraft ist eine reale Kraft (z. B. Seilspannung, Gravitationskraft), die einen Körper auf der Kreisbahn hält und zur Mitte zeigt. Die Zentrifugalkraft ist eine Scheinkraft, die nur im rotierenden Bezugssystem erscheint und nach außen zeigt." }
     ]
   }
 ];

@@ -53,76 +53,16 @@ const NATWISS_CHAPTER13_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-wechselstrom-q1",
-        question: "Welchen Effektivwert hat eine Sinusspannung mit Amplitude Û = 100 V?",
-        options: ["100 V", "70,7 V", "50 V", "141 V"],
-        correctIndex: 1,
-        explanation: "U_eff = Û/√2 = 100/√2 ≈ 70,7 V."
-      },
-      {
-        id: "natwiss-wechselstrom-q2",
-        question: "Wie verhält sich die Impedanz einer Spule mit der Frequenz?",
-        options: ["Nimmt mit steigender Frequenz ab", "Ist frequenzunabhängig", "Nimmt mit steigender Frequenz zu", "Ist nur bei f = 0 definiert"],
-        correctIndex: 2,
-        explanation: "Z_L = ωL = 2πfL — linear mit der Frequenz."
-      },
-      {
-        id: "natwiss-wechselstrom-q3",
-        question: "Wie verhält sich die Impedanz eines Kondensators mit der Frequenz?",
-        options: ["Nimmt mit steigender Frequenz zu", "Ist frequenzunabhängig", "Nimmt mit steigender Frequenz ab", "Ist unabhängig von C"],
-        correctIndex: 2,
-        explanation: "Z_C = 1/(ωC) — nimmt mit steigender Frequenz ab."
-      },
-      {
-        id: "natwiss-wechselstrom-q4",
-        question: "Ein Transformator erhöht die Spannung von 230 V auf 11500 V. Wie ist das Windungszahlverhältnis N₁/N₂?",
-        options: ["50", "1/50", "100", "1/100"],
-        correctIndex: 1,
-        explanation: "N₁/N₂ = U₁/U₂ = 230/11500 = 1/50."
-      },
-      {
-        id: "natwiss-wechselstrom-q5",
-        question: "Was ist der Leistungsfaktor cos φ bei einem reinen Widerstand?",
-        options: ["0", "0,5", "1/√2", "1"],
-        correctIndex: 3,
-        explanation: "Bei einem reinen Widerstand ist φ = 0, also cos φ = 1. Die gesamte Scheinleistung ist Wirkleistung."
-      },
-      {
-        id: "natwiss-wechselstrom-q6",
-        question: "Bei welcher Frequenz tritt Resonanz in einem R-L-C-Reihenschwingkreis auf?",
-        options: ["f₀ = 1/(2π√(LC))", "f₀ = 2π√(LC)", "f₀ = R/(2πL)", "f₀ = 1/(2πRC)"],
-        correctIndex: 0,
-        explanation: "Resonanz tritt auf, wenn Z_L = Z_C, also ω₀L = 1/(ω₀C), woraus ω₀ = 1/√(LC) und f₀ = 1/(2π√(LC))."
-      },
-      {
-        id: "natwiss-wechselstrom-q7",
-        question: "Wie groß ist die Impedanz einer Spule bei Gleichstrom (f = 0)?",
-        options: ["∞", "ωL", "0", "L"],
-        correctIndex: 2,
-        explanation: "Bei f = 0 gilt ω = 0, daher Z_L = ωL = 0. Eine Spule leitet Gleichstrom widerstandslos (ideale Spule)."
-      },
-      {
-        id: "natwiss-wechselstrom-q8",
-        question: "Welche Phasenbeziehung besteht an einer idealen Spule?",
-        options: ["Spannung und Strom sind in Phase", "Strom eilt der Spannung um 90° vor", "Spannung eilt dem Strom um 90° vor", "Verschiebung ist frequenzabhängig"],
-        correctIndex: 2,
-        explanation: "An einer idealen Spule eilt die Spannung dem Strom um 90° vor (φ = +90°)."
-      },
-      {
-        id: "natwiss-wechselstrom-q9",
-        question: "Ein Transformator mit N₁/N₂ = 10 liefert sekundärseitig I₂ = 10 A. Welcher Strom fließt primärseitig (ideal)?",
-        options: ["100 A", "10 A", "1 A", "0,1 A"],
-        correctIndex: 2,
-        explanation: "I₁/I₂ = N₂/N₁ = 1/10, daher I₁ = I₂/10 = 10/10 = 1 A."
-      },
-      {
-        id: "natwiss-wechselstrom-q10",
-        question: "Was beschreibt die Scheinleistung S?",
-        options: ["S = P·cos φ", "S = U_eff·I_eff", "S = U·I·sin φ", "S = P/cos φ"],
-        correctIndex: 1,
-        explanation: "Die Scheinleistung S = U_eff·I_eff. Davon ist P = S·cos φ die Wirkleistung und Q = S·sin φ die Blindleistung."
-      }
+      { id: "natwiss-wechselstrom-q1", question: "Welchen Effektivwert hat eine Sinusspannung mit Amplitude Û = 100 V?", options: ["50 V", "141 V", "100 V", "70,7 V"], correctIndex: 3, explanation: "U_eff = Û/√2 = 100/√2 ≈ 70,7 V." },
+      { id: "natwiss-wechselstrom-q2", question: "Wie verhält sich die Impedanz einer Spule mit der Frequenz?", options: ["Nimmt mit steigender Frequenz ab", "Ist nur bei f = 0 definiert", "Ist frequenzunabhängig", "Nimmt mit steigender Frequenz zu"], correctIndex: 3, explanation: "Z_L = ωL = 2πfL — linear mit der Frequenz." },
+      { id: "natwiss-wechselstrom-q3", question: "Wie verhält sich die Impedanz eines Kondensators mit der Frequenz?", options: ["Ist frequenzunabhängig", "Nimmt mit steigender Frequenz zu", "Nimmt mit steigender Frequenz ab", "Ist unabhängig von C"], correctIndex: 2, explanation: "Z_C = 1/(ωC) — nimmt mit steigender Frequenz ab." },
+      { id: "natwiss-wechselstrom-q4", question: "Ein Transformator erhöht die Spannung von 230 V auf 11500 V. Wie ist das Windungszahlverhältnis N₁/N₂?", options: ["1/50", "1/100", "100", "50"], correctIndex: 0, explanation: "N₁/N₂ = U₁/U₂ = 230/11500 = 1/50." },
+      { id: "natwiss-wechselstrom-q5", question: "Was ist der Leistungsfaktor cos φ bei einem reinen Widerstand?", options: ["1", "0,5", "1/√2", "0"], correctIndex: 0, explanation: "Bei einem reinen Widerstand ist φ = 0, also cos φ = 1. Die gesamte Scheinleistung ist Wirkleistung." },
+      { id: "natwiss-wechselstrom-q6", question: "Bei welcher Frequenz tritt Resonanz in einem R-L-C-Reihenschwingkreis auf?", options: ["f₀ = 1/(2πRC)", "f₀ = R/(2πL)", "f₀ = 1/(2π√(LC))", "f₀ = 2π√(LC)"], correctIndex: 2, explanation: "Resonanz tritt auf, wenn Z_L = Z_C, also ω₀L = 1/(ω₀C), woraus ω₀ = 1/√(LC) und f₀ = 1/(2π√(LC))." },
+      { id: "natwiss-wechselstrom-q7", question: "Wie groß ist die Impedanz einer Spule bei Gleichstrom (f = 0)?", options: ["ωL", "0", "∞", "L"], correctIndex: 1, explanation: "Bei f = 0 gilt ω = 0, daher Z_L = ωL = 0. Eine Spule leitet Gleichstrom widerstandslos (ideale Spule)." },
+      { id: "natwiss-wechselstrom-q8", question: "Welche Phasenbeziehung besteht an einer idealen Spule?", options: ["Verschiebung ist frequenzabhängig", "Strom eilt der Spannung um 90° vor", "Spannung und Strom sind in Phase", "Spannung eilt dem Strom um 90° vor"], correctIndex: 3, explanation: "An einer idealen Spule eilt die Spannung dem Strom um 90° vor (φ = +90°)." },
+      { id: "natwiss-wechselstrom-q9", question: "Ein Transformator mit N₁/N₂ = 10 liefert sekundärseitig I₂ = 10 A. Welcher Strom fließt primärseitig (ideal)?", options: ["100 A", "1 A", "10 A", "0,1 A"], correctIndex: 1, explanation: "I₁/I₂ = N₂/N₁ = 1/10, daher I₁ = I₂/10 = 10/10 = 1 A." },
+      { id: "natwiss-wechselstrom-q10", question: "Was beschreibt die Scheinleistung S?", options: ["S = P/cos φ", "S = U_eff·I_eff", "S = P·cos φ", "S = U·I·sin φ"], correctIndex: 1, explanation: "Die Scheinleistung S = U_eff·I_eff. Davon ist P = S·cos φ die Wirkleistung und Q = S·sin φ die Blindleistung." }
     ]
   },
   {
@@ -178,76 +118,16 @@ const NATWISS_CHAPTER13_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-em-q1",
-        question: "Was ist die Resonanzfrequenz eines LC-Schwingkreises?",
-        options: ["f₀ = 2π√(LC)", "f₀ = 1/(2π√(LC))", "f₀ = √(LC)/(2π)", "f₀ = 2π/(LC)"],
-        correctIndex: 1,
-        explanation: "ω₀ = 1/√(LC), daher f₀ = ω₀/(2π) = 1/(2π√(LC))."
-      },
-      {
-        id: "natwiss-em-q2",
-        question: "Mit welcher Geschwindigkeit breiten sich EM-Wellen im Vakuum aus?",
-        options: ["3·10⁶ m/s", "3·10⁸ m/s", "3·10¹⁰ m/s", "Hängt von der Frequenz ab"],
-        correctIndex: 1,
-        explanation: "c = 1/√(μ₀ε₀) ≈ 3·10⁸ m/s. Diese Konstante ist frequenzunabhängig (im Vakuum)."
-      },
-      {
-        id: "natwiss-em-q3",
-        question: "Welcher Bereich des EM-Spektrums hat die höchste Energie pro Photon?",
-        options: ["Radiowellen", "Infrarot", "Sichtbares Licht", "Gammastrahlung"],
-        correctIndex: 3,
-        explanation: "E = hf. Gammastrahlung hat die höchste Frequenz und damit die höchste Photonenenergie."
-      },
-      {
-        id: "natwiss-em-q4",
-        question: "Eine EM-Welle hat λ = 1 cm. Zu welchem Spektralbereich gehört sie?",
-        options: ["Sichtbares Licht", "Infrarot", "Mikrowellen", "Röntgenstrahlung"],
-        correctIndex: 2,
-        explanation: "λ = 1 cm → f = c/λ = 30 GHz. Dies liegt im Mikrowellenbereich (300 MHz – 300 GHz)."
-      },
-      {
-        id: "natwiss-em-q5",
-        question: "Woraus besteht eine elektromagnetische Welle?",
-        options: ["Nur aus einem E-Feld", "Nur aus einem B-Feld", "Aus einem Teilchenstrom", "Aus gekoppelten, senkrecht zueinander stehenden E- und B-Feldern"],
-        correctIndex: 3,
-        explanation: "EM-Wellen sind transversal: E-Feld, B-Feld und Ausbreitungsrichtung stehen senkrecht aufeinander."
-      },
-      {
-        id: "natwiss-em-q6",
-        question: "Wie ist die Photonenenergie mit der Wellenlänge verknüpft?",
-        options: ["E = hλ", "E = hc/λ", "E = λ/(hc)", "E = h/(cλ)"],
-        correctIndex: 1,
-        explanation: "E = hf = h·(c/λ) = hc/λ."
-      },
-      {
-        id: "natwiss-em-q7",
-        question: "Wo wird die Energie im LC-Schwingkreis gespeichert, wenn die Kondensatorspannung maximal ist?",
-        options: ["Im Magnetfeld der Spule", "Im elektrischen Feld des Kondensators", "Im Widerstand", "Sie wird abgestrahlt"],
-        correctIndex: 1,
-        explanation: "Bei maximaler Spannung u_C = U₀ ist die Energie vollständig im E-Feld des Kondensators (W = ½CU₀²). Der Strom ist dabei null."
-      },
-      {
-        id: "natwiss-em-q8",
-        question: "Wie ändert sich λ von Licht, wenn es von Luft in Glas (n=1,5) übergeht?",
-        options: ["λ wird größer", "λ bleibt gleich", "λ wird kleiner", "Hängt von der Farbe ab"],
-        correctIndex: 2,
-        explanation: "Im Medium gilt λ_med = λ₀/n. Bei n = 1,5 wird die Wellenlänge auf 2/3 ihres Vakuumwerts reduziert. Die Frequenz bleibt konstant."
-      },
-      {
-        id: "natwiss-em-q9",
-        question: "Welches Phänomen wird durch EM-Wellen nicht erklärt?",
-        options: ["Lichtbeugung", "Radioempfang", "Elektronenmasse", "Wärmeübertragung durch Strahlung"],
-        correctIndex: 2,
-        explanation: "Die Elektronenmasse ist eine Eigenschaft von Materieteilchen und hat nichts mit EM-Wellen zu tun."
-      },
-      {
-        id: "natwiss-em-q10",
-        question: "Welches elektrische Bauelement bestimmt bei hohen Frequenzen hauptsächlich die Impedanz eines R-L-C-Kreises?",
-        options: ["Widerstand R", "Spule L", "Kondensator C", "Alle gleich"],
-        correctIndex: 1,
-        explanation: "Bei hohen Frequenzen dominiert Z_L = ωL, da ωL ≫ 1/(ωC) und ωL ≫ R."
-      }
+      { id: "natwiss-em-q1", question: "Was ist die Resonanzfrequenz eines LC-Schwingkreises?", options: ["f₀ = 1/(2π√(LC))", "f₀ = √(LC)/(2π)", "f₀ = 2π/(LC)", "f₀ = 2π√(LC)"], correctIndex: 0, explanation: "ω₀ = 1/√(LC), daher f₀ = ω₀/(2π) = 1/(2π√(LC))." },
+      { id: "natwiss-em-q2", question: "Mit welcher Geschwindigkeit breiten sich EM-Wellen im Vakuum aus?", options: ["3·10¹⁰ m/s", "3·10⁶ m/s", "3·10⁸ m/s", "Hängt von der Frequenz ab"], correctIndex: 2, explanation: "c = 1/√(μ₀ε₀) ≈ 3·10⁸ m/s. Diese Konstante ist frequenzunabhängig (im Vakuum)." },
+      { id: "natwiss-em-q3", question: "Welcher Bereich des EM-Spektrums hat die höchste Energie pro Photon?", options: ["Sichtbares Licht", "Radiowellen", "Gammastrahlung", "Infrarot"], correctIndex: 2, explanation: "E = hf. Gammastrahlung hat die höchste Frequenz und damit die höchste Photonenenergie." },
+      { id: "natwiss-em-q4", question: "Eine EM-Welle hat λ = 1 cm. Zu welchem Spektralbereich gehört sie?", options: ["Mikrowellen", "Infrarot", "Röntgenstrahlung", "Sichtbares Licht"], correctIndex: 0, explanation: "λ = 1 cm → f = c/λ = 30 GHz. Dies liegt im Mikrowellenbereich (300 MHz – 300 GHz)." },
+      { id: "natwiss-em-q5", question: "Woraus besteht eine elektromagnetische Welle?", options: ["Aus einem Teilchenstrom", "Nur aus einem E-Feld", "Nur aus einem B-Feld", "Aus gekoppelten, senkrecht zueinander stehenden E- und B-Feldern"], correctIndex: 3, explanation: "EM-Wellen sind transversal: E-Feld, B-Feld und Ausbreitungsrichtung stehen senkrecht aufeinander." },
+      { id: "natwiss-em-q6", question: "Wie ist die Photonenenergie mit der Wellenlänge verknüpft?", options: ["E = λ/(hc)", "E = hc/λ", "E = hλ", "E = h/(cλ)"], correctIndex: 1, explanation: "E = hf = h·(c/λ) = hc/λ." },
+      { id: "natwiss-em-q7", question: "Wo wird die Energie im LC-Schwingkreis gespeichert, wenn die Kondensatorspannung maximal ist?", options: ["Sie wird abgestrahlt", "Im Widerstand", "Im Magnetfeld der Spule", "Im elektrischen Feld des Kondensators"], correctIndex: 3, explanation: "Bei maximaler Spannung u_C = U₀ ist die Energie vollständig im E-Feld des Kondensators (W = ½CU₀²). Der Strom ist dabei null." },
+      { id: "natwiss-em-q8", question: "Wie ändert sich λ von Licht, wenn es von Luft in Glas (n=1,5) übergeht?", options: ["Hängt von der Farbe ab", "λ bleibt gleich", "λ wird kleiner", "λ wird größer"], correctIndex: 2, explanation: "Im Medium gilt λ_med = λ₀/n. Bei n = 1,5 wird die Wellenlänge auf 2/3 ihres Vakuumwerts reduziert. Die Frequenz bleibt konstant." },
+      { id: "natwiss-em-q9", question: "Welches Phänomen wird durch EM-Wellen nicht erklärt?", options: ["Radioempfang", "Elektronenmasse", "Lichtbeugung", "Wärmeübertragung durch Strahlung"], correctIndex: 1, explanation: "Die Elektronenmasse ist eine Eigenschaft von Materieteilchen und hat nichts mit EM-Wellen zu tun." },
+      { id: "natwiss-em-q10", question: "Welches elektrische Bauelement bestimmt bei hohen Frequenzen hauptsächlich die Impedanz eines R-L-C-Kreises?", options: ["Widerstand R", "Spule L", "Alle gleich", "Kondensator C"], correctIndex: 1, explanation: "Bei hohen Frequenzen dominiert Z_L = ωL, da ωL ≫ 1/(ωC) und ωL ≫ R." }
     ]
   },
   {
@@ -301,76 +181,16 @@ const NATWISS_CHAPTER13_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-maxwell-q1",
-        question: "Welche der Maxwell-Gleichungen beschreibt, dass magnetische Monopole nicht existieren?",
-        options: ["div E = ρ/ε₀", "div B = 0", "rot E = −∂B/∂t", "rot B = μ₀J + μ₀ε₀∂E/∂t"],
-        correctIndex: 1,
-        explanation: "div B = 0 bedeutet, dass das B-Feld quellenfrei ist — es gibt keine isolierten Magnetpole."
-      },
-      {
-        id: "natwiss-maxwell-q2",
-        question: "Was ist der Verschiebungsstrom (Maxwell-Term)?",
-        options: ["Ein Leitungsstrom in Nichtleitern", "μ₀ε₀·∂E/∂t", "Der Strom im Kondensator-Dielektrikum", "ε₀·∂B/∂t"],
-        correctIndex: 1,
-        explanation: "Maxwell ergänzte das Ampèregesetz um μ₀ε₀·∂E/∂t, den sog. Verschiebungsstrom."
-      },
-      {
-        id: "natwiss-maxwell-q3",
-        question: "Woraus folgt die Existenz elektromagnetischer Wellen aus den Maxwell-Gleichungen?",
-        options: ["Aus div B = 0 allein", "Aus der Kombination von Faraday- und Ampère-Maxwell-Gleichung", "Aus dem Coulombgesetz", "Aus dem Gaußschen Gesetz"],
-        correctIndex: 1,
-        explanation: "Rot E = −∂B/∂t und rot B = μ₀ε₀∂E/∂t zusammen führen auf die Wellengleichung mit c = 1/√(μ₀ε₀)."
-      },
-      {
-        id: "natwiss-maxwell-q4",
-        question: "Was beschreibt der Poynting-Vektor S?",
-        options: ["Die Richtung des E-Feldes", "Den Energiefluss (Intensität) einer EM-Welle", "Die Polarisation der Welle", "Die Amplitude der Welle"],
-        correctIndex: 1,
-        explanation: "S = (1/μ₀)·E × B hat die Einheit W/m² und gibt den Energiestrom einer EM-Welle an."
-      },
-      {
-        id: "natwiss-maxwell-q5",
-        question: "Welches Brechungsgesetz gilt an einer Grenzfläche (Snellius)?",
-        options: ["n₁·λ₁ = n₂·λ₂", "n₁·sin θ₁ = n₂·sin θ₂", "n₁·cos θ₁ = n₂·cos θ₂", "n₁/sin θ₁ = n₂/sin θ₂"],
-        correctIndex: 1,
-        explanation: "Das Snelliussche Brechungsgesetz: n₁·sin θ₁ = n₂·sin θ₂, wobei θ die Winkel zur Flächennormalen sind."
-      },
-      {
-        id: "natwiss-maxwell-q6",
-        question: "Welches Phänomen erklärt die 3. Maxwell-Gleichung (rot E = −∂B/∂t)?",
-        options: ["Coulombkraft", "Magnetische Monopole", "Elektromagnetische Induktion", "Kondensatoraufladung"],
-        correctIndex: 2,
-        explanation: "rot E = −∂B/∂t ist das Faradaysche Induktionsgesetz: ein zeitlich veränderliches Magnetfeld induziert ein elektrisches Feld."
-      },
-      {
-        id: "natwiss-maxwell-q7",
-        question: "Licht trifft auf Glas mit n = 1,5. Wie verändert sich die Lichtgeschwindigkeit?",
-        options: ["Wird 1,5-mal größer", "Bleibt gleich", "Wird auf c/1,5 = 2·10⁸ m/s reduziert", "Wird auf c·1,5 erhöht"],
-        correctIndex: 2,
-        explanation: "v = c/n = 3·10⁸/1,5 = 2·10⁸ m/s. Die Frequenz bleibt konstant, λ wird kürzer."
-      },
-      {
-        id: "natwiss-maxwell-q8",
-        question: "Wer erkannte als Erster, dass Licht eine elektromagnetische Welle ist?",
-        options: ["Newton", "Faraday", "Maxwell", "Hertz"],
-        correctIndex: 2,
-        explanation: "Maxwell berechnete 1865, dass c = 1/√(μ₀ε₀) ≈ 3·10⁸ m/s — identisch mit der Lichtgeschwindigkeit — und schloss daraus, dass Licht eine EM-Welle ist."
-      },
-      {
-        id: "natwiss-maxwell-q9",
-        question: "Wie skaliert die Intensität einer EM-Welle mit der Feldamplitude E₀?",
-        options: ["I ∝ E₀", "I ∝ E₀²", "I ∝ √E₀", "I ∝ 1/E₀"],
-        correctIndex: 1,
-        explanation: "I = ½·c·ε₀·E₀², also quadratische Abhängigkeit von der Feldamplitude."
-      },
-      {
-        id: "natwiss-maxwell-q10",
-        question: "Was ist die physikalische Ursache für den Brechungsindex n > 1 in Materie?",
-        options: ["Magnetische Monopole in Materie", "Verlangsamung der EM-Welle durch Wechselwirkung mit dem Medium", "Verstärkung des E-Feldes", "Absorption und Reemission dauert länger"],
-        correctIndex: 1,
-        explanation: "Im Medium wechselwirken EM-Wellen mit den Dipolen und werden dadurch effektiv verlangsamt: v = c/n mit n = √(ε_r·μ_r)."
-      }
+      { id: "natwiss-maxwell-q1", question: "Welche der Maxwell-Gleichungen beschreibt, dass magnetische Monopole nicht existieren?", options: ["div B = 0", "div E = ρ/ε₀", "rot E = −∂B/∂t", "rot B = μ₀J + μ₀ε₀∂E/∂t"], correctIndex: 0, explanation: "div B = 0 bedeutet, dass das B-Feld quellenfrei ist — es gibt keine isolierten Magnetpole." },
+      { id: "natwiss-maxwell-q2", question: "Was ist der Verschiebungsstrom (Maxwell-Term)?", options: ["Der Strom im Kondensator-Dielektrikum", "μ₀ε₀·∂E/∂t", "ε₀·∂B/∂t", "Ein Leitungsstrom in Nichtleitern"], correctIndex: 1, explanation: "Maxwell ergänzte das Ampèregesetz um μ₀ε₀·∂E/∂t, den sog. Verschiebungsstrom." },
+      { id: "natwiss-maxwell-q3", question: "Woraus folgt die Existenz elektromagnetischer Wellen aus den Maxwell-Gleichungen?", options: ["Aus dem Gaußschen Gesetz", "Aus dem Coulombgesetz", "Aus div B = 0 allein", "Aus der Kombination von Faraday- und Ampère-Maxwell-Gleichung"], correctIndex: 3, explanation: "Rot E = −∂B/∂t und rot B = μ₀ε₀∂E/∂t zusammen führen auf die Wellengleichung mit c = 1/√(μ₀ε₀)." },
+      { id: "natwiss-maxwell-q4", question: "Was beschreibt der Poynting-Vektor S?", options: ["Die Polarisation der Welle", "Den Energiefluss (Intensität) einer EM-Welle", "Die Richtung des E-Feldes", "Die Amplitude der Welle"], correctIndex: 1, explanation: "S = (1/μ₀)·E × B hat die Einheit W/m² und gibt den Energiestrom einer EM-Welle an." },
+      { id: "natwiss-maxwell-q5", question: "Welches Brechungsgesetz gilt an einer Grenzfläche (Snellius)?", options: ["n₁/sin θ₁ = n₂/sin θ₂", "n₁·cos θ₁ = n₂·cos θ₂", "n₁·sin θ₁ = n₂·sin θ₂", "n₁·λ₁ = n₂·λ₂"], correctIndex: 2, explanation: "Das Snelliussche Brechungsgesetz: n₁·sin θ₁ = n₂·sin θ₂, wobei θ die Winkel zur Flächennormalen sind." },
+      { id: "natwiss-maxwell-q6", question: "Welches Phänomen erklärt die 3. Maxwell-Gleichung (rot E = −∂B/∂t)?", options: ["Magnetische Monopole", "Elektromagnetische Induktion", "Kondensatoraufladung", "Coulombkraft"], correctIndex: 1, explanation: "rot E = −∂B/∂t ist das Faradaysche Induktionsgesetz: ein zeitlich veränderliches Magnetfeld induziert ein elektrisches Feld." },
+      { id: "natwiss-maxwell-q7", question: "Licht trifft auf Glas mit n = 1,5. Wie verändert sich die Lichtgeschwindigkeit?", options: ["Wird auf c·1,5 erhöht", "Wird 1,5-mal größer", "Wird auf c/1,5 = 2·10⁸ m/s reduziert", "Bleibt gleich"], correctIndex: 2, explanation: "v = c/n = 3·10⁸/1,5 = 2·10⁸ m/s. Die Frequenz bleibt konstant, λ wird kürzer." },
+      { id: "natwiss-maxwell-q8", question: "Wer erkannte als Erster, dass Licht eine elektromagnetische Welle ist?", options: ["Maxwell", "Newton", "Faraday", "Hertz"], correctIndex: 0, explanation: "Maxwell berechnete 1865, dass c = 1/√(μ₀ε₀) ≈ 3·10⁸ m/s — identisch mit der Lichtgeschwindigkeit — und schloss daraus, dass Licht eine EM-Welle ist." },
+      { id: "natwiss-maxwell-q9", question: "Wie skaliert die Intensität einer EM-Welle mit der Feldamplitude E₀?", options: ["I ∝ 1/E₀", "I ∝ E₀", "I ∝ √E₀", "I ∝ E₀²"], correctIndex: 3, explanation: "I = ½·c·ε₀·E₀², also quadratische Abhängigkeit von der Feldamplitude." },
+      { id: "natwiss-maxwell-q10", question: "Was ist die physikalische Ursache für den Brechungsindex n > 1 in Materie?", options: ["Verstärkung des E-Feldes", "Magnetische Monopole in Materie", "Absorption und Reemission dauert länger", "Verlangsamung der EM-Welle durch Wechselwirkung mit dem Medium"], correctIndex: 3, explanation: "Im Medium wechselwirken EM-Wellen mit den Dipolen und werden dadurch effektiv verlangsamt: v = c/n mit n = √(ε_r·μ_r)." }
     ]
   }
 ];

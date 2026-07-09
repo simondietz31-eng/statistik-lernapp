@@ -46,76 +46,16 @@ const NATWISS_CHAPTER17_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-ueb-elektrostatik-q1",
-        question: "Wie skaliert die Coulombkraft mit dem Abstand r?",
-        options: ["F ∝ r", "F ∝ 1/r", "F ∝ 1/r²", "F ∝ 1/r³"],
-        correctIndex: 2,
-        explanation: "Coulombgesetz: F = kQ₁Q₂/r². Quadratisches Abstandsgesetz, wie die Gravitation."
-      },
-      {
-        id: "natwiss-ueb-elektrostatik-q2",
-        question: "Was ist die Coulombkonstante k (in SI-Einheiten)?",
-        options: ["k = 9·10⁹ Vm/As", "k = 8,85·10⁻¹² As/(Vm)", "k = 6,67·10⁻¹¹ Nm²/kg²", "k = 1,6·10⁻¹⁹ C"],
-        correctIndex: 0,
-        explanation: "k = 1/(4πε₀) = 8,99·10⁹ N·m²/C² ≈ 9·10⁹ Vm/As."
-      },
-      {
-        id: "natwiss-ueb-elektrostatik-q3",
-        question: "Wie hängt das elektrische Potenzial einer Punktladung von r ab?",
-        options: ["φ ∝ 1/r²", "φ ∝ 1/r", "φ ∝ r", "φ = const."],
-        correctIndex: 1,
-        explanation: "φ = kQ/r. Das Potenzial fällt mit 1/r ab, die Kraft mit 1/r²."
-      },
-      {
-        id: "natwiss-ueb-elektrostatik-q4",
-        question: "Was ist der Unterschied zwischen Feldstärke E und Potenzial φ?",
-        options: ["E = φ/r", "E = −dφ/dr (Gradient des Potenzials)", "φ = E²/r", "E und φ sind identisch"],
-        correctIndex: 1,
-        explanation: "E = −∇φ. Die Feldstärke ist der (negative) Gradient des elektrischen Potenzials."
-      },
-      {
-        id: "natwiss-ueb-elektrostatik-q5",
-        question: "Zwei entgegengesetzt geladene Ladungen: +Q und −Q. Wo ist das Potenzial auf der Verbindungsachse außerhalb der Ladungen null?",
-        options: ["Im Unendlichen", "Im Mittelpunkt zwischen den Ladungen", "Nur zwischen den Ladungen", "Nirgendwo außerhalb"],
-        correctIndex: 3,
-        explanation: "Für +Q und −Q: φ = k(Q/r₁ − Q/r₂). Außerhalb ist r₁ ≠ r₂ immer, und die Vorzeichen führen zu keiner Auslöschung auf der Außenseite (anders als bei gleichen Ladungen)."
-      },
-      {
-        id: "natwiss-ueb-elektrostatik-q6",
-        question: "Was bedeutet eine Äquipotenzialfläche?",
-        options: ["Fläche gleicher Feldstärke", "Fläche gleichen Potenzials (keine Arbeit beim Verschieben auf ihr)", "Fläche maximaler Kraft", "Fläche wo E = 0"],
-        correctIndex: 1,
-        explanation: "Auf Äquipotenzialflächen ist φ = const. Bewegung auf ihr erfordert keine Arbeit (W = qΔφ = 0)."
-      },
-      {
-        id: "natwiss-ueb-elektrostatik-q7",
-        question: "Welche Arbeit verrichtet das Feld beim Verschieben einer Ladung q entlang einer Äquipotenzialfläche?",
-        options: ["W = qφ", "W = 0", "W = qΔφ", "W = qE·r"],
-        correctIndex: 1,
-        explanation: "Auf Äquipotenzialflächen: Δφ = 0 → W = qΔφ = 0."
-      },
-      {
-        id: "natwiss-ueb-elektrostatik-q8",
-        question: "Was ist das Superpositionsprinzip für elektrische Felder?",
-        options: ["Felder können sich auslöschen", "Das Gesamtfeld ist die vektorielle Summe der Einzelfelder", "Felder addieren sich nur skalar", "Gilt nur für gleiche Ladungen"],
-        correctIndex: 1,
-        explanation: "Superposition: E_ges = ΣE_i (vektorielle Summe). Gleiches gilt für Potenziale: φ_ges = Σφ_i (skalare Summe)."
-      },
-      {
-        id: "natwiss-ueb-elektrostatik-q9",
-        question: "Ein Proton und ein Elektron haben gleich große, entgegengesetzte Ladungen. Welche Kraft wirkt zwischen ihnen bei r = 10⁻¹⁰ m?",
-        options: ["F ≈ 2,3·10⁻⁸ N", "F ≈ 8,2 N", "F ≈ 1,4·10⁻³ N", "F ≈ 2,3·10⁻⁸ N"],
-        correctIndex: 0,
-        explanation: "F = k·e²/r² = 9·10⁹·(1,6·10⁻¹⁹)²/(10⁻¹⁰)² = 9·10⁹·2,56·10⁻³⁸/10⁻²⁰ = 2,3·10⁻⁸ N."
-      },
-      {
-        id: "natwiss-ueb-elektrostatik-q10",
-        question: "Wie verhält sich die Elementarladung e (Betrag)?",
-        options: ["e = 9,11·10⁻³¹ C", "e = 1,6·10⁻¹⁹ C", "e = 6,67·10⁻¹¹ C", "e = 1,38·10⁻²³ C"],
-        correctIndex: 1,
-        explanation: "Elementarladung: e = 1,602·10⁻¹⁹ C. Dies ist die kleinste freie elektrische Ladung."
-      }
+      { id: "natwiss-ueb-elektrostatik-q1", question: "Wie skaliert die Coulombkraft mit dem Abstand r?", options: ["F ∝ r", "F ∝ 1/r³", "F ∝ 1/r", "F ∝ 1/r²"], correctIndex: 3, explanation: "Coulombgesetz: F = kQ₁Q₂/r². Quadratisches Abstandsgesetz, wie die Gravitation." },
+      { id: "natwiss-ueb-elektrostatik-q2", question: "Was ist die Coulombkonstante k (in SI-Einheiten)?", options: ["k = 9·10⁹ Vm/As", "k = 1,6·10⁻¹⁹ C", "k = 6,67·10⁻¹¹ Nm²/kg²", "k = 8,85·10⁻¹² As/(Vm)"], correctIndex: 0, explanation: "k = 1/(4πε₀) = 8,99·10⁹ N·m²/C² ≈ 9·10⁹ Vm/As." },
+      { id: "natwiss-ueb-elektrostatik-q3", question: "Wie hängt das elektrische Potenzial einer Punktladung von r ab?", options: ["φ = const.", "φ ∝ 1/r", "φ ∝ r", "φ ∝ 1/r²"], correctIndex: 1, explanation: "φ = kQ/r. Das Potenzial fällt mit 1/r ab, die Kraft mit 1/r²." },
+      { id: "natwiss-ueb-elektrostatik-q4", question: "Was ist der Unterschied zwischen Feldstärke E und Potenzial φ?", options: ["E und φ sind identisch", "φ = E²/r", "E = φ/r", "E = −dφ/dr (Gradient des Potenzials)"], correctIndex: 3, explanation: "E = −∇φ. Die Feldstärke ist der (negative) Gradient des elektrischen Potenzials." },
+      { id: "natwiss-ueb-elektrostatik-q5", question: "Zwei entgegengesetzt geladene Ladungen: +Q und −Q. Wo ist das Potenzial auf der Verbindungsachse außerhalb der Ladungen null?", options: ["Nur zwischen den Ladungen", "Im Unendlichen", "Nirgendwo außerhalb", "Im Mittelpunkt zwischen den Ladungen"], correctIndex: 2, explanation: "Für +Q und −Q: φ = k(Q/r₁ − Q/r₂). Außerhalb ist r₁ ≠ r₂ immer, und die Vorzeichen führen zu keiner Auslöschung auf der Außenseite (anders als bei gleichen Ladungen)." },
+      { id: "natwiss-ueb-elektrostatik-q6", question: "Was bedeutet eine Äquipotenzialfläche?", options: ["Fläche wo E = 0", "Fläche gleichen Potenzials (keine Arbeit beim Verschieben auf ihr)", "Fläche gleicher Feldstärke", "Fläche maximaler Kraft"], correctIndex: 1, explanation: "Auf Äquipotenzialflächen ist φ = const. Bewegung auf ihr erfordert keine Arbeit (W = qΔφ = 0)." },
+      { id: "natwiss-ueb-elektrostatik-q7", question: "Welche Arbeit verrichtet das Feld beim Verschieben einer Ladung q entlang einer Äquipotenzialfläche?", options: ["W = qΔφ", "W = qE·r", "W = 0", "W = qφ"], correctIndex: 2, explanation: "Auf Äquipotenzialflächen: Δφ = 0 → W = qΔφ = 0." },
+      { id: "natwiss-ueb-elektrostatik-q8", question: "Was ist das Superpositionsprinzip für elektrische Felder?", options: ["Das Gesamtfeld ist die vektorielle Summe der Einzelfelder", "Felder addieren sich nur skalar", "Felder können sich auslöschen", "Gilt nur für gleiche Ladungen"], correctIndex: 0, explanation: "Superposition: E_ges = ΣE_i (vektorielle Summe). Gleiches gilt für Potenziale: φ_ges = Σφ_i (skalare Summe)." },
+      { id: "natwiss-ueb-elektrostatik-q9", question: "Ein Proton und ein Elektron haben gleich große, entgegengesetzte Ladungen. Welche Kraft wirkt zwischen ihnen bei r = 10⁻¹⁰ m?", options: ["F ≈ 2,3·10⁻⁸ N", "F ≈ 8,2 N", "F ≈ 2,3·10⁻⁸ N", "F ≈ 1,4·10⁻³ N"], correctIndex: 2, explanation: "F = k·e²/r² = 9·10⁹·(1,6·10⁻¹⁹)²/(10⁻¹⁰)² = 9·10⁹·2,56·10⁻³⁸/10⁻²⁰ = 2,3·10⁻⁸ N." },
+      { id: "natwiss-ueb-elektrostatik-q10", question: "Wie verhält sich die Elementarladung e (Betrag)?", options: ["e = 1,6·10⁻¹⁹ C", "e = 6,67·10⁻¹¹ C", "e = 9,11·10⁻³¹ C", "e = 1,38·10⁻²³ C"], correctIndex: 0, explanation: "Elementarladung: e = 1,602·10⁻¹⁹ C. Dies ist die kleinste freie elektrische Ladung." }
     ]
   },
   {
@@ -173,76 +113,16 @@ const NATWISS_CHAPTER17_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-ueb-kondensatoren-q1",
-        question: "Was ist die Kapazität eines Plattenkondensators?",
-        options: ["C = U/Q", "C = ε_r·ε₀·A/d", "C = ε₀·d/A", "C = Q·U"],
-        correctIndex: 1,
-        explanation: "C = ε_r·ε₀·A/d. Größere Fläche und kleiner Abstand → größere Kapazität."
-      },
-      {
-        id: "natwiss-ueb-kondensatoren-q2",
-        question: "Wie ändert sich C bei Einführung eines Dielektrikums (ε_r > 1)?",
-        options: ["C sinkt um Faktor ε_r", "C steigt um Faktor ε_r", "C bleibt gleich", "C wird null"],
-        correctIndex: 1,
-        explanation: "C = ε_r·C₀. Das Dielektrikum erhöht die Kapazität durch Ausrichtung der Dipole."
-      },
-      {
-        id: "natwiss-ueb-kondensatoren-q3",
-        question: "Kondensatoren in Reihe: C₁ = 2 μF, C₂ = 4 μF. Was ist C_ges?",
-        options: ["6 μF", "2 μF", "4/3 μF", "1,33 μF"],
-        correctIndex: 3,
-        explanation: "1/C_ges = 1/2 + 1/4 = 3/4 → C_ges = 4/3 ≈ 1,33 μF."
-      },
-      {
-        id: "natwiss-ueb-kondensatoren-q4",
-        question: "Was ist die gespeicherte Energie in einem Kondensator (C = 10 μF, U = 100 V)?",
-        options: ["W = 0,05 J", "W = 0,5 J", "W = 5 J", "W = 50 J"],
-        correctIndex: 0,
-        explanation: "W = ½CU² = ½·10·10⁻⁶·10000 = 0,05 J."
-      },
-      {
-        id: "natwiss-ueb-kondensatoren-q5",
-        question: "Was begrenzt die maximale Spannung an einem Kondensator?",
-        options: ["Die Kapazität", "Die Durchschlagfeldstärke E_max des Dielektrikums", "Die Plattendicke", "Der Widerstand"],
-        correctIndex: 1,
-        explanation: "Überschreitet E = U/d die Durchschlagfestigkeit E_max, bricht die Isolation durch → Kurzschluss."
-      },
-      {
-        id: "natwiss-ueb-kondensatoren-q6",
-        question: "An zwei parallel geschalteten Kondensatoren (C₁ = 3 μF, C₂ = 6 μF) liegt U = 10 V. Wie groß ist die Gesamtladung?",
-        options: ["90 μC", "20 μC", "30 μC", "90 nC"],
-        correctIndex: 0,
-        explanation: "C_ges = C₁ + C₂ = 9 μF. Q = C_ges·U = 9·10 = 90 μC."
-      },
-      {
-        id: "natwiss-ueb-kondensatoren-q7",
-        question: "Kondensatoren in Reihe: Welche Eigenschaft ist für alle gleich?",
-        options: ["Spannung", "Ladung Q", "Kapazität", "Energie"],
-        correctIndex: 1,
-        explanation: "In Reihenschaltung fließt dieselbe Ladung Q auf jeden Kondensator (keine Verzweigung des Stroms)."
-      },
-      {
-        id: "natwiss-ueb-kondensatoren-q8",
-        question: "Kondensatoren parallel: Welche Eigenschaft ist für alle gleich?",
-        options: ["Ladung", "Kapazität", "Spannung", "Energie"],
-        correctIndex: 2,
-        explanation: "Parallel: alle Kondensatoren haben dieselbe Spannung U (direkt an denselben Knoten)."
-      },
-      {
-        id: "natwiss-ueb-kondensatoren-q9",
-        question: "Das elektrische Feld im Plattenkondensator (Abstand d, Spannung U) ist:",
-        options: ["E = U·d", "E = U/d", "E = d/U", "E = ε₀U/d"],
-        correctIndex: 1,
-        explanation: "Homogenes Feld: E = U/d (Spannung pro Länge)."
-      },
-      {
-        id: "natwiss-ueb-kondensatoren-q10",
-        question: "Warum ist die Ladungstiefe bei Kondensatoraufladung nur ~1 pm (Aufgabe 42.1)?",
-        options: ["Kupfer leitet schlecht", "Die benötigte Ladung Q = CU ist sehr klein im Vergleich zur freien Elektronendichte", "Die Spannung ist zu gering", "Elektronen bewegen sich nicht"],
-        correctIndex: 1,
-        explanation: "Q = 3 μC, aber die Elektronendichte n = 8,49·10²⁸/m³ ist riesig. Nur eine atomdünne Schicht muss umverteilt werden."
-      }
+      { id: "natwiss-ueb-kondensatoren-q1", question: "Was ist die Kapazität eines Plattenkondensators?", options: ["C = ε₀·d/A", "C = U/Q", "C = Q·U", "C = ε_r·ε₀·A/d"], correctIndex: 3, explanation: "C = ε_r·ε₀·A/d. Größere Fläche und kleiner Abstand → größere Kapazität." },
+      { id: "natwiss-ueb-kondensatoren-q2", question: "Wie ändert sich C bei Einführung eines Dielektrikums (ε_r > 1)?", options: ["C bleibt gleich", "C steigt um Faktor ε_r", "C sinkt um Faktor ε_r", "C wird null"], correctIndex: 1, explanation: "C = ε_r·C₀. Das Dielektrikum erhöht die Kapazität durch Ausrichtung der Dipole." },
+      { id: "natwiss-ueb-kondensatoren-q3", question: "Kondensatoren in Reihe: C₁ = 2 μF, C₂ = 4 μF. Was ist C_ges?", options: ["2 μF", "6 μF", "4/3 μF", "1,33 μF"], correctIndex: 3, explanation: "1/C_ges = 1/2 + 1/4 = 3/4 → C_ges = 4/3 ≈ 1,33 μF." },
+      { id: "natwiss-ueb-kondensatoren-q4", question: "Was ist die gespeicherte Energie in einem Kondensator (C = 10 μF, U = 100 V)?", options: ["W = 0,5 J", "W = 0,05 J", "W = 50 J", "W = 5 J"], correctIndex: 1, explanation: "W = ½CU² = ½·10·10⁻⁶·10000 = 0,05 J." },
+      { id: "natwiss-ueb-kondensatoren-q5", question: "Was begrenzt die maximale Spannung an einem Kondensator?", options: ["Die Plattendicke", "Der Widerstand", "Die Durchschlagfeldstärke E_max des Dielektrikums", "Die Kapazität"], correctIndex: 2, explanation: "Überschreitet E = U/d die Durchschlagfestigkeit E_max, bricht die Isolation durch → Kurzschluss." },
+      { id: "natwiss-ueb-kondensatoren-q6", question: "An zwei parallel geschalteten Kondensatoren (C₁ = 3 μF, C₂ = 6 μF) liegt U = 10 V. Wie groß ist die Gesamtladung?", options: ["20 μC", "90 nC", "90 μC", "30 μC"], correctIndex: 2, explanation: "C_ges = C₁ + C₂ = 9 μF. Q = C_ges·U = 9·10 = 90 μC." },
+      { id: "natwiss-ueb-kondensatoren-q7", question: "Kondensatoren in Reihe: Welche Eigenschaft ist für alle gleich?", options: ["Ladung Q", "Energie", "Kapazität", "Spannung"], correctIndex: 0, explanation: "In Reihenschaltung fließt dieselbe Ladung Q auf jeden Kondensator (keine Verzweigung des Stroms)." },
+      { id: "natwiss-ueb-kondensatoren-q8", question: "Kondensatoren parallel: Welche Eigenschaft ist für alle gleich?", options: ["Spannung", "Ladung", "Energie", "Kapazität"], correctIndex: 0, explanation: "Parallel: alle Kondensatoren haben dieselbe Spannung U (direkt an denselben Knoten)." },
+      { id: "natwiss-ueb-kondensatoren-q9", question: "Das elektrische Feld im Plattenkondensator (Abstand d, Spannung U) ist:", options: ["E = ε₀U/d", "E = d/U", "E = U/d", "E = U·d"], correctIndex: 2, explanation: "Homogenes Feld: E = U/d (Spannung pro Länge)." },
+      { id: "natwiss-ueb-kondensatoren-q10", question: "Warum ist die Ladungstiefe bei Kondensatoraufladung nur ~1 pm (Aufgabe 42.1)?", options: ["Kupfer leitet schlecht", "Die benötigte Ladung Q = CU ist sehr klein im Vergleich zur freien Elektronendichte", "Elektronen bewegen sich nicht", "Die Spannung ist zu gering"], correctIndex: 1, explanation: "Q = 3 μC, aber die Elektronendichte n = 8,49·10²⁸/m³ ist riesig. Nur eine atomdünne Schicht muss umverteilt werden." }
     ]
   },
   {
@@ -290,76 +170,16 @@ const NATWISS_CHAPTER17_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-ueb-stromkreis-q1",
-        question: "Ohmsches Gesetz: Was gilt für U, I, R?",
-        options: ["U = I + R", "U = I/R", "U = R/I", "U = I·R"],
-        correctIndex: 3,
-        explanation: "U = R·I. Spannung = Widerstand × Strom."
-      },
-      {
-        id: "natwiss-ueb-stromkreis-q2",
-        question: "Knotenregel (1. Kirchhoffsches Gesetz) besagt:",
-        options: ["Summe aller Spannungen im Kreis = 0", "Summe aller Ströme am Knoten = 0", "Leistung = Spannung × Strom", "Widerstände in Reihe addieren sich"],
-        correctIndex: 1,
-        explanation: "Knotenregel: ΣI = 0 an jedem Knoten (Ladungserhaltung)."
-      },
-      {
-        id: "natwiss-ueb-stromkreis-q3",
-        question: "Zwei Widerstände R₁ = R₂ = R in Parallel. Was ist R_ges?",
-        options: ["R_ges = 2R", "R_ges = R/2", "R_ges = R", "R_ges = R²"],
-        correctIndex: 1,
-        explanation: "1/R_ges = 1/R + 1/R = 2/R → R_ges = R/2."
-      },
-      {
-        id: "natwiss-ueb-stromkreis-q4",
-        question: "Die Lorentzkraft auf eine bewegte Ladung im Magnetfeld ist:",
-        options: ["F = qE", "F = q(v×B)", "F = qvB (immer)", "F = μ₀qI/r"],
-        correctIndex: 1,
-        explanation: "F = q(v × B). Betrag: F = qvB·sinθ. Steht immer senkrecht auf v und B."
-      },
-      {
-        id: "natwiss-ueb-stromkreis-q5",
-        question: "Ein geladenes Teilchen bewegt sich parallel zu B. Was ist die Lorentzkraft?",
-        options: ["F = qvB", "F = 0 (v parallel B → Kreuzprodukt null)", "F = qB", "F = mv²/r"],
-        correctIndex: 1,
-        explanation: "F = q(v × B). Bei v ∥ B ist v × B = 0 → F = 0. Keine Kraft."
-      },
-      {
-        id: "natwiss-ueb-stromkreis-q6",
-        question: "Was ist die Einheit der magnetischen Flussdichte B?",
-        options: ["A/m", "T (Tesla) = kg/(A·s²)", "V·m", "Wb/m"],
-        correctIndex: 1,
-        explanation: "B in Tesla [T] = Vs/m² = kg/(A·s²)."
-      },
-      {
-        id: "natwiss-ueb-stromkreis-q7",
-        question: "Was beschreibt das Faradaysche Induktionsgesetz?",
-        options: ["Strom fließt durch Widerstand", "Zeitlich veränderlicher Magnetfluss induziert eine Spannung", "Magnetfeld eines geraden Leiters", "Lorentzkraft auf Ladung"],
-        correctIndex: 1,
-        explanation: "U_ind = −N·dΦ/dt. Zeitlich veränderlicher Fluss Φ = B·A induziert eine EMK."
-      },
-      {
-        id: "natwiss-ueb-stromkreis-q8",
-        question: "Welche Richtung hat das Magnetfeld eines geraden Leiters (Strom nach oben)?",
-        options: ["Radial vom Leiter weg", "Parallel zum Leiter", "Konzentrische Kreise um den Leiter (Rechte-Hand-Regel)", "Senkrecht nach oben"],
-        correctIndex: 2,
-        explanation: "Rechte-Hand-Regel: Daumen in Stromrichtung, gebogene Finger zeigen B-Feld in konzentrischen Kreisen."
-      },
-      {
-        id: "natwiss-ueb-stromkreis-q9",
-        question: "Eine Lenzsche Regel besagt:",
-        options: ["Der Induktionsstrom verstärkt die Ursache", "Der Induktionsstrom wirkt seiner Ursache entgegen", "Induzierte Spannung ist immer positiv", "Induktion tritt nur im Vakuum auf"],
-        correctIndex: 1,
-        explanation: "Lenzsche Regel (aus dem Minuszeichen in U = −dΦ/dt): Der Induktionsstrom erzeugt ein Feld, das der Flussänderung entgegenwirkt (Energieerhaltung)."
-      },
-      {
-        id: "natwiss-ueb-stromkreis-q10",
-        question: "Die elektrische Leistung P in einem Widerstand R bei Strom I ist:",
-        options: ["P = U/I", "P = I²R", "P = IR²", "P = U·R"],
-        correctIndex: 1,
-        explanation: "P = U·I = I²R = U²/R. Joulesche Wärme wird im Widerstand dissipiert."
-      }
+      { id: "natwiss-ueb-stromkreis-q1", question: "Ohmsches Gesetz: Was gilt für U, I, R?", options: ["U = R/I", "U = I + R", "U = I/R", "U = I·R"], correctIndex: 3, explanation: "U = R·I. Spannung = Widerstand × Strom." },
+      { id: "natwiss-ueb-stromkreis-q2", question: "Knotenregel (1. Kirchhoffsches Gesetz) besagt:", options: ["Leistung = Spannung × Strom", "Widerstände in Reihe addieren sich", "Summe aller Spannungen im Kreis = 0", "Summe aller Ströme am Knoten = 0"], correctIndex: 3, explanation: "Knotenregel: ΣI = 0 an jedem Knoten (Ladungserhaltung)." },
+      { id: "natwiss-ueb-stromkreis-q3", question: "Zwei Widerstände R₁ = R₂ = R in Parallel. Was ist R_ges?", options: ["R_ges = R/2", "R_ges = 2R", "R_ges = R²", "R_ges = R"], correctIndex: 0, explanation: "1/R_ges = 1/R + 1/R = 2/R → R_ges = R/2." },
+      { id: "natwiss-ueb-stromkreis-q4", question: "Die Lorentzkraft auf eine bewegte Ladung im Magnetfeld ist:", options: ["F = μ₀qI/r", "F = qvB (immer)", "F = q(v×B)", "F = qE"], correctIndex: 2, explanation: "F = q(v × B). Betrag: F = qvB·sinθ. Steht immer senkrecht auf v und B." },
+      { id: "natwiss-ueb-stromkreis-q5", question: "Ein geladenes Teilchen bewegt sich parallel zu B. Was ist die Lorentzkraft?", options: ["F = mv²/r", "F = 0 (v parallel B → Kreuzprodukt null)", "F = qvB", "F = qB"], correctIndex: 1, explanation: "F = q(v × B). Bei v ∥ B ist v × B = 0 → F = 0. Keine Kraft." },
+      { id: "natwiss-ueb-stromkreis-q6", question: "Was ist die Einheit der magnetischen Flussdichte B?", options: ["T (Tesla) = kg/(A·s²)", "Wb/m", "V·m", "A/m"], correctIndex: 0, explanation: "B in Tesla [T] = Vs/m² = kg/(A·s²)." },
+      { id: "natwiss-ueb-stromkreis-q7", question: "Was beschreibt das Faradaysche Induktionsgesetz?", options: ["Zeitlich veränderlicher Magnetfluss induziert eine Spannung", "Magnetfeld eines geraden Leiters", "Lorentzkraft auf Ladung", "Strom fließt durch Widerstand"], correctIndex: 0, explanation: "U_ind = −N·dΦ/dt. Zeitlich veränderlicher Fluss Φ = B·A induziert eine EMK." },
+      { id: "natwiss-ueb-stromkreis-q8", question: "Welche Richtung hat das Magnetfeld eines geraden Leiters (Strom nach oben)?", options: ["Senkrecht nach oben", "Parallel zum Leiter", "Radial vom Leiter weg", "Konzentrische Kreise um den Leiter (Rechte-Hand-Regel)"], correctIndex: 3, explanation: "Rechte-Hand-Regel: Daumen in Stromrichtung, gebogene Finger zeigen B-Feld in konzentrischen Kreisen." },
+      { id: "natwiss-ueb-stromkreis-q9", question: "Eine Lenzsche Regel besagt:", options: ["Induktion tritt nur im Vakuum auf", "Induzierte Spannung ist immer positiv", "Der Induktionsstrom wirkt seiner Ursache entgegen", "Der Induktionsstrom verstärkt die Ursache"], correctIndex: 2, explanation: "Lenzsche Regel (aus dem Minuszeichen in U = −dΦ/dt): Der Induktionsstrom erzeugt ein Feld, das der Flussänderung entgegenwirkt (Energieerhaltung)." },
+      { id: "natwiss-ueb-stromkreis-q10", question: "Die elektrische Leistung P in einem Widerstand R bei Strom I ist:", options: ["P = U/I", "P = I²R", "P = IR²", "P = U·R"], correctIndex: 1, explanation: "P = U·I = I²R = U²/R. Joulesche Wärme wird im Widerstand dissipiert." }
     ]
   }
 ];

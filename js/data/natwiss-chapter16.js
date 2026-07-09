@@ -53,76 +53,16 @@ const NATWISS_CHAPTER16_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-ueb-thermo1-q1",
-        question: "Ein Gas wird bei konstantem Volumen (isochor) erwärmt. Was passiert?",
-        options: ["Druck und Temperatur steigen proportional", "Volumen nimmt zu", "Druck bleibt konstant", "Temperatur sinkt"],
-        correctIndex: 0,
-        explanation: "Isochor (V = const.): p/T = nR/V = const. → p ∝ T. Druck und Temperatur steigen proportional."
-      },
-      {
-        id: "natwiss-ueb-thermo1-q2",
-        question: "Wie lautet die Formel für die Volumendehnung?",
-        options: ["ΔV = α·V₀·ΔT", "ΔV = γ·V₀·ΔT", "ΔV = γ·L₀·ΔT", "ΔV = ΔT/V₀"],
-        correctIndex: 1,
-        explanation: "ΔV = γ·V₀·ΔT mit γ = 3α (für isotrope Materialien)."
-      },
-      {
-        id: "natwiss-ueb-thermo1-q3",
-        question: "Was gilt beim idealen Gas für pV bei konstanter Temperatur?",
-        options: ["pV = 0", "pV steigt mit T", "pV = nRT = const. (bei T = const.)", "pV = p/V"],
-        correctIndex: 2,
-        explanation: "Boyle-Mariotte-Gesetz: Bei T = const. gilt pV = nRT = const."
-      },
-      {
-        id: "natwiss-ueb-thermo1-q4",
-        question: "Wie ist die Wurzel des Druckverhältnisses mit dem Molmassenverhältnis verknüpft (gleicher Tank, gleiche T)?",
-        options: ["p₁/p₂ = m₁M₂/(m₂M₁)", "p₁/p₂ = m₁M₁/(m₂M₂)", "p₁/p₂ = M₁/M₂", "p₁/p₂ = m₁/m₂"],
-        correctIndex: 0,
-        explanation: "Aus pV = (m/M)RT: p₁/p₂ = (m₁/M₁)/(m₂/M₂) = m₁M₂/(m₂M₁)."
-      },
-      {
-        id: "natwiss-ueb-thermo1-q5",
-        question: "Was ist die mittlere kinetische Energie eines einatomigen Gasmoleküls?",
-        options: ["E_kin = ½k_BT", "E_kin = 3/2 k_BT", "E_kin = k_BT", "E_kin = 3k_BT"],
-        correctIndex: 1,
-        explanation: "Gleichverteilungssatz: pro Freiheitsgrad ½k_BT. Ein einatomiges Gas hat 3 Translationsfreiheitsgrade → E_kin = 3/2 k_BT."
-      },
-      {
-        id: "natwiss-ueb-thermo1-q6",
-        question: "Die Van-der-Waals-Gleichung für reale Gase lautet:",
-        options: ["pV = nRT", "(p + an²/V²)(V − nb) = nRT", "(p − a/V²)(V + b) = nRT", "pV = nRT + ab"],
-        correctIndex: 1,
-        explanation: "(p + an²/V²)(V − nb) = nRT. Der Term an²/V² korrigiert den Druck (intermolekulare Anziehung), nb das Eigenvolumen der Moleküle."
-      },
-      {
-        id: "natwiss-ueb-thermo1-q7",
-        question: "Bei konstanter Temperatur (isotherm) wird Volumen eines idealen Gases verdoppelt. Was passiert mit dem Druck?",
-        options: ["Verdoppelt sich", "Halbiert sich", "Bleibt gleich", "Wird vier Mal größer"],
-        correctIndex: 1,
-        explanation: "pV = const. → p₂ = p₁·V₁/V₂ = p₁/2. Der Druck halbiert sich."
-      },
-      {
-        id: "natwiss-ueb-thermo1-q8",
-        question: "Welchen Zusammenhang beschreibt die Gay-Lussac-Gleichung?",
-        options: ["V/T = const. (isobar)", "p·V = const. (isotherm)", "p/T = const. (isochor)", "T·p = const. (isotherm)"],
-        correctIndex: 2,
-        explanation: "Gay-Lussac: Bei konstantem Volumen (isochor) gilt p/T = const."
-      },
-      {
-        id: "natwiss-ueb-thermo1-q9",
-        question: "Wie groß ist R (ideale Gaskonstante)?",
-        options: ["8,314 J/(mol·K)", "6,022·10²³ J/(mol·K)", "1,381·10⁻²³ J/K", "9,81 J/(mol·K)"],
-        correctIndex: 0,
-        explanation: "R = 8,314 J/(mol·K) = N_A·k_B."
-      },
-      {
-        id: "natwiss-ueb-thermo1-q10",
-        question: "Die relative Luftfeuchtigkeit gibt an:",
-        options: ["Die absolute Menge Wasserdampf in g/m³", "Das Verhältnis des tatsächlichen Wasserdampfpartialdrucks zum Sättigungsdampfdruck", "Die Temperatur des Taupunkts", "Den Sättigungsdampfdruck"],
-        correctIndex: 1,
-        explanation: "RL = p_ist/p_satt. Bei RL = 100% ist Luft wassergesättigt (Taupunkt)."
-      }
+      { id: "natwiss-ueb-thermo1-q1", question: "Ein Gas wird bei konstantem Volumen (isochor) erwärmt. Was passiert?", options: ["Druck bleibt konstant", "Druck und Temperatur steigen proportional", "Volumen nimmt zu", "Temperatur sinkt"], correctIndex: 1, explanation: "Isochor (V = const.): p/T = nR/V = const. → p ∝ T. Druck und Temperatur steigen proportional." },
+      { id: "natwiss-ueb-thermo1-q2", question: "Wie lautet die Formel für die Volumendehnung?", options: ["ΔV = γ·L₀·ΔT", "ΔV = γ·V₀·ΔT", "ΔV = ΔT/V₀", "ΔV = α·V₀·ΔT"], correctIndex: 1, explanation: "ΔV = γ·V₀·ΔT mit γ = 3α (für isotrope Materialien)." },
+      { id: "natwiss-ueb-thermo1-q3", question: "Was gilt beim idealen Gas für pV bei konstanter Temperatur?", options: ["pV = 0", "pV steigt mit T", "pV = nRT = const. (bei T = const.)", "pV = p/V"], correctIndex: 2, explanation: "Boyle-Mariotte-Gesetz: Bei T = const. gilt pV = nRT = const." },
+      { id: "natwiss-ueb-thermo1-q4", question: "Wie ist die Wurzel des Druckverhältnisses mit dem Molmassenverhältnis verknüpft (gleicher Tank, gleiche T)?", options: ["p₁/p₂ = m₁M₂/(m₂M₁)", "p₁/p₂ = M₁/M₂", "p₁/p₂ = m₁M₁/(m₂M₂)", "p₁/p₂ = m₁/m₂"], correctIndex: 0, explanation: "Aus pV = (m/M)RT: p₁/p₂ = (m₁/M₁)/(m₂/M₂) = m₁M₂/(m₂M₁)." },
+      { id: "natwiss-ueb-thermo1-q5", question: "Was ist die mittlere kinetische Energie eines einatomigen Gasmoleküls?", options: ["E_kin = 3/2 k_BT", "E_kin = ½k_BT", "E_kin = k_BT", "E_kin = 3k_BT"], correctIndex: 0, explanation: "Gleichverteilungssatz: pro Freiheitsgrad ½k_BT. Ein einatomiges Gas hat 3 Translationsfreiheitsgrade → E_kin = 3/2 k_BT." },
+      { id: "natwiss-ueb-thermo1-q6", question: "Die Van-der-Waals-Gleichung für reale Gase lautet:", options: ["pV = nRT + ab", "(p − a/V²)(V + b) = nRT", "(p + an²/V²)(V − nb) = nRT", "pV = nRT"], correctIndex: 2, explanation: "(p + an²/V²)(V − nb) = nRT. Der Term an²/V² korrigiert den Druck (intermolekulare Anziehung), nb das Eigenvolumen der Moleküle." },
+      { id: "natwiss-ueb-thermo1-q7", question: "Bei konstanter Temperatur (isotherm) wird Volumen eines idealen Gases verdoppelt. Was passiert mit dem Druck?", options: ["Verdoppelt sich", "Bleibt gleich", "Wird vier Mal größer", "Halbiert sich"], correctIndex: 3, explanation: "pV = const. → p₂ = p₁·V₁/V₂ = p₁/2. Der Druck halbiert sich." },
+      { id: "natwiss-ueb-thermo1-q8", question: "Welchen Zusammenhang beschreibt die Gay-Lussac-Gleichung?", options: ["T·p = const. (isotherm)", "V/T = const. (isobar)", "p/T = const. (isochor)", "p·V = const. (isotherm)"], correctIndex: 2, explanation: "Gay-Lussac: Bei konstantem Volumen (isochor) gilt p/T = const." },
+      { id: "natwiss-ueb-thermo1-q9", question: "Wie groß ist R (ideale Gaskonstante)?", options: ["6,022·10²³ J/(mol·K)", "8,314 J/(mol·K)", "1,381·10⁻²³ J/K", "9,81 J/(mol·K)"], correctIndex: 1, explanation: "R = 8,314 J/(mol·K) = N_A·k_B." },
+      { id: "natwiss-ueb-thermo1-q10", question: "Die relative Luftfeuchtigkeit gibt an:", options: ["Die Temperatur des Taupunkts", "Die absolute Menge Wasserdampf in g/m³", "Den Sättigungsdampfdruck", "Das Verhältnis des tatsächlichen Wasserdampfpartialdrucks zum Sättigungsdampfdruck"], correctIndex: 3, explanation: "RL = p_ist/p_satt. Bei RL = 100% ist Luft wassergesättigt (Taupunkt)." }
     ]
   },
   {
@@ -174,76 +114,16 @@ const NATWISS_CHAPTER16_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-ueb-thermo2-q1",
-        question: "Was gilt für die innere Energie bei einer isothermen Zustandsänderung eines idealen Gases?",
-        options: ["ΔU = nCᵥΔT > 0", "ΔU = 0", "ΔU = Q", "ΔU = W"],
-        correctIndex: 1,
-        explanation: "Bei idealem Gas hängt U nur von T ab. Isotherm bedeutet ΔT = 0 → ΔU = 0."
-      },
-      {
-        id: "natwiss-ueb-thermo2-q2",
-        question: "Wie lautet der erste Hauptsatz?",
-        options: ["Q = W", "ΔU = Q − W_vom_Gas", "ΔU = W − Q", "ΔU = Q + W = 0"],
-        correctIndex: 1,
-        explanation: "ΔU = Q − W_vom_Gas (Techniker-Konvention) oder ΔU = Q + W_am_Gas (Physiker-Konvention)."
-      },
-      {
-        id: "natwiss-ueb-thermo2-q3",
-        question: "Bei einer adiabatischen Zustandsänderung gilt:",
-        options: ["Q = 0, ΔU = W", "W = 0", "ΔT = 0", "ΔU = 0"],
-        correctIndex: 0,
-        explanation: "Adiabat: kein Wärmeaustausch (Q = 0). 1. HS: ΔU = W (Arbeit wird auf innere Energie übertragen)."
-      },
-      {
-        id: "natwiss-ueb-thermo2-q4",
-        question: "Ein Gas wird isochor erwärmt. Welche Arbeit wird geleistet?",
-        options: ["W = nRΔT", "W = pΔV = 0", "W = nCᵥΔT", "W = Q"],
-        correctIndex: 1,
-        explanation: "Isochor: ΔV = 0 → W = p·ΔV = 0. Keine Volumenarbeit."
-      },
-      {
-        id: "natwiss-ueb-thermo2-q5",
-        question: "Was ist die spezifische Wärmekapazität bei konstantem Druck Cₚ für ein zweiatomiges ideales Gas?",
-        options: ["Cₚ = 3/2 R", "Cₚ = 5/2 R", "Cₚ = 7/2 R", "Cₚ = R"],
-        correctIndex: 2,
-        explanation: "Zweiatomig: Cᵥ = 5/2 R (3 Translation + 2 Rotation). Cₚ = Cᵥ + R = 7/2 R."
-      },
-      {
-        id: "natwiss-ueb-thermo2-q6",
-        question: "Wie viel Arbeit leistet ein Gas bei isothermer Expansion von V₁ = 1 m³ auf V₂ = 2 m³ bei T = 300 K (n = 1 mol)?",
-        options: ["W = nRT = 2494 J", "W = nRT·ln(2) ≈ 1729 J", "W = nRT·2 = 4988 J", "W = 0"],
-        correctIndex: 1,
-        explanation: "W = nRT·ln(V₂/V₁) = 1·8,314·300·ln(2) ≈ 2494·0,693 ≈ 1729 J."
-      },
-      {
-        id: "natwiss-ueb-thermo2-q7",
-        question: "Was ist der Unterschied zwischen Cₚ und Cᵥ bei idealen Gasen?",
-        options: ["Cₚ = Cᵥ immer", "Cₚ − Cᵥ = R (Mayer-Relation)", "Cᵥ > Cₚ immer", "Keine Beziehung"],
-        correctIndex: 1,
-        explanation: "Mayer-Relation: Cₚ − Cᵥ = R. Bei konstantem Druck muss zusätzlich Ausdehnungsarbeit geleistet werden."
-      },
-      {
-        id: "natwiss-ueb-thermo2-q8",
-        question: "Ein 100 g Kalorimeter (c = 900 J/(kg·K)) und 500 g Wasser (c = 4186 J/(kg·K)) nehmen Wärme auf. Welches dominiert die Gesamtwärmekapazität?",
-        options: ["Das Kalorimeter", "Das Wasser", "Beide gleich", "Keines nimmt Wärme auf"],
-        correctIndex: 1,
-        explanation: "C_W = 0,5·4186 = 2093 J/K >> C_kal = 0,1·900 = 90 J/K. Das Wasser dominiert stark."
-      },
-      {
-        id: "natwiss-ueb-thermo2-q9",
-        question: "Wie ändert sich die Temperatur bei adiabatischer Expansion eines Gases?",
-        options: ["Bleibt konstant", "Steigt an", "Sinkt", "Hängt vom Druck ab"],
-        correctIndex: 2,
-        explanation: "Adiabatische Expansion: Gas leistet Arbeit ohne Wärmezufuhr → Temperatur sinkt."
-      },
-      {
-        id: "natwiss-ueb-thermo2-q10",
-        question: "Was ist die Schmelzenthalpie (Schmelzwärme)?",
-        options: ["Energie pro Kelvin zum Erwärmen", "Energie zum Aufheizen eines Kilogramms", "Energie zum Schmelzen eines Kilogramms bei konstantem Druck", "Energie zur Verdampfung"],
-        correctIndex: 2,
-        explanation: "Schmelzwärme L: Energie pro kg, um Stoff vom Festkörper in die Flüssigkeit zu überführen (bei Schmelztemperatur). Für Wasser: L ≈ 334 kJ/kg."
-      }
+      { id: "natwiss-ueb-thermo2-q1", question: "Was gilt für die innere Energie bei einer isothermen Zustandsänderung eines idealen Gases?", options: ["ΔU = W", "ΔU = Q", "ΔU = 0", "ΔU = nCᵥΔT > 0"], correctIndex: 2, explanation: "Bei idealem Gas hängt U nur von T ab. Isotherm bedeutet ΔT = 0 → ΔU = 0." },
+      { id: "natwiss-ueb-thermo2-q2", question: "Wie lautet der erste Hauptsatz?", options: ["ΔU = W − Q", "ΔU = Q − W_vom_Gas", "Q = W", "ΔU = Q + W = 0"], correctIndex: 1, explanation: "ΔU = Q − W_vom_Gas (Techniker-Konvention) oder ΔU = Q + W_am_Gas (Physiker-Konvention)." },
+      { id: "natwiss-ueb-thermo2-q3", question: "Bei einer adiabatischen Zustandsänderung gilt:", options: ["W = 0", "Q = 0, ΔU = W", "ΔU = 0", "ΔT = 0"], correctIndex: 1, explanation: "Adiabat: kein Wärmeaustausch (Q = 0). 1. HS: ΔU = W (Arbeit wird auf innere Energie übertragen)." },
+      { id: "natwiss-ueb-thermo2-q4", question: "Ein Gas wird isochor erwärmt. Welche Arbeit wird geleistet?", options: ["W = nRΔT", "W = Q", "W = nCᵥΔT", "W = pΔV = 0"], correctIndex: 3, explanation: "Isochor: ΔV = 0 → W = p·ΔV = 0. Keine Volumenarbeit." },
+      { id: "natwiss-ueb-thermo2-q5", question: "Was ist die spezifische Wärmekapazität bei konstantem Druck Cₚ für ein zweiatomiges ideales Gas?", options: ["Cₚ = 3/2 R", "Cₚ = 5/2 R", "Cₚ = 7/2 R", "Cₚ = R"], correctIndex: 2, explanation: "Zweiatomig: Cᵥ = 5/2 R (3 Translation + 2 Rotation). Cₚ = Cᵥ + R = 7/2 R." },
+      { id: "natwiss-ueb-thermo2-q6", question: "Wie viel Arbeit leistet ein Gas bei isothermer Expansion von V₁ = 1 m³ auf V₂ = 2 m³ bei T = 300 K (n = 1 mol)?", options: ["W = nRT·ln(2) ≈ 1729 J", "W = 0", "W = nRT·2 = 4988 J", "W = nRT = 2494 J"], correctIndex: 0, explanation: "W = nRT·ln(V₂/V₁) = 1·8,314·300·ln(2) ≈ 2494·0,693 ≈ 1729 J." },
+      { id: "natwiss-ueb-thermo2-q7", question: "Was ist der Unterschied zwischen Cₚ und Cᵥ bei idealen Gasen?", options: ["Cᵥ > Cₚ immer", "Keine Beziehung", "Cₚ = Cᵥ immer", "Cₚ − Cᵥ = R (Mayer-Relation)"], correctIndex: 3, explanation: "Mayer-Relation: Cₚ − Cᵥ = R. Bei konstantem Druck muss zusätzlich Ausdehnungsarbeit geleistet werden." },
+      { id: "natwiss-ueb-thermo2-q8", question: "Ein 100 g Kalorimeter (c = 900 J/(kg·K)) und 500 g Wasser (c = 4186 J/(kg·K)) nehmen Wärme auf. Welches dominiert die Gesamtwärmekapazität?", options: ["Das Wasser", "Das Kalorimeter", "Beide gleich", "Keines nimmt Wärme auf"], correctIndex: 0, explanation: "C_W = 0,5·4186 = 2093 J/K >> C_kal = 0,1·900 = 90 J/K. Das Wasser dominiert stark." },
+      { id: "natwiss-ueb-thermo2-q9", question: "Wie ändert sich die Temperatur bei adiabatischer Expansion eines Gases?", options: ["Bleibt konstant", "Sinkt", "Hängt vom Druck ab", "Steigt an"], correctIndex: 1, explanation: "Adiabatische Expansion: Gas leistet Arbeit ohne Wärmezufuhr → Temperatur sinkt." },
+      { id: "natwiss-ueb-thermo2-q10", question: "Was ist die Schmelzenthalpie (Schmelzwärme)?", options: ["Energie pro Kelvin zum Erwärmen", "Energie zum Aufheizen eines Kilogramms", "Energie zum Schmelzen eines Kilogramms bei konstantem Druck", "Energie zur Verdampfung"], correctIndex: 2, explanation: "Schmelzwärme L: Energie pro kg, um Stoff vom Festkörper in die Flüssigkeit zu überführen (bei Schmelztemperatur). Für Wasser: L ≈ 334 kJ/kg." }
     ]
   },
   {
@@ -300,76 +180,16 @@ const NATWISS_CHAPTER16_TOPICS = [
       }
     ],
     quiz: [
-      {
-        id: "natwiss-ueb-thermo3-q1",
-        question: "Was ist der Wirkungsgrad einer Wärmekraftmaschine?",
-        options: ["η = Q_C/Q_H", "η = W/Q_H", "η = Q_H/W", "η = T_C/T_H"],
-        correctIndex: 1,
-        explanation: "Wirkungsgrad: η = W/Q_H = (Q_H − Q_C)/Q_H = 1 − Q_C/Q_H."
-      },
-      {
-        id: "natwiss-ueb-thermo3-q2",
-        question: "Was sagt der zweite Hauptsatz der Thermodynamik aus?",
-        options: ["Energie kann nicht erzeugt werden", "Die Entropie eines abgeschlossenen Systems nimmt nie ab", "Wärme fließt immer zum heißen Körper", "Alle Prozesse sind reversibel"],
-        correctIndex: 1,
-        explanation: "2. HS: In einem abgeschlossenen System gilt ΔS ≥ 0. Bei irreversiblen Prozessen strikt ΔS > 0."
-      },
-      {
-        id: "natwiss-ueb-thermo3-q3",
-        question: "Bei einem Carnot-Kreisprozess: Warum ist T_H > T_C zwingend?",
-        options: ["Damit η > 100%", "Damit Wärme freiwillig von T_H zu T_C fließt (2. HS)", "Damit der Druck abnimmt", "Keine Bedingung"],
-        correctIndex: 1,
-        explanation: "Wärme fließt spontan vom heißen zum kalten Reservoir. Der Carnot-Prozess nutzt diesen Fluss zur Arbeitsgewinnung."
-      },
-      {
-        id: "natwiss-ueb-thermo3-q4",
-        question: "Welche Entropieänderung hat ein reversibler Kreisprozess insgesamt?",
-        options: ["ΔS > 0", "ΔS = 0", "ΔS < 0", "Hängt von der Temperatur ab"],
-        correctIndex: 1,
-        explanation: "Reversibler Prozess: ΔS_ges = 0. Irreversibler Prozess: ΔS_ges > 0."
-      },
-      {
-        id: "natwiss-ueb-thermo3-q5",
-        question: "Eine Maschine arbeitet zwischen 500°C und 20°C. Wie groß ist der maximale Carnot-Wirkungsgrad?",
-        options: ["96%", "62%", "50%", "38%"],
-        correctIndex: 1,
-        explanation: "η_C = 1 − T_C/T_H = 1 − 293/773 = 1 − 0,379 = 0,621 ≈ 62%."
-      },
-      {
-        id: "natwiss-ueb-thermo3-q6",
-        question: "Woran erkennt man im p-V-Diagramm, ob ein Kreisprozess als Wärmekraftmaschine oder Wärmepumpe läuft?",
-        options: ["Am Druck", "Am Umlaufsinn: Uhrzeigersinn = Kraftmaschine, Gegenuhrzeigersinn = Pumpe", "An der Fläche", "An der Temperatur"],
-        correctIndex: 1,
-        explanation: "Uhrzeigersinn im p-V-Diagramm: Netto-Arbeit positiv → Kraftmaschine. Gegenuhrzeigersinn: Arbeit zugeführt → Kältemaschine/Wärmepumpe."
-      },
-      {
-        id: "natwiss-ueb-thermo3-q7",
-        question: "Was beschreibt die Boltzmann-Entropieformel S = k_B·ln(Ω)?",
-        options: ["Wärmekapazität eines Gases", "Statistische Entropie: verknüpft Entropie mit Anzahl der Mikrozustände Ω", "Druck in einem Gas", "Temperaturänderung"],
-        correctIndex: 1,
-        explanation: "S = k_B·ln(Ω). Ω = Anzahl der möglichen Mikrozustände. Mehr Mikrozustände → höhere Entropie."
-      },
-      {
-        id: "natwiss-ueb-thermo3-q8",
-        question: "Ein Kühlschrank pumpt Wärme von innen (T_C) nach außen (T_H). Welche Mindestarbeit ist nötig?",
-        options: ["W = Q_C", "W = Q_C·(T_H/T_C − 1)", "W = Q_H/η_C", "W = 0"],
-        correctIndex: 1,
-        explanation: "COP einer idealen Kältemaschine: COP = T_C/(T_H − T_C). W = Q_C/COP = Q_C·(T_H − T_C)/T_C = Q_C·(T_H/T_C − 1)."
-      },
-      {
-        id: "natwiss-ueb-thermo3-q9",
-        question: "Was ist beim isothermen Prozess (T = const.) des idealen Gases für die Entropieänderung korrekt?",
-        options: ["ΔS = 0", "ΔS = Q/T = nR·ln(V₂/V₁)", "ΔS = nCᵥ·ln(T₂/T₁)", "ΔS < 0 immer"],
-        correctIndex: 1,
-        explanation: "ΔS = Q_rev/T. Bei isotherm-reversibler Expansion: Q = nRT·ln(V₂/V₁) → ΔS = nR·ln(V₂/V₁)."
-      },
-      {
-        id: "natwiss-ueb-thermo3-q10",
-        question: "Warum kann kein realer Motor den Carnot-Wirkungsgrad erreichen?",
-        options: ["Weil Carnot η < 100% liefert", "Weil alle realen Prozesse irreversibel sind (Reibung, endliche Temperaturdifferenzen)", "Weil Carnot nur für Gase gilt", "Weil T_C immer 0 K sein müsste"],
-        correctIndex: 1,
-        explanation: "Der Carnot-Wirkungsgrad gilt nur für vollständig reversible Prozesse. Reale Maschinen haben stets irreversible Verluste (Reibung, Wärmeübertragung über endliche ΔT)."
-      }
+      { id: "natwiss-ueb-thermo3-q1", question: "Was ist der Wirkungsgrad einer Wärmekraftmaschine?", options: ["η = Q_H/W", "η = Q_C/Q_H", "η = T_C/T_H", "η = W/Q_H"], correctIndex: 3, explanation: "Wirkungsgrad: η = W/Q_H = (Q_H − Q_C)/Q_H = 1 − Q_C/Q_H." },
+      { id: "natwiss-ueb-thermo3-q2", question: "Was sagt der zweite Hauptsatz der Thermodynamik aus?", options: ["Alle Prozesse sind reversibel", "Energie kann nicht erzeugt werden", "Wärme fließt immer zum heißen Körper", "Die Entropie eines abgeschlossenen Systems nimmt nie ab"], correctIndex: 3, explanation: "2. HS: In einem abgeschlossenen System gilt ΔS ≥ 0. Bei irreversiblen Prozessen strikt ΔS > 0." },
+      { id: "natwiss-ueb-thermo3-q3", question: "Bei einem Carnot-Kreisprozess: Warum ist T_H > T_C zwingend?", options: ["Damit Wärme freiwillig von T_H zu T_C fließt (2. HS)", "Keine Bedingung", "Damit der Druck abnimmt", "Damit η > 100%"], correctIndex: 0, explanation: "Wärme fließt spontan vom heißen zum kalten Reservoir. Der Carnot-Prozess nutzt diesen Fluss zur Arbeitsgewinnung." },
+      { id: "natwiss-ueb-thermo3-q4", question: "Welche Entropieänderung hat ein reversibler Kreisprozess insgesamt?", options: ["ΔS > 0", "ΔS < 0", "Hängt von der Temperatur ab", "ΔS = 0"], correctIndex: 3, explanation: "Reversibler Prozess: ΔS_ges = 0. Irreversibler Prozess: ΔS_ges > 0." },
+      { id: "natwiss-ueb-thermo3-q5", question: "Eine Maschine arbeitet zwischen 500°C und 20°C. Wie groß ist der maximale Carnot-Wirkungsgrad?", options: ["62%", "96%", "38%", "50%"], correctIndex: 0, explanation: "η_C = 1 − T_C/T_H = 1 − 293/773 = 1 − 0,379 = 0,621 ≈ 62%." },
+      { id: "natwiss-ueb-thermo3-q6", question: "Woran erkennt man im p-V-Diagramm, ob ein Kreisprozess als Wärmekraftmaschine oder Wärmepumpe läuft?", options: ["An der Fläche", "An der Temperatur", "Am Umlaufsinn: Uhrzeigersinn = Kraftmaschine, Gegenuhrzeigersinn = Pumpe", "Am Druck"], correctIndex: 2, explanation: "Uhrzeigersinn im p-V-Diagramm: Netto-Arbeit positiv → Kraftmaschine. Gegenuhrzeigersinn: Arbeit zugeführt → Kältemaschine/Wärmepumpe." },
+      { id: "natwiss-ueb-thermo3-q7", question: "Was beschreibt die Boltzmann-Entropieformel S = k_B·ln(Ω)?", options: ["Statistische Entropie: verknüpft Entropie mit Anzahl der Mikrozustände Ω", "Wärmekapazität eines Gases", "Druck in einem Gas", "Temperaturänderung"], correctIndex: 0, explanation: "S = k_B·ln(Ω). Ω = Anzahl der möglichen Mikrozustände. Mehr Mikrozustände → höhere Entropie." },
+      { id: "natwiss-ueb-thermo3-q8", question: "Ein Kühlschrank pumpt Wärme von innen (T_C) nach außen (T_H). Welche Mindestarbeit ist nötig?", options: ["W = 0", "W = Q_C·(T_H/T_C − 1)", "W = Q_C", "W = Q_H/η_C"], correctIndex: 1, explanation: "COP einer idealen Kältemaschine: COP = T_C/(T_H − T_C). W = Q_C/COP = Q_C·(T_H − T_C)/T_C = Q_C·(T_H/T_C − 1)." },
+      { id: "natwiss-ueb-thermo3-q9", question: "Was ist beim isothermen Prozess (T = const.) des idealen Gases für die Entropieänderung korrekt?", options: ["ΔS = nCᵥ·ln(T₂/T₁)", "ΔS = 0", "ΔS = Q/T = nR·ln(V₂/V₁)", "ΔS < 0 immer"], correctIndex: 2, explanation: "ΔS = Q_rev/T. Bei isotherm-reversibler Expansion: Q = nRT·ln(V₂/V₁) → ΔS = nR·ln(V₂/V₁)." },
+      { id: "natwiss-ueb-thermo3-q10", question: "Warum kann kein realer Motor den Carnot-Wirkungsgrad erreichen?", options: ["Weil Carnot η < 100% liefert", "Weil alle realen Prozesse irreversibel sind (Reibung, endliche Temperaturdifferenzen)", "Weil T_C immer 0 K sein müsste", "Weil Carnot nur für Gase gilt"], correctIndex: 1, explanation: "Der Carnot-Wirkungsgrad gilt nur für vollständig reversible Prozesse. Reale Maschinen haben stets irreversible Verluste (Reibung, Wärmeübertragung über endliche ΔT)." }
     ]
   }
 ];
