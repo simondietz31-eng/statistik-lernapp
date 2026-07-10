@@ -82,3 +82,21 @@ function resetProgress() {
   progress.studiengangFilter = getStudiengangFilter();
   saveProgress(progress);
 }
+
+function exportProgress() {
+  return JSON.stringify(loadProgress(), null, 2);
+}
+
+function importProgress(jsonString) {
+  let parsed;
+  try {
+    parsed = JSON.parse(jsonString);
+  } catch (e) {
+    return { ok: false, error: "Die Datei enthält kein gültiges JSON." };
+  }
+  if (!parsed || typeof parsed !== "object" || parsed.version !== 2 || typeof parsed.subjects !== "object") {
+    return { ok: false, error: "Die Datei sieht nicht wie eine exportierte Fortschrittsdatei aus." };
+  }
+  saveProgress(Object.assign(defaultProgress(), parsed));
+  return { ok: true };
+}
