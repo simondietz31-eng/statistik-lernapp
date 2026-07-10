@@ -122,6 +122,35 @@ const FINV_TOPICS = [].concat(
   FINV_CHAPTER10_TOPICS
 );
 
+const VERTRIEB_CHAPTERS = [
+  { id: 1,  title: "Grundlagen: Vertrieb als Boundary-Spanning-Funktion",   accent: "#1d6f5c", group: "Kunde & Markt" },
+  { id: 2,  title: "Kundenzufriedenheit & Kundenbindung",                  accent: "#2c8a72", group: "Kunde & Markt" },
+  { id: 3,  title: "Wettbewerbsmechanismen im Vertrieb",                   accent: "#3ea488", group: "Kunde & Markt" },
+  { id: 4,  title: "Vertriebswege, Vertriebsorgane & Macht",               accent: "#a6631f", group: "Vertriebswege & Preis" },
+  { id: 5,  title: "Preisfindung & Preisdifferenzierung",                  accent: "#bf7a2e", group: "Vertriebswege & Preis" },
+  { id: 6,  title: "Preisbündelung",                                      accent: "#d6923f", group: "Vertriebswege & Preis" },
+  { id: 7,  title: "Persönlicher Verkauf: Fragetechniken & Argumentation", accent: "#6a3aa0", group: "Verkaufsgespräch" },
+  { id: 8,  title: "Einwandbehandlung & Geistige Brandstiftung",           accent: "#8850bb", group: "Verkaufsgespräch" },
+  { id: 9,  title: "Vertriebscontrolling",                                 accent: "#b0405a", group: "Steuerung & Organisation" },
+  { id: 10, title: "Vertriebslogistik, IT-Systeme & Vertriebskultur",      accent: "#c85570", group: "Steuerung & Organisation" },
+  { id: 11, title: "Key-Account-Management",                              accent: "#d97088", group: "Steuerung & Organisation" },
+  { id: 12, title: "Digitalisierung im Vertrieb",                         accent: "#e88ba0", group: "Steuerung & Organisation" }
+];
+const VERTRIEB_TOPICS = [].concat(
+  VERTRIEB_CHAPTER1_TOPICS,
+  VERTRIEB_CHAPTER2_TOPICS,
+  VERTRIEB_CHAPTER3_TOPICS,
+  VERTRIEB_CHAPTER4_TOPICS,
+  VERTRIEB_CHAPTER5_TOPICS,
+  VERTRIEB_CHAPTER6_TOPICS,
+  VERTRIEB_CHAPTER7_TOPICS,
+  VERTRIEB_CHAPTER8_TOPICS,
+  VERTRIEB_CHAPTER9_TOPICS,
+  VERTRIEB_CHAPTER10_TOPICS,
+  VERTRIEB_CHAPTER11_TOPICS,
+  VERTRIEB_CHAPTER12_TOPICS
+);
+
 const SUBJECTS = [
   {
     id: "statistik",
@@ -176,5 +205,14 @@ const SUBJECTS = [
     accent: "#1f5b68",
     chapters: FINV_CHAPTERS,
     topics: FINV_TOPICS
+  },
+  {
+    id: "vertrieb",
+    title: "Vertrieb",
+    studiengang: ["Betriebswirtschaft"],
+    icon: "🤝",
+    accent: "#1d6f5c",
+    chapters: VERTRIEB_CHAPTERS,
+    topics: VERTRIEB_TOPICS
   }
 ];
