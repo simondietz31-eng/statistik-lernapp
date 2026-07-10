@@ -161,5 +161,47 @@ document.getElementById("btn-reset-progress").addEventListener("click", function
   }
 });
 
+document.getElementById("btn-export-progress").addEventListener("click", function (e) {
+  e.preventDefault();
+  const json = exportProgress();
+  const blob = new Blob([json], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  const today = new Date().toISOString().slice(0, 10);
+  a.href = url;
+  a.download = "lernapp-fortschritt-" + today + ".json";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+});
+
+const importFileInput = document.getElementById("import-file-input");
+
+document.getElementById("btn-import-progress").addEventListener("click", function (e) {
+  e.preventDefault();
+  importFileInput.value = "";
+  importFileInput.click();
+});
+
+importFileInput.addEventListener("change", function () {
+  const file = importFileInput.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function () {
+    if (!window.confirm("Importierte Datei anwenden? Der aktuelle Fortschritt auf diesem Gerät wird dabei überschrieben.")) return;
+    const result = importProgress(reader.result);
+    if (!result.ok) {
+      window.alert("Import fehlgeschlagen: " + result.error);
+      return;
+    }
+    applyDarkModePref();
+    const stayOnView = state.view === "STUDIENGANG_SELECT" || state.view === "SUBJECT_SELECT";
+    setView(stayOnView ? state.view : "TOPIC_GRID");
+    window.alert("Fortschritt erfolgreich importiert.");
+  };
+  reader.readAsText(file);
+});
+
 applyDarkModePref();
 setView("STUDIENGANG_SELECT");
