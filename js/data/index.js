@@ -209,7 +209,7 @@ const SUBJECTS = [
   {
     id: "vertrieb",
     title: "Vertrieb",
-    studiengang: ["Betriebswirtschaft"],
+    studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
     icon: "🤝",
     accent: "#1d6f5c",
     chapters: VERTRIEB_CHAPTERS,
