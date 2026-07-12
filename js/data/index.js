@@ -151,6 +151,29 @@ const VERTRIEB_TOPICS = [].concat(
   VERTRIEB_CHAPTER12_TOPICS
 );
 
+const MARKETING_CHAPTERS = [
+  { id: 1, title: "Grundlagen des Marketing",           accent: "#e8590c", group: "Grundlagen" },
+  { id: 2, title: "Märkte verstehen",                    accent: "#1971c2", group: "Grundlagen" },
+  { id: 3, title: "Kaufverhalten der Konsumenten",       accent: "#9c36b5", group: "Kaufverhalten & Marktforschung" },
+  { id: 4, title: "Kaufverhalten von Organisationen (B2B)", accent: "#0c8599", group: "Kaufverhalten & Marktforschung" },
+  { id: 5, title: "Marktforschung",                      accent: "#2f9e44", group: "Kaufverhalten & Marktforschung" },
+  { id: 6, title: "Strategische Marketingplanung",       accent: "#f08c00", group: "Strategie" },
+  { id: 7, title: "Produktpolitik",                      accent: "#4263eb", group: "Marketing-Mix" },
+  { id: 8, title: "Preispolitik",                         accent: "#e64980", group: "Marketing-Mix" },
+  { id: 9, title: "Kommunikationspolitik",                accent: "#d9480f", group: "Marketing-Mix" }
+];
+const MARKETING_TOPICS = [].concat(
+  MARKETING_CHAPTER1_TOPICS,
+  MARKETING_CHAPTER2_TOPICS,
+  MARKETING_CHAPTER3_TOPICS,
+  MARKETING_CHAPTER4_TOPICS,
+  MARKETING_CHAPTER5_TOPICS,
+  MARKETING_CHAPTER6_TOPICS,
+  MARKETING_CHAPTER7_TOPICS,
+  MARKETING_CHAPTER8_TOPICS,
+  MARKETING_CHAPTER9_TOPICS
+);
+
 const SUBJECTS = [
   {
     id: "statistik",
@@ -214,5 +237,14 @@ const SUBJECTS = [
     accent: "#1d6f5c",
     chapters: VERTRIEB_CHAPTERS,
     topics: VERTRIEB_TOPICS
+  },
+  {
+    id: "marketing",
+    title: "Marketing",
+    studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    icon: "🎯",
+    accent: "#e64980",
+    chapters: MARKETING_CHAPTERS,
+    topics: MARKETING_TOPICS
   }
 ];
