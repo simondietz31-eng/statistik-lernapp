@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lernapp</title>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -66,58 +66,25 @@
 </main>
 
 <footer class="app-footer">
-  <a id="btn-export-progress" href="#" role="button">Fortschritt exportieren</a>
+  <button id="btn-export-progress" type="button" class="footer-link-btn">Fortschritt exportieren</button>
   <span aria-hidden="true"> · </span>
-  <a id="btn-import-progress" href="#" role="button">Fortschritt importieren</a>
+  <button id="btn-import-progress" type="button" class="footer-link-btn">Fortschritt importieren</button>
   <span aria-hidden="true"> · </span>
-  <a id="btn-reset-progress" href="#" role="button">Fortschritt zurücksetzen</a>
+  <button id="btn-reset-progress" type="button" class="footer-link-btn">Fortschritt zurücksetzen</button>
   <input id="import-file-input" type="file" accept="application/json" hidden>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous"></script>
+<!-- DATA_SCRIPTS_START -->
+<script src="js/data/bwl-strang-a.js"></script>
+<script src="js/data/bwl-strang-b.js"></script>
 <script src="js/data/chapter1.js"></script>
 <script src="js/data/chapter2.js"></script>
 <script src="js/data/chapter3.js"></script>
 <script src="js/data/chapter4.js"></script>
-<script src="js/data/bwl-strang-a.js"></script>
-<script src="js/data/bwl-strang-b.js"></script>
-<script src="js/data/klr-chapter1.js"></script>
-<script src="js/data/klr-chapter2.js"></script>
-<script src="js/data/klr-chapter3.js"></script>
-<script src="js/data/klr-chapter4.js"></script>
-<script src="js/data/klr-chapter5.js"></script>
-<script src="js/data/klr-chapter6.js"></script>
-<script src="js/data/klr-chapter7.js"></script>
-<script src="js/data/orgapersonal-chapter1.js"></script>
-<script src="js/data/orgapersonal-chapter2.js"></script>
-<script src="js/data/orgapersonal-chapter3.js"></script>
-<script src="js/data/orgapersonal-chapter4.js"></script>
-<script src="js/data/orgapersonal-chapter5.js"></script>
-<script src="js/data/orgapersonal-chapter6.js"></script>
-<script src="js/data/orgapersonal-chapter7.js"></script>
-<script src="js/data/orgapersonal-chapter8.js"></script>
-<script src="js/data/orgapersonal-chapter9.js"></script>
-<script src="js/data/orgapersonal-chapter10.js"></script>
-<script src="js/data/orgapersonal-chapter11.js"></script>
-<script src="js/data/natwiss-chapter1.js"></script>
-<script src="js/data/natwiss-chapter2.js"></script>
-<script src="js/data/natwiss-chapter3.js"></script>
-<script src="js/data/natwiss-chapter4.js"></script>
-<script src="js/data/natwiss-chapter5.js"></script>
-<script src="js/data/natwiss-chapter6.js"></script>
-<script src="js/data/natwiss-chapter7.js"></script>
-<script src="js/data/natwiss-chapter8.js"></script>
-<script src="js/data/natwiss-chapter9.js"></script>
-<script src="js/data/natwiss-chapter10.js"></script>
-<script src="js/data/natwiss-chapter11.js"></script>
-<script src="js/data/natwiss-chapter12.js"></script>
-<script src="js/data/natwiss-chapter13.js"></script>
-<script src="js/data/natwiss-chapter14.js"></script>
-<script src="js/data/natwiss-chapter15.js"></script>
-<script src="js/data/natwiss-chapter16.js"></script>
-<script src="js/data/natwiss-chapter17.js"></script>
 <script src="js/data/finv-chapter1.js"></script>
+<script src="js/data/finv-chapter10.js"></script>
 <script src="js/data/finv-chapter2.js"></script>
 <script src="js/data/finv-chapter3.js"></script>
 <script src="js/data/finv-chapter4.js"></script>
@@ -126,8 +93,45 @@
 <script src="js/data/finv-chapter7.js"></script>
 <script src="js/data/finv-chapter8.js"></script>
 <script src="js/data/finv-chapter9.js"></script>
-<script src="js/data/finv-chapter10.js"></script>
+<script src="js/data/klr-chapter1.js"></script>
+<script src="js/data/klr-chapter2.js"></script>
+<script src="js/data/klr-chapter3.js"></script>
+<script src="js/data/klr-chapter4.js"></script>
+<script src="js/data/klr-chapter5.js"></script>
+<script src="js/data/klr-chapter6.js"></script>
+<script src="js/data/klr-chapter7.js"></script>
+<script src="js/data/natwiss-chapter1.js"></script>
+<script src="js/data/natwiss-chapter10.js"></script>
+<script src="js/data/natwiss-chapter11.js"></script>
+<script src="js/data/natwiss-chapter12.js"></script>
+<script src="js/data/natwiss-chapter13.js"></script>
+<script src="js/data/natwiss-chapter14.js"></script>
+<script src="js/data/natwiss-chapter15.js"></script>
+<script src="js/data/natwiss-chapter16.js"></script>
+<script src="js/data/natwiss-chapter17.js"></script>
+<script src="js/data/natwiss-chapter2.js"></script>
+<script src="js/data/natwiss-chapter3.js"></script>
+<script src="js/data/natwiss-chapter4.js"></script>
+<script src="js/data/natwiss-chapter5.js"></script>
+<script src="js/data/natwiss-chapter6.js"></script>
+<script src="js/data/natwiss-chapter7.js"></script>
+<script src="js/data/natwiss-chapter8.js"></script>
+<script src="js/data/natwiss-chapter9.js"></script>
+<script src="js/data/orgapersonal-chapter1.js"></script>
+<script src="js/data/orgapersonal-chapter10.js"></script>
+<script src="js/data/orgapersonal-chapter11.js"></script>
+<script src="js/data/orgapersonal-chapter2.js"></script>
+<script src="js/data/orgapersonal-chapter3.js"></script>
+<script src="js/data/orgapersonal-chapter4.js"></script>
+<script src="js/data/orgapersonal-chapter5.js"></script>
+<script src="js/data/orgapersonal-chapter6.js"></script>
+<script src="js/data/orgapersonal-chapter7.js"></script>
+<script src="js/data/orgapersonal-chapter8.js"></script>
+<script src="js/data/orgapersonal-chapter9.js"></script>
 <script src="js/data/vertrieb-chapter1.js"></script>
+<script src="js/data/vertrieb-chapter10.js"></script>
+<script src="js/data/vertrieb-chapter11.js"></script>
+<script src="js/data/vertrieb-chapter12.js"></script>
 <script src="js/data/vertrieb-chapter2.js"></script>
 <script src="js/data/vertrieb-chapter3.js"></script>
 <script src="js/data/vertrieb-chapter4.js"></script>
@@ -136,10 +140,8 @@
 <script src="js/data/vertrieb-chapter7.js"></script>
 <script src="js/data/vertrieb-chapter8.js"></script>
 <script src="js/data/vertrieb-chapter9.js"></script>
-<script src="js/data/vertrieb-chapter10.js"></script>
-<script src="js/data/vertrieb-chapter11.js"></script>
-<script src="js/data/vertrieb-chapter12.js"></script>
 <script src="js/data/index.js"></script>
+<!-- DATA_SCRIPTS_END -->
 <script src="js/katex-helper.js"></script>
 <script src="js/storage.js"></script>
 <script src="js/render.js"></script>
