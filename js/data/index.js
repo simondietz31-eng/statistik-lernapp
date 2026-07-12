@@ -160,7 +160,8 @@ const MARKETING_CHAPTERS = [
   { id: 6, title: "Strategische Marketingplanung",       accent: "#f08c00", group: "Strategie" },
   { id: 7, title: "Produktpolitik",                      accent: "#4263eb", group: "Marketing-Mix" },
   { id: 8, title: "Preispolitik",                         accent: "#e64980", group: "Marketing-Mix" },
-  { id: 9, title: "Kommunikationspolitik",                accent: "#d9480f", group: "Marketing-Mix" }
+  { id: 9, title: "Kommunikationspolitik",                accent: "#d9480f", group: "Marketing-Mix" },
+  { id: 10, title: "Distributionspolitik",                accent: "#0b7285", group: "Marketing-Mix" }
 ];
 const MARKETING_TOPICS = [].concat(
   MARKETING_CHAPTER1_TOPICS,
@@ -171,7 +172,8 @@ const MARKETING_TOPICS = [].concat(
   MARKETING_CHAPTER6_TOPICS,
   MARKETING_CHAPTER7_TOPICS,
   MARKETING_CHAPTER8_TOPICS,
-  MARKETING_CHAPTER9_TOPICS
+  MARKETING_CHAPTER9_TOPICS,
+  MARKETING_CHAPTER10_TOPICS
 );
 
 const SUBJECTS = [
