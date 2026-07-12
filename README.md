@@ -20,4 +20,13 @@ js/app.js             Navigations-Logik (State Machine)
 js/render.js           DOM-Aufbau je View
 js/storage.js          Fortschritt in localStorage
 js/katex-helper.js      Formel-Rendering
+scripts/               Node-Hilfsskripte für Maintainer (kein Build-Schritt für die App selbst)
 ```
+
+## Neues Kapitel hinzufügen
+
+1. Neue Datei unter `js/data/` anlegen (z. B. `js/data/neues-fach-chapter1.js`), analog zu einer bestehenden Datei.
+2. Falls es ein neues Fach ist: Einträge in `js/data/index.js` ergänzen (Kapitel-Array, `TOPICS`-Konkatenation, `SUBJECTS`-Eintrag).
+3. `node scripts/generate-script-tags.js` ausführen - trägt die neue Datei automatisch in `index.html` ein (Reihenfolge muss nicht mehr von Hand gepflegt werden).
+4. `node scripts/validate-content.js` ausführen - prüft eindeutige IDs, gültige Kapitel-Referenzen und gültige `correctIndex`-Werte in Quizfragen.
+5. Beide Skripte laufen zusätzlich automatisch in der GitHub-Actions-Pipeline (`.github/workflows/pages.yml`) vor jedem Deploy.

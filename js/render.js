@@ -26,6 +26,67 @@ const STUDIENGANG_ICONS = {
   "Integrative Gesundheitsförderung": "🌱"
 };
 
+// Shared builder for the "topic-card" style buttons used by the
+// studiengang/subject/topic grids - they only differ in which fields are
+// populated (accent color, meta badge, summary text, status badges).
+function buildCard(options) {
+  const card = document.createElement("button");
+  card.type = "button";
+  card.className = "topic-card" + (options.className ? " " + options.className : "");
+  Object.keys(options.dataset || {}).forEach(function (key) {
+    card.dataset[key] = options.dataset[key];
+  });
+  if (options.accent) card.style.setProperty("--card-accent", options.accent);
+
+  const top = document.createElement("div");
+  top.className = "topic-card-top";
+
+  const icon = document.createElement("span");
+  icon.className = "topic-card-icon";
+  icon.textContent = options.icon || "📘";
+  top.appendChild(icon);
+
+  if (options.meta) {
+    const meta = document.createElement("span");
+    meta.className = "topic-card-meta";
+    meta.textContent = options.meta;
+    top.appendChild(meta);
+  }
+
+  card.appendChild(top);
+
+  const title = document.createElement("div");
+  title.className = "topic-card-title";
+  title.textContent = options.title;
+  card.appendChild(title);
+
+  if (options.summary) {
+    const summary = document.createElement("p");
+    summary.className = "topic-card-summary";
+    summary.textContent = options.summary;
+    card.appendChild(summary);
+  }
+
+  if (options.badges && options.badges.length > 0) {
+    const badges = document.createElement("div");
+    badges.className = "topic-card-badges";
+    options.badges.forEach(function (b) {
+      const badge = document.createElement("span");
+      badge.className = "badge " + b.className;
+      badge.textContent = b.text;
+      badges.appendChild(badge);
+    });
+    card.appendChild(badges);
+  }
+
+  const link = document.createElement("span");
+  link.className = "topic-card-link";
+  link.textContent = "Öffnen →";
+  card.appendChild(link);
+
+  return card;
+}
+
 function renderStudiengangGrid(container, subjects) {
   container.innerHTML = "";
   const grid = document.createElement("div");
@@ -39,38 +100,13 @@ function renderStudiengangGrid(container, subjects) {
 
   options.forEach(function (option) {
     const count = filterSubjectsByStudiengang(subjects, option.id).length;
-
-    const card = document.createElement("button");
-    card.type = "button";
-    card.className = "topic-card studiengang-card";
-    card.dataset.studiengang = option.id;
-
-    const top = document.createElement("div");
-    top.className = "topic-card-top";
-
-    const icon = document.createElement("span");
-    icon.className = "topic-card-icon";
-    icon.textContent = option.icon;
-    top.appendChild(icon);
-
-    card.appendChild(top);
-
-    const title = document.createElement("div");
-    title.className = "topic-card-title";
-    title.textContent = option.label;
-    card.appendChild(title);
-
-    const summary = document.createElement("p");
-    summary.className = "topic-card-summary";
-    summary.textContent = count + (count === 1 ? " Fach" : " Fächer");
-    card.appendChild(summary);
-
-    const link = document.createElement("span");
-    link.className = "topic-card-link";
-    link.textContent = "Öffnen →";
-    card.appendChild(link);
-
-    grid.appendChild(card);
+    grid.appendChild(buildCard({
+      className: "studiengang-card",
+      dataset: { studiengang: option.id },
+      icon: option.icon,
+      title: option.label,
+      summary: count + (count === 1 ? " Fach" : " Fächer")
+    }));
   });
 
   container.appendChild(grid);
@@ -90,57 +126,19 @@ function renderSubjectGrid(container, subjects, allProgress) {
   }
 
   subjects.forEach(function (subject) {
-    const card = document.createElement("button");
-    card.type = "button";
-    card.className = "topic-card subject-card";
-    card.dataset.subjectId = subject.id;
-    card.style.setProperty("--card-accent", subject.accent);
-
-    const top = document.createElement("div");
-    top.className = "topic-card-top";
-
-    const icon = document.createElement("span");
-    icon.className = "topic-card-icon";
-    icon.textContent = subject.icon || "📘";
-    top.appendChild(icon);
-
-    if (subject.studiengang && subject.studiengang.length > 0) {
-      const badge = document.createElement("span");
-      badge.className = "topic-card-meta";
-      badge.textContent = subject.studiengang.join(" / ").toUpperCase();
-      top.appendChild(badge);
-    }
-
-    card.appendChild(top);
-
-    const title = document.createElement("div");
-    title.className = "topic-card-title";
-    title.textContent = subject.title;
-    card.appendChild(title);
-
-    const summary = document.createElement("p");
-    summary.className = "topic-card-summary";
-    summary.textContent = subject.chapters.length + " Kapitel · " + subject.topics.length + " Themen";
-    card.appendChild(summary);
-
     const progress = (allProgress.subjects && allProgress.subjects[subject.id]) || { viewedTopics: {}, quizResults: {} };
     const viewedCount = Object.keys(progress.viewedTopics).length;
-    if (viewedCount > 0) {
-      const badges = document.createElement("div");
-      badges.className = "topic-card-badges";
-      const viewedBadge = document.createElement("span");
-      viewedBadge.className = "badge viewed";
-      viewedBadge.textContent = viewedCount + " von " + subject.topics.length + " gelernt";
-      badges.appendChild(viewedBadge);
-      card.appendChild(badges);
-    }
 
-    const link = document.createElement("span");
-    link.className = "topic-card-link";
-    link.textContent = "Öffnen →";
-    card.appendChild(link);
-
-    grid.appendChild(card);
+    grid.appendChild(buildCard({
+      className: "subject-card",
+      dataset: { subjectId: subject.id },
+      accent: subject.accent,
+      icon: subject.icon,
+      meta: subject.studiengang && subject.studiengang.length > 0 ? subject.studiengang.join(" / ").toUpperCase() : null,
+      title: subject.title,
+      summary: subject.chapters.length + " Kapitel · " + subject.topics.length + " Themen",
+      badges: viewedCount > 0 ? [{ className: "viewed", text: viewedCount + " von " + subject.topics.length + " gelernt" }] : []
+    }));
   });
 
   container.appendChild(grid);
@@ -189,67 +187,28 @@ function buildChapterBlock(chapter, topics, progress) {
   grid.className = "topic-grid";
 
   chapterTopics.forEach(function (topic) {
-    const card = document.createElement("button");
-    card.type = "button";
-    card.className = "topic-card";
-    card.dataset.topicId = topic.id;
-    card.style.setProperty("--card-accent", chapter.accent);
+    const metaParts = [];
+    if (topic.exercises.length) metaParts.push(topic.exercises.length + " ÜBUNGEN");
+    if (topic.quiz.length) metaParts.push(topic.quiz.length + " QUIZFRAGEN");
 
-    const top = document.createElement("div");
-    top.className = "topic-card-top";
-
-    const icon = document.createElement("span");
-    icon.className = "topic-card-icon";
-    icon.textContent = topic.icon || "📘";
-    top.appendChild(icon);
-
-    const metaBadge = document.createElement("span");
-    metaBadge.className = "topic-card-meta";
-    const parts = [];
-    if (topic.exercises.length) parts.push(topic.exercises.length + " ÜBUNGEN");
-    if (topic.quiz.length) parts.push(topic.quiz.length + " QUIZFRAGEN");
-    metaBadge.textContent = parts.join(" · ");
-    top.appendChild(metaBadge);
-
-    card.appendChild(top);
-
-    const title = document.createElement("div");
-    title.className = "topic-card-title";
-    title.textContent = topic.title;
-    card.appendChild(title);
-
-    if (topic.summary) {
-      const summary = document.createElement("p");
-      summary.className = "topic-card-summary";
-      summary.textContent = topic.summary;
-      card.appendChild(summary);
-    }
-
-    const badges = document.createElement("div");
-    badges.className = "topic-card-badges";
-
+    const badges = [];
     if (progress.viewedTopics[topic.id]) {
-      const viewedBadge = document.createElement("span");
-      viewedBadge.className = "badge viewed";
-      viewedBadge.textContent = "gelernt";
-      badges.appendChild(viewedBadge);
+      badges.push({ className: "viewed", text: "gelernt" });
     }
-
     const quizResult = progress.quizResults[topic.id];
     if (quizResult) {
-      const scoreBadge = document.createElement("span");
-      scoreBadge.className = "badge score";
-      scoreBadge.textContent = "Bestes Quiz: " + quizResult.bestScore + "/" + quizResult.bestTotal;
-      badges.appendChild(scoreBadge);
+      badges.push({ className: "score", text: "Bestes Quiz: " + quizResult.bestScore + "/" + quizResult.bestTotal });
     }
-    if (badges.childNodes.length) card.appendChild(badges);
 
-    const link = document.createElement("span");
-    link.className = "topic-card-link";
-    link.textContent = "Öffnen →";
-    card.appendChild(link);
-
-    grid.appendChild(card);
+    grid.appendChild(buildCard({
+      dataset: { topicId: topic.id },
+      accent: chapter.accent,
+      icon: topic.icon,
+      meta: metaParts.join(" · "),
+      title: topic.title,
+      summary: topic.summary,
+      badges: badges
+    }));
   });
 
   block.appendChild(grid);
