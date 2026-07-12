@@ -29,27 +29,27 @@ const NATWISS_CHAPTER16_TOPICS = [
       {
         id: "natwiss-ueb-thermo1-e1",
         prompt: "55,5 ml Wasser bei 20°C dehnen sich auf 60°C aus. Es laufen 0,35 g über. ρ(60°C) = 0,983 g/ml, γ_W = 210·10⁻⁶ K⁻¹. Berechnen Sie γ_B des Behälters.",
-        solution: "ΔV_überlauf = 0,35/0,983 = 0,356 ml. ΔV_W − ΔV_B = 0,356 ml. γ_B = γ_W − ΔV/(V₁·ΔT) = 210·10⁻⁶ − 0,356/(55,5·40) ≈ 210·10⁻⁶ − 160·10⁻⁶ = 50·10⁻⁶ K⁻¹ (Kupfer: α ≈ 17·10⁻⁶ K⁻¹ = γ/3)."
+        solution: [{ type: "p", text: "ΔV_überlauf = 0,35/0,983 = 0,356 ml. ΔV_W − ΔV_B = 0,356 ml. γ_B = γ_W − ΔV/(V₁·ΔT) = 210·10⁻⁶ − 0,356/(55,5·40) ≈ 210·10⁻⁶ − 160·10⁻⁶ = 50·10⁻⁶ K⁻¹ (Kupfer: α ≈ 17·10⁻⁶ K⁻¹ = γ/3)." }]
       },
       {
         id: "natwiss-ueb-thermo1-e2",
         prompt: "Tank: 30 kg O₂ bei 9,7 bar Absolutdruck. Wie viel kg He sind nötig für 8,0 bar Absolutdruck?",
-        solution: "m₂ = (p₂/p₁)·(M₂/M₁)·m₁ = (8,0/9,7)·(4/32)·30 kg = 0,825·0,125·30 = 3,09 kg."
+        solution: [{ type: "p", text: "m₂ = (p₂/p₁)·(M₂/M₁)·m₁ = (8,0/9,7)·(4/32)·30 kg = 0,825·0,125·30 = 3,09 kg." }]
       },
       {
         id: "natwiss-ueb-thermo1-e3",
         prompt: "Raum: V = 240 m³, T = 25°C, relative Luftfeuchtigkeit = 80%. Wie viel Wasser kann noch verdunsten? (p₀(25°C) = 3170 Pa)",
-        solution: "Δp = 0,2·p₀ = 634 Pa. Δn = Δp·V/(RT) = 634·240/(8,314·298) ≈ 61,5 mol. m = 18·10⁻³·61,5 ≈ 1,11 kg."
+        solution: [{ type: "p", text: "Δp = 0,2·p₀ = 634 Pa. Δn = Δp·V/(RT) = 634·240/(8,314·298) ≈ 61,5 mol. m = 18·10⁻³·61,5 ≈ 1,11 kg." }]
       },
       {
         id: "natwiss-ueb-thermo1-e4",
         prompt: "Bei welcher Temperatur würden O₂-Moleküle der Erde entfliehen? (v_Flucht = 11,2 km/s, m_O₂ = 5,314·10⁻²⁶ kg, k_B = 1,381·10⁻²³ J/K)",
-        solution: "½mv² = k_BT → T = mv²/(2k_B) = 5,314·10⁻²⁶·(11200)²/(2·1,381·10⁻²³) = 5,314·10⁻²⁶·1,254·10⁸/(2,762·10⁻²³) ≈ 2,41·10⁵ K."
+        solution: [{ type: "p", text: "½mv² = k_BT → T = mv²/(2k_B) = 5,314·10⁻²⁶·(11200)²/(2·1,381·10⁻²³) = 5,314·10⁻²⁶·1,254·10⁸/(2,762·10⁻²³) ≈ 2,41·10⁵ K." }]
       },
       {
         id: "natwiss-ueb-thermo1-e5",
         prompt: "2 mol ideales Gas: V₁ = 3,5 m³, T = 300 K (isotherm). Es dehnt sich auf V₂ = 7,0 m³ aus. Berechnen Sie W, Q und ΔU.",
-        solution: "W = nRT·ln(V₂/V₁) = 2·8,314·300·ln(2) = 4988·0,693 = 3456 J. Isotherm: ΔU = 0. Q = W = 3456 J."
+        solution: [{ type: "p", text: "W = nRT·ln(V₂/V₁) = 2·8,314·300·ln(2) = 4988·0,693 = 3456 J. Isotherm: ΔU = 0. Q = W = 3456 J." }]
       }
     ],
     quiz: [
@@ -90,27 +90,27 @@ const NATWISS_CHAPTER16_TOPICS = [
       {
         id: "natwiss-ueb-thermo2-e1",
         prompt: "1 mol N₂ bei p = 10⁵ Pa wird isobar von 0°C auf 100°C erwärmt. Berechnen Sie ΔU, W und Q.",
-        solution: "Cᵥ = 5/2 R = 20,79 J/(mol·K). ΔU = nCᵥΔT = 1·20,79·100 = 2079 J. W = nRΔT = 1·8,314·100 = 831 J. Q = ΔU + W = 2079 + 831 = 2910 J (oder Q = nCₚΔT = 7/2·8,314·100 = 2910 J ✓)."
+        solution: [{ type: "p", text: "Cᵥ = 5/2 R = 20,79 J/(mol·K). ΔU = nCᵥΔT = 1·20,79·100 = 2079 J. W = nRΔT = 1·8,314·100 = 831 J. Q = ΔU + W = 2079 + 831 = 2910 J (oder Q = nCₚΔT = 7/2·8,314·100 = 2910 J ✓)." }]
       },
       {
         id: "natwiss-ueb-thermo2-e2",
         prompt: "Ein heißes Hufeisen (m = 0,4 kg, T₀ = ?) wird in 1,75 kg Wasser (20°C) abgekühlt bis T_f = 25°C. Eimer: 0,30 kg Eisen. Bestimmen Sie T₀. (c_Fe = 470 J/(kg·K), c_W = 4186 J/(kg·K))",
-        solution: "Q_Hufeisen + Q_Wasser + Q_Eimer = 0. m_HS·c_Fe·(T_f−T₀) + m_W·c_W·(T_f−T_W) + m_E·c_Fe·(T_f−T_W) = 0. 0,4·470·(25−T₀) + 1,75·4186·5 + 0,3·470·5 = 0. 188·(25−T₀) = −(36 627 + 705) = −37 332. 25−T₀ = −198,6. T₀ ≈ 223,6°C ≈ 224°C."
+        solution: [{ type: "p", text: "Q_Hufeisen + Q_Wasser + Q_Eimer = 0. m_HS·c_Fe·(T_f−T₀) + m_W·c_W·(T_f−T_W) + m_E·c_Fe·(T_f−T_W) = 0. 0,4·470·(25−T₀) + 1,75·4186·5 + 0,3·470·5 = 0. 188·(25−T₀) = −(36 627 + 705) = −37 332. 25−T₀ = −198,6. T₀ ≈ 223,6°C ≈ 224°C." }]
       },
       {
         id: "natwiss-ueb-thermo2-e3",
         prompt: "2,6 mol einatomiges Gas (Cᵥ = 3/2 R) expandiert adiabatisch von V₁ = 0,084 m³, T₁ = 25°C auf T₂ = −68°C. Berechnen Sie V₂.",
-        solution: "Adiabat: T₁V₁^(γ−1) = T₂V₂^(γ−1). γ = 5/3 → γ−1 = 2/3. V₂ = V₁·(T₁/T₂)^(1/(γ−1)) = 0,084·(298/205)^(3/2) = 0,084·(1,4537)^1,5 = 0,084·1,753 ≈ 0,147 m³."
+        solution: [{ type: "p", text: "Adiabat: T₁V₁^(γ−1) = T₂V₂^(γ−1). γ = 5/3 → γ−1 = 2/3. V₂ = V₁·(T₁/T₂)^(1/(γ−1)) = 0,084·(298/205)^(3/2) = 0,084·(1,4537)^1,5 = 0,084·1,753 ≈ 0,147 m³." }]
       },
       {
         id: "natwiss-ueb-thermo2-e4",
         prompt: "Eiswürfel (bei −8,5°C) wird in 300 g Wasser (20°C) + 75 g Al-Kalorimeter (c = 900 J/(kg·K)) gegeben. Wasser kühlt auf 17°C. Schmelzwärme Eis: L = 334 kJ/kg, c_Eis = 2100 J/(kg·K). Bestimmen Sie die Eismasse m_E.",
-        solution: "Q_Wasser + Q_Al = −Q_Eis. m_W·c_W·ΔT_W + m_Al·c_Al·ΔT_Al = m_E·(c_Eis·8,5 + L + c_W·17). 0,3·4186·(−3) + 0,075·900·(−3) = −m_E·(2100·8,5 + 334000 + 4186·17). −3768 − 202,5 = −m_E·(17850 + 334000 + 71162). −3970 = −m_E·423012. m_E = 3970/423012 ≈ 9,38 g."
+        solution: [{ type: "p", text: "Q_Wasser + Q_Al = −Q_Eis. m_W·c_W·ΔT_W + m_Al·c_Al·ΔT_Al = m_E·(c_Eis·8,5 + L + c_W·17). 0,3·4186·(−3) + 0,075·900·(−3) = −m_E·(2100·8,5 + 334000 + 4186·17). −3768 − 202,5 = −m_E·(17850 + 334000 + 71162). −3970 = −m_E·423012. m_E = 3970/423012 ≈ 9,38 g." }]
       },
       {
         id: "natwiss-ueb-thermo2-e5",
         prompt: "2 mol ideales Gas: Isotherm von V₁ = 3,5 m³ auf V₂ = 7,0 m³ bei T = 300 K. Berechnen Sie W.",
-        solution: "W = nRT·ln(V₂/V₁) = 2·8,314·300·ln(2) = 4988·0,6931 ≈ 3456 J."
+        solution: [{ type: "p", text: "W = nRT·ln(V₂/V₁) = 2·8,314·300·ln(2) = 4988·0,6931 ≈ 3456 J." }]
       }
     ],
     quiz: [
@@ -156,27 +156,27 @@ const NATWISS_CHAPTER16_TOPICS = [
       {
         id: "natwiss-ueb-thermo3-e1",
         prompt: "Carnot-Maschine: T_H = 798 K, T_C = 553 K. Berechnen Sie den Carnot-Wirkungsgrad.",
-        solution: "η_C = 1 − T_C/T_H = 1 − 553/798 = 1 − 0,693 = 0,307 ≈ 30,7%."
+        solution: [{ type: "p", text: "η_C = 1 − T_C/T_H = 1 − 553/798 = 1 − 0,693 = 0,307 ≈ 30,7%." }]
       },
       {
         id: "natwiss-ueb-thermo3-e2",
         prompt: "Motor: η = 0,25, 180 J/Zyklus, 25 Zyklen/s, 4 Zylinder. Wie lange reichen 10 L Benzin (340 MJ)?",
-        solution: "P = η·Q_Benzin/t → t/Q_Benzin = η/P. Arbeit/s = 4·25·180 = 18 000 W. Q_Benzin/t = P/η = 18000/0,25 = 72 000 W. t = 340·10⁶/72 000 ≈ 4722 s ≈ 79 min."
+        solution: [{ type: "p", text: "P = η·Q_Benzin/t → t/Q_Benzin = η/P. Arbeit/s = 4·25·180 = 18 000 W. Q_Benzin/t = P/η = 18000/0,25 = 72 000 W. t = 340·10⁶/72 000 ≈ 4722 s ≈ 79 min." }]
       },
       {
         id: "natwiss-ueb-thermo3-e3",
         prompt: "Maschine: η = η_Carnot/2, P = 850 kW, T_H = 798 K, T_C = 553 K. Wie viel Abwärme pro Stunde?",
-        solution: "η = 0,154. Q_Abwärme/t = P·(1/η − 1) = 850·(6,49 − 1) = 850·5,49 = 4667 kW. Pro Stunde: 4667·3600 = 1,68·10⁷ kJ = 1,68·10¹⁰ J."
+        solution: [{ type: "p", text: "η = 0,154. Q_Abwärme/t = P·(1/η − 1) = 850·(6,49 − 1) = 850·5,49 = 4667 kW. Pro Stunde: 4667·3600 = 1,68·10⁷ kJ = 1,68·10¹⁰ J." }]
       },
       {
         id: "natwiss-ueb-thermo3-e4",
         prompt: "3,8 kg Al (30°C) und 1,0 kg Wasser (20°C) mischen sich. Berechnen Sie die Gleichgewichtstemperatur und ΔS_ges. (c_Al = 896, c_W = 4187 J/(kg·K))",
-        solution: "T_f = (m_Al·c_Al·T_Al + m_W·c_W·T_W)/(m_Al·c_Al + m_W·c_W) = (3,8·896·303 + 1·4187·293)/(3,8·896 + 4187) = (1030310 + 1226791)/7591,8 ≈ 297,5 K (24,5°C). ΔS_Al = 3404,8·ln(297,5/303) = −61,4 J/K. ΔS_W = 4187·ln(297,5/293) = +63,8 J/K. ΔS_ges = +2,4 J/K."
+        solution: [{ type: "p", text: "T_f = (m_Al·c_Al·T_Al + m_W·c_W·T_W)/(m_Al·c_Al + m_W·c_W) = (3,8·896·303 + 1·4187·293)/(3,8·896 + 4187) = (1030310 + 1226791)/7591,8 ≈ 297,5 K (24,5°C). ΔS_Al = 3404,8·ln(297,5/303) = −61,4 J/K. ΔS_W = 4187·ln(297,5/293) = +63,8 J/K. ΔS_ges = +2,4 J/K." }]
       },
       {
         id: "natwiss-ueb-thermo3-e5",
         prompt: "Eine Carnot-Maschine leistet 570 kW, verbraucht 1350 kcal/s. T_H = 580°C. Bestimmen Sie T_C.",
-        solution: "Q_H/t = 1350 kcal/s · 4186 J/kcal = 5,651·10⁶ W. η = P/Q_H = 570000/5651000 = 0,1009 ≈ 10,1%. η_C = 1 − T_C/T_H → T_C = T_H·(1 − η) = 853·0,899 ≈ 767 K = 494°C."
+        solution: [{ type: "p", text: "Q_H/t = 1350 kcal/s · 4186 J/kcal = 5,651·10⁶ W. η = P/Q_H = 570000/5651000 = 0,1009 ≈ 10,1%. η_C = 1 − T_C/T_H → T_C = T_H·(1 − η) = 853·0,899 ≈ 767 K = 494°C." }]
       }
     ],
     quiz: [

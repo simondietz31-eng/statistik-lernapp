@@ -37,27 +37,27 @@ const VERTRIEB_CHAPTER11_TOPICS = [
       {
         id: "vertrieb-kam-grundlagen-e1",
         prompt: "Definieren Sie Key-Account-Management (KAM) in eigenen Worten.",
-        solution: "Key-Account-Management umfasst die Ausarbeitung und Umsetzung von sortiments- und regionenübergreifenden Strategien zur Bearbeitung besonders wichtiger Kunden, den sogenannten Key Accounts. Es geht also nicht um die Betreuung eines einzelnen Produkts oder einer einzelnen Region, sondern um eine ganzheitliche, strategische Betreuung strategisch bedeutsamer Kunden über verschiedene Sortimente und Regionen hinweg."
+        solution: [{ type: "p", text: "Key-Account-Management umfasst die Ausarbeitung und Umsetzung von sortiments- und regionenübergreifenden Strategien zur Bearbeitung besonders wichtiger Kunden, den sogenannten Key Accounts. Es geht also nicht um die Betreuung eines einzelnen Produkts oder einer einzelnen Region, sondern um eine ganzheitliche, strategische Betreuung strategisch bedeutsamer Kunden über verschiedene Sortimente und Regionen hinweg." }]
       },
       {
         id: "vertrieb-kam-grundlagen-e2",
         prompt: "Nennen Sie die drei Ziele der Kooperation mit Key Accounts nach Kumar/Reinartz (2006).",
-        solution: "Nach Kumar/Reinartz (2006) verfolgt die Kooperation mit Key Accounts drei Ziele: die qualitative Verbesserung der Geschäftsbeziehung, die Reduktion von Kosten sowie die Steigerung der Effektivität der Zusammenarbeit."
+        solution: [{ type: "p", text: "Nach Kumar/Reinartz (2006) verfolgt die Kooperation mit Key Accounts drei Ziele: die qualitative Verbesserung der Geschäftsbeziehung, die Reduktion von Kosten sowie die Steigerung der Effektivität der Zusammenarbeit." }]
       },
       {
         id: "vertrieb-kam-grundlagen-e3",
         prompt: "Nennen Sie mindestens drei Felder der Kooperation mit Key Accounts nach Homburg/Schäfer/Schneider (2010) mit je einem Beispiel.",
-        solution: "Ein Feld ist Informationen, z. B. der Austausch von Informationen über Kunden und Markt. Ein weiteres Feld ist Prozesse, z. B. gemeinsame vertriebslogistische Prozesse wie Just-in-Time-Lieferungen. Ein drittes Feld ist Preise, z. B. die Gestaltung von Konditionensystemen oder das Angebot von Finanzierungslösungen. Weitere Felder sind Produkte (z. B. gemeinsame Produktentwicklung) sowie vertikale Verkaufsförderung/gemeinsames Marketing (z. B. gemeinsame Marktforschung)."
+        solution: [{ type: "p", text: "Ein Feld ist Informationen, z. B. der Austausch von Informationen über Kunden und Markt. Ein weiteres Feld ist Prozesse, z. B. gemeinsame vertriebslogistische Prozesse wie Just-in-Time-Lieferungen. Ein drittes Feld ist Preise, z. B. die Gestaltung von Konditionensystemen oder das Angebot von Finanzierungslösungen. Weitere Felder sind Produkte (z. B. gemeinsame Produktentwicklung) sowie vertikale Verkaufsförderung/gemeinsames Marketing (z. B. gemeinsame Marktforschung)." }]
       },
       {
         id: "vertrieb-kam-grundlagen-e4",
         prompt: "Nennen Sie die sechs Aktivitätskategorien im Rahmen eines Key-Account-Managements.",
-        solution: "Die sechs Kategorien sind: informationsbezogene Aktivitäten (z. B. Informationsaustausch, Bedarfsermittlung), logistische Aktivitäten (gemeinsame Optimierung von Produktion bis Lieferung), preisbezogene Aktivitäten (Konditionensysteme, Finanzierungslösungen), serviceleistungsbezogene Aktivitäten (Zusatzleistungen, Beratung), produktbezogene Aktivitäten (Produktanpassung, gemeinsame Neuproduktentwicklung) sowie gemeinsame Marktbearbeitungsaktivitäten (gemeinsame Werbe-/Verkaufsförderungsmaßnahmen) und interne Maßnahmen (Schulung von Mitarbeitern)."
+        solution: [{ type: "p", text: "Die sechs Kategorien sind: informationsbezogene Aktivitäten (z. B. Informationsaustausch, Bedarfsermittlung), logistische Aktivitäten (gemeinsame Optimierung von Produktion bis Lieferung), preisbezogene Aktivitäten (Konditionensysteme, Finanzierungslösungen), serviceleistungsbezogene Aktivitäten (Zusatzleistungen, Beratung), produktbezogene Aktivitäten (Produktanpassung, gemeinsame Neuproduktentwicklung) sowie gemeinsame Marktbearbeitungsaktivitäten (gemeinsame Werbe-/Verkaufsförderungsmaßnahmen) und interne Maßnahmen (Schulung von Mitarbeitern)." }]
       },
       {
         id: "vertrieb-kam-grundlagen-e5",
         prompt: "Ein Hersteller passt gemeinsam mit einem Großkunden die IT-Systeme beider Unternehmen an, um Bestelldaten automatisch auszutauschen. Welcher der sechs Aktivitätskategorien ist dies zuzuordnen und warum?",
-        solution: "Dies ist den informationsbezogenen Aktivitäten zuzuordnen, da es um den Austausch von Informationen (Bestelldaten) und die Anpassung der IT-Systeme zwischen den Unternehmen geht — beides sind explizit genannte Bestandteile der informationsbezogenen Aktivitäten im Key-Account-Management."
+        solution: [{ type: "p", text: "Dies ist den informationsbezogenen Aktivitäten zuzuordnen, da es um den Austausch von Informationen (Bestelldaten) und die Anpassung der IT-Systeme zwischen den Unternehmen geht — beides sind explizit genannte Bestandteile der informationsbezogenen Aktivitäten im Key-Account-Management." }]
       }
     ],
     quiz: [
@@ -105,27 +105,27 @@ const VERTRIEB_CHAPTER11_TOPICS = [
       {
         id: "vertrieb-kam-selektion-regeln-e1",
         prompt: "Nennen Sie die zwei Dimensionen der Kriterien zur Selektion von Key Accounts nach Homburg/Schäfer/Schneider (2010) mit je zwei Beispielen.",
-        solution: "Die erste Dimension ist die aktive Gestaltung des Unternehmens, z. B. das wirtschaftliche Potenzial des Kunden (Cross-Selling-Potenzial) oder dessen wirtschaftliche Bedeutung/aktuelle Umsätze. Die zweite Dimension ist die Forderung des Kunden, z. B. die explizite Forderung nach Key-Account-Status oder interne Probleme bei der Bearbeitung eines komplexen Kunden mit vielen Standorten."
+        solution: [{ type: "p", text: "Die erste Dimension ist die aktive Gestaltung des Unternehmens, z. B. das wirtschaftliche Potenzial des Kunden (Cross-Selling-Potenzial) oder dessen wirtschaftliche Bedeutung/aktuelle Umsätze. Die zweite Dimension ist die Forderung des Kunden, z. B. die explizite Forderung nach Key-Account-Status oder interne Probleme bei der Bearbeitung eines komplexen Kunden mit vielen Standorten." }]
       },
       {
         id: "vertrieb-kam-selektion-regeln-e2",
         prompt: "Warum ist eine klare Kommunikation darüber, welcher Kunde Teil des Key-Account-Managements ist, wichtig?",
-        solution: "Ohne klare Kommunikation entsteht Unsicherheit sowohl intern (welche Ressourcen und welcher Betreuungsaufwand einem Kunden zustehen) als auch beim Kunden selbst (welcher Servicelevel und welche Ansprechpartner zu erwarten sind). Klare Kommunikation stellt sicher, dass Erwartungen auf beiden Seiten übereinstimmen und Key Accounts konsistent und nachvollziehbar behandelt werden."
+        solution: [{ type: "p", text: "Ohne klare Kommunikation entsteht Unsicherheit sowohl intern (welche Ressourcen und welcher Betreuungsaufwand einem Kunden zustehen) als auch beim Kunden selbst (welcher Servicelevel und welche Ansprechpartner zu erwarten sind). Klare Kommunikation stellt sicher, dass Erwartungen auf beiden Seiten übereinstimmen und Key Accounts konsistent und nachvollziehbar behandelt werden." }]
       },
       {
         id: "vertrieb-kam-selektion-regeln-e3",
         prompt: "Erläutern Sie Regel 1 ('KAM proaktiv betreiben') und warum sie so wichtig ist.",
-        solution: "Regel 1 besagt, dass Key-Account-Management proaktiv betrieben werden muss, das heißt, der Key Account Manager muss selbstständig Maßnahmen anstoßen, statt nur auf Anfragen des Kunden zu reagieren. Dies ist wichtig, weil ein rein reaktives KAM sonst zum 'verlängerten Arm des Kunden' wird — das Unternehmen verliert die strategische Initiative und agiert nur noch nach den Vorgaben des Kunden, statt die Geschäftsbeziehung aktiv zu gestalten."
+        solution: [{ type: "p", text: "Regel 1 besagt, dass Key-Account-Management proaktiv betrieben werden muss, das heißt, der Key Account Manager muss selbstständig Maßnahmen anstoßen, statt nur auf Anfragen des Kunden zu reagieren. Dies ist wichtig, weil ein rein reaktives KAM sonst zum 'verlängerten Arm des Kunden' wird — das Unternehmen verliert die strategische Initiative und agiert nur noch nach den Vorgaben des Kunden, statt die Geschäftsbeziehung aktiv zu gestalten." }]
       },
       {
         id: "vertrieb-kam-selektion-regeln-e4",
         prompt: "Nennen Sie mindestens vier der zehn Regeln für professionelles KAM nach Homburg/Schäfer/Schneider (2010).",
-        solution: "Beispielhaft vier von zehn Regeln: (1) KAM proaktiv betreiben, um nicht zum verlängerten Arm des Kunden zu werden; (3) Key Account Manager mit Erfahrung aus anderen Funktionsbereichen einsetzen; (7) das Vergütungssystem stark leistungsorientiert gestalten; (10) die Unterstützung des Top-Managements sicherstellen, insbesondere durch selbstständige Budgetverwaltung. Weitere Regeln betreffen u. a. Systematik ohne übermäßige Formalisierung, Persönlichkeit und Fachkompetenz der Key Account Manager, Ressourcenzugriff, Teamgeist und Einbindung in Kundenprozesse."
+        solution: [{ type: "p", text: "Beispielhaft vier von zehn Regeln: (1) KAM proaktiv betreiben, um nicht zum verlängerten Arm des Kunden zu werden; (3) Key Account Manager mit Erfahrung aus anderen Funktionsbereichen einsetzen; (7) das Vergütungssystem stark leistungsorientiert gestalten; (10) die Unterstützung des Top-Managements sicherstellen, insbesondere durch selbstständige Budgetverwaltung. Weitere Regeln betreffen u. a. Systematik ohne übermäßige Formalisierung, Persönlichkeit und Fachkompetenz der Key Account Manager, Ressourcenzugriff, Teamgeist und Einbindung in Kundenprozesse." }]
       },
       {
         id: "vertrieb-kam-selektion-regeln-e5",
         prompt: "Warum sollte laut Regel 10 das Top-Management dem Key Account Manager insbesondere eine selbstständige Budgetverwaltung ermöglichen?",
-        solution: "Ohne eigenständigen Zugriff auf Budgets müsste der Key Account Manager für jede kundenspezifische Maßnahme (z. B. individuelle Konditionen, Zusatzleistungen) zeitaufwendige Freigaben einholen, was die geforderte Proaktivität (Regel 1) und schnelle Handlungsfähigkeit im Umgang mit dem Key Account untergräbt. Die Unterstützung des Top-Managements, insbesondere durch selbstständige Budgetverwaltung, versetzt den Key Account Manager erst in die Lage, flexibel und zeitnah auf die Bedürfnisse des Key Accounts zu reagieren."
+        solution: [{ type: "p", text: "Ohne eigenständigen Zugriff auf Budgets müsste der Key Account Manager für jede kundenspezifische Maßnahme (z. B. individuelle Konditionen, Zusatzleistungen) zeitaufwendige Freigaben einholen, was die geforderte Proaktivität (Regel 1) und schnelle Handlungsfähigkeit im Umgang mit dem Key Account untergräbt. Die Unterstützung des Top-Managements, insbesondere durch selbstständige Budgetverwaltung, versetzt den Key Account Manager erst in die Lage, flexibel und zeitnah auf die Bedürfnisse des Key Accounts zu reagieren." }]
       }
     ],
     quiz: [

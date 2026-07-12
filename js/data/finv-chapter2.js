@@ -26,27 +26,27 @@ const FINV_CHAPTER2_TOPICS = [
       {
         id: "finv-guetertroeme-cfo-e1",
         prompt: "Beschreiben Sie in eigenen Worten den Kreislauf von Güter-, Leistungs- und Zahlungsströmen zwischen Beschaffungsmarkt, Unternehmen und Absatzmarkt.",
-        solution: "Vom Beschaffungsmarkt fließen materielle Produktionsfaktoren (z. B. Rohstoffe, Maschinen) ins Unternehmen; im Gegenzug fließen Auszahlungen an die Lieferanten. Vom Arbeitsmarkt fließt Arbeitsleistung ins Unternehmen; im Gegenzug fließen Lohn-/Gehaltsauszahlungen. Im Unternehmen werden diese Faktoren im Transformationsprozess zu fertigen Gütern/Dienstleistungen umgewandelt, die zum Absatzmarkt fließen; im Gegenzug fließen Einzahlungen (Umsatzerlöse) vom Absatzmarkt zurück ins Unternehmen. Der Finanz-/Kapitalmarkt ergänzt diesen Kreislauf durch Kapitalaufnahmen (Einzahlung) und Kapitalrückzahlungen/Ausschüttungen (Auszahlung)."
+        solution: [{ type: "p", text: "Vom Beschaffungsmarkt fließen materielle Produktionsfaktoren (z. B. Rohstoffe, Maschinen) ins Unternehmen; im Gegenzug fließen Auszahlungen an die Lieferanten. Vom Arbeitsmarkt fließt Arbeitsleistung ins Unternehmen; im Gegenzug fließen Lohn-/Gehaltsauszahlungen. Im Unternehmen werden diese Faktoren im Transformationsprozess zu fertigen Gütern/Dienstleistungen umgewandelt, die zum Absatzmarkt fließen; im Gegenzug fließen Einzahlungen (Umsatzerlöse) vom Absatzmarkt zurück ins Unternehmen. Der Finanz-/Kapitalmarkt ergänzt diesen Kreislauf durch Kapitalaufnahmen (Einzahlung) und Kapitalrückzahlungen/Ausschüttungen (Auszahlung)." }]
       },
       {
         id: "finv-guetertroeme-cfo-e2",
         prompt: "Erklären Sie den Unterschied zwischen der Rolle des CFO als Treasurer und als Controller.",
-        solution: "Als Treasurer steuert der CFO die Zahlungsströme des Unternehmens (Kapitalbeschaffung, Kapitalanlage, Liquiditätssteuerung) und trägt die generelle Koordinationsverantwortung für Finanzierungsvorgänge. Als Controller ist der CFO für das Rechnungswesen, die Informationsaufbereitung und die Planung (inkl. Budgetierung) verantwortlich. Beide Rollen zusammen sichern, dass das Unternehmen jederzeit über die nötige Übersicht über seine finanzielle Lage verfügt."
+        solution: [{ type: "p", text: "Als Treasurer steuert der CFO die Zahlungsströme des Unternehmens (Kapitalbeschaffung, Kapitalanlage, Liquiditätssteuerung) und trägt die generelle Koordinationsverantwortung für Finanzierungsvorgänge. Als Controller ist der CFO für das Rechnungswesen, die Informationsaufbereitung und die Planung (inkl. Budgetierung) verantwortlich. Beide Rollen zusammen sichern, dass das Unternehmen jederzeit über die nötige Übersicht über seine finanzielle Lage verfügt." }]
       },
       {
         id: "finv-guetertroeme-cfo-e3",
         prompt: "Nennen Sie vier zentrale Aufgabenbereiche des CFO.",
-        solution: "Kapitalbeschaffung (Finanzmittel für das Unternehmen beschaffen), Kapitalanlage (überschüssige Mittel gewinnbringend anlegen), Finanzplanung (Liquiditäts- und Kapitalbedarfsplanung), Bilanzmanagement (Steuerung der Bilanzstruktur, z. B. Fristenkongruenz, Eigenkapitalquote)."
+        solution: [{ type: "p", text: "Kapitalbeschaffung (Finanzmittel für das Unternehmen beschaffen), Kapitalanlage (überschüssige Mittel gewinnbringend anlegen), Finanzplanung (Liquiditäts- und Kapitalbedarfsplanung), Bilanzmanagement (Steuerung der Bilanzstruktur, z. B. Fristenkongruenz, Eigenkapitalquote)." }]
       },
       {
         id: "finv-guetertroeme-cfo-e4",
         prompt: "Warum ist der Arbeitsmarkt in der Betrachtung der Güter-, Leistungs- und Finanzströme eines Unternehmens genauso relevant wie der Beschaffungsmarkt für Sachgüter?",
-        solution: "Auch Arbeitsleistung ist ein Produktionsfaktor, der von außen (vom Arbeitsmarkt) ins Unternehmen fließt und dort im Transformationsprozess eingesetzt wird — analog zu Rohstoffen oder Maschinen vom Beschaffungsmarkt. Diesem Zufluss steht ein entsprechender Zahlungsabfluss (Löhne und Gehälter) gegenüber. Ohne Berücksichtigung des Arbeitsmarktes wäre die Darstellung der Unternehmensströme unvollständig, da Personalkosten in den meisten Unternehmen einen erheblichen Anteil der Auszahlungen ausmachen."
+        solution: [{ type: "p", text: "Auch Arbeitsleistung ist ein Produktionsfaktor, der von außen (vom Arbeitsmarkt) ins Unternehmen fließt und dort im Transformationsprozess eingesetzt wird — analog zu Rohstoffen oder Maschinen vom Beschaffungsmarkt. Diesem Zufluss steht ein entsprechender Zahlungsabfluss (Löhne und Gehälter) gegenüber. Ohne Berücksichtigung des Arbeitsmarktes wäre die Darstellung der Unternehmensströme unvollständig, da Personalkosten in den meisten Unternehmen einen erheblichen Anteil der Auszahlungen ausmachen." }]
       },
       {
         id: "finv-guetertroeme-cfo-e5",
         prompt: "Was ist das übergeordnete Ziel der finanzwirtschaftlichen Steuerung durch den CFO?",
-        solution: "Die Sicherung der Existenz des Unternehmens durch Erhalt des finanziellen Gleichgewichts — d. h. das Unternehmen muss jederzeit zahlungsfähig (liquide) bleiben, dabei eine angemessene Rentabilität erwirtschaften und die damit verbundenen Risiken in einem tragbaren Rahmen halten (vgl. Spannungsdreieck aus Liquidität, Rentabilität, Risiko)."
+        solution: [{ type: "p", text: "Die Sicherung der Existenz des Unternehmens durch Erhalt des finanziellen Gleichgewichts — d. h. das Unternehmen muss jederzeit zahlungsfähig (liquide) bleiben, dabei eine angemessene Rentabilität erwirtschaften und die damit verbundenen Risiken in einem tragbaren Rahmen halten (vgl. Spannungsdreieck aus Liquidität, Rentabilität, Risiko)." }]
       }
     ],
     quiz: [
@@ -89,27 +89,27 @@ const FINV_CHAPTER2_TOPICS = [
       {
         id: "finv-spannungsdreieck-bilanzvorgaenge-e1",
         prompt: "Ein Unternehmen nimmt einen Kredit in Höhe von 100.000 € auf. Um welchen der vier Bilanzvorgänge handelt es sich, und wie verändert sich die Bilanzsumme?",
-        solution: "Es handelt sich um eine Bilanzverlängerung: Die Kasse (Aktivposten) steigt um 100.000 €, gleichzeitig steigt das Fremdkapital/die Verbindlichkeit (Passivposten) um 100.000 €. Die Bilanzsumme wächst insgesamt um 100.000 €."
+        solution: [{ type: "p", text: "Es handelt sich um eine Bilanzverlängerung: Die Kasse (Aktivposten) steigt um 100.000 €, gleichzeitig steigt das Fremdkapital/die Verbindlichkeit (Passivposten) um 100.000 €. Die Bilanzsumme wächst insgesamt um 100.000 €." }]
       },
       {
         id: "finv-spannungsdreieck-bilanzvorgaenge-e2",
         prompt: "Das Unternehmen aus Aufgabe 1 kauft anschließend Rohmaterialien im Wert von 50.000 € gegen Barzahlung. Um welchen Bilanzvorgang handelt es sich?",
-        solution: "Aktivtausch: Die Kasse sinkt um 50.000 €, die Vorräte (Rohmaterialien) steigen um 50.000 €. Die Bilanzsumme bleibt unverändert."
+        solution: [{ type: "p", text: "Aktivtausch: Die Kasse sinkt um 50.000 €, die Vorräte (Rohmaterialien) steigen um 50.000 €. Die Bilanzsumme bleibt unverändert." }]
       },
       {
         id: "finv-spannungsdreieck-bilanzvorgaenge-e3",
         prompt: "Das Unternehmen begleicht eine Lieferantenrechnung in Höhe von 30.000 € durch Überweisung von der Bank. Um welchen Bilanzvorgang handelt es sich, und warum?",
-        solution: "Bilanzverkürzung: Die Kasse/Bankguthaben (Aktivposten) sinkt um 30.000 €, gleichzeitig sinken die Verbindlichkeiten aus Lieferungen und Leistungen (Passivposten) um 30.000 €. Da ein Aktiv- und ein Passivposten gleichzeitig um denselben Betrag sinken, verkürzt sich die Bilanzsumme insgesamt um 30.000 €."
+        solution: [{ type: "p", text: "Bilanzverkürzung: Die Kasse/Bankguthaben (Aktivposten) sinkt um 30.000 €, gleichzeitig sinken die Verbindlichkeiten aus Lieferungen und Leistungen (Passivposten) um 30.000 €. Da ein Aktiv- und ein Passivposten gleichzeitig um denselben Betrag sinken, verkürzt sich die Bilanzsumme insgesamt um 30.000 €." }]
       },
       {
         id: "finv-spannungsdreieck-bilanzvorgaenge-e4",
         prompt: "Erläutern Sie an einem Beispiel, warum eine höhere Liquidität oft zulasten der Rentabilität geht.",
-        solution: "Hält ein Unternehmen sehr hohe Kassenbestände oder kurzfristig verfügbare, niedrig verzinste Sichteinlagen, um jederzeit zahlungsfähig zu sein, verzichtet es auf die höhere Rendite, die es mit einer längerfristigen, aber weniger liquiden Kapitalanlage (z. B. einer Anleihe mit mehrjähriger Laufzeit) erzielen könnte. Die zusätzliche Sicherheit/Liquidität wird also durch entgangene Erträge (Opportunitätskosten) erkauft."
+        solution: [{ type: "p", text: "Hält ein Unternehmen sehr hohe Kassenbestände oder kurzfristig verfügbare, niedrig verzinste Sichteinlagen, um jederzeit zahlungsfähig zu sein, verzichtet es auf die höhere Rendite, die es mit einer längerfristigen, aber weniger liquiden Kapitalanlage (z. B. einer Anleihe mit mehrjähriger Laufzeit) erzielen könnte. Die zusätzliche Sicherheit/Liquidität wird also durch entgangene Erträge (Opportunitätskosten) erkauft." }]
       },
       {
         id: "finv-spannungsdreieck-bilanzvorgaenge-e5",
         prompt: "Ein Unternehmen wandelt ein kurzfristiges Bankdarlehen (Laufzeit 6 Monate) in ein langfristiges Bankdarlehen (Laufzeit 5 Jahre) über denselben Betrag um. Um welchen Bilanzvorgang handelt es sich?",
-        solution: "Passivtausch: Das kurzfristige Fremdkapital (ein Passivposten) sinkt, das langfristige Fremdkapital (ein anderer Passivposten) steigt in gleicher Höhe. Die Aktivseite und die Bilanzsumme bleiben unverändert."
+        solution: [{ type: "p", text: "Passivtausch: Das kurzfristige Fremdkapital (ein Passivposten) sinkt, das langfristige Fremdkapital (ein anderer Passivposten) steigt in gleicher Höhe. Die Aktivseite und die Bilanzsumme bleiben unverändert." }]
       }
     ],
     quiz: [

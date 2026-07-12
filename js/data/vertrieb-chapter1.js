@@ -28,27 +28,27 @@ const VERTRIEB_CHAPTER1_TOPICS = [
       {
         id: "vertrieb-boundary-spanning-position-e1",
         prompt: "Nennen Sie die drei tragenden (Kern-)Funktionen der Wertschöpfungskette und erklären Sie, warum gerade sie unter besonders hohem Marktdruck stehen.",
-        solution: "Die drei tragenden Funktionen sind Einkauf, Produktion sowie Vertrieb & Logistik. Sie stehen unter besonders hohem Marktdruck, weil sie den direkten Wertschöpfungsstrom vom Beschaffungsmarkt bis zum Absatzmarkt bilden: Der Einkauf ist unmittelbar den Bedingungen der Beschaffungsmärkte ausgesetzt, der Vertrieb unmittelbar den Bedingungen der Absatzmärkte, und die Produktion muss beide Seiten effizient verbinden. Unterstützende Funktionen wie Marketing, Finanzen, Personal, Controlling und IT stehen dagegen nicht in direktem Marktkontakt und ermöglichen bzw. flankieren lediglich die tragenden Funktionen."
+        solution: [{ type: "p", text: "Die drei tragenden Funktionen sind Einkauf, Produktion sowie Vertrieb & Logistik. Sie stehen unter besonders hohem Marktdruck, weil sie den direkten Wertschöpfungsstrom vom Beschaffungsmarkt bis zum Absatzmarkt bilden: Der Einkauf ist unmittelbar den Bedingungen der Beschaffungsmärkte ausgesetzt, der Vertrieb unmittelbar den Bedingungen der Absatzmärkte, und die Produktion muss beide Seiten effizient verbinden. Unterstützende Funktionen wie Marketing, Finanzen, Personal, Controlling und IT stehen dagegen nicht in direktem Marktkontakt und ermöglichen bzw. flankieren lediglich die tragenden Funktionen." }]
       },
       {
         id: "vertrieb-boundary-spanning-position-e2",
         prompt: "Erläutern Sie, wie sich die vier Ps des klassischen Marketing-Mix in der unternehmerischen Praxis auf Marketing- und Vertriebsabteilung verteilen.",
-        solution: "In der Theorie umfasst der Marketing-Mix die vier Instrumente Produkt, Preis, Promotion und Place. In der Praxis werden diese jedoch aufgeteilt: Die Marketingabteilung verantwortet Produkt (Produktgestaltung) und Promotion (Kommunikation, Werbung), während die Vertriebsabteilung Preis (Preisfindung und -verhandlung) und Place (Distributionswege, Vertriebskanäle) verantwortet. Preis- und Distributionsentscheidungen liegen also entgegen einer verbreiteten Annahme praktisch beim Vertrieb, nicht beim Marketing."
+        solution: [{ type: "p", text: "In der Theorie umfasst der Marketing-Mix die vier Instrumente Produkt, Preis, Promotion und Place. In der Praxis werden diese jedoch aufgeteilt: Die Marketingabteilung verantwortet Produkt (Produktgestaltung) und Promotion (Kommunikation, Werbung), während die Vertriebsabteilung Preis (Preisfindung und -verhandlung) und Place (Distributionswege, Vertriebskanäle) verantwortet. Preis- und Distributionsentscheidungen liegen also entgegen einer verbreiteten Annahme praktisch beim Vertrieb, nicht beim Marketing." }]
       },
       {
         id: "vertrieb-boundary-spanning-position-e3",
         prompt: "Was versteht man unter der 'Boundary-Spanning-Position' des Vertriebs?",
-        solution: "Damit ist gemeint, dass der Vertrieb als einzige Unternehmensfunktion in ständigem, direktem Kontakt mit dem Markt (Kunden, Wettbewerbern) steht und damit die Grenze zwischen dem Unternehmen und seiner externen Umwelt überspannt ('spannt'). Während andere Funktionen überwiegend unternehmensintern agieren, bildet der Vertrieb die Schnittstelle nach außen."
+        solution: [{ type: "p", text: "Damit ist gemeint, dass der Vertrieb als einzige Unternehmensfunktion in ständigem, direktem Kontakt mit dem Markt (Kunden, Wettbewerbern) steht und damit die Grenze zwischen dem Unternehmen und seiner externen Umwelt überspannt ('spannt'). Während andere Funktionen überwiegend unternehmensintern agieren, bildet der Vertrieb die Schnittstelle nach außen." }]
       },
       {
         id: "vertrieb-boundary-spanning-position-e4",
         prompt: "Welche zwei zentralen Eigenschaften ergeben sich aus der Boundary-Spanning-Position des Vertriebs?",
-        solution: "Erstens ist der Vertrieb zentrale Informationsquelle und zentrales Informationsziel zwischen Unternehmen, Kunden und Wettbewerbern, das heißt, relevante Marktinformationen laufen in beide Richtungen über den Vertrieb. Zweitens besitzt der Vertrieb einen einzigartigen direkten Kundenkontakt, über den keine andere Unternehmensfunktion in vergleichbarer Regelmäßigkeit und Unmittelbarkeit verfügt."
+        solution: [{ type: "p", text: "Erstens ist der Vertrieb zentrale Informationsquelle und zentrales Informationsziel zwischen Unternehmen, Kunden und Wettbewerbern, das heißt, relevante Marktinformationen laufen in beide Richtungen über den Vertrieb. Zweitens besitzt der Vertrieb einen einzigartigen direkten Kundenkontakt, über den keine andere Unternehmensfunktion in vergleichbarer Regelmäßigkeit und Unmittelbarkeit verfügt." }]
       },
       {
         id: "vertrieb-boundary-spanning-position-e5",
         prompt: "Warum zählen Marketing, Finanzen, Personal, Controlling und IT zu den unterstützenden statt zu den tragenden Funktionen?",
-        solution: "Diese Funktionen stehen nicht in unmittelbarem, direktem Kontakt mit den externen Beschaffungs- oder Absatzmärkten, sondern erbringen interne Leistungen, die den direkten Wertschöpfungsstrom (Einkauf, Produktion, Vertrieb & Logistik) erst ermöglichen bzw. absichern. Sie unterliegen daher einem geringeren unmittelbaren Marktdruck und werden deshalb als unterstützende (nicht tragende) Funktionen eingeordnet."
+        solution: [{ type: "p", text: "Diese Funktionen stehen nicht in unmittelbarem, direktem Kontakt mit den externen Beschaffungs- oder Absatzmärkten, sondern erbringen interne Leistungen, die den direkten Wertschöpfungsstrom (Einkauf, Produktion, Vertrieb & Logistik) erst ermöglichen bzw. absichern. Sie unterliegen daher einem geringeren unmittelbaren Marktdruck und werden deshalb als unterstützende (nicht tragende) Funktionen eingeordnet." }]
       }
     ],
     quiz: [
@@ -102,27 +102,27 @@ const VERTRIEB_CHAPTER1_TOPICS = [
       {
         id: "vertrieb-kundenwissen-segmentierung-e1",
         prompt: "Nennen und erklären Sie die vier Rollen, die ein Kunde im B2C-Bereich gegenüber einem Produkt einnehmen kann.",
-        solution: "Die vier Rollen sind: Nutzer, der das Produkt selbst als Endverbraucher verwendet; Händler, der das Produkt zum Zweck des Weiterverkaufs erwirbt; Weiterverarbeiter, bei dem das Produkt zur Komponente eines anderen Produkts wird; und Berater, der die Kaufentscheidung beeinflusst, ohne selbst Käufer zu sein. Diese Unterscheidung ist wichtig, weil je nach Rolle unterschiedliche Bedürfnisse und Ansprachestrategien relevant sind."
+        solution: [{ type: "p", text: "Die vier Rollen sind: Nutzer, der das Produkt selbst als Endverbraucher verwendet; Händler, der das Produkt zum Zweck des Weiterverkaufs erwirbt; Weiterverarbeiter, bei dem das Produkt zur Komponente eines anderen Produkts wird; und Berater, der die Kaufentscheidung beeinflusst, ohne selbst Käufer zu sein. Diese Unterscheidung ist wichtig, weil je nach Rolle unterschiedliche Bedürfnisse und Ansprachestrategien relevant sind." }]
       },
       {
         id: "vertrieb-kundenwissen-segmentierung-e2",
         prompt: "Welche zwei Leitfragen strukturieren die Erhebung von Kundendaten, und welche Datentypen gehören jeweils dazu?",
-        solution: "Die erste Leitfrage lautet 'Wer sind unsere Kunden?' und wird durch Grunddaten beantwortet: demografische, sozioökonomische und psychografische Merkmale sowie die Segmentzugehörigkeit. Die zweite Leitfrage lautet 'Was brauchen unsere Kunden?' und wird durch Potenzial-/Reaktionsdaten beantwortet: Bedürfnisse bzw. vergangener Bedarf, zeitliche Bedarfsverteilung, Zufriedenheit/Bindung, optimale Kontaktzeiten, Cross-Selling-Potenzial, Preissensitivität sowie Service-/Image-Erwartungen."
+        solution: [{ type: "p", text: "Die erste Leitfrage lautet 'Wer sind unsere Kunden?' und wird durch Grunddaten beantwortet: demografische, sozioökonomische und psychografische Merkmale sowie die Segmentzugehörigkeit. Die zweite Leitfrage lautet 'Was brauchen unsere Kunden?' und wird durch Potenzial-/Reaktionsdaten beantwortet: Bedürfnisse bzw. vergangener Bedarf, zeitliche Bedarfsverteilung, Zufriedenheit/Bindung, optimale Kontaktzeiten, Cross-Selling-Potenzial, Preissensitivität sowie Service-/Image-Erwartungen." }]
       },
       {
         id: "vertrieb-kundenwissen-segmentierung-e3",
         prompt: "Vergleichen Sie soziodemografische und psychografische Segmentierungskriterien hinsichtlich Messbarkeit und Aussagekraft für das Kaufverhalten.",
-        solution: "Soziodemografische Kriterien wie Alter, Beruf oder Gesellschaftsschicht lassen sich leicht messen und erheben, sind aber nur schwach mit dem tatsächlichen Kaufverhalten verknüpft. Psychografische Kriterien wie Einstellungen, Preisbereitschaft und beobachtbares Verhalten sind dagegen deutlich stärker mit dem Kaufverhalten verknüpft, dafür aber schwerer zu messen, da sie meist nicht direkt beobachtbar sind, sondern erst über Befragungen oder Verhaltensanalysen erschlossen werden müssen."
+        solution: [{ type: "p", text: "Soziodemografische Kriterien wie Alter, Beruf oder Gesellschaftsschicht lassen sich leicht messen und erheben, sind aber nur schwach mit dem tatsächlichen Kaufverhalten verknüpft. Psychografische Kriterien wie Einstellungen, Preisbereitschaft und beobachtbares Verhalten sind dagegen deutlich stärker mit dem Kaufverhalten verknüpft, dafür aber schwerer zu messen, da sie meist nicht direkt beobachtbar sind, sondern erst über Befragungen oder Verhaltensanalysen erschlossen werden müssen." }]
       },
       {
         id: "vertrieb-kundenwissen-segmentierung-e4",
         prompt: "Unter welchen drei Bedingungen ist eine Kundenpriorisierung sinnvoll, und welches Risiko besteht, wenn diese Bedingungen nicht beachtet werden?",
-        solution: "Eine Kundenpriorisierung ist nur sinnvoll, wenn erstens begrenzte Ressourcen vorliegen, zweitens eine differenzierte Ansprache technisch überhaupt möglich ist, und drittens bessergestellte Kunden die Mehrleistung tatsächlich schätzen. Werden diese Bedingungen nicht beachtet, besteht das Risiko unerkannten Neids bei benachteiligten Kundensegmenten, insbesondere wenn der Preis nicht an die unterschiedliche Leistung angepasst wird — die Entkopplung von Preis und Leistung ist dabei der Kernmechanismus, der dieses Risiko auslöst."
+        solution: [{ type: "p", text: "Eine Kundenpriorisierung ist nur sinnvoll, wenn erstens begrenzte Ressourcen vorliegen, zweitens eine differenzierte Ansprache technisch überhaupt möglich ist, und drittens bessergestellte Kunden die Mehrleistung tatsächlich schätzen. Werden diese Bedingungen nicht beachtet, besteht das Risiko unerkannten Neids bei benachteiligten Kundensegmenten, insbesondere wenn der Preis nicht an die unterschiedliche Leistung angepasst wird — die Entkopplung von Preis und Leistung ist dabei der Kernmechanismus, der dieses Risiko auslöst." }]
       },
       {
         id: "vertrieb-kundenwissen-segmentierung-e5",
         prompt: "In welche Politikfelder kaskadiert eine Kundenpriorisierung typischerweise, und wie verändern sich dabei die Kosten?",
-        solution: "Eine Priorisierung wirkt sich typischerweise auf Kommunikationspolitik, Preispolitik, Marktführung, Vertriebspolitik und Produktgestaltung je Segment aus. Die Kosten der Differenzierung steigen dabei tendenziell in dieser Reihenfolge an, das heißt eine differenzierte Kommunikation ist vergleichsweise günstig umzusetzen, während eine segmentspezifische Produktgestaltung deutlich aufwendiger und teurer ist."
+        solution: [{ type: "p", text: "Eine Priorisierung wirkt sich typischerweise auf Kommunikationspolitik, Preispolitik, Marktführung, Vertriebspolitik und Produktgestaltung je Segment aus. Die Kosten der Differenzierung steigen dabei tendenziell in dieser Reihenfolge an, das heißt eine differenzierte Kommunikation ist vergleichsweise günstig umzusetzen, während eine segmentspezifische Produktgestaltung deutlich aufwendiger und teurer ist." }]
       }
     ],
     quiz: [

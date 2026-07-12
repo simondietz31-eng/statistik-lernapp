@@ -29,27 +29,27 @@ const NATWISS_CHAPTER13_TOPICS = [
       {
         id: "natwiss-wechselstrom-e1",
         prompt: "Eine Wechselspannung hat die Amplitude Û = 325 V. Berechnen Sie den Effektivwert U_eff.",
-        solution: "U_eff = Û/√2 = 325/√2 ≈ 230 V. Dies entspricht der europäischen Netzspannung."
+        solution: [{ type: "p", text: "U_eff = Û/√2 = 325/√2 ≈ 230 V. Dies entspricht der europäischen Netzspannung." }]
       },
       {
         id: "natwiss-wechselstrom-e2",
         prompt: "Eine Spule mit L = 0,1 H liegt an einer Wechselspannung mit f = 50 Hz. Berechnen Sie die Impedanz Z_L.",
-        solution: "ω = 2π·50 = 314 rad/s. Z_L = ωL = 314·0,1 = 31,4 Ω."
+        solution: [{ type: "p", text: "ω = 2π·50 = 314 rad/s. Z_L = ωL = 314·0,1 = 31,4 Ω." }]
       },
       {
         id: "natwiss-wechselstrom-e3",
         prompt: "Ein Kondensator C = 100 μF liegt an f = 50 Hz. Berechnen Sie Z_C.",
-        solution: "ω = 2π·50 ≈ 314 rad/s. Z_C = 1/(ωC) = 1/(314·100·10⁻⁶) ≈ 31,8 Ω."
+        solution: [{ type: "p", text: "ω = 2π·50 ≈ 314 rad/s. Z_C = 1/(ωC) = 1/(314·100·10⁻⁶) ≈ 31,8 Ω." }]
       },
       {
         id: "natwiss-wechselstrom-e4",
         prompt: "Ein Transformator hat N₁ = 1000 und N₂ = 50 Windungen. Primärseitig liegt U₁ = 230 V an. Welche Spannung U₂ tritt sekundärseitig auf?",
-        solution: "U₂ = U₁·(N₂/N₁) = 230·(50/1000) = 11,5 V."
+        solution: [{ type: "p", text: "U₂ = U₁·(N₂/N₁) = 230·(50/1000) = 11,5 V." }]
       },
       {
         id: "natwiss-wechselstrom-e5",
         prompt: "In einem Reihenschwingkreis gilt R = 10 Ω, Z_L = 30 Ω, Z_C = 10 Ω. Berechnen Sie die Gesamtimpedanz Z.",
-        solution: "Z = √(R² + (Z_L − Z_C)²) = √(10² + (30−10)²) = √(100 + 400) = √500 ≈ 22,4 Ω."
+        solution: [{ type: "p", text: "Z = √(R² + (Z_L − Z_C)²) = √(10² + (30−10)²) = √(100 + 400) = √500 ≈ 22,4 Ω." }]
       }
     ],
     quiz: [
@@ -94,27 +94,27 @@ const NATWISS_CHAPTER13_TOPICS = [
       {
         id: "natwiss-em-e1",
         prompt: "Ein LC-Schwingkreis hat L = 1 mH und C = 10 nF. Berechnen Sie die Resonanzfrequenz f₀.",
-        solution: "ω₀ = 1/√(LC) = 1/√(10⁻³·10⁻⁸) = 1/√(10⁻¹¹) ≈ 316 krad/s. f₀ = ω₀/(2π) ≈ 50,3 kHz."
+        solution: [{ type: "p", text: "ω₀ = 1/√(LC) = 1/√(10⁻³·10⁻⁸) = 1/√(10⁻¹¹) ≈ 316 krad/s. f₀ = ω₀/(2π) ≈ 50,3 kHz." }]
       },
       {
         id: "natwiss-em-e2",
         prompt: "Sichtbares Licht hat λ = 500 nm. Berechnen Sie die Frequenz f.",
-        solution: "f = c/λ = 3·10⁸/(500·10⁻⁹) = 6·10¹⁴ Hz = 600 THz."
+        solution: [{ type: "p", text: "f = c/λ = 3·10⁸/(500·10⁻⁹) = 6·10¹⁴ Hz = 600 THz." }]
       },
       {
         id: "natwiss-em-e3",
         prompt: "Berechnen Sie die Energie eines Photons mit f = 6·10¹⁴ Hz.",
-        solution: "E = h·f = 6,626·10⁻³⁴·6·10¹⁴ ≈ 3,98·10⁻¹⁹ J ≈ 2,49 eV (1 eV = 1,6·10⁻¹⁹ J)."
+        solution: [{ type: "p", text: "E = h·f = 6,626·10⁻³⁴·6·10¹⁴ ≈ 3,98·10⁻¹⁹ J ≈ 2,49 eV (1 eV = 1,6·10⁻¹⁹ J)." }]
       },
       {
         id: "natwiss-em-e4",
         prompt: "Welche Wellenlänge hat eine Radiostation bei f = 100 MHz?",
-        solution: "λ = c/f = 3·10⁸/10⁸ = 3 m."
+        solution: [{ type: "p", text: "λ = c/f = 3·10⁸/10⁸ = 3 m." }]
       },
       {
         id: "natwiss-em-e5",
         prompt: "Verdoppelt man die Kapazität C in einem LC-Schwingkreis (bei gleichem L), wie ändert sich f₀?",
-        solution: "f₀ = 1/(2π√(LC)). Bei C → 2C wird √(LC) → √(2LC) = √2·√(LC). Daher f₀_neu = f₀/√2 ≈ 0,707·f₀. Die Frequenz sinkt auf etwa 70,7% des ursprünglichen Werts."
+        solution: [{ type: "p", text: "f₀ = 1/(2π√(LC)). Bei C → 2C wird √(LC) → √(2LC) = √2·√(LC). Daher f₀_neu = f₀/√2 ≈ 0,707·f₀. Die Frequenz sinkt auf etwa 70,7% des ursprünglichen Werts." }]
       }
     ],
     quiz: [
@@ -157,27 +157,27 @@ const NATWISS_CHAPTER13_TOPICS = [
       {
         id: "natwiss-maxwell-e1",
         prompt: "Was besagt die Aussage 'div B = 0'? Was folgt daraus praktisch?",
-        solution: "div B = 0 bedeutet, dass das Magnetfeld quellenfrei ist — es gibt keine magnetischen Monopole (kein 'Nordpol' allein ohne 'Südpol'). Alle magnetischen Feldlinien sind geschlossen."
+        solution: [{ type: "p", text: "div B = 0 bedeutet, dass das Magnetfeld quellenfrei ist — es gibt keine magnetischen Monopole (kein 'Nordpol' allein ohne 'Südpol'). Alle magnetischen Feldlinien sind geschlossen." }]
       },
       {
         id: "natwiss-maxwell-e2",
         prompt: "Ein Kondensator wird mit I = 2 A aufgeladen. Der Plattenabstand sei d = 1 mm, Fläche A = 10 cm² = 10⁻³ m². Wie groß ist der Verschiebungsstrom?",
-        solution: "Der Verschiebungsstrom ist gleich dem Ladestrom: I_D = ε₀·∂E/∂t·A = I = 2 A. Im eingeschwungenen Zustand ist der Verschiebungsstrom identisch mit dem Leiterstrom."
+        solution: [{ type: "p", text: "Der Verschiebungsstrom ist gleich dem Ladestrom: I_D = ε₀·∂E/∂t·A = I = 2 A. Im eingeschwungenen Zustand ist der Verschiebungsstrom identisch mit dem Leiterstrom." }]
       },
       {
         id: "natwiss-maxwell-e3",
         prompt: "Eine EM-Welle hat eine Amplitude E₀ = 1000 V/m. Berechnen Sie die Intensität I.",
-        solution: "I = ½·c·ε₀·E₀² = ½·3·10⁸·8,85·10⁻¹²·(1000)² ≈ ½·3·10⁸·8,85·10⁻¹²·10⁶ ≈ 1327 W/m²."
+        solution: [{ type: "p", text: "I = ½·c·ε₀·E₀² = ½·3·10⁸·8,85·10⁻¹²·(1000)² ≈ ½·3·10⁸·8,85·10⁻¹²·10⁶ ≈ 1327 W/m²." }]
       },
       {
         id: "natwiss-maxwell-e4",
         prompt: "Warum kann sich Licht im Vakuum ausbreiten, obwohl kein Trägermedium vorhanden ist?",
-        solution: "Licht ist eine elektromagnetische Welle: Ein zeitlich veränderliches E-Feld erzeugt ein B-Feld (Maxwell-Gleichung 4) und umgekehrt (Gleichung 3). Diese gegenseitige Erzeugung ermöglicht Ausbreitung ohne Trägermedium."
+        solution: [{ type: "p", text: "Licht ist eine elektromagnetische Welle: Ein zeitlich veränderliches E-Feld erzeugt ein B-Feld (Maxwell-Gleichung 4) und umgekehrt (Gleichung 3). Diese gegenseitige Erzeugung ermöglicht Ausbreitung ohne Trägermedium." }]
       },
       {
         id: "natwiss-maxwell-e5",
         prompt: "Welches der vier Maxwell-Gesetze ist für das Prinzip eines Generators (Dynamo) verantwortlich?",
-        solution: "Das Faradaysche Induktionsgesetz (3. Maxwell-Gleichung): rot E = −∂B/∂t. Ein sich änderndes Magnetfeld induziert ein elektrisches Feld, das den Strom im Generator antreibt."
+        solution: [{ type: "p", text: "Das Faradaysche Induktionsgesetz (3. Maxwell-Gleichung): rot E = −∂B/∂t. Ein sich änderndes Magnetfeld induziert ein elektrisches Feld, das den Strom im Generator antreibt." }]
       }
     ],
     quiz: [

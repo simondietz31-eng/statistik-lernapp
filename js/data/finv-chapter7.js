@@ -20,27 +20,27 @@ const FINV_CHAPTER7_TOPICS = [
       {
         id: "finv-lineare-verzinsung-grundlagen-e1",
         prompt: "3.500 € werden 165 Tage lang zu 3,25 % p.a. linear verzinst angelegt. Berechnen Sie die Zinsen.",
-        solution: "Zinsen = K₀·i·(Tage/360) = 3.500 · 0,0325 · (165/360) = 3.500 · 0,0325 · 0,4583 ≈ 52,14 €."
+        solution: [{ type: "p", text: "Zinsen = K₀·i·(Tage/360) = 3.500 · 0,0325 · (165/360) = 3.500 · 0,0325 · 0,4583 ≈ 52,14 €." }]
       },
       {
         id: "finv-lineare-verzinsung-grundlagen-e2",
         prompt: "Wie hoch ist ein Kredit K₀, für den in einem halben Jahr bei 4 % Jahreszins 657,44 € Zinsen gezahlt werden müssen?",
-        solution: "Zinsen = K₀·i·½ → 657,44 = K₀ · 0,04 · 0,5 → K₀ = 657,44 / 0,02 = 32.872 €."
+        solution: [{ type: "p", text: "Zinsen = K₀·i·½ → 657,44 = K₀ · 0,04 · 0,5 → K₀ = 657,44 / 0,02 = 32.872 €." }]
       },
       {
         id: "finv-lineare-verzinsung-grundlagen-e3",
         prompt: "Ein Wertpapier über 5.000 € mit einem Kupon (Zins) von 6,25 % p.a. wird mit Stückzinsen von 36,46 € gehandelt. Wie viele Zinstage wurden dabei berechnet?",
-        solution: "Zinsen = K₀·i·(Tage/360) → 36,46 = 5.000 · 0,0625 · (Tage/360) → Tage = 36,46 / (5.000·0,0625/360) = 36,46 / 0,8681 ≈ 42 Tage."
+        solution: [{ type: "p", text: "Zinsen = K₀·i·(Tage/360) → 36,46 = 5.000 · 0,0625 · (Tage/360) → Tage = 36,46 / (5.000·0,0625/360) = 36,46 / 0,8681 ≈ 42 Tage." }]
       },
       {
         id: "finv-lineare-verzinsung-grundlagen-e4",
         prompt: "Anna nimmt einen Kredit über 1,68 Mio. € für 60 Tage auf, der 25.200 € kostet. Welcher lineare Jahreszinssatz wurde angesetzt?",
-        solution: "25.200 = 1.680.000 · i · (60/360) → i = 25.200 / (1.680.000 · 60/360) = 25.200 / 280.000 = 0,09 = 9 % p.a."
+        solution: [{ type: "p", text: "25.200 = 1.680.000 · i · (60/360) → i = 25.200 / (1.680.000 · 60/360) = 25.200 / 280.000 = 0,09 = 9 % p.a." }]
       },
       {
         id: "finv-lineare-verzinsung-grundlagen-e5",
         prompt: "Tom hat 2.000 € geschenkt bekommen und legt den Betrag für 2,5 Jahre bei 3 % linearer Verzinsung an. Welchen Betrag bekommt er am Ende?",
-        solution: "K_n = K₀·(1+n·i) = 2.000 · (1 + 2,5·0,03) = 2.000 · 1,075 = 2.150 €."
+        solution: [{ type: "p", text: "K_n = K₀·(1+n·i) = 2.000 · (1 + 2,5·0,03) = 2.000 · 1,075 = 2.150 €." }]
       }
     ],
     quiz: [
@@ -76,27 +76,27 @@ const FINV_CHAPTER7_TOPICS = [
       {
         id: "finv-barwertvergleich-linear-e1",
         prompt: "Berechnen Sie den Barwert von Alternative 1 (4.500 € nach 30 Tagen) bei 6 % linearer Verzinsung.",
-        solution: "K₀ = 4.500 / (1 + (30/360)·0,06) = 4.500 / (1 + 0,005) = 4.500 / 1,005 ≈ 4.477,61 €."
+        solution: [{ type: "p", text: "K₀ = 4.500 / (1 + (30/360)·0,06) = 4.500 / (1 + 0,005) = 4.500 / 1,005 ≈ 4.477,61 €." }]
       },
       {
         id: "finv-barwertvergleich-linear-e2",
         prompt: "Berechnen Sie den Barwert von Alternative 2 (4.542,50 € nach 90 Tagen) bei 6 % linearer Verzinsung, und entscheiden Sie, welche Alternative günstiger ist.",
-        solution: "K₀ = 4.542,50 / (1 + (90/360)·0,06) = 4.542,50 / (1 + 0,015) = 4.542,50 / 1,015 ≈ 4.475,37 €. Da dieser Barwert (4.475,37 €) niedriger ist als der von Alternative 1 (4.477,61 €), ist Alternative 2 die günstigere (billigere) Option."
+        solution: [{ type: "p", text: "K₀ = 4.542,50 / (1 + (90/360)·0,06) = 4.542,50 / (1 + 0,015) = 4.542,50 / 1,015 ≈ 4.475,37 €. Da dieser Barwert (4.475,37 €) niedriger ist als der von Alternative 1 (4.477,61 €), ist Alternative 2 die günstigere (billigere) Option." }]
       },
       {
         id: "finv-barwertvergleich-linear-e3",
         prompt: "Bestätigen Sie das Ergebnis aus Aufgabe 2 alternativ über einen Endwertvergleich auf Tag 90 (statt Barwert auf Tag 0).",
-        solution: "Endwert Alternative 1 auf Tag 90 (60 Tage Zinsen ab Tag 30): 4.500 · (1 + (60/360)·0,06) = 4.500 · 1,01 = 4.545,00 €. Endwert Alternative 2 auf Tag 90: einfach 4.542,50 € (bereits am Fälligkeitstag). Da 4.542,50 € < 4.545,00 €, ist Alternative 2 auch im Endwertvergleich günstiger — das Ergebnis stimmt mit dem Barwertvergleich überein."
+        solution: [{ type: "p", text: "Endwert Alternative 1 auf Tag 90 (60 Tage Zinsen ab Tag 30): 4.500 · (1 + (60/360)·0,06) = 4.500 · 1,01 = 4.545,00 €. Endwert Alternative 2 auf Tag 90: einfach 4.542,50 € (bereits am Fälligkeitstag). Da 4.542,50 € < 4.545,00 €, ist Alternative 2 auch im Endwertvergleich günstiger — das Ergebnis stimmt mit dem Barwertvergleich überein." }]
       },
       {
         id: "finv-barwertvergleich-linear-e4",
         prompt: "Bei welchem Zinssatz sind die beiden Alternativen aus dem Gastronomie-Equipment-Beispiel (4.500 € nach 30 Tagen vs. 4.542,50 € nach 90 Tagen) exakt gleichwertig?",
-        solution: "Gleichsetzen der Barwerte und Auflösen nach i (siehe Formel) ergibt i ≈ 5,69 %. Bei diesem Zinssatz führen beide Zahlungsalternativen zum selben Barwert — unterhalb dieses Zinssatzes ist Alternative 1 günstiger, oberhalb ist Alternative 2 günstiger."
+        solution: [{ type: "p", text: "Gleichsetzen der Barwerte und Auflösen nach i (siehe Formel) ergibt i ≈ 5,69 %. Bei diesem Zinssatz führen beide Zahlungsalternativen zum selben Barwert — unterhalb dieses Zinssatzes ist Alternative 1 günstiger, oberhalb ist Alternative 2 günstiger." }]
       },
       {
         id: "finv-barwertvergleich-linear-e5",
         prompt: "Warum ist es für das Ergebnis eines Barwertvergleichs unerheblich, ob man Alternative 1 oder Alternative 2 als Bezugspunkt für den Vergleichszeitpunkt wählt (solange beide Alternativen konsistent auf denselben Zeitpunkt bezogen werden)?",
-        solution: "Solange beide Alternativen konsistent auf denselben Zeitpunkt (egal ob Tag 0, Tag 30, Tag 90 oder ein beliebiger anderer Zeitpunkt) ab- bzw. aufgezinst werden, bleibt das relative Verhältnis zwischen den beiden umgerechneten Werten unverändert — die Frage, welche Alternative den kleineren (günstigeren) bzw. größeren (vorteilhafteren) umgerechneten Wert hat, führt unabhängig vom gewählten Bezugszeitpunkt zum selben Ergebnis. Nur die absolute Höhe der verglichenen Werte ändert sich je nach gewähltem Zeitpunkt, nicht aber die Rangfolge der Alternativen."
+        solution: [{ type: "p", text: "Solange beide Alternativen konsistent auf denselben Zeitpunkt (egal ob Tag 0, Tag 30, Tag 90 oder ein beliebiger anderer Zeitpunkt) ab- bzw. aufgezinst werden, bleibt das relative Verhältnis zwischen den beiden umgerechneten Werten unverändert — die Frage, welche Alternative den kleineren (günstigeren) bzw. größeren (vorteilhafteren) umgerechneten Wert hat, führt unabhängig vom gewählten Bezugszeitpunkt zum selben Ergebnis. Nur die absolute Höhe der verglichenen Werte ändert sich je nach gewähltem Zeitpunkt, nicht aber die Rangfolge der Alternativen." }]
       }
     ],
     quiz: [
@@ -133,27 +133,27 @@ const FINV_CHAPTER7_TOPICS = [
       {
         id: "finv-unterjaehrige-ratenzahlung-e1",
         prompt: "Bestätigen Sie rechnerisch, dass der Ratenaufschlag von 2 % (halbjährlich, siehe Erklärung) einer Verzinsung von rund 8,16 % entspricht.",
-        solution: "Aus P = 0,51P + 0,51P·1/(1+0,5i): 1 − 0,51 = 0,51/(1+0,5i) → 0,49·(1+0,5i) = 0,51 → 0,49 + 0,245i = 0,51 → 0,245i = 0,02 → i = 0,02/0,245 ≈ 0,0816 = 8,16 %."
+        solution: [{ type: "p", text: "Aus P = 0,51P + 0,51P·1/(1+0,5i): 1 − 0,51 = 0,51/(1+0,5i) → 0,49·(1+0,5i) = 0,51 → 0,49 + 0,245i = 0,51 → 0,245i = 0,02 → i = 0,02/0,245 ≈ 0,0816 = 8,16 %." }]
       },
       {
         id: "finv-unterjaehrige-ratenzahlung-e2",
         prompt: "Jan und Lisa können aktuell nur ca. 5 % Zins am Kapitalmarkt erzielen. Für welche Zahlungsvariante sollten sie sich bei der Versicherungsprämie entscheiden, und warum?",
-        solution: "Sie sollten sich für Variante A (Einmalzahlung der vollen Prämie am Jahresanfang) entscheiden. Der Ratenaufschlag der Variante B entspricht effektiv einer Verzinsung von 8,16 %, die deutlich über den am Markt erzielbaren 5 % liegt. Würden sie stattdessen den halben Prämienbetrag zunächst zu 5 % anlegen, würde der Anlageertrag den späteren Ratenaufschlag von 2 % nicht ausgleichen — Variante A ist damit finanziell günstiger."
+        solution: [{ type: "p", text: "Sie sollten sich für Variante A (Einmalzahlung der vollen Prämie am Jahresanfang) entscheiden. Der Ratenaufschlag der Variante B entspricht effektiv einer Verzinsung von 8,16 %, die deutlich über den am Markt erzielbaren 5 % liegt. Würden sie stattdessen den halben Prämienbetrag zunächst zu 5 % anlegen, würde der Anlageertrag den späteren Ratenaufschlag von 2 % nicht ausgleichen — Variante A ist damit finanziell günstiger." }]
       },
       {
         id: "finv-unterjaehrige-ratenzahlung-e3",
         prompt: "Tom zahlt zu Beginn jedes Monats 50 € bei 3 % linearer Jahresverzinsung ein. Welchen Betrag hat er am Jahresende gespart (vorschüssige Zahlung, m=12)?",
-        solution: "Endwert = r·(m + (m+1)/2·i) = 50·(12 + 13/2·0,03) = 50·(12 + 0,195) = 50·12,195 = 609,75 €."
+        solution: [{ type: "p", text: "Endwert = r·(m + (m+1)/2·i) = 50·(12 + 13/2·0,03) = 50·(12 + 0,195) = 50·12,195 = 609,75 €." }]
       },
       {
         id: "finv-unterjaehrige-ratenzahlung-e4",
         prompt: "Wie ändert sich der Endwert aus Aufgabe 3, wenn Tom stattdessen jeweils am Monatsende einzahlt (nachschüssig)?",
-        solution: "Endwert = r·(m + (m−1)/2·i) = 50·(12 + 11/2·0,03) = 50·(12 + 0,165) = 50·12,165 = 608,25 €. Der nachschüssige Endwert (608,25 €) ist niedriger als der vorschüssige (609,75 €), da die einzelnen Raten jeweils einen Monat kürzer verzinst werden."
+        solution: [{ type: "p", text: "Endwert = r·(m + (m−1)/2·i) = 50·(12 + 11/2·0,03) = 50·(12 + 0,165) = 50·12,165 = 608,25 €. Der nachschüssige Endwert (608,25 €) ist niedriger als der vorschüssige (609,75 €), da die einzelnen Raten jeweils einen Monat kürzer verzinst werden." }]
       },
       {
         id: "finv-unterjaehrige-ratenzahlung-e5",
         prompt: "Warum ist der Endwert bei vorschüssiger Zahlung grundsätzlich höher als bei nachschüssiger Zahlung derselben Rate über denselben Zeitraum?",
-        solution: "Bei vorschüssiger Zahlung erfolgt jede einzelne Rate bereits zu Beginn der jeweiligen Teilperiode (z. B. Monatsanfang) und wird somit über die gesamte Teilperiode hinweg verzinst. Bei nachschüssiger Zahlung erfolgt dieselbe Rate erst am Ende der Teilperiode und wird dementsprechend eine Teilperiode kürzer verzinst. Da jede vorschüssige Rate länger im Zinsgenuss steht als die entsprechende nachschüssige Rate, ist der kumulierte Endwert bei vorschüssiger Zahlung stets etwas höher."
+        solution: [{ type: "p", text: "Bei vorschüssiger Zahlung erfolgt jede einzelne Rate bereits zu Beginn der jeweiligen Teilperiode (z. B. Monatsanfang) und wird somit über die gesamte Teilperiode hinweg verzinst. Bei nachschüssiger Zahlung erfolgt dieselbe Rate erst am Ende der Teilperiode und wird dementsprechend eine Teilperiode kürzer verzinst. Da jede vorschüssige Rate länger im Zinsgenuss steht als die entsprechende nachschüssige Rate, ist der kumulierte Endwert bei vorschüssiger Zahlung stets etwas höher." }]
       }
     ],
     quiz: [

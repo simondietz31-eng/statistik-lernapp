@@ -23,27 +23,27 @@ const FINV_CHAPTER4_TOPICS = [
       {
         id: "finv-aktienarten-ipo-e1",
         prompt: "Eine AG gibt 500.000 Stückaktien mit einem rechnerischen Nennwert von 1 € aus. Wie hoch ist das Grundkapital?",
-        solution: "Grundkapital = Aktienanzahl × Nennwert = 500.000 × 1 € = 500.000 €."
+        solution: [{ type: "p", text: "Grundkapital = Aktienanzahl × Nennwert = 500.000 × 1 € = 500.000 €." }]
       },
       {
         id: "finv-aktienarten-ipo-e2",
         prompt: "Die AG aus Aufgabe 1 platziert die Aktien beim IPO zu einem Ausgabepreis von 12 € je Aktie. Wie hoch sind gezeichnetes Kapital und Kapitalrücklage (Agio) insgesamt?",
-        solution: "Gezeichnetes Kapital = Grundkapital = 500.000 € (entspricht dem Nennwert je Aktie × Anzahl). Agio je Aktie = Ausgabepreis − Nennwert = 12 € − 1 € = 11 €. Kapitalrücklage = 500.000 × 11 € = 5.500.000 €. Insgesamt fließen dem Unternehmen 500.000 × 12 € = 6.000.000 € zu, davon 500.000 € als gezeichnetes Kapital und 5.500.000 € als Kapitalrücklage."
+        solution: [{ type: "p", text: "Gezeichnetes Kapital = Grundkapital = 500.000 € (entspricht dem Nennwert je Aktie × Anzahl). Agio je Aktie = Ausgabepreis − Nennwert = 12 € − 1 € = 11 €. Kapitalrücklage = 500.000 × 11 € = 5.500.000 €. Insgesamt fließen dem Unternehmen 500.000 × 12 € = 6.000.000 € zu, davon 500.000 € als gezeichnetes Kapital und 5.500.000 € als Kapitalrücklage." }]
       },
       {
         id: "finv-aktienarten-ipo-e3",
         prompt: "Ein Unternehmen hat 2.000.000 Aktien im Umlauf, die aktuell an der Börse zu 45 € gehandelt werden. Berechnen Sie die Marktkapitalisierung.",
-        solution: "Marktkapitalisierung = Anzahl der Aktien × Börsenkurs = 2.000.000 × 45 € = 90.000.000 € = 90 Mio. €."
+        solution: [{ type: "p", text: "Marktkapitalisierung = Anzahl der Aktien × Börsenkurs = 2.000.000 × 45 € = 90.000.000 € = 90 Mio. €." }]
       },
       {
         id: "finv-aktienarten-ipo-e4",
         prompt: "Erläutern Sie den Unterschied zwischen Stamm- und Vorzugsaktien und nennen Sie einen Grund, warum ein Anleger Vorzugsaktien bevorzugen könnte.",
-        solution: "Stammaktien gewähren dem Aktionär volles Stimmrecht in der Hauptversammlung. Vorzugsaktien verzichten i. d. R. auf das Stimmrecht, gewähren dafür aber meist eine höhere oder bevorzugte (vorrangige) Dividende gegenüber Stammaktien. Ein Anleger, der primär an der Rendite interessiert ist und kein Interesse an Mitspracherechten hat (z. B. weil er sich nicht aktiv an der Unternehmenssteuerung beteiligen möchte), könnte Vorzugsaktien wegen der höheren erwarteten Dividende bevorzugen."
+        solution: [{ type: "p", text: "Stammaktien gewähren dem Aktionär volles Stimmrecht in der Hauptversammlung. Vorzugsaktien verzichten i. d. R. auf das Stimmrecht, gewähren dafür aber meist eine höhere oder bevorzugte (vorrangige) Dividende gegenüber Stammaktien. Ein Anleger, der primär an der Rendite interessiert ist und kein Interesse an Mitspracherechten hat (z. B. weil er sich nicht aktiv an der Unternehmenssteuerung beteiligen möchte), könnte Vorzugsaktien wegen der höheren erwarteten Dividende bevorzugen." }]
       },
       {
         id: "finv-aktienarten-ipo-e5",
         prompt: "Was ist das Bookbuilding-Verfahren, und wozu dient es beim IPO?",
-        solution: "Beim Bookbuilding-Verfahren geben institutionelle Investoren im Rahmen eines vorgegebenen Preiskorridors verbindliche Kaufangebote (Preis-Mengen-Kombinationen) für die zu emittierenden Aktien ab. Anhand dieser gesammelten Nachfrage (des 'Orderbuchs') legt die begleitende Emissionsbank gemeinsam mit dem emittierenden Unternehmen den endgültigen Ausgabepreis fest. Ziel ist es, einen Preis zu finden, der die tatsächliche Marktnachfrage widerspiegelt und weder zu einer Unter- noch zu einer Überzeichnung mit ungünstigen Folgen führt."
+        solution: [{ type: "p", text: "Beim Bookbuilding-Verfahren geben institutionelle Investoren im Rahmen eines vorgegebenen Preiskorridors verbindliche Kaufangebote (Preis-Mengen-Kombinationen) für die zu emittierenden Aktien ab. Anhand dieser gesammelten Nachfrage (des 'Orderbuchs') legt die begleitende Emissionsbank gemeinsam mit dem emittierenden Unternehmen den endgültigen Ausgabepreis fest. Ziel ist es, einen Preis zu finden, der die tatsächliche Marktnachfrage widerspiegelt und weder zu einer Unter- noch zu einer Überzeichnung mit ungünstigen Folgen führt." }]
       }
     ],
     quiz: [
@@ -80,27 +80,27 @@ const FINV_CHAPTER4_TOPICS = [
       {
         id: "finv-bewertungskennzahlen-aktien-e1",
         prompt: "Eine AG weist ein bilanzielles Eigenkapital von 40.000.000 € bei 2.000.000 Aktien aus. Berechnen Sie den Bilanzkurs (ohne stille Reserven).",
-        solution: "Bilanzkurs = Eigenkapital / Aktienanzahl = 40.000.000 € / 2.000.000 = 20 € je Aktie."
+        solution: [{ type: "p", text: "Bilanzkurs = Eigenkapital / Aktienanzahl = 40.000.000 € / 2.000.000 = 20 € je Aktie." }]
       },
       {
         id: "finv-bewertungskennzahlen-aktien-e2",
         prompt: "Dieselbe AG hat stille Reserven in Höhe von 10.000.000 € (Differenz zwischen Zeitwert und Buchwert bestimmter Vermögensgegenstände). Berechnen Sie den Bilanzkurs unter Berücksichtigung der stillen Reserven.",
-        solution: "Angepasstes Eigenkapital = 40.000.000 € + 10.000.000 € = 50.000.000 €. Bilanzkurs (mit stillen Reserven) = 50.000.000 € / 2.000.000 = 25 € je Aktie — also 5 € höher als ohne Berücksichtigung stiller Reserven."
+        solution: [{ type: "p", text: "Angepasstes Eigenkapital = 40.000.000 € + 10.000.000 € = 50.000.000 €. Bilanzkurs (mit stillen Reserven) = 50.000.000 € / 2.000.000 = 25 € je Aktie — also 5 € höher als ohne Berücksichtigung stiller Reserven." }]
       },
       {
         id: "finv-bewertungskennzahlen-aktien-e3",
         prompt: "Ein Anleger erwartet eine Renditeerwartung von 9 % p.a. und eine langfristige Wachstumsrate der Gewinne von 3 % p.a. Berechnen Sie das theoretisch faire KGV.",
-        solution: "KGV = 1 / (Renditeerwartung − Wachstumsrate) = 1 / (0,09 − 0,03) = 1 / 0,06 ≈ 16,67."
+        solution: [{ type: "p", text: "KGV = 1 / (Renditeerwartung − Wachstumsrate) = 1 / (0,09 − 0,03) = 1 / 0,06 ≈ 16,67." }]
       },
       {
         id: "finv-bewertungskennzahlen-aktien-e4",
         prompt: "Wie verändert sich das faire KGV aus Aufgabe 3, wenn die erwartete Wachstumsrate auf 6 % steigt (Renditeerwartung bleibt bei 9 %)? Interpretieren Sie das Ergebnis.",
-        solution: "KGV = 1 / (0,09 − 0,06) = 1 / 0,03 ≈ 33,33. Das KGV steigt deutlich, weil der Nenner (Renditeerwartung minus Wachstumsrate) kleiner wird. Höheres erwartetes Wachstum rechtfertigt also einen höheren Preis pro Euro Gewinn — Anleger sind bereit, mehr für Wachstumsaktien zu zahlen."
+        solution: [{ type: "p", text: "KGV = 1 / (0,09 − 0,06) = 1 / 0,03 ≈ 33,33. Das KGV steigt deutlich, weil der Nenner (Renditeerwartung minus Wachstumsrate) kleiner wird. Höheres erwartetes Wachstum rechtfertigt also einen höheren Preis pro Euro Gewinn — Anleger sind bereit, mehr für Wachstumsaktien zu zahlen." }]
       },
       {
         id: "finv-bewertungskennzahlen-aktien-e5",
         prompt: "Was ist der konzeptionelle Unterschied zwischen Bilanzkurs und Ertragskurs bei der Aktienbewertung?",
-        solution: "Der Bilanzkurs bewertet die Aktie ausgehend vom bereits vorhandenen (bilanziellen) Vermögen des Unternehmens, also einer eher vergangenheitsorientierten, substanzbezogenen Sichtweise. Der Ertragskurs bewertet die Aktie dagegen ausgehend von der erwarteten künftigen Ertragskraft des Unternehmens — er ist zukunftsorientiert und berücksichtigt, wie viel Gewinn/Cashflow das Unternehmen voraussichtlich erwirtschaften wird, unabhängig vom bilanziellen Buchwert."
+        solution: [{ type: "p", text: "Der Bilanzkurs bewertet die Aktie ausgehend vom bereits vorhandenen (bilanziellen) Vermögen des Unternehmens, also einer eher vergangenheitsorientierten, substanzbezogenen Sichtweise. Der Ertragskurs bewertet die Aktie dagegen ausgehend von der erwarteten künftigen Ertragskraft des Unternehmens — er ist zukunftsorientiert und berücksichtigt, wie viel Gewinn/Cashflow das Unternehmen voraussichtlich erwirtschaften wird, unabhängig vom bilanziellen Buchwert." }]
       }
     ],
     quiz: [
@@ -135,27 +135,27 @@ const FINV_CHAPTER4_TOPICS = [
       {
         id: "finv-kapitalerhoehung-bezugsrecht-e1",
         prompt: "Eine AG hat 1.000.000 Aktien im Umlauf zu einem Kurs von 50 €. Sie gibt 200.000 neue Aktien zu einem Ausgabepreis von 40 € aus. Berechnen Sie den Mischkurs.",
-        solution: "M = (K_alt·N_alt + K_neu·N_neu) / (N_alt+N_neu) = (50·1.000.000 + 40·200.000) / (1.000.000+200.000) = (50.000.000 + 8.000.000) / 1.200.000 = 58.000.000 / 1.200.000 ≈ 48,33 €."
+        solution: [{ type: "p", text: "M = (K_alt·N_alt + K_neu·N_neu) / (N_alt+N_neu) = (50·1.000.000 + 40·200.000) / (1.000.000+200.000) = (50.000.000 + 8.000.000) / 1.200.000 = 58.000.000 / 1.200.000 ≈ 48,33 €." }]
       },
       {
         id: "finv-kapitalerhoehung-bezugsrecht-e2",
         prompt: "Wie hoch ist der rechnerische Kursrückgang je Altaktie durch die Kapitalerhöhung aus Aufgabe 1, und wie wird dieser Rückgang für Altaktionäre kompensiert?",
-        solution: "Kursrückgang = alter Kurs − Mischkurs = 50 € − 48,33 € = 1,67 € je Aktie. Dieser rechnerische Wertverlust wird durch das Bezugsrecht kompensiert: Altaktionäre erhalten für jede alte Aktie ein Bezugsrecht, das ihnen entweder erlaubt, neue Aktien vergünstigt zu erwerben, oder das sie am Markt verkaufen können — der Wert des Bezugsrechts entspricht ungefähr diesem rechnerischen Kursrückgang."
+        solution: [{ type: "p", text: "Kursrückgang = alter Kurs − Mischkurs = 50 € − 48,33 € = 1,67 € je Aktie. Dieser rechnerische Wertverlust wird durch das Bezugsrecht kompensiert: Altaktionäre erhalten für jede alte Aktie ein Bezugsrecht, das ihnen entweder erlaubt, neue Aktien vergünstigt zu erwerben, oder das sie am Markt verkaufen können — der Wert des Bezugsrechts entspricht ungefähr diesem rechnerischen Kursrückgang." }]
       },
       {
         id: "finv-kapitalerhoehung-bezugsrecht-e3",
         prompt: "Warum wird der Ausgabepreis bei einer Kapitalerhöhung häufig unter dem aktuellen Börsenkurs festgelegt?",
-        solution: "Ein Abschlag zum aktuellen Kurs macht die neuen Aktien für Investoren attraktiver und stellt sicher, dass die Emission auch bei zwischenzeitlich leicht fallenden Kursen erfolgreich platziert werden kann (Sicherheitspuffer). Zudem erleichtert ein niedrigerer Preis den Altaktionären, ihr Bezugsrecht auszuüben, da sie die neuen Aktien günstiger erwerben können als am Markt."
+        solution: [{ type: "p", text: "Ein Abschlag zum aktuellen Kurs macht die neuen Aktien für Investoren attraktiver und stellt sicher, dass die Emission auch bei zwischenzeitlich leicht fallenden Kursen erfolgreich platziert werden kann (Sicherheitspuffer). Zudem erleichtert ein niedrigerer Preis den Altaktionären, ihr Bezugsrecht auszuüben, da sie die neuen Aktien günstiger erwerben können als am Markt." }]
       },
       {
         id: "finv-kapitalerhoehung-bezugsrecht-e4",
         prompt: "Ein Altaktionär entscheidet sich, sein Bezugsrecht nicht auszuüben, sondern es zu verkaufen. Bleibt er dadurch wirtschaftlich vollständig unbeteiligt an der Verwässerung?",
-        solution: "Näherungsweise ja: Verkauft der Altaktionär sein Bezugsrecht zum fairen Marktwert (der etwa dem rechnerischen Kursrückgang durch die Kapitalerhöhung entspricht), gleicht der Verkaufserlös den Wertverlust seiner bestehenden Aktien (durch den gesunkenen Mischkurs) in etwa aus. Er verliert dann zwar relativ an Unternehmensanteil (prozentuale Verwässerung seiner Stimmrechte), wird aber wertmäßig durch den Bezugsrechtsverkauf weitgehend kompensiert."
+        solution: [{ type: "p", text: "Näherungsweise ja: Verkauft der Altaktionär sein Bezugsrecht zum fairen Marktwert (der etwa dem rechnerischen Kursrückgang durch die Kapitalerhöhung entspricht), gleicht der Verkaufserlös den Wertverlust seiner bestehenden Aktien (durch den gesunkenen Mischkurs) in etwa aus. Er verliert dann zwar relativ an Unternehmensanteil (prozentuale Verwässerung seiner Stimmrechte), wird aber wertmäßig durch den Bezugsrechtsverkauf weitgehend kompensiert." }]
       },
       {
         id: "finv-kapitalerhoehung-bezugsrecht-e5",
         prompt: "Nennen Sie zwei Vorteile eines dauerhaft hohen Aktienkurses für eine AG.",
-        solution: "1) Künftige Kapitalerhöhungen können zu einem höheren Ausgabepreis erfolgen, wodurch weniger neue Aktien für denselben Kapitalbedarf ausgegeben werden müssen — das reduziert die Verwässerung der Altaktionäre. 2) Ein hoher, stabiler Kurs signalisiert Vertrauen des Marktes und stärkt das Prestige des Unternehmens, was z. B. Verhandlungen mit Fremdkapitalgebern oder die Nutzung eigener Aktien als Akquisitionswährung bei Übernahmen erleichtert."
+        solution: [{ type: "p", text: "1) Künftige Kapitalerhöhungen können zu einem höheren Ausgabepreis erfolgen, wodurch weniger neue Aktien für denselben Kapitalbedarf ausgegeben werden müssen — das reduziert die Verwässerung der Altaktionäre. 2) Ein hoher, stabiler Kurs signalisiert Vertrauen des Marktes und stärkt das Prestige des Unternehmens, was z. B. Verhandlungen mit Fremdkapitalgebern oder die Nutzung eigener Aktien als Akquisitionswährung bei Übernahmen erleichtert." }]
       }
     ],
     quiz: [

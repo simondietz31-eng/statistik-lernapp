@@ -44,27 +44,27 @@ const VERTRIEB_CHAPTER9_TOPICS = [
       {
         id: "vertrieb-controlling-kennzahlen-e1",
         prompt: "Nennen und erläutern Sie die drei Zielkategorien des Vertriebscontrollings.",
-        solution: "Die drei Zielkategorien orientieren sich am zeitlichen Ablauf des Verkaufsprozesses. Potenzialbezogene Ziele sind dem eigentlichen Verkauf vorgelagert und betreffen z. B. Image oder Bekanntheitsgrad. Markterfolgsbezogene Ziele betreffen den eigentlichen Verkaufsvorgang, also z. B. Menge, Preis oder Umsatz. Ergebnisbezogene Ziele sind erst nachträglich überprüfbar, z. B. der erzielte Gewinn. Der Merksatz dazu lautet: Potenzial baut Grundlagen auf, Markterfolg zeigt, was verkauft wurde, und Ergebnis zeigt, was übrig bleibt."
+        solution: [{ type: "p", text: "Die drei Zielkategorien orientieren sich am zeitlichen Ablauf des Verkaufsprozesses. Potenzialbezogene Ziele sind dem eigentlichen Verkauf vorgelagert und betreffen z. B. Image oder Bekanntheitsgrad. Markterfolgsbezogene Ziele betreffen den eigentlichen Verkaufsvorgang, also z. B. Menge, Preis oder Umsatz. Ergebnisbezogene Ziele sind erst nachträglich überprüfbar, z. B. der erzielte Gewinn. Der Merksatz dazu lautet: Potenzial baut Grundlagen auf, Markterfolg zeigt, was verkauft wurde, und Ergebnis zeigt, was übrig bleibt." }]
       },
       {
         id: "vertrieb-controlling-kennzahlen-e2",
         prompt: "Ordnen Sie die Kennzahlen 'Trefferquote (Aufträge/Angebote)' und 'Marktanteil, der trotz aller Bemühungen gering ausfällt' jeweils in die richtige Zelle der 3×2-Matrix aus Zielkategorie und Effektivität/Effizienz ein und begründen Sie Ihre Einordnung.",
-        solution: "Die Trefferquote (Verhältnis von Aufträgen zu Angeboten) ist markterfolgsbezogen/Effizienz, da sie misst, wie gut der eigentliche Verkaufsvorgang unter Ressourceneinsatz gelingt, also 'die Dinge richtig zu tun'. Der Marktanteil, der trotz aller Bemühungen gering ausfällt, ist ergebnisbezogen/Effektivität, da er erst nachträglich überprüfbar ist und die Frage betrifft, ob insgesamt das richtige (übergeordnete) Ziel erreicht wurde — unabhängig vom Ressourceneinsatz."
+        solution: [{ type: "p", text: "Die Trefferquote (Verhältnis von Aufträgen zu Angeboten) ist markterfolgsbezogen/Effizienz, da sie misst, wie gut der eigentliche Verkaufsvorgang unter Ressourceneinsatz gelingt, also 'die Dinge richtig zu tun'. Der Marktanteil, der trotz aller Bemühungen gering ausfällt, ist ergebnisbezogen/Effektivität, da er erst nachträglich überprüfbar ist und die Frage betrifft, ob insgesamt das richtige (übergeordnete) Ziel erreicht wurde — unabhängig vom Ressourceneinsatz." }]
       },
       {
         id: "vertrieb-controlling-kennzahlen-e3",
         prompt: "Ein Unternehmen misst die Anzahl der Anrufe im Call Center und die Kundenprofitabilität. Ordnen Sie beide Kennzahlen in die Matrix ein.",
-        solution: "Die Anzahl der Anrufe im Call Center ist potenzialbezogen/Effizienz, da sie ein dem eigentlichen Verkauf vorgelagertes Maß dafür ist, wie effizient Kontaktkanäle genutzt werden, ähnlich der Anzahl der Website-Besucher. Die Kundenprofitabilität ist ergebnisbezogen/Effizienz, da sie erst nachträglich überprüfbar ist und misst, wie gut die eingesetzten Ressourcen im Verhältnis zu den erzielten Kundenerträgen genutzt wurden."
+        solution: [{ type: "p", text: "Die Anzahl der Anrufe im Call Center ist potenzialbezogen/Effizienz, da sie ein dem eigentlichen Verkauf vorgelagertes Maß dafür ist, wie effizient Kontaktkanäle genutzt werden, ähnlich der Anzahl der Website-Besucher. Die Kundenprofitabilität ist ergebnisbezogen/Effizienz, da sie erst nachträglich überprüfbar ist und misst, wie gut die eingesetzten Ressourcen im Verhältnis zu den erzielten Kundenerträgen genutzt wurden." }]
       },
       {
         id: "vertrieb-controlling-kennzahlen-e4",
         prompt: "Erklären Sie den Unterschied zwischen Effektivität und Effizienz im Kontext des Vertriebscontrollings.",
-        solution: "Effektivität bedeutet 'die richtigen Dinge zu tun' — es geht darum, ob ein übergeordnetes Ziel überhaupt erreicht wird, unabhängig vom Ressourceneinsatz. Effizienz bedeutet 'die Dinge richtig zu tun' — es geht um die Frage, wie gut die eingesetzten Ressourcen zur Zielerreichung genutzt werden, also um das Verhältnis von Aufwand zu Ergebnis. Beide Dimensionen lassen sich mit den drei Zielkategorien (potenzial-, markterfolgs- und ergebnisbezogen) zu einer 3×2-Matrix kombinieren."
+        solution: [{ type: "p", text: "Effektivität bedeutet 'die richtigen Dinge zu tun' — es geht darum, ob ein übergeordnetes Ziel überhaupt erreicht wird, unabhängig vom Ressourceneinsatz. Effizienz bedeutet 'die Dinge richtig zu tun' — es geht um die Frage, wie gut die eingesetzten Ressourcen zur Zielerreichung genutzt werden, also um das Verhältnis von Aufwand zu Ergebnis. Beide Dimensionen lassen sich mit den drei Zielkategorien (potenzial-, markterfolgs- und ergebnisbezogen) zu einer 3×2-Matrix kombinieren." }]
       },
       {
         id: "vertrieb-controlling-kennzahlen-e5",
         prompt: "Nennen Sie mindestens vier Anforderungen an ein erfolgreiches Vertriebscontrolling.",
-        solution: "Zu den Anforderungen zählen unter anderem: Konsistenz mit der Vertriebsstrategie, ein Mix aus harten (z. B. Umsatz) und weichen (z. B. Kundenzufriedenheit) Zielgrößen, situative Anpassung an die Marktgegebenheiten, Planung nach Marktsegmenten, Anreize für realitätsnahe Planung, sorgfältige Konsolidierung von Top-Down- und Bottom-Up-Plänen, zeitliches Herunterbrechen der Ziele für frühzeitiges Eingreifen, sorgfältige Abweichungsanalyse sowie ein angemessener Planungsaufwand."
+        solution: [{ type: "p", text: "Zu den Anforderungen zählen unter anderem: Konsistenz mit der Vertriebsstrategie, ein Mix aus harten (z. B. Umsatz) und weichen (z. B. Kundenzufriedenheit) Zielgrößen, situative Anpassung an die Marktgegebenheiten, Planung nach Marktsegmenten, Anreize für realitätsnahe Planung, sorgfältige Konsolidierung von Top-Down- und Bottom-Up-Plänen, zeitliches Herunterbrechen der Ziele für frühzeitiges Eingreifen, sorgfältige Abweichungsanalyse sowie ein angemessener Planungsaufwand." }]
       }
     ],
     quiz: [

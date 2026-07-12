@@ -30,27 +30,27 @@ const FINV_CHAPTER6_TOPICS = [
       {
         id: "finv-investitionsarten-ebenen-ziele-e1",
         prompt: "Ordnen Sie folgende Investitionen der jeweiligen Investitionsart zu: a) Kauf eines Patents, b) Erwerb von Unternehmensanleihen, c) Kauf eines neuen Lkw.",
-        solution: "a) Kauf eines Patents → immaterielle Investition. b) Erwerb von Unternehmensanleihen → Finanzinvestition. c) Kauf eines neuen Lkw → Sachinvestition."
+        solution: [{ type: "p", text: "a) Kauf eines Patents → immaterielle Investition. b) Erwerb von Unternehmensanleihen → Finanzinvestition. c) Kauf eines neuen Lkw → Sachinvestition." }]
       },
       {
         id: "finv-investitionsarten-ebenen-ziele-e2",
         prompt: "Ein Unternehmen plant den Bau eines neuen Werks zur Erschließung eines neuen Marktsegments in den nächsten 10 Jahren. Welcher Planungsebene ist diese Entscheidung zuzuordnen, und warum?",
-        solution: "Strategische Investitionsplanung: Die Entscheidung ist langfristig ausgerichtet (10 Jahre) und bezieht sich auf das künftige Produkt-/Marktangebot des Unternehmens (Erschließung eines neuen Marktsegments) — beides sind typische Kennzeichen der strategischen Ebene, im Gegensatz zur taktischen (mittelfristig, laufende Geschäftstätigkeit) oder operativen (kurzfristig, wiederkehrend) Ebene."
+        solution: [{ type: "p", text: "Strategische Investitionsplanung: Die Entscheidung ist langfristig ausgerichtet (10 Jahre) und bezieht sich auf das künftige Produkt-/Marktangebot des Unternehmens (Erschließung eines neuen Marktsegments) — beides sind typische Kennzeichen der strategischen Ebene, im Gegensatz zur taktischen (mittelfristig, laufende Geschäftstätigkeit) oder operativen (kurzfristig, wiederkehrend) Ebene." }]
       },
       {
         id: "finv-investitionsarten-ebenen-ziele-e3",
         prompt: "Nennen Sie je zwei monetäre und zwei nicht-monetäre Investitionsziele.",
-        solution: "Monetäre Ziele: Gewinnsteigerung, Kostensenkung (alternativ: Rentabilitätssteigerung, Umsatzsteigerung). Nicht-monetäre Ziele: Marktanteilswachstum, ökologische Ziele (alternativ: Prestige, soziale Ziele)."
+        solution: [{ type: "p", text: "Monetäre Ziele: Gewinnsteigerung, Kostensenkung (alternativ: Rentabilitätssteigerung, Umsatzsteigerung). Nicht-monetäre Ziele: Marktanteilswachstum, ökologische Ziele (alternativ: Prestige, soziale Ziele)." }]
       },
       {
         id: "finv-investitionsarten-ebenen-ziele-e4",
         prompt: "Was ist der zentrale methodische Unterschied zwischen statischen und dynamischen Investitionsrechenverfahren?",
-        solution: "Statische Verfahren (Kosten-, Gewinn-, Rentabilitätsvergleichsrechnung) arbeiten typischerweise mit Durchschnittswerten einer repräsentativen Periode und berücksichtigen den Zeitpunkt einzelner Zahlungen nicht explizit — sie sind rechnerisch einfacher, aber weniger präzise. Dynamische Verfahren (Kapitalwert-, interne Zinsfuß-, Amortisations-, Annuitätenmethode) basieren auf den tatsächlichen Cashflows über den gesamten Planungszeitraum und berücksichtigen die Zeitwerte der Zahlungen durch Ab-/Aufzinsung — sie sind genauer, aber rechenaufwändiger."
+        solution: [{ type: "p", text: "Statische Verfahren (Kosten-, Gewinn-, Rentabilitätsvergleichsrechnung) arbeiten typischerweise mit Durchschnittswerten einer repräsentativen Periode und berücksichtigen den Zeitpunkt einzelner Zahlungen nicht explizit — sie sind rechnerisch einfacher, aber weniger präzise. Dynamische Verfahren (Kapitalwert-, interne Zinsfuß-, Amortisations-, Annuitätenmethode) basieren auf den tatsächlichen Cashflows über den gesamten Planungszeitraum und berücksichtigen die Zeitwerte der Zahlungen durch Ab-/Aufzinsung — sie sind genauer, aber rechenaufwändiger." }]
       },
       {
         id: "finv-investitionsarten-ebenen-ziele-e5",
         prompt: "Die Ersatzbeschaffung einer einzelnen, regelmäßig auszutauschenden Bürodruckerpatrone/eines geringwertigen Wirtschaftsguts — welcher Planungsebene ist das zuzuordnen?",
-        solution: "Operative Investitionsplanung: Es handelt sich um eine kurzfristige, regelmäßig wiederkehrende Ersatzbeschaffung eines geringwertigen Investitionsobjekts — genau das kennzeichnet die operative Ebene, im Gegensatz zur strategischen oder taktischen Ebene."
+        solution: [{ type: "p", text: "Operative Investitionsplanung: Es handelt sich um eine kurzfristige, regelmäßig wiederkehrende Ersatzbeschaffung eines geringwertigen Investitionsobjekts — genau das kennzeichnet die operative Ebene, im Gegensatz zur strategischen oder taktischen Ebene." }]
       }
     ],
     quiz: [
@@ -88,27 +88,27 @@ const FINV_CHAPTER6_TOPICS = [
       {
         id: "finv-finanzmathematik-grundbegriffe-e1",
         prompt: "Erklären Sie in eigenen Worten den Unterschied zwischen Barwert, Endwert und Zeitwert.",
-        solution: "Der Barwert (K₀) ist der Wert eines Zahlungsstroms zu Beginn der Betrachtung (heute) — man erhält ihn durch Abzinsen künftiger Zahlungen auf den Startzeitpunkt. Der Endwert (Kₙ) ist der Wert am Ende der Laufzeit — man erhält ihn durch Aufzinsen aller Zahlungen auf den Endzeitpunkt. Der Zeitwert (Kₜ) verallgemeinert dieses Konzept auf einen beliebigen Zwischenzeitpunkt t: Man zinst frühere Zahlungen auf t auf und spätere Zahlungen auf t ab."
+        solution: [{ type: "p", text: "Der Barwert (K₀) ist der Wert eines Zahlungsstroms zu Beginn der Betrachtung (heute) — man erhält ihn durch Abzinsen künftiger Zahlungen auf den Startzeitpunkt. Der Endwert (Kₙ) ist der Wert am Ende der Laufzeit — man erhält ihn durch Aufzinsen aller Zahlungen auf den Endzeitpunkt. Der Zeitwert (Kₜ) verallgemeinert dieses Konzept auf einen beliebigen Zwischenzeitpunkt t: Man zinst frühere Zahlungen auf t auf und spätere Zahlungen auf t ab." }]
       },
       {
         id: "finv-finanzmathematik-grundbegriffe-e2",
         prompt: "Warum kann man zwei Zahlungsalternativen nicht einfach anhand ihrer nominalen (unverzinsten) Beträge vergleichen, wenn sie zu unterschiedlichen Zeitpunkten fällig sind?",
-        solution: "Weil Geld einen Zeitwert hat: Ein Betrag, der später zur Verfügung steht, hat wegen entgangener Zinserträge (Opportunitätskosten) einen geringeren heutigen Wert als derselbe Nominalbetrag, der bereits jetzt verfügbar ist. Ein direkter Vergleich der Nominalbeträge ohne Berücksichtigung des Zeitpunkts würde daher zu falschen Schlussfolgerungen über die tatsächliche Vorteilhaftigkeit führen — die Beträge müssen zuerst auf einen gemeinsamen Zeitpunkt ab- oder aufgezinst werden."
+        solution: [{ type: "p", text: "Weil Geld einen Zeitwert hat: Ein Betrag, der später zur Verfügung steht, hat wegen entgangener Zinserträge (Opportunitätskosten) einen geringeren heutigen Wert als derselbe Nominalbetrag, der bereits jetzt verfügbar ist. Ein direkter Vergleich der Nominalbeträge ohne Berücksichtigung des Zeitpunkts würde daher zu falschen Schlussfolgerungen über die tatsächliche Vorteilhaftigkeit führen — die Beträge müssen zuerst auf einen gemeinsamen Zeitpunkt ab- oder aufgezinst werden." }]
       },
       {
         id: "finv-finanzmathematik-grundbegriffe-e3",
         prompt: "Ist es für das Ergebnis eines Alternativenvergleichs entscheidend, ob man den Barwert- oder den Endwertvergleich wählt? Begründen Sie.",
-        solution: "Nein, bei korrekter Rechnung mit demselben Zinssatz führen Barwert- und Endwertvergleich (und jeder Zeitwertvergleich zu einem beliebigen Zeitpunkt) zum identischen Ergebnis bezüglich der Frage, welche Alternative vorteilhafter ist. Entscheidend ist nur, dass beide Alternativen konsequent auf denselben Vergleichszeitpunkt bezogen werden. In der Praxis wird aus Konvention meist der Barwertvergleich als Standard genutzt."
+        solution: [{ type: "p", text: "Nein, bei korrekter Rechnung mit demselben Zinssatz führen Barwert- und Endwertvergleich (und jeder Zeitwertvergleich zu einem beliebigen Zeitpunkt) zum identischen Ergebnis bezüglich der Frage, welche Alternative vorteilhafter ist. Entscheidend ist nur, dass beide Alternativen konsequent auf denselben Vergleichszeitpunkt bezogen werden. In der Praxis wird aus Konvention meist der Barwertvergleich als Standard genutzt." }]
       },
       {
         id: "finv-finanzmathematik-grundbegriffe-e4",
         prompt: "Was versteht man unter einem Cashflow im finanzmathematischen Sinn?",
-        solution: "Der Cashflow umfasst sämtliche Ein- und Auszahlungen eines Projekts, jeweils mit dem Zeitpunkt ihres Anfalls verknüpft — also die vollständige zeitliche Struktur der Zahlungsströme. Im Gegensatz zu reinen Erfolgsgrößen (wie dem bilanziellen Gewinn) stellt der Cashflow ausschließlich auf tatsächliche Zahlungen ab, nicht auf periodisierte Aufwands-/Ertragsgrößen."
+        solution: [{ type: "p", text: "Der Cashflow umfasst sämtliche Ein- und Auszahlungen eines Projekts, jeweils mit dem Zeitpunkt ihres Anfalls verknüpft — also die vollständige zeitliche Struktur der Zahlungsströme. Im Gegensatz zu reinen Erfolgsgrößen (wie dem bilanziellen Gewinn) stellt der Cashflow ausschließlich auf tatsächliche Zahlungen ab, nicht auf periodisierte Aufwands-/Ertragsgrößen." }]
       },
       {
         id: "finv-finanzmathematik-grundbegriffe-e5",
         prompt: "Warum wird bei der praktischen Umsetzung in Excel empfohlen, Eingabeparameter und Berechnungsformeln in getrennten Bereichen zu platzieren?",
-        solution: "Werden Parameterwerte direkt in Formeln 'hart codiert' oder unübersichtlich vermischt, wird das Tabellenblatt schnell unübersichtlich und fehleranfällig — Änderungen an einem Parameter (z. B. dem Zinssatz) erfordern dann das Auffinden und Anpassen zahlreicher Formeln. Trennt man dagegen einen klar erkennbaren Parameterbereich von einem separaten Berechnungsbereich (der auf die Parameterzellen verweist), lassen sich Annahmen zentral ändern, Fehler leichter erkennen und die Nachvollziehbarkeit der Berechnung deutlich verbessern."
+        solution: [{ type: "p", text: "Werden Parameterwerte direkt in Formeln 'hart codiert' oder unübersichtlich vermischt, wird das Tabellenblatt schnell unübersichtlich und fehleranfällig — Änderungen an einem Parameter (z. B. dem Zinssatz) erfordern dann das Auffinden und Anpassen zahlreicher Formeln. Trennt man dagegen einen klar erkennbaren Parameterbereich von einem separaten Berechnungsbereich (der auf die Parameterzellen verweist), lassen sich Annahmen zentral ändern, Fehler leichter erkennen und die Nachvollziehbarkeit der Berechnung deutlich verbessern." }]
       }
     ],
     quiz: [

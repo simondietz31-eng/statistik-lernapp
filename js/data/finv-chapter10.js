@@ -18,27 +18,27 @@ const FINV_CHAPTER10_TOPICS = [
       {
         id: "finv-rentenbarwert-endwert-e1",
         prompt: "Eine nachschüssige Rente von 5.000 € wird 10 Jahre lang bei 6 % Zins gezahlt. Berechnen Sie den Rentenendwert R_n^nach.",
-        solution: "R_n^nach = R·((1+i)^n − 1)/i = 5.000·((1,06)^10 − 1)/0,06 = 5.000·(1,79085 − 1)/0,06 = 5.000·0,79085/0,06 = 5.000·13,1808 ≈ 65.904 €."
+        solution: [{ type: "p", text: "R_n^nach = R·((1+i)^n − 1)/i = 5.000·((1,06)^10 − 1)/0,06 = 5.000·(1,79085 − 1)/0,06 = 5.000·0,79085/0,06 = 5.000·13,1808 ≈ 65.904 €." }]
       },
       {
         id: "finv-rentenbarwert-endwert-e2",
         prompt: "Berechnen Sie für dieselbe Rente (5.000 €, 10 Jahre, 6 %) den nachschüssigen Rentenbarwert R_0^nach.",
-        solution: "R_0^nach = R·((1+i)^n − 1)/((1+i)^n·i) = 5.000·((1,06)^10−1)/((1,06)^10·0,06) = 5.000·0,79085/(1,79085·0,06) = 5.000·0,79085/0,107451 ≈ 5.000·7,3601 ≈ 36.801 €."
+        solution: [{ type: "p", text: "R_0^nach = R·((1+i)^n − 1)/((1+i)^n·i) = 5.000·((1,06)^10−1)/((1,06)^10·0,06) = 5.000·0,79085/(1,79085·0,06) = 5.000·0,79085/0,107451 ≈ 5.000·7,3601 ≈ 36.801 €." }]
       },
       {
         id: "finv-rentenbarwert-endwert-e3",
         prompt: "Wie hoch wäre der Rentenendwert aus Aufgabe 1, wenn die Zahlungen stattdessen vorschüssig erfolgen würden?",
-        solution: "R_n^vor = R·(1+i)·((1+i)^n−1)/i = 5.000·1,06·13,1808 ≈ 5.000·13,9716 ≈ 69.858 €. Der vorschüssige Endwert ist um den Faktor (1+i) höher als der nachschüssige (65.904 € × 1,06 ≈ 69.858 €), weil jede Rate eine Periode länger verzinst wird."
+        solution: [{ type: "p", text: "R_n^vor = R·(1+i)·((1+i)^n−1)/i = 5.000·1,06·13,1808 ≈ 5.000·13,9716 ≈ 69.858 €. Der vorschüssige Endwert ist um den Faktor (1+i) höher als der nachschüssige (65.904 € × 1,06 ≈ 69.858 €), weil jede Rate eine Periode länger verzinst wird." }]
       },
       {
         id: "finv-rentenbarwert-endwert-e4",
         prompt: "Ein Sparer zahlt 10 Jahre lang jeweils zu Jahresbeginn (vorschüssig) 2.000 € ein bei 4 % Zins. Berechnen Sie den vorschüssigen Rentenendwert.",
-        solution: "R_n^vor = R·(1+i)·((1+i)^n−1)/i = 2.000·1,04·((1,04)^10−1)/0,04 = 2.000·1,04·(1,48024−1)/0,04 = 2.000·1,04·0,48024/0,04 = 2.000·1,04·12,006 ≈ 2.000·12,4862 ≈ 24.972 €."
+        solution: [{ type: "p", text: "R_n^vor = R·(1+i)·((1+i)^n−1)/i = 2.000·1,04·((1,04)^10−1)/0,04 = 2.000·1,04·(1,48024−1)/0,04 = 2.000·1,04·0,48024/0,04 = 2.000·1,04·12,006 ≈ 2.000·12,4862 ≈ 24.972 €." }]
       },
       {
         id: "finv-rentenbarwert-endwert-e5",
         prompt: "Erklären Sie, warum der vorschüssige Rentenbarwertfaktor stets größer ist als der nachschüssige Rentenbarwertfaktor bei sonst gleichen Parametern.",
-        solution: "Bei einer vorschüssigen Rente erfolgt jede einzelne Zahlung eine Periode früher als bei einer nachschüssigen Rente (am Anfang statt am Ende der jeweiligen Periode). Da Zahlungen, die früher erfolgen, aus Sicht des heutigen Zeitpunkts (t=0) einen höheren Barwert haben (sie müssen über einen kürzeren Zeitraum abgezinst werden), ist auch der Gesamtbarwert einer vorschüssigen Rentenreihe systematisch höher als der einer nachschüssigen Reihe mit identischer Rate, identischem Zins und identischer Anzahl an Zahlungen. Formal unterscheiden sich die beiden Barwertfaktoren exakt um den Faktor (1+i)."
+        solution: [{ type: "p", text: "Bei einer vorschüssigen Rente erfolgt jede einzelne Zahlung eine Periode früher als bei einer nachschüssigen Rente (am Anfang statt am Ende der jeweiligen Periode). Da Zahlungen, die früher erfolgen, aus Sicht des heutigen Zeitpunkts (t=0) einen höheren Barwert haben (sie müssen über einen kürzeren Zeitraum abgezinst werden), ist auch der Gesamtbarwert einer vorschüssigen Rentenreihe systematisch höher als der einer nachschüssigen Reihe mit identischer Rate, identischem Zins und identischer Anzahl an Zahlungen. Formal unterscheiden sich die beiden Barwertfaktoren exakt um den Faktor (1+i)." }]
       }
     ],
     quiz: [
@@ -76,27 +76,27 @@ const FINV_CHAPTER10_TOPICS = [
       {
         id: "finv-ratenkredit-annuitaetenkredit-e1",
         prompt: "Ein Ratenkredit über 70.000 € wird über 5 Jahre bei 8 % Zins in gleichen Tilgungsraten getilgt. Wie hoch ist die jährliche Tilgungsrate, und wie hoch sind die Zinsen im 1. Jahr?",
-        solution: "Jährliche Tilgungsrate = 70.000/5 = 14.000 €. Zinsen im 1. Jahr = 8 % von 70.000 € = 5.600 €. Gesamtzahlung im 1. Jahr = 14.000 + 5.600 = 19.600 €."
+        solution: [{ type: "p", text: "Jährliche Tilgungsrate = 70.000/5 = 14.000 €. Zinsen im 1. Jahr = 8 % von 70.000 € = 5.600 €. Gesamtzahlung im 1. Jahr = 14.000 + 5.600 = 19.600 €." }]
       },
       {
         id: "finv-ratenkredit-annuitaetenkredit-e2",
         prompt: "Wie hoch sind für den Ratenkredit aus Aufgabe 1 die Zinsen im 2. Jahr (nach Tilgung von 14.000 € im 1. Jahr)?",
-        solution: "Restschuld nach Jahr 1 = 70.000 − 14.000 = 56.000 €. Zinsen Jahr 2 = 8 % von 56.000 € = 4.480 €. Gesamtzahlung Jahr 2 = 14.000 + 4.480 = 18.480 € — niedriger als im 1. Jahr (19.600 €), da die Zinsen auf die sinkende Restschuld berechnet werden."
+        solution: [{ type: "p", text: "Restschuld nach Jahr 1 = 70.000 − 14.000 = 56.000 €. Zinsen Jahr 2 = 8 % von 56.000 € = 4.480 €. Gesamtzahlung Jahr 2 = 14.000 + 4.480 = 18.480 € — niedriger als im 1. Jahr (19.600 €), da die Zinsen auf die sinkende Restschuld berechnet werden." }]
       },
       {
         id: "finv-ratenkredit-annuitaetenkredit-e3",
         prompt: "Ein Annuitätenkredit über 70.000 € wird über 5 Jahre bei 8 % Zins mit einer konstanten jährlichen Annuität von 17.534,95 € (inkl. Tilgung und Zinsen) getilgt. Wie hoch sind die Zinsen im 1. Jahr, und wie hoch ist damit der Tilgungsanteil?",
-        solution: "Zinsen Jahr 1 = 8 % von 70.000 € = 5.600 €. Tilgungsanteil Jahr 1 = Annuität − Zinsen = 17.534,95 − 5.600 = 11.934,95 €. Die Restschuld sinkt damit auf 70.000 − 11.934,95 = 58.065,05 €."
+        solution: [{ type: "p", text: "Zinsen Jahr 1 = 8 % von 70.000 € = 5.600 €. Tilgungsanteil Jahr 1 = Annuität − Zinsen = 17.534,95 − 5.600 = 11.934,95 €. Die Restschuld sinkt damit auf 70.000 − 11.934,95 = 58.065,05 €." }]
       },
       {
         id: "finv-ratenkredit-annuitaetenkredit-e4",
         prompt: "Wie verändert sich beim Annuitätenkredit aus Aufgabe 3 der Tilgungsanteil im 2. Jahr im Vergleich zum 1. Jahr, obwohl die Gesamtzahlung konstant bleibt?",
-        solution: "Zinsen Jahr 2 = 8 % von 58.065,05 € ≈ 4.645,20 €. Tilgungsanteil Jahr 2 = 17.534,95 − 4.645,20 ≈ 12.889,75 €. Der Tilgungsanteil steigt also von Jahr 1 zu Jahr 2 (von 11.934,95 € auf 12.889,75 €), weil die Restschuld und damit der Zinsanteil sinkt, während die Gesamtzahlung (Annuität) konstant bleibt — der frei werdende Anteil fließt zusätzlich in die Tilgung."
+        solution: [{ type: "p", text: "Zinsen Jahr 2 = 8 % von 58.065,05 € ≈ 4.645,20 €. Tilgungsanteil Jahr 2 = 17.534,95 − 4.645,20 ≈ 12.889,75 €. Der Tilgungsanteil steigt also von Jahr 1 zu Jahr 2 (von 11.934,95 € auf 12.889,75 €), weil die Restschuld und damit der Zinsanteil sinkt, während die Gesamtzahlung (Annuität) konstant bleibt — der frei werdende Anteil fließt zusätzlich in die Tilgung." }]
       },
       {
         id: "finv-ratenkredit-annuitaetenkredit-e5",
         prompt: "Ein Kreditnehmer bevorzugt eine möglichst konstante, gut planbare monatliche/jährliche Belastung. Welche Kreditart ist dafür besser geeignet, und warum?",
-        solution: "Der Annuitätenkredit ist besser geeignet, da die Gesamtzahlung (Annuität, bestehend aus Zins- und Tilgungsanteil) über die gesamte Laufzeit konstant bleibt. Beim Ratenkredit ist zwar die Tilgungsrate konstant, aber die Gesamtzahlung sinkt im Zeitverlauf (weil die Zinsen auf die sinkende Restschuld fallen) — die Belastung ist zu Beginn der Laufzeit am höchsten, was die Planbarkeit für den Kreditnehmer im Vergleich zum Annuitätenkredit erschwert."
+        solution: [{ type: "p", text: "Der Annuitätenkredit ist besser geeignet, da die Gesamtzahlung (Annuität, bestehend aus Zins- und Tilgungsanteil) über die gesamte Laufzeit konstant bleibt. Beim Ratenkredit ist zwar die Tilgungsrate konstant, aber die Gesamtzahlung sinkt im Zeitverlauf (weil die Zinsen auf die sinkende Restschuld fallen) — die Belastung ist zu Beginn der Laufzeit am höchsten, was die Planbarkeit für den Kreditnehmer im Vergleich zum Annuitätenkredit erschwert." }]
       }
     ],
     quiz: [
@@ -134,27 +134,27 @@ const FINV_CHAPTER10_TOPICS = [
       {
         id: "finv-annuitaetenmethode-e1",
         prompt: "Ein Investitionsprojekt hat einen Kapitalwert von 30.000 € bei einer Laufzeit von 5 Jahren und einem Kalkulationszinssatz von 8 %. Berechnen Sie mithilfe des Annuitätenfaktors die jährliche Annuität (nachschüssige Entnahme).",
-        solution: "Annuitätenfaktor = (1+i)^n·i / ((1+i)^n−1) = (1,08)^5·0,08 / ((1,08)^5−1) = 1,46933·0,08/(1,46933−1) = 0,117546/0,46933 ≈ 0,25046. R = K₀ · Annuitätenfaktor = 30.000 · 0,25046 ≈ 7.513,80 € pro Jahr."
+        solution: [{ type: "p", text: "Annuitätenfaktor = (1+i)^n·i / ((1+i)^n−1) = (1,08)^5·0,08 / ((1,08)^5−1) = 1,46933·0,08/(1,46933−1) = 0,117546/0,46933 ≈ 0,25046. R = K₀ · Annuitätenfaktor = 30.000 · 0,25046 ≈ 7.513,80 € pro Jahr." }]
       },
       {
         id: "finv-annuitaetenmethode-e2",
         prompt: "Ein Sparer möchte in 8 Jahren eine Investitionssumme von 80.000 € ausgleichen. Bei welcher jährlichen (nachschüssigen) Rate müsste er bei 5 % Zins sparen, um genau diesen Betrag als Barwert zu erreichen?",
-        solution: "Annuitätenfaktor = (1,05)^8·0,05/((1,05)^8−1) = 1,47746·0,05/(1,47746−1) = 0,073873/0,47746 ≈ 0,15472. R = 80.000 · 0,15472 ≈ 12.377,60 € pro Jahr."
+        solution: [{ type: "p", text: "Annuitätenfaktor = (1,05)^8·0,05/((1,05)^8−1) = 1,47746·0,05/(1,47746−1) = 0,073873/0,47746 ≈ 0,15472. R = 80.000 · 0,15472 ≈ 12.377,60 € pro Jahr." }]
       },
       {
         id: "finv-annuitaetenmethode-e3",
         prompt: "Welche gleichbleibenden jährlichen Entnahmen kann ein Investitionsprojekt mit einem Kapitalwert von 100.000 € über 10 Jahre bei 6 % Kalkulationszins finanzieren?",
-        solution: "Annuitätenfaktor = (1,06)^10·0,06/((1,06)^10−1) = 1,79085·0,06/(1,79085−1) = 0,107451/0,79085 ≈ 0,13587. R = 100.000 · 0,13587 ≈ 13.587 € pro Jahr über 10 Jahre."
+        solution: [{ type: "p", text: "Annuitätenfaktor = (1,06)^10·0,06/((1,06)^10−1) = 1,79085·0,06/(1,79085−1) = 0,107451/0,79085 ≈ 0,13587. R = 100.000 · 0,13587 ≈ 13.587 € pro Jahr über 10 Jahre." }]
       },
       {
         id: "finv-annuitaetenmethode-e4",
         prompt: "Was passiert wirtschaftlich, wenn man aus einem Projekt mit Kapitalwert 100.000 € (Beispiel aus Aufgabe 3) über 10 Jahre jeweils GENAU die berechnete Annuität von 13.587 € entnimmt?",
-        solution: "Bei jährlicher Entnahme von exakt 13.587 € (nachschüssig) ist das gebundene Kapital nach genau 10 Jahren vollständig aufgebraucht — die Entnahmen entsprechen exakt der Annuität, die den anfänglichen Kapitalwert bei 6 % Verzinsung über 10 Jahre gleichmäßig 'abbaut'. Würde man mehr als 13.587 € pro Jahr entnehmen, wäre das Kapital schon vor Ablauf der 10 Jahre aufgebraucht; würde man weniger entnehmen, bliebe am Ende noch Kapital übrig."
+        solution: [{ type: "p", text: "Bei jährlicher Entnahme von exakt 13.587 € (nachschüssig) ist das gebundene Kapital nach genau 10 Jahren vollständig aufgebraucht — die Entnahmen entsprechen exakt der Annuität, die den anfänglichen Kapitalwert bei 6 % Verzinsung über 10 Jahre gleichmäßig 'abbaut'. Würde man mehr als 13.587 € pro Jahr entnehmen, wäre das Kapital schon vor Ablauf der 10 Jahre aufgebraucht; würde man weniger entnehmen, bliebe am Ende noch Kapital übrig." }]
       },
       {
         id: "finv-annuitaetenmethode-e5",
         prompt: "Erläutern Sie den konzeptionellen Zusammenhang zwischen der Annuitätenmethode und dem Annuitätenkredit.",
-        solution: "Beide nutzen denselben mathematischen Mechanismus (den Annuitätenfaktor), um einen Barwert (Kreditsumme bzw. Kapitalwert) in eine Reihe gleichbleibender Jahreszahlungen umzurechnen. Beim Annuitätenkredit wird die Kreditsumme so in eine konstante jährliche Rückzahlung (Annuität aus Zins und Tilgung) umgewandelt, dass die Schuld nach n Jahren exakt getilgt ist. Bei der Annuitätenmethode wird der Kapitalwert eines Investitionsprojekts (oder umgekehrt eine benötigte Investitionssumme) in eine konstante jährliche Entnahme bzw. Sparrate umgerechnet, die das zugrunde liegende Kapital über die Laufzeit gleichmäßig 'verzehrt' bzw. 'aufbaut'. Es handelt sich also um dieselbe Rechenlogik, nur mit unterschiedlicher wirtschaftlicher Interpretation (Kredittilgung vs. Investitionsbeurteilung)."
+        solution: [{ type: "p", text: "Beide nutzen denselben mathematischen Mechanismus (den Annuitätenfaktor), um einen Barwert (Kreditsumme bzw. Kapitalwert) in eine Reihe gleichbleibender Jahreszahlungen umzurechnen. Beim Annuitätenkredit wird die Kreditsumme so in eine konstante jährliche Rückzahlung (Annuität aus Zins und Tilgung) umgewandelt, dass die Schuld nach n Jahren exakt getilgt ist. Bei der Annuitätenmethode wird der Kapitalwert eines Investitionsprojekts (oder umgekehrt eine benötigte Investitionssumme) in eine konstante jährliche Entnahme bzw. Sparrate umgerechnet, die das zugrunde liegende Kapital über die Laufzeit gleichmäßig 'verzehrt' bzw. 'aufbaut'. Es handelt sich also um dieselbe Rechenlogik, nur mit unterschiedlicher wirtschaftlicher Interpretation (Kredittilgung vs. Investitionsbeurteilung)." }]
       }
     ],
     quiz: [

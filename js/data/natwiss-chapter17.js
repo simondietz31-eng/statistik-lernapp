@@ -22,27 +22,27 @@ const NATWISS_CHAPTER17_TOPICS = [
       {
         id: "natwiss-ueb-elektrostatik-e1",
         prompt: "Zwei identische Ionen im Abstand r = 5·10⁻¹⁰ m üben F = 3,7·10⁻⁹ N aufeinander aus. Wie groß ist die Ladung Q jedes Ions?",
-        solution: "F = kQ²/r² → Q = r·√(F/k) = r·√(F·4πε₀) = 5·10⁻¹⁰·√(3,7·10⁻⁹·1,113·10⁻¹⁰) = 5·10⁻¹⁰·√(4,12·10⁻¹⁹) ≈ 3,2·10⁻¹⁹ C."
+        solution: [{ type: "p", text: "F = kQ²/r² → Q = r·√(F/k) = r·√(F·4πε₀) = 5·10⁻¹⁰·√(3,7·10⁻⁹·1,113·10⁻¹⁰) = 5·10⁻¹⁰·√(4,12·10⁻¹⁹) ≈ 3,2·10⁻¹⁹ C." }]
       },
       {
         id: "natwiss-ueb-elektrostatik-e2",
         prompt: "Wie viele Elektronen fehlen dem Ion aus Aufg. 1? (e = 1,6·10⁻¹⁹ C)",
-        solution: "n = Q/e = 3,2·10⁻¹⁹/1,6·10⁻¹⁹ = 2 Elektronen."
+        solution: [{ type: "p", text: "n = Q/e = 3,2·10⁻¹⁹/1,6·10⁻¹⁹ = 2 Elektronen." }]
       },
       {
         id: "natwiss-ueb-elektrostatik-e3",
         prompt: "Punktladung q = 1 μC. Potenzialunterschied φ_A − φ_B für d₁ = 2 m (Punkt A) und d₂ = 1 m (Punkt B)?",
-        solution: "φ_A − φ_B = kq·(1/d₁ − 1/d₂) = 9·10⁹·10⁻⁶·(1/2 − 1/1) = 9·10³·(−0,5) = −4500 V = −4,5 kV."
+        solution: [{ type: "p", text: "φ_A − φ_B = kq·(1/d₁ − 1/d₂) = 9·10⁹·10⁻⁶·(1/2 − 1/1) = 9·10³·(−0,5) = −4500 V = −4,5 kV." }]
       },
       {
         id: "natwiss-ueb-elektrostatik-e4",
         prompt: "Gilt der gleiche Potenzialunterschied φ_A − φ_B = −4,5 kV auch, wenn A und B nicht auf derselben Achse liegen, aber gleiche Abstände d₁ = 2 m und d₂ = 1 m haben?",
-        solution: "Ja! Das Potenzial einer Punktladung φ = kq/r hängt nur vom Abstand r ab, nicht von der Richtung. Der Potenzialunterschied ist daher identisch: −4,5 kV."
+        solution: [{ type: "p", text: "Ja! Das Potenzial einer Punktladung φ = kq/r hängt nur vom Abstand r ab, nicht von der Richtung. Der Potenzialunterschied ist daher identisch: −4,5 kV." }]
       },
       {
         id: "natwiss-ueb-elektrostatik-e5",
         prompt: "Zwei Elektronen befinden sich im Abstand r. Bei welchem Abstand r kompensiert die elektrostatische Abstoßung gerade die Gewichtskraft des unteren Elektrons? (m_e = 9,11·10⁻³¹ kg, e = 1,6·10⁻¹⁹ C)",
-        solution: "F_C = F_G → ke²/r² = m_e·g → r = e·√(k/(m_e·g)) = 1,6·10⁻¹⁹·√(9·10⁹/(9,11·10⁻³¹·9,81)) = 1,6·10⁻¹⁹·√(1,007·10³⁹) ≈ 1,6·10⁻¹⁹·3,17·10¹⁹ ≈ 5,1 m."
+        solution: [{ type: "p", text: "F_C = F_G → ke²/r² = m_e·g → r = e·√(k/(m_e·g)) = 1,6·10⁻¹⁹·√(9·10⁹/(9,11·10⁻³¹·9,81)) = 1,6·10⁻¹⁹·√(1,007·10³⁹) ≈ 1,6·10⁻¹⁹·3,17·10¹⁹ ≈ 5,1 m." }]
       }
     ],
     quiz: [
@@ -89,27 +89,27 @@ const NATWISS_CHAPTER17_TOPICS = [
       {
         id: "natwiss-ueb-kondensatoren-e1",
         prompt: "C = 0,25 μF, U = 12 V. Welche Ladung Q wird gespeichert? Aus welcher Tiefe d stammen die Elektronen (n = 8,49·10²⁸ m⁻³, A = 2·10⁻⁴ m²)?",
-        solution: "Q = CU = 0,25·10⁻⁶·12 = 3·10⁻⁶ C. N = Q/e = 3·10⁻⁶/1,6·10⁻¹⁹ ≈ 1,875·10¹³. d = N/(n·A) = 1,875·10¹³/(8,49·10²⁸·2·10⁻⁴) ≈ 1,1·10⁻¹² m = 1 pm."
+        solution: [{ type: "p", text: "Q = CU = 0,25·10⁻⁶·12 = 3·10⁻⁶ C. N = Q/e = 3·10⁻⁶/1,6·10⁻¹⁹ ≈ 1,875·10¹³. d = N/(n·A) = 1,875·10¹³/(8,49·10²⁸·2·10⁻⁴) ≈ 1,1·10⁻¹² m = 1 pm." }]
       },
       {
         id: "natwiss-ueb-kondensatoren-e2",
         prompt: "Netzwerk: C₂ = 3 μF, C₄ = 4 μF, U = 9 V. Durch Punkt a: 12 μC, durch Punkt b: 8 μC. Bestimmen Sie C₁ und C₃.",
-        solution: "Q₃ = 12 − 8 = 4 μC. Q₄ = 8 μC. U₄ = 8/4 = 2 V. C₃ = 4/2 = 2 μF. C₃₄ = 6 μF. C_ges = 12/9 = 4/3 μF. 1/C₁ = 3/4 − 1/3 − 1/6 = 1/4. C₁ = 4 μF."
+        solution: [{ type: "p", text: "Q₃ = 12 − 8 = 4 μC. Q₄ = 8 μC. U₄ = 8/4 = 2 V. C₃ = 4/2 = 2 μF. C₃₄ = 6 μF. C_ges = 12/9 = 4/3 μF. 1/C₁ = 3/4 − 1/3 − 1/6 = 1/4. C₁ = 4 μF." }]
       },
       {
         id: "natwiss-ueb-kondensatoren-e3",
         prompt: "Dielektrikum: ε_r = 24, E_max = 4·10⁷ V/m. C = 0,1 μF soll U = 2 kV aushalten. Berechnen Sie Mindestabstand d und Plattenfläche A.",
-        solution: "d_min = U/E_max = 2000/(4·10⁷) = 5·10⁻⁵ m = 50 μm. A = C·d/(ε_r·ε₀) = 10⁻⁷·5·10⁻⁵/(24·8,854·10⁻¹²) = 5·10⁻¹²/2,125·10⁻¹⁰ ≈ 0,0235 m² ≈ 235 cm²."
+        solution: [{ type: "p", text: "d_min = U/E_max = 2000/(4·10⁷) = 5·10⁻⁵ m = 50 μm. A = C·d/(ε_r·ε₀) = 10⁻⁷·5·10⁻⁵/(24·8,854·10⁻¹²) = 5·10⁻¹²/2,125·10⁻¹⁰ ≈ 0,0235 m² ≈ 235 cm²." }]
       },
       {
         id: "natwiss-ueb-kondensatoren-e4",
         prompt: "Wie viele C = 1 μF Kondensatoren müssen parallel geschaltet werden, um bei U = 110 V eine Ladung von Q = 1,0 C zu speichern?",
-        solution: "C_ges = Q/U = 1,0/110 ≈ 9091 μF. n = C_ges/C = 9091 μF/1 μF ≈ 9091 Kondensatoren."
+        solution: [{ type: "p", text: "C_ges = Q/U = 1,0/110 ≈ 9091 μF. n = C_ges/C = 9091 μF/1 μF ≈ 9091 Kondensatoren." }]
       },
       {
         id: "natwiss-ueb-kondensatoren-e5",
         prompt: "Ein Kondensator (Q gespeichert) wird zwischen Luft (E₁ = 2,5·10⁵ V/m) und Dielektrikum (E₂ = 1,2·10⁵ V/m) gefüllt. Wie groß ist ε_r? Was ist A bei Q = 10 nC?",
-        solution: "ε_r = E₁/E₂ = 2,5·10⁵/1,2·10⁵ ≈ 2,08. A = Q/(ε₀·E₁) = 10⁻⁸/(8,854·10⁻¹²·2,5·10⁵) = 10⁻⁸/2,214·10⁻⁶ ≈ 4,5·10⁻³ m² = 45 cm²."
+        solution: [{ type: "p", text: "ε_r = E₁/E₂ = 2,5·10⁵/1,2·10⁵ ≈ 2,08. A = Q/(ε₀·E₁) = 10⁻⁸/(8,854·10⁻¹²·2,5·10⁵) = 10⁻⁸/2,214·10⁻⁶ ≈ 4,5·10⁻³ m² = 45 cm²." }]
       }
     ],
     quiz: [
@@ -146,27 +146,27 @@ const NATWISS_CHAPTER17_TOPICS = [
       {
         id: "natwiss-ueb-stromkreis-e1",
         prompt: "Drei Widerstände R₁ = 10 Ω, R₂ = 20 Ω, R₃ = 30 Ω liegen parallel an U = 12 V. Berechnen Sie R_ges, I_ges und die Teilströme.",
-        solution: "1/R_ges = 1/10 + 1/20 + 1/30 = 6/60 + 3/60 + 2/60 = 11/60 → R_ges = 60/11 ≈ 5,45 Ω. I_ges = U/R_ges = 12/5,45 ≈ 2,2 A. I₁ = 12/10 = 1,2 A, I₂ = 12/20 = 0,6 A, I₃ = 12/30 = 0,4 A. Probe: 1,2 + 0,6 + 0,4 = 2,2 A ✓."
+        solution: [{ type: "p", text: "1/R_ges = 1/10 + 1/20 + 1/30 = 6/60 + 3/60 + 2/60 = 11/60 → R_ges = 60/11 ≈ 5,45 Ω. I_ges = U/R_ges = 12/5,45 ≈ 2,2 A. I₁ = 12/10 = 1,2 A, I₂ = 12/20 = 0,6 A, I₃ = 12/30 = 0,4 A. Probe: 1,2 + 0,6 + 0,4 = 2,2 A ✓." }]
       },
       {
         id: "natwiss-ueb-stromkreis-e2",
         prompt: "Ein Elektron (m = 9,11·10⁻³¹ kg, e = 1,6·10⁻¹⁹ C) bewegt sich mit v = 10⁶ m/s senkrecht zu B = 0,1 T. Wie groß ist der Kreisradius?",
-        solution: "Lorentzkraft = Zentripetalkraft: evB = mv²/r → r = mv/(eB) = 9,11·10⁻³¹·10⁶/(1,6·10⁻¹⁹·0,1) = 9,11·10⁻²⁵/1,6·10⁻²⁰ ≈ 5,7·10⁻⁵ m = 57 μm."
+        solution: [{ type: "p", text: "Lorentzkraft = Zentripetalkraft: evB = mv²/r → r = mv/(eB) = 9,11·10⁻³¹·10⁶/(1,6·10⁻¹⁹·0,1) = 9,11·10⁻²⁵/1,6·10⁻²⁰ ≈ 5,7·10⁻⁵ m = 57 μm." }]
       },
       {
         id: "natwiss-ueb-stromkreis-e3",
         prompt: "Eine Spule (N = 200, A = 50 cm²) liegt in einem Magnetfeld, das von B₁ = 0 auf B₂ = 0,5 T in Δt = 0,1 s ansteigt. Wie groß ist U_ind?",
-        solution: "U_ind = −N·ΔΦ/Δt = −N·A·ΔB/Δt = −200·50·10⁻⁴·0,5/0,1 = −200·50·10⁻⁴·5 = −5 V. |U_ind| = 5 V."
+        solution: [{ type: "p", text: "U_ind = −N·ΔΦ/Δt = −N·A·ΔB/Δt = −200·50·10⁻⁴·0,5/0,1 = −200·50·10⁻⁴·5 = −5 V. |U_ind| = 5 V." }]
       },
       {
         id: "natwiss-ueb-stromkreis-e4",
         prompt: "Gerader Draht mit I = 10 A. Magnetfeld B bei r = 5 cm?",
-        solution: "B = μ₀I/(2πr) = 4π·10⁻⁷·10/(2π·0,05) = 4·10⁻⁶/0,1 = 4·10⁻⁵ T = 40 μT."
+        solution: [{ type: "p", text: "B = μ₀I/(2πr) = 4π·10⁻⁷·10/(2π·0,05) = 4·10⁻⁶/0,1 = 4·10⁻⁵ T = 40 μT." }]
       },
       {
         id: "natwiss-ueb-stromkreis-e5",
         prompt: "Schaltkreis: R₁ = 4 Ω und R₂ = 6 Ω in Reihe, U = 20 V. Berechnen Sie I, U₁, U₂ und P₂.",
-        solution: "R_ges = 10 Ω. I = U/R_ges = 20/10 = 2 A. U₁ = I·R₁ = 8 V. U₂ = I·R₂ = 12 V. P₂ = I²·R₂ = 4·6 = 24 W."
+        solution: [{ type: "p", text: "R_ges = 10 Ω. I = U/R_ges = 20/10 = 2 A. U₁ = I·R₁ = 8 V. U₂ = I·R₂ = 12 V. P₂ = I²·R₂ = 4·6 = 24 W." }]
       }
     ],
     quiz: [

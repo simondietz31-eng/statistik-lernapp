@@ -20,27 +20,27 @@ const FINV_CHAPTER5_TOPICS = [
       {
         id: "finv-selbstfinanzierung-e1",
         prompt: "Eine AG erzielt einen Jahresüberschuss von 4.000.000 €. Die Hauptversammlung beschließt, 60 % davon einzubehalten und 40 % auszuschütten. Um welche Finanzierungsform handelt es sich beim einbehaltenen Teil, und wie hoch ist der einbehaltene Betrag?",
-        solution: "Es handelt sich um offene Selbstfinanzierung (der Jahresüberschuss ist offen ausgewiesen, ein Teil wird sichtbar in Gewinnrücklagen eingestellt). Einbehaltener Betrag = 60 % × 4.000.000 € = 2.400.000 €."
+        solution: [{ type: "p", text: "Es handelt sich um offene Selbstfinanzierung (der Jahresüberschuss ist offen ausgewiesen, ein Teil wird sichtbar in Gewinnrücklagen eingestellt). Einbehaltener Betrag = 60 % × 4.000.000 € = 2.400.000 €." }]
       },
       {
         id: "finv-selbstfinanzierung-e2",
         prompt: "Ein Unternehmen bildet eine steuerlich anerkannte Sonderabschreibung, die über dem tatsächlichen Werteverzehr eines Vermögensgegenstands liegt. Um welche Form der Innenfinanzierung handelt es sich, und warum?",
-        solution: "Es handelt sich um stille Selbstfinanzierung: Die überhöhte Abschreibung mindert den ausgewiesenen Gewinn stärker, als es der tatsächlichen Wertminderung entspricht. Dadurch entstehen stille Reserven — der wirtschaftliche Wert des Unternehmens ist höher, als es die Bilanz zeigt, und die zusätzlich einbehaltenen (nicht ausgeschütteten, geringer besteuerten) Mittel verbleiben verdeckt im Unternehmen."
+        solution: [{ type: "p", text: "Es handelt sich um stille Selbstfinanzierung: Die überhöhte Abschreibung mindert den ausgewiesenen Gewinn stärker, als es der tatsächlichen Wertminderung entspricht. Dadurch entstehen stille Reserven — der wirtschaftliche Wert des Unternehmens ist höher, als es die Bilanz zeigt, und die zusätzlich einbehaltenen (nicht ausgeschütteten, geringer besteuerten) Mittel verbleiben verdeckt im Unternehmen." }]
       },
       {
         id: "finv-selbstfinanzierung-e3",
         prompt: "Der Wert eines unternehmenseigenen, selbstgenutzten Bürogebäudes steigt im Marktwert um 500.000 €, ohne dass das Unternehmen dies bilanziell auswertet oder verkauft. Handelt es sich um Innenfinanzierung? Begründen Sie.",
-        solution: "Nein. Eine reine Wertsteigerung eines vorhandenen Vermögensgegenstands, die nicht realisiert (z. B. durch Verkauf) und nicht liquiditätswirksam wird, erhöht die Liquidität des Unternehmens nicht und ist daher keine Innenfinanzierung. Innenfinanzierung setzt voraus, dass finanzielle Mittel tatsächlich am Markt verdient und dem Unternehmen liquide zugeflossen sind — reine 'Buchgewinne' durch Wertsteigerung ohne Realisierung erfüllen das nicht."
+        solution: [{ type: "p", text: "Nein. Eine reine Wertsteigerung eines vorhandenen Vermögensgegenstands, die nicht realisiert (z. B. durch Verkauf) und nicht liquiditätswirksam wird, erhöht die Liquidität des Unternehmens nicht und ist daher keine Innenfinanzierung. Innenfinanzierung setzt voraus, dass finanzielle Mittel tatsächlich am Markt verdient und dem Unternehmen liquide zugeflossen sind — reine 'Buchgewinne' durch Wertsteigerung ohne Realisierung erfüllen das nicht." }]
       },
       {
         id: "finv-selbstfinanzierung-e4",
         prompt: "Warum spielt der Umsatz eine so zentrale Rolle für das Innenfinanzierungspotenzial eines Unternehmens?",
-        solution: "Innenfinanzierung — egal ob offene Selbstfinanzierung, stille Selbstfinanzierung oder Finanzierung aus Abschreibungsgegenwerten — setzt voraus, dass dem Unternehmen tatsächlich liquide Mittel aus dem operativen Geschäft zufließen. Diese Mittel stammen letztlich aus dem Umsatz: Nur wenn genügend umgesetzt wird, können Kosten gedeckt, Gewinne erwirtschaftet und Abschreibungsgegenwerte tatsächlich am Markt verdient werden. Ohne ausreichenden Umsatz gibt es keine reale Basis für Umschichtungen oder Abschreibungsgegenwerte, die als Innenfinanzierung genutzt werden könnten."
+        solution: [{ type: "p", text: "Innenfinanzierung — egal ob offene Selbstfinanzierung, stille Selbstfinanzierung oder Finanzierung aus Abschreibungsgegenwerten — setzt voraus, dass dem Unternehmen tatsächlich liquide Mittel aus dem operativen Geschäft zufließen. Diese Mittel stammen letztlich aus dem Umsatz: Nur wenn genügend umgesetzt wird, können Kosten gedeckt, Gewinne erwirtschaftet und Abschreibungsgegenwerte tatsächlich am Markt verdient werden. Ohne ausreichenden Umsatz gibt es keine reale Basis für Umschichtungen oder Abschreibungsgegenwerte, die als Innenfinanzierung genutzt werden könnten." }]
       },
       {
         id: "finv-selbstfinanzierung-e5",
         prompt: "Nennen Sie einen Vor- und einen Nachteil der stillen Selbstfinanzierung gegenüber der offenen Selbstfinanzierung.",
-        solution: "Vorteil: Die einbehaltenen Mittel sind für außenstehende Dritte (z. B. Wettbewerber, Gläubiger, Öffentlichkeit) nicht unmittelbar erkennbar, was dem Unternehmen stille finanzielle Reserven und Verhandlungsspielraum verschafft, ohne dass Erwartungen (z. B. bezüglich künftiger Dividenden) geweckt werden. Nachteil: Geringere Transparenz der Bilanz für Investoren und Gläubiger — die tatsächliche wirtschaftliche Lage des Unternehmens ist schwerer einzuschätzen, was z. B. die Bewertung durch den Kapitalmarkt erschweren kann."
+        solution: [{ type: "p", text: "Vorteil: Die einbehaltenen Mittel sind für außenstehende Dritte (z. B. Wettbewerber, Gläubiger, Öffentlichkeit) nicht unmittelbar erkennbar, was dem Unternehmen stille finanzielle Reserven und Verhandlungsspielraum verschafft, ohne dass Erwartungen (z. B. bezüglich künftiger Dividenden) geweckt werden. Nachteil: Geringere Transparenz der Bilanz für Investoren und Gläubiger — die tatsächliche wirtschaftliche Lage des Unternehmens ist schwerer einzuschätzen, was z. B. die Bewertung durch den Kapitalmarkt erschweren kann." }]
       }
     ],
     quiz: [
@@ -78,27 +78,27 @@ const FINV_CHAPTER5_TOPICS = [
       {
         id: "finv-abschreibungsgegenwerte-kapazitaetserweiterung-e1",
         prompt: "Ein Taxiunternehmen kauft 4 Fahrzeuge zu je 60.000 € (linear über 3 Jahre abgeschrieben, jährliche Abschreibung je Fahrzeug = 20.000 €). Wie hoch ist die jährliche Gesamtabschreibung im ersten Jahr, und wie viele neue Fahrzeuge könnten davon (näherungsweise) finanziert werden?",
-        solution: "Jährliche Gesamtabschreibung = 4 × 20.000 € = 80.000 €. Bei einem Neupreis von 60.000 € je Fahrzeug reicht dieser Betrag für den Kauf von 80.000/60.000 ≈ 1,33 Fahrzeugen — es kann also ein weiteres Fahrzeug angeschafft werden, mit einem Restbetrag von 80.000 − 60.000 = 20.000 €, der ins nächste Jahr vorgetragen wird."
+        solution: [{ type: "p", text: "Jährliche Gesamtabschreibung = 4 × 20.000 € = 80.000 €. Bei einem Neupreis von 60.000 € je Fahrzeug reicht dieser Betrag für den Kauf von 80.000/60.000 ≈ 1,33 Fahrzeugen — es kann also ein weiteres Fahrzeug angeschafft werden, mit einem Restbetrag von 80.000 − 60.000 = 20.000 €, der ins nächste Jahr vorgetragen wird." }]
       },
       {
         id: "finv-abschreibungsgegenwerte-kapazitaetserweiterung-e2",
         prompt: "Im zweiten Jahr verfügt das Unternehmen aus Aufgabe 1 über 5 Fahrzeuge (4 alte + 1 neues), abgeschrieben je 20.000 €/Jahr, plus den Restbetrag von 20.000 € aus Jahr 1. Wie viele weitere Fahrzeuge können angeschafft werden?",
-        solution: "Abschreibung Jahr 2 = 5 × 20.000 € = 100.000 €. Zusammen mit dem Restbetrag aus Jahr 1 (20.000 €) stehen 120.000 € zur Verfügung. Das reicht für 120.000/60.000 = 2 weitere Fahrzeuge, ohne dass ein Restbetrag verbleibt — das Unternehmen verfügt nun über 5+2 = 7 Fahrzeuge."
+        solution: [{ type: "p", text: "Abschreibung Jahr 2 = 5 × 20.000 € = 100.000 €. Zusammen mit dem Restbetrag aus Jahr 1 (20.000 €) stehen 120.000 € zur Verfügung. Das reicht für 120.000/60.000 = 2 weitere Fahrzeuge, ohne dass ein Restbetrag verbleibt — das Unternehmen verfügt nun über 5+2 = 7 Fahrzeuge." }]
       },
       {
         id: "finv-abschreibungsgegenwerte-kapazitaetserweiterung-e3",
         prompt: "Erklären Sie, warum sich durch den Kapazitätserweiterungseffekt die Periodenkapazität erhöht, die Gesamtkapazität bei planmäßiger Abschreibung aber unverändert bleibt.",
-        solution: "Der Kapazitätserweiterungseffekt beruht darauf, dass künftig ohnehin nötige Ersatzinvestitionen zeitlich vorgezogen werden: Statt die Abschreibungsgegenwerte erst am Ende der Nutzungsdauer eines einzelnen Vermögensgegenstands für dessen Ersatz zurückzulegen, werden sie laufend in zusätzliche, parallel genutzte Vermögensgegenstände investiert. Dadurch stehen zu jedem Zeitpunkt mehr Einheiten gleichzeitig zur Verfügung — die Periodenkapazität (z. B. Fahrzeuge pro Jahr im Einsatz) steigt. Da bei planmäßiger, dem tatsächlichen Werteverzehr entsprechender Abschreibung aber insgesamt nicht mehr Kapital eingesetzt wird, als tatsächlich verzehrt wurde, bleibt die kumulierte Gesamtkapazität (Leistungsvermögen über die gesamte Lebensdauer aller eingesetzten Güter) unverändert — es wird nur zeitlich anders verteilt genutzt."
+        solution: [{ type: "p", text: "Der Kapazitätserweiterungseffekt beruht darauf, dass künftig ohnehin nötige Ersatzinvestitionen zeitlich vorgezogen werden: Statt die Abschreibungsgegenwerte erst am Ende der Nutzungsdauer eines einzelnen Vermögensgegenstands für dessen Ersatz zurückzulegen, werden sie laufend in zusätzliche, parallel genutzte Vermögensgegenstände investiert. Dadurch stehen zu jedem Zeitpunkt mehr Einheiten gleichzeitig zur Verfügung — die Periodenkapazität (z. B. Fahrzeuge pro Jahr im Einsatz) steigt. Da bei planmäßiger, dem tatsächlichen Werteverzehr entsprechender Abschreibung aber insgesamt nicht mehr Kapital eingesetzt wird, als tatsächlich verzehrt wurde, bleibt die kumulierte Gesamtkapazität (Leistungsvermögen über die gesamte Lebensdauer aller eingesetzten Güter) unverändert — es wird nur zeitlich anders verteilt genutzt." }]
       },
       {
         id: "finv-abschreibungsgegenwerte-kapazitaetserweiterung-e4",
         prompt: "Zwei Maschinen werden zum gleichen Anschaffungspreis von 400.000 € beschafft: Maschine A wird linear über 4 Jahre abgeschrieben, Maschine B (mit Investitionsförderung) darf 200.000 € im ersten, 150.000 € im zweiten und 50.000 € im dritten Jahr abgeschrieben werden. Vergleichen Sie den Finanzierungseffekt in den ersten beiden Jahren.",
-        solution: "Maschine A (linear, 4 Jahre): Abschreibung je Jahr = 400.000/4 = 100.000 €. Nach 2 Jahren kumuliert: 200.000 €. Maschine B (gefördert): Jahr 1 = 200.000 €, Jahr 2 = 150.000 €, kumuliert nach 2 Jahren = 350.000 €. Der Finanzierungseffekt (freigesetzte liquide Mittel durch Abschreibung, bei ausreichendem Gewinn vor Abschreibung) ist bei Maschine B in den ersten beiden Jahren deutlich höher (350.000 € statt 200.000 €) — die Investitionsfördermaßnahme beschleunigt die Mittelfreisetzung erheblich, wirkt aber genau genommen zum Teil wie stille Selbstfinanzierung, da die Abschreibung hier über dem gleichmäßigen Werteverzehr liegt."
+        solution: [{ type: "p", text: "Maschine A (linear, 4 Jahre): Abschreibung je Jahr = 400.000/4 = 100.000 €. Nach 2 Jahren kumuliert: 200.000 €. Maschine B (gefördert): Jahr 1 = 200.000 €, Jahr 2 = 150.000 €, kumuliert nach 2 Jahren = 350.000 €. Der Finanzierungseffekt (freigesetzte liquide Mittel durch Abschreibung, bei ausreichendem Gewinn vor Abschreibung) ist bei Maschine B in den ersten beiden Jahren deutlich höher (350.000 € statt 200.000 €) — die Investitionsfördermaßnahme beschleunigt die Mittelfreisetzung erheblich, wirkt aber genau genommen zum Teil wie stille Selbstfinanzierung, da die Abschreibung hier über dem gleichmäßigen Werteverzehr liegt." }]
       },
       {
         id: "finv-abschreibungsgegenwerte-kapazitaetserweiterung-e5",
         prompt: "Welche zentrale Voraussetzung muss erfüllt sein, damit die Finanzierung aus Abschreibungsgegenwerten überhaupt einen Finanzierungseffekt erzielt?",
-        solution: "Die Abschreibungsgegenwerte müssen dem Unternehmen tatsächlich in liquider Form zugeflossen sein — das heißt, sie müssen über ausreichende Umsatzerlöse tatsächlich am Markt verdient worden sein. Verrechnet ein Unternehmen zwar Abschreibungen, erzielt aber keinen ausreichenden Umsatz bzw. Gewinn vor Abschreibungen, entsteht kein realer liquider Finanzierungseffekt, da schlicht keine entsprechenden Mittel zur Verfügung stehen."
+        solution: [{ type: "p", text: "Die Abschreibungsgegenwerte müssen dem Unternehmen tatsächlich in liquider Form zugeflossen sein — das heißt, sie müssen über ausreichende Umsatzerlöse tatsächlich am Markt verdient worden sein. Verrechnet ein Unternehmen zwar Abschreibungen, erzielt aber keinen ausreichenden Umsatz bzw. Gewinn vor Abschreibungen, entsteht kein realer liquider Finanzierungseffekt, da schlicht keine entsprechenden Mittel zur Verfügung stehen." }]
       }
     ],
     quiz: [
@@ -142,27 +142,27 @@ const FINV_CHAPTER5_TOPICS = [
       {
         id: "finv-rueckstellungen-vermoegensumschichtung-e1",
         prompt: "Ordnen Sie folgende Vorgänge der Innen- oder Außenfinanzierung zu: a) Bildung einer Pensionsrückstellung, b) Aufnahme eines Bankkredits, c) Verkauf eines nicht mehr benötigten Lagerhauses.",
-        solution: "a) Bildung einer Pensionsrückstellung → Innenfinanzierung (Rückstellungsfinanzierung; mindert den Gewinn, ohne sofortige Auszahlung). b) Aufnahme eines Bankkredits → Außenfinanzierung (neue Mittel fließen von außen zu). c) Verkauf eines nicht mehr benötigten Lagerhauses → Innenfinanzierung (Desinvestition, Vermögensumschichtung)."
+        solution: [{ type: "p", text: "a) Bildung einer Pensionsrückstellung → Innenfinanzierung (Rückstellungsfinanzierung; mindert den Gewinn, ohne sofortige Auszahlung). b) Aufnahme eines Bankkredits → Außenfinanzierung (neue Mittel fließen von außen zu). c) Verkauf eines nicht mehr benötigten Lagerhauses → Innenfinanzierung (Desinvestition, Vermögensumschichtung)." }]
       },
       {
         id: "finv-rueckstellungen-vermoegensumschichtung-e2",
         prompt: "Für Gewährleistungen wird eine deutlich zu hohe Rückstellung gebildet (über die tatsächlich erwartete Inanspruchnahme hinaus). Welche Art der Innenfinanzierung liegt hier vor, und warum?",
-        solution: "Eine überhöhte Rückstellungsbildung entspricht wirtschaftlich stiller Selbstfinanzierung: Der ausgewiesene Gewinn wird stärker gemindert, als es der tatsächlich zu erwartenden Inanspruchnahme entspricht, wodurch stille Reserven entstehen. Die zusätzlich einbehaltenen, nicht ausgeschütteten und (im Rahmen der steuerlichen Anerkennung) geringer besteuerten Mittel verbleiben verdeckt im Unternehmen."
+        solution: [{ type: "p", text: "Eine überhöhte Rückstellungsbildung entspricht wirtschaftlich stiller Selbstfinanzierung: Der ausgewiesene Gewinn wird stärker gemindert, als es der tatsächlich zu erwartenden Inanspruchnahme entspricht, wodurch stille Reserven entstehen. Die zusätzlich einbehaltenen, nicht ausgeschütteten und (im Rahmen der steuerlichen Anerkennung) geringer besteuerten Mittel verbleiben verdeckt im Unternehmen." }]
       },
       {
         id: "finv-rueckstellungen-vermoegensumschichtung-e3",
         prompt: "Erklären Sie den Ablauf und den finanzwirtschaftlichen Nutzen eines Sale-and-Lease-Back-Geschäfts an einem Beispiel (z. B. Firmengebäude).",
-        solution: "Ein Unternehmen verkauft sein Firmengebäude an einen Investor (z. B. eine Leasinggesellschaft) und least es anschließend von diesem Investor zurück. Dadurch erhält das Unternehmen sofort einen größeren liquiden Betrag (den Verkaufserlös), kann das Gebäude aber weiterhin uneingeschränkt nutzen — gegen laufende Leasingraten. Finanzwirtschaftlicher Nutzen: Freisetzung gebundenen Kapitals (das zuvor im Anlagevermögen 'feststand') für andere Zwecke (z. B. Investitionen, Schuldentilgung), ohne den Betriebsablauf zu stören. Nachteil: künftige Leasingraten belasten die laufende Liquidität und Erfolgsrechnung."
+        solution: [{ type: "p", text: "Ein Unternehmen verkauft sein Firmengebäude an einen Investor (z. B. eine Leasinggesellschaft) und least es anschließend von diesem Investor zurück. Dadurch erhält das Unternehmen sofort einen größeren liquiden Betrag (den Verkaufserlös), kann das Gebäude aber weiterhin uneingeschränkt nutzen — gegen laufende Leasingraten. Finanzwirtschaftlicher Nutzen: Freisetzung gebundenen Kapitals (das zuvor im Anlagevermögen 'feststand') für andere Zwecke (z. B. Investitionen, Schuldentilgung), ohne den Betriebsablauf zu stören. Nachteil: künftige Leasingraten belasten die laufende Liquidität und Erfolgsrechnung." }]
       },
       {
         id: "finv-rueckstellungen-vermoegensumschichtung-e4",
         prompt: "Warum zählen Rückstellungen bilanziell zum Fremdkapital und nicht zum Eigenkapital, obwohl sie einen Innenfinanzierungseffekt haben?",
-        solution: "Rückstellungen bilden Ansprüche Dritter ab — also potenzielle künftige Verpflichtungen des Unternehmens gegenüber außenstehenden Parteien (z. B. Kunden bei Gewährleistung, Arbeitnehmer bei Pensionszusagen, Finanzamt bei Steuernachzahlungen). Da es sich rechtlich um (der Höhe/dem Zeitpunkt nach ungewisse) Verbindlichkeiten gegenüber Dritten handelt, sind Rückstellungen dem Fremdkapital zuzuordnen — obwohl sie wirtschaftlich, ähnlich wie Abschreibungen, durch das Auseinanderfallen von Aufwand und Auszahlung einen Innenfinanzierungseffekt (temporäre Mittelbindung im Unternehmen) auslösen."
+        solution: [{ type: "p", text: "Rückstellungen bilden Ansprüche Dritter ab — also potenzielle künftige Verpflichtungen des Unternehmens gegenüber außenstehenden Parteien (z. B. Kunden bei Gewährleistung, Arbeitnehmer bei Pensionszusagen, Finanzamt bei Steuernachzahlungen). Da es sich rechtlich um (der Höhe/dem Zeitpunkt nach ungewisse) Verbindlichkeiten gegenüber Dritten handelt, sind Rückstellungen dem Fremdkapital zuzuordnen — obwohl sie wirtschaftlich, ähnlich wie Abschreibungen, durch das Auseinanderfallen von Aufwand und Auszahlung einen Innenfinanzierungseffekt (temporäre Mittelbindung im Unternehmen) auslösen." }]
       },
       {
         id: "finv-rueckstellungen-vermoegensumschichtung-e5",
         prompt: "Nennen Sie zwei Möglichkeiten der Innenfinanzierung durch Vermögensumschichtung, die NICHT direkt am Umsatzprozess ansetzen.",
-        solution: "1) Desinvestition: Verkauf von nicht mehr betriebsnotwendigem Vermögen (z. B. ungenutzte Grundstücke, Maschinen). 2) Reduzierung der Kapitalbindung, z. B. durch Verkürzung von Lagerhaltungsdauern oder Kundenzahlungszielen, wodurch weniger Kapital dauerhaft im Umlaufvermögen gebunden ist. (Alternativ: Sale-and-Lease-Back, bei dem ein Vermögensgegenstand verkauft und zurückgeleast wird.)"
+        solution: [{ type: "p", text: "1) Desinvestition: Verkauf von nicht mehr betriebsnotwendigem Vermögen (z. B. ungenutzte Grundstücke, Maschinen). 2) Reduzierung der Kapitalbindung, z. B. durch Verkürzung von Lagerhaltungsdauern oder Kundenzahlungszielen, wodurch weniger Kapital dauerhaft im Umlaufvermögen gebunden ist. (Alternativ: Sale-and-Lease-Back, bei dem ein Vermögensgegenstand verkauft und zurückgeleast wird.)" }]
       }
     ],
     quiz: [

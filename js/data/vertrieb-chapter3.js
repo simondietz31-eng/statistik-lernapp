@@ -32,27 +32,27 @@ const VERTRIEB_CHAPTER3_TOPICS = [
       {
         id: "vertrieb-wettbewerbsvorteile-e1",
         prompt: "Nennen Sie mindestens fünf mögliche Quellen vertriebsbezogener Wettbewerbsvorteile.",
-        solution: "Mögliche Quellen vertriebsbezogener Wettbewerbsvorteile sind unter anderem: hohe Flexibilität bei der Kanalwahl, Schnelligkeit bei der Kundenakquisition, durchweg hohe Qualität der Kundenbetreuung, besonders individuelle Leistungen bzw. Services, besondere Kompetenz bei der Vorbereitung und Führung von Verkaufsgesprächen, besondere Problemlösungsfähigkeit bei kundenspezifischen Aufgaben, ein einzigartig attraktives Image sowie besondere Vertriebskanäle in der jeweiligen Produktkategorie."
+        solution: [{ type: "p", text: "Mögliche Quellen vertriebsbezogener Wettbewerbsvorteile sind unter anderem: hohe Flexibilität bei der Kanalwahl, Schnelligkeit bei der Kundenakquisition, durchweg hohe Qualität der Kundenbetreuung, besonders individuelle Leistungen bzw. Services, besondere Kompetenz bei der Vorbereitung und Führung von Verkaufsgesprächen, besondere Problemlösungsfähigkeit bei kundenspezifischen Aufgaben, ein einzigartig attraktives Image sowie besondere Vertriebskanäle in der jeweiligen Produktkategorie." }]
       },
       {
         id: "vertrieb-wettbewerbsvorteile-e2",
         prompt: "Welche drei Voraussetzungen muss ein echter Wettbewerbsvorteil gleichzeitig erfüllen?",
-        solution: "Ein echter Wettbewerbsvorteil muss dauerhaft sein, das heißt nicht nur kurzfristig bestehen, er muss für den Kunden wahrnehmbar sein, und er muss für den Kunden bedeutsam sein. Nur wenn alle drei Voraussetzungen gleichzeitig erfüllt sind, handelt es sich um einen relevanten Wettbewerbsvorteil."
+        solution: [{ type: "p", text: "Ein echter Wettbewerbsvorteil muss dauerhaft sein, das heißt nicht nur kurzfristig bestehen, er muss für den Kunden wahrnehmbar sein, und er muss für den Kunden bedeutsam sein. Nur wenn alle drei Voraussetzungen gleichzeitig erfüllt sind, handelt es sich um einen relevanten Wettbewerbsvorteil." }]
       },
       {
         id: "vertrieb-wettbewerbsvorteile-e3",
         prompt: "Erläutern Sie den Merksatz 'Ein Wettbewerbsvorteil, den der Kunde nicht bemerkt, ist kein Wettbewerbsvorteil.'",
-        solution: "Der Merksatz betont, dass die Wahrnehmbarkeit durch den Kunden zwingende Voraussetzung für einen echten Wettbewerbsvorteil ist. Selbst wenn ein Unternehmen objektiv eine überlegene Leistung erbringt, nützt dies der Wettbewerbsposition nichts, solange der Kunde diesen Unterschied nicht bemerkt oder nicht als relevant empfindet. Wettbewerbsvorteile entfalten ihre Wirkung also nicht durch die objektive Überlegenheit an sich, sondern erst durch die subjektive Wahrnehmung und Bedeutung beim Kunden."
+        solution: [{ type: "p", text: "Der Merksatz betont, dass die Wahrnehmbarkeit durch den Kunden zwingende Voraussetzung für einen echten Wettbewerbsvorteil ist. Selbst wenn ein Unternehmen objektiv eine überlegene Leistung erbringt, nützt dies der Wettbewerbsposition nichts, solange der Kunde diesen Unterschied nicht bemerkt oder nicht als relevant empfindet. Wettbewerbsvorteile entfalten ihre Wirkung also nicht durch die objektive Überlegenheit an sich, sondern erst durch die subjektive Wahrnehmung und Bedeutung beim Kunden." }]
       },
       {
         id: "vertrieb-wettbewerbsvorteile-e4",
         prompt: "Nennen Sie fünf Quellen, aus denen Unternehmen Informationen über ihre Wettbewerber gewinnen können.",
-        solution: "Unternehmen können Wettbewerberinformationen aus folgenden Quellen gewinnen: Veröffentlichungen von Staat, Verbänden und Datenbanken; Veranstaltungen und Publikationen der Wettbewerber selbst; Pressemitteilungen und Rechercheberichte; (ehemalige) Mitarbeiter der Wettbewerber; sowie Lieferanten, Investoren und Kunden."
+        solution: [{ type: "p", text: "Unternehmen können Wettbewerberinformationen aus folgenden Quellen gewinnen: Veröffentlichungen von Staat, Verbänden und Datenbanken; Veranstaltungen und Publikationen der Wettbewerber selbst; Pressemitteilungen und Rechercheberichte; (ehemalige) Mitarbeiter der Wettbewerber; sowie Lieferanten, Investoren und Kunden." }]
       },
       {
         id: "vertrieb-wettbewerbsvorteile-e5",
         prompt: "Ein Unternehmen ist überzeugt, eine technisch überlegene Problemlösungsfähigkeit bei kundenspezifischen Aufgaben zu besitzen, doch Kunden nehmen davon nichts wahr. Bewerten Sie, ob hier ein Wettbewerbsvorteil im Sinne der Vorlesung vorliegt.",
-        solution: "Nein, es liegt kein Wettbewerbsvorteil im Sinne der Vorlesung vor. Zwar handelt es sich um eine mögliche Quelle eines Wettbewerbsvorteils (besondere Problemlösungsfähigkeit bei kundenspezifischen Aufgaben), doch damit dieser tatsächlich als Wettbewerbsvorteil zählt, muss er dauerhaft, wahrnehmbar und bedeutsam für den Kunden sein. Da die Kunden die überlegene Problemlösungsfähigkeit nicht wahrnehmen, ist die Voraussetzung der Wahrnehmbarkeit nicht erfüllt — gemäß dem Merksatz ist ein Vorteil, den der Kunde nicht bemerkt, kein Wettbewerbsvorteil."
+        solution: [{ type: "p", text: "Nein, es liegt kein Wettbewerbsvorteil im Sinne der Vorlesung vor. Zwar handelt es sich um eine mögliche Quelle eines Wettbewerbsvorteils (besondere Problemlösungsfähigkeit bei kundenspezifischen Aufgaben), doch damit dieser tatsächlich als Wettbewerbsvorteil zählt, muss er dauerhaft, wahrnehmbar und bedeutsam für den Kunden sein. Da die Kunden die überlegene Problemlösungsfähigkeit nicht wahrnehmen, ist die Voraussetzung der Wahrnehmbarkeit nicht erfüllt — gemäß dem Merksatz ist ein Vorteil, den der Kunde nicht bemerkt, kein Wettbewerbsvorteil." }]
       }
     ],
     quiz: [

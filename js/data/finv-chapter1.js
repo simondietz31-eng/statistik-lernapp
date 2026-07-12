@@ -20,27 +20,27 @@ const FINV_CHAPTER1_TOPICS = [
       {
         id: "finv-zusammenhang-f-i-e1",
         prompt: "Ordnen Sie folgende Bilanzpositionen der Investitions- oder der Finanzierungsseite zu: a) Maschinenpark, b) Bankdarlehen mit 5 Jahren Laufzeit, c) Vorräte, d) Gezeichnetes Kapital.",
-        solution: "a) Maschinenpark → Investition (Anlagevermögen, Aktivseite). b) Bankdarlehen 5 Jahre → Finanzierung (langfristiges Fremdkapital, Passivseite). c) Vorräte → Investition (Umlaufvermögen, Aktivseite). d) Gezeichnetes Kapital → Finanzierung (Eigenkapital, Passivseite)."
+        solution: [{ type: "p", text: "a) Maschinenpark → Investition (Anlagevermögen, Aktivseite). b) Bankdarlehen 5 Jahre → Finanzierung (langfristiges Fremdkapital, Passivseite). c) Vorräte → Investition (Umlaufvermögen, Aktivseite). d) Gezeichnetes Kapital → Finanzierung (Eigenkapital, Passivseite)." }]
       },
       {
         id: "finv-zusammenhang-f-i-e2",
         prompt: "Warum reicht es nicht aus, nur die Finanzierungsseite oder nur die Investitionsseite eines Unternehmens zu betrachten?",
-        solution: "Beide Seiten der Bilanz hängen unmittelbar zusammen: Die Investition (Mittelverwendung) kann nur in der Höhe erfolgen, in der zuvor Finanzierungsmittel (Mittelherkunft) beschafft wurden. Umgekehrt bestimmt die geplante Investition, wie viel und welche Art von Kapital beschafft werden muss (z. B. fristenkongruent). Eine isolierte Betrachtung würde diesen wechselseitigen Zusammenhang übersehen."
+        solution: [{ type: "p", text: "Beide Seiten der Bilanz hängen unmittelbar zusammen: Die Investition (Mittelverwendung) kann nur in der Höhe erfolgen, in der zuvor Finanzierungsmittel (Mittelherkunft) beschafft wurden. Umgekehrt bestimmt die geplante Investition, wie viel und welche Art von Kapital beschafft werden muss (z. B. fristenkongruent). Eine isolierte Betrachtung würde diesen wechselseitigen Zusammenhang übersehen." }]
       },
       {
         id: "finv-zusammenhang-f-i-e3",
         prompt: "Nennen Sie je zwei zentrale Leitfragen der Finanzierung und der Investition.",
-        solution: "Finanzierung: Welche Möglichkeiten der Kapitalbeschaffung gibt es? Was erwarten die Kapitalgeber (Investoren) hinsichtlich Rendite und Mitsprache? Investition: Wie sollten die beschafften Mittel verwendet werden? Wie berechnet man, ob sich eine konkrete Investition lohnt?"
+        solution: [{ type: "p", text: "Finanzierung: Welche Möglichkeiten der Kapitalbeschaffung gibt es? Was erwarten die Kapitalgeber (Investoren) hinsichtlich Rendite und Mitsprache? Investition: Wie sollten die beschafften Mittel verwendet werden? Wie berechnet man, ob sich eine konkrete Investition lohnt?" }]
       },
       {
         id: "finv-zusammenhang-f-i-e4",
         prompt: "Ein Unternehmen nimmt einen Kredit über 200.000 € auf und kauft davon eine neue Produktionsanlage. Beschreiben Sie den Vorgang aus Sicht von Finanzierung und Investition.",
-        solution: "Die Kreditaufnahme über 200.000 € ist ein Finanzierungsvorgang (Zufluss von Fremdkapital, Passivseite wächst, gleichzeitig steigt die Kasse/Aktivseite). Der anschließende Kauf der Produktionsanlage ist ein Investitionsvorgang (Kasse sinkt, Anlagevermögen steigt in gleicher Höhe — reiner Aktivtausch). In Summe wächst die Bilanz zunächst um 200.000 € (Bilanzverlängerung durch die Finanzierung), danach bleibt sie bei der Investition gleich groß (Aktivtausch)."
+        solution: [{ type: "p", text: "Die Kreditaufnahme über 200.000 € ist ein Finanzierungsvorgang (Zufluss von Fremdkapital, Passivseite wächst, gleichzeitig steigt die Kasse/Aktivseite). Der anschließende Kauf der Produktionsanlage ist ein Investitionsvorgang (Kasse sinkt, Anlagevermögen steigt in gleicher Höhe — reiner Aktivtausch). In Summe wächst die Bilanz zunächst um 200.000 € (Bilanzverlängerung durch die Finanzierung), danach bleibt sie bei der Investition gleich groß (Aktivtausch)." }]
       },
       {
         id: "finv-zusammenhang-f-i-e5",
         prompt: "Welche zwei Hauptaufgabenbereiche umfasst die finanzwirtschaftliche Tätigkeit eines Unternehmens laut Vorlesung?",
-        solution: "1) Kapitalbeschaffung und Kapitalverwaltung/Zahlungsverkehr — das entspricht der Kapitalaufbringung, also der Finanzierung. 2) Kapitalverwendung/Kapitalanlage — das entspricht der Investition."
+        solution: [{ type: "p", text: "1) Kapitalbeschaffung und Kapitalverwaltung/Zahlungsverkehr — das entspricht der Kapitalaufbringung, also der Finanzierung. 2) Kapitalverwendung/Kapitalanlage — das entspricht der Investition." }]
       }
     ],
     quiz: [
@@ -78,27 +78,27 @@ const FINV_CHAPTER1_TOPICS = [
       {
         id: "finv-finanzmaerkte-systematisierung-e1",
         prompt: "Ordnen Sie folgende Geschäfte dem Geld- oder dem Kapitalmarkt zu: a) Ausgabe einer Unternehmensanleihe mit 10 Jahren Laufzeit, b) Aufnahme eines 3-Monats-Commercial-Paper, c) Aktienemission (IPO).",
-        solution: "a) Unternehmensanleihe 10 Jahre → Kapitalmarkt (Laufzeit > 1 Jahr). b) Commercial Paper mit 3 Monaten Laufzeit → Geldmarkt (Laufzeit < 1 Jahr). c) Aktienemission (IPO) → Kapitalmarkt (Eigenkapitalmarkt, langfristig)."
+        solution: [{ type: "p", text: "a) Unternehmensanleihe 10 Jahre → Kapitalmarkt (Laufzeit > 1 Jahr). b) Commercial Paper mit 3 Monaten Laufzeit → Geldmarkt (Laufzeit < 1 Jahr). c) Aktienemission (IPO) → Kapitalmarkt (Eigenkapitalmarkt, langfristig)." }]
       },
       {
         id: "finv-finanzmaerkte-systematisierung-e2",
         prompt: "Ein Anleger kauft eine bereits vor drei Jahren emittierte Aktie an der Börse. Handelt es sich um Primär- oder Sekundärmarkt? Begründen Sie.",
-        solution: "Sekundärmarkt: Es findet keine Neuemission (Erstausgabe durch das Unternehmen) statt, sondern ein Handel zwischen bestehenden Marktteilnehmern mit einem bereits umlaufenden Wertpapier. Der Primärmarkt betrifft ausschließlich die Neuausgabe von Wertpapieren."
+        solution: [{ type: "p", text: "Sekundärmarkt: Es findet keine Neuemission (Erstausgabe durch das Unternehmen) statt, sondern ein Handel zwischen bestehenden Marktteilnehmern mit einem bereits umlaufenden Wertpapier. Der Primärmarkt betrifft ausschließlich die Neuausgabe von Wertpapieren." }]
       },
       {
         id: "finv-finanzmaerkte-systematisierung-e3",
         prompt: "Erläutern Sie den Unterschied zwischen einem unbedingten und einem bedingten Termingeschäft anhand eines Future und einer Option.",
-        solution: "Bei einem Future (unbedingtes Termingeschäft) sind beide Vertragsparteien zur Erfüllung des Geschäfts zum vereinbarten Termin und Preis verpflichtet — es gibt kein Wahlrecht. Bei einer Option (bedingtes Termingeschäft) hat der Käufer der Option das Recht, aber nicht die Pflicht, das zugrunde liegende Geschäft auszuüben; der Verkäufer (Stillhalter) ist zur Erfüllung verpflichtet, falls der Käufer ausübt. Für dieses Wahlrecht zahlt der Käufer eine Optionsprämie."
+        solution: [{ type: "p", text: "Bei einem Future (unbedingtes Termingeschäft) sind beide Vertragsparteien zur Erfüllung des Geschäfts zum vereinbarten Termin und Preis verpflichtet — es gibt kein Wahlrecht. Bei einer Option (bedingtes Termingeschäft) hat der Käufer der Option das Recht, aber nicht die Pflicht, das zugrunde liegende Geschäft auszuüben; der Verkäufer (Stillhalter) ist zur Erfüllung verpflichtet, falls der Käufer ausübt. Für dieses Wahlrecht zahlt der Käufer eine Optionsprämie." }]
       },
       {
         id: "finv-finanzmaerkte-systematisierung-e4",
         prompt: "Ein Getreidehändler befürchtet steigende Einkaufspreise für Weizen in sechs Monaten. Wie könnte er sich mit einem Future absichern, und welchen Nachteil nimmt er dabei in Kauf?",
-        solution: "Der Händler kauft einen Weizen-Future mit Fälligkeit in sechs Monaten zu einem heute fixierten Preis (er geht eine Long-Position ein). Damit sichert er sich gegen steigende Preise ab — er zahlt in sechs Monaten den vereinbarten Preis, unabhängig vom dann geltenden Marktpreis. Nachteil: Sollte der Marktpreis in sechs Monaten tatsächlich niedriger sein als der vereinbarte Terminpreis, muss er dennoch den höheren, vereinbarten Preis zahlen — er verzichtet auf die Chance eines günstigeren Einkaufs."
+        solution: [{ type: "p", text: "Der Händler kauft einen Weizen-Future mit Fälligkeit in sechs Monaten zu einem heute fixierten Preis (er geht eine Long-Position ein). Damit sichert er sich gegen steigende Preise ab — er zahlt in sechs Monaten den vereinbarten Preis, unabhängig vom dann geltenden Marktpreis. Nachteil: Sollte der Marktpreis in sechs Monaten tatsächlich niedriger sein als der vereinbarte Terminpreis, muss er dennoch den höheren, vereinbarten Preis zahlen — er verzichtet auf die Chance eines günstigeren Einkaufs." }]
       },
       {
         id: "finv-finanzmaerkte-systematisierung-e5",
         prompt: "Was bedeutet OTC-Handel, und nennen Sie ein Beispiel aus der Systematisierung der Finanzmärkte.",
-        solution: "OTC (Over the Counter) bezeichnet außerbörslichen Handel, bei dem Geschäfte direkt zwischen zwei Parteien (oft über Banken) und nicht über eine organisierte Börse abgewickelt werden. Beispiel: individuell zugeschnittene (bedingte oder unbedingte) Termingeschäfte, die nicht standardisiert an einer Terminbörse gehandelt werden, sondern direkt zwischen Unternehmen und Bank vereinbart werden."
+        solution: [{ type: "p", text: "OTC (Over the Counter) bezeichnet außerbörslichen Handel, bei dem Geschäfte direkt zwischen zwei Parteien (oft über Banken) und nicht über eine organisierte Börse abgewickelt werden. Beispiel: individuell zugeschnittene (bedingte oder unbedingte) Termingeschäfte, die nicht standardisiert an einer Terminbörse gehandelt werden, sondern direkt zwischen Unternehmen und Bank vereinbart werden." }]
       }
     ],
     quiz: [
@@ -142,27 +142,27 @@ const FINV_CHAPTER1_TOPICS = [
       {
         id: "finv-finanzintermediaere-wechselkurs-e1",
         prompt: "Nennen Sie die vier zentralen Transformationsleistungen von Finanzintermediären mit je einem kurzen Beispiel.",
-        solution: "Informationsbedarfstransformation: Eine Bank prüft die Kreditwürdigkeit eines Unternehmens, statt dass jeder einzelne Sparer das selbst tun müsste. Fristentransformation: Eine Bank finanziert einen 10-Jahres-Kredit aus täglich fälligen Spareinlagen vieler Kunden. Risikotransformation: Eine Bank streut das Ausfallrisiko über viele Kredite und gleicht Verluste einzelner Kredite durch Zinserträge anderer Kredite aus. Losgrößentransformation: Viele kleine Spareinlagen (z. B. je 1.000 €) werden zu einem großen Unternehmenskredit (z. B. 5 Mio. €) gebündelt."
+        solution: [{ type: "p", text: "Informationsbedarfstransformation: Eine Bank prüft die Kreditwürdigkeit eines Unternehmens, statt dass jeder einzelne Sparer das selbst tun müsste. Fristentransformation: Eine Bank finanziert einen 10-Jahres-Kredit aus täglich fälligen Spareinlagen vieler Kunden. Risikotransformation: Eine Bank streut das Ausfallrisiko über viele Kredite und gleicht Verluste einzelner Kredite durch Zinserträge anderer Kredite aus. Losgrößentransformation: Viele kleine Spareinlagen (z. B. je 1.000 €) werden zu einem großen Unternehmenskredit (z. B. 5 Mio. €) gebündelt." }]
       },
       {
         id: "finv-finanzintermediaere-wechselkurs-e2",
         prompt: "Ein deutsches Unternehmen will 100.000 € für 1 Jahr aufnehmen. Zinssatz Euroraum = 8,0 % p.a., Zinssatz Fremdwährung = 6,0 % p.a., aktueller Wechselkurs 1,2 FW/EUR (unverändert erwartet). Bei welcher Variante zahlt das Unternehmen weniger, wenn der Wechselkurs unverändert bleibt?",
-        solution: "Bei unverändertem Wechselkurs ist ausschließlich der niedrigere Nominalzins entscheidend. Der Fremdwährungskredit mit 6,0 % p.a. ist günstiger als der Eurokredit mit 8,0 % p.a. Zinskosten in der Fremdwährungsvariante: 100.000 € entsprechen bei Kurs 1,2 FW/EUR = 120.000 FW; Zinsen = 120.000 FW × 6 % = 7.200 FW, umgerechnet (bei unverändertem Kurs) = 6.000 €, gegenüber 8.000 € beim Eurokredit."
+        solution: [{ type: "p", text: "Bei unverändertem Wechselkurs ist ausschließlich der niedrigere Nominalzins entscheidend. Der Fremdwährungskredit mit 6,0 % p.a. ist günstiger als der Eurokredit mit 8,0 % p.a. Zinskosten in der Fremdwährungsvariante: 100.000 € entsprechen bei Kurs 1,2 FW/EUR = 120.000 FW; Zinsen = 120.000 FW × 6 % = 7.200 FW, umgerechnet (bei unverändertem Kurs) = 6.000 €, gegenüber 8.000 € beim Eurokredit." }]
       },
       {
         id: "finv-finanzintermediaere-wechselkurs-e3",
         prompt: "Dieselbe Ausgangslage wie in Aufgabe 2, aber die Finanzchefin erwartet, dass der Wechselkurs von 1,2 FW/EUR auf 1,00 FW/EUR sinkt (die Fremdwährung wird stärker). Lohnt sich die Fremdwährungsfinanzierung trotzdem?",
-        solution: "Zinsvorteil der Fremdwährung: 8,0 % − 6,0 % = 2,0 Prozentpunkte. Erwartete Wechselkursänderung: von 1,2 auf 1,00 FW/EUR bedeutet, dass man am Ende der Laufzeit für dieselbe Menge Euro weniger Fremdwährung bekommt bzw. für dieselbe Fremdwährungsschuld mehr Euro aufwenden muss — das entspricht einer prozentualen Aufwertung der Fremdwährung von (1,2−1,0)/1,0 = 20 %. Da diese erwartete 20%ige Verteuerung deutlich größer ist als der Zinsvorteil von 2 Prozentpunkten, lohnt sich die Fremdwährungsfinanzierung unter dieser Erwartung NICHT — der Eurokredit ist trotz höherem Nominalzins vorzuziehen."
+        solution: [{ type: "p", text: "Zinsvorteil der Fremdwährung: 8,0 % − 6,0 % = 2,0 Prozentpunkte. Erwartete Wechselkursänderung: von 1,2 auf 1,00 FW/EUR bedeutet, dass man am Ende der Laufzeit für dieselbe Menge Euro weniger Fremdwährung bekommt bzw. für dieselbe Fremdwährungsschuld mehr Euro aufwenden muss — das entspricht einer prozentualen Aufwertung der Fremdwährung von (1,2−1,0)/1,0 = 20 %. Da diese erwartete 20%ige Verteuerung deutlich größer ist als der Zinsvorteil von 2 Prozentpunkten, lohnt sich die Fremdwährungsfinanzierung unter dieser Erwartung NICHT — der Eurokredit ist trotz höherem Nominalzins vorzuziehen." }]
       },
       {
         id: "finv-finanzintermediaere-wechselkurs-e4",
         prompt: "Welches Risiko trägt ein Unternehmen bei einer Fremdwährungsfinanzierung, und wie kann es dieses Risiko steuern?",
-        solution: "Das Unternehmen trägt das Wechselkursrisiko: Entwickelt sich der Wechselkurs ungünstig (die Fremdwährung wird gegenüber dem Euro stärker), steigen die effektiven Finanzierungskosten in Euro, unter Umständen so stark, dass der ursprüngliche Zinsvorteil aufgezehrt wird. Steuerung: durch Kurssicherungsgeschäfte (z. B. Devisentermingeschäfte/Forwards, Optionen), durch natürliche Absicherung (Hedging über Fremdwährungserlöse aus dem operativen Geschäft) oder durch bewusste Übernahme des Risikos, falls die Kurserwartung stabil positiv ist."
+        solution: [{ type: "p", text: "Das Unternehmen trägt das Wechselkursrisiko: Entwickelt sich der Wechselkurs ungünstig (die Fremdwährung wird gegenüber dem Euro stärker), steigen die effektiven Finanzierungskosten in Euro, unter Umständen so stark, dass der ursprüngliche Zinsvorteil aufgezehrt wird. Steuerung: durch Kurssicherungsgeschäfte (z. B. Devisentermingeschäfte/Forwards, Optionen), durch natürliche Absicherung (Hedging über Fremdwährungserlöse aus dem operativen Geschäft) oder durch bewusste Übernahme des Risikos, falls die Kurserwartung stabil positiv ist." }]
       },
       {
         id: "finv-finanzintermediaere-wechselkurs-e5",
         prompt: "Ist die Deutsche Bundesbank ein Kreditinstitut im Sinne des § 1 KWG? Begründen Sie kurz.",
-        solution: "Nein. Die Deutsche Bundesbank ist die Zentralbank Deutschlands und unterliegt einem eigenen gesetzlichen Rahmen (Bundesbankgesetz); sie betreibt kein klassisches Einlagen- oder Kreditgeschäft mit der breiten Öffentlichkeit im Sinne des § 1 KWG und fällt daher nicht unter die Definition eines Kreditinstituts nach KWG, sondern hat eine gesonderte hoheitliche/geldpolitische Funktion."
+        solution: [{ type: "p", text: "Nein. Die Deutsche Bundesbank ist die Zentralbank Deutschlands und unterliegt einem eigenen gesetzlichen Rahmen (Bundesbankgesetz); sie betreibt kein klassisches Einlagen- oder Kreditgeschäft mit der breiten Öffentlichkeit im Sinne des § 1 KWG und fällt daher nicht unter die Definition eines Kreditinstituts nach KWG, sondern hat eine gesonderte hoheitliche/geldpolitische Funktion." }]
       }
     ],
     quiz: [

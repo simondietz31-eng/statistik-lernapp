@@ -28,27 +28,27 @@ const NATWISS_CHAPTER15_TOPICS = [
       {
         id: "natwiss-ueb-schwingungen-e1",
         prompt: "x(t) = 7 cm·cos(6π·t). Bestimmen Sie Frequenz, Schwingungsdauer und Amplitude.",
-        solution: "ω = 6π rad/s. f = ω/(2π) = 6π/(2π) = 3 Hz. T = 1/3 s ≈ 0,333 s. A = 7 cm."
+        solution: [{ type: "p", text: "ω = 6π rad/s. f = ω/(2π) = 6π/(2π) = 3 Hz. T = 1/3 s ≈ 0,333 s. A = 7 cm." }]
       },
       {
         id: "natwiss-ueb-schwingungen-e2",
         prompt: "Rütteltisch: Maximalbeschleunigung a_max = 10g = 98,1 m/s², Amplitude A = 1,5 cm = 0,015 m. Welche Frequenz ist nötig?",
-        solution: "a_max = ω²·A → ω = √(a_max/A) = √(98,1/0,015) = √6540 ≈ 80,9 rad/s. f = ω/(2π) ≈ 12,9 Hz."
+        solution: [{ type: "p", text: "a_max = ω²·A → ω = √(a_max/A) = √(98,1/0,015) = √6540 ≈ 80,9 rad/s. f = ω/(2π) ≈ 12,9 Hz." }]
       },
       {
         id: "natwiss-ueb-schwingungen-e3",
         prompt: "Federpendel: k = 1800 N/m, f = 5,50 Hz. Berechnen Sie die Masse m.",
-        solution: "ω = 2πf = 2π·5,5 = 34,56 rad/s. k = mω² → m = k/ω² = 1800/34,56² = 1800/1194 ≈ 1,508 kg."
+        solution: [{ type: "p", text: "ω = 2πf = 2π·5,5 = 34,56 rad/s. k = mω² → m = k/ω² = 1800/34,56² = 1800/1194 ≈ 1,508 kg." }]
       },
       {
         id: "natwiss-ueb-schwingungen-e4",
         prompt: "Um wie viel dehnt sich die Feder (k = 1800 N/m) im Gleichgewicht, wenn m = 1,508 kg daran hängt?",
-        solution: "Δx = mg/k = 1,508·9,81/1800 = 14,79/1800 ≈ 0,00822 m ≈ 8,2 mm."
+        solution: [{ type: "p", text: "Δx = mg/k = 1,508·9,81/1800 = 14,79/1800 ≈ 0,00822 m ≈ 8,2 mm." }]
       },
       {
         id: "natwiss-ueb-schwingungen-e5",
         prompt: "Mathematisches Pendel, l = 2,0 m. Berechnen Sie die Resonanzfrequenz.",
-        solution: "f = 1/(2π)·√(g/l) = 1/(2π)·√(9,81/2,0) = 1/(2π)·√4,905 = 1/(2π)·2,215 ≈ 0,352 Hz."
+        solution: [{ type: "p", text: "f = 1/(2π)·√(g/l) = 1/(2π)·√(9,81/2,0) = 1/(2π)·√4,905 = 1/(2π)·2,215 ≈ 0,352 Hz." }]
       }
     ],
     quiz: [
@@ -94,27 +94,27 @@ const NATWISS_CHAPTER15_TOPICS = [
       {
         id: "natwiss-ueb-wellen-e1",
         prompt: "Seilbahn: Seil 600 m, Echozeit 16 s. Wie groß ist die Wellengeschwindigkeit?",
-        solution: "c = 2L/t = 2·600/16 = 75 m/s."
+        solution: [{ type: "p", text: "c = 2L/t = 2·600/16 = 75 m/s." }]
       },
       {
         id: "natwiss-ueb-wellen-e2",
         prompt: "Seil (L = 8,40 m, m = 0,120 kg, F_T = 96 N). Berechnen Sie c und f der Grundschwingung.",
-        solution: "μ = m/L = 0,120/8,40 = 0,01429 kg/m. c = √(F_T/μ) = √(96/0,01429) = √6720 ≈ 82 m/s. λ₁ = 2L = 16,8 m. f₁ = 82/16,8 ≈ 4,88 Hz."
+        solution: [{ type: "p", text: "μ = m/L = 0,120/8,40 = 0,01429 kg/m. c = √(F_T/μ) = √(96/0,01429) = √6720 ≈ 82 m/s. λ₁ = 2L = 16,8 m. f₁ = 82/16,8 ≈ 4,88 Hz." }]
       },
       {
         id: "natwiss-ueb-wellen-e3",
         prompt: "Schallwelle: f = 440 Hz, c = 345 m/s. Berechnen Sie λ und die Zeit für einen Phasenwechsel um 90°.",
-        solution: "λ = c/f = 345/440 ≈ 0,784 m. T = 1/f = 2,27·10⁻³ s. Δt = T/4 = 5,68·10⁻⁴ s."
+        solution: [{ type: "p", text: "λ = c/f = 345/440 ≈ 0,784 m. T = 1/f = 2,27·10⁻³ s. Δt = T/4 = 5,68·10⁻⁴ s." }]
       },
       {
         id: "natwiss-ueb-wellen-e4",
         prompt: "Welche Phasendifferenz haben zwei Punkte auf einer Schallwelle (f = 440 Hz, c = 345 m/s) im Abstand Δx = 4,4 cm?",
-        solution: "Δφ = (2π/λ)·Δx = (2π/0,784)·0,044 = 0,3524 rad = 20°."
+        solution: [{ type: "p", text: "Δφ = (2π/λ)·Δx = (2π/0,784)·0,044 = 0,3524 rad = 20°." }]
       },
       {
         id: "natwiss-ueb-wellen-e5",
         prompt: "Zwei gleiche Wellen überlagern sich mit Phasenversatz Δφ = π/2. Welche Amplitude hat die resultierende Welle?",
-        solution: "Überlagerung: y_res = y_m·cos(ωt) + y_m·cos(ωt + π/2). Amplitude: A = y_m·√(1+1+2·cos(π/2)) = y_m·√2. A = √2·y_m ≈ 1,41·y_m."
+        solution: [{ type: "p", text: "Überlagerung: y_res = y_m·cos(ωt) + y_m·cos(ωt + π/2). Amplitude: A = y_m·√(1+1+2·cos(π/2)) = y_m·√2. A = √2·y_m ≈ 1,41·y_m." }]
       }
     ],
     quiz: [
@@ -154,27 +154,27 @@ const NATWISS_CHAPTER15_TOPICS = [
       {
         id: "natwiss-ueb-wellen2-e1",
         prompt: "y(x,t) = (3 cm)·sin(2πx − 6πt). Bestimmen Sie k, λ, ω, f, c.",
-        solution: "k = 2π m⁻¹ → λ = 2π/k = 1 m. ω = 6π rad/s → f = 3 Hz. c = ω/k = 6π/(2π) = 3 m/s."
+        solution: [{ type: "p", text: "k = 2π m⁻¹ → λ = 2π/k = 1 m. ω = 6π rad/s → f = 3 Hz. c = ω/k = 6π/(2π) = 3 m/s." }]
       },
       {
         id: "natwiss-ueb-wellen2-e2",
         prompt: "Seil: μ = 0,01 kg/m, ω = 2π·60 rad/s, A = 0,5 cm, c = 94,7 m/s. Berechnen Sie die Leistung.",
-        solution: "P = ½·μ·ω²·A²·c = ½·0,01·(2π·60)²·(0,005)²·94,7. ω = 376,99. ω² = 142 120. P = 0,005·142 120·0,000025·94,7 ≈ 1,68 W."
+        solution: [{ type: "p", text: "P = ½·μ·ω²·A²·c = ½·0,01·(2π·60)²·(0,005)²·94,7. ω = 376,99. ω² = 142 120. P = 0,005·142 120·0,000025·94,7 ≈ 1,68 W." }]
       },
       {
         id: "natwiss-ueb-wellen2-e3",
         prompt: "Bei konstanter Leistung P wird die Frequenz eines Seilschwingers verdoppelt (f → 2f). Wie ändert sich die Amplitude A?",
-        solution: "P = ½·μ·ω²·A²·c = const. P ∝ ω²A². Bei ω → 2ω: (2ω)²·A'² = ω²·A² → 4A'² = A² → A' = A/2. Die Amplitude halbiert sich."
+        solution: [{ type: "p", text: "P = ½·μ·ω²·A²·c = const. P ∝ ω²A². Bei ω → 2ω: (2ω)²·A'² = ω²·A² → 4A'² = A² → A' = A/2. Die Amplitude halbiert sich." }]
       },
       {
         id: "natwiss-ueb-wellen2-e4",
         prompt: "Stehende Welle: L = 2 m, c = 40 m/s. Berechnen Sie die ersten drei Eigenfrequenzen.",
-        solution: "f_n = n·c/(2L). f₁ = 1·40/4 = 10 Hz. f₂ = 2·40/4 = 20 Hz. f₃ = 3·40/4 = 30 Hz."
+        solution: [{ type: "p", text: "f_n = n·c/(2L). f₁ = 1·40/4 = 10 Hz. f₂ = 2·40/4 = 20 Hz. f₃ = 3·40/4 = 30 Hz." }]
       },
       {
         id: "natwiss-ueb-wellen2-e5",
         prompt: "Phasendifferenz von Δφ = π zwischen zwei Punkten einer Welle (λ = 0,784 m). Welcher Abstand Δx trennt sie?",
-        solution: "Δφ = (2π/λ)·Δx → Δx = Δφ·λ/(2π) = π·0,784/(2π) = 0,784/2 = 0,392 m = λ/2."
+        solution: [{ type: "p", text: "Δφ = (2π/λ)·Δx → Δx = Δφ·λ/(2π) = π·0,784/(2π) = 0,784/2 = 0,392 m = λ/2." }]
       }
     ],
     quiz: [

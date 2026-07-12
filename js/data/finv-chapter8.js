@@ -26,27 +26,27 @@ const FINV_CHAPTER8_TOPICS = [
       {
         id: "finv-zinseszins-geometrisch-e1",
         prompt: "30.000 € werden für 3 Jahre bei 8 % Zinseszins angelegt. Berechnen Sie den Endwert.",
-        solution: "K₃ = K₀·(1+i)³ = 30.000·(1,08)³ = 30.000·1,259712 = 37.791,36 €."
+        solution: [{ type: "p", text: "K₃ = K₀·(1+i)³ = 30.000·(1,08)³ = 30.000·1,259712 = 37.791,36 €." }]
       },
       {
         id: "finv-zinseszins-geometrisch-e2",
         prompt: "Ein Kapital von 2.000 € wird 2,5 Jahre bei 3 % Zinseszins angelegt. Berechnen Sie den Zeitwert und vergleichen Sie mit dem Ergebnis bei linearer Verzinsung (2.150 €).",
-        solution: "Kₜ = K₀·(1+i)^t = 2.000·(1,03)^2,5 ≈ 2.000·1,07669 ≈ 2.153,39 €. Bei Zinseszins ergibt sich ein um 3,39 € höherer Wert als bei linearer Verzinsung (2.150 €) — Zinseszins führt bei positivem Zins über Laufzeiten mit Bruchteilen von Jahren zu einem etwas höheren Ergebnis."
+        solution: [{ type: "p", text: "Kₜ = K₀·(1+i)^t = 2.000·(1,03)^2,5 ≈ 2.000·1,07669 ≈ 2.153,39 €. Bei Zinseszins ergibt sich ein um 3,39 € höherer Wert als bei linearer Verzinsung (2.150 €) — Zinseszins führt bei positivem Zins über Laufzeiten mit Bruchteilen von Jahren zu einem etwas höheren Ergebnis." }]
       },
       {
         id: "finv-zinseszins-geometrisch-e3",
         prompt: "Welchen Betrag müsste man heute anlegen, um in 2,5 Jahren bei 3 % Zinseszins genau 5.000 € zu erhalten?",
-        solution: "K₀ = Kₜ/(1+i)^t = 5.000/(1,03)^2,5 ≈ 5.000/1,07669 ≈ 4.643,84 €."
+        solution: [{ type: "p", text: "K₀ = Kₜ/(1+i)^t = 5.000/(1,03)^2,5 ≈ 5.000/1,07669 ≈ 4.643,84 €." }]
       },
       {
         id: "finv-zinseszins-geometrisch-e4",
         prompt: "Ein Kapital von 10.000 € soll sich verdoppeln. Bei welchem Zinssatz (Zinseszins) dauert das genau 10 Jahre?",
-        solution: "Kₙ = K₀·(1+i)ⁿ → 20.000 = 10.000·(1+i)^10 → 2 = (1+i)^10 → 1+i = 2^(1/10) ≈ 1,0718 → i ≈ 0,0718 = 7,18 %."
+        solution: [{ type: "p", text: "Kₙ = K₀·(1+i)ⁿ → 20.000 = 10.000·(1+i)^10 → 2 = (1+i)^10 → 1+i = 2^(1/10) ≈ 1,0718 → i ≈ 0,0718 = 7,18 %." }]
       },
       {
         id: "finv-zinseszins-geometrisch-e5",
         prompt: "Ein Kapital wird 3 Jahre lang angelegt, wobei im 1. Jahr 5 %, im 2. Jahr 6 % und im 3. Jahr 4 % Zins gelten. Anfangskapital 10.000 €. Berechnen Sie den Endwert.",
-        solution: "K₃ = K₀·(1+i₁)·(1+i₂)·(1+i₃) = 10.000·1,05·1,06·1,04 = 10.000·1,15752 = 11.575,20 €."
+        solution: [{ type: "p", text: "K₃ = K₀·(1+i₁)·(1+i₂)·(1+i₃) = 10.000·1,05·1,06·1,04 = 10.000·1,15752 = 11.575,20 €." }]
       }
     ],
     quiz: [
@@ -86,27 +86,27 @@ const FINV_CHAPTER8_TOPICS = [
       {
         id: "finv-gemischte-verzinsung-effektivzins-e1",
         prompt: "5.000 € werden 4,25 Jahre bei 4 % Zinseszins angelegt (gemischte Verzinsung, Näherung). Berechnen Sie den Endwert.",
-        solution: "Kₜ ≈ K₀·(1+i)^t = 5.000·(1,04)^4,25 ≈ 5.000·1,1815 ≈ 5.907 € (Näherungswert, exakte gemischte Rechnung liefert ≈ 5.908 € — der Unterschied ist minimal)."
+        solution: [{ type: "p", text: "Kₜ ≈ K₀·(1+i)^t = 5.000·(1,04)^4,25 ≈ 5.000·1,1815 ≈ 5.907 € (Näherungswert, exakte gemischte Rechnung liefert ≈ 5.908 € — der Unterschied ist minimal)." }]
       },
       {
         id: "finv-gemischte-verzinsung-effektivzins-e2",
         prompt: "Eine Bank bietet einen Nominalzins von 6 % p.a. bei monatlicher Zinszuteilung (m=12). Berechnen Sie den unterjährigen relativen Zins i_m und den Effektivzins i_eff.",
-        solution: "i_m = i/m = 0,06/12 = 0,005 = 0,5 % pro Monat. i_eff = (1+i_m)^m − 1 = (1,005)^12 − 1 ≈ 1,06168 − 1 ≈ 0,06168 = 6,168 %. Der Effektivzins (6,168 %) liegt wegen des monatlichen Zinseszinseffekts über dem Nominalzins (6 %)."
+        solution: [{ type: "p", text: "i_m = i/m = 0,06/12 = 0,005 = 0,5 % pro Monat. i_eff = (1+i_m)^m − 1 = (1,005)^12 − 1 ≈ 1,06168 − 1 ≈ 0,06168 = 6,168 %. Der Effektivzins (6,168 %) liegt wegen des monatlichen Zinseszinseffekts über dem Nominalzins (6 %)." }]
       },
       {
         id: "finv-gemischte-verzinsung-effektivzins-e3",
         prompt: "Ein Jahreszins von 8 % soll bei vierteljährlicher Zinszuteilung (m=4) durch einen konformen Periodenzins ersetzt werden. Berechnen Sie i*.",
-        solution: "i* = (1+i)^(1/m) − 1 = (1,08)^(1/4) − 1 ≈ 1,01943 − 1 ≈ 0,01943 = 1,943 % pro Quartal. Wird dieser konforme Quartalszins viermal mit Zinseszins angewendet, ergibt sich exakt wieder der Jahreszins von 8 %."
+        solution: [{ type: "p", text: "i* = (1+i)^(1/m) − 1 = (1,08)^(1/4) − 1 ≈ 1,01943 − 1 ≈ 0,01943 = 1,943 % pro Quartal. Wird dieser konforme Quartalszins viermal mit Zinseszins angewendet, ergibt sich exakt wieder der Jahreszins von 8 %." }]
       },
       {
         id: "finv-gemischte-verzinsung-effektivzins-e4",
         prompt: "Ein Anleger erzielt in drei aufeinanderfolgenden Jahren die Renditen 10 %, −5 % und 15 %. Berechnen Sie die durchschnittliche Rendite als geometrisches Mittel.",
-        solution: "Geometrisches Mittel: (1+i_ø)³ = (1,10)·(0,95)·(1,15) = 1,20175. i_ø = 1,20175^(1/3) − 1 ≈ 1,0632 − 1 ≈ 0,0632 = 6,32 % durchschnittliche Jahresrendite. (Das arithmetische Mittel [(10−5+15)/3=6,67%] wäre hier nicht korrekt, da es den Zinseszinseffekt und die tatsächliche Verkettung der Renditen nicht berücksichtigt.)"
+        solution: [{ type: "p", text: "Geometrisches Mittel: (1+i_ø)³ = (1,10)·(0,95)·(1,15) = 1,20175. i_ø = 1,20175^(1/3) − 1 ≈ 1,0632 − 1 ≈ 0,0632 = 6,32 % durchschnittliche Jahresrendite. (Das arithmetische Mittel [(10−5+15)/3=6,67%] wäre hier nicht korrekt, da es den Zinseszinseffekt und die tatsächliche Verkettung der Renditen nicht berücksichtigt.)" }]
       },
       {
         id: "finv-gemischte-verzinsung-effektivzins-e5",
         prompt: "Warum ist der Effektivzins bei unterjähriger Zinszuteilung stets höher als der zugrunde liegende Nominalzins?",
-        solution: "Bei unterjähriger Zinszuteilung (z. B. monatlich) werden die bereits gutgeschriebenen Zinsen jeder Teilperiode innerhalb desselben Jahres bereits mitverzinst (Zinseszinseffekt), bevor das Jahr vorbei ist. Diese zusätzliche Verzinsung der Zinsen führt dazu, dass der tatsächlich erzielte (effektive) Jahreszins über dem nominalen Jahreszins liegt, der ja nur die Grundlage für die Berechnung der unterjährigen Teilzinsen bildet, ohne den Zinseszinseffekt selbst zu berücksichtigen."
+        solution: [{ type: "p", text: "Bei unterjähriger Zinszuteilung (z. B. monatlich) werden die bereits gutgeschriebenen Zinsen jeder Teilperiode innerhalb desselben Jahres bereits mitverzinst (Zinseszinseffekt), bevor das Jahr vorbei ist. Diese zusätzliche Verzinsung der Zinsen führt dazu, dass der tatsächlich erzielte (effektive) Jahreszins über dem nominalen Jahreszins liegt, der ja nur die Grundlage für die Berechnung der unterjährigen Teilzinsen bildet, ohne den Zinseszinseffekt selbst zu berücksichtigen." }]
       }
     ],
     quiz: [

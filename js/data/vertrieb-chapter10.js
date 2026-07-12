@@ -42,27 +42,27 @@ const VERTRIEB_CHAPTER10_TOPICS = [
       {
         id: "vertrieb-it-systeme-logistik-grundlagen-e1",
         prompt: "Warum steht bei den Anforderungen an Vertriebs-IT-Systeme die Benutzerorientierung im Vordergrund und nicht primär Sicherheit oder Wirtschaftlichkeit?",
-        solution: "Integrationsfähigkeit der IT-Systeme wird als selbstverständlich vorausgesetzt, und Sicherheit ist keine Kernaufgabe des Vertriebs selbst, sondern eher der IT-Abteilung zuzuordnen. Die Wirtschaftlichkeit bzw. Effizienz eines Vertriebs-IT-Systems lässt sich zudem kaum quantifizieren. Daher konzentrieren sich die Anforderungen im Vertrieb vor allem auf die Benutzerorientierung, also darauf, wie effektiv die Systeme den Vertriebsmitarbeitern bei ihrer täglichen Arbeit helfen."
+        solution: [{ type: "p", text: "Integrationsfähigkeit der IT-Systeme wird als selbstverständlich vorausgesetzt, und Sicherheit ist keine Kernaufgabe des Vertriebs selbst, sondern eher der IT-Abteilung zuzuordnen. Die Wirtschaftlichkeit bzw. Effizienz eines Vertriebs-IT-Systems lässt sich zudem kaum quantifizieren. Daher konzentrieren sich die Anforderungen im Vertrieb vor allem auf die Benutzerorientierung, also darauf, wie effektiv die Systeme den Vertriebsmitarbeitern bei ihrer täglichen Arbeit helfen." }]
       },
       {
         id: "vertrieb-it-systeme-logistik-grundlagen-e2",
         prompt: "Nennen Sie mindestens vier Einflussfaktoren der Benutzerorientierung von Vertriebs-IT-Systemen.",
-        solution: "Zu den Einflussfaktoren zählen unter anderem die Verdichtung der Informationsflut, die Aktualität von Informationen, Einfachheit und Schnelligkeit beim Zugriff, die Standardisierung der Erfassung, die Differenzierbarkeit bei der Auswertung, die Verständlichkeit der Darstellungsform sowie die Automatisierung der Lieferung."
+        solution: [{ type: "p", text: "Zu den Einflussfaktoren zählen unter anderem die Verdichtung der Informationsflut, die Aktualität von Informationen, Einfachheit und Schnelligkeit beim Zugriff, die Standardisierung der Erfassung, die Differenzierbarkeit bei der Auswertung, die Verständlichkeit der Darstellungsform sowie die Automatisierung der Lieferung." }]
       },
       {
         id: "vertrieb-it-systeme-logistik-grundlagen-e3",
         prompt: "Beschreiben Sie die drei Aufgabenfelder der Vertriebslogistik.",
-        solution: "Das erste Aufgabenfeld ist die Entscheidung über Lagerstandorte, unterteilt in vertikale (wie viele Stufen vom Hersteller zum Kunden) und horizontale (wie viele Lager pro Stufe) Struktur. Das zweite Aufgabenfeld ist die Entscheidung über die Lagerhaltung, also wann und wie viel bestellt wird. Das dritte Aufgabenfeld sind Transportentscheidungen, also wie die Ware physisch von Lager zu Lager bzw. zum Kunden bewegt wird."
+        solution: [{ type: "p", text: "Das erste Aufgabenfeld ist die Entscheidung über Lagerstandorte, unterteilt in vertikale (wie viele Stufen vom Hersteller zum Kunden) und horizontale (wie viele Lager pro Stufe) Struktur. Das zweite Aufgabenfeld ist die Entscheidung über die Lagerhaltung, also wann und wie viel bestellt wird. Das dritte Aufgabenfeld sind Transportentscheidungen, also wie die Ware physisch von Lager zu Lager bzw. zum Kunden bewegt wird." }]
       },
       {
         id: "vertrieb-it-systeme-logistik-grundlagen-e4",
         prompt: "Skizzieren Sie die drei Beispielmuster der vertikalen Logistikstruktur und erklären Sie den Unterschied.",
-        solution: "Bei der 1-stufigen Struktur liefert das Zentrallager direkt an den Kunden. Bei der 2-stufigen Struktur liefert das Zentrallager zunächst an ein Werklager, von dem aus der Kunde beliefert wird. Bei der 3-stufigen Struktur liefert das Zentrallager an ein Werklager, dieses an ein Auslieferungslager, und erst von dort erfolgt die Belieferung des Kunden, wobei zu mehreren Auslieferungs- bzw. Werklagern verzweigt werden kann. Mit zunehmender Stufenzahl steigt die Kundennähe der Lager, aber auch die Komplexität und der Koordinationsaufwand der Struktur."
+        solution: [{ type: "p", text: "Bei der 1-stufigen Struktur liefert das Zentrallager direkt an den Kunden. Bei der 2-stufigen Struktur liefert das Zentrallager zunächst an ein Werklager, von dem aus der Kunde beliefert wird. Bei der 3-stufigen Struktur liefert das Zentrallager an ein Werklager, dieses an ein Auslieferungslager, und erst von dort erfolgt die Belieferung des Kunden, wobei zu mehreren Auslieferungs- bzw. Werklagern verzweigt werden kann. Mit zunehmender Stufenzahl steigt die Kundennähe der Lager, aber auch die Komplexität und der Koordinationsaufwand der Struktur." }]
       },
       {
         id: "vertrieb-it-systeme-logistik-grundlagen-e5",
         prompt: "Nennen Sie die drei Kriteriengruppen für die Wahl der vertikalen Logistikstruktur und je ein Beispiel dazu.",
-        solution: "Kundenbezogene Kriterien betreffen z. B. die Zahl und Größe der Kunden oder die geduldete Lieferzeit. Unternehmensbezogene Kriterien betreffen z. B. die Breite des Produktprogramms oder den Wert der Produkte. Wettbewerbsbezogene Kriterien betreffen z. B. die Intensität des Wettbewerbs oder die Logistikstruktur der Konkurrenz."
+        solution: [{ type: "p", text: "Kundenbezogene Kriterien betreffen z. B. die Zahl und Größe der Kunden oder die geduldete Lieferzeit. Unternehmensbezogene Kriterien betreffen z. B. die Breite des Produktprogramms oder den Wert der Produkte. Wettbewerbsbezogene Kriterien betreffen z. B. die Intensität des Wettbewerbs oder die Logistikstruktur der Konkurrenz." }]
       }
     ],
     quiz: [
@@ -114,27 +114,27 @@ const VERTRIEB_CHAPTER10_TOPICS = [
       {
         id: "vertrieb-lagerhaltungspolitik-eoq-e1",
         prompt: "Erläutern Sie die vier Kombinationen der Lagerhaltungspolitik anhand der beiden Entscheidungsdimensionen Bestellzeitpunkt und Bestellmenge.",
-        solution: "Beim Bestellzeitpunkt unterscheidet man zwischen regelmäßigen, festen Zeitabschnitten t (Bestellrhythmuspolitik) und unregelmäßiger Bestellung bei Unterschreiten eines Meldebestands s (Bestellpunktpolitik). Bei der Bestellmenge unterscheidet man zwischen einer stets gleichen Menge q und einer Menge, die bis zu einem Maximal-/Sollbestand S auffüllt. Aus der Kombination ergeben sich vier Politiken: (t,q) bestellt zu festen Zeitpunkten stets die Menge q, (t,S) bestellt zu festen Zeitpunkten bis zum Sollbestand S, (s,q) bestellt bei Unterschreiten von s stets die Menge q, und (s,S) bestellt bei Unterschreiten von s bis zum Sollbestand S."
+        solution: [{ type: "p", text: "Beim Bestellzeitpunkt unterscheidet man zwischen regelmäßigen, festen Zeitabschnitten t (Bestellrhythmuspolitik) und unregelmäßiger Bestellung bei Unterschreiten eines Meldebestands s (Bestellpunktpolitik). Bei der Bestellmenge unterscheidet man zwischen einer stets gleichen Menge q und einer Menge, die bis zu einem Maximal-/Sollbestand S auffüllt. Aus der Kombination ergeben sich vier Politiken: (t,q) bestellt zu festen Zeitpunkten stets die Menge q, (t,S) bestellt zu festen Zeitpunkten bis zum Sollbestand S, (s,q) bestellt bei Unterschreiten von s stets die Menge q, und (s,S) bestellt bei Unterschreiten von s bis zum Sollbestand S." }]
       },
       {
         id: "vertrieb-lagerhaltungspolitik-eoq-e2",
         prompt: "Nennen Sie je einen Vorteil und einen Nachteil der (t,q)-Politik sowie der (s,q)-Politik.",
-        solution: "Die (t,q)-Politik ist kostengünstig und einfach umzusetzen, da immer zu festen Zeitpunkten dieselbe Menge bestellt wird; ihr Nachteil ist, dass die Lieferfähigkeit gefährdet sein kann, weil bei Nachfrageschwankungen kein Trigger zum Eingreifen existiert. Die (s,q)-Politik ist stets lieferfähig, da direkt auf den tatsächlichen Verbrauch reagiert wird; ihr Nachteil ist, dass eine automatische bzw. laufende Erkennung des Meldebestands s nötig ist und die Politik tendenziell mit höheren Kosten verbunden ist."
+        solution: [{ type: "p", text: "Die (t,q)-Politik ist kostengünstig und einfach umzusetzen, da immer zu festen Zeitpunkten dieselbe Menge bestellt wird; ihr Nachteil ist, dass die Lieferfähigkeit gefährdet sein kann, weil bei Nachfrageschwankungen kein Trigger zum Eingreifen existiert. Die (s,q)-Politik ist stets lieferfähig, da direkt auf den tatsächlichen Verbrauch reagiert wird; ihr Nachteil ist, dass eine automatische bzw. laufende Erkennung des Meldebestands s nötig ist und die Politik tendenziell mit höheren Kosten verbunden ist." }]
       },
       {
         id: "vertrieb-lagerhaltungspolitik-eoq-e3",
         prompt: "Leiten Sie ausgehend von der Gesamtkostenfunktion C(q) = (r/q)K + K·r + h(q/2) die Formel für die optimale Bestellmenge q* her.",
-        solution: "Man leitet C(q) nach q ab: C'(q) = -rK/q² + h/2 (der konstante Term K·r fällt bei der Ableitung weg). Setzt man C'(q) = 0, erhält man rK/q² = h/2, umgeformt q² = 2rK/h. Zieht man die Wurzel, ergibt sich die optimale Bestellmenge q* = √(2rK/h)."
+        solution: [{ type: "p", text: "Man leitet C(q) nach q ab: C'(q) = -rK/q² + h/2 (der konstante Term K·r fällt bei der Ableitung weg). Setzt man C'(q) = 0, erhält man rK/q² = h/2, umgeformt q² = 2rK/h. Zieht man die Wurzel, ergibt sich die optimale Bestellmenge q* = √(2rK/h)." }]
       },
       {
         id: "vertrieb-lagerhaltungspolitik-eoq-e4",
         prompt: "Ein Betrieb hat einen Lagerabgang von r = 48 Stück pro Monat, fixe Bestellkosten von K = 12 € je Bestellung und Lagerhaltungskosten von h = 0,40 € pro Stück und Monat. Berechnen Sie die optimale Bestellmenge q*.",
-        solution: "Nach der Harris/Wilson-Formel gilt q* = √(2rK/h) = √(2 · 48 · 12 / 0,40) = √(1.152 / 0,40) = √2.880 ≈ 53,7 Stück. Der Betrieb sollte also jeweils rund 54 Stück bestellen, um die Gesamtkosten aus Bestell- und Lagerhaltungskosten zu minimieren."
+        solution: [{ type: "p", text: "Nach der Harris/Wilson-Formel gilt q* = √(2rK/h) = √(2 · 48 · 12 / 0,40) = √(1.152 / 0,40) = √2.880 ≈ 53,7 Stück. Der Betrieb sollte also jeweils rund 54 Stück bestellen, um die Gesamtkosten aus Bestell- und Lagerhaltungskosten zu minimieren." }]
       },
       {
         id: "vertrieb-lagerhaltungspolitik-eoq-e5",
         prompt: "Wie verändert sich die optimale Bestellmenge q*, wenn die fixen Bestellkosten K steigen bzw. die Lagerhaltungskosten h steigen? Begründen Sie mit der Formel q* = √(2rK/h).",
-        solution: "Da K im Zähler der Formel steht, führt ein Anstieg von K zu einer größeren optimalen Bestellmenge q* — höhere fixe Bestellkosten pro Bestellung machen es sinnvoll, seltener, aber dafür in größeren Mengen zu bestellen. Da h im Nenner steht, führt ein Anstieg von h zu einer kleineren optimalen Bestellmenge q* — höhere Lagerhaltungskosten pro Stück machen es sinnvoll, häufiger, aber in kleineren Mengen zu bestellen, um die Kapitalbindung im Lager gering zu halten."
+        solution: [{ type: "p", text: "Da K im Zähler der Formel steht, führt ein Anstieg von K zu einer größeren optimalen Bestellmenge q* — höhere fixe Bestellkosten pro Bestellung machen es sinnvoll, seltener, aber dafür in größeren Mengen zu bestellen. Da h im Nenner steht, führt ein Anstieg von h zu einer kleineren optimalen Bestellmenge q* — höhere Lagerhaltungskosten pro Stück machen es sinnvoll, häufiger, aber in kleineren Mengen zu bestellen, um die Kapitalbindung im Lager gering zu halten." }]
       }
     ],
     quiz: [
@@ -180,27 +180,27 @@ const VERTRIEB_CHAPTER10_TOPICS = [
       {
         id: "vertrieb-vertriebskultur-e1",
         prompt: "Welche Funktionen erfüllt die Vertriebskultur in einem Unternehmen?",
-        solution: "Die Vertriebskultur fördert die freiwillige Arbeitsleistung der Mitarbeiter, erklärt den Sinn der Arbeit, stiftet Konsens und ein gemeinsames 'Wir-Gefühl' und bietet insbesondere neuen Mitarbeitern einen Orientierungsrahmen im Unternehmen."
+        solution: [{ type: "p", text: "Die Vertriebskultur fördert die freiwillige Arbeitsleistung der Mitarbeiter, erklärt den Sinn der Arbeit, stiftet Konsens und ein gemeinsames 'Wir-Gefühl' und bietet insbesondere neuen Mitarbeitern einen Orientierungsrahmen im Unternehmen." }]
       },
       {
         id: "vertrieb-vertriebskultur-e2",
         prompt: "Nennen Sie die drei Instrumentgruppen zur Gestaltung der Vertriebskultur mit je einem Beispiel.",
-        solution: "Die erste Gruppe ist das Selbstverständnis, z. B. durch Leitsätze oder Visionen. Die zweite Gruppe ist Kommunikation/Motivation, z. B. durch eine Hauszeitschrift oder Veranstaltungen. Die dritte Gruppe sind Schulungen/Aktive Mitarbeit, z. B. durch Workshops oder Einzelgespräche."
+        solution: [{ type: "p", text: "Die erste Gruppe ist das Selbstverständnis, z. B. durch Leitsätze oder Visionen. Die zweite Gruppe ist Kommunikation/Motivation, z. B. durch eine Hauszeitschrift oder Veranstaltungen. Die dritte Gruppe sind Schulungen/Aktive Mitarbeit, z. B. durch Workshops oder Einzelgespräche." }]
       },
       {
         id: "vertrieb-vertriebskultur-e3",
         prompt: "Welche Artefakte können Teil des 'Selbstverständnisses' als Instrument der Vertriebskultur sein?",
-        solution: "Zum Selbstverständnis zählen neben Leitsätzen, Visionen und Verhaltensregeln auch Artefakte wie Rituale, eine bestimmte Sprache oder die Architektur der Unternehmensgebäude, die das gemeinsame Selbstverständnis nach außen und innen sichtbar machen."
+        solution: [{ type: "p", text: "Zum Selbstverständnis zählen neben Leitsätzen, Visionen und Verhaltensregeln auch Artefakte wie Rituale, eine bestimmte Sprache oder die Architektur der Unternehmensgebäude, die das gemeinsame Selbstverständnis nach außen und innen sichtbar machen." }]
       },
       {
         id: "vertrieb-vertriebskultur-e4",
         prompt: "Nennen Sie mindestens vier Voraussetzungen für einen erfolgreichen Kulturwandel im Vertrieb.",
-        solution: "Zu den Voraussetzungen zählen unter anderem die Einbettung in ein unternehmensweites Gesamtkonzept, die Unterstützung durch das Top-Management, eine langfristige Orientierung, die Einbeziehung aller Betroffenen, eine klare und transparente Kommunikation sowie die laufende Kommunikation kleiner Erfolge zur Stärkung der intrinsischen Motivation."
+        solution: [{ type: "p", text: "Zu den Voraussetzungen zählen unter anderem die Einbettung in ein unternehmensweites Gesamtkonzept, die Unterstützung durch das Top-Management, eine langfristige Orientierung, die Einbeziehung aller Betroffenen, eine klare und transparente Kommunikation sowie die laufende Kommunikation kleiner Erfolge zur Stärkung der intrinsischen Motivation." }]
       },
       {
         id: "vertrieb-vertriebskultur-e5",
         prompt: "Warum kann ein 'sprunghafter Übergang' bzw. bewusstes 'Schockieren' manchmal notwendig für einen erfolgreichen Kulturwandel sein?",
-        solution: "Ein rein schrittweiser, unauffälliger Wandel kann von Mitarbeitern übersehen oder nicht ernst genommen werden, sodass alte Verhaltensmuster fortbestehen. Ein bewusst sprunghafter Übergang macht den Bruch mit der bisherigen Kultur deutlich sichtbar und signalisiert allen Beteiligten, dass der Wandel ernst gemeint und unumkehrbar ist, was die Akzeptanz und Umsetzung des neuen Kulturverständnisses beschleunigen kann."
+        solution: [{ type: "p", text: "Ein rein schrittweiser, unauffälliger Wandel kann von Mitarbeitern übersehen oder nicht ernst genommen werden, sodass alte Verhaltensmuster fortbestehen. Ein bewusst sprunghafter Übergang macht den Bruch mit der bisherigen Kultur deutlich sichtbar und signalisiert allen Beteiligten, dass der Wandel ernst gemeint und unumkehrbar ist, was die Akzeptanz und Umsetzung des neuen Kulturverständnisses beschleunigen kann." }]
       }
     ],
     quiz: [

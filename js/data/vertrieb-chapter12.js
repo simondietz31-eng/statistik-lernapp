@@ -40,27 +40,27 @@ const VERTRIEB_CHAPTER12_TOPICS = [
       {
         id: "vertrieb-digitalisierung-e1",
         prompt: "Definieren Sie Digitalisierung im Vertrieb in eigenen Worten.",
-        solution: "Digitalisierung im Vertrieb bezeichnet den innovativen, prozessorientierten Einsatz IT-gestützter Hilfsmittel. Sie betrifft dabei drei Ebenen: vertriebsstrategische Grundsatzentscheidungen, konzeptionelle Rahmenbedingungen und operative Vertriebsprozesse. Es handelt sich also nicht nur um den Einsatz einzelner Technologien, sondern um eine durchgängige, prozessorientierte Integration digitaler Hilfsmittel auf strategischer, konzeptioneller und operativer Ebene."
+        solution: [{ type: "p", text: "Digitalisierung im Vertrieb bezeichnet den innovativen, prozessorientierten Einsatz IT-gestützter Hilfsmittel. Sie betrifft dabei drei Ebenen: vertriebsstrategische Grundsatzentscheidungen, konzeptionelle Rahmenbedingungen und operative Vertriebsprozesse. Es handelt sich also nicht nur um den Einsatz einzelner Technologien, sondern um eine durchgängige, prozessorientierte Integration digitaler Hilfsmittel auf strategischer, konzeptioneller und operativer Ebene." }]
       },
       {
         id: "vertrieb-digitalisierung-e2",
         prompt: "Nennen Sie die drei Ziele der Digitalisierung im Vertrieb.",
-        solution: "Die drei Ziele sind: die Absatzergebnisse nachhaltig zu steigern, den Vertrieb als zentralen Kundennutzen zu positionieren sowie den Vertrieb als strategische Ressource bzw. integrales Element der Wettbewerbsfähigkeit des Unternehmens zu entwickeln."
+        solution: [{ type: "p", text: "Die drei Ziele sind: die Absatzergebnisse nachhaltig zu steigern, den Vertrieb als zentralen Kundennutzen zu positionieren sowie den Vertrieb als strategische Ressource bzw. integrales Element der Wettbewerbsfähigkeit des Unternehmens zu entwickeln." }]
       },
       {
         id: "vertrieb-digitalisierung-e3",
         prompt: "Nennen Sie die vier strategischen Dimensionen, in denen Digitalisierung im Vertrieb eine große Rolle spielt, mit je einem Beispiel.",
-        solution: "Erstens Kundendefinition, -segmentierung und -priorisierung. Zweitens die Definition von Wettbewerbsvorteilen. Drittens die Vertriebskanalstrategie, z. B. mobile Kanäle oder Ubiquitous Commerce. Viertens die Kundenbeziehungsstrategie, z. B. E-CRM oder Total Customer Experience Management."
+        solution: [{ type: "p", text: "Erstens Kundendefinition, -segmentierung und -priorisierung. Zweitens die Definition von Wettbewerbsvorteilen. Drittens die Vertriebskanalstrategie, z. B. mobile Kanäle oder Ubiquitous Commerce. Viertens die Kundenbeziehungsstrategie, z. B. E-CRM oder Total Customer Experience Management." }]
       },
       {
         id: "vertrieb-digitalisierung-e4",
         prompt: "Beschreiben Sie die drei Schritte von 'Digital Sales Excellence'.",
-        solution: "Im ersten Schritt dient die Strategie als Ausgangspunkt, wobei die vier strategischen Entscheidungsfelder betrachtet werden. Im zweiten Schritt wird die Strategie mit der Struktur verknüpft: Es entsteht eine Entscheidungsmatrix mit 12 Suchfeldern aus der Kombination von 4 Strategie- und 3 Strukturebenen. Im dritten Schritt wird die Struktur mit dem Prozess verknüpft: Im Rahmen des Vertriebsprozessmanagements werden konkrete Technologien einzelnen Vertriebsprozessen bzw. -aktivitäten zugeordnet."
+        solution: [{ type: "p", text: "Im ersten Schritt dient die Strategie als Ausgangspunkt, wobei die vier strategischen Entscheidungsfelder betrachtet werden. Im zweiten Schritt wird die Strategie mit der Struktur verknüpft: Es entsteht eine Entscheidungsmatrix mit 12 Suchfeldern aus der Kombination von 4 Strategie- und 3 Strukturebenen. Im dritten Schritt wird die Struktur mit dem Prozess verknüpft: Im Rahmen des Vertriebsprozessmanagements werden konkrete Technologien einzelnen Vertriebsprozessen bzw. -aktivitäten zugeordnet." }]
       },
       {
         id: "vertrieb-digitalisierung-e5",
         prompt: "Nennen Sie mindestens drei veränderte Kundenerwartungen, die als Treiber der Digitalisierung im Vertrieb wirken.",
-        solution: "Kunden sind heute besser informiert als früher, erwarten eine hohe Durchlässigkeit zwischen den verschiedenen Kanälen und zunehmend einen hybriden Vertrieb aus physischen und digitalen Elementen. Zudem nutzen sie verstärkt moderne Kommunikationskanäle wie Chat, Videokonferenz oder Social Media und erleben eine steigende Kontaktfrequenz, etwa durch Retargeting-Werbung."
+        solution: [{ type: "p", text: "Kunden sind heute besser informiert als früher, erwarten eine hohe Durchlässigkeit zwischen den verschiedenen Kanälen und zunehmend einen hybriden Vertrieb aus physischen und digitalen Elementen. Zudem nutzen sie verstärkt moderne Kommunikationskanäle wie Chat, Videokonferenz oder Social Media und erleben eine steigende Kontaktfrequenz, etwa durch Retargeting-Werbung." }]
       }
     ],
     quiz: [

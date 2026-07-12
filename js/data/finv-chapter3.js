@@ -26,27 +26,27 @@ const FINV_CHAPTER3_TOPICS = [
       {
         id: "finv-finanzierungsformen-fristen-e1",
         prompt: "Ein Unternehmen finanziert eine Maschine mit 8 Jahren Nutzungsdauer über einen Kontokorrentkredit mit täglicher Kündigungsmöglichkeit durch die Bank. Beurteilen Sie diese Finanzierung anhand der Fristenkongruenz.",
-        solution: "Diese Finanzierung verstößt gegen die Fristenkongruenz (goldene Bankregel): Eine langfristig gebundene Investition (8 Jahre Nutzungsdauer) wird durch extrem kurzfristiges, jederzeit kündbares Fremdkapital finanziert. Es besteht ein erhebliches Refinanzierungsrisiko — kündigt die Bank den Kontokorrentkredit oder verlängert ihn nicht, gerät das Unternehmen in Liquiditätsschwierigkeiten, obwohl die Investition selbst wirtschaftlich sinnvoll sein kann. Sinnvoller wäre ein langfristiges Darlehen mit zur Nutzungsdauer passender Laufzeit."
+        solution: [{ type: "p", text: "Diese Finanzierung verstößt gegen die Fristenkongruenz (goldene Bankregel): Eine langfristig gebundene Investition (8 Jahre Nutzungsdauer) wird durch extrem kurzfristiges, jederzeit kündbares Fremdkapital finanziert. Es besteht ein erhebliches Refinanzierungsrisiko — kündigt die Bank den Kontokorrentkredit oder verlängert ihn nicht, gerät das Unternehmen in Liquiditätsschwierigkeiten, obwohl die Investition selbst wirtschaftlich sinnvoll sein kann. Sinnvoller wäre ein langfristiges Darlehen mit zur Nutzungsdauer passender Laufzeit." }]
       },
       {
         id: "finv-finanzierungsformen-fristen-e2",
         prompt: "Bilanz eines Unternehmens: Sachanlagen 4.000.000 €, Vorräte 1.000.000 €, Forderungen L/L 800.000 €, Kasse 400.000 €. Passiva: Eigenkapital 3.000.000 €, Fremdkapital Laufzeit > 5 Jahre 1.500.000 €, Laufzeit 1–5 Jahre 1.100.000 €, Laufzeit < 1 Jahr 600.000 €. Prüfen Sie die goldene Bilanzregel (Anlagevermögen sollte durch langfristiges Kapital gedeckt sein).",
-        solution: "Anlagevermögen (Sachanlagen) = 4.000.000 €. Langfristig verfügbares Kapital (Eigenkapital + Fremdkapital > 5 Jahre) = 3.000.000 € + 1.500.000 € = 4.500.000 €. Da 4.500.000 € > 4.000.000 €, ist die goldene Bilanzregel (im engeren Sinn: Anlagevermögen vollständig durch langfristiges Kapital gedeckt) erfüllt — es verbleiben sogar 500.000 € langfristiges Kapital zur (anteiligen) Finanzierung des Umlaufvermögens, was die Fristenkongruenz zusätzlich stützt."
+        solution: [{ type: "p", text: "Anlagevermögen (Sachanlagen) = 4.000.000 €. Langfristig verfügbares Kapital (Eigenkapital + Fremdkapital > 5 Jahre) = 3.000.000 € + 1.500.000 € = 4.500.000 €. Da 4.500.000 € > 4.000.000 €, ist die goldene Bilanzregel (im engeren Sinn: Anlagevermögen vollständig durch langfristiges Kapital gedeckt) erfüllt — es verbleiben sogar 500.000 € langfristiges Kapital zur (anteiligen) Finanzierung des Umlaufvermögens, was die Fristenkongruenz zusätzlich stützt." }]
       },
       {
         id: "finv-finanzierungsformen-fristen-e3",
         prompt: "Nennen Sie je zwei harte und zwei weiche Kriterien, die eine Bank bei der Kreditvergabeprüfung typischerweise heranzieht.",
-        solution: "Harte Kriterien (quantitativ, aus Zahlen ableitbar): Eigenkapitalquote/Verschuldungsgrad, vorhandene Sicherheiten (z. B. Grundschulden, Bürgschaften). Weiche Kriterien (qualitativ): Qualität des Managements/der Geschäftsführung, Einschätzung der Branchen- und Marktaussichten (z. B. Wettbewerbssituation, Konjunkturabhängigkeit)."
+        solution: [{ type: "p", text: "Harte Kriterien (quantitativ, aus Zahlen ableitbar): Eigenkapitalquote/Verschuldungsgrad, vorhandene Sicherheiten (z. B. Grundschulden, Bürgschaften). Weiche Kriterien (qualitativ): Qualität des Managements/der Geschäftsführung, Einschätzung der Branchen- und Marktaussichten (z. B. Wettbewerbssituation, Konjunkturabhängigkeit)." }]
       },
       {
         id: "finv-finanzierungsformen-fristen-e4",
         prompt: "Erläutern Sie den Unterschied zwischen Eigenkapital- und Fremdkapitalgebern hinsichtlich Haftung und Mitspracherecht.",
-        solution: "Eigenkapitalgeber (Eigentümer) haften mit ihrer Einlage (je nach Rechtsform ggf. sogar unbeschränkt, z. B. bei Einzelunternehmen/OHG) für die Verbindlichkeiten des Unternehmens und tragen damit unmittelbar das unternehmerische Risiko; im Gegenzug erhalten sie Geschäftsführungs- und/oder Mitspracherechte (z. B. Stimmrechte in der Hauptversammlung). Fremdkapitalgeber (Gläubiger) haften nicht für die Verbindlichkeiten des Unternehmens — sie haben einen festen Rückzahlungs- und Zinsanspruch, der grundsätzlich unabhängig vom Geschäftserfolg besteht, verfügen aber i. d. R. über keine Geschäftsführungsrechte."
+        solution: [{ type: "p", text: "Eigenkapitalgeber (Eigentümer) haften mit ihrer Einlage (je nach Rechtsform ggf. sogar unbeschränkt, z. B. bei Einzelunternehmen/OHG) für die Verbindlichkeiten des Unternehmens und tragen damit unmittelbar das unternehmerische Risiko; im Gegenzug erhalten sie Geschäftsführungs- und/oder Mitspracherechte (z. B. Stimmrechte in der Hauptversammlung). Fremdkapitalgeber (Gläubiger) haften nicht für die Verbindlichkeiten des Unternehmens — sie haben einen festen Rückzahlungs- und Zinsanspruch, der grundsätzlich unabhängig vom Geschäftserfolg besteht, verfügen aber i. d. R. über keine Geschäftsführungsrechte." }]
       },
       {
         id: "finv-finanzierungsformen-fristen-e5",
         prompt: "In welcher Lebenszyklusphase eines Unternehmens ist Venture Capital typischerweise am relevantesten, und warum eignen sich klassische Bankkredite hier oft weniger?",
-        solution: "Venture Capital ist typischerweise in der Gründungs- und frühen Wachstumsphase relevant, wenn junge Unternehmen noch keine oder kaum belastbare Sicherheiten, Erfolgshistorie oder stabile Cashflows vorweisen können. Klassische Bankkredite eignen sich hier oft weniger, weil Banken i. d. R. Sicherheiten und eine verlässliche Zins-/Tilgungsfähigkeit erwarten — beides ist in der Gründungsphase häufig noch nicht ausreichend gegeben. Venture-Capital-Geber tragen dagegen bewusst ein höheres unternehmerisches Risiko gegen eine Beteiligung am (potenziell hohen) künftigen Erfolg."
+        solution: [{ type: "p", text: "Venture Capital ist typischerweise in der Gründungs- und frühen Wachstumsphase relevant, wenn junge Unternehmen noch keine oder kaum belastbare Sicherheiten, Erfolgshistorie oder stabile Cashflows vorweisen können. Klassische Bankkredite eignen sich hier oft weniger, weil Banken i. d. R. Sicherheiten und eine verlässliche Zins-/Tilgungsfähigkeit erwarten — beides ist in der Gründungsphase häufig noch nicht ausreichend gegeben. Venture-Capital-Geber tragen dagegen bewusst ein höheres unternehmerisches Risiko gegen eine Beteiligung am (potenziell hohen) künftigen Erfolg." }]
       }
     ],
     quiz: [
@@ -88,27 +88,27 @@ const FINV_CHAPTER3_TOPICS = [
       {
         id: "finv-leverage-effekt-e1",
         prompt: "Ein Unternehmen hat Gesamtkapital 1.000.000 €, Gesamtrentabilität (r_GK) 10 %, Eigenkapital 900.000 €, Fremdkapitalzins 7 %. Berechnen Sie Leverage und r_EK.",
-        solution: "Fremdkapital FK = 1.000.000 − 900.000 = 100.000 €. Leverage = FK/EK = 100.000/900.000 ≈ 0,111. r_EK = r_GK + FK/EK·(r_GK−r_FK) = 0,10 + 0,111·(0,10−0,07) = 0,10 + 0,111·0,03 ≈ 0,1033 = 10,33 %."
+        solution: [{ type: "p", text: "Fremdkapital FK = 1.000.000 − 900.000 = 100.000 €. Leverage = FK/EK = 100.000/900.000 ≈ 0,111. r_EK = r_GK + FK/EK·(r_GK−r_FK) = 0,10 + 0,111·(0,10−0,07) = 0,10 + 0,111·0,03 ≈ 0,1033 = 10,33 %." }]
       },
       {
         id: "finv-leverage-effekt-e2",
         prompt: "Gleiche Ausgangssituation, aber Eigenkapital nur 500.000 € (also FK = 500.000 €), Fremdkapitalzins weiterhin 7 %, r_GK weiterhin 10 %. Berechnen Sie r_EK.",
-        solution: "Leverage = FK/EK = 500.000/500.000 = 1. r_EK = 0,10 + 1·(0,10−0,07) = 0,10 + 0,03 = 0,13 = 13 %. Der höhere Verschuldungsgrad verstärkt hier die Eigenkapitalrendite deutlich (von 10,33 % auf 13 %), weil r_GK > r_FK gilt (positiver Leverage-Effekt)."
+        solution: [{ type: "p", text: "Leverage = FK/EK = 500.000/500.000 = 1. r_EK = 0,10 + 1·(0,10−0,07) = 0,10 + 0,03 = 0,13 = 13 %. Der höhere Verschuldungsgrad verstärkt hier die Eigenkapitalrendite deutlich (von 10,33 % auf 13 %), weil r_GK > r_FK gilt (positiver Leverage-Effekt)." }]
       },
       {
         id: "finv-leverage-effekt-e3",
         prompt: "Nehmen Sie an, r_GK sinkt in einem schlechten Geschäftsjahr auf 5 %, während r_FK bei 7 % bleibt. Eigenkapital = 500.000 €, Fremdkapital = 500.000 €. Berechnen Sie r_EK und interpretieren Sie das Ergebnis.",
-        solution: "Leverage = 500.000/500.000 = 1. r_EK = 0,05 + 1·(0,05−0,07) = 0,05 − 0,02 = 0,03 = 3 %. Da r_GK (5 %) nun unter r_FK (7 %) liegt, wirkt der Hebel negativ: Die Eigenkapitalrendite (3 %) liegt sogar unter der Gesamtkapitalrendite (5 %) — der Fremdkapitaleinsatz verschlechtert die Situation der Eigenkapitalgeber in diesem Szenario."
+        solution: [{ type: "p", text: "Leverage = 500.000/500.000 = 1. r_EK = 0,05 + 1·(0,05−0,07) = 0,05 − 0,02 = 0,03 = 3 %. Da r_GK (5 %) nun unter r_FK (7 %) liegt, wirkt der Hebel negativ: Die Eigenkapitalrendite (3 %) liegt sogar unter der Gesamtkapitalrendite (5 %) — der Fremdkapitaleinsatz verschlechtert die Situation der Eigenkapitalgeber in diesem Szenario." }]
       },
       {
         id: "finv-leverage-effekt-e4",
         prompt: "Warum ist ein sehr hoher Verschuldungsgrad (hoher Leverage) in wirtschaftlich unsicheren Zeiten besonders riskant?",
-        solution: "Bei hohem Verschuldungsgrad wirkt der Leverage-Faktor FK/EK sehr stark verstärkend. Sinkt die Gesamtkapitalrendite r_GK in einer Krise unter den Fremdkapitalzinssatz r_FK, wird die Differenz (r_GK − r_FK) negativ und dieser negative Effekt wird durch den hohen Verschuldungsgrad überproportional verstärkt — die Eigenkapitalrendite kann dann stark negativ ausfallen und im Extremfall zur Überschuldung/Insolvenz führen. Je höher der Hebel, desto größer die Verlustgefahr in schlechten Jahren."
+        solution: [{ type: "p", text: "Bei hohem Verschuldungsgrad wirkt der Leverage-Faktor FK/EK sehr stark verstärkend. Sinkt die Gesamtkapitalrendite r_GK in einer Krise unter den Fremdkapitalzinssatz r_FK, wird die Differenz (r_GK − r_FK) negativ und dieser negative Effekt wird durch den hohen Verschuldungsgrad überproportional verstärkt — die Eigenkapitalrendite kann dann stark negativ ausfallen und im Extremfall zur Überschuldung/Insolvenz führen. Je höher der Hebel, desto größer die Verlustgefahr in schlechten Jahren." }]
       },
       {
         id: "finv-leverage-effekt-e5",
         prompt: "Was zeigt ein DFL (Degree of Financial Leverage) von 2 an?",
-        solution: "Ein DFL von 2 bedeutet, dass eine prozentuale Veränderung des EBIT (operatives Ergebnis) um beispielsweise 10 % zu einer etwa doppelt so großen prozentualen Veränderung des Gewinns je Aktie (bzw. der Eigenkapitalrendite) führt, hier also ca. 20 %. Der Fremdkapitaleinsatz verstärkt somit die Ergebnisschwankungen für die Eigenkapitalgeber deutlich — sowohl nach oben (Chance) als auch nach unten (Risiko)."
+        solution: [{ type: "p", text: "Ein DFL von 2 bedeutet, dass eine prozentuale Veränderung des EBIT (operatives Ergebnis) um beispielsweise 10 % zu einer etwa doppelt so großen prozentualen Veränderung des Gewinns je Aktie (bzw. der Eigenkapitalrendite) führt, hier also ca. 20 %. Der Fremdkapitaleinsatz verstärkt somit die Ergebnisschwankungen für die Eigenkapitalgeber deutlich — sowohl nach oben (Chance) als auch nach unten (Risiko)." }]
       }
     ],
     quiz: [
@@ -146,27 +146,27 @@ const FINV_CHAPTER3_TOPICS = [
       {
         id: "finv-kapitalkosten-wacc-e1",
         prompt: "Ein Unternehmen hat Eigenkapital 6 Mio. € (r_EK = 12 %) und Fremdkapital 4 Mio. € (r_FK = 5 %). Der Steuersatz beträgt 30 %. Berechnen Sie den WACC.",
-        solution: "GK = 6 + 4 = 10 Mio. €. EK/GK = 0,6, FK/GK = 0,4. WACC = 0,6·0,12 + 0,4·0,05·(1−0,3) = 0,072 + 0,4·0,05·0,7 = 0,072 + 0,014 = 0,086 = 8,6 %."
+        solution: [{ type: "p", text: "GK = 6 + 4 = 10 Mio. €. EK/GK = 0,6, FK/GK = 0,4. WACC = 0,6·0,12 + 0,4·0,05·(1−0,3) = 0,072 + 0,4·0,05·0,7 = 0,072 + 0,014 = 0,086 = 8,6 %." }]
       },
       {
         id: "finv-kapitalkosten-wacc-e2",
         prompt: "Wie verändert sich der WACC aus Aufgabe 1, wenn der Steuersatz auf 40 % steigt (alle anderen Werte bleiben gleich)?",
-        solution: "WACC = 0,6·0,12 + 0,4·0,05·(1−0,4) = 0,072 + 0,4·0,05·0,6 = 0,072 + 0,012 = 0,084 = 8,4 %. Ein höherer Steuersatz senkt den WACC, weil das steuerliche tax shield des Fremdkapitals dadurch wertvoller wird (die effektiven Fremdkapitalkosten sinken)."
+        solution: [{ type: "p", text: "WACC = 0,6·0,12 + 0,4·0,05·(1−0,4) = 0,072 + 0,4·0,05·0,6 = 0,072 + 0,012 = 0,084 = 8,4 %. Ein höherer Steuersatz senkt den WACC, weil das steuerliche tax shield des Fremdkapitals dadurch wertvoller wird (die effektiven Fremdkapitalkosten sinken)." }]
       },
       {
         id: "finv-kapitalkosten-wacc-e3",
         prompt: "Erklären Sie, warum Fremdkapitalkosten im WACC mit dem Faktor (1−s) multipliziert werden, Eigenkapitalkosten aber nicht.",
-        solution: "Fremdkapitalzinsen sind steuerlich als Betriebsausgabe absetzbar — sie mindern den zu versteuernden Gewinn und damit die Steuerlast. Die tatsächlichen, nach Steuern verbleibenden Kosten des Fremdkapitals sind deshalb niedriger als der nominale Zinssatz, nämlich r_FK·(1−s). Eigenkapitalkosten (z. B. Dividenden) werden dagegen aus dem bereits versteuerten Gewinn gezahlt und sind nicht steuerlich absetzbar — hier gibt es also kein tax shield, weshalb r_EK ohne Korrekturfaktor in den WACC eingeht."
+        solution: [{ type: "p", text: "Fremdkapitalzinsen sind steuerlich als Betriebsausgabe absetzbar — sie mindern den zu versteuernden Gewinn und damit die Steuerlast. Die tatsächlichen, nach Steuern verbleibenden Kosten des Fremdkapitals sind deshalb niedriger als der nominale Zinssatz, nämlich r_FK·(1−s). Eigenkapitalkosten (z. B. Dividenden) werden dagegen aus dem bereits versteuerten Gewinn gezahlt und sind nicht steuerlich absetzbar — hier gibt es also kein tax shield, weshalb r_EK ohne Korrekturfaktor in den WACC eingeht." }]
       },
       {
         id: "finv-kapitalkosten-wacc-e4",
         prompt: "Ein Unternehmen erwägt eine Investition mit einer erwarteten Rendite von 7 %. Der WACC des Unternehmens beträgt 8,6 %. Sollte die Investition durchgeführt werden? Begründen Sie kurz mithilfe des Konzepts der Kapitalkosten.",
-        solution: "Nein, die Investition sollte grundsätzlich nicht durchgeführt werden: Der WACC von 8,6 % stellt die Mindestrendite dar, die nötig ist, um sowohl Fremd- als auch Eigenkapitalgeber angemessen zu bedienen. Da die erwartete Investitionsrendite (7 %) unter dem WACC liegt, würde die Investition Wert vernichten (vgl. Kapitalwertmethode: bei Verwendung des WACC als Kalkulationszinssatz wäre der Kapitalwert negativ)."
+        solution: [{ type: "p", text: "Nein, die Investition sollte grundsätzlich nicht durchgeführt werden: Der WACC von 8,6 % stellt die Mindestrendite dar, die nötig ist, um sowohl Fremd- als auch Eigenkapitalgeber angemessen zu bedienen. Da die erwartete Investitionsrendite (7 %) unter dem WACC liegt, würde die Investition Wert vernichten (vgl. Kapitalwertmethode: bei Verwendung des WACC als Kalkulationszinssatz wäre der Kapitalwert negativ)." }]
       },
       {
         id: "finv-kapitalkosten-wacc-e5",
         prompt: "Ein Unternehmen ist zu 100 % eigenkapitalfinanziert (kein Fremdkapital). Wie vereinfacht sich der WACC in diesem Fall?",
-        solution: "Ohne Fremdkapital gilt FK/GK = 0 und EK/GK = 1, sodass der zweite Term der WACC-Formel entfällt: WACC = 1·r_EK + 0 = r_EK. Der WACC entspricht dann exakt der Eigenkapitalrendite-Erwartung r_EK."
+        solution: [{ type: "p", text: "Ohne Fremdkapital gilt FK/GK = 0 und EK/GK = 1, sodass der zweite Term der WACC-Formel entfällt: WACC = 1·r_EK + 0 = r_EK. Der WACC entspricht dann exakt der Eigenkapitalrendite-Erwartung r_EK." }]
       }
     ],
     quiz: [

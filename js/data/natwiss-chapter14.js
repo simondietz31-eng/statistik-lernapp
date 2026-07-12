@@ -30,27 +30,27 @@ const NATWISS_CHAPTER14_TOPICS = [
       {
         id: "natwiss-ueb-kinematik-e1",
         prompt: "Auto A fährt mit 80 km/h, Auto B mit 110 km/h. Auto B startet 45 km hinter A. Wie weit ist A gefahren, wenn B ihn einholt?",
-        solution: "Treffzeit: t_T = 45 km / (110−80) km/h = 1,5 h. Weg von A: x_A = 80 km/h · 1,5 h = 120 km. (Alternative Lösung mit Absolutkoordinaten: t_T = 7,5 h wenn B nicht von 0 startet; x_A = 720 km. Hier: B startet 45 km hinter dem Bezugspunkt, wo A bei t=0 ist → x_A = v_A · t_T = 120 km, x_B = v_B · t_T = 165 km ✓)"
+        solution: [{ type: "p", text: "Treffzeit: t_T = 45 km / (110−80) km/h = 1,5 h. Weg von A: x_A = 80 km/h · 1,5 h = 120 km. (Alternative Lösung mit Absolutkoordinaten: t_T = 7,5 h wenn B nicht von 0 startet; x_A = 720 km. Hier: B startet 45 km hinter dem Bezugspunkt, wo A bei t=0 ist → x_A = v_A · t_T = 120 km, x_B = v_B · t_T = 165 km ✓)" }]
       },
       {
         id: "natwiss-ueb-kinematik-e2",
         prompt: "Ein Stein löst sich bei h₀ = 6 m Höhe mit v₀ = 5 m/s (nach oben) von einem Kran. Welche Maximalöhe erreicht er?",
-        solution: "Δh = v₀²/(2g) = 25/(2·9,81) = 1,27 m. h_max = 6 + 1,27 = 7,27 m."
+        solution: [{ type: "p", text: "Δh = v₀²/(2g) = 25/(2·9,81) = 1,27 m. h_max = 6 + 1,27 = 7,27 m." }]
       },
       {
         id: "natwiss-ueb-kinematik-e3",
         prompt: "Mit welcher Geschwindigkeit trifft der Stein aus Aufgabe 2 auf den Boden? (h_max = 7,27 m)",
-        solution: "v = √(2·g·h_max) = √(2·9,81·7,27) ≈ 12 m/s. (Energieerhaltung: ges. potenzielle Energie wird in kinetische umgewandelt)"
+        solution: [{ type: "p", text: "v = √(2·g·h_max) = √(2·9,81·7,27) ≈ 12 m/s. (Energieerhaltung: ges. potenzielle Energie wird in kinetische umgewandelt)" }]
       },
       {
         id: "natwiss-ueb-kinematik-e4",
         prompt: "Eine Zentrifuge dreht mit 15 000 U/min. Berechnen Sie die Zentripetalbeschleunigung bei r = 15 cm.",
-        solution: "ω = 2π·(15000/60) = 1571 rad/s. a_zp = ω²·r = 1571²·0,15 ≈ 3,7·10⁵ m/s² ≈ 37 700 g."
+        solution: [{ type: "p", text: "ω = 2π·(15000/60) = 1571 rad/s. a_zp = ω²·r = 1571²·0,15 ≈ 3,7·10⁵ m/s² ≈ 37 700 g." }]
       },
       {
         id: "natwiss-ueb-kinematik-e5",
         prompt: "Die Zentrifuge (15 000 U/min) erreicht ihre Drehzahl in 1 min 15 s. Berechnen Sie die Tangentialbeschleunigung bei r = 15 cm.",
-        solution: "v_end = ω·r = 1571·0,15 = 235,6 m/s. Δt = 75 s. a_t = v_end/Δt = 235,6/75 ≈ 3,1 m/s². (Oder a_t = r·α = 0,15·20,9 ≈ 3,1 m/s²)"
+        solution: [{ type: "p", text: "v_end = ω·r = 1571·0,15 = 235,6 m/s. Δt = 75 s. a_t = v_end/Δt = 235,6/75 ≈ 3,1 m/s². (Oder a_t = r·α = 0,15·20,9 ≈ 3,1 m/s²)" }]
       }
     ],
     quiz: [
@@ -85,27 +85,27 @@ const NATWISS_CHAPTER14_TOPICS = [
       {
         id: "natwiss-ueb-dynamik-e1",
         prompt: "Eine Kugel (m = 1,8·10⁻³ kg, v₀ = 500 m/s) bohrt sich 6 cm in Holz. Berechnen Sie die Bremskraft.",
-        solution: "a = −v₀²/(2s) = −500²/0,12 = −2,08·10⁶ m/s². F = m·|a| = 1,8·10⁻³·2,08·10⁶ ≈ 3750 N ≈ 3,8·10³ N."
+        solution: [{ type: "p", text: "a = −v₀²/(2s) = −500²/0,12 = −2,08·10⁶ m/s². F = m·|a| = 1,8·10⁻³·2,08·10⁶ ≈ 3750 N ≈ 3,8·10³ N." }]
       },
       {
         id: "natwiss-ueb-dynamik-e2",
         prompt: "Eine Schnur hält max. 150 N. Ein 10-kg-Block hängt daran in einem aufwärtsfahrenden Aufzug. Bei welcher Mindestbeschleunigung reißt sie?",
-        solution: "F = m·(g+a) → a = F/m − g = 150/10 − 9,81 = 15 − 9,81 = 5,19 m/s²."
+        solution: [{ type: "p", text: "F = m·(g+a) → a = F/m − g = 150/10 − 9,81 = 15 − 9,81 = 5,19 m/s²." }]
       },
       {
         id: "natwiss-ueb-dynamik-e3",
         prompt: "Zwei Blöcke (m₁=0,8 kg, m₂=0,25 kg, μ₁=0,3, μ₂=0,2) gleiten eine 10°-Ebene herab. Berechnen Sie die Beschleunigung.",
-        solution: "a = g·[sin10° − (0,3·0,8 + 0,2·0,25)/(0,8+0,25)·cos10°] = 9,81·[0,1736 − (0,29/1,05)·0,9848] = 9,81·[0,1736 − 0,272] ≈ 0,96 m/s²."
+        solution: [{ type: "p", text: "a = g·[sin10° − (0,3·0,8 + 0,2·0,25)/(0,8+0,25)·cos10°] = 9,81·[0,1736 − (0,29/1,05)·0,9848] = 9,81·[0,1736 − 0,272] ≈ 0,96 m/s²." }]
       },
       {
         id: "natwiss-ueb-dynamik-e4",
         prompt: "Wie ändert sich die Eindringtiefe der Kugel aus Aufg. 1, wenn ihre Masse halbiert wird (gleiche Kraft, gleiche Anfangsgeschwindigkeit)?",
-        solution: "s = m·v₀²/(2F). Bei m' = m/2: s' = m'·v₀²/(2F) = s/2 = 3 cm. Die Eindringtiefe halbiert sich."
+        solution: [{ type: "p", text: "s = m·v₀²/(2F). Bei m' = m/2: s' = m'·v₀²/(2F) = s/2 = 3 cm. Die Eindringtiefe halbiert sich." }]
       },
       {
         id: "natwiss-ueb-dynamik-e5",
         prompt: "Welcher Überhöhungswinkel θ ist für Kurvenfahrt bei v = 90 km/h, r = 160 m notwendig (keine Seitenreibung)?",
-        solution: "v = 90/3,6 = 25 m/s. tan θ = v²/(r·g) = 625/(160·9,81) = 0,398. θ = arctan(0,398) ≈ 21,7°."
+        solution: [{ type: "p", text: "v = 90/3,6 = 25 m/s. tan θ = v²/(r·g) = 625/(160·9,81) = 0,398. θ = arctan(0,398) ≈ 21,7°." }]
       }
     ],
     quiz: [
@@ -145,27 +145,27 @@ const NATWISS_CHAPTER14_TOPICS = [
       {
         id: "natwiss-ueb-energie-e1",
         prompt: "Eine Kraft F = C·x³ mit C = 0,5 N/m³ wirkt auf ein Teilchen. Berechnen Sie die Arbeit beim Weg von x = 3,0 m nach x = 1,5 m.",
-        solution: "W = −∫_{3,0}^{1,5} C·x³ dx = −(C/4)·[x⁴]_{3}^{1,5} = −(0,5/4)·[(1,5)⁴ − (3,0)⁴] = −0,125·[5,0625 − 81] = 9,49 J."
+        solution: [{ type: "p", text: "W = −∫_{3,0}^{1,5} C·x³ dx = −(C/4)·[x⁴]_{3}^{1,5} = −(0,5/4)·[(1,5)⁴ − (3,0)⁴] = −0,125·[5,0625 − 81] = 9,49 J." }]
       },
       {
         id: "natwiss-ueb-energie-e2",
         prompt: "Ein Rad dreht sich mit α = 2,6 rad/s². Welche Winkelgeschwindigkeit und welchen Drehwinkel hat es nach t = 6 s?",
-        solution: "ω = α·t = 2,6·6 = 15,6 rad/s. θ = ½·α·t² = ½·2,6·36 = 46,8 rad ≈ 47 rad = 7,4 Umdrehungen."
+        solution: [{ type: "p", text: "ω = α·t = 2,6·6 = 15,6 rad/s. θ = ½·α·t² = ½·2,6·36 = 46,8 rad ≈ 47 rad = 7,4 Umdrehungen." }]
       },
       {
         id: "natwiss-ueb-energie-e3",
         prompt: "Ein Planet hat im Perihel r₁ = 1 AE und v₁ = 30 km/s. Im Aphel r₂ = 1,5 AE. Wie groß ist v₂?",
-        solution: "Drehimpulserhaltung: m·r₁·v₁ = m·r₂·v₂. v₂ = v₁·(r₁/r₂) = 30·(1/1,5) = 20 km/s."
+        solution: [{ type: "p", text: "Drehimpulserhaltung: m·r₁·v₁ = m·r₂·v₂. v₂ = v₁·(r₁/r₂) = 30·(1/1,5) = 20 km/s." }]
       },
       {
         id: "natwiss-ueb-energie-e4",
         prompt: "Ein Achterbahnwagen (m = 1500 kg) startet aus 23 m Höhe aus der Ruhe. Im Looping-Scheitelpunkt (Durchmesser 15 m, also h = 15 m). Welche Normalkraft wirken die Schienen auf den Wagen?",
-        solution: "v² = 2g(h_start − h_top) = 2·9,81·(23−15) = 156,96 m²/s². Zentripetalkraft + Gewicht: F_N + mg = mv²/r = 1500·156,96/7,5 = 31 392 N. F_N = 31 392 − 1500·9,81 = 31 392 − 14 715 = 16 677 N ≈ 16,7 kN."
+        solution: [{ type: "p", text: "v² = 2g(h_start − h_top) = 2·9,81·(23−15) = 156,96 m²/s². Zentripetalkraft + Gewicht: F_N + mg = mv²/r = 1500·156,96/7,5 = 31 392 N. F_N = 31 392 − 1500·9,81 = 31 392 − 14 715 = 16 677 N ≈ 16,7 kN." }]
       },
       {
         id: "natwiss-ueb-energie-e5",
         prompt: "⁸Be (ruhend) zerfällt in 2 α-Teilchen (m = 6,64·10⁻²⁷ kg). Freigesetzte Energie: 1,5·10⁻¹⁴ J. Wie schnell sind die α-Teilchen?",
-        solution: "Impulserhaltung: die α-Teilchen fliegen mit gleicher Geschwindigkeit entgegengesetzt. 2×½mv² = E_frei → v = √(E_frei/m) = √(1,5·10⁻¹⁴/6,64·10⁻²⁷) = √(2,26·10¹²) ≈ 1,5·10⁶ m/s."
+        solution: [{ type: "p", text: "Impulserhaltung: die α-Teilchen fliegen mit gleicher Geschwindigkeit entgegengesetzt. 2×½mv² = E_frei → v = √(E_frei/m) = √(1,5·10⁻¹⁴/6,64·10⁻²⁷) = √(2,26·10¹²) ≈ 1,5·10⁶ m/s." }]
       }
     ],
     quiz: [
