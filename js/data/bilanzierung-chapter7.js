@@ -1,0 +1,136 @@
+const BILANZIERUNG_CHAPTER7_TOPICS = [
+  {
+    id: "bilanzierung-rap",
+    chapter: 7,
+    order: 1,
+    title: "Rechnungsabgrenzungsposten (RAP)",
+    icon: "📑",
+    summary: "Wie aktive und passive Rechnungsabgrenzungsposten das zeitliche Auseinanderfallen von Zahlung und Erfolgswirkung eines Geschäftsvorfalls sachgerecht abbilden und wie sie sich von sonstigen Forderungen/Verbindlichkeiten abgrenzen.",
+    explanation: [
+      { type: "p", text: "Rechnungsabgrenzungsposten (RAP) sind Aktiv- oder Passivpositionen, die aus bestimmten Formen des Auseinanderfallens von finanz- und erfolgswirtschaftlichen Wirkungen eines Geschäftsvorfalles resultieren. Eine Zahlung (Ein- oder Auszahlung) fällt zeitlich in eine andere Periode als der zugehörige Ertrag oder Aufwand — RAP sorgen dafür, dass jede Periode nur den Erfolg erhält, der ihr wirtschaftlich zuzurechnen ist (periodengerechte Erfolgsermittlung)." },
+      { type: "p", text: "Aktive Rechnungsabgrenzungsposten (§ 250 Abs. 1 HGB): Auf der Aktivseite sind Ausgaben auszuweisen, die vor dem Abschlussstichtag geleistet wurden, soweit sie Aufwand für eine bestimmte Zeit nach diesem Tag darstellen. Beispiel: Eine im Dezember im Voraus gezahlte Miete für die kommenden Monate ist zum Bilanzstichtag noch kein Aufwand des laufenden Jahres, sondern wird über den aktiven RAP in die Folgeperiode(n) verschoben." },
+      { type: "p", text: "Passive Rechnungsabgrenzungsposten (§ 250 Abs. 2 HGB): Auf der Passivseite sind Einnahmen auszuweisen, die vor dem Abschlussstichtag vereinnahmt wurden, soweit sie Ertrag für eine bestimmte Zeit nach diesem Tag darstellen. Beispiel: Eine im Dezember im Voraus erhaltene Mieteinnahme für den Januar ist noch kein Ertrag des laufenden Jahres und wird über den passiven RAP abgegrenzt." },
+      { type: "p", text: "RAP „gewöhnlicher Art\" sind stets transitorische Posten: Die Zahlung ist bereits erfolgt, der Erfolg (Aufwand/Ertrag) tritt erst später ein. Davon zu unterscheiden sind antizipative Posten: Hier ist der Erfolg bereits in der laufenden Periode angefallen, die Zahlung steht aber noch aus. Antizipative Posten werden NICHT als RAP, sondern als sonstige Forderungen (Vermögensgegenstände) bzw. als sonstige Verbindlichkeiten ausgewiesen." },
+      { type: "list", items: [
+        "Noch zu zahlender Aufwand (Aufwand ist vor dem Stichtag angefallen, Auszahlung erfolgt danach) → sonstige Verbindlichkeiten",
+        "Noch zu erhaltender Ertrag (Ertrag ist vor dem Stichtag angefallen, Einzahlung erfolgt danach) → sonstige Forderungen (Vermögensgegenstände)",
+        "Im Voraus bezahlter Aufwand (Auszahlung vor dem Stichtag, Aufwand entsteht erst danach) → aktiver Rechnungsabgrenzungsposten (A RAP)",
+        "Im Voraus erhaltener Ertrag (Einzahlung vor dem Stichtag, Ertrag entsteht erst danach) → passiver Rechnungsabgrenzungsposten (P RAP)",
+        "Wahrscheinlich noch zu zahlender Aufwand, dessen Höhe und/oder Bestehen ungewiss ist → Rückstellung (kein RAP, keine sonstige Verbindlichkeit)"
+      ]},
+      { type: "p", text: "Aktive Rechnungsabgrenzungsposten „besonderer Art\" (Wahlrecht): Das Disagio einer Verbindlichkeit darf als aktiver RAP angesetzt werden, mit einem (steuerlich verpflichtenden) Abschreibungsgebot über die Laufzeit ebendieser Verbindlichkeit (§ 250 Abs. 3 HGB). Es handelt sich um ein handelsrechtliches Aktivierungswahlrecht." },
+      { type: "p", text: "Andere „besondere\" Wahlrechte nach § 250 Abs. 1 Satz 2 HGB a.F. wurden durch das BilMoG aufgehoben. In der Steuerbilanz bestehen die entsprechenden Regelungen (§ 5 Abs. 5 Satz 2 EStG) für bestimmte steuertechnische Tatbestände — z. B. Zölle, Verbrauchsteuern, Umsatzsteuer auf erhaltene Anzahlungen — jedoch weiterhin fort." },
+      { type: "p", text: "In der Praxis ist bei jedem Geschäftsvorfall zu prüfen, ob bereits eine Zahlung erfolgt ist (dann RAP-Prüfung) oder ob der Erfolg bereits eingetreten, die Zahlung aber offen ist (dann Prüfung auf sonstige Forderung/Verbindlichkeit oder Rückstellung, falls die Höhe ungewiss ist)." }
+    ],
+    exercises: [
+      {
+        id: "bilanzierung-rap-e1",
+        prompt: "Am 31.10. wird die Kfz-Versicherungsprämie für den Zeitraum 01.11. bis 30.4. des folgenden Jahres in Höhe von 600 € abgebucht. Wie ist dieser Sachverhalt zum 31.12. bilanziell zu behandeln?",
+        solution: [{ type: "p", text: "Der Versicherungszeitraum umfasst 6 Monate (100 € pro Monat). Bis zum 31.12. sind 2 Monate (November, Dezember) verbraucht, das sind 200 € laufender Aufwand des Jahres. Die restlichen 4 Monate (Januar bis April des Folgejahres) betreffen wirtschaftlich das nächste Jahr: Die Ausgabe (600 €) erfolgte vor dem Bilanzstichtag, der Aufwand für 400 € entsteht erst nach dem Stichtag → aktiver Rechnungsabgrenzungsposten in Höhe von 400 € (§ 250 Abs. 1 HGB)." }]
+      },
+      {
+        id: "bilanzierung-rap-e2",
+        prompt: "Die Wohnungsmiete des Hausmeisters für Januar (200 €) geht bereits im Dezember des Vorjahres ein. Wie ist dieser Betrag zum 31.12. auszuweisen?",
+        solution: [{ type: "p", text: "Die Einnahme (200 €) erfolgt vor dem Abschlussstichtag, stellt aber Ertrag für die Zeit nach dem Stichtag (Januar) dar → passiver Rechnungsabgrenzungsposten in Höhe von 200 € (§ 250 Abs. 2 HGB)." }]
+      },
+      {
+        id: "bilanzierung-rap-e3",
+        prompt: "Eine Vertreterprovision in Höhe von 1.500 € zuzüglich 19 % USt für Leistungen des laufenden Jahres wird erst im Januar des Folgejahres gezahlt. Handelt es sich um einen RAP? Begründen Sie und geben Sie den zutreffenden Bilanzausweis an.",
+        solution: [{ type: "p", text: "Nein, kein RAP. Der Aufwand (die Provision) ist bereits im laufenden Jahr wirtschaftlich verursacht/angefallen; lediglich die Zahlung steht noch aus. Es handelt sich um einen antizipativen Posten: noch zu zahlender Aufwand → Ausweis als sonstige Verbindlichkeit in Höhe von 1.785 € (1.500 € + 19 % USt = 285 €)." }]
+      },
+      {
+        id: "bilanzierung-rap-e4",
+        prompt: "Am 30.12. wird die Miete für einen Verkaufsraum für 6 Monate im Voraus in Höhe von 5.400 € überwiesen. Wie ist dieser Betrag zum 31.12. zu bilanzieren?",
+        solution: [{ type: "p", text: "Die Ausgabe erfolgt vor dem Bilanzstichtag (30.12.) und betrifft in voller Höhe Aufwand für die Zeit nach dem Stichtag (die 6 Mietmonate liegen im neuen Jahr) → aktiver Rechnungsabgrenzungsposten in Höhe von 5.400 € (§ 250 Abs. 1 HGB)." }]
+      },
+      {
+        id: "bilanzierung-rap-e5",
+        prompt: "Aus einem Rechtsstreit mit einem Lieferanten, der voraussichtlich erst in der nächsten Periode entschieden wird, kann dem Unternehmen im ungünstigsten Fall eine Zahlungsverpflichtung von 3.000 € erwachsen. Ist hierfür ein RAP oder eine sonstige Verbindlichkeit anzusetzen?",
+        solution: [{ type: "p", text: "Weder noch. Da sowohl das Bestehen als auch die Höhe der Verpflichtung ungewiss sind, handelt es sich um eine ungewisse Verbindlichkeit, für die eine Rückstellung zu bilden ist (sofern die Wahrscheinlichkeit einer Inanspruchnahme überwiegt). RAP und sonstige Verbindlichkeiten setzen dagegen eine bereits feststehende (dem Grunde und der Höhe nach bekannte) Zahlungspflicht bzw. Zahlung voraus." }]
+      },
+      {
+        id: "bilanzierung-rap-e6",
+        prompt: "Der Süffig-Brauerei OHG sind in diesem Jahr hohe Werbeausgaben für eine neue Biermarke entstanden, die erst im nächsten Jahr auf den Markt kommt. Der Oberbuchhalter Ede Vau schlägt vor, diese Ausgaben in der Bilanz zum 31.12. als aktiven RAP auszuweisen, mit der Begründung, es handele sich um Ausgaben, die erst für die Zeit nach dem 31.12. Aufwand darstellten. Was halten Sie von diesem Vorschlag?",
+        solution: [{ type: "p", text: "Der Vorschlag ist unzulässig. Ein aktiver RAP setzt nach § 250 Abs. 1 HGB voraus, dass die Ausgabe eine zeitraumbezogene Gegenleistung betrifft, deren Nutzung sich klar und verursachungsgerecht einem bestimmten künftigen Zeitraum zuordnen lässt (z. B. eine im Voraus bezahlte Versicherungs- oder Mietperiode). Werbeausgaben erschöpfen sich dagegen im Zeitpunkt ihrer Verausgabung und begründen keinen zeitraumbezogenen, quantifizierbaren Gegenleistungsanspruch für die Zukunft — sie sind laufender Aufwand des Jahres, in dem sie anfallen (Werbeaufwand als sofort abzugsfähige Betriebsausgabe, kein aktivierungsfähiges Wirtschaftsgut). Der Vorschlag dient letztlich nur der unzulässigen Ergebnisglättung/-verschiebung und verstößt gegen den Grundsatz periodengerechter Erfolgsermittlung." }]
+      }
+    ],
+    quiz: [
+      { id: "q1", question: "Welchen Zweck hat die Bildung von aktiven und passiven Rechnungsabgrenzungsposten?", options: ["Sie dienen der periodengerechten Erfolgsermittlung, indem Zahlung und zugehöriger Aufwand/Ertrag der richtigen Periode zugeordnet werden", "Sie erhöhen ausschließlich das ausgewiesene Eigenkapital", "Sie ersetzen die Umsatzsteuervoranmeldung", "Sie dienen der Bewertung von Vorräten"], correctIndex: 0, explanation: "RAP sorgen dafür, dass eine bereits erfolgte Zahlung nicht sofort, sondern erst in der Periode erfolgswirksam wird, der sie wirtschaftlich zuzurechnen ist." },
+      { id: "q2", question: "Was unterscheidet einen Rechnungsabgrenzungsposten von einer sonstigen Forderung bzw. Verbindlichkeit?", options: ["Es gibt keinen Unterschied, beide Begriffe sind synonym", "Beim RAP ist die Zahlung bereits erfolgt und der Erfolg tritt erst später ein (transitorisch); bei sonstigen Forderungen/Verbindlichkeiten ist der Erfolg bereits eingetreten und die Zahlung steht noch aus (antizipativ)", "RAP betreffen nur Beträge über 10.000 €", "Sonstige Forderungen/Verbindlichkeiten dürfen nur von Kapitalgesellschaften gebildet werden"], correctIndex: 1, explanation: "RAP = transitorische Posten (Zahlung vor Erfolg). Sonstige Forderungen/Verbindlichkeiten = antizipative Posten (Erfolg vor Zahlung)." },
+      { id: "q3", question: "Wie definiert § 250 Abs. 1 HGB den aktiven Rechnungsabgrenzungsposten?", options: ["Einnahmen vor dem Abschlussstichtag, die Ertrag für die Zeit danach darstellen", "Ausgaben vor dem Abschlussstichtag, soweit sie Aufwand für eine bestimmte Zeit nach diesem Tag darstellen", "Jede noch nicht bezahlte Rechnung", "Ausgaben nach dem Abschlussstichtag für Aufwand des Vorjahres"], correctIndex: 1, explanation: "§ 250 Abs. 1 HGB: aktiver RAP = vor dem Stichtag geleistete Ausgabe, die Aufwand für eine Zeit nach dem Stichtag darstellt." },
+      { id: "q4", question: "Wie definiert § 250 Abs. 2 HGB den passiven Rechnungsabgrenzungsposten?", options: ["Ausgaben vor dem Abschlussstichtag für künftigen Aufwand", "Einnahmen vor dem Abschlussstichtag, soweit sie Ertrag für eine bestimmte Zeit nach diesem Tag darstellen", "Jede noch nicht eingegangene Forderung", "Einnahmen nach dem Abschlussstichtag für Erträge des Vorjahres"], correctIndex: 1, explanation: "§ 250 Abs. 2 HGB: passiver RAP = vor dem Stichtag vereinnahmte Einnahme, die Ertrag für eine Zeit nach dem Stichtag darstellt." },
+      { id: "q5", question: "Was versteht man unter einem Disagio als aktivem RAP „besonderer Art\", und wie ist es zu behandeln?", options: ["Es besteht ein Aktivierungsverbot", "Es besteht eine Aktivierungspflicht ohne Abschreibung", "Es handelt sich um ein Aktivierungswahlrecht mit Abschreibungsgebot über die Laufzeit der zugehörigen Verbindlichkeit (§ 250 Abs. 3 HGB)", "Es ist zwingend sofort in voller Höhe als Aufwand zu erfassen"], correctIndex: 2, explanation: "Das Disagio darf als aktiver RAP angesetzt werden (Wahlrecht) und ist dann über die Laufzeit der Verbindlichkeit abzuschreiben (§ 250 Abs. 3 HGB)." },
+      { id: "q6", question: "Am 30.12. wird die Miete für einen Verkaufsraum für die nächsten 6 Monate im Voraus überwiesen. Wie ist dieser Betrag zum 31.12. zu bilanzieren?", options: ["Als sonstige Verbindlichkeit", "Als passiver Rechnungsabgrenzungsposten", "Als Rückstellung", "Als aktiver Rechnungsabgrenzungsposten"], correctIndex: 3, explanation: "Ausgabe vor dem Stichtag für Aufwand nach dem Stichtag → aktiver RAP." },
+      { id: "q7", question: "Am 1. Dezember erhält ein Unternehmen 50 € für die Vermietung einer Garage, die den Januar des neuen Jahres betreffen. Wie ist dieser Betrag zu bilanzieren?", options: ["Als sonstige Forderung", "Als aktiver Rechnungsabgrenzungsposten", "Als passiver Rechnungsabgrenzungsposten", "Als Rückstellung"], correctIndex: 2, explanation: "Einnahme vor dem Stichtag für Ertrag nach dem Stichtag → passiver RAP." },
+      { id: "q8", question: "Ein Teil der Fertigungslöhne für Dezember kann erst im Januar ausgezahlt werden. Wie ist dieser Betrag zum 31.12. auszuweisen?", options: ["Als aktiver Rechnungsabgrenzungsposten", "Als passiver Rechnungsabgrenzungsposten", "Als sonstige Verbindlichkeit", "Gar nicht, da noch keine Zahlung erfolgt ist"], correctIndex: 2, explanation: "Der Aufwand ist bereits im Dezember angefallen, nur die Zahlung steht noch aus → antizipativer Posten, sonstige Verbindlichkeit." },
+      { id: "q9", question: "Ein Vermieter stellt am Abschlussstichtag fest, dass der Mieter die Dezembermiete für vermietete Räume noch nicht überwiesen hat. Wie ist dieser Betrag aus Sicht des Vermieters zu bilanzieren?", options: ["Als sonstige Forderung (Vermögensgegenstand)", "Als aktiver Rechnungsabgrenzungsposten", "Als passiver Rechnungsabgrenzungsposten", "Als Rückstellung"], correctIndex: 0, explanation: "Der Ertrag (Dezembermiete) ist bereits angefallen, die Einzahlung steht noch aus → antizipativer Posten, sonstige Forderung." },
+      { id: "q10", question: "Aus einem noch nicht entschiedenen Rechtsstreit mit einem Lieferanten kann im ungünstigsten Fall eine Zahlungsverpflichtung erwachsen. Wie ist dies zu bilanzieren?", options: ["Als aktiver Rechnungsabgrenzungsposten", "Als sonstige Verbindlichkeit", "Als passiver Rechnungsabgrenzungsposten", "Als Rückstellung, da Bestehen und Höhe der Verpflichtung ungewiss sind"], correctIndex: 3, explanation: "Ungewisse Verbindlichkeiten dem Grunde und/oder der Höhe nach werden als Rückstellung erfasst, nicht als RAP oder sonstige Verbindlichkeit." }
+    ]
+  },
+  {
+    id: "bilanzierung-latente-steuern",
+    chapter: 7,
+    order: 2,
+    title: "Latente Steuern",
+    icon: "🧮",
+    summary: "Wie temporäre Differenzen zwischen Handels- und Steuerbilanzwerten zu aktiven oder passiven latenten Steuern führen und wie diese nach § 274 HGB anzusetzen sind.",
+    explanation: [
+      { type: "p", text: "Latente Steuern entstehen, wenn der Wertansatz eines Vermögensgegenstands oder einer Schuld in der Handelsbilanz (H.Bil.) von seinem Wertansatz in der Steuerbilanz (St.B.) abweicht und sich diese Differenz in einer künftigen Periode voraussichtlich wieder ausgleicht (temporäre Differenz). Solche Differenzen führen zu einer künftigen Steuerbe- oder Steuerentlastung, die bereits im aktuellen Jahresabschluss (JA) als latente Steuer abgebildet werden soll." },
+      { type: "list", items: [
+        "H.Bil.-Wert des Vermögens < St.B.-Wert des Vermögens → aktive latente Steuer",
+        "H.Bil.-Wert der Schulden > St.B.-Wert der Schulden → aktive latente Steuer",
+        "H.Bil.-Wert des Vermögens > St.B.-Wert des Vermögens → passive latente Steuer",
+        "H.Bil.-Wert der Schulden < St.B.-Wert der Schulden → passive latente Steuer"
+      ]},
+      { type: "p", text: "Aktive latente Steuer: Sie repräsentiert eine künftige Steuerentlastung. Für Kapitalgesellschaften besteht hierfür gemäß § 274 Abs. 1 Satz 2 HGB ein Aktivierungswahlrecht — das Unternehmen kann, muss die aktive latente Steuer aber nicht ansetzen." },
+      { type: "p", text: "Passive latente Steuer: Sie repräsentiert eine künftige Steuerbelastung. Für Kapitalgesellschaften besteht hierfür gemäß § 274 Abs. 1 Satz 1 HGB eine Passivierungspflicht — die passive latente Steuer muss zwingend angesetzt werden." },
+      { type: "p", text: "Die Regelungen zu latenten Steuern nach § 274 HGB gelten für den handelsrechtlichen Jahresabschluss von Kapitalgesellschaften. Ökonomischer Hintergrund: Der handelsrechtliche Jahresüberschuss soll auch die steuerlichen Konsequenzen abbilden, die sich aus dem künftigen Ausgleich temporärer Bilanzierungsunterschiede zwischen Handels- und Steuerbilanz ergeben — latente Steuern dienen damit einer sachgerechten (Total-)Darstellung der Steuerbelastung im Zeitablauf." },
+      { type: "p", text: "Typische Ursachen temporärer Differenzen sind unterschiedliche Abschreibungsmethoden oder Nutzungsdauern in Handels- und Steuerbilanz, unterschiedliche Ansatz- oder Bewertungsregeln bei Rückstellungen (z. B. Pensionsrückstellungen) sowie handelsrechtliche Aktivierungswahlrechte, die steuerlich nicht bestehen. Permanente Differenzen (die sich nie wieder ausgleichen, z. B. dauerhaft nicht abzugsfähige Aufwendungen) führen dagegen NICHT zu latenten Steuern." },
+      { type: "p", text: "Zur Berechnung wird die temporäre Differenz zwischen Handels- und Steuerbilanzwert mit dem unternehmensindividuellen (künftig erwarteten) Steuersatz multipliziert; saldierungsfähige aktive und passive latente Steuern dürfen nach § 274 Abs. 1 Satz 3 HGB zusammengefasst (verrechnet) werden." }
+    ],
+    exercises: [
+      {
+        id: "bilanzierung-latente-steuern-e1",
+        prompt: "Bei welcher Konstellation treten bei Kapitalgesellschaften latente Steuern auf, und wie sieht die Ansatzregelung im HGB-Jahresabschluss aus? Erklären Sie kurz den Begriff latente Steuern und geben Sie die einschlägige HGB-Rechtsstelle an.",
+        solution: [{ type: "p", text: "Latente Steuern entstehen, wenn zwischen den handelsrechtlichen und den steuerlichen Wertansätzen von Vermögensgegenständen und Schulden temporäre (sich künftig wieder ausgleichende) Differenzen bestehen, die zu einer künftigen Steuerbe- oder -entlastung führen. Ansatzregelung nach § 274 HGB: Aktive latente Steuern (künftige Steuerentlastung) dürfen angesetzt werden (Aktivierungswahlrecht, § 274 Abs. 1 S. 2 HGB); passive latente Steuern (künftige Steuerbelastung) müssen angesetzt werden (Passivierungspflicht, § 274 Abs. 1 S. 1 HGB)." }]
+      },
+      {
+        id: "bilanzierung-latente-steuern-e2",
+        prompt: "Warum besteht für aktive latente Steuern lediglich ein Wahlrecht, während für passive latente Steuern eine Pflicht besteht?",
+        solution: [{ type: "p", text: "Dies folgt aus dem handelsrechtlichen Vorsichtsprinzip (Imparitätsprinzip): Künftige Steuerbelastungen (passive latente Steuern) sind bereits absehbare künftige wirtschaftliche Nachteile und müssen daher zwingend erfasst werden, um das Vermögen nicht zu optimistisch darzustellen. Künftige Steuerentlastungen (aktive latente Steuern) sind dagegen ein potenzieller künftiger Vorteil; ihr Ansatz wird dem Unternehmen als Wahlrecht überlassen, um eine übermäßig optimistische Darstellung der Vermögens- und Ertragslage zu vermeiden." }]
+      },
+      {
+        id: "bilanzierung-latente-steuern-e3",
+        prompt: "Ein Unternehmen bildet handelsrechtlich eine Rückstellung in Höhe von 100.000 €, die steuerlich nicht anerkannt wird (steuerlicher Ansatz: 0 €). Welche Art latenter Steuer entsteht daraus, und warum?",
+        solution: [{ type: "p", text: "Es handelt sich um eine Schuld, bei der der H.Bil.-Wert (100.000 €) größer ist als der St.B.-Wert (0 €). Diese Konstellation (H.Bil.-Wert der Schulden > St.B.-Wert der Schulden) führt zu einer aktiven latenten Steuer: Handelsrechtlich ist der Aufwand (und damit der Gewinn) bereits gemindert, steuerlich noch nicht — die Steuerbilanz weist daher aktuell einen höheren Gewinn/eine höhere Steuerlast aus. Gleicht sich die Differenz künftig aus (z. B. bei Inanspruchnahme der Rückstellung), ergibt sich eine künftige Steuerentlastung." }]
+      },
+      {
+        id: "bilanzierung-latente-steuern-e4",
+        prompt: "Ein Anlagegut wird handelsrechtlich degressiv (schneller) abgeschrieben, steuerlich dagegen linear (langsamer). Zum Bilanzstichtag ist der Handelsbilanzwert daher niedriger als der Steuerbilanzwert. Welche latente Steuer ergibt sich?",
+        solution: [{ type: "p", text: "Es liegt die Konstellation H.Bil.-Wert des Vermögens < St.B.-Wert des Vermögens vor. Das führt zu einer aktiven latenten Steuer: Handelsrechtlich wurde bislang mehr Aufwand (höhere AfA) erfasst als steuerlich, sodass der steuerliche Gewinn aktuell höher ist. Gleicht sich die Differenz künftig aus, wenn die steuerliche AfA relativ höher ausfällt, ergibt sich eine künftige Steuerentlastung." }]
+      },
+      {
+        id: "bilanzierung-latente-steuern-e5",
+        prompt: "Ein derivativer Geschäfts- oder Firmenwert wird handelsrechtlich über eine längere Nutzungsdauer abgeschrieben als steuerlich, sodass der Handelsbilanzwert am Stichtag höher ist als der Steuerbilanzwert. Welche latente Steuer entsteht, und besteht dafür ein Wahlrecht oder eine Pflicht?",
+        solution: [{ type: "p", text: "Es liegt die Konstellation H.Bil.-Wert des Vermögens > St.B.-Wert des Vermögens vor. Das führt zu einer passiven latenten Steuer: Handelsrechtlich wurde bislang weniger Aufwand (geringere AfA) erfasst als steuerlich, der handelsrechtliche Gewinn ist also aktuell höher als der steuerliche. Gleicht sich die Differenz künftig aus, entsteht eine künftige Steuerbelastung. Für passive latente Steuern besteht nach § 274 Abs. 1 S. 1 HGB eine Passivierungspflicht." }]
+      },
+      {
+        id: "bilanzierung-latente-steuern-e6",
+        prompt: "Für welche Art von Unternehmen gelten die Regelungen zu latenten Steuern nach § 274 HGB, und was passiert, wenn eine dauerhafte (permanente) Differenz zwischen Handels- und Steuerbilanz besteht?",
+        solution: [{ type: "p", text: "§ 274 HGB gilt für Kapitalgesellschaften im handelsrechtlichen Jahresabschluss (JA). Permanente Differenzen — also solche, die sich in der Zukunft nicht wieder ausgleichen (z. B. dauerhaft nicht abzugsfähige Betriebsausgaben) — führen NICHT zu latenten Steuern, da keine künftige Steuerbe- oder -entlastung zu erwarten ist. Latente Steuern werden ausschließlich für temporäre, sich künftig umkehrende Differenzen gebildet." }]
+      }
+    ],
+    quiz: [
+      { id: "q1", question: "Wodurch entstehen temporäre Differenzen, die zu latenten Steuern führen?", options: ["Durch dauerhaft nicht abzugsfähige Betriebsausgaben", "Durch unterschiedliche Wertansätze von Vermögensgegenständen/Schulden in Handels- und Steuerbilanz, die sich künftig wieder ausgleichen", "Durch Unterschiede zwischen Brutto- und Nettoumsatz", "Durch die Wahl der Abschreibungsmethode allein, unabhängig von der Steuerbilanz"], correctIndex: 1, explanation: "Temporäre Differenzen entstehen durch abweichende, aber künftig wieder ausgleichende Wertansätze zwischen Handels- und Steuerbilanz." },
+      { id: "q2", question: "Wann entsteht eine aktive latente Steuer im Zusammenhang mit einem Vermögensgegenstand?", options: ["Wenn der Handelsbilanzwert größer ist als der Steuerbilanzwert", "Wenn der Handelsbilanzwert kleiner ist als der Steuerbilanzwert", "Wenn beide Werte identisch sind", "Niemals bei Vermögensgegenständen, nur bei Schulden"], correctIndex: 1, explanation: "H.Bil.-Wert des Vermögens < St.B.-Wert des Vermögens → aktive latente Steuer." },
+      { id: "q3", question: "Wann entsteht eine passive latente Steuer im Zusammenhang mit einem Vermögensgegenstand?", options: ["Wenn der Handelsbilanzwert kleiner ist als der Steuerbilanzwert", "Wenn beide Werte identisch sind", "Wenn der Handelsbilanzwert größer ist als der Steuerbilanzwert", "Niemals bei Vermögensgegenständen, nur bei Schulden"], correctIndex: 2, explanation: "H.Bil.-Wert des Vermögens > St.B.-Wert des Vermögens → passive latente Steuer." },
+      { id: "q4", question: "Wann entsteht eine aktive latente Steuer im Zusammenhang mit einer Schuld?", options: ["Wenn der Handelsbilanzwert der Schuld größer ist als der Steuerbilanzwert", "Wenn der Handelsbilanzwert der Schuld kleiner ist als der Steuerbilanzwert", "Wenn keine Schuld in der Steuerbilanz existiert", "Nie, bei Schulden entstehen nur passive latente Steuern"], correctIndex: 0, explanation: "H.Bil.-Wert der Schulden > St.B.-Wert der Schulden → aktive latente Steuer." },
+      { id: "q5", question: "Wann entsteht eine passive latente Steuer im Zusammenhang mit einer Schuld?", options: ["Wenn der Handelsbilanzwert der Schuld größer ist als der Steuerbilanzwert", "Wenn beide Werte identisch sind", "Wenn der Handelsbilanzwert der Schuld kleiner ist als der Steuerbilanzwert", "Nie, bei Schulden entstehen nur aktive latente Steuern"], correctIndex: 2, explanation: "H.Bil.-Wert der Schulden < St.B.-Wert der Schulden → passive latente Steuer." },
+      { id: "q6", question: "Wie ist der Ansatz aktiver latenter Steuern nach § 274 Abs. 1 S. 2 HGB geregelt?", options: ["Als Aktivierungsverbot", "Als Aktivierungswahlrecht", "Als Aktivierungspflicht", "Es gibt dazu keine gesetzliche Regelung"], correctIndex: 1, explanation: "Für aktive latente Steuern besteht ein Aktivierungswahlrecht gem. § 274 Abs. 1 Satz 2 HGB." },
+      { id: "q7", question: "Wie ist der Ansatz passiver latenter Steuern nach § 274 Abs. 1 S. 1 HGB geregelt?", options: ["Als Passivierungswahlrecht", "Als Passivierungsverbot", "Als Passivierungspflicht", "Nur auf Antrag beim Finanzamt"], correctIndex: 2, explanation: "Für passive latente Steuern besteht eine Passivierungspflicht gem. § 274 Abs. 1 Satz 1 HGB." },
+      { id: "q8", question: "Was drückt eine aktive latente Steuer wirtschaftlich aus?", options: ["Eine bereits gezahlte, zu erstattende Steuer", "Eine künftige Steuerentlastung", "Eine künftige Steuerbelastung", "Eine dauerhaft entfallende Steuerpflicht"], correctIndex: 1, explanation: "Aktive latente Steuern repräsentieren eine künftige Steuerentlastung." },
+      { id: "q9", question: "Was drückt eine passive latente Steuer wirtschaftlich aus?", options: ["Eine künftige Steuerentlastung", "Eine dauerhaft entfallende Steuerpflicht", "Eine künftige Steuerbelastung", "Eine bereits gezahlte, zu erstattende Steuer"], correctIndex: 2, explanation: "Passive latente Steuern repräsentieren eine künftige Steuerbelastung." },
+      { id: "q10", question: "Für welche Unternehmen gelten die Regelungen zu latenten Steuern nach § 274 HGB im Jahresabschluss?", options: ["Nur für Einzelunternehmen", "Für Kapitalgesellschaften", "Nur für Personengesellschaften ohne Kapitalgesellschaftsbeteiligung", "Für alle Unternehmen unabhängig von der Rechtsform, verpflichtend ohne Ausnahme"], correctIndex: 1, explanation: "§ 274 HGB regelt den Ansatz latenter Steuern für Kapitalgesellschaften im handelsrechtlichen Jahresabschluss." }
+    ]
+  }
+];

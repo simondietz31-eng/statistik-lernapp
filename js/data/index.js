@@ -176,6 +176,31 @@ const MARKETING_TOPICS = [].concat(
   MARKETING_CHAPTER10_TOPICS
 );
 
+const BILANZIERUNG_CHAPTERS = [
+  { id: 1,  title: "Grundlagen von Rechnungswesen und Bilanzierung",        accent: "#5b8def", group: "Grundlagen" },
+  { id: 2,  title: "Basiselemente der Bilanzierung",                        accent: "#34c77b", group: "Grundlagen" },
+  { id: 3,  title: "Bilanzierung des Anlagevermögens",                     accent: "#a374ff", group: "Vermögen" },
+  { id: 4,  title: "Bilanzierung des Umlaufvermögens",                     accent: "#ff9f43", group: "Vermögen" },
+  { id: 5,  title: "Bilanzierung des Eigenkapitals",                       accent: "#e85d75", group: "Kapital" },
+  { id: 6,  title: "Bilanzierung des Fremdkapitals",                       accent: "#2bb3a3", group: "Kapital" },
+  { id: 7,  title: "Bilanzierung sonstiger Posten",                        accent: "#c9a227", group: "Sonstige Posten" },
+  { id: 8,  title: "Gewinn- und Verlustrechnung",                          accent: "#4f86c6", group: "GuV" },
+  { id: 9,  title: "Bilanzpolitische Optionen im Überblick",                accent: "#d9738a", group: "Politik & Digitalisierung" },
+  { id: 10, title: "Aspekte der Digitalisierung des externen Rechnungswesens", accent: "#6fcf97", group: "Politik & Digitalisierung" }
+];
+const BILANZIERUNG_TOPICS = [].concat(
+  BILANZIERUNG_CHAPTER1_TOPICS,
+  BILANZIERUNG_CHAPTER2_TOPICS,
+  BILANZIERUNG_CHAPTER3_TOPICS,
+  BILANZIERUNG_CHAPTER4_TOPICS,
+  BILANZIERUNG_CHAPTER5_TOPICS,
+  BILANZIERUNG_CHAPTER6_TOPICS,
+  BILANZIERUNG_CHAPTER7_TOPICS,
+  BILANZIERUNG_CHAPTER8_TOPICS,
+  BILANZIERUNG_CHAPTER9_TOPICS,
+  BILANZIERUNG_CHAPTER10_TOPICS
+);
+
 const SUBJECTS = [
   {
     id: "statistik",
@@ -248,5 +273,14 @@ const SUBJECTS = [
     accent: "#e64980",
     chapters: MARKETING_CHAPTERS,
     topics: MARKETING_TOPICS
+  },
+  {
+    id: "bilanzierung",
+    title: "Bilanzierung",
+    studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    icon: "⚖️",
+    accent: "#2f7d4f",
+    chapters: BILANZIERUNG_CHAPTERS,
+    topics: BILANZIERUNG_TOPICS
   }
 ];
