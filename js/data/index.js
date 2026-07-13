@@ -277,7 +277,7 @@ const SUBJECTS = [
   {
     id: "bilanzierung",
     title: "Bilanzierung",
-    studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    studiengang: ["Betriebswirtschaft"],
     icon: "⚖️",
     accent: "#2f7d4f",
     chapters: BILANZIERUNG_CHAPTERS,
