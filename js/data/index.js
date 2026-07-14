@@ -217,7 +217,8 @@ const BILANZIERUNG_CHAPTERS = [
   { id: 7,  title: "Bilanzierung sonstiger Posten",                        accent: "#c9a227", group: "Sonstige Posten" },
   { id: 8,  title: "Gewinn- und Verlustrechnung",                          accent: "#4f86c6", group: "GuV" },
   { id: 9,  title: "Bilanzpolitische Optionen im Überblick",                accent: "#d9738a", group: "Politik & Digitalisierung" },
-  { id: 10, title: "Aspekte der Digitalisierung des externen Rechnungswesens", accent: "#6fcf97", group: "Politik & Digitalisierung" }
+  { id: 10, title: "Aspekte der Digitalisierung des externen Rechnungswesens", accent: "#6fcf97", group: "Politik & Digitalisierung" },
+  { id: 11, title: "Altklausuren (2004–2025)",                                accent: "#8d6e63", group: "Klausuraufgaben" }
 ];
 const BILANZIERUNG_TOPICS = [].concat(
   BILANZIERUNG_CHAPTER1_TOPICS,
@@ -229,7 +230,8 @@ const BILANZIERUNG_TOPICS = [].concat(
   BILANZIERUNG_CHAPTER7_TOPICS,
   BILANZIERUNG_CHAPTER8_TOPICS,
   BILANZIERUNG_CHAPTER9_TOPICS,
-  BILANZIERUNG_CHAPTER10_TOPICS
+  BILANZIERUNG_CHAPTER10_TOPICS,
+  BILANZIERUNG_CHAPTER11_TOPICS
 );
 
 const PRODUKTIONSWIRTSCHAFT_CHAPTERS = [
