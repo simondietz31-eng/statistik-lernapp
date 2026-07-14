@@ -143,7 +143,7 @@ const VERTRIEB_CHAPTER5_TOPICS = [
       ]},
       { type: "p", text: "Diller/Herrmann (2003) unterscheiden sieben konkrete Implementierungsformen der Preisdifferenzierung, die sich jeweils den Pigou-Graden zuordnen lassen:" },
       { type: "list", items: [
-        "Mehr-Personen-Preisbildung (→ 1. Grad, z. B. Gruppentarif für den Museumsbesuch)",
+        "Mehr-Personen-Preisbildung (→ 2. Grad, z. B. Gruppentarif für den Museumsbesuch)",
         "Leistungsbezogene Preisdifferenzierung",
         "Mengenbezogene Preisdifferenzierung (→ 2. Grad)",
         "Preisbündelung (eine eigenständige Implementierungsform der Preisdifferenzierung — Details dazu in Kapitel 6)",
@@ -168,7 +168,7 @@ const VERTRIEB_CHAPTER5_TOPICS = [
       {
         id: "vertrieb-preisdifferenzierung-e3",
         prompt: "Nennen Sie die sieben Implementierungsformen der Preisdifferenzierung nach Diller/Herrmann und ordnen Sie, soweit im Kurs angegeben, den jeweiligen Pigou-Grad zu.",
-        solution: [{ type: "p", text: "Die sieben Implementierungsformen sind: Mehr-Personen-Preisbildung (1. Grad), leistungsbezogene Preisdifferenzierung, mengenbezogene Preisdifferenzierung (2. Grad), Preisbündelung (eine eigenständige Implementierungsform, ausführlich in Kapitel 6 behandelt), personsbezogene Preisdifferenzierung (3. Grad), räumliche Preisdifferenzierung sowie zeitliche Preisdifferenzierung." }]
+        solution: [{ type: "p", text: "Die sieben Implementierungsformen sind: Mehr-Personen-Preisbildung (2. Grad), leistungsbezogene Preisdifferenzierung, mengenbezogene Preisdifferenzierung (2. Grad), Preisbündelung (eine eigenständige Implementierungsform, ausführlich in Kapitel 6 behandelt), personsbezogene Preisdifferenzierung (3. Grad), räumliche Preisdifferenzierung sowie zeitliche Preisdifferenzierung." }]
       },
       {
         id: "vertrieb-preisdifferenzierung-e4",

@@ -27,8 +27,8 @@ const VERTRIEB_CHAPTER10_TOPICS = [
       { type: "p", text: "Für die vertikale Logistikstruktur — also die Frage, über wie viele Stufen Waren vom Hersteller zum Kunden geführt werden — lassen sich drei Beispielmuster unterscheiden:" },
       { type: "list", items: [
         "1-stufig: Zentrallager → Kunde",
-        "2-stufig: Zentrallager → Werklager → Kunde",
-        "3-stufig: Zentrallager → Werklager → Auslieferungslager → Kunde, mit Verzweigung zu mehreren Auslieferungs- bzw. Werklagern"
+        "2-stufig: Werklager → Zentrallager → Kunde",
+        "3-stufig: Werklager → Zentrallager → Auslieferungslager → Kunde, mit Verzweigung zu mehreren Auslieferungs- bzw. Werklagern"
       ]},
       { type: "p", text: "Die Wahl der vertikalen Logistikstruktur richtet sich nach drei Kriteriengruppen:" },
       { type: "list", items: [
@@ -57,7 +57,7 @@ const VERTRIEB_CHAPTER10_TOPICS = [
       {
         id: "vertrieb-it-systeme-logistik-grundlagen-e4",
         prompt: "Skizzieren Sie die drei Beispielmuster der vertikalen Logistikstruktur und erklären Sie den Unterschied.",
-        solution: [{ type: "p", text: "Bei der 1-stufigen Struktur liefert das Zentrallager direkt an den Kunden. Bei der 2-stufigen Struktur liefert das Zentrallager zunächst an ein Werklager, von dem aus der Kunde beliefert wird. Bei der 3-stufigen Struktur liefert das Zentrallager an ein Werklager, dieses an ein Auslieferungslager, und erst von dort erfolgt die Belieferung des Kunden, wobei zu mehreren Auslieferungs- bzw. Werklagern verzweigt werden kann. Mit zunehmender Stufenzahl steigt die Kundennähe der Lager, aber auch die Komplexität und der Koordinationsaufwand der Struktur." }]
+        solution: [{ type: "p", text: "Bei der 1-stufigen Struktur liefert das Zentrallager direkt an den Kunden. Bei der 2-stufigen Struktur liefert das Werklager zunächst an ein Zentrallager, von dem aus der Kunde beliefert wird. Bei der 3-stufigen Struktur liefert das Werklager an ein Zentrallager, dieses an ein Auslieferungslager, und erst von dort erfolgt die Belieferung des Kunden, wobei zu mehreren Auslieferungs- bzw. Werklagern verzweigt werden kann. Mit zunehmender Stufenzahl steigt die Kundennähe der Lager, aber auch die Komplexität und der Koordinationsaufwand der Struktur." }]
       },
       {
         id: "vertrieb-it-systeme-logistik-grundlagen-e5",
@@ -70,7 +70,7 @@ const VERTRIEB_CHAPTER10_TOPICS = [
       { id: "q2", question: "Welche Aussage zur Wirtschaftlichkeit von Vertriebs-IT-Systemen trifft laut Vorlesung zu?", options: ["Sie wird durch Sicherheit ersetzt", "Sie steht im Fokus, nicht die Effektivität", "Sie ist die einzige relevante Größe", "Sie ist kaum quantifizierbar, daher steht die Effektivität im Fokus"], correctIndex: 3, explanation: "Die Wirtschaftlichkeit/Effizienz ist kaum quantifizierbar, weshalb die Effektivität im Vordergrund steht." },
       { id: "q3", question: "Welcher der folgenden Punkte zählt zu den Einflussfaktoren der Benutzerorientierung?", options: ["Individualisierung der Erfassung ohne Standard", "Maximale Komplexität der Darstellung", "Verdichtung der Informationsflut", "Verlangsamung des Zugriffs"], correctIndex: 2, explanation: "Die Verdichtung der Informationsflut ist einer der genannten Einflussfaktoren der Benutzerorientierung." },
       { id: "q4", question: "Was ist NICHT eines der drei Aufgabenfelder der Vertriebslogistik?", options: ["Transportentscheidungen", "Entscheidung über die Lagerhaltung", "Preisverhandlung mit Lieferanten", "Entscheidung über Lagerstandorte"], correctIndex: 2, explanation: "Preisverhandlung mit Lieferanten gehört nicht zu den drei Aufgabenfeldern der Vertriebslogistik; diese sind Lagerstandorte, Lagerhaltung und Transport." },
-      { id: "q5", question: "Wie lautet die vertikale Struktur 'Zentrallager → Werklager → Kunde'?", options: ["4-stufig", "3-stufig", "1-stufig", "2-stufig"], correctIndex: 3, explanation: "Zentrallager → Werklager → Kunde ist die 2-stufige vertikale Logistikstruktur." },
+      { id: "q5", question: "Wie lautet die vertikale Struktur 'Werklager → Zentrallager → Kunde'?", options: ["4-stufig", "3-stufig", "1-stufig", "2-stufig"], correctIndex: 3, explanation: "Werklager → Zentrallager → Kunde ist die 2-stufige vertikale Logistikstruktur." },
       { id: "q6", question: "Welches Beispielmuster beschreibt 'Zentrallager → Kunde' direkt?", options: ["Horizontal", "1-stufig", "3-stufig", "2-stufig"], correctIndex: 1, explanation: "Die direkte Belieferung vom Zentrallager an den Kunden ist die 1-stufige Struktur." },
       { id: "q7", question: "Welche Kriteriengruppe umfasst die 'geduldete Lieferzeit' der Kunden?", options: ["Unternehmensbezogene Kriterien", "Wettbewerbsbezogene Kriterien", "Kundenbezogene Kriterien", "Keine der drei Gruppen"], correctIndex: 2, explanation: "Die geduldete Lieferzeit ist ein kundenbezogenes Kriterium für die vertikale Logistikstruktur." },
       { id: "q8", question: "Welches Kriterium ist für die horizontale Logistikstruktur maßgeblich?", options: ["Die geografische Verteilung der Kunden", "Die Bestellhäufigkeit", "Der Wert der Produkte", "Die Breite des Produktprogramms"], correctIndex: 0, explanation: "Für die horizontale Logistikstruktur sind vor allem geografische Kundenverteilung, Lagerhaltungs- und Transportkosten maßgeblich." },
