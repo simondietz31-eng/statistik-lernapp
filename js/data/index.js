@@ -232,6 +232,31 @@ const BILANZIERUNG_TOPICS = [].concat(
   BILANZIERUNG_CHAPTER10_TOPICS
 );
 
+const PRODUKTIONSWIRTSCHAFT_CHAPTERS = [
+  { id: 1,  title: "Grundlagen der Produktionswirtschaft",                accent: "#5b8def", group: "Produktion" },
+  { id: 2,  title: "Standortentscheidung",                                accent: "#34c77b", group: "Produktion" },
+  { id: 3,  title: "Fertigungs- und Organisationstypen",                  accent: "#a374ff", group: "Produktion" },
+  { id: 4,  title: "Produktionsplanung",                                  accent: "#ff9f43", group: "Produktion" },
+  { id: 5,  title: "Produktionsplanungs- und Steuerungssysteme (PPS)",    accent: "#e85d75", group: "Produktion" },
+  { id: 6,  title: "Engpassorientierung und Toyota-Produktionssystem",    accent: "#2bb3a3", group: "Produktion" },
+  { id: 7,  title: "Grundlagen der Beschaffung",                          accent: "#c9a227", group: "Beschaffung" },
+  { id: 8,  title: "Bedarfs- und Bestellmengenermittlung",                accent: "#4f86c6", group: "Beschaffung" },
+  { id: 9,  title: "Bestände und Bestellverfahren",                       accent: "#d9738a", group: "Beschaffung" },
+  { id: 10, title: "Lagerwirtschaft",                                     accent: "#6fcf97", group: "Beschaffung" }
+];
+const PRODUKTIONSWIRTSCHAFT_TOPICS = [].concat(
+  PRODUKTIONSWIRTSCHAFT_CHAPTER1_TOPICS,
+  PRODUKTIONSWIRTSCHAFT_CHAPTER2_TOPICS,
+  PRODUKTIONSWIRTSCHAFT_CHAPTER3_TOPICS,
+  PRODUKTIONSWIRTSCHAFT_CHAPTER4_TOPICS,
+  PRODUKTIONSWIRTSCHAFT_CHAPTER5_TOPICS,
+  PRODUKTIONSWIRTSCHAFT_CHAPTER6_TOPICS,
+  PRODUKTIONSWIRTSCHAFT_CHAPTER7_TOPICS,
+  PRODUKTIONSWIRTSCHAFT_CHAPTER8_TOPICS,
+  PRODUKTIONSWIRTSCHAFT_CHAPTER9_TOPICS,
+  PRODUKTIONSWIRTSCHAFT_CHAPTER10_TOPICS
+);
+
 const SUBJECTS = [
   {
     id: "statistik",
@@ -331,5 +356,15 @@ const SUBJECTS = [
     accent: "#2f7d4f",
     chapters: BILANZIERUNG_CHAPTERS,
     topics: BILANZIERUNG_TOPICS
+  },
+  {
+    id: "produktionswirtschaft",
+    title: "Produktionswirtschaft",
+    studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    semester: 2,
+    icon: "🏭",
+    accent: "#d35400",
+    chapters: PRODUKTIONSWIRTSCHAFT_CHAPTERS,
+    topics: PRODUKTIONSWIRTSCHAFT_TOPICS
   }
 ];
