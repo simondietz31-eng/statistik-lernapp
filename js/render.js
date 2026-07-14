@@ -112,10 +112,24 @@ function renderStudiengangGrid(container, subjects) {
   container.appendChild(grid);
 }
 
+function buildSubjectCard(subject, allProgress) {
+  const progress = (allProgress.subjects && allProgress.subjects[subject.id]) || { viewedTopics: {}, quizResults: {} };
+  const viewedCount = Object.keys(progress.viewedTopics).length;
+
+  return buildCard({
+    className: "subject-card",
+    dataset: { subjectId: subject.id },
+    accent: subject.accent,
+    icon: subject.icon,
+    meta: subject.studiengang && subject.studiengang.length > 0 ? subject.studiengang.join(" / ").toUpperCase() : null,
+    title: subject.title,
+    summary: subject.chapters.length + " Kapitel · " + subject.topics.length + " Themen",
+    badges: viewedCount > 0 ? [{ className: "viewed", text: viewedCount + " von " + subject.topics.length + " gelernt" }] : []
+  });
+}
+
 function renderSubjectGrid(container, subjects, allProgress) {
   container.innerHTML = "";
-  const grid = document.createElement("div");
-  grid.className = "topic-grid subject-grid";
 
   if (subjects.length === 0) {
     const empty = document.createElement("p");
@@ -125,23 +139,48 @@ function renderSubjectGrid(container, subjects, allProgress) {
     return;
   }
 
+  // Group subjects by semester (ascending); subjects without a semester
+  // (e.g. from other Studiengänge) are collected in a trailing group.
+  const semesters = [];
   subjects.forEach(function (subject) {
-    const progress = (allProgress.subjects && allProgress.subjects[subject.id]) || { viewedTopics: {}, quizResults: {} };
-    const viewedCount = Object.keys(progress.viewedTopics).length;
+    if (subject.semester && semesters.indexOf(subject.semester) === -1) semesters.push(subject.semester);
+  });
+  semesters.sort(function (a, b) { return a - b; });
 
-    grid.appendChild(buildCard({
-      className: "subject-card",
-      dataset: { subjectId: subject.id },
-      accent: subject.accent,
-      icon: subject.icon,
-      meta: subject.studiengang && subject.studiengang.length > 0 ? subject.studiengang.join(" / ").toUpperCase() : null,
-      title: subject.title,
-      summary: subject.chapters.length + " Kapitel · " + subject.topics.length + " Themen",
-      badges: viewedCount > 0 ? [{ className: "viewed", text: viewedCount + " von " + subject.topics.length + " gelernt" }] : []
-    }));
+  semesters.forEach(function (semester) {
+    const block = document.createElement("div");
+    block.className = "chapter-block";
+
+    const h2 = document.createElement("h2");
+    h2.textContent = semester + ". Semester";
+    block.appendChild(h2);
+
+    const grid = document.createElement("div");
+    grid.className = "topic-grid subject-grid";
+    subjects
+      .filter(function (subject) { return subject.semester === semester; })
+      .forEach(function (subject) { grid.appendChild(buildSubjectCard(subject, allProgress)); });
+
+    block.appendChild(grid);
+    container.appendChild(block);
   });
 
-  container.appendChild(grid);
+  const rest = subjects.filter(function (subject) { return !subject.semester; });
+  if (rest.length > 0) {
+    const block = document.createElement("div");
+    block.className = "chapter-block";
+
+    const h2 = document.createElement("h2");
+    h2.textContent = "Weitere Fächer";
+    block.appendChild(h2);
+
+    const grid = document.createElement("div");
+    grid.className = "topic-grid subject-grid";
+    rest.forEach(function (subject) { grid.appendChild(buildSubjectCard(subject, allProgress)); });
+
+    block.appendChild(grid);
+    container.appendChild(block);
+  }
 }
 
 function renderContentBlocks(blocks, container) {

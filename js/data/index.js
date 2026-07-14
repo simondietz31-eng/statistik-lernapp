@@ -151,6 +151,37 @@ const VERTRIEB_TOPICS = [].concat(
   VERTRIEB_CHAPTER12_TOPICS
 );
 
+const VWL_CHAPTERS = [
+  { id: 1,  title: "Denken wie ein Volkswirt",                              accent: "#0ca678", group: "Mikroökonomie" },
+  { id: 2,  title: "Die Marktkräfte von Angebot und Nachfrage",             accent: "#1b9e6f", group: "Mikroökonomie" },
+  { id: 3,  title: "Preiselastizität",                                     accent: "#2a9169", group: "Mikroökonomie" },
+  { id: 4,  title: "Unternehmen in Wettbewerbsmärkten",                    accent: "#3a8462", group: "Mikroökonomie" },
+  { id: 5,  title: "Konsumenten, Produzenten und Markteffizienz",          accent: "#49775b", group: "Mikroökonomie" },
+  { id: 6,  title: "Externalitäten und Marktversagen",                     accent: "#586a54", group: "Mikroökonomie" },
+  { id: 7,  title: "Volkswirtschaftliche Gesamtrechnung (BIP)",            accent: "#1971c2", group: "Makroökonomie" },
+  { id: 8,  title: "Messung der Lebenshaltungskosten",                     accent: "#2f6db0", group: "Makroökonomie" },
+  { id: 9,  title: "Das monetäre System",                                  accent: "#45699e", group: "Makroökonomie" },
+  { id: 10, title: "Geldmengenwachstum und Inflation",                     accent: "#5b658c", group: "Makroökonomie" },
+  { id: 11, title: "Geld- und Fiskalpolitik",                              accent: "#71617a", group: "Makroökonomie" },
+  { id: 12, title: "Übungsaufgaben Mikroökonomie",                         accent: "#c9a227", group: "Übungsaufgaben" },
+  { id: 13, title: "Übungsaufgaben Makroökonomie",                         accent: "#b5872a", group: "Übungsaufgaben" }
+];
+const VWL_TOPICS = [].concat(
+  VWL_CHAPTER1_TOPICS,
+  VWL_CHAPTER2_TOPICS,
+  VWL_CHAPTER3_TOPICS,
+  VWL_CHAPTER4_TOPICS,
+  VWL_CHAPTER5_TOPICS,
+  VWL_CHAPTER6_TOPICS,
+  VWL_CHAPTER7_TOPICS,
+  VWL_CHAPTER8_TOPICS,
+  VWL_CHAPTER9_TOPICS,
+  VWL_CHAPTER10_TOPICS,
+  VWL_CHAPTER11_TOPICS,
+  VWL_CHAPTER12_TOPICS,
+  VWL_CHAPTER13_TOPICS
+);
+
 const MARKETING_CHAPTERS = [
   { id: 1, title: "Grundlagen des Marketing",           accent: "#e8590c", group: "Grundlagen" },
   { id: 2, title: "Märkte verstehen",                    accent: "#1971c2", group: "Grundlagen" },
@@ -206,10 +237,21 @@ const SUBJECTS = [
     id: "statistik",
     title: "Statistik",
     studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    semester: 2,
     icon: "📊",
     accent: "#5b8def",
     chapters: STATISTIK_CHAPTERS,
     topics: STATISTIK_TOPICS
+  },
+  {
+    id: "vwl",
+    title: "Volkswirtschaftslehre",
+    studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    semester: 2,
+    icon: "📈",
+    accent: "#0ca678",
+    chapters: VWL_CHAPTERS,
+    topics: VWL_TOPICS
   },
   {
     id: "bwl2",
@@ -224,6 +266,7 @@ const SUBJECTS = [
     id: "klr",
     title: "Kosten- und Leistungsrechnung",
     studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    semester: 3,
     icon: "📒",
     accent: "#c9a227",
     chapters: KLR_CHAPTERS,
@@ -233,6 +276,7 @@ const SUBJECTS = [
     id: "orga-personal",
     title: "Organisation & Personal",
     studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    semester: 3,
     icon: "🏢",
     accent: "#8b5cf6",
     chapters: ORGAPERSONAL_CHAPTERS,
@@ -242,6 +286,7 @@ const SUBJECTS = [
     id: "natwiss",
     title: "Naturwissenschaftliche Grundlagen",
     studiengang: ["Industriewirtschaft"],
+    semester: 4,
     icon: "⚛️",
     accent: "#5b8def",
     chapters: NATWISS_CHAPTERS,
@@ -251,6 +296,7 @@ const SUBJECTS = [
     id: "finv",
     title: "Finanzierung & Investition",
     studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    semester: 4,
     icon: "💶",
     accent: "#1f5b68",
     chapters: FINV_CHAPTERS,
@@ -260,6 +306,7 @@ const SUBJECTS = [
     id: "vertrieb",
     title: "Vertrieb",
     studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    semester: 4,
     icon: "🤝",
     accent: "#1d6f5c",
     chapters: VERTRIEB_CHAPTERS,
@@ -269,6 +316,7 @@ const SUBJECTS = [
     id: "marketing",
     title: "Marketing",
     studiengang: ["Industriewirtschaft", "Betriebswirtschaft"],
+    semester: 4,
     icon: "🎯",
     accent: "#e64980",
     chapters: MARKETING_CHAPTERS,
