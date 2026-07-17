@@ -286,6 +286,35 @@ const GESUNDHEITSPSYCHOLOGIE_TOPICS = [].concat(
   GESUNDHEITSPSYCHOLOGIE_CHAPTER11_TOPICS
 );
 
+const FORSCHUNG_CHAPTERS = [
+  { id: 1,  title: "Fragestellung, Hypothesen & Falsifikation",         accent: "#5b8def", group: "Wissenschaftliches Vorgehen" },
+  { id: 2,  title: "Operationalisierung & Gütekriterien",               accent: "#34c77b", group: "Wissenschaftliches Vorgehen" },
+  { id: 3,  title: "Untersuchungsdesign & Stichprobe",                  accent: "#a374ff", group: "Wissenschaftliches Vorgehen" },
+  { id: 4,  title: "Skalenniveaus von Variablen",                       accent: "#ff9f43", group: "Deskriptive Statistik" },
+  { id: 5,  title: "Häufigkeiten & Lagemaße",                           accent: "#e8822a", group: "Deskriptive Statistik" },
+  { id: 6,  title: "Streuungsmaße & Normalverteilung",                  accent: "#2bb3a3", group: "Deskriptive Statistik" },
+  { id: 7,  title: "Standardfehler & Signifikanztests",                 accent: "#1d8a9e", group: "Inferenzstatistik" },
+  { id: 8,  title: "Studiendesigns I: Grundmerkmale",                   accent: "#c9436e", group: "Studiendesigns" },
+  { id: 9,  title: "Studiendesigns II: Fall-Kontroll, Kohorte, RCT",    accent: "#a3325a", group: "Studiendesigns" },
+  { id: 10, title: "EbM, systematische Reviews & Metaanalysen",         accent: "#7d2547", group: "Studiendesigns" },
+  { id: 11, title: "Screeningtests & Testgütekriterien",                accent: "#0c6478", group: "Studiendesigns" },
+  { id: 12, title: "Qualitative Forschung & validierte Fragebögen",     accent: "#8d6e63", group: "Qualitative Forschung" }
+];
+const FORSCHUNG_TOPICS = [].concat(
+  FORSCHUNG_CHAPTER1_TOPICS,
+  FORSCHUNG_CHAPTER2_TOPICS,
+  FORSCHUNG_CHAPTER3_TOPICS,
+  FORSCHUNG_CHAPTER4_TOPICS,
+  FORSCHUNG_CHAPTER5_TOPICS,
+  FORSCHUNG_CHAPTER6_TOPICS,
+  FORSCHUNG_CHAPTER7_TOPICS,
+  FORSCHUNG_CHAPTER8_TOPICS,
+  FORSCHUNG_CHAPTER9_TOPICS,
+  FORSCHUNG_CHAPTER10_TOPICS,
+  FORSCHUNG_CHAPTER11_TOPICS,
+  FORSCHUNG_CHAPTER12_TOPICS
+);
+
 const SUBJECTS = [
   {
     id: "statistik",
@@ -405,5 +434,15 @@ const SUBJECTS = [
     accent: "#2bb3a3",
     chapters: GESUNDHEITSPSYCHOLOGIE_CHAPTERS,
     topics: GESUNDHEITSPSYCHOLOGIE_TOPICS
+  },
+  {
+    id: "forschung",
+    title: "Forschung",
+    studiengang: ["Integrative Gesundheitsförderung"],
+    semester: 2,
+    icon: "🔬",
+    accent: "#5b8def",
+    chapters: FORSCHUNG_CHAPTERS,
+    topics: FORSCHUNG_TOPICS
   }
 ];
