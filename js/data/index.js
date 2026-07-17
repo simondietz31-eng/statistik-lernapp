@@ -259,6 +259,33 @@ const PRODUKTIONSWIRTSCHAFT_TOPICS = [].concat(
   PRODUKTIONSWIRTSCHAFT_CHAPTER10_TOPICS
 );
 
+const GESUNDHEITSPSYCHOLOGIE_CHAPTERS = [
+  { id: 1,  title: "Psychologie als Wissenschaft & biopsychosoziales Modell", accent: "#5b8def", group: "Grundlagen" },
+  { id: 2,  title: "Allgemeine Psychologie",                                  accent: "#34c77b", group: "Grundlagen" },
+  { id: 3,  title: "Sozialpsychologie",                                      accent: "#a374ff", group: "Grundlagen" },
+  { id: 4,  title: "Entwicklungspsychologie: Theorien & Piaget",             accent: "#ff9f43", group: "Entwicklungspsychologie" },
+  { id: 5,  title: "Entwicklungspsychologie: Persönlichkeit & Lebensspanne", accent: "#e8822a", group: "Entwicklungspsychologie" },
+  { id: 6,  title: "Gesundheitspsychologie & Positive Psychologie",          accent: "#2bb3a3", group: "Gesundheitspsychologie" },
+  { id: 7,  title: "Resilienz, Stress & Future Skills",                     accent: "#1d8a9e", group: "Gesundheitspsychologie" },
+  { id: 8,  title: "Zeitperspektiven (Zimbardo)",                            accent: "#0c6478", group: "Gesundheitspsychologie" },
+  { id: 9,  title: "Klinische Psychologie I: Angst, Zwang & Trauma",         accent: "#c9436e", group: "Klinische Psychologie" },
+  { id: 10, title: "Klinische Psychologie II: Depression & Bipolar",         accent: "#a3325a", group: "Klinische Psychologie" },
+  { id: 11, title: "Klinische Psychologie III: Schizophrenie & Persönlichkeitsstörungen", accent: "#7d2547", group: "Klinische Psychologie" }
+];
+const GESUNDHEITSPSYCHOLOGIE_TOPICS = [].concat(
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER1_TOPICS,
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER2_TOPICS,
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER3_TOPICS,
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER4_TOPICS,
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER5_TOPICS,
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER6_TOPICS,
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER7_TOPICS,
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER8_TOPICS,
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER9_TOPICS,
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER10_TOPICS,
+  GESUNDHEITSPSYCHOLOGIE_CHAPTER11_TOPICS
+);
+
 const SUBJECTS = [
   {
     id: "statistik",
@@ -368,5 +395,15 @@ const SUBJECTS = [
     accent: "#d35400",
     chapters: PRODUKTIONSWIRTSCHAFT_CHAPTERS,
     topics: PRODUKTIONSWIRTSCHAFT_TOPICS
+  },
+  {
+    id: "gesundheitspsychologie",
+    title: "Gesundheitspsychologie",
+    studiengang: ["Integrative Gesundheitsförderung"],
+    semester: 2,
+    icon: "🧠",
+    accent: "#2bb3a3",
+    chapters: GESUNDHEITSPSYCHOLOGIE_CHAPTERS,
+    topics: GESUNDHEITSPSYCHOLOGIE_TOPICS
   }
 ];
