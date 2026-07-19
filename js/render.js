@@ -20,6 +20,24 @@ function filterSubjectsByStudiengang(subjects, filter) {
   });
 }
 
+function getSemestersForSubjects(subjects) {
+  const seen = {};
+  const result = [];
+  subjects.forEach(function (subject) {
+    if (subject.semester && !seen[subject.semester]) {
+      seen[subject.semester] = true;
+      result.push(subject.semester);
+    }
+  });
+  result.sort(function (a, b) { return a - b; });
+  return result;
+}
+
+function filterSubjectsBySemester(subjects, filter) {
+  if (!filter || filter === "alle") return subjects;
+  return subjects.filter(function (subject) { return subject.semester === filter; });
+}
+
 const STUDIENGANG_ICONS = {
   "Industriewirtschaft": "🏭",
   "Betriebswirtschaft": "💼",
@@ -128,59 +146,46 @@ function buildSubjectCard(subject, allProgress) {
   });
 }
 
+function renderSemesterGrid(container, subjects) {
+  container.innerHTML = "";
+  const grid = document.createElement("div");
+  grid.className = "topic-grid subject-grid";
+
+  const options = [{ id: "alle", label: "Alle Semester", icon: "📚" }].concat(
+    getSemestersForSubjects(subjects).map(function (semester) {
+      return { id: semester, label: semester + ". Semester", icon: "📅" };
+    })
+  );
+
+  options.forEach(function (option) {
+    const count = filterSubjectsBySemester(subjects, option.id).length;
+    grid.appendChild(buildCard({
+      className: "studiengang-card semester-card",
+      dataset: { semester: option.id },
+      icon: option.icon,
+      title: option.label,
+      summary: count + (count === 1 ? " Fach" : " Fächer")
+    }));
+  });
+
+  container.appendChild(grid);
+}
+
 function renderSubjectGrid(container, subjects, allProgress) {
   container.innerHTML = "";
 
   if (subjects.length === 0) {
     const empty = document.createElement("p");
     empty.className = "empty-state";
-    empty.textContent = "Für diesen Studiengang ist aktuell kein Fach hinterlegt.";
+    empty.textContent = "Für diese Auswahl ist aktuell kein Fach hinterlegt.";
     container.appendChild(empty);
     return;
   }
 
-  // Group subjects by semester (ascending); subjects without a semester
-  // (e.g. from other Studiengänge) are collected in a trailing group.
-  const semesters = [];
-  subjects.forEach(function (subject) {
-    if (subject.semester && semesters.indexOf(subject.semester) === -1) semesters.push(subject.semester);
-  });
-  semesters.sort(function (a, b) { return a - b; });
-
-  semesters.forEach(function (semester) {
-    const block = document.createElement("div");
-    block.className = "chapter-block";
-
-    const h2 = document.createElement("h2");
-    h2.textContent = semester + ". Semester";
-    block.appendChild(h2);
-
-    const grid = document.createElement("div");
-    grid.className = "topic-grid subject-grid";
-    subjects
-      .filter(function (subject) { return subject.semester === semester; })
-      .forEach(function (subject) { grid.appendChild(buildSubjectCard(subject, allProgress)); });
-
-    block.appendChild(grid);
-    container.appendChild(block);
-  });
-
-  const rest = subjects.filter(function (subject) { return !subject.semester; });
-  if (rest.length > 0) {
-    const block = document.createElement("div");
-    block.className = "chapter-block";
-
-    const h2 = document.createElement("h2");
-    h2.textContent = "Weitere Fächer";
-    block.appendChild(h2);
-
-    const grid = document.createElement("div");
-    grid.className = "topic-grid subject-grid";
-    rest.forEach(function (subject) { grid.appendChild(buildSubjectCard(subject, allProgress)); });
-
-    block.appendChild(grid);
-    container.appendChild(block);
-  }
+  const grid = document.createElement("div");
+  grid.className = "topic-grid subject-grid";
+  subjects.forEach(function (subject) { grid.appendChild(buildSubjectCard(subject, allProgress)); });
+  container.appendChild(grid);
 }
 
 function renderContentBlocks(blocks, container) {
@@ -326,7 +331,10 @@ function renderExercises(topic, container) {
 
     const solutionEl = document.createElement("div");
     solutionEl.className = "solution";
-    renderContentBlocks(exercise.solution, solutionEl);
+    const solutionBlocks = typeof exercise.solution === "string"
+      ? [{ type: "p", text: exercise.solution }]
+      : exercise.solution;
+    renderContentBlocks(solutionBlocks, solutionEl);
 
     revealBtn.addEventListener("click", function () {
       const isOpen = solutionEl.classList.toggle("open");
