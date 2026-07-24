@@ -7,6 +7,7 @@ const state = {
 
 const views = {
   STUDIENGANG_SELECT: document.getElementById("view-studiengang-select"),
+  SEMESTER_SELECT: document.getElementById("view-semester-select"),
   SUBJECT_SELECT: document.getElementById("view-subject-select"),
   TOPIC_GRID: document.getElementById("view-topic-grid"),
   EXPLANATION: document.getElementById("view-explanation"),
@@ -38,11 +39,19 @@ function setView(viewName) {
       state.currentSubjectId = subjectId;
       setView("TOPIC_GRID");
     });
+  } else if (viewName === "SEMESTER_SELECT") {
+    const studiengangFilter = getStudiengangFilter();
+    document.getElementById("semester-title").textContent =
+      (studiengangFilter === "alle" ? "Alle Fächer" : studiengangFilter) + " – Semester wählen";
+    renderSemesterGrid(document.getElementById("semester-container"), filterSubjectsByStudiengang(SUBJECTS, studiengangFilter));
   } else if (viewName === "SUBJECT_SELECT") {
-    const activeFilter = getStudiengangFilter();
-    document.getElementById("studiengang-title").textContent =
-      activeFilter === "alle" ? "Alle Fächer" : activeFilter;
-    renderSubjectGrid(document.getElementById("subjects-container"), filterSubjectsByStudiengang(SUBJECTS, activeFilter), loadProgress());
+    const studiengangFilter = getStudiengangFilter();
+    const semesterFilter = getSemesterFilter();
+    const studiengangLabel = studiengangFilter === "alle" ? "Alle Fächer" : studiengangFilter;
+    const semesterLabel = semesterFilter === "alle" ? "Alle Semester" : semesterFilter + ". Semester";
+    document.getElementById("studiengang-title").textContent = studiengangLabel + " – " + semesterLabel;
+    const bySt = filterSubjectsByStudiengang(SUBJECTS, studiengangFilter);
+    renderSubjectGrid(document.getElementById("subjects-container"), filterSubjectsBySemester(bySt, semesterFilter), loadProgress());
   } else if (viewName === "TOPIC_GRID") {
     const subject = getCurrentSubject();
     document.getElementById("subject-title").textContent = subject.title;
@@ -137,6 +146,15 @@ document.getElementById("studiengaenge-container").addEventListener("click", fun
   const card = e.target.closest(".studiengang-card");
   if (!card) return;
   setStudiengangFilter(card.dataset.studiengang);
+  setSemesterFilter("alle");
+  setView("SEMESTER_SELECT");
+});
+
+document.getElementById("semester-container").addEventListener("click", function (e) {
+  const card = e.target.closest(".semester-card");
+  if (!card) return;
+  const value = card.dataset.semester;
+  setSemesterFilter(value === "alle" ? "alle" : Number(value));
   setView("SUBJECT_SELECT");
 });
 
@@ -169,7 +187,8 @@ document.getElementById("btn-reset-progress").addEventListener("click", function
   e.preventDefault();
   if (window.confirm("Gesamten Lernfortschritt in allen Fächern (gelernte Themen, Quiz-Ergebnisse) wirklich zurücksetzen?")) {
     resetProgress();
-    const stayOnView = state.view === "STUDIENGANG_SELECT" || state.view === "SUBJECT_SELECT" || state.view === "DASHBOARD";
+    const stayOnView = state.view === "STUDIENGANG_SELECT" || state.view === "SEMESTER_SELECT" ||
+      state.view === "SUBJECT_SELECT" || state.view === "DASHBOARD";
     setView(stayOnView ? state.view : "TOPIC_GRID");
   }
 });
@@ -209,7 +228,8 @@ importFileInput.addEventListener("change", function () {
       return;
     }
     applyDarkModePref();
-    const stayOnView = state.view === "STUDIENGANG_SELECT" || state.view === "SUBJECT_SELECT" || state.view === "DASHBOARD";
+    const stayOnView = state.view === "STUDIENGANG_SELECT" || state.view === "SEMESTER_SELECT" ||
+      state.view === "SUBJECT_SELECT" || state.view === "DASHBOARD";
     setView(stayOnView ? state.view : "TOPIC_GRID");
     window.alert("Fortschritt erfolgreich importiert.");
   };

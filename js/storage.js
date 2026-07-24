@@ -1,7 +1,7 @@
 const STORAGE_KEY = "statistik-lernapp:progress:v2";
 
 function defaultProgress() {
-  return { version: 2, subjects: {}, darkMode: "auto", studiengangFilter: "alle" };
+  return { version: 2, subjects: {}, darkMode: "auto", studiengangFilter: "alle", semesterFilter: "alle" };
 }
 
 function loadProgress() {
@@ -76,10 +76,21 @@ function setStudiengangFilter(value) {
   saveProgress(progress);
 }
 
+function getSemesterFilter() {
+  return loadProgress().semesterFilter || "alle";
+}
+
+function setSemesterFilter(value) {
+  const progress = loadProgress();
+  progress.semesterFilter = value;
+  saveProgress(progress);
+}
+
 function resetProgress() {
   const progress = defaultProgress();
   progress.darkMode = getDarkModePref();
   progress.studiengangFilter = getStudiengangFilter();
+  progress.semesterFilter = getSemesterFilter();
   saveProgress(progress);
 }
 

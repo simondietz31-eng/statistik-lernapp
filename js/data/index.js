@@ -340,6 +340,7 @@ const SUBJECTS = [
     id: "bwl2",
     title: "BWL II (Prozessmanagement, Wertschöpfungskette)",
     studiengang: ["Integrative Gesundheitsförderung"],
+    semester: 2,
     icon: "🔄",
     accent: "#e85d75",
     chapters: BWL2_CHAPTERS,
