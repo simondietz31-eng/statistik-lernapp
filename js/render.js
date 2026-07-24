@@ -121,9 +121,9 @@ function buildProgressBar(percent, accent) {
   return bar;
 }
 
-function renderDashboardTile(container, subjects, progress) {
+function renderDashboardTile(container, subjects, progress, excludedSubjectIds) {
   container.innerHTML = "";
-  const stats = computeDashboardStats(subjects, progress);
+  const stats = computeDashboardStats(subjects, progress, excludedSubjectIds);
 
   const grid = document.createElement("div");
   grid.className = "topic-grid subject-grid dashboard-tile-grid";
@@ -144,16 +144,32 @@ function renderDashboardTile(container, subjects, progress) {
 }
 
 function buildDashboardSubjectRow(subjectStats) {
-  const row = document.createElement("button");
-  row.type = "button";
-  row.className = "dashboard-subject-row";
+  const row = document.createElement("div");
+  row.className = "dashboard-subject-row" + (subjectStats.excluded ? " excluded" : "");
   row.dataset.subjectId = subjectStats.id;
   row.style.setProperty("--card-accent", subjectStats.accent);
+
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "dashboard-subject-toggle";
+  toggle.setAttribute("aria-pressed", String(!subjectStats.excluded));
+  toggle.setAttribute(
+    "aria-label",
+    subjectStats.excluded
+      ? subjectStats.title + " wieder in Gesamtstatistik einschließen"
+      : subjectStats.title + " aus Gesamtstatistik ausschließen"
+  );
+  toggle.title = subjectStats.excluded ? "In Gesamtstatistik einschließen" : "Aus Gesamtstatistik ausschließen";
+  row.appendChild(toggle);
+
+  const main = document.createElement("button");
+  main.type = "button";
+  main.className = "dashboard-subject-main";
 
   const icon = document.createElement("span");
   icon.className = "dashboard-subject-icon";
   icon.textContent = subjectStats.icon;
-  row.appendChild(icon);
+  main.appendChild(icon);
 
   const info = document.createElement("div");
   info.className = "dashboard-subject-info";
@@ -169,24 +185,29 @@ function buildDashboardSubjectRow(subjectStats) {
   if (subjectStats.averageQuizScorePercent !== null) {
     metaParts.push("Quiz-Ø " + subjectStats.averageQuizScorePercent + "%");
   }
+  if (subjectStats.excluded) {
+    metaParts.push("nicht in Gesamtstatistik");
+  }
   const meta = document.createElement("div");
   meta.className = "dashboard-subject-meta";
   meta.textContent = metaParts.join(" · ");
   info.appendChild(meta);
 
-  row.appendChild(info);
+  main.appendChild(info);
 
   const percentEl = document.createElement("div");
   percentEl.className = "dashboard-subject-percent";
   percentEl.textContent = subjectStats.viewedPercent + "%";
-  row.appendChild(percentEl);
+  main.appendChild(percentEl);
+
+  row.appendChild(main);
 
   return row;
 }
 
-function renderDashboard(container, subjects, progress, onSelectSubject) {
+function renderDashboard(container, subjects, progress, excludedSubjectIds, onSelectSubject, onToggleExclude) {
   container.innerHTML = "";
-  const stats = computeDashboardStats(subjects, progress);
+  const stats = computeDashboardStats(subjects, progress, excludedSubjectIds);
 
   const overview = document.createElement("div");
   overview.className = "dashboard-overview";
@@ -257,9 +278,14 @@ function renderDashboard(container, subjects, progress, onSelectSubject) {
     list.appendChild(buildDashboardSubjectRow(subjectStats));
   });
   list.addEventListener("click", function (e) {
-    const row = e.target.closest(".dashboard-subject-row");
-    if (!row) return;
-    onSelectSubject(row.dataset.subjectId);
+    const toggleBtn = e.target.closest(".dashboard-subject-toggle");
+    if (toggleBtn) {
+      onToggleExclude(toggleBtn.closest(".dashboard-subject-row").dataset.subjectId);
+      return;
+    }
+    const main = e.target.closest(".dashboard-subject-main");
+    if (!main) return;
+    onSelectSubject(main.closest(".dashboard-subject-row").dataset.subjectId);
   });
   container.appendChild(list);
 }

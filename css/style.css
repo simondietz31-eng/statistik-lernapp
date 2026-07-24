@@ -368,18 +368,59 @@ main#app {
   --card-accent: var(--accent);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: 14px;
   padding: 0.9rem 1.1rem;
+  transition: border-color 0.12s ease, opacity 0.12s ease;
+}
+.dashboard-subject-row:hover { border-color: var(--card-accent); }
+.dashboard-subject-row.excluded { opacity: 0.55; }
+
+.dashboard-subject-toggle {
+  flex-shrink: 0;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 6px;
+  border: 2px solid var(--card-border);
+  background: var(--card-accent);
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+.dashboard-subject-toggle:hover { border-color: var(--card-accent); }
+.dashboard-subject-toggle::after {
+  content: "✓";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-fg);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.dashboard-subject-row.excluded .dashboard-subject-toggle {
+  background: transparent;
+}
+.dashboard-subject-row.excluded .dashboard-subject-toggle::after { content: ""; }
+
+.dashboard-subject-main {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 0;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
   cursor: pointer;
   text-align: left;
   font: inherit;
   color: var(--fg);
-  transition: border-color 0.12s ease;
 }
-.dashboard-subject-row:hover { border-color: var(--card-accent); }
 .dashboard-subject-icon {
   font-size: 1.3rem;
   width: 2.4rem;

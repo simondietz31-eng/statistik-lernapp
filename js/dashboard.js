@@ -6,7 +6,7 @@ function roundPercent(value) {
   return Math.round(value * 100);
 }
 
-function computeSubjectStats(subject, subjectProgress) {
+function computeSubjectStats(subject, subjectProgress, excluded) {
   const viewedTopics = subjectProgress ? Object.keys(subjectProgress.viewedTopics || {}).length : 0;
   const totalTopics = subject.topics.length;
   const viewedPercent = totalTopics > 0 ? roundPercent(viewedTopics / totalTopics) : 0;
@@ -34,7 +34,8 @@ function computeSubjectStats(subject, subjectProgress) {
     viewedPercent: viewedPercent,
     quizAttempts: quizAttempts,
     perfectTopics: perfectTopics,
-    averageQuizScorePercent: averageQuizScorePercent
+    averageQuizScorePercent: averageQuizScorePercent,
+    excluded: excluded
   };
 }
 
@@ -100,25 +101,30 @@ function findStrongestAndWeakestSubject(subjectStats) {
   };
 }
 
-function computeDashboardStats(subjects, progress) {
+function computeDashboardStats(subjects, progress, excludedSubjectIds) {
+  const excludedSet = {};
+  (excludedSubjectIds || []).forEach(function (id) { excludedSet[id] = true; });
+
   const subjectStats = subjects.map(function (subject) {
-    return computeSubjectStats(subject, progress.subjects && progress.subjects[subject.id]);
+    return computeSubjectStats(subject, progress.subjects && progress.subjects[subject.id], !!excludedSet[subject.id]);
   });
+  const includedStats = subjectStats.filter(function (s) { return !s.excluded; });
+  const includedSubjects = subjects.filter(function (subject) { return !excludedSet[subject.id]; });
 
-  const totalTopics = subjectStats.reduce(function (sum, s) { return sum + s.totalTopics; }, 0);
-  const viewedTopics = subjectStats.reduce(function (sum, s) { return sum + s.viewedTopics; }, 0);
-  const subjectsStarted = subjectStats.filter(function (s) { return s.viewedTopics > 0 || s.quizAttempts > 0; }).length;
-  const totalQuizAttempts = subjectStats.reduce(function (sum, s) { return sum + s.quizAttempts; }, 0);
-  const perfectTopics = subjectStats.reduce(function (sum, s) { return sum + s.perfectTopics; }, 0);
+  const totalTopics = includedStats.reduce(function (sum, s) { return sum + s.totalTopics; }, 0);
+  const viewedTopics = includedStats.reduce(function (sum, s) { return sum + s.viewedTopics; }, 0);
+  const subjectsStarted = includedStats.filter(function (s) { return s.viewedTopics > 0 || s.quizAttempts > 0; }).length;
+  const totalQuizAttempts = includedStats.reduce(function (sum, s) { return sum + s.quizAttempts; }, 0);
+  const perfectTopics = includedStats.reduce(function (sum, s) { return sum + s.perfectTopics; }, 0);
 
-  const scorePercentages = subjectStats
+  const scorePercentages = includedStats
     .filter(function (s) { return s.averageQuizScorePercent !== null; })
     .map(function (s) { return s.averageQuizScorePercent; });
   const averageQuizScorePercent = scorePercentages.length > 0
     ? Math.round(scorePercentages.reduce(function (a, b) { return a + b; }, 0) / scorePercentages.length)
     : null;
 
-  const strongestAndWeakest = findStrongestAndWeakestSubject(subjectStats);
+  const strongestAndWeakest = findStrongestAndWeakestSubject(includedStats);
 
   const sortedSubjects = subjectStats.slice().sort(function (a, b) { return b.viewedPercent - a.viewedPercent; });
 
@@ -132,7 +138,7 @@ function computeDashboardStats(subjects, progress) {
       totalQuizAttempts: totalQuizAttempts,
       perfectTopics: perfectTopics,
       averageQuizScorePercent: averageQuizScorePercent,
-      lastActivity: findLastActivity(subjects, progress),
+      lastActivity: findLastActivity(includedSubjects, progress),
       strongestSubject: strongestAndWeakest.strongestSubject,
       weakestSubject: strongestAndWeakest.weakestSubject
     },

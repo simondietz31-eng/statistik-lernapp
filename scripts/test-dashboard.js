@@ -199,6 +199,74 @@ function main() {
     assert.strictEqual(stats.subjects[1].id, "low");
   });
 
+  run("ausgeschlossene Faecher zaehlen nicht in die Gesamtwerte, bleiben aber in der Liste mit excluded:true", function () {
+    const subjects = [
+      makeSubject("a", "Fach A", [{ id: "t1" }, { id: "t2" }]),
+      makeSubject("b", "Fach B", [{ id: "t1" }, { id: "t2" }])
+    ];
+    const progress = {
+      subjects: {
+        a: { viewedTopics: { t1: "2026-01-01T10:00:00.000Z", t2: "2026-01-01T10:00:00.000Z" }, quizResults: {} },
+        b: { viewedTopics: { t1: "2026-01-01T10:00:00.000Z" }, quizResults: {} }
+      }
+    };
+    const stats = computeDashboardStats(subjects, progress, ["a"]);
+
+    // Overall stats only reflect subject "b" (2 topics total, 1 viewed).
+    assert.strictEqual(stats.overall.totalTopics, 2);
+    assert.strictEqual(stats.overall.viewedTopics, 1);
+    assert.strictEqual(stats.overall.viewedPercent, 50);
+    assert.strictEqual(stats.overall.subjectsStarted, 1);
+    assert.strictEqual(stats.overall.subjectsTotal, 2);
+
+    // Both subjects still appear in the list, subject "a" flagged as excluded.
+    assert.strictEqual(stats.subjects.length, 2);
+    const subjectA = stats.subjects.find(function (s) { return s.id === "a"; });
+    const subjectB = stats.subjects.find(function (s) { return s.id === "b"; });
+    assert.strictEqual(subjectA.excluded, true);
+    assert.strictEqual(subjectA.viewedPercent, 100); // per-subject numbers unaffected by exclusion
+    assert.strictEqual(subjectB.excluded, false);
+  });
+
+  run("ausgeschlossene Faecher fliessen nicht in lastActivity oder staerkstes/schwaechstes Fach ein", function () {
+    const subjects = [
+      makeSubject("a", "Fach A", [{ id: "t1" }]),
+      makeSubject("b", "Fach B", [{ id: "t1" }]),
+      makeSubject("c", "Fach C", [{ id: "t1" }])
+    ];
+    const progress = {
+      subjects: {
+        a: {
+          viewedTopics: {},
+          quizResults: { t1: { lastScore: 1, lastTotal: 1, bestScore: 1, bestTotal: 1, attempts: 1, lastAttemptAt: "2026-05-01T10:00:00.000Z" } }
+        },
+        b: {
+          viewedTopics: {},
+          quizResults: { t1: { lastScore: 0, lastTotal: 1, bestScore: 0, bestTotal: 1, attempts: 1, lastAttemptAt: "2026-01-01T10:00:00.000Z" } }
+        },
+        c: {
+          viewedTopics: {},
+          quizResults: { t1: { lastScore: 1, lastTotal: 2, bestScore: 1, bestTotal: 2, attempts: 1, lastAttemptAt: "2026-02-01T10:00:00.000Z" } }
+        }
+      }
+    };
+    // Exclude "a", which would otherwise be both lastActivity and strongestSubject.
+    const stats = computeDashboardStats(subjects, progress, ["a"]);
+
+    assert.strictEqual(stats.overall.lastActivity.subjectId, "c");
+    assert.strictEqual(stats.overall.strongestSubject.id, "c");
+    assert.strictEqual(stats.overall.weakestSubject.id, "b");
+    assert.strictEqual(stats.overall.totalQuizAttempts, 2);
+  });
+
+  run("excludedSubjectIds ist optional (Standard: kein Fach ausgeschlossen)", function () {
+    const subjects = [makeSubject("a", "Fach A", [{ id: "t1" }])];
+    const progress = { subjects: { a: { viewedTopics: { t1: "2026-01-01T10:00:00.000Z" }, quizResults: {} } } };
+    const stats = computeDashboardStats(subjects, progress);
+    assert.strictEqual(stats.overall.viewedTopics, 1);
+    assert.strictEqual(stats.subjects[0].excluded, false);
+  });
+
   if (process.exitCode === 1) {
     console.error("\ncomputeDashboardStats: einige Tests sind fehlgeschlagen.");
   } else {

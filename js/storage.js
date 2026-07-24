@@ -1,7 +1,7 @@
 const STORAGE_KEY = "statistik-lernapp:progress:v2";
 
 function defaultProgress() {
-  return { version: 2, subjects: {}, darkMode: "auto", studiengangFilter: "alle", semesterFilter: "alle" };
+  return { version: 2, subjects: {}, darkMode: "auto", studiengangFilter: "alle", semesterFilter: "alle", dashboardExcludedSubjects: [] };
 }
 
 function loadProgress() {
@@ -86,11 +86,26 @@ function setSemesterFilter(value) {
   saveProgress(progress);
 }
 
+function getDashboardExcludedSubjects() {
+  return loadProgress().dashboardExcludedSubjects || [];
+}
+
+function toggleDashboardSubjectExcluded(subjectId) {
+  const progress = loadProgress();
+  const excluded = progress.dashboardExcludedSubjects || [];
+  const index = excluded.indexOf(subjectId);
+  progress.dashboardExcludedSubjects = index === -1
+    ? excluded.concat([subjectId])
+    : excluded.slice(0, index).concat(excluded.slice(index + 1));
+  saveProgress(progress);
+}
+
 function resetProgress() {
   const progress = defaultProgress();
   progress.darkMode = getDarkModePref();
   progress.studiengangFilter = getStudiengangFilter();
   progress.semesterFilter = getSemesterFilter();
+  progress.dashboardExcludedSubjects = getDashboardExcludedSubjects();
   saveProgress(progress);
 }
 

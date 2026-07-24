@@ -32,13 +32,23 @@ function setView(viewName) {
   });
 
   if (viewName === "STUDIENGANG_SELECT") {
-    renderDashboardTile(document.getElementById("dashboard-tile-container"), SUBJECTS, loadProgress());
+    renderDashboardTile(document.getElementById("dashboard-tile-container"), SUBJECTS, loadProgress(), getDashboardExcludedSubjects());
     renderStudiengangGrid(document.getElementById("studiengaenge-container"), SUBJECTS);
   } else if (viewName === "DASHBOARD") {
-    renderDashboard(document.getElementById("dashboard-container"), SUBJECTS, loadProgress(), function (subjectId) {
-      state.currentSubjectId = subjectId;
-      setView("TOPIC_GRID");
-    });
+    renderDashboard(
+      document.getElementById("dashboard-container"),
+      SUBJECTS,
+      loadProgress(),
+      getDashboardExcludedSubjects(),
+      function (subjectId) {
+        state.currentSubjectId = subjectId;
+        setView("TOPIC_GRID");
+      },
+      function (subjectId) {
+        toggleDashboardSubjectExcluded(subjectId);
+        setView("DASHBOARD");
+      }
+    );
   } else if (viewName === "SEMESTER_SELECT") {
     const studiengangFilter = getStudiengangFilter();
     document.getElementById("semester-title").textContent =
