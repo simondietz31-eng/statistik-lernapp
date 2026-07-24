@@ -217,7 +217,8 @@ function main() {
     assert.strictEqual(stats.overall.viewedTopics, 1);
     assert.strictEqual(stats.overall.viewedPercent, 50);
     assert.strictEqual(stats.overall.subjectsStarted, 1);
-    assert.strictEqual(stats.overall.subjectsTotal, 2);
+    // subjectsTotal counts only included subjects ("a" is excluded), so 1 - not 2.
+    assert.strictEqual(stats.overall.subjectsTotal, 1);
 
     // Both subjects still appear in the list, subject "a" flagged as excluded.
     assert.strictEqual(stats.subjects.length, 2);

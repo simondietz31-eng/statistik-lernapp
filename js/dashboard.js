@@ -134,7 +134,7 @@ function computeDashboardStats(subjects, progress, excludedSubjectIds) {
       viewedTopics: viewedTopics,
       viewedPercent: totalTopics > 0 ? roundPercent(viewedTopics / totalTopics) : 0,
       subjectsStarted: subjectsStarted,
-      subjectsTotal: subjects.length,
+      subjectsTotal: includedSubjects.length,
       totalQuizAttempts: totalQuizAttempts,
       perfectTopics: perfectTopics,
       averageQuizScorePercent: averageQuizScorePercent,
