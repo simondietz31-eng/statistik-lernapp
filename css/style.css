@@ -319,7 +319,86 @@ main#app {
   cursor: pointer;
 }
 
+.progress-bar {
+  --card-accent: var(--accent);
+  height: 8px;
+  border-radius: 999px;
+  background: var(--bg);
+  border: 1px solid var(--card-border);
+  overflow: hidden;
+}
+.progress-bar-fill {
+  height: 100%;
+  background: var(--card-accent);
+  border-radius: 999px;
+}
+
+.dashboard-tile-grid { margin-bottom: 1.75rem; }
+.dashboard-tile { --card-accent: var(--accent); }
+
+.dashboard-overview {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.dashboard-overall-percent { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.75rem; }
+.dashboard-overview .progress-bar { height: 12px; margin-bottom: 0.75rem; }
+
+.dashboard-stat-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.dashboard-stat-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow);
+}
+.dashboard-stat-value { font-weight: 700; font-size: 1.1rem; margin-bottom: 0.25rem; }
+.dashboard-stat-label { color: var(--muted); font-size: 0.82rem; }
+
+.dashboard-subject-list { display: flex; flex-direction: column; gap: 0.75rem; }
+.dashboard-subject-row {
+  --card-accent: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 0.9rem 1.1rem;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: var(--fg);
+  transition: border-color 0.12s ease;
+}
+.dashboard-subject-row:hover { border-color: var(--card-accent); }
+.dashboard-subject-icon {
+  font-size: 1.3rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--card-accent) 18%, transparent);
+}
+.dashboard-subject-info { flex-grow: 1; min-width: 0; }
+.dashboard-subject-title { font-weight: 700; margin-bottom: 0.4rem; }
+.dashboard-subject-info .progress-bar { margin-bottom: 0.4rem; }
+.dashboard-subject-meta { color: var(--muted); font-size: 0.82rem; }
+.dashboard-subject-percent { font-weight: 700; font-size: 1.1rem; flex-shrink: 0; }
+
 @media (max-width: 600px) {
   .topic-grid { grid-template-columns: 1fr; }
   main#app { padding: 1rem 1rem 3rem; }
+  .dashboard-subject-row { flex-wrap: wrap; }
 }

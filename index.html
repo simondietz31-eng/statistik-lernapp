@@ -18,7 +18,14 @@
 
   <section id="view-studiengang-select" class="view">
     <h1 class="subject-title">Willkommen! Wähle deinen Studiengang</h1>
+    <div id="dashboard-tile-container"></div>
     <div id="studiengaenge-container"></div>
+  </section>
+
+  <section id="view-dashboard" class="view" hidden>
+    <button class="back-btn" data-back-to="STUDIENGANG_SELECT" type="button">← Studiengänge</button>
+    <h1 class="subject-title">Mein Fortschritt</h1>
+    <div id="dashboard-container"></div>
   </section>
 
   <section id="view-subject-select" class="view" hidden>
@@ -211,6 +218,7 @@
 <!-- DATA_SCRIPTS_END -->
 <script src="js/katex-helper.js"></script>
 <script src="js/storage.js"></script>
+<script src="js/dashboard.js"></script>
 <script src="js/render.js"></script>
 <script src="js/app.js"></script>
 </body>

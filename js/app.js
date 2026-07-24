@@ -12,7 +12,8 @@ const views = {
   EXPLANATION: document.getElementById("view-explanation"),
   EXERCISES: document.getElementById("view-exercises"),
   QUIZ: document.getElementById("view-quiz"),
-  QUIZ_SUMMARY: document.getElementById("view-quiz-summary")
+  QUIZ_SUMMARY: document.getElementById("view-quiz-summary"),
+  DASHBOARD: document.getElementById("view-dashboard")
 };
 
 function getCurrentSubject() {
@@ -30,7 +31,13 @@ function setView(viewName) {
   });
 
   if (viewName === "STUDIENGANG_SELECT") {
+    renderDashboardTile(document.getElementById("dashboard-tile-container"), SUBJECTS, loadProgress());
     renderStudiengangGrid(document.getElementById("studiengaenge-container"), SUBJECTS);
+  } else if (viewName === "DASHBOARD") {
+    renderDashboard(document.getElementById("dashboard-container"), SUBJECTS, loadProgress(), function (subjectId) {
+      state.currentSubjectId = subjectId;
+      setView("TOPIC_GRID");
+    });
   } else if (viewName === "SUBJECT_SELECT") {
     const activeFilter = getStudiengangFilter();
     document.getElementById("studiengang-title").textContent =
@@ -120,6 +127,12 @@ document.getElementById("subjects-container").addEventListener("click", function
   setView("TOPIC_GRID");
 });
 
+document.getElementById("dashboard-tile-container").addEventListener("click", function (e) {
+  const tile = e.target.closest(".dashboard-tile");
+  if (!tile) return;
+  setView("DASHBOARD");
+});
+
 document.getElementById("studiengaenge-container").addEventListener("click", function (e) {
   const card = e.target.closest(".studiengang-card");
   if (!card) return;
@@ -156,7 +169,7 @@ document.getElementById("btn-reset-progress").addEventListener("click", function
   e.preventDefault();
   if (window.confirm("Gesamten Lernfortschritt in allen Fächern (gelernte Themen, Quiz-Ergebnisse) wirklich zurücksetzen?")) {
     resetProgress();
-    const stayOnView = state.view === "STUDIENGANG_SELECT" || state.view === "SUBJECT_SELECT";
+    const stayOnView = state.view === "STUDIENGANG_SELECT" || state.view === "SUBJECT_SELECT" || state.view === "DASHBOARD";
     setView(stayOnView ? state.view : "TOPIC_GRID");
   }
 });
@@ -196,7 +209,7 @@ importFileInput.addEventListener("change", function () {
       return;
     }
     applyDarkModePref();
-    const stayOnView = state.view === "STUDIENGANG_SELECT" || state.view === "SUBJECT_SELECT";
+    const stayOnView = state.view === "STUDIENGANG_SELECT" || state.view === "SUBJECT_SELECT" || state.view === "DASHBOARD";
     setView(stayOnView ? state.view : "TOPIC_GRID");
     window.alert("Fortschritt erfolgreich importiert.");
   };

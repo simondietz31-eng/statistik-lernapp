@@ -87,6 +87,165 @@ function buildCard(options) {
   return card;
 }
 
+function formatDashboardDate(isoString) {
+  const date = new Date(isoString);
+  return date.toLocaleDateString("de-DE", { day: "2-digit", month: "2-digit", year: "numeric" });
+}
+
+function buildProgressBar(percent, accent) {
+  const bar = document.createElement("div");
+  bar.className = "progress-bar";
+  if (accent) bar.style.setProperty("--card-accent", accent);
+  const fill = document.createElement("div");
+  fill.className = "progress-bar-fill";
+  fill.style.width = percent + "%";
+  bar.appendChild(fill);
+  return bar;
+}
+
+function renderDashboardTile(container, subjects, progress) {
+  container.innerHTML = "";
+  const stats = computeDashboardStats(subjects, progress);
+
+  const grid = document.createElement("div");
+  grid.className = "topic-grid subject-grid dashboard-tile-grid";
+
+  const summaryParts = [
+    stats.overall.viewedPercent + "% gelernt",
+    stats.overall.subjectsStarted + " von " + stats.overall.subjectsTotal + " Fächern begonnen"
+  ];
+
+  grid.appendChild(buildCard({
+    className: "dashboard-tile",
+    icon: "📊",
+    title: "Mein Fortschritt",
+    summary: summaryParts.join(" · ")
+  }));
+
+  container.appendChild(grid);
+}
+
+function buildDashboardSubjectRow(subjectStats) {
+  const row = document.createElement("button");
+  row.type = "button";
+  row.className = "dashboard-subject-row";
+  row.dataset.subjectId = subjectStats.id;
+  row.style.setProperty("--card-accent", subjectStats.accent);
+
+  const icon = document.createElement("span");
+  icon.className = "dashboard-subject-icon";
+  icon.textContent = subjectStats.icon;
+  row.appendChild(icon);
+
+  const info = document.createElement("div");
+  info.className = "dashboard-subject-info";
+
+  const title = document.createElement("div");
+  title.className = "dashboard-subject-title";
+  title.textContent = subjectStats.title;
+  info.appendChild(title);
+
+  info.appendChild(buildProgressBar(subjectStats.viewedPercent, subjectStats.accent));
+
+  const metaParts = [subjectStats.viewedTopics + " / " + subjectStats.totalTopics + " Themen"];
+  if (subjectStats.averageQuizScorePercent !== null) {
+    metaParts.push("Quiz-Ø " + subjectStats.averageQuizScorePercent + "%");
+  }
+  const meta = document.createElement("div");
+  meta.className = "dashboard-subject-meta";
+  meta.textContent = metaParts.join(" · ");
+  info.appendChild(meta);
+
+  row.appendChild(info);
+
+  const percentEl = document.createElement("div");
+  percentEl.className = "dashboard-subject-percent";
+  percentEl.textContent = subjectStats.viewedPercent + "%";
+  row.appendChild(percentEl);
+
+  return row;
+}
+
+function renderDashboard(container, subjects, progress, onSelectSubject) {
+  container.innerHTML = "";
+  const stats = computeDashboardStats(subjects, progress);
+
+  const overview = document.createElement("div");
+  overview.className = "dashboard-overview";
+
+  const overallHeading = document.createElement("div");
+  overallHeading.className = "dashboard-overall-percent";
+  overallHeading.textContent = stats.overall.viewedPercent + "%";
+  overview.appendChild(overallHeading);
+
+  overview.appendChild(buildProgressBar(stats.overall.viewedPercent));
+
+  const overallMeta = document.createElement("div");
+  overallMeta.className = "dashboard-subject-meta";
+  overallMeta.textContent = stats.overall.viewedTopics + " von " + stats.overall.totalTopics + " Themen gelernt · " +
+    stats.overall.subjectsStarted + " von " + stats.overall.subjectsTotal + " Fächern begonnen";
+  overview.appendChild(overallMeta);
+
+  container.appendChild(overview);
+
+  const statCards = document.createElement("div");
+  statCards.className = "dashboard-stat-cards";
+
+  function addStatCard(label, value) {
+    const card = document.createElement("div");
+    card.className = "dashboard-stat-card";
+    const valueEl = document.createElement("div");
+    valueEl.className = "dashboard-stat-value";
+    valueEl.textContent = value;
+    const labelEl = document.createElement("div");
+    labelEl.className = "dashboard-stat-label";
+    labelEl.textContent = label;
+    card.appendChild(valueEl);
+    card.appendChild(labelEl);
+    statCards.appendChild(card);
+  }
+
+  addStatCard("Quiz-Versuche insgesamt", stats.overall.totalQuizAttempts);
+  addStatCard("Perfekte Themen (100%)", stats.overall.perfectTopics);
+  if (stats.overall.lastActivity) {
+    addStatCard(
+      "Zuletzt gelernt",
+      stats.overall.lastActivity.topicTitle + " (" + stats.overall.lastActivity.subjectTitle + "), " +
+        formatDashboardDate(stats.overall.lastActivity.at)
+    );
+  } else {
+    addStatCard("Zuletzt gelernt", "Noch keine Aktivität");
+  }
+  if (stats.overall.strongestSubject) {
+    addStatCard(
+      "Stärkstes Fach",
+      stats.overall.strongestSubject.title + " (" + stats.overall.strongestSubject.averageQuizScorePercent + "% Quiz-Ø)"
+    );
+    addStatCard(
+      "Schwächstes Fach",
+      stats.overall.weakestSubject.title + " (" + stats.overall.weakestSubject.averageQuizScorePercent + "% Quiz-Ø)"
+    );
+  }
+
+  container.appendChild(statCards);
+
+  const listHeading = document.createElement("h2");
+  listHeading.textContent = "Fortschritt je Fach";
+  container.appendChild(listHeading);
+
+  const list = document.createElement("div");
+  list.className = "dashboard-subject-list";
+  stats.subjects.forEach(function (subjectStats) {
+    list.appendChild(buildDashboardSubjectRow(subjectStats));
+  });
+  list.addEventListener("click", function (e) {
+    const row = e.target.closest(".dashboard-subject-row");
+    if (!row) return;
+    onSelectSubject(row.dataset.subjectId);
+  });
+  container.appendChild(list);
+}
+
 function renderStudiengangGrid(container, subjects) {
   container.innerHTML = "";
   const grid = document.createElement("div");

@@ -30,6 +30,8 @@ jobs:
         run: node scripts/generate-script-tags.js --check
       - name: Validate content structure
         run: node scripts/validate-content.js
+      - name: Run dashboard unit tests
+        run: node scripts/test-dashboard.js
 
   deploy:
     needs: validate

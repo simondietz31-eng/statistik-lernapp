@@ -18,9 +18,11 @@ css/style.css        Styling inkl. Dark Mode
 js/data/              Themeninhalte je Kapitel (Erklärung, Übungen, Quiz)
 js/app.js             Navigations-Logik (State Machine)
 js/render.js           DOM-Aufbau je View
+js/dashboard.js         Aggregationslogik für das Fortschritts-Dashboard (fachübergreifend)
 js/storage.js          Fortschritt in localStorage
 js/katex-helper.js      Formel-Rendering
 scripts/               Node-Hilfsskripte für Maintainer (kein Build-Schritt für die App selbst)
+scripts/test-dashboard.js  Unit-Tests für js/dashboard.js (node scripts/test-dashboard.js)
 ```
 
 ## Neues Kapitel hinzufügen
