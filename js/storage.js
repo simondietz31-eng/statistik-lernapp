@@ -1,7 +1,7 @@
 const STORAGE_KEY = "statistik-lernapp:progress:v2";
 
 function defaultProgress() {
-  return { version: 2, subjects: {}, darkMode: "auto", studiengangFilter: "alle", semesterFilter: "alle", dashboardExcludedSubjects: [] };
+  return { version: 2, subjects: {}, darkMode: "auto", studiengangFilter: "alle", semesterFilter: "alle", dashboardExcludedSubjects: [], updatedAt: 0 };
 }
 
 function loadProgress() {
@@ -17,10 +17,14 @@ function loadProgress() {
 }
 
 function saveProgress(progress) {
+  progress.updatedAt = Date.now();
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
   } catch (e) {
     // Speicher voll oder nicht verfügbar - Fortschritt bleibt dann nur im Speicher der Sitzung.
+  }
+  if (typeof window !== "undefined" && typeof window.__onProgressSaved === "function") {
+    window.__onProgressSaved(progress);
   }
 }
 
