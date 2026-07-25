@@ -10,6 +10,18 @@ function shuffledIndices(length) {
   return order;
 }
 
+// "yesno" questions (question.type === "yesno") carry a boolean
+// `correctAnswer` instead of `options`/`correctIndex` - these two helpers let
+// the rest of the quiz code (render.js and app.js) treat both question
+// shapes the same way.
+function quizOptions(question) {
+  return question.type === "yesno" ? ["Ja", "Nein"] : question.options;
+}
+
+function quizCorrectIndex(question) {
+  return question.type === "yesno" ? (question.correctAnswer ? 0 : 1) : question.correctIndex;
+}
+
 function getAllStudiengaenge(subjects) {
   const seen = {};
   const result = [];
@@ -547,6 +559,9 @@ function renderExercises(topic, container) {
 function renderQuizQuestion(topic, quizState, container, onAnswer, onNext) {
   container.innerHTML = "";
   const question = topic.quiz[quizState.questionIndex];
+  const isYesNo = question.type === "yesno";
+  const options = quizOptions(question);
+  const correctIndex = quizCorrectIndex(question);
 
   const wrap = document.createElement("div");
   wrap.className = "quiz-question";
@@ -563,12 +578,18 @@ function renderQuizQuestion(topic, quizState, container, onAnswer, onNext) {
 
   if (!quizState.optionOrders) quizState.optionOrders = {};
   if (!quizState.optionOrders[quizState.questionIndex]) {
-    quizState.optionOrders[quizState.questionIndex] = shuffledIndices(question.options.length);
+    quizState.optionOrders[quizState.questionIndex] = shuffledIndices(options.length);
   }
   const order = quizState.optionOrders[quizState.questionIndex];
 
+  // For yesno questions, picking Ja/Nein doesn't answer the question yet -
+  // it only opens the justification form below. The pick is held here
+  // (outside quizState.answers) until the justification is submitted.
+  if (!quizState.pendingChoices) quizState.pendingChoices = {};
+  const pendingChoice = quizState.pendingChoices[quizState.questionIndex];
+
   order.forEach(function (originalIndex) {
-    const optionText = question.options[originalIndex];
+    const optionText = options[originalIndex];
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "quiz-option";
@@ -577,13 +598,21 @@ function renderQuizQuestion(topic, quizState, container, onAnswer, onNext) {
 
     if (answered) {
       btn.disabled = true;
-      if (originalIndex === question.correctIndex) btn.classList.add("correct");
-      if (originalIndex === answered.chosenIndex && originalIndex !== question.correctIndex) btn.classList.add("incorrect");
+      if (originalIndex === correctIndex) btn.classList.add("correct");
+      if (originalIndex === answered.chosenIndex && originalIndex !== correctIndex) btn.classList.add("incorrect");
+    } else if (pendingChoice) {
+      btn.disabled = true;
+      if (originalIndex === pendingChoice.chosenIndex) btn.classList.add("selected");
     }
 
     btn.addEventListener("click", function () {
       if (quizState.answers[quizState.questionIndex]) return;
-      onAnswer(originalIndex);
+      if (isYesNo) {
+        quizState.pendingChoices[quizState.questionIndex] = { chosenIndex: originalIndex, text: "" };
+        renderQuizQuestion(topic, quizState, container, onAnswer, onNext);
+      } else {
+        onAnswer(originalIndex);
+      }
     });
 
     optionsWrap.appendChild(btn);
@@ -591,12 +620,57 @@ function renderQuizQuestion(topic, quizState, container, onAnswer, onNext) {
 
   wrap.appendChild(optionsWrap);
 
+  if (isYesNo && pendingChoice && !answered) {
+    const justifyWrap = document.createElement("div");
+    justifyWrap.className = "quiz-justify";
+
+    const label = document.createElement("label");
+    label.setAttribute("for", "quiz-justification-input");
+    label.textContent =
+      "Begründe kurz, warum \"" + options[pendingChoice.chosenIndex] + "\" richtig ist, bevor du die Lösung siehst:";
+    justifyWrap.appendChild(label);
+
+    const textarea = document.createElement("textarea");
+    textarea.id = "quiz-justification-input";
+    textarea.rows = 3;
+    textarea.value = pendingChoice.text;
+    justifyWrap.appendChild(textarea);
+
+    const submitBtn = document.createElement("button");
+    submitBtn.type = "button";
+    submitBtn.className = "primary-btn";
+    submitBtn.textContent = "Begründung abschicken & Lösung anzeigen";
+    submitBtn.disabled = pendingChoice.text.trim() === "";
+    justifyWrap.appendChild(submitBtn);
+
+    textarea.addEventListener("input", function () {
+      pendingChoice.text = textarea.value;
+      submitBtn.disabled = textarea.value.trim() === "";
+    });
+
+    submitBtn.addEventListener("click", function () {
+      const justification = pendingChoice.text.trim();
+      delete quizState.pendingChoices[quizState.questionIndex];
+      onAnswer(pendingChoice.chosenIndex, justification);
+    });
+
+    wrap.appendChild(justifyWrap);
+    textarea.focus();
+  }
+
   if (answered) {
     const feedback = document.createElement("div");
     feedback.className = "quiz-feedback";
+    feedback.setAttribute("aria-live", "polite");
     const verdict = document.createElement("p");
     verdict.textContent = answered.correct ? "Richtig!" : "Leider falsch.";
     feedback.appendChild(verdict);
+    if (answered.justification) {
+      const ownReasoning = document.createElement("p");
+      ownReasoning.className = "quiz-own-justification";
+      ownReasoning.textContent = "Deine Begründung: „" + answered.justification + "“";
+      feedback.appendChild(ownReasoning);
+    }
     if (question.explanation) {
       const explanationEl = document.createElement("p");
       explanationEl.textContent = question.explanation;

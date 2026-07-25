@@ -101,7 +101,7 @@
       '  </div>' +
       '  <div id="account-modal-signed-in" hidden>' +
       '    <h2>Konto</h2>' +
-      '    <p id="account-status"></p>' +
+      '    <p id="account-status" aria-live="polite"></p>' +
       '    <div class="account-modal-actions">' +
       '      <button type="button" id="account-btn-signout" class="primary-btn">Abmelden</button>' +
       '    </div>' +

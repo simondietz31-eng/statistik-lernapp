@@ -383,6 +383,22 @@ main#app {
 .quiz-option:disabled { cursor: default; }
 .quiz-option.correct { background: var(--correct-bg); border-color: var(--correct); color: var(--correct); font-weight: 600; }
 .quiz-option.incorrect { background: var(--incorrect-bg); border-color: var(--incorrect); color: var(--incorrect); font-weight: 600; }
+.quiz-option.selected { border-color: var(--accent); font-weight: 600; }
+
+.quiz-justify { margin: 1rem 0; display: flex; flex-direction: column; gap: 0.6rem; }
+.quiz-justify label { color: var(--muted); font-weight: 600; }
+.quiz-justify textarea {
+  font: inherit;
+  color: var(--fg);
+  background: var(--bg);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  resize: vertical;
+}
+.quiz-justify .primary-btn { align-self: flex-start; }
+
+.quiz-own-justification { color: var(--muted); font-style: italic; }
 
 .quiz-feedback { margin-top: 0.9rem; padding-top: 0.9rem; border-top: 1px dashed var(--card-border); }
 

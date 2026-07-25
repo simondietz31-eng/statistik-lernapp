@@ -87,7 +87,17 @@ function main() {
         }
         seenQuestionIds.add(question.id);
 
-        if (!Array.isArray(question.options) || question.options.length === 0) {
+        if (question.type === "yesno") {
+          if (typeof question.correctAnswer !== "boolean") {
+            errors.push(`${qWhere}: yesno question needs a boolean "correctAnswer"`);
+          }
+          if (!question.explanation) {
+            errors.push(`${qWhere}: yesno question needs an "explanation" (shown after the user justifies their answer)`);
+          }
+          // options/correctIndex are synthesized at render time (see
+          // quizOptions/quizCorrectIndex in js/render.js) - "Ja"/"Nein" have
+          // no meaningful length bias, so this type is excluded from that check.
+        } else if (!Array.isArray(question.options) || question.options.length === 0) {
           errors.push(`${qWhere}: has no options`);
         } else if (
           !Number.isInteger(question.correctIndex) ||

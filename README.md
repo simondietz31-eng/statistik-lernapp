@@ -25,6 +25,16 @@ scripts/               Node-Hilfsskripte für Maintainer (kein Build-Schritt fü
 scripts/test-dashboard.js  Unit-Tests für js/dashboard.js (node scripts/test-dashboard.js)
 ```
 
+## Quiz-Fragetypen
+
+Standard: Multiple-Choice mit `options` (Array) und `correctIndex` (Index der richtigen Antwort).
+
+Zusätzlich gibt es `type: "yesno"` - eine Ja/Nein-Frage, bei der die Nutzerin/der Nutzer erst eine kurze Begründung eintippen muss, bevor Lösung und Erklärung angezeigt werden (fördert aktives Nachdenken statt Raten). Statt `options`/`correctIndex` verwendet dieser Typ:
+
+```js
+{ id: "q11", type: "yesno", question: "...?", correctAnswer: true, explanation: "..." }
+```
+
 ## Neues Kapitel hinzufügen
 
 1. Neue Datei unter `js/data/` anlegen (z. B. `js/data/neues-fach-chapter1.js`), analog zu einer bestehenden Datei.

@@ -106,12 +106,13 @@ function renderCurrentQuizQuestion() {
     topic,
     state.quiz,
     document.getElementById("quiz-content"),
-    function (chosenIndex) {
+    function (chosenIndex, justification) {
       const question = topic.quiz[state.quiz.questionIndex];
       state.quiz.answers[state.quiz.questionIndex] = {
         questionId: question.id,
         chosenIndex: chosenIndex,
-        correct: chosenIndex === question.correctIndex
+        correct: chosenIndex === quizCorrectIndex(question),
+        justification: justification || undefined
       };
       renderCurrentQuizQuestion();
     },
@@ -248,3 +249,11 @@ importFileInput.addEventListener("change", function () {
 
 applyDarkModePref();
 setView("STUDIENGANG_SELECT");
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("sw.js").catch(function (e) {
+      console.warn("Service Worker Registrierung fehlgeschlagen:", e);
+    });
+  });
+}

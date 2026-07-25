@@ -1,0 +1,14 @@
+{
+  "name": "Statistik-Lernapp",
+  "short_name": "Lernapp",
+  "description": "Lernapp für Statistik, BWL, VWL und weitere Fächer: Erklärung, Übungsaufgaben und Quiz mit Fortschritts-Tracking.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f5f6fa",
+  "theme_color": "#4c5fd5",
+  "lang": "de",
+  "icons": [
+    { "src": "favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
