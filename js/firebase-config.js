@@ -8,5 +8,6 @@ window.FIREBASE_CONFIG = {
   projectId: "lernapp-ef384",
   storageBucket: "lernapp-ef384.firebasestorage.app",
   messagingSenderId: "504257610787",
-  appId: "1:504257610787:web:6e659cafd21ae91e001d96"
+  appId: "1:504257610787:web:6e659cafd21ae91e001d96",
+  measurementId: "G-6CTFESG9D4"
 };

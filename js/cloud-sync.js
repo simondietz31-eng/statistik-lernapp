@@ -178,6 +178,9 @@
     firebase.initializeApp(window.FIREBASE_CONFIG);
     auth = firebase.auth();
     db = firebase.firestore();
+    if (typeof firebase.analytics === "function") {
+      firebase.analytics();
+    }
 
     window.__onProgressSaved = schedulePush;
 
