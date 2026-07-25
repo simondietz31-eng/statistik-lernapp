@@ -1,13 +1,13 @@
-// Offline caching for the Lernapp. Stale-while-revalidate: same-origin GET
-// requests are served from cache instantly if present (so the app works
-// offline / on flaky connections), while a network request always runs in
-// the background to refresh the cache for the *next* load. Cross-origin
-// requests (KaTeX, Firebase CDN scripts) are left untouched.
+// Offline caching for the Lernapp. Network-first: same-origin GET requests
+// always try the network first, so an online user always gets the latest
+// deployed code/content on every load. Only when the network fails (offline,
+// flaky connection) do we fall back to whatever's cached from a previous
+// visit. Cross-origin requests (KaTeX, Firebase CDN scripts) are left
+// untouched.
 //
 // Bump CACHE_VERSION when static asset filenames/paths change shape in a way
-// that needs an explicit cutover; content edits alone don't require it since
-// the network fetch already keeps the cache fresh on every reload.
-const CACHE_VERSION = "v1";
+// that needs an explicit cutover.
+const CACHE_VERSION = "v2";
 const CACHE_NAME = "lernapp-" + CACHE_VERSION;
 
 const CORE_ASSETS = [
@@ -42,16 +42,14 @@ self.addEventListener("fetch", function (event) {
   if (url.origin !== self.location.origin) return;
 
   event.respondWith(
-    caches.match(event.request).then(function (cached) {
-      const networkFetch = fetch(event.request).then(function (response) {
-        if (response.ok) {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then(function (cache) { cache.put(event.request, copy); });
-        }
-        return response;
-      }).catch(function () { return cached; });
-
-      return cached || networkFetch;
+    fetch(event.request).then(function (response) {
+      if (response.ok) {
+        const copy = response.clone();
+        caches.open(CACHE_NAME).then(function (cache) { cache.put(event.request, copy); });
+      }
+      return response;
+    }).catch(function () {
+      return caches.match(event.request);
     })
   );
 });

@@ -91,8 +91,17 @@ function main() {
           if (typeof question.correctAnswer !== "boolean") {
             errors.push(`${qWhere}: yesno question needs a boolean "correctAnswer"`);
           }
+          if (!Array.isArray(question.reasons) || question.reasons.length < 2) {
+            errors.push(`${qWhere}: yesno question needs at least 2 "reasons" (the reason multiple-choice step)`);
+          } else if (
+            !Number.isInteger(question.correctReasonIndex) ||
+            question.correctReasonIndex < 0 ||
+            question.correctReasonIndex >= question.reasons.length
+          ) {
+            errors.push(`${qWhere}: correctReasonIndex ${question.correctReasonIndex} is out of range for ${question.reasons.length} reasons`);
+          }
           if (!question.explanation) {
-            errors.push(`${qWhere}: yesno question needs an "explanation" (shown after the user justifies their answer)`);
+            errors.push(`${qWhere}: yesno question needs an "explanation" (shown after the reason is answered)`);
           }
           // options/correctIndex are synthesized at render time (see
           // quizOptions/quizCorrectIndex in js/render.js) - "Ja"/"Nein" have

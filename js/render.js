@@ -608,7 +608,7 @@ function renderQuizQuestion(topic, quizState, container, onAnswer, onNext) {
     btn.addEventListener("click", function () {
       if (quizState.answers[quizState.questionIndex]) return;
       if (isYesNo) {
-        quizState.pendingChoices[quizState.questionIndex] = { chosenIndex: originalIndex, text: "" };
+        quizState.pendingChoices[quizState.questionIndex] = { chosenIndex: originalIndex };
         renderQuizQuestion(topic, quizState, container, onAnswer, onNext);
       } else {
         onAnswer(originalIndex);
@@ -620,42 +620,51 @@ function renderQuizQuestion(topic, quizState, container, onAnswer, onNext) {
 
   wrap.appendChild(optionsWrap);
 
-  if (isYesNo && pendingChoice && !answered) {
-    const justifyWrap = document.createElement("div");
-    justifyWrap.className = "quiz-justify";
+  // For yesno questions, picking Ja/Nein only opens a second, independent
+  // multiple-choice step asking for the reason - the question only counts as
+  // answered (quizState.answers) once a reason is picked too.
+  if (isYesNo && (pendingChoice || answered)) {
+    const reasonWrap = document.createElement("div");
+    reasonWrap.className = "quiz-reason";
 
-    const label = document.createElement("label");
-    label.setAttribute("for", "quiz-justification-input");
-    label.textContent =
-      "Begründe kurz, warum \"" + options[pendingChoice.chosenIndex] + "\" richtig ist, bevor du die Lösung siehst:";
-    justifyWrap.appendChild(label);
+    const reasonLabel = document.createElement("p");
+    reasonLabel.className = "quiz-reason-label";
+    reasonLabel.textContent = "Warum?";
+    reasonWrap.appendChild(reasonLabel);
 
-    const textarea = document.createElement("textarea");
-    textarea.id = "quiz-justification-input";
-    textarea.rows = 3;
-    textarea.value = pendingChoice.text;
-    justifyWrap.appendChild(textarea);
+    const reasonOptionsWrap = document.createElement("div");
+    reasonOptionsWrap.className = "quiz-options";
 
-    const submitBtn = document.createElement("button");
-    submitBtn.type = "button";
-    submitBtn.className = "primary-btn";
-    submitBtn.textContent = "Begründung abschicken & Lösung anzeigen";
-    submitBtn.disabled = pendingChoice.text.trim() === "";
-    justifyWrap.appendChild(submitBtn);
+    if (!quizState.reasonOrders) quizState.reasonOrders = {};
+    if (!quizState.reasonOrders[quizState.questionIndex]) {
+      quizState.reasonOrders[quizState.questionIndex] = shuffledIndices(question.reasons.length);
+    }
+    const reasonOrder = quizState.reasonOrders[quizState.questionIndex];
 
-    textarea.addEventListener("input", function () {
-      pendingChoice.text = textarea.value;
-      submitBtn.disabled = textarea.value.trim() === "";
+    reasonOrder.forEach(function (reasonIndex) {
+      const rBtn = document.createElement("button");
+      rBtn.type = "button";
+      rBtn.className = "quiz-option";
+      rBtn.textContent = question.reasons[reasonIndex];
+      renderMathIn(rBtn);
+
+      if (answered) {
+        rBtn.disabled = true;
+        if (reasonIndex === question.correctReasonIndex) rBtn.classList.add("correct");
+        if (reasonIndex === answered.reasonIndex && reasonIndex !== question.correctReasonIndex) rBtn.classList.add("incorrect");
+      }
+
+      rBtn.addEventListener("click", function () {
+        if (quizState.answers[quizState.questionIndex]) return;
+        delete quizState.pendingChoices[quizState.questionIndex];
+        onAnswer(pendingChoice.chosenIndex, reasonIndex);
+      });
+
+      reasonOptionsWrap.appendChild(rBtn);
     });
 
-    submitBtn.addEventListener("click", function () {
-      const justification = pendingChoice.text.trim();
-      delete quizState.pendingChoices[quizState.questionIndex];
-      onAnswer(pendingChoice.chosenIndex, justification);
-    });
-
-    wrap.appendChild(justifyWrap);
-    textarea.focus();
+    reasonWrap.appendChild(reasonOptionsWrap);
+    wrap.appendChild(reasonWrap);
   }
 
   if (answered) {
@@ -665,12 +674,6 @@ function renderQuizQuestion(topic, quizState, container, onAnswer, onNext) {
     const verdict = document.createElement("p");
     verdict.textContent = answered.correct ? "Richtig!" : "Leider falsch.";
     feedback.appendChild(verdict);
-    if (answered.justification) {
-      const ownReasoning = document.createElement("p");
-      ownReasoning.className = "quiz-own-justification";
-      ownReasoning.textContent = "Deine Begründung: „" + answered.justification + "“";
-      feedback.appendChild(ownReasoning);
-    }
     if (question.explanation) {
       const explanationEl = document.createElement("p");
       explanationEl.textContent = question.explanation;

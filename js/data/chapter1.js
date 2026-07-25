@@ -77,7 +77,12 @@ const CHAPTER1_TOPICS = [
       { id: "q8", question: "Welche der folgenden Aussagen zur Klassifikation von Merkmalen ist korrekt?", options: ["Qualitativ/quantitativ, häufbar/nicht-häufbar und diskret/stetig sind drei unabhängige Klassifikationskriterien", "Häufbare Merkmale können sowohl qualitativ als auch quantitativ sein", "Ein Merkmal kann nicht gleichzeitig quantitativ und diskret sein", "Diskret/stetig gilt auch für qualitative Merkmale"], correctIndex: 0, explanation: "Es handelt sich um drei unabhängige Kriterien; die Unterscheidung diskret/stetig betrifft dabei nur quantitative Merkmale, und häufbare Merkmale sind immer qualitativ." },
       { id: "q9", question: "Ein Merkmalswert von '23 Jahre' beim Merkmal 'Alter' ist...", options: ["die konkret beobachtete Ausprägung des Merkmals bei einem Merkmalsträger", "die Grundgesamtheit", "der Merkmalsträger", "ein qualitatives Merkmal"], correctIndex: 0, explanation: "Der Merkmalswert ist die konkret bei einem Merkmalsträger beobachtete Ausprägung des Merkmals, hier 23 Jahre beim Merkmal Alter." },
       { id: "q10", question: "Welche Aussage trifft auf das Merkmal 'Studienfach' zu?", options: ["Es ist eine Grundgesamtheit", "Es ist qualitativ, da es Kategorien beschreibt", "Es ist quantitativ und stetig", "Es ist häufbar per Definition"], correctIndex: 1, explanation: "Studienfach wird explizit als Beispiel für ein qualitatives Merkmal genannt, da es Kategorien und keine Zahlenwerte beschreibt." },
-      { id: "q11", type: "yesno", question: "Kann ein Merkmal gleichzeitig häufbar und quantitativ sein?", correctAnswer: false, explanation: "Nein: häufbare Merkmale sind per Definition immer qualitativ. Ein quantitatives Merkmal hat für jeden Merkmalsträger genau einen (numerischen) Wert, kann also nicht mehrfach gleichzeitig auftreten." }
+      { id: "q11", type: "yesno", question: "Kann ein Merkmal gleichzeitig häufbar und quantitativ sein?", correctAnswer: false, reasons: [
+        "Nein, weil häufbare Merkmale per Definition immer qualitativ sind.",
+        "Ja, weil auch Zahlenwerte mehrfach gleichzeitig auftreten können.",
+        "Nein, weil quantitative Merkmale grundsätzlich stetig sind.",
+        "Ja, weil Häufbarkeit nur bei diskreten Merkmalen ausgeschlossen ist."
+      ], correctReasonIndex: 0, explanation: "Häufbare Merkmale sind per Definition immer qualitativ: ein quantitatives Merkmal hat für jeden Merkmalsträger genau einen numerischen Wert und kann daher nicht mehrfach gleichzeitig auftreten." }
     ]
   },
   {

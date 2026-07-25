@@ -29,10 +29,18 @@ scripts/test-dashboard.js  Unit-Tests für js/dashboard.js (node scripts/test-da
 
 Standard: Multiple-Choice mit `options` (Array) und `correctIndex` (Index der richtigen Antwort).
 
-Zusätzlich gibt es `type: "yesno"` - eine Ja/Nein-Frage, bei der die Nutzerin/der Nutzer erst eine kurze Begründung eintippen muss, bevor Lösung und Erklärung angezeigt werden (fördert aktives Nachdenken statt Raten). Statt `options`/`correctIndex` verwendet dieser Typ:
+Zusätzlich gibt es `type: "yesno"` - eine Ja/Nein-Frage mit einem zweiten, unabhängigen Multiple-Choice-Schritt: erst Ja/Nein wählen, dann aus mehreren Begründungen die richtige auswählen, bevor Lösung und Erklärung angezeigt werden (verhindert Raten allein anhand der Ja/Nein-Option). Statt `options`/`correctIndex` verwendet dieser Typ:
 
 ```js
-{ id: "q11", type: "yesno", question: "...?", correctAnswer: true, explanation: "..." }
+{
+  id: "q11",
+  type: "yesno",
+  question: "...?",
+  correctAnswer: true,
+  reasons: ["Begründung A", "Begründung B", "Begründung C", "Begründung D"],
+  correctReasonIndex: 0,
+  explanation: "..."
+}
 ```
 
 ## Neues Kapitel hinzufügen

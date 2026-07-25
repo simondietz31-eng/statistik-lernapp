@@ -106,14 +106,18 @@ function renderCurrentQuizQuestion() {
     topic,
     state.quiz,
     document.getElementById("quiz-content"),
-    function (chosenIndex, justification) {
+    function (chosenIndex, reasonIndex) {
       const question = topic.quiz[state.quiz.questionIndex];
-      state.quiz.answers[state.quiz.questionIndex] = {
+      const answer = {
         questionId: question.id,
         chosenIndex: chosenIndex,
-        correct: chosenIndex === quizCorrectIndex(question),
-        justification: justification || undefined
+        correct: chosenIndex === quizCorrectIndex(question)
       };
+      if (reasonIndex !== undefined) {
+        answer.reasonIndex = reasonIndex;
+        answer.reasonCorrect = reasonIndex === question.correctReasonIndex;
+      }
+      state.quiz.answers[state.quiz.questionIndex] = answer;
       renderCurrentQuizQuestion();
     },
     function () {
