@@ -1,3 +1,15 @@
+function shuffledIndices(length) {
+  const order = [];
+  for (let i = 0; i < length; i++) order.push(i);
+  for (let i = order.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const tmp = order[i];
+    order[i] = order[j];
+    order[j] = tmp;
+  }
+  return order;
+}
+
 function getAllStudiengaenge(subjects) {
   const seen = {};
   const result = [];
@@ -549,7 +561,14 @@ function renderQuizQuestion(topic, quizState, container, onAnswer, onNext) {
 
   const answered = quizState.answers[quizState.questionIndex];
 
-  question.options.forEach(function (optionText, index) {
+  if (!quizState.optionOrders) quizState.optionOrders = {};
+  if (!quizState.optionOrders[quizState.questionIndex]) {
+    quizState.optionOrders[quizState.questionIndex] = shuffledIndices(question.options.length);
+  }
+  const order = quizState.optionOrders[quizState.questionIndex];
+
+  order.forEach(function (originalIndex) {
+    const optionText = question.options[originalIndex];
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "quiz-option";
@@ -558,13 +577,13 @@ function renderQuizQuestion(topic, quizState, container, onAnswer, onNext) {
 
     if (answered) {
       btn.disabled = true;
-      if (index === question.correctIndex) btn.classList.add("correct");
-      if (index === answered.chosenIndex && index !== question.correctIndex) btn.classList.add("incorrect");
+      if (originalIndex === question.correctIndex) btn.classList.add("correct");
+      if (originalIndex === answered.chosenIndex && originalIndex !== question.correctIndex) btn.classList.add("incorrect");
     }
 
     btn.addEventListener("click", function () {
       if (quizState.answers[quizState.questionIndex]) return;
-      onAnswer(index);
+      onAnswer(originalIndex);
     });
 
     optionsWrap.appendChild(btn);
