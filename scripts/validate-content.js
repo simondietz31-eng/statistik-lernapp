@@ -42,6 +42,18 @@ function loadSubjects() {
 // can guess it without reading - track this globally rather than
 // per-question since occasional length ties are unavoidable when writing
 // plausible distractors by hand.
+//
+// Lesson from generating this app's content in bulk (309 yesno questions
+// added via 13 parallel content-writing agents): telling an agent once, in
+// prose, "keep option lengths similar" is not enough - it reliably still
+// writes the correct answer as the most detailed/longest one, because a
+// factually complete justification just tends to run longer than a vague
+// wrong one. Only ~11% came out unbiased despite the explicit instruction.
+// If you have LLM agents generate quiz-style content with a "correct
+// answer" at a specific index in an array of options, either (a) have them
+// verify their own output against a script like trackLengthBias() below
+// and iterate before finishing, or (b) plan a dedicated post-generation
+// balancing pass instead of relying on the instruction alone.
 function trackLengthBias(items, correctIndex, counters) {
   const lengths = items.map((o) => String(o).length);
   const maxLength = Math.max(...lengths);
