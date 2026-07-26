@@ -36,18 +36,31 @@ function loadSubjects() {
   return context.__SUBJECTS__;
 }
 
+// Both option lists (multiple-choice) and reason lists (yesno) are shown in
+// random order at runtime (see js/render.js shuffledIndices), but if the
+// correct entry is consistently the longest piece of text, attentive users
+// can guess it without reading - track this globally rather than
+// per-question since occasional length ties are unavoidable when writing
+// plausible distractors by hand.
+function trackLengthBias(items, correctIndex, counters) {
+  const lengths = items.map((o) => String(o).length);
+  const maxLength = Math.max(...lengths);
+  const longestIndices = lengths.reduce((acc, l, i) => (l === maxLength ? acc.concat(i) : acc), []);
+  if (new Set(lengths).size > 1) {
+    counters.varying++;
+    if (longestIndices.length === 1 && longestIndices[0] === correctIndex) {
+      counters.longestCorrect++;
+    }
+  }
+}
+
 function main() {
   const subjects = loadSubjects();
   const errors = [];
   const warnings = [];
 
-  // Answer options are shown in random order at runtime (see js/render.js
-  // shuffledIndices), but if the correct answer is consistently the longest
-  // option, attentive users can guess it without reading the question. Track
-  // this globally rather than per-question since occasional length ties are
-  // unavoidable when writing plausible distractors by hand.
-  let questionsWithVaryingLengths = 0;
-  let longestIsUniquelyCorrect = 0;
+  const optionBias = { varying: 0, longestCorrect: 0 };
+  const reasonBias = { varying: 0, longestCorrect: 0 };
 
   if (!Array.isArray(subjects)) {
     console.error("SUBJECTS was not found or is not an array after loading js/data/*.js");
@@ -103,9 +116,9 @@ function main() {
           if (!question.explanation) {
             errors.push(`${qWhere}: yesno question needs an "explanation" (shown after the reason is answered)`);
           }
-          // options/correctIndex are synthesized at render time (see
-          // quizOptions/quizCorrectIndex in js/render.js) - "Ja"/"Nein" have
-          // no meaningful length bias, so this type is excluded from that check.
+          if (Array.isArray(question.reasons) && Number.isInteger(question.correctReasonIndex)) {
+            trackLengthBias(question.reasons, question.correctReasonIndex, reasonBias);
+          }
         } else if (!Array.isArray(question.options) || question.options.length === 0) {
           errors.push(`${qWhere}: has no options`);
         } else if (
@@ -115,29 +128,31 @@ function main() {
         ) {
           errors.push(`${qWhere}: correctIndex ${question.correctIndex} is out of range for ${question.options.length} options`);
         } else {
-          const lengths = question.options.map((o) => String(o).length);
-          const maxLength = Math.max(...lengths);
-          const longestIndices = lengths.reduce((acc, l, i) => (l === maxLength ? acc.concat(i) : acc), []);
-          if (new Set(lengths).size > 1) {
-            questionsWithVaryingLengths++;
-            if (longestIndices.length === 1 && longestIndices[0] === question.correctIndex) {
-              longestIsUniquelyCorrect++;
-            }
-          }
+          trackLengthBias(question.options, question.correctIndex, optionBias);
         }
       });
     });
   });
 
-  if (questionsWithVaryingLengths > 0) {
-    const biasPercent = (100 * longestIsUniquelyCorrect) / questionsWithVaryingLengths;
-    // ~25% is the baseline for 4-option questions if option length carried no
-    // signal; flag decks that drift well above that.
+  // ~25% is the baseline for 4-option lists if length carried no signal;
+  // flag decks that drift well above that.
+  if (optionBias.varying > 0) {
+    const biasPercent = (100 * optionBias.longestCorrect) / optionBias.varying;
     if (biasPercent > 32) {
       warnings.push(
-        `${longestIsUniquelyCorrect} of ${questionsWithVaryingLengths} questions with varying option lengths ` +
+        `${optionBias.longestCorrect} of ${optionBias.varying} multiple-choice questions with varying option lengths ` +
         `(${biasPercent.toFixed(1)}%) have the correct answer as the uniquely longest option - consider shortening ` +
         `correct answers or lengthening distractors so option length doesn't give the answer away.`
+      );
+    }
+  }
+  if (reasonBias.varying > 0) {
+    const biasPercent = (100 * reasonBias.longestCorrect) / reasonBias.varying;
+    if (biasPercent > 32) {
+      warnings.push(
+        `${reasonBias.longestCorrect} of ${reasonBias.varying} yesno questions with varying reason lengths ` +
+        `(${biasPercent.toFixed(1)}%) have the correct reason as the uniquely longest text - consider shortening ` +
+        `correct reasons or lengthening distractor reasons so length doesn't give the answer away.`
       );
     }
   }

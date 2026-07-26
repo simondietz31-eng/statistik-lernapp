@@ -194,6 +194,20 @@ const PRODUKTIONSWIRTSCHAFT_CHAPTER7_TOPICS = [
         explanation: "Multiple Sourcing bedeutet, mehrere Lieferanten parallel für dasselbe Teil einzusetzen, um Abhängigkeiten und Ausfallrisiken zu reduzieren."
       },
       {
+        id: "yn1",
+        type: "yesno",
+        question: "Ist Single Sourcing (nur ein Lieferant je Teil) gegenüber Multiple Sourcing in jedem Fall die risikoärmere Wahl?",
+        correctAnswer: false,
+        reasons: [
+          "Nein, weil Single Sourcing zwar eine engere Lieferantenbindung ermöglicht, aber ein höheres Abhängigkeits- und Ausfallrisiko birgt, falls dieser eine Lieferant ausfällt",
+          "Ja, weil bei Single Sourcing grundsätzlich keine Lieferausfälle auftreten können",
+          "Nein, weil Single Sourcing ausschließlich bei rein lokalen Beschaffungsmärkten zulässig ist",
+          "Ja, weil Multiple Sourcing per Definition immer teurer ist als Single Sourcing"
+        ],
+        correctReasonIndex: 0,
+        explanation: "Single Sourcing bindet das Unternehmen eng an einen Lieferanten und erhöht dadurch das Abhängigkeits- und Ausfallrisiko, während Multiple Sourcing dieses Risiko durch mehrere parallele Lieferanten streut, allerdings mit höherem Koordinationsaufwand."
+      },
+      {
         id: "q8",
         question: "Wie hoch liegt das Beschaffungsvolumen bei Endherstellern (OEMs) der Automobilindustrie häufig im Verhältnis zum Umsatz?",
         options: [

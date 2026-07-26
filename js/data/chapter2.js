@@ -57,6 +57,12 @@ const CHAPTER2_TOPICS = [
       { id: "q1", question: "Was gilt für die Summe aller relativen Häufigkeiten $f_i$ einer Verteilung?", options: ["Sie ergibt immer $n$", "Das hängt vom Merkmal ab", "Sie ergibt immer 1", "Sie ergibt immer 0"], correctIndex: 2, explanation: "Die relativen Häufigkeiten summieren sich per Definition immer zu 1 (bzw. 100%)." },
       { id: "q2", question: "Wann verwendet man eine klassifizierte statt einer einfachen Häufigkeitsverteilung?", options: ["Nie, das ist dasselbe", "Bei stetigen Merkmalen oder diskreten Merkmalen mit sehr vielen Werten", "Immer bei qualitativen Merkmalen", "Nur bei nominalskalierten Merkmalen"], correctIndex: 1, explanation: "Klassifizierte Verteilungen fassen viele Einzelwerte zu Klassen zusammen, um die Übersichtlichkeit zu erhöhen." },
       { id: "q3", question: "Wozu dient die Häufigkeitsdichte $d_i$?", options: ["Sie ist nur bei qualitativen Merkmalen definiert", "Sie macht die Balkenfläche proportional zur Häufigkeit, auch bei unterschiedlich breiten Klassen", "Sie ist identisch mit der kumulierten Häufigkeit", "Sie ersetzt die absolute Häufigkeit bei gleich breiten Klassen"], correctIndex: 1, explanation: "Die Häufigkeitsdichte (Häufigkeit / Klassenbreite) sorgt dafür, dass im Histogramm die Fläche - nicht die Höhe - die Häufigkeit korrekt abbildet." },
+      { id: "yn1", type: "yesno", question: "Muss man bei unterschiedlich breiten Klassen die Häufigkeitsdichte statt der absoluten Häufigkeit als Balkenhöhe im Histogramm verwenden?", correctAnswer: true, reasons: [
+        "Ja, weil sonst die Balkenfläche die tatsächliche Häufigkeit nicht mehr korrekt widerspiegelt.",
+        "Nein, weil die absolute Häufigkeit unabhängig von der Klassenbreite immer korrekt abgebildet wird.",
+        "Ja, weil ein Histogramm ausschließlich für qualitative Merkmale zulässig ist.",
+        "Nein, weil die Klassenbreite bei Histogrammen keine Rolle spielt."
+      ], correctReasonIndex: 0, explanation: "Nur mit der Häufigkeitsdichte (Häufigkeit/Klassenbreite) bleibt bei unterschiedlich breiten Klassen die Balkenfläche proportional zur Häufigkeit - bei ungleichen Klassenbreiten würde die absolute Häufigkeit als Höhe ein verzerrtes Bild ergeben." },
       { id: "q4", question: "Welches Skalenniveau wird mindestens benötigt, um eine kumulierte Häufigkeitsverteilung zu bilden?", options: ["Ordinalskala", "Intervallskala", "Verhältnisskala", "Nominalskala"], correctIndex: 0, explanation: "Um Werte 'kleiner oder gleich' zu summieren, müssen sie sich zumindest in eine Rangfolge bringen lassen - das erfordert Ordinalskalenniveau." },
       { id: "q5", question: "Welche grafische Darstellung passt zu einer kumulierten Häufigkeitsverteilung?", options: ["Histogramm", "Kreisdiagramm", "Polygonzug", "Treppenfunktion"], correctIndex: 3, explanation: "Die kumulierte Verteilungsfunktion springt an jedem Merkmalswert und ist dazwischen konstant - das ergibt eine Treppenfunktion." },
       { id: "q6", question: "Ein Histogramm für Klassen unterschiedlicher Breite sollte auf der y-Achse abtragen...", options: ["die Häufigkeitsdichte", "die relative Häufigkeit", "die kumulierte Häufigkeit", "die absolute Häufigkeit"], correctIndex: 0, explanation: "Nur die Häufigkeitsdichte sorgt bei unterschiedlichen Klassenbreiten dafür, dass die Rechteckfläche der tatsächlichen Häufigkeit entspricht." },
@@ -126,6 +132,12 @@ const CHAPTER2_TOPICS = [
     ],
     quiz: [
       { id: "q1", question: "Welches Lagemaß ist am wenigsten anfällig für Ausreißer?", options: ["Median", "Standardabweichung", "Arithmetisches Mittel", "Spannweite"], correctIndex: 0, explanation: "Der Median hängt nur von der mittleren Position der sortierten Werte ab, nicht von deren absoluter Größe." },
+      { id: "yn1", type: "yesno", question: "Lässt sich der Modus auch für ein rein nominalskaliertes Merkmal wie die Automarke berechnen?", correctAnswer: true, reasons: [
+        "Ja, weil der Modus nur den häufigsten Wert bestimmt und keine Rangordnung benötigt.",
+        "Nein, weil der Modus mindestens Ordinalskalenniveau voraussetzt.",
+        "Ja, weil Nominaldaten automatisch auch quantitativ sind.",
+        "Nein, weil der Modus nur bei stetigen Merkmalen definiert ist."
+      ], correctReasonIndex: 0, explanation: "Der Modus ist der häufigste beobachtete Wert und benötigt kein bestimmtes Skalenniveau - er funktioniert daher auch bei rein nominalskalierten Merkmalen wie Automarken." },
       { id: "q2", question: "Welches Skalenniveau wird für die Berechnung des arithmetischen Mittels mindestens benötigt?", options: ["Nominalskala", "Intervallskala", "Kein Skalenniveau nötig", "Ordinalskala"], correctIndex: 1, explanation: "Für eine sinnvolle Summenbildung braucht man mindestens Intervallskalenniveau." },
       { id: "q3", question: "Welches Lagemaß lässt sich auch für rein nominalskalierte Merkmale berechnen?", options: ["Median", "Modus", "Quartilsabstand", "Arithmetisches Mittel"], correctIndex: 1, explanation: "Der Modus (häufigster Wert) benötigt keine Rangordnung und funktioniert daher auch bei Nominaldaten wie z. B. Automarken." },
       { id: "q4", question: "Das zweite Quartil $x_{0{,}5}$ entspricht...", options: ["dem Median", "dem Modus", "der Spannweite", "dem arithmetischen Mittel"], correctIndex: 0, explanation: "Per Definition ist das 50%-Quantil identisch mit dem Median." },
@@ -202,6 +214,12 @@ const CHAPTER2_TOPICS = [
       { id: "q7", question: "Wie ist die Spannweite definiert?", options: ["$R = x_{0{,}75} - x_{0{,}25}$", "$R = s^2 / \\bar{x}$", "$R = x_{(n)} - x_{(1)}$", "$R = \\bar{x} - \\tilde{x}$"], correctIndex: 2, explanation: "Die Spannweite ist der Abstand zwischen dem größten Wert $x_{(n)}$ und dem kleinsten Wert $x_{(1)}$." },
       { id: "q8", question: "Welche Aussage über die Standardabweichung ist korrekt?", options: ["Sie ist die Wurzel der Varianz", "Sie hat immer den Wert 1", "Sie ist immer kleiner als die Varianz", "Sie ist unabhängig von Ausreißern"], correctIndex: 0, explanation: "Per Definition gilt $s = \\sqrt{s^2}$." },
       { id: "q9", question: "Der zentrale Quartilsabstand (IQA) ist definiert als...", options: ["$x_{0{,}75} - x_{0{,}25}$", "$\\bar{x} - x_{0{,}5}$", "$x_{(n)} - x_{(1)}$", "$x_{0{,}5} - x_{0{,}25}$"], correctIndex: 0, explanation: "Der IQA misst den Abstand zwischen dem dritten und dem ersten Quartil und erfasst damit die mittleren 50% der Daten." },
+      { id: "yn1", type: "yesno", question: "Setzt der Variationskoeffizient mindestens Verhältnisskalenniveau voraus?", correctAnswer: true, reasons: [
+        "Ja, weil er als Quotient von Standardabweichung und Mittelwert einen echten Nullpunkt benötigt.",
+        "Nein, weil bereits Ordinalskalenniveau für eine Division ausreicht.",
+        "Ja, weil er ausschließlich bei qualitativen Merkmalen berechnet wird.",
+        "Nein, weil der Variationskoeffizient überhaupt kein Skalenniveau voraussetzt."
+      ], correctReasonIndex: 0, explanation: "Der Variationskoeffizient bildet ein Verhältnis $s/\\bar{x}$, das nur bei einem echten Nullpunkt sinnvoll interpretierbar ist - daher braucht er mindestens Verhältnisskalenniveau." },
       { id: "q10", question: "Warum reagiert die Varianz stärker auf Ausreißer als der Quartilsabstand?", options: ["Weil sie nur die mittleren 50% der Daten nutzt", "Weil sie immer negativ ist", "Weil sie alle Werte quadriert einbezieht, auch extreme", "Weil sie keine Einheit hat"], correctIndex: 2, explanation: "Da in die Varianz jede quadrierte Abweichung eingeht, wirken sich große Abweichungen (Ausreißer) überproportional stark aus." }
     ]
   },
@@ -264,6 +282,12 @@ const CHAPTER2_TOPICS = [
       { id: "q2", question: "Bei einer perfekt symmetrischen Verteilung ist der Schiefekoeffizient ungefähr...", options: ["1", "3", "-1", "0"], correctIndex: 3, explanation: "Symmetrische Verteilungen haben per Definition (annähernd) keine Schiefe, also $\\gamma_1 \\approx 0$." },
       { id: "q3", question: "Welchen Referenzwert nutzt man beim Wölbungskoeffizienten, um mit der Normalverteilung zu vergleichen?", options: ["2", "0", "1", "3"], correctIndex: 3, explanation: "Die Normalverteilung hat einen Wölbungskoeffizienten von genau 3 - das ist der Bezugspunkt für meso-/lepto-/platykurtisch." },
       { id: "q4", question: "Eine leptokurtische Verteilung ist im Vergleich zur Normalverteilung...", options: ["spitzer mit tendenziell mehr Ausreißern", "immer symmetrisch", "flacher", "immer schief"], correctIndex: 0, explanation: "Leptokurtisch ($\\gamma_2 > 3$) bedeutet einen spitzeren Gipfel und ausgeprägtere Ränder." },
+      { id: "yn1", type: "yesno", question: "Gilt eine Verteilung mit einem Wölbungskoeffizienten von genau $\\gamma_2 = 3$ als leptokurtisch?", correctAnswer: false, reasons: [
+        "Nein, weil $\\gamma_2 = 3$ genau dem Referenzwert der Normalverteilung entspricht (mesokurtisch).",
+        "Ja, weil jeder positive Wölbungskoeffizient automatisch leptokurtisch ist.",
+        "Nein, weil Wölbungskoeffizienten grundsätzlich immer 0 sein müssen.",
+        "Ja, weil $\\gamma_2 = 3$ eine besonders flache Verteilung anzeigt."
+      ], correctReasonIndex: 0, explanation: "Ein Wölbungskoeffizient von genau 3 entspricht der Normalverteilung selbst und wird als mesokurtisch bezeichnet - leptokurtisch ist eine Verteilung erst bei $\\gamma_2 > 3$." },
       { id: "q5", question: "Womit wird die Schiefe berechnet?", options: ["Mit den kubierten (3. Potenz) Abweichungen vom Mittelwert", "Nur mit dem Modus", "Mit den quadrierten Abweichungen vom Mittelwert", "Mit der Spannweite"], correctIndex: 0, explanation: "Der Schiefekoeffizient nutzt die dritte Potenz der Abweichungen, geteilt durch die dritte Potenz der Standardabweichung." },
       { id: "q6", question: "In einer linksschiefen (rechtssteilen) Verteilung gilt typischerweise...", options: ["Mittelwert < Median < Modus", "Mittelwert > Median > Modus", "Der Modus ist undefiniert", "Mittelwert = Median = Modus immer exakt"], correctIndex: 0, explanation: "Bei Linksschiefe zieht ein langer linker Schwanz den Mittelwert unter Median und Modus." },
       { id: "q7", question: "Was ist ein mesokurtischer Wölbungswert?", options: ["$\\gamma_2 > 3$", "$\\gamma_2 < 3$", "$\\gamma_2 = 3$", "$\\gamma_2 = 0$"], correctIndex: 2, explanation: "Mesokurtisch bedeutet eine Wölbung wie die Normalverteilung, also $\\gamma_2 = 3$." },
@@ -331,6 +355,12 @@ const CHAPTER2_TOPICS = [
     ],
     quiz: [
       { id: "q1", question: "Wie sieht die Lorenzkurve bei perfekter Gleichverteilung aus?", options: ["Sie liegt auf der Diagonalen", "Sie ist eine Parabel", "Sie verläuft entlang der x-Achse", "Sie existiert nicht"], correctIndex: 0, explanation: "Bei Gleichverteilung entspricht der kumulierte Anteil an der Summe immer genau dem kumulierten Anteil an den Merkmalsträgern - das ergibt die Diagonale." },
+      { id: "yn1", type: "yesno", question: "Liegt die Lorenzkurve bei perfekter Gleichverteilung genau auf der Diagonalen?", correctAnswer: true, reasons: [
+        "Ja, weil dort der kumulierte Anteil an der Summe stets dem kumulierten Anteil der Merkmalsträger entspricht.",
+        "Nein, weil die Diagonale nur beim Gini-Koeffizienten $G=1$ erreicht wird.",
+        "Ja, weil die Lorenzkurve grundsätzlich immer auf der Diagonalen verläuft.",
+        "Nein, weil Gleichverteilung stets eine nach unten gewölbte Kurve ergibt."
+      ], correctReasonIndex: 0, explanation: "Bei völliger Gleichverteilung erhält jeder Anteil an Merkmalsträgern genau denselben Anteil an der Summe, wodurch die Lorenzkurve exakt der Diagonalen entspricht." },
       { id: "q2", question: "Was bedeutet ein Gini-Koeffizient von $G = 0$?", options: ["Negative Werte in den Daten", "Perfekte Gleichverteilung", "Maximale Konzentration", "Die Daten sind fehlerhaft"], correctIndex: 1, explanation: "$G=0$ heißt, die Lorenzkurve liegt auf der Diagonalen - jeder Merkmalsträger trägt anteilig gleich viel zur Summe bei." },
       { id: "q3", question: "Warum normiert man den Gini-Koeffizienten zu $G^*$?", options: ["Um negative Werte zu vermeiden", "Weil $G$ sonst größer als 1 werden kann", "Damit er unabhängig von $n$ stets zwischen 0 und 1 liegt und vergleichbar wird", "Das ist nur bei qualitativen Merkmalen nötig"], correctIndex: 2, explanation: "Der unnormierte Gini-Koeffizient hat ein von $n$ abhängiges Maximum $(n-1)/n$ - die Normierung macht ihn über verschiedene Stichprobengrößen hinweg vergleichbar." },
       { id: "q4", question: "Was zeigt eine Lorenzkurve, die stark unterhalb der Diagonalen verläuft?", options: ["Hohe Konzentration der Summengröße auf wenige Merkmalsträger", "Dass der Gini-Koeffizient negativ ist", "Gleichverteilung", "Einen Rechenfehler"], correctIndex: 0, explanation: "Je weiter die Lorenzkurve von der Diagonale abweicht, desto konzentrierter ist die Verteilung." },
@@ -407,6 +437,12 @@ const CHAPTER2_TOPICS = [
       { id: "q7", question: "Wie ist die Kovarianz zweier Merkmale definiert?", options: ["$\\frac{s}{\\bar{x}}$", "$\\sum x_i \\cdot y_i$", "$\\frac{1}{n}\\sum(x_i-\\bar{x})^2$", "$\\frac{1}{n}\\sum(x_i-\\bar{x})(y_i-\\bar{y})$"], correctIndex: 3, explanation: "Die Kovarianz ist der Mittelwert der Produkte der Abweichungen beider Merkmale von ihren jeweiligen Mittelwerten." },
       { id: "q8", question: "Welches Skalenniveau setzt der Korrelationskoeffizient von Bravais-Pearson bei beiden Merkmalen mindestens voraus?", options: ["Ordinalskala", "Intervallskala", "Nominalskala", "Kein Skalenniveau nötig"], correctIndex: 1, explanation: "Da die Formel auf Mittelwerten und Abweichungen beruht, ist mindestens Intervallskalenniveau erforderlich." },
       { id: "q9", question: "Ein Korrelationskoeffizient von $r < 0$ bedeutet, dass sich die Merkmale...", options: ["immer identisch sind", "gleichgerichtet bewegen", "gegenläufig bewegen", "gar nicht bewegen"], correctIndex: 2, explanation: "Ein negativer Korrelationskoeffizient zeigt an, dass ein Merkmal tendenziell steigt, während das andere fällt." },
+      { id: "yn1", type: "yesno", question: "Bedeutet ein hoher Korrelationskoeffizient zwangsläufig, dass ein Merkmal das andere kausal verursacht?", correctAnswer: false, reasons: [
+        "Nein, weil auch ein Drittfaktor oder Zufall die beobachtete Korrelation erklären kann.",
+        "Ja, weil Korrelation und Kausalität laut Definition dasselbe Konzept sind.",
+        "Nein, weil ein Korrelationskoeffizient grundsätzlich niemals über 0,5 liegen kann.",
+        "Ja, weil ein hoher Korrelationskoeffizient jeden Drittfaktor automatisch ausschließt."
+      ], correctReasonIndex: 0, explanation: "Korrelation impliziert nicht Kausalität: ein starker Zusammenhang kann auch durch Zufall, umgekehrte Wirkungsrichtung oder einen gemeinsamen Drittfaktor entstehen, ohne dass eine direkte Ursache-Wirkungs-Beziehung besteht." },
       { id: "q10", question: "Wie wird der Spearman-Rangkorrelationskoeffizient berechnet?", options: ["Man ersetzt die Werte durch ihre Ränge und wendet darauf die Pearson-Formel an", "Man zählt die Anzahl gleicher Kategorien", "Man berechnet nur die Kovarianz ohne Normierung", "Man wendet die Pearson-Formel direkt auf die Originalwerte an"], correctIndex: 0, explanation: "Beim Spearman-Koeffizienten werden zunächst Ränge gebildet, auf die dann die gewöhnliche Pearson-Formel angewendet wird." }
     ]
   }

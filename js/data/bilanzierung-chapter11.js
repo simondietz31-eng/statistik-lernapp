@@ -185,6 +185,20 @@ const BILANZIERUNG_CHAPTER11_TOPICS = [
         "explanation": "Grundsätzlich ist jeder Vermögensgegenstand und jede Schuld für sich zu bewerten; Sammelbewertungsverfahren sind nur als gesetzlich zugelassene Ausnahme (Durchbrechung) möglich."
       },
       {
+        "id": "yn1",
+        "type": "yesno",
+        "question": "Darf ein Unternehmen den gestiegenen Marktwert eines Betriebsgrundstücks über die Anschaffungskosten hinaus ansetzen, um im Sinne der 'Bilanzwahrheit' ein aktuelleres Bild der Vermögenslage zu vermitteln?",
+        "correctAnswer": false,
+        "reasons": [
+          "Nein, weil der Grundsatz der Bilanzidentität eine Anpassung der Werte gegenüber dem Vorjahr generell ausschließt",
+          "Ja, weil Bilanzwahrheit gerade verlangt, dass die Bilanz stets die aktuellen Verkehrswerte aller Vermögensgegenstände zeigt",
+          "Nein, weil das Anschaffungskostenprinzip (§ 253 Abs. 1 Satz 1 HGB) die Bewertungsobergrenze bildet und unrealisierte Wertsteigerungen wegen des Vorsichtsprinzips nicht ausgewiesen werden dürfen",
+          "Ja, weil das Vorsichtsprinzip bei Grundstücken ausnahmsweise auch Wertsteigerungen zu berücksichtigen verlangt"
+        ],
+        "correctReasonIndex": 2,
+        "explanation": "Bilanzwahrheit bedeutet Wahrheit innerhalb der gesetzlichen Bewertungsvorschriften, nicht die Abbildung von Verkehrswerten - das Anschaffungskostenprinzip bleibt als Bewertungsobergrenze maßgeblich, unrealisierte Gewinne dürfen nach dem Vorsichtsprinzip nicht gezeigt werden."
+      },
+      {
         "id": "q4",
         "question": "Welche Rechtsnorm regelt das Verrechnungs- bzw. Saldierungsverbot?",
         "options": [
@@ -522,6 +536,20 @@ const BILANZIERUNG_CHAPTER11_TOPICS = [
         ],
         "correctIndex": 1,
         "explanation": "§ 255 Abs. 2 Satz 3 HGB räumt hierfür ausdrücklich ein Wahlrecht ein, im Gegensatz zu den zwingenden Pflichtbestandteilen."
+      },
+      {
+        "id": "yn1",
+        "type": "yesno",
+        "question": "Ist ein zusammen mit einer neuen Computer-Workstation angeschafftes Klimaanlagenaggregat als unselbständiger Bestandteil der Workstation in deren Anschaffungskosten einzubeziehen?",
+        "correctAnswer": false,
+        "reasons": [
+          "Ja, weil alle im selben Zeitraum beschafften Anlagegüter eines Unternehmens handelsrechtlich zwingend zu einer Bewertungseinheit zusammengefasst werden müssen",
+          "Nein, weil Kühlgeräte generell als geringwertige Wirtschaftsgüter gelten und deshalb nie aktiviert werden dürfen",
+          "Ja, weil nur der Gesamtkaufpreis der Anschaffungsvorgänge eines Tages für die Aktivierung maßgeblich ist",
+          "Nein, weil das Klimaanlagenaggregat ein eigenständiger Vermögensgegenstand ist und daher mit eigenen Anschaffungskosten separat zu aktivieren ist"
+        ],
+        "correctReasonIndex": 3,
+        "explanation": "Das Klimaanlagenaggregat dient nicht der Betriebsbereitschaft der Workstation, sondern ist ein eigenständiger Vermögensgegenstand mit eigener Nutzungsdauer und eigenen Anschaffungskosten, der separat zu bilanzieren und abzuschreiben ist."
       },
       {
         "id": "q7",
@@ -881,6 +909,20 @@ const BILANZIERUNG_CHAPTER11_TOPICS = [
         "explanation": "§ 250 Abs. 3 HGB gewährt für das Disagio ein Aktivierungswahlrecht als Rechnungsabgrenzungsposten."
       },
       {
+        "id": "yn1",
+        "type": "yesno",
+        "question": "Besteht für entgeltlich erworbene immaterielle Vermögensgegenstände des Anlagevermögens (z. B. gekaufte Software) handelsrechtlich eine Aktivierungspflicht?",
+        "correctAnswer": true,
+        "reasons": [
+          "Nein, weil immaterielle Vermögensgegenstände generell nicht greifbar sind und deshalb nie bilanzierungsfähig sein können",
+          "Ja, weil § 246 Abs. 1 HGB (Vollständigkeitsgrundsatz) für entgeltlich erworbene immaterielle Werte greift und kein Wahlrecht wie bei selbst geschaffenen immateriellen Vermögensgegenständen besteht",
+          "Ja, weil § 248 Abs. 2 Satz 1 HGB ein Aktivierungswahlrecht ausschließlich für entgeltlich erworbene immaterielle Werte einräumt",
+          "Nein, weil nur bei selbst geschaffenen immateriellen Vermögensgegenständen des Anlagevermögens eine Ansatzpflicht besteht"
+        ],
+        "correctReasonIndex": 1,
+        "explanation": "Anders als bei selbstgeschaffenen immateriellen Vermögensgegenständen, für die § 248 Abs. 2 Satz 1 HGB nur ein Wahlrecht einräumt, gilt für entgeltlich erworbene immaterielle Werte die uneingeschränkte Ansatzpflicht aus dem Vollständigkeitsgrundsatz des § 246 Abs. 1 HGB."
+      },
+      {
         "id": "q9",
         "question": "Wie sind geleistete Anzahlungen auf eine noch nicht gelieferte Maschine des Anlagevermögens zu bilanzieren?",
         "options": [
@@ -1096,6 +1138,20 @@ const BILANZIERUNG_CHAPTER11_TOPICS = [
         ],
         "correctIndex": 0,
         "explanation": "Die Rückstellung bildet als Fremdkapitalposten eine ungewisse Außenverpflichtung ab; die Rücklage ist Eigenkapital aus Gesellschaftereinlagen (Kapitalrücklage) oder einbehaltenen Gewinnen (Gewinnrücklage)."
+      },
+      {
+        "id": "yn1",
+        "type": "yesno",
+        "question": "Darf ein Unternehmen seit dem Wegfall des § 249 Abs. 2 HGB a. F. durch das BilMoG eine Rückstellung allein für das allgemeine Unternehmerwagnis (rein kalkulatorisches Risiko ohne Verpflichtung gegenüber einem Dritten) bilden?",
+        "correctAnswer": false,
+        "reasons": [
+          "Nein, weil das allgemeine Unternehmerwagnis keine Verpflichtung gegenüber einem Dritten begründet und für frei gewählte Aufwandsrückstellungen seit dem BilMoG ein Passivierungsverbot besteht",
+          "Ja, weil jedes Unternehmen zur Risikovorsorge verpflichtet ist und deshalb für sämtliche denkbaren Geschäftsrisiken zwingend Rückstellungen bilden muss",
+          "Nein, weil Rückstellungen ausschließlich für bereits durch ein Gerichtsurteil festgestellte Verpflichtungen gebildet werden dürfen",
+          "Ja, weil das Vorsichtsprinzip verlangt, jedes erdenkliche unternehmerische Risiko unabhängig vom Vorliegen einer Außenverpflichtung zu passivieren"
+        ],
+        "correctReasonIndex": 0,
+        "explanation": "Das allgemeine Unternehmerwagnis ist ein rein innerbetriebliches, kalkulatorisches Risiko ohne Verpflichtung gegenüber einem Dritten und daher gem. § 249 Abs. 2 HGB nicht rückstellungsfähig; frei gewählte Aufwandsrückstellungen sind seit dem BilMoG verboten."
       },
       {
         "id": "q2",
@@ -1458,6 +1514,20 @@ const BILANZIERUNG_CHAPTER11_TOPICS = [
         "explanation": "Die drei kumulativen Voraussetzungen des § 240 Abs. 3 HGB sind regelmäßiger Ersatz, geringe Bestandsschwankungen und nachrangige Bedeutung des Werts für das Unternehmen; dann genügt eine körperliche Kontrolle etwa alle drei Jahre."
       },
       {
+        "id": "yn1",
+        "type": "yesno",
+        "question": "Muss die tatsächliche physische Verbrauchsfolge eines Lagers nachgewiesen werden, damit Fifo handelsrechtlich als Bewertungsverfahren für Vorräte zulässig ist?",
+        "correctAnswer": false,
+        "reasons": [
+          "Ja, weil ohne Nachweis der tatsächlichen Verbrauchsfolge jede Sammelbewertung gegen den Grundsatz der Einzelbewertung verstößt",
+          "Nein, weil Fifo ausschließlich bei permanenter Inventur überhaupt zulässig ist und der Nachweis dadurch automatisch entfällt",
+          "Ja, weil nur Lifo als fiktives Verfahren ohne Nachweis der tatsächlichen Verbrauchsfolge angewendet werden darf",
+          "Nein, weil § 256 HGB Fifo als zulässiges Verbrauchsfolgeverfahren unabhängig vom Nachweis der tatsächlichen Lagerbewegung gestattet"
+        ],
+        "correctReasonIndex": 3,
+        "explanation": "§ 256 HGB lässt Fifo als gesetzlich anerkanntes Verbrauchsfolgeverfahren zu, ohne dass die tatsächliche physische Lagerbewegung nachgewiesen werden muss - steuerlich ist ein solcher Nachweis dagegen für Fifo erforderlich, für Lifo nicht."
+      },
+      {
         "id": "q6",
         "question": "Was bedeutet das seit dem BilMoG für das Umlaufvermögen (u. a. Vorräte) geltende strenge Niederstwertprinzip?",
         "options": [
@@ -1761,6 +1831,20 @@ const BILANZIERUNG_CHAPTER11_TOPICS = [
         ],
         "correctIndex": 1,
         "explanation": "Das BilMoG schaffte die umgekehrte Maßgeblichkeit ab: Steuerliche Wertansätze müssen seither nicht mehr in die Handelsbilanz übernommen werden, wodurch Handels- und Steuerbilanz auseinanderfallen können."
+      },
+      {
+        "id": "yn1",
+        "type": "yesno",
+        "question": "Kann ein Unternehmen bilanzpolitisch frei entscheiden, ob es das Wertaufholungsgebot des § 253 Abs. 5 Satz 1 HGB nach Wegfall eines Abschreibungsgrundes anwendet?",
+        "correctAnswer": false,
+        "reasons": [
+          "Ja, weil sämtliche Bewertungsvorschriften des HGB als Wahlrechte ausgestaltet sind, sobald ein bilanzpolitisches Ziel verfolgt wird",
+          "Nein, weil das Wertaufholungsgebot ein zwingendes Ansatzgebot ohne Ermessensspielraum ist und Bilanzpolitik stets einen echten rechtlichen Spielraum voraussetzt",
+          "Nein, weil Zuschreibungen generell nur bei Kapitalgesellschaften vorkommen und daher außerhalb der Bilanzpolitik liegen",
+          "Ja, weil formelle Bilanzpolitik auch zwingende Bewertungsgebote wie das Wertaufholungsgebot mit einschließt"
+        ],
+        "correctReasonIndex": 1,
+        "explanation": "Bilanzpolitik setzt einen echten gesetzlichen Ermessens- oder Wahlrechtsspielraum voraus; das Wertaufholungsgebot ist dagegen eine zwingende Vorschrift ohne Gestaltungsspielraum, selbst wenn eine Zuschreibung dem gewünschten bilanzpolitischen Ziel widerspricht."
       },
       {
         "id": "q7",
@@ -2096,6 +2180,20 @@ const BILANZIERUNG_CHAPTER11_TOPICS = [
         ],
         "correctIndex": 2,
         "explanation": "§ 250 Abs. 3 HGB räumt ein Wahlrecht ein: Aktivierung und laufzeitkongruente Verteilung oder sofortiger vollständiger Aufwand."
+      },
+      {
+        "id": "yn1",
+        "type": "yesno",
+        "question": "Besteht nach § 274 HGB eine Aktivierungspflicht, wenn sich aus temporären Differenzen zwischen Handels- und Steuerbilanz per Saldo ein Überhang aktiver latenter Steuern ergibt?",
+        "correctAnswer": false,
+        "reasons": [
+          "Nein, weil latente Steuern generell nur im Anhang, niemals in der Bilanz selbst erfasst werden dürfen",
+          "Ja, weil der Vollständigkeitsgrundsatz des § 246 Abs. 1 HGB für alle latenten Steuern ausnahmslos eine Ansatzpflicht vorschreibt",
+          "Nein, weil § 274 HGB für einen sich ergebenden Aktivüberhang lediglich ein Aktivierungswahlrecht einräumt, keine Pflicht",
+          "Ja, weil ein Aktivüberhang stets eine bereits realisierte Steuererstattung darstellt, die zwingend zu bilanzieren ist"
+        ],
+        "correctReasonIndex": 2,
+        "explanation": "Anders als der passive latente Steuerüberhang, für den eine Passivierungspflicht besteht, sieht § 274 HGB für einen aktiven Überhang lediglich ein Wahlrecht vor, da es sich um eine noch nicht endgültig realisierte künftige Steuerentlastung handelt."
       },
       {
         "id": "q9",
